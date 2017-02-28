@@ -1334,7 +1334,7 @@ name "fig:证券交易软件的登录界面示意图"
 status open
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial-examples/tree/master/tests/src/
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/tests/src/
 cn/edu/sdut/softlab/gui
 \end_layout
 

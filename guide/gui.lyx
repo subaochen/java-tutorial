@@ -1568,7 +1568,7 @@ name "fig:准备插入main方法"
 status open
 
 \begin_layout Plain Layout
-本例的完整代码请参见：https://github.com/subaochen/java-tutorial-examples/tree/master/gui
+本例的完整代码请参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui
 \end_layout
 
 \end_inset
@@ -2537,7 +2537,7 @@ JLabel示例
 status open
 
 \begin_layout Plain Layout
-完整的代码请参见：https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/
+完整的代码请参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
 cn/edu/sdut/softlab/，双击JLabelDemo.form即可打开Form Designer查看界面设计效果。
 \end_layout
 
@@ -3768,7 +3768,7 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn/edu/sd
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
 ut/softlab
 \end_layout
 
@@ -4331,7 +4331,7 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn/edu/sd
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
 ut/softlab
 \end_layout
 
@@ -4736,7 +4736,7 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn/edu/sd
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
 ut/softlab
 \end_layout
 
@@ -5123,7 +5123,7 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn/edu/sd
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
 ut/softlab
 \end_layout
 
@@ -5362,7 +5362,7 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn/edu/sd
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
 ut/softlab
 \end_layout
 
@@ -5389,7 +5389,7 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn/edu/sd
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
 ut/softlab
 \end_layout
 
@@ -5416,7 +5416,7 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn/edu/sd
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
 ut/softlab
 \end_layout
 
@@ -5509,7 +5509,7 @@ reference "fig:BorderLayout示例"
 status collapsed
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn
 /edu/sdut/softlab
 \end_layout
 
@@ -5682,7 +5682,7 @@ reference "fig:FlowLayout示例设计"
 status collapsed
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn
 /edu/sdut/softlab
 \end_layout
 
@@ -5859,7 +5859,7 @@ reference "fig:CardLayout示例设计"
 status collapsed
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn
 /edu/sdut/softlab
 \end_layout
 
@@ -6345,7 +6345,7 @@ GridLayout示例
 status collapsed
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial-examples/tree/master/gui/src/cn
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn
 /edu/sdut/softlab
 \end_layout
 
