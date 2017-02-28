@@ -1,0 +1,578 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+% see http://deic.uab.es/~iblanes/beamer_gallery/ for how 
+% to choose theme and color
+\usetheme{Warsaw}
+% or AnnArbor, Antibes,Bergen, Berkeley, Berlin, Boadilla,
+%CambridgeUS, Copenhagen, Darmstadt, default, Dresden,
+%Frankfurt, Goettingen, Hannover, Ilmenau, JuanLesPins,
+%Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto,
+%Pittsburgh, Rochester, Singapore, Szeged, Stockton,
+%boxes, Warsaw…
+
+%\usecolortheme{whale}
+%or albatross, orchid, beaver, rose, beetle, seagull, crane.
+%seahorse, default, sidebartab, dolphin , structure
+%dove, whale, fly, wolverine, lily
+\end_preamble
+\use_default_options true
+\begin_modules
+logicalmkup
+multicol
+coderemarks
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "文泉驿点阵正黑"
+\font_sans "default" "文泉驿微米黑"
+\font_typewriter "default" "文泉驿等宽正黑"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+初识Java
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+概述
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+为什么学习Java？
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java语言在IT领域的霸主地位：15年无人撼动
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename ../imgs/intro/tiobe_top_langs.pdf
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+最新的排名请点击：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.tiobe.com/tiobe-index/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java工作机会
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+来自100offer的数据：
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename ../imgs/intro/java-job-trend.jpg
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java工作机会
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+来自indeed的数据：
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename ../imgs/intro/job-trend-indeed.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java的前生今世
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
++-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+诞生于1995年
+\end_layout
+
+\begin_layout Itemize
+Sun公司细心呵护，美金开路，才有了Java的今天
+\end_layout
+
+\begin_layout Itemize
+Oracle接手Java，继续开疆拓土
+\end_layout
+
+\begin_layout Itemize
+Google决定使用Java开发Android应用程序，
+\begin_inset Newline newline
+\end_inset
+
+极大的促进了Java的推广和发展
+\end_layout
+
+\begin_layout Itemize
+大数据的崛起，巩固了Java的霸主地位
+\begin_inset Newline newline
+\end_inset
+
+（Hadoop是Java应用）
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java开发环境的搭建
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java版本和JDK
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Java的版本： SE/EE/ME
+\end_layout
+
+\begin_layout Itemize
+当前Java SE的版本：Java8 or JDK8
+\end_layout
+
+\begin_layout Itemize
+下载地址：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.oracle.com/technetwork/java/javase/downloads/index.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+JDK的安装
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+JDK/JRE的区别
+\end_layout
+
+\begin_layout Itemize
+JAVA_HOME/bin目录的主要文件：java/javac
+\end_layout
+
+\begin_layout Itemize
+可能需要设置Path环境变量
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Idea的安装
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+下载地址：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.jetbrains.com/idea
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+版本选择： Community版本足以应对Java学习
+\end_layout
+
+\begin_layout Itemize
+首先安装JDK，再安装Idea
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+创建和运行HelloWorld
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Idea是多功能的，这里选择项目类型为Java
+\end_layout
+
+\begin_layout Itemize
+注意选择JDK，最好选择自己安装的JDK
+\end_layout
+
+\begin_layout Itemize
+注意选择从模板创建项目
+\end_layout
+
+\begin_layout Itemize
+给项目起个响当当的名字
+\end_layout
+
+\begin_layout Itemize
+学会运行HelloWorld， 右键选择Run/Ctrl+Shift+F10
+\end_layout
+
+\begin_layout Itemize
+学会修改类名：shift+F6
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+命令行编译和运行Java应用程序
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+任意文本编辑器编写HelloWorld.java
+\begin_inset Newline newline
+\end_inset
+
+此处强调类名和文件名的一致性
+\end_layout
+
+\begin_layout Itemize
+编译：javac HelloWorld.java（可能需要解决Path问题）
+\end_layout
+
+\begin_layout Itemize
+运行：java HelloWorld
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java虚拟机
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java跨平台的奥秘：Java虚拟机
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+write once, run anywhere
+\end_layout
+
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename ../imgs/intro/jvm-overview.eps
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\end_body
+\end_document

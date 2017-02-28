@@ -1692,7 +1692,7 @@ Ctrl+Shift+F10是运行应用程序的快捷键。
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1726,6 +1726,73 @@ name "fig:运行应用程序"
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+建议读者在使用Idea完成了第一个HelloWorld项目后，使用资源管理器或者命令行工具打开项目的目录看一下Idea到底创建了哪些目录，哪些文件？尤其要注意到
+，Java应用程序源代码都是使用java作为文件扩展名的，比如HelloWorld.
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+java
+\end_layout
+
+\end_inset
+
+，编译后的Java字节码文件（即所谓的可执行文件）都是以class作为文件扩展名的，比如HelloWorld.
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+class
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Warning
+status open
+
+\begin_layout Plain Layout
+要特别注意，Java是大小写敏感的程序设计语言，Java源代码的文件名和类名必须完全一致！这个规定并非铁板一块，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:定义Java类"
+
+\end_inset
+
+详细讨论Java定义类的细节。
 \end_layout
 
 \end_inset

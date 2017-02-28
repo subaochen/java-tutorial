@@ -626,6 +626,74 @@ lstparams "caption={Point.java},label={Point.java}"
 \end_layout
 
 \begin_layout Subsection
+定义Java类
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:定义Java类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+完整的定义Java类的语法是：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+[public] class ClassName { ...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里有几个要点：
+\end_layout
+
+\begin_layout Itemize
+大部分情况下需要将类定义为public的，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:类的访问控制"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+类名的常规命名方式驼峰命名法，并且第一个字母是大写的。
+\end_layout
+
+\begin_layout Itemize
+一个Java源代码文件中只能有一个类是public的，且这个public的类名必须和文件名完全一致，包括大小写。
+\end_layout
+
+\begin_layout Itemize
+在Java源代码文件中可以定义多个类，只要保证只有一个public类即可。
+\end_layout
+
+\begin_layout Subsection
 对象的概念
 \begin_inset Note Note
 status open
@@ -833,8 +901,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/sub322
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/sub322
 \end_layout
 
 \end_inset
@@ -1325,8 +1393,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/sub332
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/sub332
 \end_layout
 
 \end_inset
@@ -1487,8 +1555,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/sub333
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/sub333
 \end_layout
 
 \end_inset
@@ -1698,8 +1766,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/sub334
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/sub334
 \end_layout
 
 \end_inset
@@ -4670,8 +4738,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/acprotected/other
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/acprotected/other
 \end_layout
 
 \end_inset
@@ -5031,6 +5099,13 @@ reference "subsec:public修饰符"
 
 \begin_layout Subsection
 类的访问控制
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:类的访问控制"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5241,8 +5316,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/ac/innerclass
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/ac/innerclass
 \end_layout
 
 \end_inset
@@ -6005,8 +6080,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/inherit/step4
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/inherit/step4
 \end_layout
 
 \end_inset
@@ -7168,8 +7243,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/nestedclass
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/nestedclass
 \end_layout
 
 \end_inset
@@ -7331,8 +7406,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn/e
-du/sdut/softlab/oopbasic/localinnerclass
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/oopbasic/src/cn
+/edu/sdut/softlab/oopbasic/localinnerclass
 \end_layout
 
 \end_inset
