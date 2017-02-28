@@ -164,7 +164,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/tiobe_top_langs.pdf
+	filename imgs/intro/tiobe_top_langs.pdf
 	width 100line%
 
 \end_inset
@@ -506,7 +506,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/Java-history.png
+	filename imgs/intro/java-history.png
 	width 100line%
 
 \end_inset
@@ -715,6 +715,28 @@ Java开发环境的搭建
 \begin_layout Standard
 Linux是学习程序设计的绝佳搭档，因此笔者建议大家在Linux平台上开始Java的学习之旅。Linux的发布版比较多，根据笔者多年的教学经验，建议大家选择Ub
 antu的最新LTS版本即可，下面的Java开发环境的搭建均基于Ubuntu 16.04（写作本书时的最新LTS版本）。
+\end_layout
+
+\begin_layout Subsection
+Java版本的选择
+\end_layout
+
+\begin_layout Standard
+Java分为三个版本：
+\end_layout
+
+\begin_layout Itemize
+Java SE（Java Standard Edition）：Java的标准版，包含了常见的Java应用程序开发和运行所需的环境。本书此后如没有特别说明，Jav
+a都是指Java SE。
+\end_layout
+
+\begin_layout Itemize
+Java EE（Java Enterprise Edition）：Java的企业版，包含了Java的一些高级特性，如Servlet，JDBC等。
+\end_layout
+
+\begin_layout Itemize
+Java ME（Java Micro Edition）：Java的移动版，包含了开发移动终端应用程序所需的环境。不过，自从Android横空出世，Java
+ ME几乎就没有多大市场了。
 \end_layout
 
 \begin_layout Subsection
@@ -1127,10 +1149,10 @@ Idea
 \end_layout
 
 \begin_layout Standard
-JetBrain Idea是
+JetBrains Idea是
 \begin_inset CommandInset href
 LatexCommand href
-name "JetBrain"
+name "JetBrains"
 target "https://www.jetbrains.com"
 
 \end_inset
@@ -1656,7 +1678,17 @@ reference "fig:运行应用程序"
 
 \end_inset
 
-所示，在右键单击弹出的菜单中选择“Run”运行即可。
+所示，在右键单击弹出的菜单中选择“Run”运行
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ctrl+Shift+F10是运行应用程序的快捷键。
+\end_layout
+
+\end_inset
+
+即可。
 \begin_inset Float figure
 wide false
 sideways false

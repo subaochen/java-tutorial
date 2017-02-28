@@ -119,16 +119,6 @@ filename "frontmatter.tex"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-在前言中开宗明义，说明本书是第一本开源的Java中文教程，并计划用10年时间形成系列教程，列出计划
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard

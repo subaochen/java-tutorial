@@ -2143,6 +2143,19 @@ lstparams "float,caption={VarargsTest.java},label={VarargsTest.java}"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+作为单独的一节介绍main方法及其参数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Java的注释
 \end_layout
