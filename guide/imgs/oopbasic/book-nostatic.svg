@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="30cm" height="16cm" viewBox="243 612 581 308" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="457.01" y="613.256" width="125.5" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="457.01" y="613.256" width="125.5" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="519.76" y="632.256">Book</text>
+    <rect style="fill: #ffffff" x="457.01" y="641.256" width="125.5" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="457.01" y="641.256" width="125.5" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="460.01" y="655.256">+title: String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="460.01" y="671.256">+author: String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="460.01" y="687.256">+price: double</text>
+    <rect style="fill: #ffffff" x="457.01" y="693.256" width="125.5" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="457.01" y="693.256" width="125.5" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="460.01" y="707.256">+edit(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #d8e5e5" x="630.375" y="772.36" width="163.65" height="145.85"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="630.375" y="772.36" width="163.65" height="145.85"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="712.2" y="818.21">
+      <tspan x="712.2" y="818.21"></tspan>
+    </text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="712.2" y="798.36">&lt;&lt;Book&gt;&gt;</text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="712.2" y="835.36">book2</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="712.2" y1="822.31" x2="712.2" y2="822.31"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="630.375" y1="845.36" x2="794.025" y2="845.36"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="640.375" y="870.21">
+      <tspan x="640.375" y="870.21">title="Thinking in Java";</tspan>
+      <tspan x="640.375" y="886.21">author=" Bruce Eckel";</tspan>
+      <tspan x="640.375" y="902.21">price=234.5;</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #d8e5e5" x="245.716" y="773.228" width="159.6" height="145.85"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="245.716" y="773.228" width="159.6" height="145.85"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="325.516" y="819.078">
+      <tspan x="325.516" y="819.078"></tspan>
+    </text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="325.516" y="799.228">&lt;&lt;Book&gt;&gt;</text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="325.516" y="836.228">book1</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="325.516" y1="823.178" x2="325.516" y2="823.178"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="245.716" y1="846.228" x2="405.316" y2="846.228"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="255.716" y="871.078">
+      <tspan x="255.716" y="871.078">title="Design Patterns";</tspan>
+      <tspan x="255.716" y="887.078">author="Gang of Four";</tspan>
+      <tspan x="255.716" y="903.078">price=23.4;</tspan>
+    </text>
+  </g>
+  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #ffa500" d="M 457.01,667.256 A 149.869,149.869 0 0 0 325.516,773.228"/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #ffa500" d="M 712.2,772.36 A 130.981,130.981 0 0 0 582.51,667.256"/>
+  <text font-size="14.1111" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="243.866" y="757.376">
+    <tspan x="243.866" y="757.376">Book book1 = new Book();</tspan>
+  </text>
+  <text font-size="14.1111" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="620.286" y="758.157">
+    <tspan x="620.286" y="758.157">Book book2 = new Book();</tspan>
+  </text>
+</svg>

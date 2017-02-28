@@ -1,0 +1,62 @@
+#\DeclareLyXModule{警告inset}
+#DescriptionBegin
+# To insert a warning environment.
+# Please insert warning from menu:Insert->Insert Custom Inset:warning
+#DescriptionEnd
+# Author : Su Baochen<subaochen@126.com>
+
+Format 49
+
+InsetLayout 	Flex:Warning
+LyXType 	custom
+Labelstring    	警告
+Decoration  	classic
+LabelFont
+  Color   	collapsable
+  Size    	Small
+EndFont
+MultiPar    	true
+LatexName   	Warning
+LatexType   	Environment
+Preamble
+
+  \usepackage{tikz}
+  \usepackage{color}
+  \usepackage[framemethod=tikz]{mdframed}
+  \usetikzlibrary{calc}
+  \usepackage{fourier-orns}
+  \definecolor{warningColor}{named}{black}%TODO：图书往往是黑白印刷的，红色不利于将来出版
+\tikzset{
+    warningsymbol/.style={
+        rectangle,
+        draw=warningColor,
+        fill=white,
+        scale=1,
+        overlay}
+}
+\global\mdfdefinestyle{warning}{%
+  hidealllines=true,leftline=true,
+  skipabove=12,skipbelow=12pt,
+  innertopmargin=0.4em,%
+  innerbottommargin=0.4em,%
+  innerrightmargin=0.7em,%
+  rightmargin=0.7em,%
+  innerleftmargin=1.7em,%
+  leftmargin=0.7em,%
+  middlelinewidth=.2em,%
+  linecolor=warningColor,%
+  fontcolor=warningColor,%
+  firstextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[warningsymbol] {\danger};},%
+  secondextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[warningsymbol] {\danger};},%
+  middleextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[warningsymbol] {\danger};},%
+  singleextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[warningsymbol] {\danger};}%
+ }
+
+\newmdenv[style=warning]{Warning}
+
+EndPreamble
+End

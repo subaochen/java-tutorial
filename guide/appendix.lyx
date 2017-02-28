@@ -1,0 +1,6947 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-bytype
+theorems-chap-bytype
+coderemarks
+tip-inset
+note-inset
+warning-inset
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+\start_of_appendix
+建议的授课计划
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="21" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="middle" width="5line%">
+<column alignment="left" valignment="middle" width="60line%">
+<column alignment="left" valignment="middle" width="20line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+序号
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+为什么要学习Java程序设计语言？
+\end_layout
+
+\begin_layout Itemize
+Java语言的特点
+\end_layout
+
+\begin_layout Itemize
+JDK的概念和安装
+\end_layout
+
+\begin_layout Itemize
+使用Idea搭建Java开发环境，HelloWorld演示
+\end_layout
+
+\begin_layout Itemize
+基于终端的Java开发
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从一开始就强调读书和练习相结合，避免眼高手低
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+迅速回顾C的基本语法规则，包括变量、运算符、表达式、控制结构
+\end_layout
+
+\begin_layout Itemize
+重点讲述Java语言在基本语法规则方面和C语言的差异
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Java变量命名常用驼峰命名法
+\end_layout
+
+\begin_layout Itemize
+Java特有的运算符：new，instanceOf
+\end_layout
+
+\begin_layout Itemize
+Java加强了的for循环
+\end_layout
+
+\begin_layout Itemize
+Java加强了的switch分支结构
+\end_layout
+
+\begin_layout Itemize
+不定长方法参数
+\end_layout
+
+\end_deeper
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+由于Java语言和C语言在基础语法规则上90%是相同的，因此本部分可以快速通过，这样避免了学生过多的纠缠于语法细节，也减少了学习Java语言的恐惧感（被繁杂的语
+法吓倒）。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+类和对象的概念
+\end_layout
+
+\begin_layout Itemize
+Java如何创建类？如何创建对象？
+\end_layout
+
+\begin_layout Itemize
+构造方法的用法
+\end_layout
+
+\begin_layout Itemize
+类的组织：包的用法
+\end_layout
+
+\begin_layout Itemize
+类的层次结构：继承
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+由于大部分读者是第一次接触OOP，此部分可以稍微放慢授课的速度，通过大量的实例以及和生活中的现象类比掌握OOP的基本概念和用法。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Java的访问控制
+\end_layout
+
+\begin_layout Itemize
+理解引用类型，尤其是方法参数中的引用类型
+\end_layout
+
+\begin_layout Itemize
+static的几种情形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+建议通过反复的演示和练习使读者充分理解本部分内容。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+抽象类等的概念及其用法
+\end_layout
+
+\begin_layout Itemize
+接口是纯的抽象类，接口的设计目的
+\end_layout
+
+\begin_layout Itemize
+多态的概念，多态的实现方法
+\end_layout
+
+\begin_layout Itemize
+面向接口的编程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+本部分内容比较抽象，建议重点放到抽象类和接口的概念和使用。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+string类的常见方法
+\end_layout
+
+\begin_layout Itemize
+数字的表达，字符串和数字的相互转化方法
+\end_layout
+
+\begin_layout Itemize
+时间和日期的表达和常见处理方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Java异常的概念，注意和C语言的比较
+\end_layout
+
+\begin_layout Itemize
+异常的分类，异常类的层次结构
+\end_layout
+
+\begin_layout Itemize
+try-catch结构
+\end_layout
+
+\begin_layout Itemize
+throw和throws的区别
+\end_layout
+
+\begin_layout Itemize
+如何编写自定义异常类？
+\end_layout
+
+\begin_layout Itemize
+try-with-resources结构的使用场合
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+理解异常的责任链机制是掌握Java异常处理的关键
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+流的概念（C语言中就有）
+\end_layout
+
+\begin_layout Plain Layout
+面向字节和面向字符的流
+\end_layout
+
+\begin_layout Plain Layout
+从键盘输入的方法
+\end_layout
+
+\begin_layout Plain Layout
+文件的读写：NIO（Path，Files）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+本部分内容多，重点是InputStream/OutputStream/Reader/Writer的用法，NIO可以作为较高要求处理
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Enum的概念（和C语言的对比）
+\end_layout
+
+\begin_layout Itemize
+Java中的Enum是面向对象的
+\end_layout
+
+\begin_layout Itemize
+工程实践中Enum的重要性
+\end_layout
+
+\begin_layout Itemize
+switch中的Enum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+窗口的基本概念
+\end_layout
+
+\begin_layout Itemize
+Swing GUI设计常见组件：Panel，Jlabel等
+\end_layout
+
+\begin_layout Itemize
+布局管理器
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点是学生要通过练习掌握起来，本部分不要求学生了解GUI的很多底层知识，学会使用Idea进行GUI界面设计即可。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Swing的事件机制（在上节课中其实已经在不断使用，这里总结一下）
+\end_layout
+
+\begin_layout Itemize
+匿名类在事件处理中的使用
+\end_layout
+
+\begin_layout Itemize
+Java GUI综合示例
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+习题课
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+建议在这里插入一次习题课作为“中场休息”，巩固已学知识。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+为什么要引入泛型？
+\end_layout
+
+\begin_layout Itemize
+泛型的常见形态（用法）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+要注意到讲述这部分内容时还没有学习“集合类”
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+泛型中的通配符
+\end_layout
+
+\begin_layout Itemize
+泛型的类型擦除
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+本部分内容可以作为较高要求
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+集合类框架
+\end_layout
+
+\begin_layout Plain Layout
+常见集合类：List、Set、Map、Queue的用法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+通过实例，可结合泛型演示
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+总结集合类中的泛型
+\end_layout
+
+\begin_layout Plain Layout
+集合类中的PECS原则
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+本部分内容可作为较高要求
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+lambda表达式基本概念：为什么引入lambda表达式？
+\end_layout
+
+\begin_layout Itemize
+lambda表达式的常见形式
+\end_layout
+
+\begin_layout Itemize
+集合类的流式处理
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+本部分可以作为较高要求内容
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+线程的概念
+\end_layout
+
+\begin_layout Itemize
+Java创建线程的两种方法
+\end_layout
+
+\begin_layout Itemize
+竞争资源的概念
+\end_layout
+
+\begin_layout Itemize
+线程的同步和互斥处理方法
+\end_layout
+
+\begin_layout Itemize
+sychronized和wait()/notifyAll()的联合使用举例
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点是线程的概念和synchronized如何保护竞争资源
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+网络基础知识简单回顾
+\end_layout
+
+\begin_layout Itemize
+URL的表达和内容读取
+\end_layout
+
+\begin_layout Itemize
+Socket的概念
+\end_layout
+
+\begin_layout Itemize
+Java Socket服务器端和客户端编程
+\end_layout
+
+\begin_layout Itemize
+Apache mina简介
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Apache mina可以简单一提，要求有兴趣的学生自学。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+注解的基本概念
+\end_layout
+
+\begin_layout Itemize
+注解的基本写法
+\end_layout
+
+\begin_layout Itemize
+什么是DI？
+\end_layout
+
+\begin_layout Itemize
+注解在DI中的应用
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DI可作为较高要求
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Java FAQ
+\end_layout
+
+\begin_layout Section
+如何设置命令行参数？
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:如何设置命令行参数？"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分以下2种情况：
+\end_layout
+
+\begin_layout Enumerate
+如果是从命令行执行，直接在Java应用程序后面设置命令行参数即可，比如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+java Client arg-list
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+如果使用IDE，一般的IDE在run菜单都有一个“configuration....
+\begin_inset Quotes erd
+\end_inset
+
+菜单，通过此菜单可以设置应用程序的命令行参数。比如Idea中，通过如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Idea的命令行参数设置方法"
+
+\end_inset
+
+的方式设置命令行参数。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/appendix/edit-run-configuration-menu-item.png
+	width 40line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择编辑运行参数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/appendix/run-args-configuration.png
+	width 55line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+设置命令行参数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Idea的命令行参数设置方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Idea的命令行参数设置方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Java GUI控件和事件监听器对照表
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Java-GUI控件和事件监听器对照表"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/tutorial/uiswing/events/eventsandcomponents.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+JDK 1.5、1.6、1.7、1.8的差别
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+参考：https://www.yidianzixun.com/article/0FCJpTC3?s=4&appid=xiaomi&ver=3.8.0&utk=0le7o
+cax，需要进一步整理
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于很多刚接触java语言的初学者来说，要了解一门语言，最好的方式就是要能从基础的版本进行了解，升级的过程，以及升级的新特性，这样才能循序渐进的学好一门语言。今
+天先为大家介绍一下JDK1.5版本到JDK1.7版本的特性。希望能给予帮助。
+\end_layout
+
+\begin_layout Standard
+JDK1.5新特性： 1.自动装箱与拆箱：
+\end_layout
+
+\begin_layout Standard
+自动装箱的过程：每当需要一种类型的对象时，这种基本类型就自动地封装到与它相同类型的包装中。
+\end_layout
+
+\begin_layout Standard
+自动拆箱的过程：每当需要一个值时，被装箱对象中的值就被自动地提取出来，没必要再去调用intValue和doubleValue方法。
+\end_layout
+
+\begin_layout Standard
+自动装箱，只需将该值赋给一个类型包装器引用，java会自动创建一个对象。
+\end_layout
+
+\begin_layout Standard
+自动拆箱，只需将该对象值赋给一个基本类型即可。
+\end_layout
+
+\begin_layout Standard
+java——类的包装器
+\end_layout
+
+\begin_layout Standard
+类型包装器有：Double,Float,Long,Integer,Short,Character和Boolean
+\end_layout
+
+\begin_layout Standard
+2.枚举
+\end_layout
+
+\begin_layout Standard
+把集合里的对象元素一个一个提取出来。枚举类型使代码更具可读性，理解清晰，易于维护。枚举类型是强类型的，从而保证了系统安全性。而以类的静态字段实现的类似替代模型，
+不具有枚举的简单性和类型安全性。
+\end_layout
+
+\begin_layout Standard
+简单的用法：JavaEnum简单的用法一般用于代表一组常用常量，可用来代表一类相同类型的常量值。
+\end_layout
+
+\begin_layout Standard
+复杂用法：Java为枚举类型提供了一些内置的方法，同事枚举常量还可以有自己的方法。可以很方便的遍历枚举对象。
+\end_layout
+
+\begin_layout Standard
+3.静态导入
+\end_layout
+
+\begin_layout Standard
+通过使用 import static，就可以不用指定 Constants 类名而直接使用静态成员，包括静态方法。
+\end_layout
+
+\begin_layout Standard
+import xxxx 和 import static xxxx的区别是前者一般导入的是类文件如import java.util.Scanner;后者一般是导入静态
+的方法，import static java.lang.System.out。
+\end_layout
+
+\begin_layout Standard
+4.可变参数（Varargs）
+\end_layout
+
+\begin_layout Standard
+可变参数的简单语法格式为：
+\end_layout
+
+\begin_layout Standard
+methodName([argumentList], dataType...argumentName);
+\end_layout
+
+\begin_layout Standard
+5.内省（Introspector）
+\end_layout
+
+\begin_layout Standard
+是 Java语言对Bean类属性、事件的一种缺省处理方法。例如类A中有属性name,那我们可以通过getName,setName来得到其值或者设置新
+ 的值。通过getName/setName来访问name属性，这就是默认的规则。Java中提供了一套API用来访问某个属性的getter /setter方法，通
+过这些API可以使你不需要了解这个规则（但你最好还是要搞清楚），这些API存放于包java.beans中。
+\end_layout
+
+\begin_layout Standard
+一 般的做法是通过类Introspector来获取某个对象的BeanInfo信息，然后通过BeanInfo来获取属性的描述器 （PropertyDescript
+or），通过这个属性描述器就可以获取某个属性对应的getter/setter方法，然后我们就可以通过反射机制来 调用这些方法。
+\end_layout
+
+\begin_layout Standard
+6.泛型(Generic)
+\end_layout
+
+\begin_layout Standard
+C++ 通过模板技术可以指定集合的元素类型，而Java在1.5之前一直没有相对应的功能。一个集合可以放任何类型的对象，相应地从集合里面拿对象的时候我们也
+ 不得不对他们进行强制得类型转换。猛虎引入了泛型，它允许指定集合里元素的类型，这样你可以得到强类型在编译时刻进行类型检查的好处。
+\end_layout
+
+\begin_layout Standard
+7.For-Each循环
+\end_layout
+
+\begin_layout Standard
+For-Each循环得加入简化了集合的遍历。假设我们要遍历一个集合对其中的元素进行一些处理。
+\end_layout
+
+\begin_layout Standard
+JDK 1.6新特性
+\end_layout
+
+\begin_layout Standard
+有关JDK1.6的新特性reamerit的博客文章已经说的很详细了。
+\end_layout
+
+\begin_layout Standard
+1.Desktop类和SystemTray类
+\end_layout
+
+\begin_layout Standard
+在JDK6中 ,AWT新增加了两个类:Desktop和SystemTray。
+\end_layout
+
+\begin_layout Standard
+前者可以用来打开系统默认浏览器浏览指定的URL,打开系统默认邮件客户端给指定的邮箱发邮件,用默认应用程序打开或编辑文件(比如,用记事本打开以txt为后缀名的文件
+),用系统默认的打印机打印文档;后者可以用来在系统托盘区创建一个托盘程序.
+\end_layout
+
+\begin_layout Standard
+2.使用JAXB2来实现对象与XML之间的映射
+\end_layout
+
+\begin_layout Standard
+JAXB是Java Architecture for XML Binding的缩写，可以将一个Java对象转变成为XML格式，反之亦然。
+\end_layout
+
+\begin_layout Standard
+我 们把对象与关系数据库之间的映射称为ORM, 其实也可以把对象与XML之间的映射称为OXM(Object XML Mapping).
+ 原来JAXB是Java EE的一部分，在JDK6中，SUN将其放到了Java SE中，这也是SUN的一贯做法。JDK6中自带的这个JAXB版本是2.0,
+ 比起1.0(JSR 31)来，JAXB2(JSR 222)用JDK5的新特性Annotation来标识要作绑定的类和属性等，这就极大简化了开发的工作量。
+\end_layout
+
+\begin_layout Standard
+实 际上，在Java EE 5.0中，EJB和Web Services也通过Annotation来简化开发工作。另外,JAXB2在底层是用StAX(JSR
+ 173)来处理XML文档。除了JAXB之外，我们还可以通过XMLBeans和Castor等来实现同样的功能。
+\end_layout
+
+\begin_layout Standard
+3.理解StAX
+\end_layout
+
+\begin_layout Standard
+StAX(JSR 173)是JDK6.0中除了DOM和SAX之外的又一种处理XML文档的API。
+\end_layout
+
+\begin_layout Standard
+StAX 的来历 ：在JAXP1.3(JSR 206)有两种处理XML文档的方法:DOM(Document Object Model)和SAX(Simple
+ API for XML).
+\end_layout
+
+\begin_layout Standard
+由 于JDK6.0中的JAXB2(JSR 222)和JAX-WS 2.0(JSR 224)都会用到StAX所以Sun决定把StAX加入到JAXP家族当中来，并将JA
+XP的版本升级到1.4(JAXP1.4是JAXP1.3的维护版 本).
+ JDK6里面JAXP的版本就是1.4.
+ 。
+\end_layout
+
+\begin_layout Standard
+StAX是The Streaming API for XML的缩写，一种利用拉模式解析(pull-parsing)XML文档的API.StAX通过提供一种基于事件
+迭代器(Iterator)的API让 程序员去控制xml文档解析过程,程序遍历这个事件迭代器去处理每一个解析事件，解析事件可以看做是程序拉出来的，也就是程序促使
+解析器产生一个解析事件 然后处理该事件，之后又促使解析器产生下一个解析事件，如此循环直到碰到文档结束符；
+\end_layout
+
+\begin_layout Standard
+SAX也是基于事件处理xml文档，但却 是用推模式解析，解析器解析完整个xml文档后，才产生解析事件，然后推给程序去处理这些事件；DOM 采用的方式是将整个xm
+l文档映射到一颗内存树，这样就可以很容易地得到父节点和子结点以及兄弟节点的数据，但如果文档很大，将会严重影响性能。
+\end_layout
+
+\begin_layout Standard
+4.使用Compiler API
+\end_layout
+
+\begin_layout Standard
+现在我 们可以用JDK6 的Compiler API(JSR 199)去动态编译Java源文件，Compiler API结合反射功能就可以实现动态的产生Java
+代码并编译执行这些代码，有点动态语言的特征。
+\end_layout
+
+\begin_layout Standard
+这 个特性对于某些需要用到动态编译的应用程序相当有用， 比如JSP Web Server，当我们手动修改JSP后，是不希望需要重启Web Server才可以看到
+效果的，这时候我们就可以用Compiler API来实现动态编译JSP文件，当然，现在的JSP Web Server也是支持JSP热部署的，现在的JSP
+ Web Server通过在运行期间通过Runtime.exec或ProcessBuilder来调用javac来编译代码，这种方式需要我们产生另一个进程去
+ 做编译工作，不够优雅而且容易使代码依赖与特定的操作系统；Compiler API通过一套易用的标准的API提供了更加丰富的方式去做动态编译,而且是跨平台的。
+\end_layout
+
+\begin_layout Standard
+5.轻量级Http Server API
+\end_layout
+
+\begin_layout Standard
+JDK6 提供了一个简单的Http Server API,据此我们可以构建自己的嵌入式Http Server,它支持Http和Https协议,提供了HTTP1.1
+的部分实现，没有被实现的那部分可以通过扩展已有的Http Server API来实现,程序员必须自己实现HttpHandler接口,HttpServer会调用H
+ttpHandler实现类的回调方法来处理客户端请求,在 这里,我们把一个Http请求和它的响应称为一个交换,包装成HttpExchange类,HttpServ
+er负责将HttpExchange传给 HttpHandler实现类的回调方法.
+\end_layout
+
+\begin_layout Standard
+6.插入式注解处理API(Pluggable Annotation Processing API)
+\end_layout
+
+\begin_layout Standard
+插入式注解处理API(JSR 269)提供一套标准API来处理Annotations(JSR 175)
+\end_layout
+
+\begin_layout Standard
+实 际上JSR 269不仅仅用来处理Annotation,我觉得更强大的功能是它建立了Java 语言本身的一个模型,它把method, package,
+ constructor, type, variable, enum, annotation等Java语言元素映射为Types和Elements(两者有什么区别
+?), 从而将Java语言的语义映射成为对象, 我们可以在javax.lang.model包下面可以看到这些类.
+ 所以我们可以利用JSR 269提供的API来构建一个功能丰富的元编程(metaprogramming)环境.
+\end_layout
+
+\begin_layout Standard
+JSR 269用Annotation Processor在编译期间而不是运行期间处理Annotation, Annotation Processor相当于编译器
+的一个插件,所以称为插入式注解处理.如果Annotation Processor处理Annotation时(执行process方法)产生了新的Java代码,编译器
+会再调用一次Annotation Processor,如果第二次处理还有新代码产生,就会接着调用Annotation Processor,直到没有新代码产生为止.
+每执行一次process方法被称为一个"round",这样整个Annotation processing过程可以看作是一个round的序列.
+\end_layout
+
+\begin_layout Standard
+JSR 269主要被设计成为针对Tools或者容器的API.
+ 举个例子,我们想建立一套基于Annotation的单元测试框架(如TestNG),在测试类里面用Annotation来标识测试期间需要执行的测试方法。
+\end_layout
+
+\begin_layout Standard
+7.用Console开发控制台程序
+\end_layout
+
+\begin_layout Standard
+JDK6 中提供了java.io.Console 类专用来访问基于字符的控制台设备.
+ 你的程序如果要与Windows下的cmd或者Linux下的Terminal交互,就可以用Console类代劳.
+ 但我们不总是能得到可用的Console, 一个JVM是否有可用的Console依赖于底层平台和JVM如何被调用.
+ 如果JVM是在交互式命令行(比如Windows的cmd)中启动的,并且输入输出没有重定向到另外的地方,那么就可以得到一个可用的Console实
+ 例.
+\end_layout
+
+\begin_layout Standard
+8.对脚本语言的支持如: ruby, groovy, javascript.
+\end_layout
+
+\begin_layout Standard
+9.Common Annotations
+\end_layout
+
+\begin_layout Standard
+Common annotations原本是Java EE 5.0(JSR 244)规范的一部分，现在SUN把它的一部分放到了Java SE 6.0中.
+\end_layout
+
+\begin_layout Standard
+随 着Annotation元数据功能(JSR 175)加入到Java SE 5.0里面，很多Java 技术(比如EJB,Web Services)都会用Annot
+ation部分代替XML文件来配置运行参数（或者说是支持声明式编程,如EJB的声明式事务）, 如果这些技术为通用目的都单独定义了自己的Annotations,显
+然有点重复建设, 所以,为其他相关的Java技术定义一套公共的Annotation是有价值的，可以避免重复建设的同时，也保证Java SE和Java
+ EE 各种技术的一致性.
+\end_layout
+
+\begin_layout Standard
+下面列举出Common Annotations 1.0里面的10个Annotations Common Annotations
+\end_layout
+
+\begin_layout Standard
+Annotation Retention Target Description
+\end_layout
+
+\begin_layout Standard
+Generated Source ANNOTATION_TYPE, CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD,
+ PACKAGE, PARAMETER, TYPE 用于标注生成的源代码
+\end_layout
+
+\begin_layout Standard
+Resource Runtime TYPE, METHOD, FIELD 用于标注所依赖的资源,容器据此注入外部资源依赖，有基于字段的注入和基于setter方法
+的注入两种方式
+\end_layout
+
+\begin_layout Standard
+Resources Runtime TYPE 同时标注多个外部依赖，容器会把所有这些外部依赖注入
+\end_layout
+
+\begin_layout Standard
+PostConstruct Runtime METHOD 标注当容器注入所有依赖之后运行的方法，用来进行依赖注入后的初始化工作，只有一个方法可以标注为PostC
+onstruct
+\end_layout
+
+\begin_layout Standard
+PreDestroy Runtime METHOD 当对象实例将要被从容器当中删掉之前，要执行的回调方法要标注为PreDestroy RunAs
+ Runtime TYPE 用于标注用什么安全角色来执行被标注类的方法，这个安全角色必须和Container 的Security角色一致的。RolesAllow
+ed Runtime TYPE, METHOD 用于标注允许执行被标注类或方法的安全角色，这个安全角色必须和Container 的Security角色一致的
+\end_layout
+
+\begin_layout Standard
+PermitAll Runtime TYPE, METHOD 允许所有角色执行被标注的类或方法
+\end_layout
+
+\begin_layout Standard
+DenyAll Runtime TYPE, METHOD 不允许任何角色执行被标注的类或方法，表明该类或方法不能在Java EE容器里面运行
+\end_layout
+
+\begin_layout Standard
+DeclareRoles Runtime TYPE 用来定义可以被应用程序检验的安全角色，通常用isUserInRole来检验安全角色
+\end_layout
+
+\begin_layout Standard
+注意:
+\end_layout
+
+\begin_layout Standard
+1.RolesAllowed,PermitAll,DenyAll不能同时应用到一个类或方法上
+\end_layout
+
+\begin_layout Standard
+2.标注在方法上的RolesAllowed,PermitAll,DenyAll会覆盖标注在类上的RolesAllowed,PermitAll,DenyAll
+\end_layout
+
+\begin_layout Standard
+3.RunAs,RolesAllowed,PermitAll,DenyAll和DeclareRoles还没有加到Java SE 6.0上来
+\end_layout
+
+\begin_layout Standard
+4.
+ 处理以上Annotations的工作是由Java EE容器来做, Java SE 6.0只是包含了上面表格的前五种Annotations的定义类,并没有包含处理
+这些Annotations的引擎,这个工作可以由Pluggable Annotation Processing API(JSR 269)来做
+\end_layout
+
+\begin_layout Standard
+改动的地方最大的就是java GUI界面的显示了，JDK6.0（也就是JDK1.6）支持最新的windows vista系统的Windows Aero视窗效果，而J
+DK1.5不支持！！！
+\end_layout
+
+\begin_layout Standard
+你要在vista环境下编程的话最好装jdk6.0，否则它总是换到windows basic视窗效果.
+\end_layout
+
+\begin_layout Standard
+JDK 1.7 新特性
+\end_layout
+
+\begin_layout Standard
+1，switch中可以使用字串了
+\end_layout
+
+\begin_layout Standard
+String s = "test";
+\end_layout
+
+\begin_layout Standard
+switch (s) {
+\end_layout
+
+\begin_layout Standard
+case "test" :
+\end_layout
+
+\begin_layout Standard
+System.out.println("test");
+\end_layout
+
+\begin_layout Standard
+case "test1" :
+\end_layout
+
+\begin_layout Standard
+System.out.println("test1");
+\end_layout
+
+\begin_layout Standard
+break ;
+\end_layout
+
+\begin_layout Standard
+default :
+\end_layout
+
+\begin_layout Standard
+System.out.println("break");
+\end_layout
+
+\begin_layout Standard
+break ;
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+2，"<>"这个玩意儿的运用ListtempList = new ArrayList<>; 即泛型实例化类型自动推断。; // JDK 7 supports
+ limited type inference for generic instance creation Listlst2 = new ArrayList<>
+; lst1.add("Mon"); lst1.add("Tue"); lst2.add("Wed"); lst2.add("Thu"); for (String
+ item: lst1) { System.out.println(item); } for (String item: lst2) { System.out.prin
+tln(item); } } }
+\end_layout
+
+\begin_layout Standard
+3.
+ 自定义自动关闭类
+\end_layout
+
+\begin_layout Standard
+以下是jdk7 api中的接口，（不过注释太长，删掉了close方法的一部分注释）
+\end_layout
+
+\begin_layout Standard
+/** * A resource that must be closed when it is no longer needed.
+ * * @author Josh Bloch * @since 1.7 */publicinterface AutoCloseable { /**
+ * Closes this resource, relinquishing any underlying resources.
+ * This method is invoked automatically on objects managed by the * {@code
+ try}-with-resources statement.
+ * */void close throws Exception; }
+\end_layout
+
+\begin_layout Standard
+只要实现该接口，在该类对象销毁时自动调用close方法，你可以在close方法关闭你想关闭的资源，例子如下
+\end_layout
+
+\begin_layout Standard
+class TryClose implements AutoCloseable { @Override publicvoid close throw
+ Exception { System.out.println(" Custom close method … close resources ");
+ } }
+\end_layout
+
+\begin_layout Standard
+//请看jdk自带类BufferedReader如何实现close方法（当然还有很多类似类型的类）
+\end_layout
+
+\begin_layout Standard
+public void close throws IOException {
+\end_layout
+
+\begin_layout Standard
+synchronized (lock) {
+\end_layout
+
+\begin_layout Standard
+if (in == null)
+\end_layout
+
+\begin_layout Standard
+return;
+\end_layout
+
+\begin_layout Standard
+in.close;
+\end_layout
+
+\begin_layout Standard
+in = null;
+\end_layout
+
+\begin_layout Standard
+cb = null;
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+4.
+ 新增一些取环境信息的工具方法
+\end_layout
+
+\begin_layout Standard
+File System.getJavaIoTempDir // IO临时文件夹
+\end_layout
+
+\begin_layout Standard
+File System.getJavaHomeDir // JRE的安装目录
+\end_layout
+
+\begin_layout Standard
+File System.getUserHomeDir // 当前用户目录
+\end_layout
+
+\begin_layout Standard
+File System.getUserDir // 启动java进程时所在的目录
+\end_layout
+
+\begin_layout Standard
+.......
+\end_layout
+
+\begin_layout Standard
+5.
+ Boolean类型反转，空指针安全,参与位运算
+\end_layout
+
+\begin_layout Standard
+Boolean Booleans.negate(Boolean booleanObj)
+\end_layout
+
+\begin_layout Standard
+True => False , False => True, Null => Null
+\end_layout
+
+\begin_layout Standard
+boolean Booleans.and(boolean array)
+\end_layout
+
+\begin_layout Standard
+boolean Booleans.or(boolean array)
+\end_layout
+
+\begin_layout Standard
+boolean Booleans.xor(boolean array)
+\end_layout
+
+\begin_layout Standard
+boolean Booleans.and(Boolean array)
+\end_layout
+
+\begin_layout Standard
+boolean Booleans.or(Boolean array)
+\end_layout
+
+\begin_layout Standard
+boolean Booleans.xor(Boolean array)
+\end_layout
+
+\begin_layout Standard
+6.
+ 两个char间的equals
+\end_layout
+
+\begin_layout Standard
+boolean Character.equalsIgnoreCase(char ch1, char ch2)
+\end_layout
+
+\begin_layout Standard
+7，安全的加减乘除
+\end_layout
+
+\begin_layout Standard
+int Math.safeToInt(long value)
+\end_layout
+
+\begin_layout Standard
+int Math.safeNegate(int value)
+\end_layout
+
+\begin_layout Standard
+long Math.safeSubtract(long value1, int value2)
+\end_layout
+
+\begin_layout Standard
+long Math.safeSubtract(long value1, long value2)
+\end_layout
+
+\begin_layout Standard
+int Math.safeMultiply(int value1, int value2)
+\end_layout
+
+\begin_layout Standard
+long Math.safeMultiply(long value1, int value2)
+\end_layout
+
+\begin_layout Standard
+long Math.safeMultiply(long value1, long value2)
+\end_layout
+
+\begin_layout Standard
+long Math.safeNegate(long value)
+\end_layout
+
+\begin_layout Standard
+int Math.safeAdd(int value1, int value2)
+\end_layout
+
+\begin_layout Standard
+long Math.safeAdd(long value1, int value2)
+\end_layout
+
+\begin_layout Standard
+long Math.safeAdd(long value1, long value2)
+\end_layout
+
+\begin_layout Standard
+int Math.safeSubtract(int value1, int value2)
+\end_layout
+
+\begin_layout Standard
+1.对Java集合（Collections）的增强支持
+\end_layout
+
+\begin_layout Standard
+在JDK1.7之前的版本中，Java集合容器中存取元素的形式如下：
+\end_layout
+
+\begin_layout Standard
+以List、Set、Map集合容器为例：
+\end_layout
+
+\begin_layout Standard
+//创建List接口对象
+\end_layout
+
+\begin_layout Standard
+list=new ArrayList;
+\end_layout
+
+\begin_layout Standard
+list.add("item"); //用add方法获取对象
+\end_layout
+
+\begin_layout Standard
+String Item=list.get(0); //用get方法获取对象
+\end_layout
+
+\begin_layout Standard
+//创建Set接口对象
+\end_layout
+
+\begin_layout Standard
+set=new HashSet;
+\end_layout
+
+\begin_layout Standard
+set.add("item"); //用add方法添加对象
+\end_layout
+
+\begin_layout Standard
+//创建Map接口对象
+\end_layout
+
+\begin_layout Standard
+map=new HashMap;
+\end_layout
+
+\begin_layout Standard
+map.put("key",1); //用put方法添加对象
+\end_layout
+
+\begin_layout Standard
+int value=map.get("key");
+\end_layout
+
+\begin_layout Standard
+在JDK1.7中，摒弃了Java集合接口的实现类，如：ArrayList、HashSet和HashMap。而是直接采用、{}的形式存入对象，采用的形式按照索引、键
+值来获取集合中的对象，如下：
+\end_layout
+
+\begin_layout Standard
+list=["item"]; //向List集合中添加元素
+\end_layout
+
+\begin_layout Standard
+String item=list[0]; //从List集合中获取元素
+\end_layout
+
+\begin_layout Standard
+set={"item"}; //向Set集合对象中添加元素
+\end_layout
+
+\begin_layout Standard
+Map
+\end_layout
+
+\begin_layout Standard
+int value=map["key"]; //从Map集合中获取对象
+\end_layout
+
+\begin_layout Standard
+2.在Switch中可用String
+\end_layout
+
+\begin_layout Standard
+在之前的版本中是不支持在Switch语句块中用String类型的数据的，这个功能在C#语言中早已被支持，好在JDK1.7中加入了。
+\end_layout
+
+\begin_layout Standard
+String s = "test";
+\end_layout
+
+\begin_layout Standard
+switch (s) {
+\end_layout
+
+\begin_layout Standard
+case "test" :
+\end_layout
+
+\begin_layout Standard
+System.out.println("test");
+\end_layout
+
+\begin_layout Standard
+case "test1" :
+\end_layout
+
+\begin_layout Standard
+System.out.println("test1");
+\end_layout
+
+\begin_layout Standard
+break ;
+\end_layout
+
+\begin_layout Standard
+default :
+\end_layout
+
+\begin_layout Standard
+System.out.println("break");
+\end_layout
+
+\begin_layout Standard
+break ;
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+3.数值可加下划线
+\end_layout
+
+\begin_layout Standard
+例如：int one_million = 1_000_000;
+\end_layout
+
+\begin_layout Standard
+4.支持二进制文字
+\end_layout
+
+\begin_layout Standard
+例如：int binary = 0b1001_1001;
+\end_layout
+
+\begin_layout Standard
+5.简化了可变参数方法的调用
+\end_layout
+
+\begin_layout Standard
+当程序员试图使用一个不可具体化的可变参数并调用一个*varargs* （可变）方法时，编辑器会生成一个“非安全操作”的警告。
+\end_layout
+
+\begin_layout Standard
+6、在try catch异常扑捉中，一个catch可以写多个异常类型，用"|"隔开，
+\end_layout
+
+\begin_layout Standard
+jdk7之前：
+\end_layout
+
+\begin_layout Standard
+try { ......
+ } catch(ClassNotFoundException ex) { ex.printStackTrace; } catch(SQLException
+ ex) { ex.printStackTrace; }
+\end_layout
+
+\begin_layout Standard
+jdk7例子如下
+\end_layout
+
+\begin_layout Standard
+try { ......
+ } catch(ClassNotFoundException|SQLException ex) { ex.printStackTrace; }
+\end_layout
+
+\begin_layout Standard
+7、jdk7之前，你必须用try{}finally{}在try内使用资源，在finally中关闭资源，不管try中的代码是否正常退出或者异常退出。jdk7之后，
+你可以不必要写finally语句来关闭资源，只要你在try的括号内部定义要使用的资源。请看例子：
+\end_layout
+
+\begin_layout Standard
+jdk7之前
+\end_layout
+
+\begin_layout Standard
+import java.io.*; // Copy from one file to another file character by character.
+ // Pre-JDK 7 requires you to close the resources using a finally block.publiccla
+ss FileCopyPreJDK7 { publicstaticvoid main(String args) { BufferedReader
+ in = null; BufferedWriter out = null; try { in = new BufferedReader(new
+ FileReader("in.txt")); out = new BufferedWriter(new FileWriter("out.txt"));
+ int charRead; while ((charRead = in.read) != -1) { System.out.printf("%c ",
+ (char)charRead); out.write(charRead); } } catch (IOException ex) { ex.printStackT
+race; } finally { // always close the streamstry { if (in != null) in.close;
+ if (out != null) out.close; } catch (IOException ex) { ex.printStackTrace;
+ } } try { in.read; // Trigger IOException: Stream closed } catch (IOException
+ ex) { ex.printStackTrace; } } }
+\end_layout
+
+\begin_layout Standard
+jdk7之后
+\end_layout
+
+\begin_layout Standard
+import java.io.*; // Copy from one file to another file character by character.
+ // JDK 7 has a try-with-resources statement, which ensures that // each
+ resource opened in try is closed at the end of the statement.publicclass
+ FileCopyJDK7 { publicstaticvoid main(String args) { try (BufferedReader
+ in = new BufferedReader(new FileReader("in.txt")); BufferedWriter out =
+ new BufferedWriter(new FileWriter("out.txt"))) { int charRead; while ((charRead
+ = in.read) != -1) { System.out.printf("%c ", (char)charRead); out.write(charRead);
+ } } catch (IOException ex) { ex.printStackTrace; } } }
+\end_layout
+
+\begin_layout Standard
+本教程将Java8的新特新逐一列出，并将使用简单的代码示例来指导你如何使用默认接口方法，lambda表达式，方法引用以及多重Annotation，之后你将会学到
+最新的API上的改进，比如流，函数式接口，Map以及全新的日期API
+\end_layout
+
+\begin_layout Standard
+“Java is still not dead—and people are starting to figure that out.”
+\end_layout
+
+\begin_layout Standard
+本教程将用带注释的简单代码来描述新特性，你将看不到大片吓人的文字。
+\end_layout
+
+\begin_layout Standard
+一、接口的默认方法
+\end_layout
+
+\begin_layout Standard
+Java 8允许我们给接口添加一个非抽象的方法实现，只需要使用 default关键字即可，这个特征又叫做扩展方法，示例如下：
+\end_layout
+
+\begin_layout Standard
+interface Formula {
+\end_layout
+
+\begin_layout Standard
+double calculate(int a);
+\end_layout
+
+\begin_layout Standard
+default double sqrt(int a) {
+\end_layout
+
+\begin_layout Standard
+return Math.sqrt(a);
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+Formula接口在拥有calculate方法之外同时还定义了sqrt方法，实现了Formula接口的子类只需要实现一个calculate方法，默认方法sqrt
+将在子类上可以直接使用。
+\end_layout
+
+\begin_layout Standard
+Formula formula = new Formula {
+\end_layout
+
+\begin_layout Standard
+@Override
+\end_layout
+
+\begin_layout Standard
+public double calculate(int a) {
+\end_layout
+
+\begin_layout Standard
+return sqrt(a * 100);
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+};
+\end_layout
+
+\begin_layout Standard
+formula.calculate(100); // 100.0
+\end_layout
+
+\begin_layout Standard
+formula.sqrt(16); // 4.0
+\end_layout
+
+\begin_layout Standard
+文中的formula被实现为一个匿名类的实例，该代码非常容易理解，6行代码实现了计算 sqrt(a * 100)。在下一节中，我们将会看到实现单方法接口的更简单
+的做法。
+\end_layout
+
+\begin_layout Standard
+译者注： 在Java中只有单继承，如果要让一个类赋予新的特性，通常是使用接口来实现，在C++中支持多继承，允许一个子类同时具有多个父类的接口与功能，在其他
+ 语言中，让一个类同时具有其他的可复用代码的方法叫做mixin。新的Java 8 的这个特新在编译器实现的角度上来说更加接近Scala的trait。
+ 在C#中也有名为扩展方法的概念，允许给已存在的类型扩展方法，和Java 8的这个在语义上有差别。
+\end_layout
+
+\begin_layout Standard
+二、Lambda 表达式
+\end_layout
+
+\begin_layout Standard
+首先看看在老版本的Java中是如何排列字符串的：
+\end_layout
+
+\begin_layout Standard
+Listnames = Arrays.asList("peter", "anna", "mike", "xenia");Collections.sort(names
+, new Comparator{
+\end_layout
+
+\begin_layout Standard
+@Override
+\end_layout
+
+\begin_layout Standard
+public int compare(String a, String b) {
+\end_layout
+
+\begin_layout Standard
+return b.compareTo(a);
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+});
+\end_layout
+
+\begin_layout Standard
+只需要给静态方法 Collections.sort 传入一个List对象以及一个比较器来按指定顺序排列。通常做法都是创建一个匿名的比较器对象然后将其传递给sort
+方法。
+\end_layout
+
+\begin_layout Standard
+在Java 8 中你就没必要使用这种传统的匿名对象的方式了，Java 8提供了更简洁的语法，lambda表达式：
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+Collections.sort(names, (String a, String b) -> {
+\end_layout
+
+\begin_layout Standard
+return b.compareTo(a);
+\end_layout
+
+\begin_layout Standard
+});
+\end_layout
+
+\begin_layout Standard
+看到了吧，代码变得更段且更具有可读性，但是实际上还可以写得更短：
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+Collections.sort(names, (String a, String b) -> b.compareTo(a));
+\end_layout
+
+\begin_layout Standard
+对于函数体只有一行代码的，你可以去掉大括号{}以及return关键字，但是你还可以写得更短点：
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+Collections.sort(names, (a, b) -> b.compareTo(a));
+\end_layout
+
+\begin_layout Standard
+Java编译器可以自动推导出参数类型，所以你可以不用再写一次类型。接下来我们看看lambda表达式还能作出什么更方便的东西来：
+\end_layout
+
+\begin_layout Standard
+三、函数式接口
+\end_layout
+
+\begin_layout Standard
+Lambda 表达式是如何在java的类型系统中表示的呢？每一个lambda表达式都对应一个类型，通常是接口类型。而“函数式接口”是指仅仅只包含一个抽象方法的
+ 接口，每一个该类型的lambda表达式都会被匹配到这个抽象方法。因为 默认方法 不算抽象方法，所以你也可以给你的函数式接口添加默认方法。
+\end_layout
+
+\begin_layout Standard
+我们可以将lambda表达式当作任意只包含一个抽象方法的接口类型，确保你的接口一定达到这个要求，你只需要给你的接口添加 @FunctionalInterface
+ 注解，编译器如果发现你标注了这个注解的接口有多于一个抽象方法的时候会报错的。
+\end_layout
+
+\begin_layout Standard
+@FunctionalInterface
+\end_layout
+
+\begin_layout Standard
+{Converterconverter = (from) -> Integer.valueOf(from);
+\end_layout
+
+\begin_layout Standard
+Integer converted = converter.convert("123");
+\end_layout
+
+\begin_layout Standard
+System.out.println(converted); // 123
+\end_layout
+
+\begin_layout Standard
+需要注意如果@FunctionalInterface如果没有指定，上面的代码也是对的。
+\end_layout
+
+\begin_layout Standard
+译者注 将lambda表达式映射到一个单方法的接口上，这种做法在Java 8之前就有别的语言实现，比如Rhino JavaScript解释器，如果一个函数参数接
+收一个单方法的接口而你传递的是一个function，Rhino 解释器会自动做一个单接口的实例到function的适配器，典型的应用场景有 org.w3c.dom.e
+vents.EventTarget 的addEventListener 第二个参数 EventListener。
+\end_layout
+
+\begin_layout Standard
+Integer converted = converter.convert("123");
+\end_layout
+
+\begin_layout Standard
+System.out.println(converted); // 123
+\end_layout
+
+\begin_layout Standard
+Java 8 允许你使用 :: 关键字来传递方法或者构造函数引用，上面的代码展示了如何引用一个静态方法，我们也可以引用一个对象的方法：
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+converter = something::startsWith;
+\end_layout
+
+\begin_layout Standard
+String converted = converter.convert("Java");
+\end_layout
+
+\begin_layout Standard
+System.out.println(converted); // "J"
+\end_layout
+
+\begin_layout Standard
+接下来看看构造函数是如何使用::关键字来引用的，首先我们定义一个包含多个构造函数的简单类：
+\end_layout
+
+\begin_layout Standard
+class Person {
+\end_layout
+
+\begin_layout Standard
+String firstName;
+\end_layout
+
+\begin_layout Standard
+String lastName;
+\end_layout
+
+\begin_layout Standard
+Person {}
+\end_layout
+
+\begin_layout Standard
+Person(String firstName, String lastName) {
+\end_layout
+
+\begin_layout Standard
+this.firstName = firstName;
+\end_layout
+
+\begin_layout Standard
+this.lastName = lastName;
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+接下来我们指定一个用来创建Person对象的对象工厂接口：
+\end_layout
+
+\begin_layout Standard
+interface PersonFactory
+\end_layout
+
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+P create(String firstName, String lastName);
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+这里我们使用构造函数引用来将他们关联起来，而不是实现一个完整的工厂：
+\end_layout
+
+\begin_layout Standard
+PersonFactory
+\end_layout
+
+\begin_layout Standard
+Person person = personFactory.create("Peter", "Parker");
+\end_layout
+
+\begin_layout Standard
+我们只需要使用 Person::new 来获取Person类构造函数的引用，Java编译器会自动根据PersonFactory.create方法的签名来选择合适的
+构造函数。
+\end_layout
+
+\begin_layout Standard
+五、Lambda 作用域
+\end_layout
+
+\begin_layout Standard
+在lambda表达式中访问外层作用域和老版本的匿名对象中的方式很相似。你可以直接访问标记了final的外层局部变量，或者实例的字段以及静态变量。
+\end_layout
+
+\begin_layout Standard
+六、访问局部变量
+\end_layout
+
+\begin_layout Standard
+final int num = 1;
+\end_layout
+
+\begin_layout Standard
+stringConverter =
+\end_layout
+
+\begin_layout Standard
+(from) -> String.valueOf(from + num);
+\end_layout
+
+\begin_layout Standard
+stringConverter.convert(2); // 3
+\end_layout
+
+\begin_layout Standard
+但是和匿名对象不同的是，这里的变量num可以不用声明为final，该代码同样正确：
+\end_layout
+
+\begin_layout Standard
+int num = 1;
+\end_layout
+
+\begin_layout Standard
+不过这里的num必须不可被后面的代码修改（即隐性的具有final的语义），例如下面的就无法编译：
+\end_layout
+
+\begin_layout Standard
+(from) -> String.valueOf(from + num);
+\end_layout
+
+\begin_layout Standard
+num = 3;
+\end_layout
+
+\begin_layout Standard
+在lambda表达式中试图修改num同样是不允许的。
+\end_layout
+
+\begin_layout Standard
+七、访问对象字段与静态变量
+\end_layout
+
+\begin_layout Standard
+和本地变量不同的是，lambda内部对于实例的字段以及静态变量是即可读又可写。该行为和匿名对象是一致的：
+\end_layout
+
+\begin_layout Standard
+class Lambda4 {
+\end_layout
+
+\begin_layout Standard
+static int outerStaticNum;
+\end_layout
+
+\begin_layout Standard
+int outerNum; ConverterstringConverter1 = (from) -> {
+\end_layout
+
+\begin_layout Standard
+outerNum = 23;
+\end_layout
+
+\begin_layout Standard
+return String.valueOf(from);
+\end_layout
+
+\begin_layout Standard
+};stringConverter2 = (from) -> {
+\end_layout
+
+\begin_layout Standard
+outerStaticNum = 72;
+\end_layout
+
+\begin_layout Standard
+return String.valueOf(from);
+\end_layout
+
+\begin_layout Standard
+};
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+八、访问接口的默认方法
+\end_layout
+
+\begin_layout Standard
+还记得第一节中的formula例子么，接口Formula定义了一个默认方法sqrt可以直接被formula的实例包括匿名对象访问到，但是在lambda表达式中这
+个是不行的。
+\end_layout
+
+\begin_layout Standard
+Lambda表达式中是无法访问到默认方法的，以下代码将无法编译：
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+Formula formula = (a) -> sqrt( a * 100);
+\end_layout
+
+\begin_layout Standard
+Built-in Functional Interfaces
+\end_layout
+
+\begin_layout Standard
+JDK 1.8 API包含了很多内建的函数式接口，在老Java中常用到的比如Comparator或者Runnable接口，这些接口都增加了@FunctionalI
+nterface注解以便能用在lambda上。
+\end_layout
+
+\begin_layout Standard
+Java 8 API同样还提供了很多全新的函数式接口来让工作更加方便，有一些接口是来自Google Guava库里的，即便你对这些很熟悉了，还是有必要看看这些是
+如何扩展到lambda上使用的。
+\end_layout
+
+\begin_layout Standard
+Predicate接口
+\end_layout
+
+\begin_layout Standard
+Predicate 接口只有一个参数，返回boolean类型。该接口包含多种默认方法来将Predicate组合成其他复杂的逻辑（比如：与，或，非）：
+\end_layout
+
+\begin_layout Standard
+Predicatepredicate = (s) -> s.length > 0;
+\end_layout
+
+\begin_layout Standard
+predicate.test("foo"); // true
+\end_layout
+
+\begin_layout Standard
+predicate.negate.test("foo"); // false
+\end_layout
+
+\begin_layout Standard
+isNotEmpty = isEmpty.negate;
+\end_layout
+
+\begin_layout Standard
+Function 接口
+\end_layout
+
+\begin_layout Standard
+Function 接口有一个参数并且返回一个结果，并附带了一些可以和其他函数组合的默认方法（compose, andThen）：
+\end_layout
+
+\begin_layout Standard
+FunctionbackToString = toInteger.andThen(String::valueOf);
+\end_layout
+
+\begin_layout Standard
+backToString.apply("123"); // "123"
+\end_layout
+
+\begin_layout Standard
+Supplier 接口
+\end_layout
+
+\begin_layout Standard
+Supplier 接口返回一个任意范型的值，和Function接口不同的是该接口没有任何参数
+\end_layout
+
+\begin_layout Standard
+personSupplier = Person::new;
+\end_layout
+
+\begin_layout Standard
+personSupplier.get; // new Person
+\end_layout
+
+\begin_layout Standard
+Consumer 接口
+\end_layout
+
+\begin_layout Standard
+Consumer 接口表示执行在单个参数上的操作。
+\end_layout
+
+\begin_layout Standard
+Consumergreeter = (p) -> System.out.println("Hello, " + p.firstName);
+\end_layout
+
+\begin_layout Standard
+greeter.accept(new Person("Luke", "Skywalker"));
+\end_layout
+
+\begin_layout Standard
+Comparator 接口
+\end_layout
+
+\begin_layout Standard
+Comparator 是老Java中的经典接口， Java 8在此之上添加了多种默认方法：
+\end_layout
+
+\begin_layout Standard
+Comparatorcomparator = (p1, p2) -> p1.firstName.compareTo(p2.firstName);
+\end_layout
+
+\begin_layout Standard
+Person p1 = new Person("John", "Doe");
+\end_layout
+
+\begin_layout Standard
+Person p2 = new Person("Alice", "Wonderland");
+\end_layout
+
+\begin_layout Standard
+comparator.compare(p1, p2); // > 0
+\end_layout
+
+\begin_layout Standard
+comparator.reversed.compare(p1, p2); // < 0
+\end_layout
+
+\begin_layout Standard
+Optional 接口
+\end_layout
+
+\begin_layout Standard
+Optional 不是函数是接口，这是个用来防止NullPointerException异常的辅助类型，这是下一届中将要用到的重要概念，现在先简单的看看这个接口
+能干什么：
+\end_layout
+
+\begin_layout Standard
+Optional 被定义为一个简单的容器，其值可能是null或者不是null。在Java 8之前一般某个函数应该返回非空对象但是偶尔却可能返回了null，而在J
+ava 8中，不推荐你返回null而是返回Optional。
+\end_layout
+
+\begin_layout Standard
+Optionaloptional = Optional.of("bam");
+\end_layout
+
+\begin_layout Standard
+optional.isPresent; // true
+\end_layout
+
+\begin_layout Standard
+optional.get; // "bam"
+\end_layout
+
+\begin_layout Standard
+optional.orElse("fallback"); // "bam"
+\end_layout
+
+\begin_layout Standard
+optional.ifPresent((s) -> System.out.println(s.charAt(0))); // "b"
+\end_layout
+
+\begin_layout Standard
+Stream 接口
+\end_layout
+
+\begin_layout Standard
+java.util.Stream 表示能应用在一组元素上一次执行的操作序列。Stream 操作分为中间操作或者最终操作两种，最终操作返回一特定类型的计算结果，而中间
+操作返回Stream本身，这样你就可以将多个操作依次串起来。 Stream 的创建需要指定一个数据源，比如 java.util.Collection的子类，List
+或者Set， Map不支持。Stream的操作可以串行执行或者并行执行。
+\end_layout
+
+\begin_layout Standard
+ListstringCollection = new ArrayList<>;
+\end_layout
+
+\begin_layout Standard
+stringCollection.add("ddd2");
+\end_layout
+
+\begin_layout Standard
+stringCollection.add("aaa2");
+\end_layout
+
+\begin_layout Standard
+stringCollection.add("bbb1");
+\end_layout
+
+\begin_layout Standard
+stringCollection.add("aaa1");
+\end_layout
+
+\begin_layout Standard
+stringCollection.add("bbb3");
+\end_layout
+
+\begin_layout Standard
+stringCollection.add("ccc");
+\end_layout
+
+\begin_layout Standard
+stringCollection.add("bbb2");
+\end_layout
+
+\begin_layout Standard
+stringCollection.add("ddd1");
+\end_layout
+
+\begin_layout Standard
+Java 8扩展了集合类，可以通过 Collection.stream 或者 Collection.parallelStream 来创建一个Stream。下面几节将
+详细解释常用的Stream操作：
+\end_layout
+
+\begin_layout Standard
+Filter 过滤
+\end_layout
+
+\begin_layout Standard
+过滤通过一个predicate接口来过滤并只保留符合条件的元素，该操作属于中间操作，所以我们可以在过滤后的结果来应用其他Stream操作 （比如forEach）
+。forEach需要一个函数来对过滤后的元素依次执行。forEach是一个最终操作，所以我们不能在forEach之后来执行 其他Stream操作。
+\end_layout
+
+\begin_layout Standard
+stringCollection
+\end_layout
+
+\begin_layout Standard
+.stream
+\end_layout
+
+\begin_layout Standard
+.filter((s) -> s.startsWith("a"))
+\end_layout
+
+\begin_layout Standard
+.forEach(System.out::println);
+\end_layout
+
+\begin_layout Standard
+// "aaa2", "aaa1"
+\end_layout
+
+\begin_layout Standard
+Sort 排序
+\end_layout
+
+\begin_layout Standard
+排序是一个中间操作，返回的是排序好后的Stream。如果你不指定一个自定义的Comparator则会使用默认排序。
+\end_layout
+
+\begin_layout Standard
+stringCollection
+\end_layout
+
+\begin_layout Standard
+.stream
+\end_layout
+
+\begin_layout Standard
+.sorted
+\end_layout
+
+\begin_layout Standard
+.filter((s) -> s.startsWith("a"))
+\end_layout
+
+\begin_layout Standard
+.forEach(System.out::println);
+\end_layout
+
+\begin_layout Standard
+// "aaa1", "aaa2"
+\end_layout
+
+\begin_layout Standard
+需要注意的是，排序只创建了一个排列好后的Stream，而不会影响原有的数据源，排序之后原数据stringCollection是不会被修改的：
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+System.out.println(stringCollection);
+\end_layout
+
+\begin_layout Standard
+// ddd2, aaa2, bbb1, aaa1, bbb3, ccc, bbb2, ddd1
+\end_layout
+
+\begin_layout Standard
+Map 映射
+\end_layout
+
+\begin_layout Standard
+中间操作map会将元素根据指定的Function接口来依次将元素转成另外的对象，下面的示例展示了将字符串转换为大写字符串。你也可以通过map来讲对象转换成其他类
+型，map返回的Stream类型是根据你map传递进去的函数的返回值决定的。
+\end_layout
+
+\begin_layout Standard
+stringCollection
+\end_layout
+
+\begin_layout Standard
+.stream
+\end_layout
+
+\begin_layout Standard
+.map(String::toUpperCase)
+\end_layout
+
+\begin_layout Standard
+.sorted((a, b) -> b.compareTo(a))
+\end_layout
+
+\begin_layout Standard
+.forEach(System.out::println);
+\end_layout
+
+\begin_layout Standard
+// "DDD2", "DDD1", "CCC", "BBB3", "BBB2", "AAA2", "AAA1"
+\end_layout
+
+\begin_layout Standard
+Match 匹配
+\end_layout
+
+\begin_layout Standard
+Stream提供了多种匹配操作，允许检测指定的Predicate是否匹配整个Stream。所有的匹配操作都是最终操作，并返回一个boolean类型的值。
+\end_layout
+
+\begin_layout Standard
+boolean anyStartsWithA =
+\end_layout
+
+\begin_layout Standard
+stringCollection
+\end_layout
+
+\begin_layout Standard
+.stream
+\end_layout
+
+\begin_layout Standard
+.anyMatch((s) -> s.startsWith("a"));
+\end_layout
+
+\begin_layout Standard
+System.out.println(anyStartsWithA); // true
+\end_layout
+
+\begin_layout Standard
+boolean allStartsWithA =
+\end_layout
+
+\begin_layout Standard
+stringCollection
+\end_layout
+
+\begin_layout Standard
+.stream
+\end_layout
+
+\begin_layout Standard
+.allMatch((s) -> s.startsWith("a"));
+\end_layout
+
+\begin_layout Standard
+System.out.println(allStartsWithA); // false
+\end_layout
+
+\begin_layout Standard
+boolean noneStartsWithZ =
+\end_layout
+
+\begin_layout Standard
+stringCollection
+\end_layout
+
+\begin_layout Standard
+.stream
+\end_layout
+
+\begin_layout Standard
+.noneMatch((s) -> s.startsWith("z"));
+\end_layout
+
+\begin_layout Standard
+System.out.println(noneStartsWithZ); // true
+\end_layout
+
+\begin_layout Standard
+Count 计数
+\end_layout
+
+\begin_layout Standard
+计数是一个最终操作，返回Stream中元素的个数，返回值类型是long。
+\end_layout
+
+\begin_layout Standard
+long startsWithB =
+\end_layout
+
+\begin_layout Standard
+stringCollection
+\end_layout
+
+\begin_layout Standard
+.stream
+\end_layout
+
+\begin_layout Standard
+.filter((s) -> s.startsWith("b"))
+\end_layout
+
+\begin_layout Standard
+.count;
+\end_layout
+
+\begin_layout Standard
+System.out.println(startsWithB); // 3
+\end_layout
+
+\begin_layout Standard
+Reduce 规约
+\end_layout
+
+\begin_layout Standard
+这是一个最终操作，允许通过指定的函数来讲stream中的多个元素规约为一个元素，规越后的结果是通过Optional接口表示的：
+\end_layout
+
+\begin_layout Standard
+Optionalreduced =
+\end_layout
+
+\begin_layout Standard
+stringCollection
+\end_layout
+
+\begin_layout Standard
+.stream
+\end_layout
+
+\begin_layout Standard
+.sorted
+\end_layout
+
+\begin_layout Standard
+.reduce((s1, s2) -> s1 + "#" + s2);
+\end_layout
+
+\begin_layout Standard
+reduced.ifPresent(System.out::println);
+\end_layout
+
+\begin_layout Standard
+// "aaa1#aaa2#bbb1#bbb2#bbb3#ccc#ddd1#ddd2"
+\end_layout
+
+\begin_layout Standard
+并行Streams
+\end_layout
+
+\begin_layout Standard
+前面提到过Stream有串行和并行两种，串行Stream上的操作是在一个线程中依次完成，而并行Stream则是在多个线程上同时执行。
+\end_layout
+
+\begin_layout Standard
+下面的例子展示了是如何通过并行Stream来提升性能：
+\end_layout
+
+\begin_layout Standard
+int max = 1000000;
+\end_layout
+
+\begin_layout Standard
+Listvalues = new ArrayList<>(max);
+\end_layout
+
+\begin_layout Standard
+for (int i = 0; i < max; i++) {
+\end_layout
+
+\begin_layout Standard
+UUID uuid = UUID.randomUUID;
+\end_layout
+
+\begin_layout Standard
+values.add(uuid.toString);
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+然后我们计算一下排序这个Stream要耗时多久，
+\end_layout
+
+\begin_layout Standard
+串行排序：
+\end_layout
+
+\begin_layout Standard
+long t0 = System.nanoTime;
+\end_layout
+
+\begin_layout Standard
+long count = values.stream.sorted.count;
+\end_layout
+
+\begin_layout Standard
+System.out.println(count);
+\end_layout
+
+\begin_layout Standard
+long t1 = System.nanoTime;
+\end_layout
+
+\begin_layout Standard
+long millis = TimeUnit.NANOSECONDS.toMillis(t1 - t0);
+\end_layout
+
+\begin_layout Standard
+System.out.println(String.format("sequential sort took: %d ms", millis));
+\end_layout
+
+\begin_layout Standard
+long count = values.parallelStream.sorted.count;
+\end_layout
+
+\begin_layout Standard
+System.out.println(count);
+\end_layout
+
+\begin_layout Standard
+long millis = TimeUnit.NANOSECONDS.toMillis(t1 - t0);
+\end_layout
+
+\begin_layout Standard
+System.out.println(String.format("parallel sort took: %d ms", millis));
+\end_layout
+
+\begin_layout Standard
+// 并行排序耗时: 472 ms
+\end_layout
+
+\begin_layout Standard
+上面两个代码几乎是一样的，但是并行版的快了50%之多，唯一需要做的改动就是将stream改为parallelStream。
+\end_layout
+
+\begin_layout Standard
+Map
+\end_layout
+
+\begin_layout Standard
+前面提到过，Map类型不支持stream，不过Map提供了一些新的有用的方法来处理一些日常任务。
+\end_layout
+
+\begin_layout Standard
+Mapmap = new HashMap<>;
+\end_layout
+
+\begin_layout Standard
+for (int i = 0; i < 10; i++) {
+\end_layout
+
+\begin_layout Standard
+map.putIfAbsent(i, "val" + i);
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+map.forEach((id, val) -> System.out.println(val));
+\end_layout
+
+\begin_layout Standard
+以上代码很容易理解， putIfAbsent 不需要我们做额外的存在性检查，而forEach则接收一个Consumer接口来对map里的每一个键值对进行操作。
+\end_layout
+
+\begin_layout Standard
+map.computeIfPresent(3, (num, val) -> val + num);
+\end_layout
+
+\begin_layout Standard
+map.get(3); // val33
+\end_layout
+
+\begin_layout Standard
+map.computeIfPresent(9, (num, val) -> null);
+\end_layout
+
+\begin_layout Standard
+map.containsKey(9); // false
+\end_layout
+
+\begin_layout Standard
+map.computeIfAbsent(23, num -> "val" + num);
+\end_layout
+
+\begin_layout Standard
+map.containsKey(23); // true
+\end_layout
+
+\begin_layout Standard
+map.computeIfAbsent(3, num -> "bam");
+\end_layout
+
+\begin_layout Standard
+map.get(3); // val33
+\end_layout
+
+\begin_layout Standard
+接下来展示如何在Map里删除一个键值全都匹配的项：
+\end_layout
+
+\begin_layout Standard
+map.remove(3, "val3");
+\end_layout
+
+\begin_layout Standard
+map.get(3); // val33
+\end_layout
+
+\begin_layout Standard
+map.remove(3, "val33");
+\end_layout
+
+\begin_layout Standard
+map.get(3); // null
+\end_layout
+
+\begin_layout Standard
+另外一个有用的方法：
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+map.getOrDefault(42, "not found"); // not found
+\end_layout
+
+\begin_layout Standard
+对Map的元素做合并也变得很容易了：
+\end_layout
+
+\begin_layout Standard
+map.merge(9, "val9", (value, newValue) -> value.concat(newValue));
+\end_layout
+
+\begin_layout Standard
+map.get(9); // val9
+\end_layout
+
+\begin_layout Standard
+map.merge(9, "concat", (value, newValue) -> value.concat(newValue));
+\end_layout
+
+\begin_layout Standard
+map.get(9); // val9concat
+\end_layout
+
+\begin_layout Standard
+Merge做的事情是如果键名不存在则插入，否则则对原键对应的值做合并操作并重新插入到map中。
+\end_layout
+
+\begin_layout Standard
+九、Date API
+\end_layout
+
+\begin_layout Standard
+Java 8 在包java.time下包含了一组全新的时间日期API。新的日期API和开源的Joda-Time库差不多，但又不完全一样，下面的例子展示了这组新AP
+I里最重要的一些部分：
+\end_layout
+
+\begin_layout Standard
+Clock 时钟
+\end_layout
+
+\begin_layout Standard
+Clock类提供了访问当前日期和时间的方法，Clock是时区敏感的，可以用来取代 System.currentTimeMillis 来获取当前的微秒数。某一个特定
+的时间点也可以使用Instant类来表示，Instant类也可以用来创建老的java.util.Date对象。
+\end_layout
+
+\begin_layout Standard
+Clock clock = Clock.systemDefaultZone;
+\end_layout
+
+\begin_layout Standard
+long millis = clock.millis;
+\end_layout
+
+\begin_layout Standard
+Instant instant = clock.instant;
+\end_layout
+
+\begin_layout Standard
+Date legacyDate = Date.from(instant); // legacy java.util.Date
+\end_layout
+
+\begin_layout Standard
+Timezones 时区
+\end_layout
+
+\begin_layout Standard
+在新API中时区使用ZoneId来表示。时区可以很方便的使用静态方法of来获取到。 时区定义了到UTS时间的时间差，在Instant时间点对象到本地日期对象之间
+转换的时候是极其重要的。
+\end_layout
+
+\begin_layout Standard
+System.out.println(ZoneId.getAvailableZoneIds);
+\end_layout
+
+\begin_layout Standard
+// prints all available timezone ids
+\end_layout
+
+\begin_layout Standard
+ZoneId zone1 = ZoneId.of("Europe/Berlin");
+\end_layout
+
+\begin_layout Standard
+ZoneId zone2 = ZoneId.of("Brazil/East");
+\end_layout
+
+\begin_layout Standard
+System.out.println(zone1.getRules);
+\end_layout
+
+\begin_layout Standard
+System.out.println(zone2.getRules);
+\end_layout
+
+\begin_layout Standard
+// ZoneRules[currentStandardOffset=+01:00]
+\end_layout
+
+\begin_layout Standard
+// ZoneRules[currentStandardOffset=-03:00]
+\end_layout
+
+\begin_layout Standard
+LocalTime 本地时间
+\end_layout
+
+\begin_layout Standard
+LocalTime 定义了一个没有时区信息的时间，例如 晚上10点，或者 17:30:15。下面的例子使用前面代码创建的时区创建了两个本地时间。之后比较时间并以
+小时和分钟为单位计算两个时间的时间差：
+\end_layout
+
+\begin_layout Standard
+LocalTime now1 = LocalTime.now(zone1);
+\end_layout
+
+\begin_layout Standard
+LocalTime now2 = LocalTime.now(zone2);
+\end_layout
+
+\begin_layout Standard
+System.out.println(now1.isBefore(now2)); // false
+\end_layout
+
+\begin_layout Standard
+long hoursBetween = ChronoUnit.HOURS.between(now1, now2);
+\end_layout
+
+\begin_layout Standard
+long minutesBetween = ChronoUnit.MINUTES.between(now1, now2);
+\end_layout
+
+\begin_layout Standard
+System.out.println(hoursBetween); // -3
+\end_layout
+
+\begin_layout Standard
+System.out.println(minutesBetween); // -239
+\end_layout
+
+\begin_layout Standard
+LocalTime 提供了多种工厂方法来简化对象的创建，包括解析时间字符串。
+\end_layout
+
+\begin_layout Standard
+LocalTime late = LocalTime.of(23, 59, 59);
+\end_layout
+
+\begin_layout Standard
+System.out.println(late); // 23:59:59
+\end_layout
+
+\begin_layout Standard
+DateTimeFormatter germanFormatter =
+\end_layout
+
+\begin_layout Standard
+DateTimeFormatter
+\end_layout
+
+\begin_layout Standard
+.ofLocalizedTime(FormatStyle.SHORT)
+\end_layout
+
+\begin_layout Standard
+.withLocale(Locale.GERMAN);
+\end_layout
+
+\begin_layout Standard
+LocalTime leetTime = LocalTime.parse("13:37", germanFormatter);
+\end_layout
+
+\begin_layout Standard
+System.out.println(leetTime); // 13:37
+\end_layout
+
+\begin_layout Standard
+LocalDate 本地日期
+\end_layout
+
+\begin_layout Standard
+LocalDate 表示了一个确切的日期，比如 2014-03-11。该对象值是不可变的，用起来和LocalTime基本一致。下面的例子展示了如何给Date对象
+加减天/月/年。另外要注意的是这些对象是不可变的，操作返回的总是一个新实例。
+\end_layout
+
+\begin_layout Standard
+LocalDate today = LocalDate.now;
+\end_layout
+
+\begin_layout Standard
+LocalDate tomorrow = today.plus(1, ChronoUnit.DAYS);
+\end_layout
+
+\begin_layout Standard
+LocalDate yesterday = tomorrow.minusDays(2);
+\end_layout
+
+\begin_layout Standard
+LocalDate independenceDay = LocalDate.of(2014, Month.JULY, 4);
+\end_layout
+
+\begin_layout Standard
+DayOfWeek dayOfWeek = independenceDay.getDayOfWeek;
+\end_layout
+
+\begin_layout Standard
+System.out.println(dayOfWeek); // FRIDAY
+\end_layout
+
+\begin_layout Standard
+从字符串解析一个LocalDate类型和解析LocalTime一样简单：
+\end_layout
+
+\begin_layout Standard
+DateTimeFormatter germanFormatter =
+\end_layout
+
+\begin_layout Standard
+DateTimeFormatter
+\end_layout
+
+\begin_layout Standard
+.ofLocalizedDate(FormatStyle.MEDIUM)
+\end_layout
+
+\begin_layout Standard
+.withLocale(Locale.GERMAN);
+\end_layout
+
+\begin_layout Standard
+LocalDate xmas = LocalDate.parse("24.12.2014", germanFormatter);
+\end_layout
+
+\begin_layout Standard
+System.out.println(xmas); // 2014-12-24
+\end_layout
+
+\begin_layout Standard
+LocalDateTime 本地日期时间
+\end_layout
+
+\begin_layout Standard
+LocalDateTime 同时表示了时间和日期，相当于前两节内容合并到一个对象上了。LocalDateTime和LocalTime还有LocalDate一样，
+都是不可变的。LocalDateTime提供了一些能访问具体字段的方法。
+\end_layout
+
+\begin_layout Standard
+LocalDateTime sylvester = LocalDateTime.of(2014, Month.DECEMBER, 31, 23, 59,
+ 59);
+\end_layout
+
+\begin_layout Standard
+DayOfWeek dayOfWeek = sylvester.getDayOfWeek;
+\end_layout
+
+\begin_layout Standard
+System.out.println(dayOfWeek); // WEDNESDAY
+\end_layout
+
+\begin_layout Standard
+Month month = sylvester.getMonth;
+\end_layout
+
+\begin_layout Standard
+System.out.println(month); // DECEMBER
+\end_layout
+
+\begin_layout Standard
+long minuteOfDay = sylvester.getLong(ChronoField.MINUTE_OF_DAY);
+\end_layout
+
+\begin_layout Standard
+System.out.println(minuteOfDay); // 1439
+\end_layout
+
+\begin_layout Standard
+只要附加上时区信息，就可以将其转换为一个时间点Instant对象，Instant时间点对象可以很容易的转换为老式的java.util.Date。
+\end_layout
+
+\begin_layout Standard
+Instant instant = sylvester
+\end_layout
+
+\begin_layout Standard
+.atZone(ZoneId.systemDefault)
+\end_layout
+
+\begin_layout Standard
+.toInstant;
+\end_layout
+
+\begin_layout Standard
+Date legacyDate = Date.from(instant);
+\end_layout
+
+\begin_layout Standard
+System.out.println(legacyDate); // Wed Dec 31 23:59:59 CET 2014
+\end_layout
+
+\begin_layout Standard
+格式化LocalDateTime和格式化时间和日期一样的，除了使用预定义好的格式外，我们也可以自己定义格式：
+\end_layout
+
+\begin_layout Standard
+DateTimeFormatter formatter =
+\end_layout
+
+\begin_layout Standard
+DateTimeFormatter
+\end_layout
+
+\begin_layout Standard
+.ofPattern("MMM dd, yyyy - HH:mm");
+\end_layout
+
+\begin_layout Standard
+LocalDateTime parsed = LocalDateTime.parse("Nov 03, 2014 - 07:13", formatter);
+\end_layout
+
+\begin_layout Standard
+String string = formatter.format(parsed);
+\end_layout
+
+\begin_layout Standard
+System.out.println(string); // Nov 03, 2014 - 07:13
+\end_layout
+
+\begin_layout Standard
+和java.text.NumberFormat不一样的是新版的DateTimeFormatter是不可变的，所以它是线程安全的。
+\end_layout
+
+\begin_layout Standard
+关于时间日期格式的详细信息：http://download.java.net/jdk8/docs/api/java/time/format/DateTimeForm
+atter.html
+\end_layout
+
+\begin_layout Standard
+十、Annotation 注解
+\end_layout
+
+\begin_layout Standard
+在Java 8中支持多重注解了，先看个例子来理解一下是什么意思。
+\end_layout
+
+\begin_layout Standard
+首先定义一个包装类Hints注解用来放置一组具体的Hint注解：
+\end_layout
+
+\begin_layout Standard
+@interface Hints {
+\end_layout
+
+\begin_layout Standard
+Hint value;
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+@Repeatable(Hints.class)
+\end_layout
+
+\begin_layout Standard
+@interface Hint {
+\end_layout
+
+\begin_layout Standard
+String value;
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+Java 8允许我们把同一个类型的注解使用多次，只需要给该注解标注一下@Repeatable即可。
+\end_layout
+
+\begin_layout Standard
+例 1: 使用包装类当容器来存多个注解（老方法）
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+@Hints({@Hint("hint1"), @Hint("hint2")})
+\end_layout
+
+\begin_layout Standard
+class Person {}
+\end_layout
+
+\begin_layout Standard
+例 2：使用多重注解（新方法）
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+@Hint("hint1")
+\end_layout
+
+\begin_layout Standard
+@Hint("hint2")
+\end_layout
+
+\begin_layout Standard
+class Person {}
+\end_layout
+
+\begin_layout Standard
+第二个例子里java编译器会隐性的帮你定义好@Hints注解，了解这一点有助于你用反射来获取这些信息：
+\end_layout
+
+\begin_layout Standard
+Hint hint = Person.class.getAnnotation(Hint.class);
+\end_layout
+
+\begin_layout Standard
+System.out.println(hint); // null
+\end_layout
+
+\begin_layout Standard
+Hints hints1 = Person.class.getAnnotation(Hints.class);
+\end_layout
+
+\begin_layout Standard
+System.out.println(hints1.value.length); // 2
+\end_layout
+
+\begin_layout Standard
+Hint hints2 = Person.class.getAnnotationsByType(Hint.class);
+\end_layout
+
+\begin_layout Standard
+System.out.println(hints2.length); // 2
+\end_layout
+
+\begin_layout Standard
+即便我们没有在Person类上定义@Hints注解，我们还是可以通过 getAnnotation(Hints.class) 来获取 @Hints注解，更加方便的方
+法是使用 getAnnotationsByType 可以直接获取到所有的@Hint注解。
+\end_layout
+
+\begin_layout Standard
+另外Java 8的注解还增加到两种新的target上了：
+\end_layout
+
+\begin_layout Standard
+复制代码 代码如下:
+\end_layout
+
+\begin_layout Standard
+@Target({ElementType.TYPE_PARAMETER, ElementType.TYPE_USE})
+\end_layout
+
+\begin_layout Standard
+@interface MyAnnotation {}
+\end_layout
+
+\begin_layout Standard
+关于Java 8的新特性就写到这了，肯定还有更多的特性等待发掘。JDK 1.8里还有很多很有用的东西，比如Arrays.parallelSort,
+ StampedLock和CompletableFuture等等。
+\end_layout
+
+\begin_layout Chapter
+部分练习和思考题参考答案
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:初识Java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exercisename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exer:编写程序，在屏幕上显示如下的图形："
+
+\end_inset
+
+[在
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "exer:编写程序，在屏幕上显示如下的图形："
+
+\end_inset
+
+页]的一个实现如下所示
+\begin_inset CommandInset label
+LatexCommand label
+name "solu:的一个实现如下所示："
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Solution
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class KDW {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**        ***    **********      **          
+   *             **");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**      ***      **        **     **         
+  ***           ** ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**    ***        **         **     **        
+ ** **         **  ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**  ***          **          **     **       **
+   **       **   ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("*****            **          **      **     **
+     **     **    ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**  ***          **          **       **   **
+       **   **     ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**    ***        **         **         ** ** 
+        ** **      ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**      ***      **        **           ***  
+         ***       ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**        ***    **********              *   
+          *        ");
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:面向对象的基本概念"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset label
+LatexCommand label
+name "solu:default修饰的类，在其他包中不可见。"
+
+\end_inset
+
+default修饰的类，在其他包中不可见。
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:lambda表达式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算两个整数的和、差、积的lambda表达式示例如下：
+\begin_inset CommandInset label
+LatexCommand label
+name "solu:计算两个整数的和、差、积的lambda表达式示例如下："
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Calculator {
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+    interface IntegerMath {
+\end_layout
+
+\begin_layout Plain Layout
+
+        int operation(int a, int b);   
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+    public int operateBinary(int a, int b, IntegerMath op) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return op.operation(a, b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String...
+ args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+        Calculator myApp = new Calculator();
+\end_layout
+
+\begin_layout Plain Layout
+
+        IntegerMath addition = (a, b) -> a + b;
+\end_layout
+
+\begin_layout Plain Layout
+
+        IntegerMath subtraction = (a, b) -> a - b;
+\end_layout
+
+\begin_layout Plain Layout
+
+        IntegerMath mulitply = (a, b) -> a * b;
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("40 + 2 = " +
+\end_layout
+
+\begin_layout Plain Layout
+
+            myApp.operateBinary(40, 2, addition));
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("20 - 10 = " +
+\end_layout
+
+\begin_layout Plain Layout
+
+            myApp.operateBinary(20, 10, subtraction));    
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("20 * 2 = " +
+\end_layout
+
+\begin_layout Plain Layout
+
+            myApp.operateBinary(20, 2, multiply)); 
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:Enum"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+Planet的定义
+\begin_inset CommandInset label
+LatexCommand label
+name "solu:Planet的定义如下："
+
+\end_inset
+
+如下
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参考：https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public enum Planet {
+\end_layout
+
+\begin_layout Plain Layout
+
+    MERCURY (3.303e+23, 2.4397e6),
+\end_layout
+
+\begin_layout Plain Layout
+
+    VENUS   (4.869e+24, 6.0518e6),
+\end_layout
+
+\begin_layout Plain Layout
+
+    EARTH   (5.976e+24, 6.37814e6),
+\end_layout
+
+\begin_layout Plain Layout
+
+    MARS    (6.421e+23, 3.3972e6),
+\end_layout
+
+\begin_layout Plain Layout
+
+    JUPITER (1.9e+27,   7.1492e7),
+\end_layout
+
+\begin_layout Plain Layout
+
+    SATURN  (5.688e+26, 6.0268e7),
+\end_layout
+
+\begin_layout Plain Layout
+
+    URANUS  (8.686e+25, 2.5559e7),
+\end_layout
+
+\begin_layout Plain Layout
+
+    NEPTUNE (1.024e+26, 2.4746e7);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    private final double mass;   // in kilograms
+\end_layout
+
+\begin_layout Plain Layout
+
+    private final double radius; // in meters
+\end_layout
+
+\begin_layout Plain Layout
+
+    Planet(double mass, double radius) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        this.mass = mass;
+\end_layout
+
+\begin_layout Plain Layout
+
+        this.radius = radius;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    private double mass() { return mass; }
+\end_layout
+
+\begin_layout Plain Layout
+
+    private double radius() { return radius; }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // universal gravitational constant  (m3 kg-1 s-2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final double G = 6.67300E-11;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    double surfaceGravity() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return G * mass / (radius * radius);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    double surfaceWeight(double otherMass) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return otherMass * surfaceGravity();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (args.length != 1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            System.err.println("Usage: java Planet <earth_weight>");
+\end_layout
+
+\begin_layout Plain Layout
+
+            System.exit(-1);
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        double earthWeight = Double.parseDouble(args[0]);
+\end_layout
+
+\begin_layout Plain Layout
+
+        double mass = earthWeight/EARTH.surfaceGravity();
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (Planet p : Planet.values())
+\end_layout
+
+\begin_layout Plain Layout
+
+           System.out.printf("Your weight on %s is %f%n",
+\end_layout
+
+\begin_layout Plain Layout
+
+                             p, p.surfaceWeight(mass));
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Jar包和CLASSPATH
+\end_layout
+
+\begin_layout Section
+jar包概念和用法
+\end_layout
+
+\begin_layout Section
+CLASSPATH
+\end_layout
+
+\begin_layout Standard
+CLASSPATH环境变量是Java查询class文件的路径，也就是说，Java虚拟机在运行时依靠CLASSPATH环境变量来决定从哪里加载所需要的class文
+件。
+\end_layout
+
+\begin_layout Subsection
+CLASSPATH的默认值
+\end_layout
+
+\begin_layout Standard
+CLASSPATH的默认值是“.
+\begin_inset Quotes erd
+\end_inset
+
+，即当前目录。也就是说，Java虚拟机从只从当前目录加载所需要的的class文件。
+\end_layout
+
+\begin_layout Standard
+下面我们分别研究两种情况：
+\end_layout
+
+\begin_layout Example
+执行默认包的Java应用程序
+\end_layout
+
+\begin_layout Example
+此种情形是初学者最容易理解的情形，即我们的Java应用程序没有定义包。比如我们有如下的目录结构：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+lesson
+\end_layout
+
+\begin_layout Plain Layout
+└── Test.java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+即在目录lesson下只有一个Java源文件Test.java。Test.java文件定义如下：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Test{
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("hello world!");
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+于是我们可以在lesson目录下执行如下的操作编译和执行Test应用程序：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+~/lesson$ javac Test.java
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson$ java Test
+\end_layout
+
+\begin_layout Plain Layout
+hello world!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+java Test的意思即Java虚拟机查找一个叫做Test的类文件并尝试运行Test.class的main方法。如果我们没有修改过CLASSPATH环境变量，则
+默认的CLASSPATH环境变量值是“.
+\begin_inset Quotes erd
+\end_inset
+
+，即Java虚拟机从当前目录查找Test.class，自然在这种情形下是成功的，因此打印出了
+\begin_inset Quotes erd
+\end_inset
+
+hello world!
+\begin_inset Quotes erd
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+执行使用包的Java应用程序
+\end_layout
+
+\begin_layout Example
+假设我们在lesson目录下创建如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:包的目录结构"
+
+\end_inset
+
+的目录结构：
+\end_layout
+
+\begin_layout Example
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imgs/appendix/jar-classpath/classpath-demo.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+包的目录结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:包的目录结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+其中cn/edu/sdut/softlab/Test.java内容如下：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package cn.edu.sdut.softlab;
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Test{
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("hello world!");
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+那么我们该如何编译和执行使用了包的Test应用程序呢？首先我们看如何编译Test.java。在任何目录下都可以正常编译Test.java，比如在lesson目录下编
+译，也可以到lesson/cn/edu/sdut/softlab目录下编译，也可以在lesson/cn/edu/sdut目录下编译：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+cd ~/lesson
+\end_layout
+
+\begin_layout Plain Layout
+javac cn/edu/sdut/softlab/Test.java
+\end_layout
+
+\begin_layout Plain Layout
+cd ~/lesson/cn/edu/sdut/softlab
+\end_layout
+
+\begin_layout Plain Layout
+javac Test.java
+\end_layout
+
+\begin_layout Plain Layout
+cd ~/lesson/cn/edu/sdut
+\end_layout
+
+\begin_layout Plain Layout
+javac softlab/Test.java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+编译的结果都是在lesson/cn/edu/sdut/softlab目录下生成了Test.class文件，那么如何执行这个Test.class文件呢？我们尝试一下：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+cd lesson
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson$ javac cn/edu/sdut/softlab/Test.java
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson$ java cn.edu.sdut.softlab.Test
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson$ cd cn/edu/sdut/softlab/
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson/cn/edu/sdut/softlab$ java Test
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+错误: 找不到或无法加载主类 Test
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson/cn/edu/sdut/softlab$ java cn.edu.sdut.softlab.Test
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+错误: 找不到或无法加载主类 cn.edu.sdut.softlab.Test
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson/cn/edu/sdut/softlab$ cd ~/lesson/cn/edu/sdut/
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson/cn/edu/sdut$ java Test
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+错误: 找不到或无法加载主类 Test
+\end_layout
+
+\begin_layout Plain Layout
+~/lesson/cn/edu/sdut$ java cn.edu.sdut.softlab.Test
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+错误: 找不到或无法加载主类 cn.edu.sdut.softlab.Test
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+可以看出，只能在lesson目录下执行cn.edu.sdut.soft.Test应用程序，这是因为默认的CLASSPATH是当前目录，则Java虚拟机从当前目录开始寻找
+cn.edu.sdut.softlab.Test.class文件，即寻找./cn/edu/sdut/softlab/Test.class文件，自然是可以找到的。请自行分析为什
+么上面其他情况下无法正确执行Test应用程序。
+\end_layout
+
+\begin_layout Example
+那么我们如何保证在任何目录下都能够正确执行Test应用程序呢？实际上，只要告知Java虚拟机包cn.edu.sdut.softlab的起始目录，Java虚拟机就可以根
+据这个起始目录查找到这个包下面的class文件。这个起始目录可以写到CLASSPATH，也可以在命令行使用-cp明确指定当前应该使用什么样的CLASSPATH：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+cd /opt
+\end_layout
+
+\begin_layout Plain Layout
+/opt$ java -cp ~/lesson cn.edu.sdut.softlab.Test
+\end_layout
+
+\begin_layout Plain Layout
+hello world!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设置CLASSPATH的情形如下：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+/opt$ export CLASSPATH=$CLASSPATH:~/lesson
+\end_layout
+
+\begin_layout Plain Layout
+/opt$ java cn.edu.sdut.softlab.Test
+\end_layout
+
+\begin_layout Plain Layout
+hello world!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+具体是设置CLASSPATH还是使用命令行的-cp参数要视具体情况而定。一般情况下，如果只是临时执行一个Java应用程序，则使用命令行参数-cp即可。如果一个J
+ava应用程序要多次调用或者作为工具类提供给其他应用程序使用，则设置CLASSPATH比较合适。命令行参数-cp类似于局部变量，环境变量CLASSPATH类似于
+全局变量。
+\end_layout
+
+\begin_layout Example
+更多CLASSPATH知识请参考：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://docs.oracle.com/javase/8/docs/technotes/tools/windows/classpath.html
+\end_layout
+
+\end_inset
+
+，
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/8/docs/technotes/tools/findingclasses.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+war/ear包
+\end_layout
+
+\begin_layout Chapter
+Idea的常用快捷键
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Idea的常用快捷键"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+完整的Idea的默认快捷键可从这里下载：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://resources.jetbrains.com/storage/products/idea/docs/IntelliJIDEA_ReferenceC
+ard.pdf
+\end_layout
+
+\end_inset
+
+，建议大家打印出来置于案头以便参考。其中最常用的快捷键列表如下：
+\end_layout
+
+\begin_layout Standard
+Ctrl+Space：智能提示
+\end_layout
+
+\begin_layout Standard
+Alt+Enter：快速修复
+\end_layout
+
+\begin_layout Standard
+Shift+F6：改名字
+\end_layout
+
+\begin_layout Standard
+Alt+Insert：代码插入，自动生成代码
+\end_layout
+
+\begin_layout Standard
+Ctrl+W/Ctrl+Shift+W：自动按照语法选中代码
+\end_layout
+
+\begin_layout Standard
+Shift+Shift：弹出万能搜索框
+\end_layout
+
+\begin_layout Standard
+Ctrl+N/Ctrl+Shift+N：搜索并打开指定文件/类
+\end_layout
+
+\begin_layout Standard
+Ctrl+Alt+L：格式化代码
+\end_layout
+
+\begin_layout Standard
+Ctrl+Alt+O：重新组织化import
+\end_layout
+
+\begin_layout Standard
+Alt+Shift+F10：运行程序
+\end_layout
+
+\begin_layout Standard
+F7/F8/F9：调试时对应Step into/Step over/Continue
+\end_layout
+
+\begin_layout Chapter
+Google编码规范
+\end_layout
+
+\begin_layout Section
+介绍
+\end_layout
+
+\begin_layout Standard
+本文档为Google Java编程规范的完整定义。依照此规范编写的Java源码文件可以被称为Google Style。
+\end_layout
+
+\begin_layout Standard
+和其他编程规范指南一样，规范不仅包括了代码的结构美学，也包括了其他一些业界约定俗成的公约和普遍采用的标准。本文档中的规范基本都是业界已经达成共识的标准，我们尽量
+避免去定义那些还存在争议的地方。
+\end_layout
+
+\begin_layout Subsection
+术语说明
+\end_layout
+
+\begin_layout Standard
+本文档除非特殊说明，否则：
+\end_layout
+
+\begin_layout Enumerate
+class（类）统指普通的class类型、enum枚举类型、interface类型和annotation类型。
+\end_layout
+
+\begin_layout Enumerate
+comment（注释）总是指implementation comments（实现注释，/* */）。我们不使用“文档注释”这样的说法，而会直接说javadoc。
+\end_layout
+
+\begin_layout Standard
+其他术语说明，将在文档中需要说明的地方单独说明。
+\end_layout
+
+\begin_layout Subsection
+1.2 文档说明
+\end_layout
+
+\begin_layout Standard
+本文档中的代码并不一定符合所有规范。即使这些代码遵循Google Style，但这不是唯一的代码规范。例子中可选的格式风格也不应该作为强制执行的规范。
+\end_layout
+
+\begin_layout Section
+源码文件基础
+\end_layout
+
+\begin_layout Subsection
+文件名
+\end_layout
+
+\begin_layout Standard
+源码文件名由它所包含的顶级class的类名（大小写敏感），加上.java后缀组成。（除了package-info.java文件）。
+\end_layout
+
+\begin_layout Subsection
+文件编码：UTF-8
+\end_layout
+
+\begin_layout Standard
+源码文件使用UTF-8编码。
+\end_layout
+
+\begin_layout Subsection
+特殊字符
+\end_layout
+
+\begin_layout Subsubsection
+2.3.1 空格字符
+\end_layout
+
+\begin_layout Standard
+除了换行符外，ASCII水平空白字符（0x20）是源码文件中唯一支持的空格字符。这意味着：
+\end_layout
+
+\begin_layout Itemize
+其他空白字符将被转义。
+\end_layout
+
+\begin_layout Itemize
+Tab字符不被用作缩进控制。
+\end_layout
+
+\begin_layout Subsubsection
+2特殊转义字符串
+\end_layout
+
+\begin_layout Standard
+任何需要转义字符串表示的字符（例如
+\backslash
+b, 
+\backslash
+t, 
+\backslash
+n, 
+\backslash
+f, 
+\backslash
+r, 
+\backslash
+', 
+\backslash
+
+\backslash
+等），采用这种转义字符串的方式表示，而不采用对应字符的八进制数（例如 
+\backslash
+012）或Unicode码（例如 
+\backslash
+u000a）表示。
+\end_layout
+
+\begin_layout Subsubsection
+非ASCII字符
+\end_layout
+
+\begin_layout Standard
+对于其余非ASCII字符，直接使用Unicode字符（例如 ∞），或者使用对应的Unicode码（例如 
+\backslash
+u221e）转义，都是允许的。唯一需要考虑的是，何种方式更能使代码容易阅读和理解。
+\end_layout
+
+\begin_layout Standard
+注意：在使用unicode码转义，或者甚至是有时直接使用unicode字符的时候，添加一点说明注释将对别人读懂代码很有帮助。
+\end_layout
+
+\begin_layout Standard
+例子：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String unitAbbrev = "μs"; Best: perfectly clear even without a comment.
+\end_layout
+
+\begin_layout Plain Layout
+
+String unitAbbrev = "
+\backslash
+u03bcs"; // "μs" Allowed, but there's no reason to do this.
+\end_layout
+
+\begin_layout Plain Layout
+
+String unitAbbrev = "
+\backslash
+u03bcs"; // Greek letter mu, "s" Allowed, but awkward and prone to mistakes.
+\end_layout
+
+\begin_layout Plain Layout
+
+String unitAbbrev = "
+\backslash
+u03bcs"; Poor: the reader has no idea what this is.
+\end_layout
+
+\begin_layout Plain Layout
+
+return '
+\backslash
+ufeff' + content; // byte order mark Good: use escapes for non-printable
+ characters, and comment if necessary.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意：不要因为担心一些程序无法正常处理费ASCII字符而不使用它，从而导致代码易读性变差。如果出现这样的问题，应该由出现问题的程序去解决。
+\end_layout
+
+\begin_layout Section
+源码文件结构
+\end_layout
+
+\begin_layout Standard
+源码文件按照先后顺序，由以下几部分组成：
+\end_layout
+
+\begin_layout Itemize
+License或者copyright声明信息。（如果需要声明）
+\end_layout
+
+\begin_layout Itemize
+包声明语句。
+\end_layout
+
+\begin_layout Itemize
+import语句。
+\end_layout
+
+\begin_layout Itemize
+class类声明（每个源码文件只能有唯一一个顶级class）。
+\end_layout
+
+\begin_layout Standard
+每个部分之间应该只有一行空行作为间隔。
+\end_layout
+
+\begin_layout Subsection
+lincense 或者 copyright的声明信息。
+\end_layout
+
+\begin_layout Standard
+如果需要声明lincense或copyright信息，应该在文件开始时声明。
+\end_layout
+
+\begin_layout Subsection
+包声明
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:包声明"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+包声明的行，没有行长度的限制。单行长度限制（4.4部分有详细说明，80或100）不适用于包声明。
+\end_layout
+
+\begin_layout Subsection
+import语句
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:import语句"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+不使用通配符import
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:不使用通配符import"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+不应该使用通配符import，不管是否是静态导入。
+\end_layout
+
+\begin_layout Subsubsection
+没有行长度限制
+\end_layout
+
+\begin_layout Standard
+import语句的行，没有行长度的限制。单行长度限制（
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:行长度限制：80或100"
+
+\end_inset
+
+有详细说明，80或100）不适用于import语句所在行。
+\end_layout
+
+\begin_layout Subsubsection
+顺序和空行
+\end_layout
+
+\begin_layout Standard
+import语句应该被分为几个组，每个组之间由单行的空行隔开。分组的顺序如下：
+\end_layout
+
+\begin_layout Enumerate
+所有的static import为归为一组。
+\end_layout
+
+\begin_layout Enumerate
+com.google 包的import归为一组。
+\end_layout
+
+\begin_layout Enumerate
+使用的第三方包的引用。每个顶级第三方包归为一组。第三方包之间按ASCII码排序。例如：android, com, junit, org, sun
+\end_layout
+
+\begin_layout Enumerate
+java包归为一组。
+\end_layout
+
+\begin_layout Enumerate
+javax包归为一组。
+\end_layout
+
+\begin_layout Standard
+同一组内的import语句之间不应用空行隔开。同一组中的import语句按ASCII码排序。
+\end_layout
+
+\begin_layout Subsection
+类声明
+\end_layout
+
+\begin_layout Subsubsection
+只声明唯一一个顶级class
+\end_layout
+
+\begin_layout Standard
+每个源码文件中只能有一个顶级class。package-info.java文件除外。
+\end_layout
+
+\begin_layout Subsubsection
+类成员顺序
+\end_layout
+
+\begin_layout Standard
+类成员的顺序对代码的易读性有很大影响，但是没有一个统一正确的标准。不同的类可能有不同的排序方式。
+\end_layout
+
+\begin_layout Standard
+重要的是，每个class都要按照一定的逻辑规律排序。当被问及时，能够解释清楚为什么这样排序。例如，新增加的成员方法，不是简单地放在class代码最后面，按日期排
+序也不是按逻辑排序。
+\end_layout
+
+\begin_layout Subsubsection
+重载方法：不应该分开
+\end_layout
+
+\begin_layout Standard
+当一个类有多个构造函数，或者多个同名成员方法时，这些函数应该写在一起，不应该被其他成员分开。
+\end_layout
+
+\begin_layout Section
+格式
+\end_layout
+
+\begin_layout Standard
+术语说明：块状结构（block-like construct）指类、成员函数和构造函数的实现部分（花括号中间部分）。注意，在后面的4.8.3.1节中讲到数组初始化，所
+有的数组初始化都可以被认为是一个块状结构（非强制）。
+\end_layout
+
+\begin_layout Subsection
+花括号
+\end_layout
+
+\begin_layout Subsubsection
+花括号在需要的地方使用
+\end_layout
+
+\begin_layout Standard
+花括号一般用在if, else, for, do, 和 while等语句。甚至当它的实现为空或者只有一句话时，也需要使用。
+\end_layout
+
+\begin_layout Subsubsection
+非空语句块采用K&R风格
+\end_layout
+
+\begin_layout Standard
+对于非空语句块，花括号遵循K&R风格：
+\end_layout
+
+\begin_layout Itemize
+左括号前不换行。
+\end_layout
+
+\begin_layout Itemize
+左括号后换行。
+\end_layout
+
+\begin_layout Itemize
+右括号前换行。
+\end_layout
+
+\begin_layout Itemize
+如果右括号结束一个语句块或者函数体、构造函数体或者有命名的类体，则需要换行。例如，当右括号后面接else或者逗号时，不应该换行。
+\end_layout
+
+\begin_layout Standard
+例子：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return new MyClass() {
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Override public void method() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if(condition()) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      try {
+\end_layout
+
+\begin_layout Plain Layout
+
+        something();
+\end_layout
+
+\begin_layout Plain Layout
+
+      } catch (ProblemException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        recover();
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一些例外的情况，将在4.8.1节讲枚举类型的时候讲到。
+\end_layout
+
+\begin_layout Subsubsection
+空语句块：使代码更简洁
+\end_layout
+
+\begin_layout Standard
+一个空的语句块，可以在左花括号之后直接接右花括号，中间不需要空格或换行。但是当一个由几个语句块联合组成的语句块时，则需要换行。（例如：if/else-if/el
+se try/catch/finally）.
+\end_layout
+
+\begin_layout Standard
+例子：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void doNothing() {}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+语句块的缩进：2空格
+\end_layout
+
+\begin_layout Standard
+每当一个新的语句块产生，缩进就增加两个空格。当这个语句块结束时，缩进恢复到上一层级的缩进格数。缩进要求对整个语句块中的代码和注释都适用。（例子可参考之前4.1.2节
+中的例子）。
+\end_layout
+
+\begin_layout Subsection
+一行最多只有一句代码
+\end_layout
+
+\begin_layout Standard
+每句代码的结束都需要换行。
+\end_layout
+
+\begin_layout Subsection
+行长度限制：80或100
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:行长度限制：80或100"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+不同的项目可以选择采用80个字符或者100个字符作为限制。除了以下几个特殊情况外，其他代码内容都需要遵守这个长度限制。这在
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:长行断行"
+
+\end_inset
+
+会有详细解释。
+\end_layout
+
+\begin_layout Standard
+例外：
+\end_layout
+
+\begin_layout Itemize
+按照行长度限制，无法实现地方（例如：javadoc中超长的URL地址， 或者一个超长的JSNI方法的引用）；
+\end_layout
+
+\begin_layout Itemize
+package和import语句不受长度限制。（见
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:包声明"
+
+\end_inset
+
+、
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:import语句"
+
+\end_inset
+
+）；
+\end_layout
+
+\begin_layout Itemize
+注释中的命令行指令行，将被直接复制到shell中执行的。
+\end_layout
+
+\begin_layout Subsection
+长行断行
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:长行断行"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+术语说明：当一行代码按照其他规范都合法，只是为了避免超出行长度限制而换行时，称为长行断行。
+\end_layout
+
+\begin_layout Standard
+长行断行，没有一个适合所有场景的全面、确定的规范。但很多相同的情况，我们经常使用一些行之有效的断行方法。
+\end_layout
+
+\begin_layout Standard
+注意：将长行封装为函数，或者使用局部变量的方法，也可以解决一些超出行长度限制的情况。并非一定要断行。
+\end_layout
+
+\begin_layout Subsubsection
+在何处断行
+\end_layout
+
+\begin_layout Standard
+断行的主要原则是：选择在更高一级的语法逻辑的地方断行。其他一些原则如下：
+\end_layout
+
+\begin_layout Itemize
+当一个非赋值运算的语句断行时，在运算符号之前断行。（这与Google的C++规范和JavaScrip规范等其他规范不同）。
+\end_layout
+
+\begin_layout Itemize
+当一个赋值运算语句断行时，一般在赋值符号之后断行。但是也可以在之前断行。
+\end_layout
+
+\begin_layout Itemize
+在调用函数或者构造函数需要断行时，与函数名相连的左括号要在一行。也就是在左括号之后断行。
+\end_layout
+
+\begin_layout Itemize
+逗号断行时，要和逗号隔开的前面的语句断行。也就是在逗号之后断行。
+\end_layout
+
+\begin_layout Subsubsection
+断行的缩进：至少4个字符
+\end_layout
+
+\begin_layout Standard
+当断行之后，在第一行之后的行，我们叫做延续行。每一个延续行在第一行的基础上至少缩进四个字符。
+\end_layout
+
+\begin_layout Standard
+当原行之后有多个延续行的情况，缩进可以大于4个字符。如果多个延续行之间由同样的语法元素断行，它们可以采用相同的缩进。
+\end_layout
+
+\begin_layout Standard
+4.6.3节介绍水平对齐中，解决了使用多个空格与之前行缩进对齐的问题。
+\end_layout
+
+\begin_layout Subsection
+空白空间
+\end_layout
+
+\begin_layout Subsubsection
+4.6.1 垂直空白
+\end_layout
+
+\begin_layout Standard
+单行空行在以下情况使用：
+\end_layout
+
+\begin_layout Itemize
+类成员间需要空行隔开：例如成员变量、构造函数、成员函数、内部类、静态初始化语句块（static initializers）、实例初始化语句块（instance
+ initializers）。
+\end_layout
+
+\begin_layout Itemize
+例外：成员变量之间的空白行不是必需的。一般多个成员变量中间的空行，是为了对成员变量做逻辑上的分组。
+\end_layout
+
+\begin_layout Itemize
+在函数内部，根据代码逻辑分组的需要，设置空白行作为间隔。
+\end_layout
+
+\begin_layout Itemize
+类的第一个成员之前，或者最后一个成员结束之后，用空行间隔。（可选）
+\end_layout
+
+\begin_layout Itemize
+本文档中其他部分介绍的需要空行的情况。（例如 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:import语句"
+
+\end_inset
+
+中的import语句）
+\end_layout
+
+\begin_layout Standard
+单空行时使用多行空行是允许的，但是不要求也不鼓励。
+\end_layout
+
+\begin_layout Subsubsection
+水平空白
+\end_layout
+
+\begin_layout Standard
+除了语法、其他规则、词语分隔、注释和javadoc外，水平的ASCII空格只在以下情况出现：
+\end_layout
+
+\begin_layout Itemize
+所有保留的关键字与紧接它之后的位于同一行的左括号之间需要用空格隔开。（例如if、for、catch）
+\end_layout
+
+\begin_layout Itemize
+所有保留的关键字与在它之前的右花括号之间需要空格隔开。（例如else、catch）
+\end_layout
+
+\begin_layout Itemize
+在左花括号之前都需要空格隔开。只有两种例外：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Itemize
+
+@SomeAnnotation({a, b});
+\end_layout
+
+\begin_layout Itemize
+
+String[][] x = {{"foo"}};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+所有的二元运算符和三元运算符的两边，都需要空格隔开。
+\end_layout
+
+\begin_layout Itemize
+逗号、冒号、分号和右括号之后，需要空格隔开。
+\end_layout
+
+\begin_layout Itemize
+// 双斜线开始一行注释时。双斜线两边都应该用空格隔开。并且可使用多个空格，但是不做强制要求。
+\end_layout
+
+\begin_layout Itemize
+变量声明时，变量类型和变量名之间需要用空格隔开。
+\end_layout
+
+\begin_layout Itemize
+初始化一个数组时，花括号之间可以用空格隔开，也可以不使用。（例如：new int[] {5, 6} 和 new int[] { 5, 6 } 都可以）
+\end_layout
+
+\begin_layout Standard
+注意：这一原则不影响一行开始或者结束时的空格。只针对行内部字符之间的隔开。
+\end_layout
+
+\begin_layout Subsubsection
+水平对齐：不做强制要求
+\end_layout
+
+\begin_layout Standard
+术语说明：水平对齐，是指通过添加多个空格，使本行的某一符号与上一行的某一符号上下对齐。
+\end_layout
+
+\begin_layout Standard
+这种对齐是被允许的，但是不会做强制要求。
+\end_layout
+
+\begin_layout Standard
+以下是没有水平对齐和水平对齐的例子;
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+private int x; // this is fine
+\end_layout
+
+\begin_layout Plain Layout
+
+private Color color; // this too
+\end_layout
+
+\begin_layout Plain Layout
+
+private int x; // permitted, but future edits
+\end_layout
+
+\begin_layout Plain Layout
+
+private Color color; // may leave it unaligned
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意：水平对齐能够增加代码的可读性，但是增加了未来维护代码的难度。考虑到维护时只需要改变一行代码，之前的对齐可以不需要改动。为了对齐，你更有可能改了一行代码，同
+时需要更改附近的好几行代码，而这几行代码的改动，可能又会引起一些为了保持对齐的代码改动。那原本这行改动，我们称之为“爆炸半径”。这种改动，在最坏的情况下可能会导
+致大量的无意义的工作，即使在最好的情况下，也会影响版本历史信息，减慢代码review的速度，引起更多merge代码冲突的情况。
+\end_layout
+
+\begin_layout Subsection
+分组括号：建议使用
+\end_layout
+
+\begin_layout Standard
+非必须的分组括号只有在编写代码者和代码审核者都认为大家不会因为没有它而导致代码理解错误的时候，或者它不会使代码更易理解的时候才能省略。没有理由认为所有阅读代码的
+人都能记住所有java运算符的优先级。
+\end_layout
+
+\begin_layout Subsection
+特殊结构
+\end_layout
+
+\begin_layout Subsubsection
+枚举类型
+\end_layout
+
+\begin_layout Standard
+每个逗号后接一个枚举变量，不要求换行。
+\end_layout
+
+\begin_layout Standard
+枚举类型，如果没有函数和javadoc，处理格式是可以按照数组初始化来处理。
+\end_layout
+
+\begin_layout Standard
+例子：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+private enum Suit { CLUBS, HEARTS, SPADES, DIAMONDS }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+枚举类型也是一种类（Class），因此Class类的其他格式要求，也适用于枚举类型。
+\end_layout
+
+\begin_layout Subsubsection
+4.8.2 变量声明
+\end_layout
+
+\begin_layout Paragraph
+4.8.2.1 每次声明一个变量
+\end_layout
+
+\begin_layout Standard
+不要采用一个声明，声明多个变量。例如 int a, b; 
+\end_layout
+
+\begin_layout Paragraph
+4.8.2.2 当需要时才声明，尽快完成初始化
+\end_layout
+
+\begin_layout Standard
+局部变量不应该习惯性地放在语句块的开始处声明，而应该尽量离它第一次使用的地方最近的地方声明，以减小它们的使用范围。
+\end_layout
+
+\begin_layout Standard
+局部变量应该在声明的时候就进行初始化。如果不能在声明时初始化，也应该尽快完成初始化。
+\end_layout
+
+\begin_layout Subsubsection
+4.8.3 数组
+\end_layout
+
+\begin_layout Paragraph
+4.8.3.1 数组初始化：可以类似块代码处理
+\end_layout
+
+\begin_layout Standard
+所有数组的初始化，都可以采用和块代码相同的格式处理。例如以下格式都是允许的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+new int[] {
+\end_layout
+
+\begin_layout Plain Layout
+
+  0,1,2,3
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+new int[] {
+\end_layout
+
+\begin_layout Plain Layout
+
+  0,1,
+\end_layout
+
+\begin_layout Plain Layout
+
+  2,3
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+new int[] {
+\end_layout
+
+\begin_layout Plain Layout
+
+  0,
+\end_layout
+
+\begin_layout Plain Layout
+
+  1,
+\end_layout
+
+\begin_layout Plain Layout
+
+  2,
+\end_layout
+
+\begin_layout Plain Layout
+
+  3
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+new int[] {0,1,2,3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.8.3.2 不能像C风格一样声明数组
+\end_layout
+
+\begin_layout Standard
+方括号应该是变量类型的一部分，因此不应该和变量名放在一起。例如：应该是String[] args，而不是 String args[] 。
+\end_layout
+
+\begin_layout Subsubsection
+switch语句
+\end_layout
+
+\begin_layout Standard
+术语说明：switch语句是指在switch花括号中，包含了一组或多组语句块。每组语句块都由一个或多个switch标签（例如case FOO：或者
+ default：）打头。
+\end_layout
+
+\begin_layout Paragraph
+4.8.4.1 缩进
+\end_layout
+
+\begin_layout Standard
+和其他语句块一样，switch花括号之后缩进两个字符。
+\end_layout
+
+\begin_layout Standard
+每个switch标签之后，后面紧接的非标签的新行，按照花括号相同的处理方式缩进两个字符。在标签结束后，恢复到之前的缩进，类似花括号结束。
+\end_layout
+
+\begin_layout Paragraph
+4.8.4.2 继续向下执行的注释
+\end_layout
+
+\begin_layout Standard
+在switch语句中，每个标签对应的代码执行完后，都应该通过语句结束（例如：break、continue、return 或抛出异常），否则应该通过注释说明，代码
+需要继续向下执行下一个标签的代码。注释说明文字只要能说明代码需要继续往下执行都可以（通常是 //fall through）。这个注释在最后一个标签之后不需要注释
+。例如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+switch (input) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  case 1:
+\end_layout
+
+\begin_layout Plain Layout
+
+  case 2:
+\end_layout
+
+\begin_layout Plain Layout
+
+    propareOneOrTwo();
+\end_layout
+
+\begin_layout Plain Layout
+
+    //fall through
+\end_layout
+
+\begin_layout Plain Layout
+
+  case 3:
+\end_layout
+
+\begin_layout Plain Layout
+
+    handleOneTwoOrThree();
+\end_layout
+
+\begin_layout Plain Layout
+
+    break;
+\end_layout
+
+\begin_layout Plain Layout
+
+  default:
+\end_layout
+
+\begin_layout Plain Layout
+
+    handleLargeNumber(input);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.8.4.3 default标签需要显式声明
+\end_layout
+
+\begin_layout Standard
+每个switch语句中，都需要显式声明default标签。即使没有任何代码也需要显示声明。
+\end_layout
+
+\begin_layout Subsubsection
+Annotations
+\end_layout
+
+\begin_layout Standard
+Annotations应用到类、函数或者构造函数时，应紧接javadoc之后。每一行只有一个Annotations。
+\end_layout
+
+\begin_layout Standard
+Annotations所在行不受行长度限制，也不需要增加缩进。例如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+@Nullable
+\end_layout
+
+\begin_layout Plain Layout
+
+public String getNameIfPresent() { ...
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例外情况：
+\end_layout
+
+\begin_layout Standard
+如果Annotations只有一个，并且不带参数。则它可以和类或方法名放在同一行。例如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Override public int hashCode() { ...
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Annotations应用到成员变量时，也是紧接javadoc之后。不同的是，多个annotations可以放在同一行。例如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Partial @Mock DataLoader loader;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于参数或者局部变量使用Annotations的情况，没有特定的规范。
+\end_layout
+
+\begin_layout Subsubsection
+注释
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:注释"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.8.6.1 语句块的注释风格
+\end_layout
+
+\begin_layout Standard
+注释的缩进与它所注释的代码缩进相同。可以采用 /* */ 进行注释，也可以用 // 进行注释。当使用 /**/ 进行多行注释时，每一行都应该以
+ * 开始， 并且 * 应该上下对齐。
+\end_layout
+
+\begin_layout Standard
+例如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/*
+\end_layout
+
+\begin_layout Plain Layout
+
+ * this is okay.
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Also is this
+\end_layout
+
+\begin_layout Plain Layout
+
+// these
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Or you can
+\end_layout
+
+\begin_layout Plain Layout
+
+ * even do this.
+ */
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+多行注释时，如果你希望集成开发环境能自动对齐注释，你应该使用 /**/， //一般不会自动对齐。
+\end_layout
+
+\begin_layout Subsubsection
+4.8.7 修饰符
+\end_layout
+
+\begin_layout Standard
+多个类和成员变量的修饰符，按Java Lauguage Specification中介绍的先后顺序排序。具体是：
+\end_layout
+
+\begin_layout Standard
+public protected private abstract static final transient volatile synchronized
+ native strictfp
+\end_layout
+
+\begin_layout Section
+命名
+\end_layout
+
+\begin_layout Subsection
+适用于所有命名标识符的通用规范
+\end_layout
+
+\begin_layout Standard
+标示符只应该使用ASCII字母、数字和下划线，字母大小写敏感。因此所有的标示符，都应该能匹配正则表达式 
+\backslash
+w+ 。
+\end_layout
+
+\begin_layout Standard
+Google Style中，标示符不需要使用特殊的前缀或后缀，例如：name_, mName, s_name 和 kName。
+\end_layout
+
+\begin_layout Subsection
+不同类型的标示符规范
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:不同类型的标示符规范"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+包名
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:包名"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+包名全部用小写字母，通过 .
+ 将各级连在一起。不应该使用下划线。
+\end_layout
+
+\begin_layout Subsubsection
+类名
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:类名"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+类型的命名，采用以大写字母开头的大小写字符间隔的方式（UpperCamelCase）。
+\end_layout
+
+\begin_layout Standard
+class命名一般使用名词或名词短语。interface的命名有时也可以使用形容词或形容词短语。annotation没有明确固定的规范。
+\end_layout
+
+\begin_layout Standard
+测试类的命名，应该以它所测试的类的名字为开头，并在最后加上Test结尾。例如：HashTest 、 HashIntegrationTest。
+\end_layout
+
+\begin_layout Subsubsection
+方法名
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:方法名"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+方法命名，采用以小写字母开头的大小写字符间隔的方式（lowerCamelCase）。
+\end_layout
+
+\begin_layout Standard
+方法命名一般使用动词或者动词短语。
+\end_layout
+
+\begin_layout Standard
+在JUnit的测试方法中，可以使用下划线，用来区分测试逻辑的名字，经常使用如下的结构：test<MethodUnderTest>_<state>
+ 。例如：testPop_emptyStack 。
+\end_layout
+
+\begin_layout Standard
+测试方法也可以用其他方式进行命名。
+\end_layout
+
+\begin_layout Subsubsection
+常量名
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:常量名"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+常量命名，全部使用大写字符，词与词之间用下划线隔开。（CONSTANCE_CASE）。
+\end_layout
+
+\begin_layout Standard
+常量是一个静态成员变量，但不是所有的静态成员变量都是常量。在选择使用常量命名规则给变量命名时，你需要明确这个变量是否是常量。例如，如果这个变量的状态可以发生改变
+，那么这个变量几乎可以肯定不是常量。只是计划不会发生改变的变量不足以成为一个常量。下面是常量和非常量的例子：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+举例说明
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Constants
+\end_layout
+
+\begin_layout Plain Layout
+
+static final int NUMBER = 5;
+\end_layout
+
+\begin_layout Plain Layout
+
+static final ImmutableList<String> NAMES = ImmutableList.of("Ed", "Ann");
+\end_layout
+
+\begin_layout Plain Layout
+
+static final Joiner COMMA_JOINER = Joiner.on(','); // because Joiner is immutable
+\end_layout
+
+\begin_layout Plain Layout
+
+static final SomeMutableType[] EMPTY_ARRAY = {};
+\end_layout
+
+\begin_layout Plain Layout
+
+enum SomeEnum { ENUM_CONSTANT }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Not constants
+\end_layout
+
+\begin_layout Plain Layout
+
+static String nonFinal = "non-final";
+\end_layout
+
+\begin_layout Plain Layout
+
+final String nonStatic = "non-static";
+\end_layout
+
+\begin_layout Plain Layout
+
+static final Set<String> mutableCollection = new HashSet<String>();
+\end_layout
+
+\begin_layout Plain Layout
+
+static final ImmutableSet<SomeMutableType> mutableElements = ImmutableSet.of(muta
+ble);
+\end_layout
+
+\begin_layout Plain Layout
+
+static final Logger logger = Logger.getLogger(MyClass.getName());
+\end_layout
+
+\begin_layout Plain Layout
+
+static final String[] nonEmptyArray = {"these", "can", "change"};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+常量一般使用名词或者名词短语命名。
+\end_layout
+
+\begin_layout Subsubsection
+非常量的成员变量名
+\end_layout
+
+\begin_layout Standard
+非常量的成员变量命名（包括静态变量和非静态变量），采用lowerCamelCase命名。
+\end_layout
+
+\begin_layout Standard
+一般使用名词或名词短语。
+\end_layout
+
+\begin_layout Subsubsection
+参数名
+\end_layout
+
+\begin_layout Standard
+参数命名采用lowerCamelCase命名。
+\end_layout
+
+\begin_layout Standard
+应该避免使用一个字符作为参数的命名方式。
+\end_layout
+
+\begin_layout Subsubsection
+局部变量名
+\end_layout
+
+\begin_layout Standard
+局部变量采用lowerCamelCase命名。它相对于其他类型的命名，可以采用更简短宽松的方式。
+\end_layout
+
+\begin_layout Standard
+但即使如此，也应该尽量避免采用单个字母进行命名的情况，除了在循环体内使用的临时变量。
+\end_layout
+
+\begin_layout Standard
+即使局部变量是final、不可改变的，它也不能被认为是常量，也不应该采用常量的命名方式去命名。
+\end_layout
+
+\begin_layout Subsubsection
+类型名
+\end_layout
+
+\begin_layout Standard
+类型名有两种命名方式：
+\end_layout
+
+\begin_layout Itemize
+单独一个大写字母，有时后面再跟一个数字。（例如，E、T、X、T2）。
+\end_layout
+
+\begin_layout Itemize
+像一般的class命名一样（见5.2.2节），再在最后接一个大写字母。（例如，RequestT、FooBarT）。
+\end_layout
+
+\begin_layout Subsection
+Camel case的定义
+\end_layout
+
+\begin_layout Standard
+有时一些短语被写成Camel case的时候可以有多种写法。例如一些缩写词汇，或者一些组合词：IPv6 或者 iOS 等。
+\end_layout
+
+\begin_layout Standard
+为了统一写法，Google style给出了一种几乎可以确定为一种的写法。
+\end_layout
+
+\begin_layout Itemize
+将字符全部转换为ASCII字符，并且去掉 ' 等符号。例如，"Müller's algorithm" 被转换为 "Muellers algorithm"
+ 。
+\end_layout
+
+\begin_layout Itemize
+将上一步转换的结果拆分成一个一个的词语。从空格处和从其他剩下的标点符号处划分。
+\begin_inset Newline newline
+\end_inset
+
+注意：一些已经是Camel case的词语，也应该在这个时候被拆分。（例如 AdWords 被拆分为 ad words）。但是例如iOS之类的词语，它其实不是一
+个Camel case的词语，而是人们惯例使用的一个词语，因此不用做拆分。
+\end_layout
+
+\begin_layout Itemize
+经过上面两部后，先将所有的字母转换为小写，再把每个词语的第一个字母转换为大写。
+\end_layout
+
+\begin_layout Itemize
+最后，将所有词语连在一起，形成一个标示符。
+\end_layout
+
+\begin_layout Standard
+注意：词语原来的大小写规则，应该被完全忽略。以下是一些例子：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+举例说明
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="30line%">
+<column alignment="center" valignment="top" width="30line%">
+<column alignment="center" valignment="top" width="30line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prose form
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Correct
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incorrect
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+XML HTTP request
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+XmlHttpRequest
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+XMLHTTPRequest
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+new customer ID
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+newCustomerId
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+newCustomerID
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+inner stopwatch
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+innerStopwatch
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+innerStopWatch
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+supports IPv6 iOS?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+supportsIPv6Ios
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+supportIPv6OnIOS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+YouTube importer
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+YouTubeImporter YoutubeImporter*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 号表示可以接受，但是不建议使用。
+\end_layout
+
+\begin_layout Standard
+注意，有些词语在英文中，可以用 - 连接使用，也可以不使用 - 直接使用。例如 “nonempty”和 “non-empty”都是可以的。因此，方法名字为che
+ckNonempty 或者checkNonEmpty 都是可以的。
+\end_layout
+
+\begin_layout Section
+编程实践
+\end_layout
+
+\begin_layout Subsection
+@override 都应该使用
+\end_layout
+
+\begin_layout Standard
+@override annotations只要是符合语法的，都应该使用。
+\end_layout
+
+\begin_layout Subsection
+异常捕获不应该被忽略
+\end_layout
+
+\begin_layout Standard
+一般情况下，catch住的异常不应该被忽略，而是都需要做适当的处理。例如将错误日志打印出来，或者如果认为这种异常不会发生，则应该作为断言异常重新抛出。
+\end_layout
+
+\begin_layout Standard
+如果这个catch住的异常确实不需要任何处理，也应该通过注释做出说明。例如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try {
+\end_layout
+
+\begin_layout Plain Layout
+
+  int i = Integer.parseInt(response);
+\end_layout
+
+\begin_layout Plain Layout
+
+  return handleNumericReponse(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (NumberFormatException ok) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // it's not numeric; that's fine, just continue
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+return handleTextResponse(response);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例外：在测试类里，有时会针对方法是否会抛出指定的异常，这样的异常是可以被忽略的。但是这个异常通常需要命名为： expected。例如：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+举例说明
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try {
+\end_layout
+
+\begin_layout Plain Layout
+
+  emptyStack.pop();
+\end_layout
+
+\begin_layout Plain Layout
+
+  fail();
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (NoSuchElementException expected) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+静态成员的访问：应该通过类，而不是对象
+\end_layout
+
+\begin_layout Standard
+当一个静态成员被访问时，应该通过class名去访问，而不应该使用这个class的具体实例对象。例如：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+举例说明
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Foo aFoo = ...;
+\end_layout
+
+\begin_layout Plain Layout
+
+Foo.aStaticMethod(); // good
+\end_layout
+
+\begin_layout Plain Layout
+
+aFoo.aStaticMethod(); // bad
+\end_layout
+
+\begin_layout Plain Layout
+
+somethingThatYieldAFoo().astaticMethod(); very bad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+不使用Finalizers 方法
+\end_layout
+
+\begin_layout Standard
+重载Object的finalize方法是非常非常罕见的。
+\end_layout
+
+\begin_layout Standard
+注意：不应该使用这以方法。如果你认为你必须使用，请先仔细阅读并理解 Effective Java 第七条 “Avoid Finalizers”。然后不要使用它。
+\end_layout
+
+\begin_layout Section
+Javadoc
+\end_layout
+
+\begin_layout Subsection
+格式规范
+\end_layout
+
+\begin_layout Subsubsection
+通用格式
+\end_layout
+
+\begin_layout Standard
+最基本的javadoc的通用格式如下例：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Muptiple lines of javadoc text are written here,
+\end_layout
+
+\begin_layout Plain Layout
+
+ * wrapped normally...
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+public int method(String p1) }...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或者为单行格式：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/** An especially short bit of Javadoc.
+ */
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通用格式在任何时候使用都是可以的。当javadoc块只有一行时，可以使用单行格式来替代通用格式。
+\end_layout
+
+\begin_layout Subsubsection
+段落
+\end_layout
+
+\begin_layout Standard
+空白行：是指javadoc中，上下两个段落之间只有上下对齐的 * 字符的行。每个段落的第一行在第一个字符之前，有一个<p>标签，并且之后不要有任何空格。
+\end_layout
+
+\begin_layout Subsubsection
+@从句
+\end_layout
+
+\begin_layout Standard
+所有标准的@从句，应该按照如下的顺序添加：@param、@return、@throws、@deprecated。并且这四种@从句，不应该出现在一个没有描述的Ja
+vadoc块中。
+\end_layout
+
+\begin_layout Standard
+当@从句无法在一行写完时，应该断行。延续行在第一行的@字符的位置，缩进至少4个字符单位。
+\end_layout
+
+\begin_layout Subsection
+摘要片段
+\end_layout
+
+\begin_layout Standard
+每个类或者成员的javadoc，都是由一个摘要片段开始的。这个片段非常重要。因为它是类或者方法在使用时唯一能看到的文本说明。
+\end_layout
+
+\begin_layout Standard
+主要摘要只是一个片段，应该是一个名词短语或者动词短语，而不应该是一个完整的句子。但是它应该像一个完整的句子一样使用标点符号。
+\end_layout
+
+\begin_layout Standard
+注意：一种常见的错误是以这种形式使用javadoc：/** @return the customer ID */.这是不对的。应该改为：/** Returns
+ the customer ID.
+ */.
+\end_layout
+
+\begin_layout Subsection
+何处应该使用Javadoc
+\end_layout
+
+\begin_layout Standard
+至少，Javadoc应该应用于所有的public类、public和protected的成员变量和方法。和少量例外的情况。例外情况如下。
+\end_layout
+
+\begin_layout Subsubsection
+例外：方法本身已经足够说明的情况
+\end_layout
+
+\begin_layout Standard
+当方法本身很显而易见时，可以不需要javadoc。例如：getFoo。没有必要加上javadoc说明“Returns the foo”。
+\end_layout
+
+\begin_layout Standard
+单元测试中的方法基本都能通过方法名，显而易见地知道方法的作用。因此不需要增加javadoc。
+\end_layout
+
+\begin_layout Standard
+注意：有时候不应该引用此例外，来省略一些用户需要知道的信息。例如：getCannicalName 。当大部分代码阅读者不知道canonical
+ name是什么意思时，不应该省略Javadoc,认为只能写/** Returns the canonical name.
+ */ 。
+\end_layout
+
+\begin_layout Subsubsection
+例外：重载方法
+\end_layout
+
+\begin_layout Standard
+重载方法有时不需要再写Javadoc。
+\end_layout
+
+\begin_layout Subsubsection
+例外：可选的javadoc
+\end_layout
+
+\begin_layout Standard
+一些在包外不可见的class和成员变量或方法，根据需要，也可以使用javadoc。当一个注释用以说明这个类、变量或者方法的总体目标或行为时，可以使用Javado
+c。
+\begin_inset Note Note
+status open
+
+\begin_layout Chapter
+常见设计模式
+\end_layout
+
+\begin_layout Plain Layout
+TBD
+\end_layout
+
+\begin_layout Section
+设计模式概述
+\end_layout
+
+\begin_layout Section
+工厂模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:工厂模式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+单例模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:单例模式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+构建模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:构建模式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+装饰模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:装饰模式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+代理模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:代理模式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+门面模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:门面模式"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "../common/java,../common/others"
+options "IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

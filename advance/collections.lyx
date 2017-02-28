@@ -1,0 +1,5763 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+logicalmkup
+coderemarks
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Serif"
+\font_sans "default" "DejaVu Sans"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+集合类
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:集合类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/collection/collection.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+集合的概念
+\end_layout
+
+\begin_layout Standard
+“集合”是我们现实生活中经常遇到的数据表达方式，比如通讯录（记录了姓名、电话号码、住址等）、字典（记录了文字和其意义的对照关系）等等。为了更好的表达和处理集合，
+Java提供了集合类框架（Collections Framework），包括以下三个部分：
+\end_layout
+
+\begin_layout Itemize
+一系列接口：虽然不同的集合内容（数据类型）可能不同，但是处理和操作集合的方式大致相似，因此集合类框架根据不同类型的集合定义了相应的接口以规范集合的操作。
+\end_layout
+
+\begin_layout Itemize
+接口的实现：上述接口的实现类。
+\end_layout
+
+\begin_layout Itemize
+算法：Java的集合类框架提供了数据结构中常见的诸如排序、搜索等算法实现。
+\end_layout
+
+\begin_layout Standard
+Java的集合类框架带给我们的最明显好处就是，对于常见的数据结构，我们不再需要“重新发明轮子”，直接使用集合类框架即可，提高了编写代码的效率，也提高了代码的健壮
+性。z
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+在有的材料中把集合类叫做容器类(Container)，道理是一样的：集合类框架的目的是处理批量的数据，就像将批量的数据放到一个容器中进行处理。基于此，本书可能在
+不同的场合交叉使用集合类和容器类两种说法。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+集合类框架的接口
+\end_layout
+
+\begin_layout Standard
+理解集合类框架的接口是用好集合类框架的关键，Java的集合类框架接口如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:集合类框架的接口"
+
+\end_inset
+
+所示，主要分为两大类：
+\end_layout
+
+\begin_layout Enumerate
+Collection：就是通常的集合的概念。如果把Colleciton看做一个容器，那么Collection抽象的表达了如何看待容器中的元素：如何存储、遍历、添
+加、删除等。
+\end_layout
+
+\begin_layout Enumerate
+Map：抽象的表达了“映射”的概念，即
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+{key->value}
+\end_layout
+
+\end_inset
+
+这样的数据结构。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/inferfaces.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+集合类框架的接口
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:集合类框架的接口"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所有集合类框架中的接口和类都是泛型化的。实际上，Java泛型的提出最初的目的就是为了增强集合类框架
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+此说法从何而来？需要文献索引
+\end_layout
+
+\end_inset
+
+。也就是说，Colleciton接口的定义是这样的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public interface Collection<E> {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Collection接口
+\end_layout
+
+\begin_layout Standard
+根据
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:集合类框架的接口"
+
+\end_inset
+
+，Collection接口是所有集合类（Map除外）的起点，即所有集合类均实现了Collection中所规定的方法。Collection接口抽象的概括了我们可以
+对一个集合进行哪些操作，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Collection接口的方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="40line%">
+<column alignment="left" valignment="top" width="35line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+操作类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+基础操作
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int size()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回集合的元素个数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean isEmpty()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断集合是否为空
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean contains(Object element)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+集合中是否包含对象element
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean add(Object element)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+添加对象element到集合中，成功则返回true
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean remove(Object element)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从集合中删除对象element，成功则返回true
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iterator<E> iterator()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得该集合的迭代器
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+批量操作
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean containsAll(Collection<?> c)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+集合c是否是当前集合的子集？
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean addAll(Collection<? extends E> c)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+添加集合c的元素到当前集合（集合的并运算）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean removeAll(Collection<?> c)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从当前集合删除集合c中的所有元素（集合的差运算）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean retainAll(Collection<?> c)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从当前集合中删除不在集合c中的所有元素（集合的交运算）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void clear()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+清空集合
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+数组操作
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Object[] toArray()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将集合转换为数组
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<T> T[] toArray(T[] a)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将集合转换为指定类型的数组
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+流式操作
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stream<E> stream()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得集合的流式操作接口
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stream<E> parallelStream()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得支持并发的流式操作接口
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Collection接口的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Collection接口的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们将在下面的章节中结合更具体的集合类进一步看一下Collection接口的用法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+从宏观掌握Collection接口非常重要！在面向对象编程实践中，我们一致强调面向接口的编程，Java的集合类框架在这一方面给了我们很好的示范。在使用Java的
+集合类框架时，我们也尽量要遵守面向接口编程的原则，如下图所示。
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/interface-oriented-programming.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+使用综合性示例还是片段性示例？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里用到了lambda表达式，需要将lambda表达式一章提前吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Set接口
+\end_layout
+
+\begin_layout Standard
+Set接口是Collection的子接口，其表达的是数学上的集合概念：一组
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+不重复的对象
+\end_layout
+
+\end_inset
+
+，即Set中的数据元素是不允许重复的，我们在下面往Set中添加和删除元素的时候可以看到如果往Set中添加重复的元素会发生什么。Set的三个常见具体实现及其特点如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Set接口的具体实现类"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="25line%">
+<column alignment="center" valignment="top" width="65line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HashSet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+数据元素存储到哈希表中，效率很高，但是不保证数据元素的顺序
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TreeSet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+数据元素存储到红黑树中，按照数据元素的大小排序，效率比HashSet低
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LinkedHashSet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+支持链表的HashSet，数据元素按照其插入的顺序排序，效率比HashSet略低
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Set接口的具体实现类
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Set接口的具体实现类"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于Set不允许重复的对象，因此要特别注意Set的add和remove方法的返回值的意义，总结如下：
+\end_layout
+
+\begin_layout Itemize
+通过add方法添加一个数据元素到Set中的时候，如果Set中还没有该元素则添加并返回true，否则返回false。尤其是，Set允许集合中包含null，即nul
+l可以作为Set的一个数据元素存在。
+\end_layout
+
+\begin_layout Itemize
+通过remove方法从Set返回一个数据元素时，如果该数据元素存在则删除并返回true，否则返回false。
+\end_layout
+
+\begin_layout Standard
+总而言之，add和remove方法返回true，如果Set被改变了的话，否则返回false。
+\end_layout
+
+\begin_layout Example
+Set的add、remove、size方法
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SetNullTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/SetNullTest.java"
+lstparams "caption={SetNullTest.java},label={SetNullTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+程序运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+add null:true
+\end_layout
+
+\begin_layout Plain Layout
+add null again:false
+\end_layout
+
+\begin_layout Plain Layout
+set size:2
+\end_layout
+
+\begin_layout Plain Layout
+remove null:true
+\end_layout
+
+\begin_layout Plain Layout
+set size:1
+\end_layout
+
+\begin_layout Plain Layout
+remove null again:false
+\end_layout
+
+\begin_layout Plain Layout
+set size:1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+可以看出，Set允许在集合中包括null这个特殊的对象。add和remove只有在集合切实被改变的时候才会返回true，我们可以巧妙的利用这一点作为条件判断的依
+据，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:打印给定字符串的重复单词列表和唯一单词列表"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+统计给定字符串的不重复的单词及其个数
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:统计给定字符串的不重复的单词及其个数"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FinDups.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/FinDups.java"
+lstparams "caption={FinDups.java},label={FinDups.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+本例要求运行时附带命令行参数，在Idea中可以在Run菜单选择“Edit Configurations...
+\begin_inset Quotes erd
+\end_inset
+
+填写命令行参数，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Idea中设置应用程序的命令行参数"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/idea-run-arguments.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Idea中设置应用程序的命令行参数
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Idea中设置应用程序的命令行参数"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+4 distinct words: [left, came, saw, I]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例中巧妙的利用了Set不允许重复元素的特点统计不重复的单词：直接遍历命令行参数数组并使用add方法添加即可，重复的数据是添加不到Set中的。另外可以看出，Sy
+stem.out.println可以直接打印出Set集合的元素列表，请考虑一下JDK是如何做到这一点的
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+提示：可以查阅openjdk源代码的AbstractCollection类，其中实现了toString方法来遍历集合元素并构造一个描述集合元素的字符串。
+\end_layout
+
+\end_inset
+
+？
+\end_layout
+
+\begin_layout Standard
+注意到，当我们反复执行本例时会发现输出的结果可能会不同，即打印出的单词顺序可能会有差异，这是因为HashSet并不保证元素的顺序。如果总是希望按照特定的顺序保存
+这些单词，可以将
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FinDups.java"
+
+\end_inset
+
+中的HashSet简单替换为TreeSet或者LinkedHashSet。请自行练习并认真体会HashSet和TreeSet、LinkedHashSet的区别。
+\end_layout
+
+\begin_layout Example
+打印给定字符串的重复单词列表和唯一单词列表
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:打印给定字符串的重复单词列表和唯一单词列表"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+不同于
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:统计给定字符串的不重复的单词及其个数"
+
+\end_inset
+
+，本例要求打印出命令行字符串中重复的单词和只出现了一次的单词列表，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FindDup2.java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/FindDup2.java"
+lstparams "caption={FindDup2.java},label={FindDup2.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+参照
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:统计给定字符串的不重复的单词及其个数"
+
+\end_inset
+
+，我们设置应用程序的命令行参数为I came I saw I left，则执行结果为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Unique words: [left, came, saw]
+\end_layout
+
+\begin_layout Plain Layout
+Duplicate words: [I]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+本例的重点是：
+\end_layout
+
+\begin_layout Itemize
+巧妙的利用了Set的add方法的特点构造了判断条件：如果要添加的元素已经存在于集合中则返回false。
+\end_layout
+
+\begin_layout Itemize
+使用了两个Set来保存单词列表，uniques在循环中首先保存所有的单词，然后和保存重复单词的集合dups做“差运算”即可获得只出现一次的单词列表。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status collapsed
+
+\begin_layout Plain Layout
+假设我们有一个集合c，希望通过这个集合创建一个去除重复元素的新集合，可以借助于Set接口的特性使用一行代码来完成
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+java tutorial colllection url here.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Collection<Type> noDups = new HashSet<Type>(c);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+使用JDK 8的流式处理可以这样实现：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+c.stream().collect(Collector.toSet());
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要从基本操作、批量操作、流式操作几个方面展开吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+List接口
+\end_layout
+
+\begin_layout Standard
+List接口是Colleciton的子接口，表达了一个有序的数据集合，其突出特点为：
+\end_layout
+
+\begin_layout Itemize
+List中的数据是根据其加入（调用add或者addAll方法）的顺序排序的。
+\end_layout
+
+\begin_layout Itemize
+List中的数据允许重复。
+\end_layout
+
+\begin_layout Standard
+List中的数据是有序的，因此很自然的我们可以按照数据的序号（List的序号遵循C语言的习惯，也是从0开始的）来操作数据，因此List接口除了具有Collect
+ion接口的所有方法外，还定义了如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:List定义的额外方法"
+
+\end_inset
+
+所示的额外方法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="40line%">
+<column alignment="left" valignment="top" width="40line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+操作类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名称
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+位置操作
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E get(int index)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得序号为i的对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E set(int index, E element)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用element替换序号为i处的的对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void add(int index, E element)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在序号i处插入对象element并依次后移受影响的其他对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean addAll(int index, Collection<? extends E> c)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在序号i处插入集合c并依次后移受影响的其他对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E remove(int index)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+删除序号i处的对象，并依次前移对象填补空缺
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+搜索
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int indexOf(Object o)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得对象o在List中第一次出现的序号，如果对象不在List中则返回-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int lastIndexOf(Object o) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得对象0在List中最后出现的序号，如果对象不在List中则返回-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+List<E> subList(int fromIndex, int toIndex)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得序号fromIndex（包含）到toIndex（不包含）之间的数据组成的List
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+迭代
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ListIterator<E> listIterator(int index)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得一个从起始序号index开始的ListInterator
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+排序
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void sort(Comparator<? super E> c)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的comparator排序List
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+List定义的额外方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:List定义的额外方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+List接口最常见的三个实现类是ArrayList、LinkedList和Vector，由于其内部实现不同，在不同的场合下的性能差异比较大，
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:List的具体实现类"
+
+\end_inset
+
+总结了ArrayList、LinkedList、Vector的异同。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="12line%">
+<column alignment="center" valignment="top" width="38line%">
+<column alignment="center" valignment="top" width="38line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+特点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用场合
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ArrayList
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ArrayList是基于动态数组（可改变大小）的数据结构，随着数据元素的不断加入和删除，ArrayList的大小会不断调整。ArrayList不是线程安全的。
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+随机访问频繁时，ArrayList有速度优势。在大多数情况下，应该优先选用ArrayList
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LinkedList
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LinkedList是基于双向链表的数据结构。LinkedList不是线程安全的。
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+频繁添加和删除操作时，LinkedList有速度优势
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vector
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+相当于线程安全的ArrayList
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vector的执行效率不高，只在并发编程中考虑使用Vector
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+List的具体实现类
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:List的具体实现类"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+基本的List操作示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ListBasic.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/ListBasic.java"
+lstparams "caption={ListBasic.java},label={ListBasic.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+list1 elements:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+\end_layout
+
+\begin_layout Plain Layout
+list2 elements:[20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+\end_layout
+
+\begin_layout Plain Layout
+list1 + list2 elements:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24,
+ 25, 26, 27, 28, 29]
+\end_layout
+
+\begin_layout Plain Layout
+read from list1, index = 0, value = 0
+\end_layout
+
+\begin_layout Plain Layout
+read from list1, index = 3, value = 3
+\end_layout
+
+\begin_layout Plain Layout
+read from list1, index = 6, value = 6
+\end_layout
+
+\begin_layout Plain Layout
+read from list1, index = 9, value = 9 
+\end_layout
+
+\begin_layout Plain Layout
+read from list1, index = 12, value = 22
+\end_layout
+
+\begin_layout Plain Layout
+read from list1, index = 15, value = 25
+\end_layout
+
+\begin_layout Plain Layout
+read from list1, index = 18, value = 28
+\end_layout
+
+\begin_layout Plain Layout
+will replace the 0 elements with: 0
+\end_layout
+
+\begin_layout Plain Layout
+will replace the 5 elements with: 25
+\end_layout
+
+\begin_layout Plain Layout
+will replace the 10 elements with: 100
+\end_layout
+
+\begin_layout Plain Layout
+will replace the 15 elements with: 125
+\end_layout
+
+\begin_layout Plain Layout
+list1 elements now:[0, 1, 2, 3, 4, 25, 6, 7, 8, 9, 100, 21, 22, 23, 24,
+ 125, 26, 27, 28, 29]
+\end_layout
+
+\begin_layout Plain Layout
+list1 elements after added:[0, 1, 2, 3, 4, 25, 6, 7, 8, 9, 33, 100, 21,
+ 22, 23, 24, 125, 26, 27, 28, 29]
+\end_layout
+
+\begin_layout Plain Layout
+list1 elements after removed:[0, 1, 2, 3, 4, 25, 6, 7, 8, 9, 33, 21, 22,
+ 23, 24, 125, 26, 27, 28, 29]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例综合演示了List的基本操作，包括get，set，add，remove，addAll等方法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+ArrayList的默认构造方法会创建一个初始大小为10的数组
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+参见openjdk的源代码: jdk/src/java.base/share/classes/java/util/ArrayList.java
+\end_layout
+
+\end_inset
+
+，如果预计到要使用到更多的数据，最好不要使用使用ArrayList默认的构造方法，而是使用ArrayList(int initialCapacity)创建一个合
+适大小的数组，以减小不断扩大数组的无谓开销。比如下面的代码创建一个初始大小为100的ArrayList对象：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+List<String> list = new ArrayList<>(100);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将命令行参数随机乱序输出到屏幕
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Shuffle.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/Shuffle.java"
+lstparams "caption={Shuffle.java},label={Shuffle.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+假设命令行参数为
+\begin_inset Quotes erd
+\end_inset
+
+I came I saw I left
+\begin_inset Quotes erd
+\end_inset
+
+,则运行后可能的结果为（每次运行结果可能不同）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+[I, left, saw, I, came, I]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例借助于Collections类的shuffle方法乱序给定的List。如果我们自己写一个shuffle方法呢？参考下面的代码：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public static <E> void swap(List<E> a, int i, int j) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    E tmp = a.get(i);
+\end_layout
+
+\begin_layout Plain Layout
+
+    a.set(i, a.get(j));
+\end_layout
+
+\begin_layout Plain Layout
+
+    a.set(j, tmp);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+public static void shuffle(List<?> list) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    Random rnd = new Random();
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int i = list.size(); i > 1; i--)
+\end_layout
+
+\begin_layout Plain Layout
+
+        swap(list, i - 1, rnd.nextInt(i));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+Collections
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+详情参见：http://docs.oracle.com/javase/8/docs/api/java/util/Collections.html
+\end_layout
+
+\end_inset
+
+是一个集合类的辅助工具类，其中定义了一系列类方法，比较常用的有：
+\end_layout
+
+\begin_layout Itemize
+shuffle：乱序给定的List
+\end_layout
+
+\begin_layout Itemize
+reverse：逆序给定的List
+\end_layout
+
+\begin_layout Itemize
+swap：交换给定List的指定元素
+\end_layout
+
+\begin_layout Itemize
+fill：用给定的对象填充List
+\end_layout
+
+\begin_layout Itemize
+max/min：返回给定Collection中元素的最大值/最小值
+\end_layout
+
+\begin_layout Plain Layout
+Arrays
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+详情参见：http://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html
+\end_layout
+
+\end_inset
+
+是另外一个常见的工具类，顾名思义，Arrays提供了和数组相关的一些类方法，常见的有：
+\end_layout
+
+\begin_layout Itemize
+asList：将给定的数组转化为一个List
+\end_layout
+
+\begin_layout Itemize
+sort：排序给定的数组
+\end_layout
+
+\begin_layout Itemize
+fill：填充给定的数组
+\end_layout
+
+\begin_layout Itemize
+copyOf：将给定的数组截断后复制为一个新数组
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+subList的用法示例
+\end_layout
+
+\begin_layout Standard
+subList是一个很有特色的方法，其特点为：
+\end_layout
+
+\begin_layout Itemize
+半开半闭：subList包含起点但是不包含终点位置。
+\end_layout
+
+\begin_layout Itemize
+非独立存在的List，而是原List的一个视图，即对subList的变化会马上反映到原List上面。这很像数据库中“视图”（View）的概念和用法。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SubListTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/SubListTest.java"
+lstparams "caption={SubListTest.java},label={SubListTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+程序运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+[2, 3, 4, 5, 6]
+\end_layout
+
+\begin_layout Plain Layout
+[1, 2, 3, 4, 5, 6, 10, 7]
+\end_layout
+
+\begin_layout Plain Layout
+----
+\end_layout
+
+\begin_layout Plain Layout
+Exception in thread "main" java.lang.IllegalArgumentException: fromIndex(6)
+ > toIndex(5)
+\end_layout
+
+\begin_layout Plain Layout
+at java.util.ArrayList.subListRangeCheck(ArrayList.java:1006)
+\end_layout
+
+\begin_layout Plain Layout
+at java.util.ArrayList.subList(ArrayList.java:996)
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.SubListTest.main(SubListTest.java:34)
+\end_layout
+
+\begin_layout Plain Layout
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+\end_layout
+
+\begin_layout Plain Layout
+......
+\end_layout
+
+\begin_layout Plain Layout
+at java.lang.reflect.Method.invoke(Method.java:498)
+\end_layout
+
+\begin_layout Plain Layout
+at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+subList的意义比较明确，但是如果要修改subList的内容或者原List的内容还是要特别小心，要注意到subList作为原List的一个视图是单向的映射关
+系，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SubListTest.java"
+
+\end_inset
+
+中的注解。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Vector, Stack和List的区别、练习？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Queue接口
+\end_layout
+
+\begin_layout Standard
+Queue接口描述了《数据结构》中“队列”的概念，因此本节内容要求读者了解一定的队列基础知识。简单的说，队列就像一个两端开口的管道，数据总是一个一个从左端进入，
+右端取出，即所谓的“先进先出”（FIFO：First In First Out）结构
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Java Queue接口的某些实现类也提供了特殊形式的队列，这些队列形态不一定是FIFO的，比如PriorityQueue根据数据元素的值而非入队顺序排序。
+\end_layout
+
+\end_inset
+
+。Queue反映了生活中的“排队”现象，比如火车站排队买票，食堂学生排队打饭，打印机的打印任务缓冲队列等等，即“先来先服务”模式，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Queue示意图"
+
+\end_inset
+
+所示，
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/queue-overview.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Queue示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Queue示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Queue示意图"
+
+\end_inset
+
+也列出了Queue的主要方法。Queue的每个方法都有两种形式：
+\end_layout
+
+\begin_layout Enumerate
+如果操作失败则抛出异常，因此后续的操作将无法进行；
+\end_layout
+
+\begin_layout Enumerate
+如果操作失败返回特定的值，比如null或者false，可以根据这个返回值决定是否进行后续的操作。
+\end_layout
+
+\begin_layout Standard
+具体来说，Queue的方法如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Queue的主要方法"
+
+\end_inset
+
+所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+根据方法的第一个字母可以想到一个简单的策略记忆其差别：are exception，pop failure（队列皆异常，弹出都失败）。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="50line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+操作类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回特定值
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+插入
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+add(e)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+offer(e)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在队尾插入元素，如果队列已满，则add抛出IllegalStateException，而offer返回false。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+删除
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+remove()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+poll()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从队头删除元素并返回被删除的元素。如果队列已经为空，remove抛出NoSuchElemnetException，而poll返回null。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检查
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+element()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+peek()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检查队头元素（不删除），如果队列已经为空，element抛出NoSuchElemnetException，而peek返回null。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Queue的主要方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Queue的主要方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+把方法的返回值等具体化
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Queue接口的主要实现类有：
+\end_layout
+
+\begin_layout Itemize
+LinkedList
+\end_layout
+
+\begin_layout Itemize
+PriorityQueue
+\end_layout
+
+\begin_layout Itemize
+ArrayDeque
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+给出一个类层级结构图？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Queue综合示例：设计一个倒计时计数器。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CountDown.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/CountDown.java"
+lstparams "caption={CountDown.java},label={CountDown.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+首先设置运行时的命令行参数
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:如何设置命令行参数？"
+
+\end_inset
+
+，比如设置为10，运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+对于这样的一个简单场景，我们当然不一定必须使用Queue来实现
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+作为练习，这里请考虑还有什么方法实现这个功能？比如，可以使用多线程实现吗？
+\end_layout
+
+\end_inset
+
+。为了实现倒计时，我们首先构造了一个Queue并加入了一组整数，然后每隔一定时间（这里是1秒）依次取出这组整数即可。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+LinkedList实现了两个接口：Queue和List，如下图所示：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/linkedlist.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+因此，LinkedList是一个应用很广泛的实用类，值得我们认真研究和扎实掌握起来。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+Deque是一个双向Queue接口，即允许在两端进行读写的Queue，请读者自行参考相关资料了解详情。LinkedList也实现了Deque接口。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Map接口
+\end_layout
+
+\begin_layout Standard
+Map接口表达了数据映射的概念，一个Map对象中包含两个集合：Key集合和Value集合。Map对象中Key集合和Value集合的关系非常像“连连看”：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+插入一张连连看图片
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Map<K, V>接口的操作方法如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Map接口的方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="40line%">
+<column alignment="center" valignment="top" width="40line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+操作类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+名称
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+基本操作
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V put(K key, V value)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将(key,value)对加入到当前map对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V get(Object key)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据key从当前map对象获得相应的value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V remove(Object key)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据key从当前map删除一个映射，返回被删除的value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean containsKey(Object key)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检查当前map是否包含给定的key
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean containsValue(Object value)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检查当前map是否包含给定的value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int size()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回当前map的大小（key-value对的个数）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean isEmpty()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检查当前map是否为空
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+批量操作
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void clear()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+清除Map
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void putAll(Map<? extends K,? extends V> m)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将m添加到给定的map对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+集合视图
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Set<K> keySet()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前map所有key的Set集合
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Collection<V> values()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前map所有value的Collection集合
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Set<Map.Entry<K,V>> entrySet()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前map的所有key-value对的Set集合
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Map接口的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Map接口的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Map接口的三个常见实现类是HashMap、TreeMap、LinkedHashMap。从名字上可以看出，这三个实现类和Set接口的三个实现类HashSet、T
+reeSet、LinkedHashSet非常相似，实际上也是这样，我们通过下面的例子可以看出。
+\end_layout
+
+\begin_layout Subsubsection
+Map的基本操作
+\end_layout
+
+\begin_layout Example
+统计命令行参数中字符串的出现频率
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:统计命令行参数中字符串的出现频率"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "WordFreq.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/WordFreq.java"
+lstparams "caption={WordFreq.java},label={WordFreq.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+假设命令行参数为“If it is to be it is up to me”，则运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+7 distinct words:
+\end_layout
+
+\begin_layout Plain Layout
+{be=1, me=1, is=2, it=2, to=2, up=1, If=1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+HashMap中保存的数据并不保证顺序，也就是说，HashMap中的key->value对不是按照加入的顺序或者值的大小来排序的
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+那么是根据什么顺序保存的呢？
+\end_layout
+
+\end_inset
+
+。在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:统计命令行参数中字符串的出现频率"
+
+\end_inset
+
+中，如果希望最终的统计结果是按照单词出现的顺序排序的，则可以把HashMap换成LinkedHashMap；如果希望最终的统计结果是按照单词的自然顺序排序，则可
+以把HashMap换成TreeMap，读者可以自行尝试并运行查看结果。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+Map中的Key和Value的对应关系是唯一的，即Map中不允许存在重复的Key->Value关系，这和Set接口有相似之处。我们可以反过来考虑这个问题：假设M
+ap允许存在重复的Key->Value关系，那么get(Key)方法将返回不止一个结果，这在现实中也是不合理的：比如我们查字典，给定一个单词却告诉我们在第100
+页和第200页都存在这个单词，我们该相信哪个呢？
+\end_layout
+
+\begin_layout Plain Layout
+注意到，所谓的“Key和Value的对因关系是唯一的”，即Key集合中的元素不重复，或者说Key集合是一个Set，而Value集合是允许重复的，即允许存在下图所
+示的情形：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要实例验证：value集合的大小和key集合的大小一定相等吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/map-multivalues.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+批量操作
+\end_layout
+
+\begin_layout Standard
+Map的批量操作主要是putAll方法的使用。和Collection的addAll方法很类似，Map的putAll方法可以将一个map的所有内容添加到当前map
+中。
+\end_layout
+
+\begin_layout Example
+比如设计一个参考文献管理的应用程序，每个参考文献由索引和标题两部分组成。编写程序，把来自两个参考文献库的内容合并。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "RefManager.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/RefManager.java"
+lstparams "caption={RefManager.java},label={RefManager.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+程序运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+ref1 size:3,{java-tutorial=Oracle Java Torial, tij=Thinking in Java(3th
+ edition), java-effective=Java Effective(2nd edition)}
+\end_layout
+
+\begin_layout Plain Layout
+ref2 size:2,{tij=Thinking in Java(4th edition, generics-collections=Java
+ Generics and Collections}
+\end_layout
+
+\begin_layout Plain Layout
+after putAll, ref1 size:4,{java-tutorial=Oracle Java Torial, tij=Thinking
+ in Java(4th edition, generics-collections=Java Generics and Collections,
+ java-effective=Java Effective(2nd edition)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+可以看出，putAll方法合并了两个Map，合并的结果是，相同key的Entry被覆盖掉了，如例子中key=tij的项。
+\end_layout
+
+\begin_layout Subsubsection
+集合视图
+\end_layout
+
+\begin_layout Standard
+所谓“集合视图”是指从集合的角度看Map，可以把Map分为如下的3种集合：
+\end_layout
+
+\begin_layout Itemize
+keySet：所有key的集合，是一个Set，因此key是不允许重复的。
+\end_layout
+
+\begin_layout Itemize
+values：所有value的集合，是一个Colleciton，允许重复。
+\end_layout
+
+\begin_layout Itemize
+entrySet：所有key-value对的集合，是一个Set，其中的每一个key-value对（即Set中的每个元素是一个Map.Entry）通过Map的内部接
+口Map.Entry来表达。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+和Map的区别？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当需要把Map作为集合来处理的时候，这三种集合视图就非常有用了。
+\end_layout
+
+\begin_layout Example
+遍历Map的2种方法
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "MapTranverse.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/MapTranverse.java"
+lstparams "caption={MapTranverse.java},label={MapTranverse.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+1->one
+\end_layout
+
+\begin_layout Plain Layout
+2->two
+\end_layout
+
+\begin_layout Plain Layout
+3->three
+\end_layout
+
+\begin_layout Plain Layout
+4->four
+\end_layout
+
+\begin_layout Plain Layout
+1->one apple
+\end_layout
+
+\begin_layout Plain Layout
+2->two apple
+\end_layout
+
+\begin_layout Plain Layout
+3->three apple
+\end_layout
+
+\begin_layout Plain Layout
+4->four apple
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+遍历Map的两种常见方法是根据keySet遍历和根据Map.EntrySet遍历。根据Map.EntrySet遍历的额外好处是在遍历中可以检查和修改value的值，
+这是在遍历Map时唯一修改value值的方式
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在遍历时顺便删除Map中某个key-value对的办法参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:使用Iterator遍历Map并有选择的删除Map中的元素"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+Iterator接口
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Iterator接口"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Iterator（迭代器）是一个标准的通用接口，用于遍历一个集合（Collection），因此List、Set、Queue都可以使用Iterator进行遍历操作
+。Iterator接口的主要方法如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Iterator的主要方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="30line%">
+<column alignment="center" valignment="top" width="55line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean hasNext()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断游标右边是否还有可读的元素
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E next()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读取游标右边的元素，并将游标移动到下一个位置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void remove()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+删除游标左边的元素。在执行完next之后，该操作只能执行一次
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Iterator的主要方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Iterator的主要方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正确使用Iterator的关键是如何理解Iterator的当前“指针”，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Iterator示意图"
+
+\end_inset
+
+所示。 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/iterator-overview.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Iterator示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Iterator示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+使用Iterator遍历Set
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:使用Iterator遍历Set"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SetIteratorTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/SetIteratorTest.java"
+lstparams "caption={SetIteratorTest.java},label={SetIteratorTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+[java, language, is, good]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+所有需要注意的事项都在代码注释中。
+\end_layout
+
+\begin_layout Example
+使用Iterator遍历List
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:使用Iterator遍历List"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ListIteratorTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/ListIteratorTest.java"
+lstparams "caption={ListIteratorTest.java},label={ListIteratorTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+[java, language, is, funny]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例除了使用while循环替代了for循环外，和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:使用Iterator遍历Set"
+
+\end_inset
+
+几乎是一样的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Warning
+status open
+
+\begin_layout Plain Layout
+在构造List对象时经常使用Arrays.asList方法，简洁方便，比如：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+List<String> list = Arrays.asList(new String[]{"abc","def"});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+但是这种方法也有一个“致命”的弱点，即这种方法构造的list是基于数组的，其大小是固定的，既不能删除（remove）元素，也不能添加（add）元素。比如下面的代
+码会抛出UnsupportedOperationException：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+List<String> list = Arrays.asList(new String[]{"abc","def"});
+\end_layout
+
+\begin_layout Plain Layout
+
+for(Interator it = list.iterator(); it.hasNext();) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if(it.next().contains("not")) it.remove;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+因此，在可能改变（添加或者删除）List中的元素时，不能使用Arrays工具类初始化List对象，而应该使用ArrayList等创建List对象，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:使用Iterator遍历List"
+
+\end_inset
+
+所示。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+下面这段代码演示了ListIterator的用法，请说明其功能是什么？
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:下面这段代码演示了ListIterator的用法，请说明其功能是"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public static <E> void replace(List<E> list, E val, E newVal) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (ListIterator<E> it = list.listIterator(); it.hasNext(); )
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (val == null ? it.next() == null : val.equals(it.next()))
+\end_layout
+
+\begin_layout Plain Layout
+
+            it.set(newVal);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+Interator是一个很好的概念设计，但是随着Java中增加了for-each语法，使用for-each遍历一个集合通常更方便，因此除非在遍历集合时需要删除集
+合元素，通常应该使用for-each来遍历一个集合。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+使用Iterator遍历Map并有选择的删除Map中的元素
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:使用Iterator遍历Map并有选择的删除Map中的元素"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "MapIterator.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/collections/src/cn/edu/sdut/softlab/MapIterator.java"
+lstparams "caption={MapIterator.java},label={MapIterator.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+{1=one, 3=three}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+Iterator接口是遍历时唯一安全删除Map中元素的方法。如果需要在遍历时修改元素，唯一可行的方法是遍历Map.EntrySet并利用EntrySet提供的se
+tValue方法。
+\end_layout
+
+\begin_layout Subsection
+Collection的addAll方法
+\end_layout
+
+\begin_layout Standard
+Collection的addAll方法定义如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+interface Collection<E> {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    public boolean addAll(Collection<? extends E> c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，对于一个类型为E的集合（即集合中的元素数据类型为E），可以将另外一个类型为E的一个集合添加到这个集合中去，这是合理的和容易理解的。addAll方法的参
+数使用了泛型技术，即任何类型为E或者E的子类的集合，都可以添加到这个集合中。
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+List<Number> nums = new ArrayList<Number>();
+\end_layout
+
+\begin_layout Plain Layout
+
+List<Integer> ints = Arrays.asList(1, 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+List<Double> dbls = Arrays.asList(3,45, 1.78);
+\end_layout
+
+\begin_layout Plain Layout
+
+nums.addAll(ints);
+\end_layout
+
+\begin_layout Plain Layout
+
+nums.addAll(dbls);
+\end_layout
+
+\begin_layout Plain Layout
+
+assert nums.toString().equals("[1, 2, 3.45, 1.78]");
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们重点看一下nums.addAll(ints)。可以从两个层面理解这一调用：第一，nums是一个List<Number>类型的对象，它实现了Collection
+<Number>接口，因此nums对象可以调用Collection<Number>接口的addAll(Collection<? extends
+ Number> c)方法。第二，List<Integer>是List<? extends Integer>的子类，而List<? extends
+ Integer>是Collection<? extends Number>的子类，因此List<Integer>是Collection<? extends
+ Number>的子类，根据子类替换原则，List<Inteber>可以作为nums.addAll的参数。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+如何理解List<Integer>是Collection<Number>的子类，或者List<Integer>实现了Collection<Number>接口？请
+参考下图：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/collection-list-inheritence.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status collapsed
+
+\begin_layout Plain Layout
+Java的集合类框架包含了若干的接口及其实现类，下图可以帮助大家进一步了解集合类框架的层次结构和相互关系：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/collection/collection-overview.svg
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+集合类中的泛型：PECS原则
+\end_layout
+
+\begin_layout Standard
+泛型通配符的用法的确有一点点复杂，Joshua Bloch在著名的《Effective Java》中提出了
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+PECS
+\end_layout
+
+\end_inset
+
+以帮助大家理解和记忆泛型通配符的用法，简洁有力。
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+PECS
+\end_layout
+
+\end_inset
+
+的意思是：Producer Extends, Consumer Super，即“读取时使用extends，写入时使用super”。下面我们分别讨论一下。
+\end_layout
+
+\begin_layout Subsection
+extends
+\end_layout
+
+\begin_layout Standard
+我们以泛型List<? extends Number>为例，有如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:List<?-extends-Number的类层次关系"
+
+\end_inset
+
+所示的类型层次关系。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/generic/list-arraylist-generic.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+List<? extends Number的类层次关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:List<?-extends-Number的类层次关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据子类替换原则
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见：http://dz.sdut.edu.cn/blog/subaochen/2017/01/subtypes-substitutation/
+\end_layout
+
+\end_inset
+
+，下面的语句都是合法的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+extends用法举例
+\begin_inset CommandInset label
+LatexCommand label
+name "lis:extends用法举例"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+List<? extends Number> nums = new ArrayList<Number>();
+\end_layout
+
+\begin_layout Plain Layout
+
+List<? extends Number> nums = new ArrayList<Integer>();
+\end_layout
+
+\begin_layout Plain Layout
+
+List<? extends Number> nums = new ArrayList<Double>();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们从读取和写入两个方面考察nums：
+\end_layout
+
+\begin_layout Subsubsection
+读取
+\end_layout
+
+\begin_layout Standard
+当调用nums.get(index)方法时，返回值的情形如下：
+\end_layout
+
+\begin_layout Itemize
+可以返回Number类型，因为nums中的数据元素是Number或者Number的子类（Integer或者Double），均可以安全的向上转型为Number类型
+。
+\end_layout
+
+\begin_layout Itemize
+可以返回Object类型，因为Object是Number的父类，向上转型是安全的。
+\end_layout
+
+\begin_layout Itemize
+不可以返回Integer，因为nums作为一个引用，可能指向一个List<Double>，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lis:extends用法举例"
+
+\end_inset
+
+的第3行所示。
+\end_layout
+
+\begin_layout Itemize
+不可以返回Double，因为nums作为一个引用，可能指向一个List<Integer>，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lis:extends用法举例"
+
+\end_inset
+
+的第2行所示。
+\end_layout
+
+\begin_layout Standard
+因此有如下的一般推论：
+\end_layout
+
+\begin_layout Corollary
+List<? extends T>在读取时可以返回T或者T的父类对象，不可以返回T的子类对象。
+\end_layout
+
+\begin_layout Subsubsection
+写入
+\end_layout
+
+\begin_layout Standard
+当调用nums.add()方法写入数据到List<? extends Number>时，情形如下：
+\end_layout
+
+\begin_layout Itemize
+不可以写入Number类型的对象。比如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lis:extends用法举例"
+
+\end_inset
+
+的第2行，nums指向一个List<Integer>对象，只能添加Integer或者Integer的子类对象，而Number是Integer的父类。
+\end_layout
+
+\begin_layout Itemize
+不可以写入Object类型的对象，因为nums可能指向一个List<Integer>类型的对象。
+\end_layout
+
+\begin_layout Itemize
+不可以写入Integer类型的对象，因为nums可能指向一个List<Double>类型的对象。
+\end_layout
+
+\begin_layout Itemize
+不可以写入Double类型的对象，因为nums可能指向一个List<Integer>类型的对象。
+\end_layout
+
+\begin_layout Standard
+因此有如下的一般推论：
+\end_layout
+
+\begin_layout Corollary
+List<? extends T>不允许写入任何对象，即List<? extends T>不能用于写入数据的场合。
+\end_layout
+
+\begin_layout Subsection
+super
+\end_layout
+
+\begin_layout Standard
+我们以泛型List<? super Number>为例，根据子类替换原则，以下的语句都是合法的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+super用法举例
+\begin_inset CommandInset label
+LatexCommand label
+name "lis:super用法举例"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+List<? super Integer> nums = new ArrayList<Integer>();
+\end_layout
+
+\begin_layout Plain Layout
+
+List<? super Integer> nums = new ArrayList<Number>();
+\end_layout
+
+\begin_layout Plain Layout
+
+List<? super Integer> nums = new ArrayList<Object>();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+读取
+\end_layout
+
+\begin_layout Standard
+当调用nums.get(index)方法时：
+\end_layout
+
+\begin_layout Itemize
+无法保证结果是一个Integer，因为nums可能指向一个List<Object>或者List<Number>；
+\end_layout
+
+\begin_layout Itemize
+无法保证结果是一个Number，因为nums可能指向一个List<Object>；
+\end_layout
+
+\begin_layout Itemize
+结果可以是一个Object，但是我们无法获知其具体的类型。
+\end_layout
+
+\begin_layout Standard
+因此有如下的一般推论：
+\end_layout
+
+\begin_layout Corollary
+List<? super T>在读取时无法获知对象的具体类型，即List<? super T>不能用于读取数据的场合。
+\end_layout
+
+\begin_layout Subsubsection
+写入
+\end_layout
+
+\begin_layout Standard
+调用nums.add方法写入时，情形如下：
+\end_layout
+
+\begin_layout Itemize
+可以写入Integer类型的对象，因为Integer是Integer、Number、Object的子类型。
+\end_layout
+
+\begin_layout Itemize
+同样的，可以写入Integer的子类对象。
+\end_layout
+
+\begin_layout Itemize
+不能写入Double类型的对象，因为nums可能指向一个List<Integer>。
+\end_layout
+
+\begin_layout Itemize
+不能写入Number类型的对象，因为nums可能指向一个List<Integer>。
+\end_layout
+
+\begin_layout Itemize
+不能写入Object类型的对象，因为nums可能指向一个List<Integer>。
+\end_layout
+
+\begin_layout Standard
+因此有如下的一般推论：
+\end_layout
+
+\begin_layout Corollary
+List<? super T>只允许写入T及T的子类对象。
+\end_layout
+
+\begin_layout Subsection
+PECS
+\end_layout
+
+\begin_layout Standard
+根据以上的讨论，PECS原则很自然就出来了：
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+在读取时使用extends，在写入是使用super，即Producer Extends, Consumer Super
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+PECS的一个著名例子是集合的复制，见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lis:Collections.copy方法"
+
+\end_inset
+
+，注意到dest是目标集合用来接受数据，因此使用List<? super T>来定义，src是源集合，用来读取数据，因此使用List<? etends
+ T>定义。
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Collections.copy方法
+\begin_inset CommandInset label
+LatexCommand label
+name "lis:Collections.copy方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Collections { 
+\end_layout
+
+\begin_layout Plain Layout
+
+  public static <T> void copy(List<? super T> dest, List<? extends T> src)
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+  {
+\end_layout
+
+\begin_layout Plain Layout
+
+      for (int i=0; i<src.size(); i++) 
+\end_layout
+
+\begin_layout Plain Layout
+
+        dest.set(i,src.get(i)); 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+请给出Collection.copy方法的几个具体应用实例[
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "solu:Collections.copy的以下用法是合法的："
+
+\end_inset
+
+]。
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PECSTest.java"
+
+\end_inset
+
+可以考察你对PECS原则的理解程度，俗称烧脑测试。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/PECSTest.java"
+lstparams "caption={PECSTest.java},label={PECSTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+集合类的一般实用原则和注意事项
+\end_layout
+
+\begin_layout Itemize
+在代码中避免泛型类和原始类型的混用。比如List<String>和List不应该共同使用。这样会产生一些编译器警告和潜在的运行时异常。当需要利用JDK
+ 5之前开发的遗留代码，而不得不这么做时，也尽可能的隔离相关的代码。
+\end_layout
+
+\begin_layout Itemize
+泛型类最好不要同数组一块使用。你只能创建new List<?>[10]这样的数组，无法创建new List<String>[10]这样的。这限制了数组的使用能力
+，而且会带来很多费解的问题。因此，当需要类似数组的功能时候，使用集合类即可。
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="46cm" height="27cm" viewBox="347 359 903 528" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="348.436" y="595.166" width="87.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="348.436" y="595.166" width="87.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="392.036" y="614.166">Trowable</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="514.785" y="450.237" width="58.25" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="514.785" y="450.237" width="58.25" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="543.91" y="469.237">Error</text>
+  </g>
+  <g>
+    <rect style="fill: #ffa500" x="513.636" y="744.587" width="96.85" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="513.636" y="744.587" width="96.85" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="562.061" y="763.587">Exception</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="668.483" y="603.847" width="164.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="668.483" y="603.847" width="164.4" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="750.683" y="622.847">RuntimeException</text>
+  </g>
+  <g>
+    <rect style="fill: #ffa500" x="668.483" y="745.015" width="222.3" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="668.483" y="745.015" width="222.3" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="779.633" y="764.015">ClassNotFoundException</text>
+  </g>
+  <g>
+    <rect style="fill: #ffa500" x="668.483" y="834.579" width="116.15" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="668.483" y="834.579" width="116.15" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="726.558" y="853.579">IOException</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="949.212" y="711.335" width="212.65" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="949.212" y="711.335" width="212.65" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1055.54" y="730.335">NumberFormatException</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="948.934" y="502.404" width="203" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="948.934" y="502.404" width="203" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1050.43" y="521.404">NullPointerException</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="949.423" y="603.449" width="241.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="949.423" y="603.449" width="241.6" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1070.22" y="622.449">IllegalArgumentException</text>
+  </g>
+  <g>
+    <rect style="fill: #ffa500" x="949.212" y="805.29" width="212.65" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="949.212" y="805.29" width="212.65" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1055.54" y="824.29">FileNotFoundException</text>
+  </g>
+  <g>
+    <rect style="fill: #ffa500" x="949.212" y="858.042" width="125.8" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="949.212" y="858.042" width="125.8" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1012.11" y="877.042">EOFException</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="454.059,609.166 482.391,609.166 482.391,464.237 512.959,464.237 "/>
+    <polygon style="fill: #ffffff" points="454.059,601.166 438.059,609.166 454.059,617.166 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="454.059,601.166 438.059,609.166 454.059,617.166 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="454.877,609.166 482.635,609.166 482.635,758.587 512.63,758.587 "/>
+    <polygon style="fill: #ffffff" points="454.877,601.166 438.877,609.166 454.877,617.166 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="454.877,601.166 438.877,609.166 454.877,617.166 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="629.728,758.587 647.485,758.587 647.485,617.847 667.478,617.847 "/>
+    <polygon style="fill: #ffffff" points="629.728,750.587 613.728,758.587 629.728,766.587 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="629.728,750.587 613.728,758.587 629.728,766.587 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="629.728,758.587 647.484,758.587 647.484,759.015 667.477,759.015 "/>
+    <polygon style="fill: #ffffff" points="629.728,750.587 613.728,758.587 629.728,766.587 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="629.728,750.587 613.728,758.587 629.728,766.587 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="628.994,758.587 647.254,758.587 647.254,848.579 667.749,848.579 "/>
+    <polygon style="fill: #ffffff" points="628.994,750.587 612.994,758.587 628.994,766.587 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="628.994,750.587 612.994,758.587 628.994,766.587 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="851.12,617.847 898.545,617.847 898.545,725.335 948.206,725.335 "/>
+    <polygon style="fill: #ffffff" points="851.12,609.847 835.12,617.847 851.12,625.847 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="851.12,609.847 835.12,617.847 851.12,625.847 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="852.125,617.847 899.152,617.847 899.152,617.449 948.415,617.449 "/>
+    <polygon style="fill: #ffffff" points="852.125,609.847 836.125,617.847 852.125,625.847 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="852.125,609.847 836.125,617.847 852.125,625.847 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="851.25,617.847 898.536,617.847 898.536,516.404 948.059,516.404 "/>
+    <polygon style="fill: #ffffff" points="851.25,609.847 835.25,617.847 851.25,625.847 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="851.25,609.847 835.25,617.847 851.25,625.847 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="803.877,848.579 874.923,848.579 874.923,819.29 948.206,819.29 "/>
+    <polygon style="fill: #ffffff" points="803.877,840.579 787.877,848.579 803.877,856.579 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="803.877,840.579 787.877,848.579 803.877,856.579 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="803.877,848.579 874.923,848.579 874.923,872.042 948.205,872.042 "/>
+    <polygon style="fill: #ffffff" points="803.877,840.579 787.877,848.579 803.877,856.579 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="803.877,840.579 787.877,848.579 803.877,856.579 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="668.483" y="396.187" width="193.35" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="668.483" y="396.187" width="193.35" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="765.158" y="415.187">VirtualMachineError</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="668.483" y="499.373" width="87.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="668.483" y="499.373" width="87.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="712.083" y="518.373">AWTError</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="949.212" y="360.931" width="183.7" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="949.212" y="360.931" width="183.7" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1041.06" y="379.931">StackOverFlowError</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="949.212" y="434.587" width="174.05" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="949.212" y="434.587" width="174.05" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1036.24" y="453.587">OutOfMemeoryError</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="949.212" y="557.004" width="299.5" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="949.212" y="557.004" width="299.5" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1098.96" y="576.004">ArrayIndexOutOfBoundsException</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="949.212" y="657.02" width="193.35" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="949.212" y="657.02" width="193.35" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1045.89" y="676.02">ArithmaticException</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="852.128,617.847 898.53,617.847 898.53,571.004 948.222,571.004 "/>
+    <polygon style="fill: #ffffff" points="852.128,609.847 836.128,617.847 852.128,625.847 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="852.128,609.847 836.128,617.847 852.128,625.847 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="852.102,617.847 898.532,617.847 898.532,671.02 948.205,671.02 "/>
+    <polygon style="fill: #ffffff" points="852.102,609.847 836.102,617.847 852.102,625.847 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="852.102,609.847 836.102,617.847 852.102,625.847 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="591.271,464.237 628.256,464.237 628.256,410.187 667.477,410.187 "/>
+    <polygon style="fill: #ffffff" points="591.271,456.237 575.271,464.237 591.271,472.237 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="591.271,456.237 575.271,464.237 591.271,472.237 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="592.262,464.237 628.487,464.237 628.487,513.373 667.489,513.373 "/>
+    <polygon style="fill: #ffffff" points="592.262,456.237 576.262,464.237 592.262,472.237 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="592.262,456.237 576.262,464.237 592.262,472.237 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="881.075,410.187 913.523,410.187 913.523,374.931 948.207,374.931 "/>
+    <polygon style="fill: #ffffff" points="881.075,402.187 865.075,410.187 881.075,418.187 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="881.075,402.187 865.075,410.187 881.075,418.187 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="881.075,410.187 913.523,410.187 913.523,448.587 948.207,448.587 "/>
+    <polygon style="fill: #ffffff" points="881.075,402.187 865.075,410.187 881.075,418.187 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="881.075,402.187 865.075,410.187 881.075,418.187 "/>
+  </g>
+</svg>

@@ -1,0 +1,87 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   RMB2DollarConverter.java
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.text.JTextComponent;
+
+public class RMB2DollarConverter
+{
+
+    public static void main(String args[])
+    {
+        JFrame frame = new JFrame("RMB2DollarConverter");
+        frame.setContentPane((new RMB2DollarConverter()).mainPanel);
+        frame.setDefaultCloseOperation(3);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+    public RMB2DollarConverter()
+    {
+        $$$setupUI$$$();
+        convertButton.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent actionEvent)
+            {
+                Double rmb = Double.valueOf(rmbTextField.getText());
+                dollarLabel.setText(String.valueOf(rmb.doubleValue() / 7D));
+            }
+
+            final RMB2DollarConverter this$0;
+
+            
+            {
+                this.this$0 = RMB2DollarConverter.this;
+                super();
+            }
+        });
+    }
+
+    private void $$$setupUI$$$()
+    {
+        JPanel jpanel;
+        JLabel jlabel;
+        jpanel = new JPanel();
+        mainPanel = jpanel;
+        jpanel.setLayout(new FlowLayout(1, 5, 5));
+        jlabel = new JLabel();
+        jlabel.setText("\u4EBA\u6C11\u5E01\uFF1A");
+        jpanel.add(jlabel);
+        JTextField jtextfield;
+        jtextfield = new JTextField();
+        rmbTextField = jtextfield;
+        jtextfield.setMinimumSize(new Dimension(14, 29));
+        jtextfield.setPreferredSize(new Dimension(60, 29));
+        jtextfield.setText("#.##");
+        jtextfield.setToolTipText("\u8BF7\u8F93\u5165\u4EBA\u6C11\u5E01\u6570\u989D");
+        jpanel.add(jtextfield);
+        JButton jbutton;
+        jbutton = new JButton();
+        convertButton = jbutton;
+        jbutton.setText("\u8F6C\u6362");
+        jpanel.add(jbutton);
+        JLabel jlabel1;
+        jlabel1 = new JLabel();
+        dollarLabel = jlabel1;
+        jlabel1.setPreferredSize(new Dimension(100, 21));
+        jlabel1.setText("\u7F8E\u5143\uFF1A");
+        jpanel.add(jlabel1);
+    }
+
+    public JComponent $$$getRootComponent$$$()
+    {
+        return mainPanel;
+    }
+
+    private JPanel mainPanel;
+    private JTextField rmbTextField;
+    private JButton convertButton;
+    private JLabel dollarLabel;
+
+
+}

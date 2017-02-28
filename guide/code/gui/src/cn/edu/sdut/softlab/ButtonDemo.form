@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="cn.edu.sdut.softlab.ButtonDemo">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="475" height="171"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="634ed" class="javax.swing.JButton" binding="emegencyCallButton">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <horizontalTextPosition value="10"/>
+          <icon value="images/call-start.png"/>
+          <text value=" 紧急呼叫"/>
+        </properties>
+      </component>
+      <component id="d5007" class="javax.swing.JButton" binding="searchButton">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <horizontalTextPosition value="0"/>
+          <icon value="images/system-search.png"/>
+          <text value="查找"/>
+          <verticalAlignment value="0"/>
+          <verticalTextPosition value="3"/>
+        </properties>
+      </component>
+      <component id="5efac" class="javax.swing.JButton" binding="disabledButton">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <text value=" 被禁止的按钮"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

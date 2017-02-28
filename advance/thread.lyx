@@ -1,0 +1,3006 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+note-inset
+tip-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+logicalmkup
+coderemarks
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Serif"
+\font_sans "default" "DejaVu Sans"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+多线程Java程序设计
+\end_layout
+
+\begin_layout Section
+线程的基本概念
+\end_layout
+
+\begin_layout Standard
+现代CPU都是多核心设计，应用程序如果不能充分利用CPU的多个核心就太浪费了。一般的，一个应用程序运行时表现为一个进程，这个进程占用一个CPU的核心。如果我们在
+这个进程中再发起几个所谓的“线程”去充分利用其他的CPU核心，这个应用程序就是一个“多线程”的，能够充分利用多核心CPU资源的的应用程序，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:多线程应用程序示例"
+
+\end_inset
+
+所示。比如我们常见的Web Server就是一个典型的多线程应用程序：每个请求都会衍生出多个线程分别获取文字、图片等等，然后再在主线程中合并所获取的HTML文档
+。
+\end_layout
+
+\begin_layout Standard
+幸运的是，Java是天生就支持多线程的程序设计语言，Java中通过Thread类来描述一个线程。Java应用程序启动时至少创建了一个线程，称为“主线程”，我们前
+面所接触的Java应用程序都是如此，大家可以在Idea的调试视图中可以看到Java应用程序创建的主线程。本章重点讨论如何编写多线程的Java应用程序。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/thread/process-thread-multicore.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+多线程应用程序示例
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:多线程应用程序示例"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+线程的创建
+\end_layout
+
+\begin_layout Standard
+Java支持两种方式创建线程：
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+实现Runnable接口
+\end_layout
+
+\end_inset
+
+，只要覆盖Runnable接口的唯一方法run()即可。
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+继承Thread类
+\end_layout
+
+\end_inset
+
+，覆盖Thread类的run()方法。实际上，Thread类实现了Runnable接口，因此从Thread继承下来自然也就实现了Runnable接口，这两种方法
+是殊途同归的。
+\end_layout
+
+\begin_layout Standard
+通常建议通过Runnable接口来创建线程，因为Java是单继承的，如果从Thread继承下来，就无法继承其他类了，而实现Runnable接口就没有这个限制。但
+是无论哪种方式创建一个线程，都是通过Thread类提供的一些方法来管理线程，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Thread的常见方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="40line%">
+<column alignment="center" valignment="top" width="50line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void start()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+告诉Java虚拟机可以启动指定的线程
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static void sleep(long millis)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前线程暂时“休眠”指定的毫秒数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void interrupt()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+终止该线程
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+interrupted()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检测线程是否被中断？本方法执行后线程的中断标志被复位
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+isInterrupt()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检测线程是否被中断？本方法不操作中断标志符
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void join()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+暂停当前线程，等待join的线程执行完毕后才能继续执行
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static Thread currentThread()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获得当前线程的引用
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean isAlive()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+线程是否处于活动状态
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void setDaemon(Boolean on)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+设置是否为后台线程
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void setPriority(int newPrioority)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+设置线程优先级
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void yield()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+暂停当前线程（让出cpu时间），允许别的线程开始运行
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Thread的常见方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Thread的常见方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过Runnable接口创建线程，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "RunnableThread.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/RunnableThread.java"
+lstparams "caption={RunnableThread.java},label={RunnableThread.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过继承Thread类创建线程，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "MyThread.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/MyThread.java"
+lstparams "caption={MyThread.java},label={MyThread.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+多线程示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:多线程示例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "MultiThreadDemo.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/MultiThreadDemo.java"
+lstparams "caption={MultiThreadDemo.java},label={MultiThreadDemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+注意到，本示例程序每次执行的结果可能不一样，下面是其中的一个可能的执行结果：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Thread Thread1 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread0 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread2 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread3 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread5 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread4 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread6 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread7 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread8 is running
+\end_layout
+
+\begin_layout Plain Layout
+Thread Thread9 is running
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例中，我们通过一个for循环创建了10个线程并“依次”启动（start），但是仔细观察我们发现，程序的执行结果表明，这10个线程并不是依次顺序启动的！这是Ja
+va线程的重要特点：线程的启动和停止是Java虚拟机根据其调度算法来决定的，我们通过调用start()启动一个线程只是告诉Java虚拟机：现在可以启动这个线程了
+，至于线程真正的启动时间，取决于Java虚拟机的调度算法和当前CPU的运行状态。因此，start/interrupt方法并不能立刻启动或者停止一个线程，仅仅是
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+通知
+\end_layout
+
+\end_inset
+
+Java虚拟机可以启动或者停止一个线程而已。
+\end_layout
+
+\begin_layout Subsection
+使用sleep暂时中断线程的执行
+\end_layout
+
+\begin_layout Standard
+sleep是Thread类的一个静态方法，其用意是暂停当前线程的运行。在运用sleep的时候要注意两点：
+\end_layout
+
+\begin_layout Enumerate
+sleep的参数虽然精确到毫秒，但是sleep的暂停时间并非精确的毫秒数，我们也不能依赖sleep方法产生或者暂停精确的时间。
+\end_layout
+
+\begin_layout Enumerate
+sleep方法执行期间，如果有其他线程对当前线程执行了interrupt()方法，则会抛出InterruptedException异常
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:使用interrupt终止线程的执行"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+倒计时程序
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:倒计时程序"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+我们曾经在
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:集合类"
+
+\end_inset
+
+使用Queue设计过一个类似的倒计时程序，参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/blob/master/collections/src/c
+n/edu/sdut/softlab/CountDown.java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+设计一个倒计时10s的Java应用程序，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Countdown.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/Countdown.java"
+lstparams "caption={Countdown.java},label={Countdown.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+可以看出，每隔大约1秒屏幕打印出一个数字：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+Thread.sleep()方法暂停了当前线程，即Thread.sleep()所处的线程。本例中，虽然表面上我们没有创建任何线程，但是Java本身是天生支持多线程的
+，每个Java应用程序在执行时都会自动创建一个线程（即所谓的“主线程”），因此Thread.sleep()方法在这里暂停的就是主线程。
+\end_layout
+
+\begin_layout Exercise
+将
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:多线程示例"
+
+\end_inset
+
+中的线程使用sleep方法暂停一段时间（比如1s），观察输出的变化。
+\end_layout
+
+\begin_layout Subsection
+使用interrupt终止线程的执行
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:使用interrupt终止线程的执行"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+启动一个线程是简单的，但是终止一个线程却没有想象中的那么容易。Java不建议（未来可能会禁止）直接使用某个方法（比如stop()）来终止线程
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+具体原因参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/6/docs/technotes/guides/concurrency/threadPrimitiveD
+eprecation.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+，而是建议通过“协商”机制来终止线程。也就是说，当我们需要终止线程时，调用interrupt()方法通知线程：嗨，你可以停下了！但是，被告知的线程是不是停下来，
+这要看线程是如何响应的：被告知的线程可以立刻退出，也可以处理掉一些手头的工作再停止，甚至可以完全不理会！
+\end_layout
+
+\begin_layout Standard
+具体的说，当我们调用一个线程的interrupt()方法时，有如下的两种情形
+\begin_inset CommandInset citation
+LatexCommand cite
+key "java-interrupt"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+画个图更容易说清楚问题，分别画图，分别举例说明
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Enumerate
+如果该线程处在可中断状态下，（比如调用了wait()，或者Selector.select()，Thread.sleep()等会发生阻塞的API，即可以抛出Inter
+ruptedException的方法），则设置现成的中断标志符为true，并立即唤醒该线程，该线程同时会收到一个InterruptedException异常。此
+时如果该线程是阻塞在io操作上（比如读写文件、socket等），则对应的资源会被关闭。如果该线程接下来不执行Thread.interrupted()方法去检测线程
+的中断状态（注意，不是interrupt（）方法），那么该线程处理任何io资源的时候，都会发现这些资源已经关闭。解决的办法就是调用一下interrupted()
+，不过这里需要程序员自行根据代码的逻辑来设定，根据自己的需求确认是否可以直接忽略该中断，还是应该马上退出。 
+\end_layout
+
+\begin_layout Enumerate
+如果该线程处在不可中断状态下（即线程正在运行的代码不会抛出InterruptedException），那么Java只是设置一下该线程的interrupt状态标志
+为true，其他事情都不会发生，如果该线程之后会调用阻塞API（抛出InterruptedException异常的方法），那到时候线程会马上跳出，并抛出Inte
+rruptedException，接下来的事情就跟第一种状况一致了。如果不会调用阻塞API，那么这个线程就会一直执行下去，就像interupt()方法没有执行一
+样。除非你就是要实现这样的线程，一般高性能的代码中肯定会有wait()，yield()之类出让cpu的函数，不会发生后者的情况。
+\end_layout
+
+\begin_layout Standard
+总而言之，在调用了线程的interrupt()方法后，如何终止线程是由线程自己决定的！每个线程需要根据自己的业务逻辑来决定如何处理interrupt()调用，这
+里需要权衡性能和响应时间的矛盾，在提升软件的执行效率和提升软件的人机响应速度上达到一个较好的平衡。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+关于这一点，存在最佳实践吗？这里不需要展开描述，也许值得一篇文章说明？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通常，下面的情形需要调用线程的interrupt()方法：
+\end_layout
+
+\begin_layout Itemize
+点击了“停止”按钮，如果存在的话；
+\end_layout
+
+\begin_layout Itemize
+点击了“退出”或者“关闭”按钮，应该对所有线程发出interrupt()调用；
+\end_layout
+
+\begin_layout Standard
+如何设计一个可以优雅退出或者终止的线程呢？通常有如下的两种策略：
+\end_layout
+
+\begin_layout Enumerate
+在线程的业务逻辑中检查线程的中断状态：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Thread thread = new Thread("my thread") {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void run() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        while(true) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            doSomething(); // 线程的业务逻辑
+\end_layout
+
+\begin_layout Plain Layout
+
+            if(Thread.interrupted()){
+\end_layout
+
+\begin_layout Plain Layout
+
+                doClear(); // 清理工作
+\end_layout
+
+\begin_layout Plain Layout
+
+                break;
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+thread.start();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+在线程的业务逻辑中捕获InterruptedException：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+private void doSomething throws InterruptedException {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 业务逻辑处理
+\end_layout
+
+\begin_layout Plain Layout
+
+    ....
+\end_layout
+
+\begin_layout Plain Layout
+
+    if(Thread.interrupted()) { // 检查线程的中断状态。每个在线程中调用到的方法建议如此处理
+\end_layout
+
+\begin_layout Plain Layout
+
+        throw new InterruptedException();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Thread thread = new Thread("my thread") {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void run() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        while(true) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            try {
+\end_layout
+
+\begin_layout Plain Layout
+
+                doSomething(); // 线程的业务逻辑方法，在这个方法中检查线程的状态并抛出InterruptedException
+\end_layout
+
+\begin_layout Plain Layout
+
+            } catch (InterruptedException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                doClear(); // 清理工作
+\end_layout
+
+\begin_layout Plain Layout
+
+                break;
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+thread.start();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通常建议采取第二种策略更合适一些：可以通过异常处理机制集中处理中断请求。采取第二种策略要求在设计线程中可能调用的方法时要注意在适当的时候检查当前线程的状态，否则
+异常处理就形同虚设了。
+\end_layout
+
+\begin_layout Standard
+比如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:倒计时程序"
+
+\end_inset
+
+中，我们忽略了InteruptedException，只是简单的把这个异常再抛给了Java虚拟机，这显然不是一个“负责”的程序应该有的态度。其实在这种情况下，只
+需要简单的return即可，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Countdown2.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/Countdown2.java"
+lstparams "caption={Countdown2.java},label={Countdown2.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+使用interrupt()终止线程示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:使用interrupt()终止线程示例"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+本示例借鉴自：https://www.tutorialspoint.com/javaexamples/thread_interrupt.htm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ThreadInterruptDemo.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/ThreadInterruptDemo.java"
+lstparams "caption={ThreadInterruptDemo.java},label={ThreadInterruptDemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行本程序，会每隔1s打印一个句点，打印5个句点后程序结束：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+.....in main - interrupt other thread
+\end_layout
+
+\begin_layout Plain Layout
+in main - leaving
+\end_layout
+
+\begin_layout Plain Layout
+in run() - My Thread is interrupted
+\end_layout
+
+\begin_layout Plain Layout
+in run() - thread done
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例中，主线程启动My Thread（My Thread为线程的名字）线程后，休眠了5000ms，以便My Thread线程打印出几个句点。大约5000ms后，
+主线程通知My Thread终止运行。My Thread线程立刻被从休眠中唤醒并抛出了InterruptedException，于是程序流程转向了catch代码
+块，打印出“in run() - My Thread is interrupted”后终止了无限循环。
+\end_layout
+
+\begin_layout Standard
+从本例很明显可以看出，interrupt()方法并不会立刻终止线程，线程如何终止以及何时终止，这是线程自己的事情。
+\end_layout
+
+\begin_layout Subsection
+使用匿名内部类创建线程
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:使用匿名内部类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有的时候，我们需要创建一个临时线程去执行特定的任务，这个时候可以使用匿名内部类简化代码，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "AnonThreadDemo.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/AnonThreadDemo.java"
+lstparams "caption={AnonThreadDemo.java},label={AnonThreadDemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+线程间的数据共享和协作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+此部分可以参考谌卫军的教材
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在多线程编程中，如何存取
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+共享且可变
+\end_layout
+
+\end_inset
+
+的数据是个基本的问题。由于多个线程的执行顺序无法预测，且可能存在交叉执行的情形，对于共享的可变数据基本都是采取“串行”方式处理，即通过互斥和同步实现了线程间的数
+据共享和协作。互斥提供了对竞争资源的保护，同步则实现了多线程的协同工作。
+\end_layout
+
+\begin_layout Standard
+在这里要注意两点：
+\end_layout
+
+\begin_layout Enumerate
+共享（shared）：只有在线程间共享的对象才需要特别处理，线程内部的私有对象不会被其他线程修改，也就不会造成破坏性的影响了。
+\end_layout
+
+\begin_layout Enumerate
+可变（mutable）：如果共享的对象不可变（即所谓的immutable），那么也不需要特别处理。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+由于不可变（immutable）的对象不需要进行同步和互斥的处理，因此在多线程编程实践中，应该尽量将类设计为不可变的，下面是一些常见的设计不可变类的方法和技巧
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+详情参见：
+\begin_inset CommandInset href
+LatexCommand href
+name "https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html"
+target "https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Itemize
+不提供setter方法，保护对象的私有属性不会被修改。
+\end_layout
+
+\begin_layout Itemize
+使用private和final限制属性。
+\end_layout
+
+\begin_layout Itemize
+使用final限制类被继承，防止子类覆盖方法。进一步的，将构造方法设置为private的，只允许通过工厂类创建对象。
+\end_layout
+
+\begin_layout Itemize
+如果属性引用了可变的对象，使用如下的办法保护可变对象：
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+不提供可能修改可变对象的方法。
+\end_layout
+
+\begin_layout Itemize
+不直接分享可变对象；如果要分享，创建可变对象的copy来分享，这样万一其他线程改变了可变对象的copy的状态，也不会影响原始的可变对象。
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+下面的这段描述是否和多线程的例子重复了？
+\end_layout
+
+\end_inset
+
+比如电脑的打印机是一个竞争资源，当一个应用程序正在打印文档时，其他应用程序只能排队等待打印机空闲后才能继续打印。对竞争资源的保护可以通过“加锁”的方式实现，当一
+个线程在使用竞争资源时，对竞争资源加锁，其他线程只有在该线程解锁后才能继续使用竞争资源。我们在现实中也是通过加锁的方式实现对竞争资源的保护的，比如火车上的卫生间
+是一个竞争资源，每个旅客可以看做是一个线程，当你进入卫生间一定会锁门的吧？加锁的目的是只有当前线程
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+完整
+\end_layout
+
+\end_inset
+
+的使用完竞争资源，其他线程才能获得继续使用竞争资源的机会。
+\end_layout
+
+\begin_layout Standard
+下面我们讨论Java多线程编程中最常见的三种同步情形。
+\end_layout
+
+\begin_layout Subsection
+使用synchronized保护竞争资源
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:竞争资源状态的一致性"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+标题名称要再仔细考虑一下？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当同时有多个线程使用同一个对象（竞争资源）时，如果不加特别处理，竞争资源的状态可能会遭到破坏而导致最终结果不正确，这是因为多个线程的执行顺序可能会有
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+交错
+\end_layout
+
+\end_inset
+
+，而且很难事先预测线程的执行顺序。
+\end_layout
+
+\begin_layout Standard
+我们首先看一个简单的计数器的例子，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Counter.java"
+
+\end_inset
+
+。为了模拟多线程可能交错运行的情况，我们故意将一句简单的c++扩展为三条语句，并在语句之间使用多个sleep()方法暂停线程的执行。同时，为了观察多线程交错运行
+的情况，在每一条语句之后都打印出了相关信息（为了清晰起见，在increment()中的输出以#开头，在decrement()中的输出以*开头）。在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CounterClient.java"
+
+\end_inset
+
+中，我们启动了两个线程。两个线程共享一个对象counter，其属性c初值为0，其中t1线程对c执行加1操作，t2线程对c执行减1操作，因此理论上两个线程结束后，
+最终的c值应该为0。但是我们多次运行CounterClient会发现结果可能很难预测，下面是其中一次执行的情况：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+#increment()
+\end_layout
+
+\begin_layout Plain Layout
+*decrement()
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after get value from c to temp:0
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after get value from c to temp:0
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after temp--:-1
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after store c to new value:-1
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after temp++:1
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after store c to new value:1
+\end_layout
+
+\begin_layout Plain Layout
+finally, c is 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从执行结果已经可以看出，t1和t2两个线程的语句是交错执行的。我们逐句分析一下执行结果：
+\end_layout
+
+\begin_layout Enumerate
+#increment() - after get value from c to temp:0，此时执行的是t1线程的temp = c操作，即将counter对
+象的c的值赋值为temp，此时c和temp的值为0；
+\end_layout
+
+\begin_layout Enumerate
+*decrement() - after get value from c to temp:0，同上，此时执行的是t1线程的temp = c操作，即将count
+er对象的c的值赋值为temp，由于此时c为0，因此temp的值为0；注意到temp是一个局部变量；
+\end_layout
+
+\begin_layout Enumerate
+*decrement() - after temp--:-1，执行t2线程的temp--语句，此时temp的值是-1；
+\end_layout
+
+\begin_layout Enumerate
+*decrement() - after store c to new value:-1，执行t2线程的c = temp语句，此时counter对象的c值为-1
+；到此为止，t1线程执行完毕所有语句。
+\end_layout
+
+\begin_layout Enumerate
+#increment() - after temp++:1，执行t1线程的temp++语句，此时temp的值是1；
+\end_layout
+
+\begin_layout Enumerate
+#increment() - after store c to new value:1，执行t1线程的c = temp语句，保存counter.c的值为1，这也是
+最终的counter.c的值。问题出现了，由于t1线程在执行increment()方法时被中断，恰好在中断期间increment方法中引用的属性或者对象（这里是c
+ounter.c）被其他线程（这里是t2）修改了，而t1线程重新被执行时，t1线程并不知道发生了这种情况，因此只能继续使用旧的过时数据（c = 0，其实此时c已经
+被t2修改为-1了），造成最终结果不正确。
+\end_layout
+
+\begin_layout Standard
+另外一次执行的情况可能是这样子的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+#increment()
+\end_layout
+
+\begin_layout Plain Layout
+*decrement()
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after get value from c to temp:0
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after get value from c to temp:0
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after temp--:-1
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after temp++:1
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after store c to new value:1
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after store c to new value:-1
+\end_layout
+
+\begin_layout Plain Layout
+finally, c is -1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也有可能是正确的结果：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+#increment()
+\end_layout
+
+\begin_layout Plain Layout
+*decrement()
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after get value from c to temp:0
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after temp++:1
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after store c to new value:1
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after get value from c to temp:1
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after temp--:0
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after store c to new value:0
+\end_layout
+
+\begin_layout Plain Layout
+finally, c is 0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+请读者自行逐句分析每一次执行的结果。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/contention/Counter.java"
+lstparams "caption={Counter.java},label={Counter.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/contention/CounterClient.java"
+lstparams "caption={CounterClient.java},label={CounterClient.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们看到，问题的根源在于，在increment或者decrement方法执行过程中，对于共享变量counter.c必须保证在整个方法执行过程中状态保持一致，或者说
+，在方法执行过程中，必须保证竞争变量counter.c变量不会被其他线程修改，即通过“互斥锁”对竞争资源进行串行化处理。解决这个问题有两种思路：
+\end_layout
+
+\begin_layout Enumerate
+将increment方法和decrement方法变为原子方法，即increment方法和decrement方法必须一次执行完毕，不允许被打断，具体的方法是在in
+crement()方法和decrment()方法前使用synchronized关键词修饰。
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+当使用synchronized关键词修饰一个方法时，该方法将成为原子方法
+\end_layout
+
+\end_inset
+
+，只有该方法执行完毕后才会出让cpu时间。修改后的Couter.java类参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "加锁属性的Counter.java"
+
+\end_inset
+
+，测试类没有变化
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+但是要注意到，在我们提供的示例程序包中实现了同步的测试类在cn.edu.sdut.softlab.contention.synced1包中，不要和包cn.edu.sdut.so
+ftlab.contention中的CounterClient.java相混淆：虽然两个类的内容完全一样，但是引用的Counter类不同。
+\end_layout
+
+\end_inset
+
+，不再赘述。执行测试类的结果为：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+#increment()
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after get value from c to temp:0
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after temp++:1
+\end_layout
+
+\begin_layout Plain Layout
+#increment() - after store c to new value:1
+\end_layout
+
+\begin_layout Plain Layout
+*decrement()
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after get value from c to temp:1
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after temp--:0
+\end_layout
+
+\begin_layout Plain Layout
+*decrement() - after store c to new value:0
+\end_layout
+
+\begin_layout Plain Layout
+finally, c is 0
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+可以看出，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+increment方法和decrement方法是顺序依次执行的，这就是synchronized修饰方法时达到的效果
+\end_layout
+
+\end_inset
+
+。实际上，使用synchronized修饰方法，实际上是给该方法的对象加了一把锁，只有该方法执行完毕释放锁之后，其他线程才有机会获得该对象其他被synchron
+ized方法的执行权
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+打一个比方，一个对象（object）就像一个大房子，里面有很多房间（方法）。其中有的房间是上锁的（synchronized方法)，有的房间没有上锁（普通方法）。
+上锁的房间需要通过钥匙打开进入，钥匙只有一把，挂在房子的大门口，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+这把钥匙可以打开所有上锁的房间
+\end_layout
+
+\end_inset
+
+。我们把执行方法的的线程比作进入房间的人，那么如果一个人要进入一间上锁的房间，必须从门口拿到钥匙才行。一旦此人拿到了钥匙，别的人就没有机会进入大房子中其他上锁的
+房间了：记住，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+钥匙只有一把
+\end_layout
+
+\end_inset
+
+！只有此人从上锁的房间离开，把钥匙重新挂在大门口，别人才有机会拿到钥匙进入上锁的房间。即便是此人要再次进入上锁的房间，也要先把钥匙归还重新去拿。简单的说，钥匙的
+使用原则是“只有一把，随用随借，用完即还”。当然，其他人进入没有上锁的房间是没有限制的。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Enumerate
+给变量counter.c加锁，即counter.c在被某方法调用时，首先将counter.c保护起来，在该方法执行完之前（实际上是释放锁定之前），其他线程不允许修改c
+ounter.c的值，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "加锁属性的Counter.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/contention/synced2/Counter.java"
+lstparams "caption={加锁属性的Counter.java},label={加锁属性的Counter.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+使用synchronized的修饰方法时，要注意被修饰的方法应该尽量短小精悍，尤其是执行频率高的方法，更应该注意到这一点，否则可能严重影响应用程序的执行效率。本
+例中在increment方法和decrement方法中使用sleep()方法故意制造延迟，在实际应用中是不可取的，请读者注意。
+\end_layout
+
+\begin_layout Plain Layout
+使用synchronized修饰方法时，被修饰的方法执行完毕会自动为其中的竞争资源建立所谓的“happens-before”
+\begin_inset CommandInset citation
+LatexCommand cite
+after "P330，先行发生原则"
+key "jvm-advanced-feature"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+happens-before在虚拟机设计中是一个很重要的概念，详情参见：
+\begin_inset CommandInset href
+LatexCommand href
+name "Java Language Specification#17.4.5"
+target "https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.4.5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+关系，即保证本方法对竞争资源的修改对所有其他线程是可见的。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+使用ThreadLocal隔离竞争资源
+\end_layout
+
+\begin_layout Standard
+有时，我们希望对于某个对象，每个线程拥有一份独立的拷贝而不受其他线程干扰，这在容器的设计中非常常见
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+举几个例子？
+\end_layout
+
+\end_inset
+
+。比如Session的实现、Context（上下文）的实现等等。也就是说，
+\emph on
+线程之间共享一个数据结构
+\emph default
+（
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+便于主线程有机会管理各个线程
+\end_layout
+
+\end_inset
+
+），但是又相互隔离，即线程能够互不影响的操作此数据结构。最容易想到的解决方案是使用Map，其中的key是线程ID或者名称，value是所需要的数据结构，这样线程
+在使用Map的时候，首先根据各自的ID或者名称查到此数据结构就可以进行操作了。Java提供了类似的ThreadLocal机制帮助我们简化这一工作。
+\end_layout
+
+\begin_layout Standard
+我们先看一个不使用ThreadLocal的例子，参见：
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "UnsafeThreadDemo.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/threadlocal/UnsafeThreadDemo.java"
+lstparams "caption={UnsafeThreadDemo.java},label={UnsafeThreadDemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这里，sum是主线程的一个变量，此变量在创建的10个线程中都会用到，我们看一下输出结果：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+unsafe thread 6:50
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 8:100
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 4:245
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 1:245
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 2:245
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 3:295
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 7:345
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 5:395
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 0:445
+\end_layout
+
+\begin_layout Plain Layout
+unsafe thread 9:495
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，由于主线程的sum变量是共享的，测试线程中的sum是相互影响的。如何解决这个问题呢？除了本节开头介绍的使用Map的思路，我们可以借助于ThreadLo
+cal来实现，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SafeThreadLocalDemo.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/threadlocal/SafeThreadLocalDemo.java"
+lstparams "caption={SafeThreadLocalDemo.java},label={SafeThreadLocalDemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+执行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+safe thread 8:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 5:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 6:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 3:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 9:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 0:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 4:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 7:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 1:50
+\end_layout
+
+\begin_layout Plain Layout
+safe thread 2:50
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，虽然sum还是主线程的共享变量，但是子线程（测试线程）就像独立拥有sum一样，不再相互影响，这也就是ThreadLocal的本意：线程本地变量，即通过Th
+readLocal保护的变量，就
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+像是子线程的本地变量一样
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+ThreadLocal通常用于保护线程的全局共享对象，即当其他线程使用此共享对象时，就像独立拥有此共享对象一样。容器技术中大量使用ThreadLocal来提供场
+景（上下文，Context）保护和场景切换。 要注意的是，ThreadLocal的作用并不是同步（synchronized），同步的作用是其他线程分时共享一个对
+象，这和ThreadLocal所要达到的效果正好相反。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+使用wait、notify实现多线程的同步和协调
+\end_layout
+
+\begin_layout Standard
+多线程的同步和协调其实是指线程间通信技术，Java在Object根类中提供了wait()、notify()、notifyAll（）方法，再配合
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:竞争资源状态的一致性"
+
+\end_inset
+
+中的相关技术，可以很好的实现线程间的通信，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Object中关于线程间通信的方法"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="40line%">
+<column alignment="center" valignment="middle" width="50line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public final void wait() throws InterruptedException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+线程暂停，直到调用wait方法的对象执行了notify()或者notifyAll()才被重新唤醒
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public final void notify()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+唤醒因为调用该对象的wait()方法处于暂停状态的一个线程。如果多个线程调用了该对象的wait()方法，则根据JVM的具体实现选择其一唤醒
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public final void notifyAll()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+唤醒所有因为调用该对象的wait()方法处于暂停状态的线程，但是所有线程需要竞争对该对象的访问权
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Object中关于线程间通信的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Object中关于线程间通信的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面通过经典的“生产者/消费者”问题看一下Java解决线程间通信的基本方法。
+\end_layout
+
+\begin_layout Example
+多线程间通信示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:多线程间通信示例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+设计一个仅能存储一个整数的Buffer，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Buffer.java"
+
+\end_inset
+
+，设计一个线程使用生产者类（Producer），参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Producer.java"
+
+\end_inset
+
+，用于往Buffer中存入（生产）数据。设计一个线程使用消费者类（Consumer），参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Consumer.java"
+
+\end_inset
+
+,用于从Buffer读取（消费）数据。约束条件：生产者在Buffer放入数据后，要通知消费者及时拿走；消费者从Buffer读取数据后，要及时通知生产者继续制造数
+据。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/sync/Buffer.java"
+lstparams "caption={Buffer.java},label={Buffer.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/sync/Consumer.java"
+lstparams "caption={Consumer.java},label={Consumer.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/sync/Producer.java"
+lstparams "caption={Producer.java},label={Producer.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/sync/Client.java"
+lstparams "caption={Client.java},label={Client.java-inter-thread-comm}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+测试代码如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Client.java-inter-thread-comm"
+
+\end_inset
+
+所示，运行Client的结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+producer value: 0
+\end_layout
+
+\begin_layout Plain Layout
+consumer value: 0
+\end_layout
+
+\begin_layout Plain Layout
+producer value: 1
+\end_layout
+
+\begin_layout Plain Layout
+consumer value: 1
+\end_layout
+
+\begin_layout Plain Layout
+producer value: 2
+\end_layout
+
+\begin_layout Plain Layout
+consumer value: 2
+\end_layout
+
+\begin_layout Plain Layout
+producer value: 3
+\end_layout
+
+\begin_layout Plain Layout
+consumer value: 3
+\end_layout
+
+\begin_layout Plain Layout
+producer value: 4
+\end_layout
+
+\begin_layout Plain Layout
+consumer value: 4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+从运行结果可以看出，两个线程的协调工作很成功，producer和consumer总是成对出现，达到了预期的目的。
+\end_layout
+
+\begin_layout Standard
+在使用Object的wait/notify机制实现线程间通讯的时候，要特别注意几点：
+\end_layout
+
+\begin_layout Itemize
+使用synchronized保护竞争资源，这里是buffer对象。因此无论是在Producer还是Consumer线程中，几乎总是以：synchronized(
+obj) {...}开头。
+\end_layout
+
+\begin_layout Itemize
+使用while循环检测wait条件，只要不满足设定的条件则继续等待。
+\end_layout
+
+\begin_layout Itemize
+当满足事务逻辑的时候，要设置wait条件，并通知其他相关线程。
+\end_layout
+
+\begin_layout Standard
+简单的说，下面的伪代码可以看作使用wait/notify机制的模板：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ synchronized (obj) {
+\end_layout
+
+\begin_layout Plain Layout
+
+     while (obj.waitCondition())
+\end_layout
+
+\begin_layout Plain Layout
+
+         obj.wait();
+\end_layout
+
+\begin_layout Plain Layout
+
+     
+\end_layout
+
+\begin_layout Plain Layout
+
+     // 如果无需等待，则处理事物逻辑，并通知其他线程
+\end_layout
+
+\begin_layout Plain Layout
+
+     ...
+\end_layout
+
+\begin_layout Plain Layout
+
+     obj.setWaitCondition();
+\end_layout
+
+\begin_layout Plain Layout
+
+     obj.notifyAll();
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+正确使用wait/notify比较困难，也需要非常小心。但是从JDK 1.5开始，Java提供了更高级的并发工具：Executor Framework、Concu
+rrent Collection和Synchronizer，它们可以完成以前必须借助于wait/notify才能实现的各项工作，因此建议将wait/notify
+作为理解线程间通信的良好示范，但是实际应用时尽量使用JDK 1.5中提供的并发工具，避免使用wait/notify
+\begin_inset CommandInset citation
+LatexCommand cite
+after "第69条，并发工具优先于wait和notify"
+key "effective-java"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+将
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:多线程间通信示例"
+
+\end_inset
+
+中的Buffer替换为一个Queue，重新实现整个代码逻辑。
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,815 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+coderemarks
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Enum
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Enum"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/enum/enum.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+C语言中的enum数据类型
+\end_layout
+
+\begin_layout Standard
+在C语言中，enum数据类型代表了一系列预定义的常量及其序号，比如一周的定义：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+enum WEEK{SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这相当于定义了一种新的数据类型“enum WEEK
+\begin_inset Quotes erd
+\end_inset
+
+,于是我们可以在程序中这样定义变量：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+enum WEEK monday = MONDAY;
+\end_layout
+
+\begin_layout Plain Layout
+
+enum WEEK tuesday;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+monday和tuesday变量的数据类型是enum WEEK类型的，而且monday和tuesday的数据范围限于enum week中定义的常量。monday
+的实际数值是整数1。
+\end_layout
+
+\begin_layout Section
+Java的enum：Enum的子类
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java的enum：Enum的子类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java中枚举类型的定义和c语言非常相似，但是要灵活的多。同样一周的定义，我们看在Java中是如何定义和使用的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/enum/src/cn/edu/sdut/softlab/WeekDay.java"
+lstparams "caption={WeekDay.java},label={WeekDay.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们写一个测试类：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/enum/src/cn/edu/sdut/softlab/WeekDayTest.java"
+lstparams "caption={WeekDayTest.java},label={WeekDayTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，WeekDay的用法和类是一样的：根据WeekDay创建了一个对象sunday，可以调用sunday对象的方法name()或者ordinal()、va
+lues()等等。
+\end_layout
+
+\begin_layout Standard
+实际上，每一个enum类型的对象都自动继承自Enum类
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见：http://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html
+\end_layout
+
+\end_inset
+
+，也就是说，看起来我们是通过关键字enum定义了一个新的数据类型enum WeekDay，其实Java会自动的将enum WeekDay扩展为一个Enum的子类
+，这就是为什么我们在定义enum WeekDay的时候并没有发现name()、ordinal()、values()方法，但是却可以调用的原因。
+\end_layout
+
+\begin_layout Standard
+我们可以尝试反编译
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+javap是JDK自带的反编译工具，可以将class文件还原为java源文件。
+\end_layout
+
+\end_inset
+
+一下WeekDay.class文件，看一下enum WeekDay经过Java编译后生成的类：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ javap WeekDay.class 
+\end_layout
+
+\begin_layout Plain Layout
+Compiled from "WeekDay.java"
+\end_layout
+
+\begin_layout Plain Layout
+public final class cn.edu.sdut.softlab.WeekDay extends java.lang.Enum<cn.edu.sdut.softlab.
+WeekDay> {
+\end_layout
+
+\begin_layout Plain Layout
+  public static final cn.edu.sdut.softlab.WeekDay SUNDAY;
+\end_layout
+
+\begin_layout Plain Layout
+  public static final cn.edu.sdut.softlab.WeekDay MONDAY;
+\end_layout
+
+\begin_layout Plain Layout
+  public static final cn.edu.sdut.softlab.WeekDay TUESDAY;
+\end_layout
+
+\begin_layout Plain Layout
+  public static final cn.edu.sdut.softlab.WeekDay WENDESDAY;
+\end_layout
+
+\begin_layout Plain Layout
+  public static final cn.edu.sdut.softlab.WeekDay THURSDAY;
+\end_layout
+
+\begin_layout Plain Layout
+  public static final cn.edu.sdut.softlab.WeekDay FRIDAY;
+\end_layout
+
+\begin_layout Plain Layout
+  public static final cn.edu.sdut.softlab.WeekDay SATURDAY;
+\end_layout
+
+\begin_layout Plain Layout
+  public static cn.edu.sdut.softlab.WeekDay[] values();
+\end_layout
+
+\begin_layout Plain Layout
+  public static cn.edu.sdut.softlab.WeekDay valueOf(java.lang.String);
+\end_layout
+
+\begin_layout Plain Layout
+  static {};
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，enum其实是Java提供给我们的“语法糖”，当我们使用enum定义一个枚举类型时，Java在编译时会将枚举类型扩展为一个Enum的一个子类。注意到当
+我们定义一个普通的Java类时，编译器会自动从Object继承下来的，这也是enum枚举类型对象和普通对象的区别。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+如果不使用enum，在Java中通常如何表达一周7天呢？一般情况下，我们可以在接口中定义常量：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public interface WeekDay {
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final String SUNDAY = "SUNDAY";
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final String MONDAY = "MONDAY";
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final String TUESDAY = "TUESDAYDAY";
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final String WEDENSDAY = "WEDENSDAY";
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final String THIRSDAY = "THIRSDAY";
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final String FRIDAY = "FRIDAY";
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final String SATURDAY = "SATURDAY";
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+然后在程序中可以这样引用这些常量：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String monday = WeekDay.MONDAY;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+可以看出，使用enum表达像一周7天这样的常量更有优势：更简洁，并且可以轻松获取常量定义的序号。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+enum的两个重要属性
+\end_layout
+
+\begin_layout Standard
+任何enum默认有两个重要属性（从Enum类继承下来的）：
+\end_layout
+
+\begin_layout Itemize
+name：名字，即enum的字面意义，通过调用name()方法返回这个属性值，但是建议使用toString()方法。toString()默认返回name，但是我
+们可以通过覆盖toString()方法返回更有意义的enum数据描述。
+\end_layout
+
+\begin_layout Itemize
+ordinal：序号，即enum在定义中的序号，默认从0开始依次递增，通过调用ordinal()方法返回这个属性值。通常我们不需要使用ordinal这个属性，毕
+竟我们定义enum的主要目的是表达一系列常量，常量的定义位置（序号）通常没有多大意义。
+\end_layout
+
+\begin_layout Exercise
+定义一个enum，表达一年的四季。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+定义一个enum，表达三基色（红绿蓝）。
+\end_layout
+
+\begin_layout Section
+enum的构造方法
+\end_layout
+
+\begin_layout Standard
+enum既然是一个Enum的子类，自然可以拥有自己的构造方法，比如我们可以这样定义12个月份：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/enum/src/cn/edu/sdut/softlab/Month.java"
+lstparams "caption={Month.java},label={Month.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "WeekDay.java"
+
+\end_inset
+
+不同的是，每个Month类型的enum常量都是通过构造方法Month(int days)创建的，比如JAN(31)。注意到，我们同时提供了days()方法以便返
+回当前enum对象的days属性值，但是没有提供setDays()方法设置days属性值：days属性值只允许创建enum对象的时候设置，因此不提供setDay
+s方法是合理的。
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "MonthTest.java"
+
+\end_inset
+
+是Month类的一个示例应用。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/enum/src/cn/edu/sdut/softlab/MonthTest.java"
+lstparams "caption={MonthTest.java},label={MonthTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设计一个enum表示交通信号灯，并说明交通信号灯的意义。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+enum的定义参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "TrafficSignal.java"
+
+\end_inset
+
+，enum的使用参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "TrafficSignalTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/enum/src/cn/edu/sdut/softlab/TrafficSignal.java"
+lstparams "caption={TrafficSignal.java},label={TrafficSignal.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/enum/src/cn/edu/sdut/softlab/TrafficSignalTest.java"
+lstparams "caption={TrafficSignalTest.java},label={TrafficSignalTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在Idea运行TrafficSignalTest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+RED means stop
+\end_layout
+
+\begin_layout Plain Layout
+GREEN means go
+\end_layout
+
+\begin_layout Plain Layout
+YELLOW means ready
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+可以看出，enum增加构造方法的目的是通过构造方法构建更加复杂的enum对象，为enum对象增加额外的属性（除name和ordinal之外）。本例为Traffi
+cSignal增加了value属性以表明不同颜色交通信号灯所代表的意义。
+\end_layout
+
+\begin_layout Standard
+从本例我们也可以看出，使用enum后，我们并不需要直接引用字符串stop、go、ready，这样我们有机会在未来修改交通信号灯的意义，比如当我们将YELLOW的
+意义我们修改为“wait a minute
+\begin_inset Quotes erd
+\end_inset
+
+时，只需要修改TrafficSignal类的定义即可，其他引用TrafficSignal的类都不需要修改，也就是说，我们的代码可以很好的适用未来的变化：用尽量小
+的代价应对未来的需求变化，软件的可维护性就大大提高了。
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+enum是表达常量、范围确定的映射关系的利器！
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+补充完整
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Month.java"
+
+\end_inset
+
+，使之能够表达完整的12个月份。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+定义一个enum Planet表示太阳系各行星的名称、质量和半径。
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:定义一个enum-Planet表示太阳系各行星的名称、质量和半径"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+switch中的enum
+\end_layout
+
+\begin_layout Standard
+Java的在switch语句比C的switch语句更强大（参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Java加强了的switch分支结构"
+
+\end_inset
+
+）。在Java中，switch的参数不仅可以是整数，也可以是字符串和enum对象。比如我们可以这样使用TrafficSignal：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/enum/src/cn/edu/sdut/softlab/EnumInSwitchTest.java"
+lstparams "caption={EnumInSwitchTest.java},label={EnumInSwitchTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+关于enum的静态导入：在实际使用enum对象的时候，如果我们多次使用了同一个enum对象，可以使用静态导入技术适当简化代码，比如下面这样：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+import static cn.edu.sdut.softlab.TrafficSignal.GREEN;
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+TrafficSignal ts = RED;
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,2674 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+logicalmkup
+coderemarks
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Serif"
+\font_sans "default" "DejaVu Sans"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+参数化类型：泛型
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:泛型"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通常的教材一般先讲述集合类，再讲述泛型，这是按照技术点出现的顺序来安排的：的确，集合类从JDK 1.0就有了，泛型是从JDK 1.5才出现的。但是，这样的教学安排会
+导致学生可能养成不良的编程习惯（使用原生态泛型），因此本书特地将泛型部分内容安排到集合类的前面讲述。
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/generic/generic.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+泛型和集合类的先后顺序如何协调？
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+generic是个筐，什么都能装
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+泛型的引入
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:泛型的引入"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+从一个小例子说起:Box
+\end_layout
+
+\begin_layout Standard
+假设有一个Box类（泛型是个框，神马都能装），我们希望这个Box能装任何的对象，因此定义其属性value的类型为Object。其定义见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Box.java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/Box.java"
+lstparams "caption={Box.java},label={Box.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当我们运行Box类时结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+456 + box' value = 579
+\end_layout
+
+\begin_layout Plain Layout
+456 + box' value = 579
+\end_layout
+
+\begin_layout Plain Layout
+Exception in thread "main" java.lang.ClassCastException: java.lang.String cannot
+ be cast to java.lang.Integer
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.Box.main(Box.java:20)
+\end_layout
+
+\begin_layout Plain Layout
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+\end_layout
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\begin_layout Plain Layout
+at java.lang.reflect.Method.invoke(Method.java:498)
+\end_layout
+
+\begin_layout Plain Layout
+at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Box类在编译时并没有提示任何错误
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+随着学习的深入我们会发现，Java编译器正在变得越来越聪明，即Java编译器尽量在编译阶段发现问题，这样就不至于在运行时才报告错误（这是异常处理机制的责任）。运
+行时发现错误，也许出错已经很久了，也许是很久以前的代码，只有通过搜索代码才能找到问题所在，耗时耗力。尽早发现错误，最好是编译阶段就发现并报告错误，泛型技术的引入
+也是为了达到这个目标。
+\end_layout
+
+\end_inset
+
+，但是运行时报告强制类型转换错误，这是我们不希望看到的，但是又无能为力：属性value是Object类型的，因此任何类型的对象都可以装进box对象中，因此我们无
+法预知box中到底装了什么类型的对象，也就无法在编译阶段检查box中的类型是否匹配应用场景了，这为程序的运行埋下了隐患
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+强制类型转换总是可能带来风险的，因此要格外谨慎对待，尤其是向下的强制类型转换，往往会带来程序的运行不稳定。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+不过，我们也不是完全不能避免这种情况，比如我们可以设计一个IntegerBox专门装整数，设计一个StringBox专门装字符串，代码示例：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class IntegerBox {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private Integer value;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+ // setValue, getValue
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+class StringBox {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private String value;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+ // setValue, getValue
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这样的结果是我们的代码变得冗长和重复，并且，要穷尽所有的情况或者不断跟踪需求的变化，真的是一件很吃力的事情。
+\end_layout
+
+\begin_layout Subsection
+泛型化的GenericBox
+\end_layout
+
+\begin_layout Standard
+泛型是解决上述问题的“魔术”。Java从1.5开始引入了泛型的概念，我们可以这样定义Box类（为了区别起见，我们把这个泛型Box叫做GenericBox，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GenericBox.java"
+
+\end_inset
+
+）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/GenericBox.java"
+lstparams "caption={GenericBox.java},label={GenericBox.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从形式上看，GenericBox和Box的差别有两点：
+\end_layout
+
+\begin_layout Standard
+所有在Box中出现Object的地方都代替以T。你可能会迷惑，T不是标准的JDK中的类，也不是我们自定义的类，Java将如何识别T这个类呢？秘密在第二点。
+\end_layout
+
+\begin_layout Standard
+在GenericBox类名后面使用了一对尖括号，其中列出了在代码中用到的T，也就是说，在这对尖括号中的字母可以在代码中像类那样使用
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+粗略的可以这样认为，但是有例外，参见类型擦除机制
+\begin_inset CommandInset citation
+LatexCommand cite
+key "java-generic-type-erease"
+
+\end_inset
+
+的相关说明。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GenericBox和Box的对比"
+
+\end_inset
+
+清楚的表达了泛型类GenericBox和普通类Box的差异。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/generic/genericbox-box.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GenericBox和Box的对比
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GenericBox和Box的对比"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Java泛型的一般语法
+\end_layout
+
+\begin_layout Standard
+每种
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+泛型（generic type）
+\end_layout
+
+\end_inset
+
+定义一组
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+参数化的类型（parameterized type）
+\end_layout
+
+\end_inset
+
+，Java泛型的一般语法形式如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+class name<T1, T2, ...
+ Tn>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，T1、T2等称为类型参数（type parameter），这也是为什么泛型被称为参数化类型的原因：在实际引用泛型类的时候，可以通过传递实际的类的方式确定泛
+型类内部真正使用的类，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GenericBox的用法示例"
+
+\end_inset
+
+所示，
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+非常像函数调用时形参和实参的匹配
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/generic/genericbox.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GenericBox的用法示例
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GenericBox的用法示例"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+要区分两个重要的概念：
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+参数化的类型（parameterized type）
+\end_layout
+
+\end_inset
+
+和
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+类型参数（type parameter）
+\end_layout
+
+\end_inset
+
+：参数化的类型就是泛型，我们之前接触到的类型（类、接口）是没有参数的
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+每个泛型都定义了一个原生态类型（raw type），即不带任何实际类型参数的泛型名称。例如GenericBox<T>相对应的原生态类型是GenericBox。原
+生态类型就像从类型声明中删除了所有泛型信息一样。本书不再展开讨论原生态类型，因为在编程实践中应该优先考虑使用泛型，尽量避免使用原生态类型。如果使用原生态类型，就
+失去了泛型在安全性和表述性方面的所有优势
+\begin_inset CommandInset citation
+LatexCommand cite
+after "第23条"
+key "effective-java"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+，因此一种类型（类、接口）只能处理一种类型的数据，现在有了泛型技术，类型（类、接口）可以通过在尖括号中定义类型参数（type parameter）“泛化”要处理
+的数据类型，这样类型（类、接口）的数据处理能力就大大增强了。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如何确定尖括号中的类型参数需要多少个呢？这取决于类中需要多少种不同的数据类型，或者说，在泛型中，有多少种数据类型（类、接口）可以进行通用化处理，就需要多少个类型
+参数，这一点也很像函数设计的方法：在函数中需要多少个变量，就设置多少个函数参数。
+\end_layout
+
+\begin_layout Example
+使用多个类型参数的泛型Box，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GenericMultiBox.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/GenericMultiBox.java"
+lstparams "caption={GenericMultiBox.java},label={GenericMultiBox.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+泛型类型参数的常见形式
+\end_layout
+
+\begin_layout Standard
+泛型的类型参数不是一个已经预定义的类，你可以使用任意的字符串来表示类型参数，就像是函数参数的名字一样，只要是合法的变量名都可以作为泛型的类型参数。但是人们也形成
+了一些约定俗成的用法，遵守这些约定俗成的用法有助于理解别人写的代码，也有助于别人更好的理解你的代码：
+\end_layout
+
+\begin_layout Itemize
+E - 元素 (Element的第一个字母，在Java集合类框架中大量使用) 
+\end_layout
+
+\begin_layout Itemize
+K - 索引（Key的第一个字母） 
+\end_layout
+
+\begin_layout Itemize
+V - 值（Value的第一个字母） 
+\end_layout
+
+\begin_layout Itemize
+N - 数字（Number的第一个字母） 
+\end_layout
+
+\begin_layout Itemize
+T - 类（Type的第一个字母）
+\end_layout
+
+\begin_layout Itemize
+X - 类
+\end_layout
+
+\begin_layout Itemize
+S,U,V 等.
+ - 第2个，第三个，第4个类等
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+<?>和<Object>是不一样的
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+泛型的常见形态
+\end_layout
+
+\begin_layout Subsection
+泛型类
+\end_layout
+
+\begin_layout Standard
+其实我们在
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:泛型的引入"
+
+\end_inset
+
+中讲述的就是泛型类，也是最常见的泛型的形态，不再赘述。
+\end_layout
+
+\begin_layout Exercise
+使用泛型定义二叉树的节点Node类[
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+solutionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "solu:二叉树的泛型类定义"
+
+\end_inset
+
+]。
+\end_layout
+
+\begin_layout Subsection
+泛型接口
+\end_layout
+
+\begin_layout Standard
+接口是纯的抽象类，因此泛型接口和泛型类用法是一样的。
+\end_layout
+
+\begin_layout Example
+接口上的泛型
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+本例借鉴了https://segmentfault.com/a/1190000002646193，感谢原作者的辛勤付出！
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+本例首先定义了一个很常见的Generator接口，用于规范如何获取下一个元素，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Generator.java"
+
+\end_inset
+
+，然后给出了一个generator接口的具体实现FruitGenerator，可以获取（产生）下一个水果的名称，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FruitGenerator.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/Generator.java"
+lstparams "caption={Generator.java},label={Generator.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/FruitGenerator.java"
+lstparams "caption={FruitGenerator.java},label={FruitGenerator.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在Idea中运行FruitGenerator，可能的结果如下（每次运行结果可能有所不同）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Pear
+\end_layout
+
+\begin_layout Plain Layout
+Banana
+\end_layout
+
+\begin_layout Plain Layout
+Pear
+\end_layout
+
+\begin_layout Plain Layout
+Pear
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+泛型接口和泛型方法的关系？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写一个Generator接口的实现，用于获取下一个连续的整数，假设从100开始计算。
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:编写一个Generator接口的实现，用于获取下一个连续的整数，"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+泛型方法
+\end_layout
+
+\begin_layout Standard
+泛型作用在类上，表示类中的属性或者使用到的变量可以泛型化（即抽象化），很自然的，泛型作用在方法上，即泛型方法是指方法中使用到的变量可以泛型化（抽象化）。
+\begin_inset Wrap figure
+lines 0
+placement r
+overhang 0in
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename imgs/generic/generic-method.eps
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+泛型方法的常见形态
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:泛型方法的常见形态"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+方法中可以抽象出来的变量只有形式参数和返回值，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:泛型方法的常见形态"
+
+\end_inset
+
+所示，我们可以在一对尖括号中声明在形式参数和返回值中可能使用到的类型参数。我们可以把“类型参数”看做数学上方程的“自变量”，在方法中我们把所有可变的因素抽象出来
+放到类型参数列表中，就像是我们在数学上把所有可变的因素抽象出来看做自变量一样。泛型方法使得我们编写的方法可以适用于多种数据类型，因此我们在编写方法时应该尽量使用
+泛型方法。可以这么说，如果该方法可能在不同的场合下使用
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+两种
+\end_layout
+
+\end_inset
+
+以上不同的数据类型，泛型方法就有存在的价值。
+\end_layout
+
+\begin_layout Standard
+在这里要特别注意声明类型参数的位置和方法：
+\end_layout
+
+\begin_layout Itemize
+声明类型参数列表的方法和类中一样，都是使用一对尖括号包围起来。有几个“自变量”，我们就声明几个类型参数。尖括号是Java编译器识别类型参数的标识，即只要在尖括号
+内部的字符串列表都会被当做类型参数对待。有时你可能会想，去掉尖括号及其类型参数列表可以吗？尝试一下会发现，这会导致语法错误：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+can not resolve symbol 'T', 'W'
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+这是很自然的：去掉了尖括号的类型参数列表，返回值的类型T和两个形式参数的类型T、W在哪里定义的呢？因此，尖括号及其类型参数列表是不能省略掉的，并且声明的位置也不
+能搞错。
+\end_layout
+
+\begin_layout Itemize
+泛型方法的类型参数列表是在方法的返回值前面声明的
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+不然呢？你能想出更合理的位置来声明泛型方法的类型参数列表吗？
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+调用泛型方法时，类型参数列表一般不需要给出，比如可以直接调用泛型方法：choise(123, "a string")，Java编译器可以根据参数的类型自动推断所
+对应的类型参数的类型。但是如果Java编译器无法自动推断，则需要明确给出泛型方法的类型参数列表的实际类型，比如GenericMethodTest.<String,
+ Integer>choise(123, "a string")。
+\end_layout
+
+\begin_layout Standard
+当然，
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:泛型方法的常见形态"
+
+\end_inset
+
+不是唯一的泛型方法的形态，比如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public <S, U, V> U methodName(S x, V y) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ....
+\end_layout
+
+\begin_layout Plain Layout
+
+    U u = ...;
+\end_layout
+
+\begin_layout Plain Layout
+
+    return u;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+泛型方法示例
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/GenericMethodTest.java"
+lstparams "caption={GenericMethodTest.java},label={GenericMethodTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+泛型数组
+\end_layout
+
+\begin_layout Standard
+泛型数组没有什么特别的，是指数组的数据类型是泛型，即数组的每个数据元素是一个泛型。比如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GenericArrayTest.java"
+
+\end_inset
+
+中，我们在info方法中使用了一个泛型数组作为参数，这样info方法就可以打印出任意类型的数组元素了。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/GenericArrayTest.java"
+lstparams "caption={GenericArrayTest.java},label={GenericArrayTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+泛型的高级用法
+\end_layout
+
+\begin_layout Subsection
+通配符
+\end_layout
+
+\begin_layout Standard
+通配符?的意义表示任意的类型，一般用在方法的参数中，比如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public void test(Box<?> box) {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+表示box对象可以容纳任何类型的对象。
+\end_layout
+
+\begin_layout Standard
+注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容易任何类型的对象，比如Ob
+ject，Integer，String等等。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+通配符只能用在泛型方法中吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+<T extends Number> 和 <? extends Number>的区别在哪里？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要澄清subtype，supertype的概念，最好图示
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+通配符?用在类型参数中是没有意义的，比如下面的类定义：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Test<?> {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+试想，如果这样的定义是合法的，那么我们在类里面如何引用这个泛型通配符代表的数据类型呢？所以，这样的写法是一个语法错误。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+泛型的上下界
+\end_layout
+
+\begin_layout Standard
+很多时候，我们并不希望泛型类或者泛型方法的类型参数是任意的类，比如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GenericBox.java"
+
+\end_inset
+
+中的GenericBox什么都能装，如果我们只希望GenericBox处理各种数字，该怎么办呢？Java的extends和super关键字可以用来限制类型参数的
+上界和下界，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:extends和super确定了泛型的上下界"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/generic/superextends.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+extends和super确定了泛型的上下界
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:extends和super确定了泛型的上下界"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+extends声明了类型参数的上界
+\end_layout
+
+\begin_layout Standard
+在尖括号中，可以使用extends明确限制类型参数是某个类的子类（包括本身）。比如<T extends Number>的意思是，类型参数T必须是Number类或
+者Numer类的子类（Integer，Double等），参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GenericBoxExtended.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/GenericBoxExtended.java"
+lstparams "caption={GenericBoxExtended.java},label={GenericBoxExtended.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们再看一个经典的例子
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+借鉴自Java Tutorial：https://docs.oracle.com/javase/tutorial/java/generics/boundedType
+Params.html
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/GenericExtendsTest.java"
+lstparams "caption={GenericExtendsTest.java},label={GenericExtendsTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GenericExtendsTest.java"
+
+\end_inset
+
+中存在语法错误编译无法通过，原因是类型参数T不能为简单数据类型，因此不能使用关系运算符比较大小。知道了问题所在，也就容易想到解决方案了：使用extends限制类
+型参数必须是实现了Comparable接口的类即可，如此便可以借助于Comparable接口的compareTo方法比较两个对象的大小，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GenericExtendsComparableTest.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/GenericExtendsComparableTest.java"
+lstparams "caption={GenericExtendsComparableTest.java},label={GenericExtendsComparableTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+如果extends后面是类名，则表示类型参数是指定类或者指定类的子类；如果extends后面是接口名，则表示类型参数是指定接口或者指定接口的实现类。
+\end_layout
+
+\begin_layout Plain Layout
+此外，extends即可以用于泛型类的类型参数，也可以用于泛型方法的类型参数。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+由于extends在这里可以表示接口的实现类，因此可以通过extends限定多个接口（可以包括一个类），比如：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class A {}
+\end_layout
+
+\begin_layout Plain Layout
+
+public interface B {}
+\end_layout
+
+\begin_layout Plain Layout
+
+public interface C {}
+\end_layout
+
+\begin_layout Plain Layout
+
+public class D {}
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Demo<T extends A & B & C> {}
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Demo<T extends B & C & A> {} // 错误！ 类必须排在最前面
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Demo<T extends A & D & B & C> {} // 错误！ 最多只能extends一个类，但是可以extends多
+个接口
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+从java tutorial增加一个maximum的例子，说明如何从generic继承下来（实现接口）
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+关于对象的比较：如果两个对象要比较大小，则这两个对象必须实现Comparable接口。也就是说，Java根据Comparable接口中的compareTo方法的
+返回值决定两个对象的比较结果。Comparable接口的定义如下
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见http://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public interface Comparable<T> {
+\end_layout
+
+\begin_layout Plain Layout
+
+    public int compareTo(T o);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+在JDK API文档中查看一下Integer、String等类即可以看出，它们都实现了Comparable接口。我们自定义的类只要实现了Comparable接口
+，即可以借助于compareTo方法方便的比较两个对象。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+super声明了类型参数的下界
+\end_layout
+
+\begin_layout Standard
+在尖括号中，可以使用super关键字明确限制方法参数为某个类的父类（包括本身）。比如<T super Box>，则方法参数必须是Box类或者Box的父类，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GenericSuperTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/GenericSuperTest.java"
+lstparams "caption={GenericSuperTest.java},label={GenericSuperTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+参见：
+\begin_inset CommandInset href
+LatexCommand href
+name "Java Generics FAQ"
+target "http://www.angelikalanger.com/GenericsFAQ/FAQSections/TypeParameters.html#FAQ107"
+
+\end_inset
+
+，super不能用于类型参数，即super不能用于类的定义，比如这样的用法是错误的，Java在语法上禁止了这种用法：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Box<T super Integer> {    
+\end_layout
+
+\begin_layout Plain Layout
+
+    private T data;
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Box(T data) { this.data = data; } 
+\end_layout
+
+\begin_layout Plain Layout
+
+    public T info() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return data * 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+这是因为所有的泛型都会在编辑阶段进行“类型擦除”，根据“子类型替换原则”，在类型参数中使用super是不安全的。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+泛型方法使用泛型类的类型参数
+\end_layout
+
+\begin_layout Standard
+在泛型方法中可以直接使用泛型类的类型参数作为返回值类型或者形式参数类型，当然，泛型方法也可以拥有自己独立的类型参数，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Check.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CheckTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/Check.java"
+lstparams "caption={Check.java},label={Check.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/generic/src/cn/edu/sdut/softlab/CheckTest.java"
+lstparams "caption={CheckTest.java},label={CheckTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+不要混淆了泛型类的类型参数和泛型方法的类型参数。泛型类的类型参数在本类中有效，泛型方法的类型参数只在本方法中有效，因此泛型方法中可以直接使用泛型类的类型参数，但
+是泛型方法依然可以定义只属于本方法的类型参数列表，两者并不冲突。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+使用泛型的注意事项
+\end_layout
+
+\begin_layout Standard
+由于Java是通过类型擦除机制
+\begin_inset CommandInset citation
+LatexCommand cite
+key "java-generic-type-erease"
+
+\end_inset
+
+实现泛型的，因此在具体使用泛型时应该特别注意以下几点：
+\end_layout
+
+\begin_layout Itemize
+类型参数的实际类型不能是简单的数据类型，比如int，long等，只能是类、接口、枚举类等。
+\end_layout
+
+\begin_layout Itemize
+类型参数并不能用来创建对象或是作为静态变量的类型，比如下面的示例代码，参见其中的注释：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class ClassTest<X extends Number, Y, Z> {    
+\end_layout
+
+\begin_layout Plain Layout
+
+    private X x;    
+\end_layout
+
+\begin_layout Plain Layout
+
+    private static Y y; //编译错误，不能用在静态变量中    
+\end_layout
+
+\begin_layout Plain Layout
+
+    public X getFirst() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        //正确用法        
+\end_layout
+
+\begin_layout Plain Layout
+
+        return x;    
+\end_layout
+
+\begin_layout Plain Layout
+
+    }    
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void wrong() {        
+\end_layout
+
+\begin_layout Plain Layout
+
+        Z z = new Z(); //编译错误，不能创建对象    
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+在使用带通配符的泛型类的时候，需要明确通配符所代表的一组类型的概念。由于具体的类型是未知的，很多操作是不允许的。 
+\end_layout
+
+\begin_layout Itemize
+不要忽视编译器给出的警告信息。
+\end_layout
+
+\begin_layout Section
+类型擦除
+\end_layout
+
+\begin_layout Standard
+Java泛型这个特性是从JDK 1.5才开始加入的，因此为了兼容之前的版本，Java泛型的实现采取了“伪泛型”的策略，即Java在语法上支持泛型，但是在编译阶段会
+进行所谓的“类型擦除”（Type Erasure），将所有的泛型表示（尖括号中的内容）都替换为具体的类型（其对应的原生态类型），就像完全没有泛型一样。理解类型擦
+除对于用好泛型是很有帮助的，尤其是一些看起来“疑难杂症”的问题，弄明白了类型擦除也就迎刃而解了。
+\end_layout
+
+\begin_layout Standard
+泛型的类型擦除原则是：
+\end_layout
+
+\begin_layout Itemize
+消除类型参数声明，即删除<>及其包围的部分。
+\end_layout
+
+\begin_layout Itemize
+根据类型参数的上下界推断并替换所有的类型参数为原生态类型：如果类型参数是无限制通配符或没有上下界限定则替换为Object，如果存在上下界限定则根据子类替换原则
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+此处插入子类替换原则的引用
+\end_layout
+
+\end_inset
+
+取类型参数的最左边限定类型（即父类）。
+\end_layout
+
+\begin_layout Itemize
+为了保证类型安全，必要时插入强制类型转换代码。
+\end_layout
+
+\begin_layout Itemize
+自动产生“桥接方法”以保证擦除类型后的代码仍然具有泛型的“多态性”。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+似乎有问题？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+擦除类定义中的类型参数
+\end_layout
+
+\begin_layout Subsubsection
+无限制类型擦除
+\end_layout
+
+\begin_layout Standard
+当类定义中的类型参数没有任何限制时，在类型擦除中直接被替换为Object，即形如<T>和<?>的类型参数都被替换为Object，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:擦除类定义中的类型参数"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/generic/type-erasure-class.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+擦除类定义中的类型参数
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:擦除类定义中的类型参数"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+有限制类型擦除
+\end_layout
+
+\begin_layout Standard
+当类定义中的类型参数存在限制（上下界）时，在类型擦除中替换为类型参数的上界或者下界，比如形如<T extends Number>和<? extends
+ Number>的类型参数被替换为Number，<? super Number>被替换为Object，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:擦除类定义中的有限制类型参数"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/generic/type-erasure-class-bounded.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+擦除类定义中的有限制类型参数
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:擦除类定义中的有限制类型参数"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+擦除方法定义中的类型参数
+\end_layout
+
+\begin_layout Standard
+擦除方法定义中的类型参数原则和擦除类定义中的类型参数是一样的，这里仅以擦除方法定义中的有限制类型参数为例，见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:擦除泛型方法中的类型参数"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/generic/type-erasure-method.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+擦除泛型方法中的类型参数
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:擦除泛型方法中的类型参数"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+通过jad反编译后的结果可以对照一下？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+桥接方法和泛型的多态
+\end_layout
+
+\begin_layout Standard
+考虑下面的代码：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public interface Info<T> {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // just return var:-) 
+\end_layout
+
+\begin_layout Plain Layout
+
+    T info(T var); 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BridgeMethodTest implements Info<Integer> {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Integer info(Integer var) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return var;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+按照我们之前类型擦除的经验，在擦除类型后的代码应该是这个样子的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public interface Info {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // just return var
+\end_layout
+
+\begin_layout Plain Layout
+
+    Object info(Object var);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BridgeMethodTest implements Info {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Integer info(Integer var) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return var;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+但是，明显可以看出，这样擦除类型后的代码在语法上是错误的：BridgeMethodTest类中虽然存在一个info方法，但是和Info接口要求覆盖的info方法
+不一致：参数类型不一致。在这种情况下，Java编译器会自动增加一个所谓的“桥接方法”（bridge method）来满足Java语法的要求，同时也保证了基于泛型
+的多态能够有效。我们反编译一下BridgeMethodTest.class文件可以看到Java编译器到底是如何做的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ javap BridgeMethodTest.class 
+\end_layout
+
+\begin_layout Plain Layout
+Compiled from "BridgeMethodTest.java"
+\end_layout
+
+\begin_layout Plain Layout
+public class BridgeMethodTest implements Info<java.lang.Integer> {
+\end_layout
+
+\begin_layout Plain Layout
+public BridgeMethodTest();
+\end_layout
+
+\begin_layout Plain Layout
+public java.lang.Integer info(java.lang.Integer);
+\end_layout
+
+\begin_layout Plain Layout
+public java.lang.Object info(java.lang.Object);
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，Java编译器在BridgeMethodTest中自动增加了两个方法：默认构造方法和参数为Object的info方法，参数为Object的info方法
+就是“桥接方法”。如何理解“桥接”二字呢？我们进一步反编译BridgeMethodTest看一下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Decompiled by Jad v1.5.8e.
+ Copyright 2001 Pavel Kouznetsov.
+                                                          
+\end_layout
+
+\begin_layout Plain Layout
+
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+\end_layout
+
+\begin_layout Plain Layout
+
+// Decompiler options: packimports(3) 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Source File Name:   BridgeMethodTest.java
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BridgeMethodTest
+\end_layout
+
+\begin_layout Plain Layout
+
+    implements Info
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    public BridgeMethodTest()
+\end_layout
+
+\begin_layout Plain Layout
+
+    {   
+\end_layout
+
+\begin_layout Plain Layout
+
+    }   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Integer info(Integer integer)
+\end_layout
+
+\begin_layout Plain Layout
+
+    {   
+\end_layout
+
+\begin_layout Plain Layout
+
+        return integer;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    public volatile Object info(Object obj)
+\end_layout
+
+\begin_layout Plain Layout
+
+    {   
+\end_layout
+
+\begin_layout Plain Layout
+
+        return info((Integer)obj);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }   
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+info(Object)方法通过调用子类的info(Integer)方法搭起了父类和子类的桥梁，也就是说，info(Object obj)这个方法起到了连接父类
+和子类的作用，使得Java的多态在泛型情况下依然有效。
+\end_layout
+
+\begin_layout Standard
+当然，我们在使用基于泛型的多态时不必过多的考虑“桥接方法”，Java编译器会帮我们打理好一切。
+\end_layout
+
+\begin_layout Standard
+关于桥接方法的更多信息可以参考：
+\begin_inset CommandInset href
+LatexCommand href
+name "JLS"
+target "https://docs.oracle.com/javase/specs/"
+
+\end_inset
+
+的相关章节。
+\end_layout
+
+\begin_layout Section
+泛型的原生态类型
+\end_layout
+
+\begin_layout Standard
+泛型的原生态类型（raw type）即擦除了泛型信息之后的真正类型。当我们定义一个泛型时，Java会自动创建相应的原生态类型。在编译阶段，泛型会还原为原生态类型
+，类型参数被擦除并替换为其限定类型（无限定的类型使用Object替换）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+了解原生态类型的目的是什么？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+尽量避免使用泛型的原生态类型
+\begin_inset CommandInset citation
+LatexCommand cite
+after "第23条：请不要在新代码中使用原生态类型"
+key "effective-java"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

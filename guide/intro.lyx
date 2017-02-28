@@ -1,0 +1,2773 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+tip-inset
+note-inset
+warning-inset
+coderemarks
+shapepar
+logicalmkup
+theorems-bytype
+theorems-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+初识Java
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:初识Java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/intro/java-concept.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java在程序设计语言中的霸主地位
+\end_layout
+
+\begin_layout Standard
+自从发明了计算机，程序设计语言就成了一门专门的技艺，至今人类已经发明了上千种程序设计语言
+\begin_inset CommandInset citation
+LatexCommand cite
+key "progamming-lang-stats"
+
+\end_inset
+
+。从权威统计机构TIOBE
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.tiobe.com/
+\end_layout
+
+\end_inset
+
+的最新统计结果可以看出，Java程序设计语言在最近的十五年几乎牢牢的占据了头名座椅。此后的10年、20年，Java的霸主地位会动摇吗？根据ruby之父松本行弘的
+自述，ruby从开始开发到发布用了3年左右的时间，在程序员圈子中拥有一定的知名度则又花了4年的时间，再到通过Ruby on Rails而走红，则又花了5年的时间
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p109"
+key "code-future"
+
+\end_inset
+
+。可见，程序设计语言的发展和进化是相对缓慢的一个过程，因此可以推断，至少未来10年的时间，Java和C仍然会是主流的程序设计语言。因此，笔者认为学好Java是I
+T职业生涯的不二敲门砖。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/tiobe_top_langs.pdf
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+最近15年top 10程序设计语言
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java简史
+\end_layout
+
+\begin_layout Standard
+Java程序设计语言是不是天生丽质，一开始就大红大紫呢？
+\end_layout
+
+\begin_layout Standard
+让我们穿越到1990年，了解一下Java的前生和今世，看一看它当年是如何降临人间的
+\begin_inset CommandInset citation
+LatexCommand cite
+key "java-history-wikimedia"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+Java的前生：Oak的诞生
+\end_layout
+
+\begin_layout Standard
+1990年12月，当时的Sun公司开始了一个叫做“Stealth计划”的内部项目，由帕特里克.诺顿领衔，起因是公司自己开发的C++和C语言编译器很难用，帕特里克被
+搞的焦头烂额。“Stealth计划”后来改名为“Green计划”，詹姆斯.高斯林（人称“Java之父”，见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:詹姆斯.高斯林"
+
+\end_inset
+
+）和麦克.舍林丹加入到了帕克里克的工作小组。Sun公司预计未来的家用电器必将向智能化方向发展，于是“Green计划”的目标是打造一款智能家电程序设计语言及其平台。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement r
+overhang 0in
+width "20line%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/duke.svg
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java的吉祥物
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java的吉祥物"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+团队最初考虑使用C++语言，但是很多成员包括Sun的首席科学家比尔.乔伊，发现C++在嵌入式系统上存在很大问题。因为嵌入式系统可以使用的资源有限，而C++缺乏垃圾
+回收机制以及可移植的安全性、分布式程序设计和多线程等特性。于是，乔伊决定开发一种集C语言和Mesa语言大成的新语言。在一份报告上，乔伊把它叫做“未来”。他提议S
+un公司的工程师应该在C++的基础上，开发一种面向对象的程序设计语言。最初，高斯林试图修改和扩展C++的功能，他自己称这种新语言为C++ ++
+ –：多么糟糕的命名啊，高斯林自己后来也放弃了这个名字。直到某一天，高斯林把这种新的语言命名为“Oak”（橡树），这是他办公室外的一棵橡树。
+\end_layout
+
+\begin_layout Standard
+就像很多开发新技术的秘密工程一样，Green团队没日没夜的工作到了1992的夏天，终于能够演示新平台的一部分了，包括Green操作系统、Oak程序设计语言、类库
+及其硬件。最初的尝试是面向一种类PDA设备，被命名为Star7,这种设备在当时由鲜艳的图形界面和被称为“Duke”（Duke后来称为Java的吉祥物，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java的吉祥物"
+
+\end_inset
+
+）的智能代理来帮助用户。1992年12月3日，这台Star7设备进行了展示。
+\end_layout
+
+\begin_layout Standard
+同年11月，Green计划的成果转化成为“FirstPerson有限公司”，一个Sun公司的全资子公司。FirstPerson团队对于打造一种高度互动的设备感兴
+趣，当时代华纳发布了一个电视机顶盒的征求提议书时，FirstPerson决定响应时代华纳的提议，提出了一个机顶盒平台方案。但是当时的有线电视界觉得FirstPe
+rson的平台给予了用户过多的控制权，于是最终FirstPerson输给了SGI。FirstPerson与3DO公司的另外一笔关于机顶盒的交易也没有成功，也就是
+说，FirstPerson公司在电视工业没有取得任何效益，Sun公司不得不收回了FirstPerson公司。幸运的是，Oak语言的命运并没有就此止步。
+\end_layout
+
+\begin_layout Subsection
+Java拥抱互联网，横空出世
+\end_layout
+
+\begin_layout Standard
+1994年6月，在经历了一场历时三天的脑力激荡的讨论后，约翰·盖吉、詹姆斯·高斯林、比尔·乔伊、帕特里克·诺顿、韦恩·罗斯因和埃里克·斯库米，
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0in
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename imgs/intro/James_Gosling_2008.jpg
+	lyxscale 30
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+詹姆斯.高斯林
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:詹姆斯.高斯林"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+团队决定再一次做出重大决定，这次他们决定将该技术应用于万维网。他们认为随着Mosaic浏览器
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Mosaic是浏览器的鼻祖，参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/Mosaic_(web_browser)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+的到来，因特网正在向同样的高度互动的远景演变，而这一远景正是他们在有线电视网中看到的。作为原型，帕特里克·诺顿写了一个小型万维网浏览器，WebRunner，后来
+改名为HotJava。
+\end_layout
+
+\begin_layout Standard
+\align block
+1994年10月，HotJava和Java平台为公司高层进行演示。1994年，Java 1.0a版本已经可以提供下载，但是Java和HotJava浏览器的第一次公
+开发布却是在1995年3月23日SunWorld大会上进行的。Sun公司的科学指导约翰·盖吉宣告了Java技术的诞生。这个发布是与网景公司的执行副总裁马克·安德
+森的惊人发布一起进行的：网景宣布将在其浏览器中包含对Java的支持，这在当时引起了很大的轰动。1996年1月，Sun公司成立了Java业务集团，专门开发Java
+技术。这一次，詹姆斯.高斯林等终于扬眉吐气了，Java此后的发展虽然也不是一帆风顺，但是到今天，Java可谓如日中天，詹姆斯.高斯林也被称为“Java之父”，
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:詹姆斯.高斯林"
+
+\end_inset
+
+为詹姆斯.高斯林本尊。
+\end_layout
+
+\begin_layout Subsection
+Sun公司没落，Java易手Oracle
+\end_layout
+
+\begin_layout Standard
+然而，天有不测风云，当年像太阳一样耀眼的Sun公司，在2002年突然衰落
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+关于Sun衰落的原因，网络上有大量的讨论，比如：http://tech.sina.com.cn/it/2011-03-04/16485248026.shtml
+\end_layout
+
+\end_inset
+
+，从此便江河日下，一下从硅谷最值钱的公司沦为人均市值最低的公司。由于种种原因，2009年4月20日，Sun公司以74亿美元（要知道，2001年，Sun的市值超过
+2000亿美元）整体出售给了Oracle，从此Java易手，Oracle开启了Java发展的新历程。通过
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java简史"
+
+\end_inset
+
+我们可以简要的了解Java发展的历程
+\begin_inset CommandInset citation
+LatexCommand cite
+key "java-brief-history"
+
+\end_inset
+
+和各个版本发布的时间
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+如果你对Java的历史特别感兴趣，可以参考以下的几个站点：
+\end_layout
+
+\begin_layout Itemize
+Oracle庆祝Java 20年：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://oracle.com.edgesuite.net/timeline/java/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Java 20年：历史与未来：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.infoq.com/cn/news/2015/05/java-20-history-future
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/Java-history.png
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java简史
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java简史"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+补充一下Java在服务器领域的市场份额
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java的特点
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要重写，暂时内容来自：https://zh.wikipedia.org/wiki/Java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+面向对象
+\end_layout
+
+\begin_layout Standard
+Java的特点之一就是面向对象，是程序设计方法的一种。“面向对象程序设计语言”的核心之一就是开发者在设计软件的时候可以使用自定义的类型和关联操作。代码和数据的实
+际集合体叫做“对象”。一个对象可以想象成绑定了很多“行为（代码）”和“状态（数据）”的物体。对于数据结构的改变需要和代码进行通信然后操作，反之亦然。面向对象设计
+让大型软件工程的计划和设计变得更容易管理，能增强工程的健康度，减少失败工程的数量。
+\end_layout
+
+\begin_layout Subsection
+跨平台
+\end_layout
+
+\begin_layout Standard
+Java语言的第二个特性就是跨平台性，也就是说使用Java语言编写的程序可以在编译后不用经过任何更改，就能在任何硬件设备条件下运行。这个特性经常被称为“一次编译
+，到处运行”（write once, run anywhere）。
+\end_layout
+
+\begin_layout Standard
+执行Java应用程序必须安装Java Runtime Environment（JRE），JRE内部有一个Java虚拟机（Java Virtual
+ Machine，JVM）以及一些标准的类库（Class Library）。通过JVM才能在电脑系统执行Java应用程序（Java Application），这
+与.Net Framework的情况一样，所以电脑上如果没有安装JVM，Java应用程序将不能够执行。
+\end_layout
+
+\begin_layout Standard
+实现跨平台性的方法是大多数编译器在进行Java语言程序的编码时候会生成一个用字节码写成的“半成品”，这个“半成品”会在Java虚拟机（解释层）的帮助下运行，虚拟
+机会把它转换成当前所处硬件平台的原始代码。之后，Java虚拟机会打开标准库，进行数据（图片、线程和网络）的访问工作。主要注意的是，尽管已经存在一个进行代码翻译的
+解释层，有些时候Java的字节码代码还是会被JIT编译器进行二次编译。
+\end_layout
+
+\begin_layout Standard
+有些编译器，比如GCJ，可以自动生成原始代码而不需要解释层。但是这些编译器所生成的代码只能应用于特定平台。并且GCJ目前只支持部分的Java API。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+甲骨文公司对于Java的许可是“全兼容的”，这也导致了微软和升阳关于微软的程序不支持RMI和JNI接口、并且增加特性为己所用的法律争端。升阳最终赢得了官司，获得
+了大约两千万美元的赔偿，法院强制要求微软执行升阳公司关于Java的许可要求。作为回应，微软不再在Windows系统中捆绑Java，最新的Windows版本，Wi
+ndows Vista和Internet Explorer 7.0版本也不再提供对于Java应用程序和控件的支持。但是升阳公司和其他使用Java运行时系统的公司在
+Windows操作系统下对用户提供无偿的第三方插件和程序支持。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java语言使用解释层最初是为了轻巧性。所以这些程序的运行效率比C语言和C++要低很多，用户也对此颇有微词。很多最近的调查显示Java的程序运行速度比几年前要高
+出许多，有些同样功能的程序的效率甚至超过了C++和C语言编写的程序。
+\end_layout
+
+\begin_layout Standard
+Java语言在最开始应用的时候是没有解释层的，所有需要编译的代码都直接转换成机器的原始代码。这样做的后果就是获得了最佳的性能，但是程序臃肿异常。从JIT技术开始
+，Java的程序都经过一次转换之后才变成机器码。很多老牌的第三方虚拟机都使用一种叫做“动态编译”的技术，也就是说虚拟机实时监测和分析程序的运行行为，同时选择性地
+对程序所需要的部分进行编译和优化。所有这些技术都改善了代码的运行速度，但是又不会让程序的体积变得失常。
+\end_layout
+
+\begin_layout Standard
+程序的轻便性事实上是软件编写很难达到的一个目标，Java虽然成功地实现了“一次编译，到处运行”，但是由于平台和平台之间的差异，所编写的程序在转换代码的时候难免会
+出现微小的、不可察觉的错误和意外。有些程序员对此非常头疼，他们嘲笑Java的程序不是“一次编译，到处运行”，而是“一次编译，到处调试”。以Java
+ AWT为例，早期Java AWT内提供的按钮、文字区等均是以电脑系统所默认的样式而显示。这令Java程序在有些没有提供图案的电脑系统产生错误（在Microso
+ft Windows设有窗口管理器，在一些Linux distribution则没有）。后来SUN公司针对Java AWT一些问题而推出Java
+ Swing。
+\end_layout
+
+\begin_layout Standard
+平台无关性让Java在服务器端软件领域非常成功。很多服务器端软件都使用Java或相关技术建立，比如占据了WWW服务器半壁江山的Apache服务器
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.apache.org
+\end_layout
+
+\end_inset
+
+，当下火爆的大数据平台Hadoop
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://hadoop.apache.org
+\end_layout
+
+\end_inset
+
+等，都是使用Java语言开发的。
+\end_layout
+
+\begin_layout Subsection
+自动垃圾回收
+\end_layout
+
+\begin_layout Standard
+C++语言被用户诟病的原因之一是大多数C++编译器不支持垃圾收集机制。通常使用C++编程的时候，程序员于程序中初始化对象时，会在主机内存堆栈上分配一块内存与地址
+，当不需要此对象时，进行析构或者删除的时候再释放分配的内存地址。如果对象是在堆栈上分配的，而程序员又忘记进行删除，那么就会造成内存泄漏（Memory
+ Leak）。长此以往，程序运行的时候可能会生成很多不清除的垃圾，浪费了不必要的内存空间。而且如果同一内存地址被删除两次的话，程序会变得不稳定，甚至崩溃。因此有
+经验的C++程序员都会在删除之后将指针重置为NULL，然后在删除之前先判断指针是否为NULL。
+\end_layout
+
+\begin_layout Standard
+C++中也可以使用“智能指针”（Smart Pointer）或者使用C++托管扩展编译器的方法来实现自动化内存释放，智能指针可以在标准类库中找到，而C++托管扩
+展被微软的Visual C++ 7.0及以上版本所支持。智能指针的优点是不需引入缓慢的垃圾收集机制，而且可以不考虑线程安全的问题，但是缺点是如果不善使用智能指针的
+话，性能有可能不如垃圾收集机制，而且不断地分配和释放内存可能造成内存碎片，需要手动对堆进行压缩。除此之外，由于智能指针是一个基于模板的功能，所以没有经验的程序员
+在需要使用多态特性进行自动清理时也可能束手无策。
+\end_layout
+
+\begin_layout Standard
+Java语言则不同，上述的情况被自动垃圾收集功能自动处理。对象的创建和放置都是在内存堆栈上面进行的。当一个对象没有任何引用的时候，Java的自动垃圾收集机制就发
+挥作用，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+自动
+\end_layout
+
+\end_inset
+
+删除这个对象所占用的空间，释放内存以避免内存泄漏。
+\end_layout
+
+\begin_layout Standard
+注意程序员不需要修改finalize方法，自动垃圾收集也会发生作用。但是内存泄漏并不是就此避免了，当程序员疏忽大意地忘记解除一个对象不应该有的引用时，内存泄漏仍
+然不可避免。
+\end_layout
+
+\begin_layout Standard
+不同厂商、不同版本的JVM中的内存垃圾回收机制并不完全一样，通常越新版本的内存回收机制越快，IBM、BEA、SUN等等开发JVM的公司都曾宣称过自己制造出了世界
+上最快的JVM，JVM性能的世界纪录也在不断的被打破并提高。
+\end_layout
+
+\begin_layout Exercise
+Java语言可以跨平台的秘诀是什么？
+\end_layout
+
+\begin_layout Section
+Java开发环境的搭建
+\end_layout
+
+\begin_layout Standard
+学习一门程序设计语言，最佳实践是边读边练，在一个“全浸”的环境中学习，自然就轻松多了。因此，我们从一开始就搭建一个“舒服”的开发环境，学习中的每一步我们都在这个
+舒服的开发环境中验证，这样我们走的每一步都是扎实的，串起来就是一个坚实的学习之旅。
+\end_layout
+
+\begin_layout Standard
+Linux是学习程序设计的绝佳搭档，因此笔者建议大家在Linux平台上开始Java的学习之旅。Linux的发布版比较多，根据笔者多年的教学经验，建议大家选择Ub
+antu的最新LTS版本即可，下面的Java开发环境的搭建均基于Ubuntu 16.04（写作本书时的最新LTS版本）。
+\end_layout
+
+\begin_layout Subsection
+JDK的概念
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:JDK的概念"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+JDK（Java Development Kit）是开发Java应用程序的必备，提供了开发Java应用程序的必须工具，比如：
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+java
+\end_layout
+
+\end_inset
+
+：Java虚拟机，任何Java应用程序都是通过java这个虚拟机解释执行的。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+javac
+\end_layout
+
+\end_inset
+
+：Java编译器，将Java源代码编译为java虚拟机可以理解的字节码文件。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+javap
+\end_layout
+
+\end_inset
+
+：反编译工具，可以粗略的认为，javap能够将二进制文件还原为Java源代码，帮助我们了解javac的工作原理。
+\end_layout
+
+\begin_layout Standard
+详细的JDK工具列表在
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:下载和安装JDK"
+
+\end_inset
+
+（参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:下载和安装JDK"
+
+\end_inset
+
+）之后转到bin目录浏览，在ubuntu下面通过以下命令
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+也许你安装的JDK版本和这里不一致。可以通过这个命令了解你的电脑上安装的是哪个版本的JDK：dpkg -l | grep -i 
+\begin_inset Quotes eld
+\end_inset
+
+openjdk
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+了解JDK包含了哪些命令和工具：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ dpkg -L openjdk-8-jdk-headless | more
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+基础开发环境
+\end_layout
+
+\begin_layout Subsubsection
+下载和安装JDK
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:下载和安装JDK"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在ubuntu环境下，下载和安装JDK可以简单的执行下列命令来完成
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+如果你使用的是windows，请参考
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://jingyan.baidu.com/article/eae07827a4b4a31fec548535.html
+\end_layout
+
+\end_inset
+
+了解windows下JDK的安装和设置方法。由于Java是跨平台的，因此JDK安装后的用法都是一样的，本书不再强调windows和Linux中Java的用法区别
+。
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ sudo apt-get install openjdk-8-jdk
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+就这些了！是不是很简单？
+\end_layout
+
+\begin_layout Standard
+验证一下Java是不是已经安装好了，执行命令：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ java -version
+\end_layout
+
+\begin_layout Plain Layout
+openjdk version "1.8.0_91"
+\end_layout
+
+\begin_layout Plain Layout
+OpenJDK Runtime Environment (build 1.8.0_91-8u91-b14-3ubuntu1~16.04.1-b14)
+\end_layout
+
+\begin_layout Plain Layout
+OpenJDK 64-Bit Server VM (build 25.91-b14, mixed mode)
+\end_layout
+
+\begin_layout Plain Layout
+$ which java
+\end_layout
+
+\begin_layout Plain Layout
+/usr/bin/java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，我们安装的是openjdk
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://openjdk.java.net/
+\end_layout
+
+\end_inset
+
+，不是Oracle官方的JDK。对于我们学习Java程序设计而言，openjdk就足够了。如果你介意的话，也可以去下载Oralce官方的JDK，不再赘述。
+\end_layout
+
+\begin_layout Standard
+现在，我们就可以尝试编写HelloWord了！使用任意的文本编辑器编写下面的程序代码并保存为HelloWorld.java：
+\end_layout
+
+\begin_layout Example
+使用Java语言向世界问好
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/intro/src/HelloWorld.java"
+lstparams "caption={HelloWorld.java},label={HelloWorld.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+打开一个终端，执行下面的命令编译HelloWorld.java：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ javac HelloWorld.java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+执行下面的命令欣赏HelloWorld吧：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ java HelloWorld 
+\end_layout
+
+\begin_layout Plain Layout
+Hello World!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Itemize
+注意在编写HelloWorld.java源文件时，文件名HelloWorld和源文件中的HelloWorld要严格一致的。
+\end_layout
+
+\begin_layout Itemize
+执行java的class文件时，java命令后面的参数不要带class字样，即，如果执行HelloWorld.class，则只输入java HelloWorld即
+可，千万不要画蛇添足变成java HelloWorld.class。Java虚拟机会根据HelloWorld自动去寻找HelloWorld.class，如果在终端输
+入java HelloWorld.class，java虚拟机就会去寻找HelloWorld.class.class文件，自然就找不到了。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+请说明JDK中，哪个程序是Java虚拟机？哪个程序是Java编译器？
+\end_layout
+
+\begin_layout Subsection
+IDE开发环境
+\end_layout
+
+\begin_layout Standard
+终端界面（命令行方式）对于编写一个简单的程序很方便，但是终端界面毕竟缺少了一些方便程序设计的功能，比如代码自动提示和补全、文件浏览等，因此在实际的学习和开发中，
+往往使用所谓的IDE（Integrated Development Enviroment）环境。Java开发中主流的IDE有如下三种：
+\end_layout
+
+\begin_layout Itemize
+JetBrain Idea
+\end_layout
+
+\begin_layout Itemize
+eclipse
+\end_layout
+
+\begin_layout Itemize
+NetBeans
+\end_layout
+
+\begin_layout Standard
+笔者推荐大家使用第一种：JetBrain Idea。
+\end_layout
+
+\begin_layout Subsubsection
+Idea
+\end_layout
+
+\begin_layout Standard
+JetBrain Idea是
+\begin_inset CommandInset href
+LatexCommand href
+name "JetBrain"
+target "https://www.jetbrains.com"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.jetbrains.com
+\end_layout
+
+\end_inset
+
+公司出品的优秀Java IDE环境，是很多Java高手的最爱，google公司也将android开发的IDE：android studio构建在IDEA的基础之
+上（最早的android集成开发环境是作为eclipse的插件存在的，估计google公司对eclipse的插件效率和管理方式不满意，于是另起炉灶，在IDEA的
+基础上开发了android studio）。
+\end_layout
+
+\begin_layout Standard
+IDEA分为免费的社区版和收费的旗舰版，对于Java初学者而言，社区版的功能已经足以应付。
+\end_layout
+
+\begin_layout Paragraph*
+下载和安装Idea
+\end_layout
+
+\begin_layout Standard
+从 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.jetbrains.com/idea/
+\end_layout
+
+\end_inset
+
+ 选择Community版本下载即可。请根据所使用的操作系统选择不同的压缩格式。作者使用的是Linux操作系统，因此选择的是tar.gz不带JDK的安装包（JDK
+已经在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:JDK的概念"
+
+\end_inset
+
+一节安装过了）。假设最新的idea下载到了～/downloads目录下。作者的习惯是在家目录建立一个devel目录，然后将所有软件开发相关的工具等都放到deve
+l目录下，因此将下载的idea安装文件解压缩：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+$ cd ~/downloads
+\end_layout
+
+\begin_layout Plain Layout
+$ tar xzvf ideaIC-2016.3.4-no-jdk.tar.gz -C ~/devel
+\end_layout
+
+\begin_layout Plain Layout
+$ cd ~/devel/idea-IC-163.12024.16/bin
+\end_layout
+
+\begin_layout Plain Layout
+$ ./idea.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+第一次启动Idea的时候需要进行简单的配置，目前阶段全部选择默认选项既可。
+\end_layout
+
+\begin_layout Paragraph*
+创建新项目
+\end_layout
+
+\begin_layout Standard
+下面以HelloWorld为例说明如何使用Idea创建一个简单的Java应用程序。
+\end_layout
+
+\begin_layout Enumerate
+创建新项目。通过File->New菜单打开创建新项目的窗口，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:新建项目的菜单"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:选择项目类型"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/idea-new-project-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+从菜单新建项目
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:新建项目的菜单"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/idea-new-project-2.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择项目类型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:选择项目类型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+接着，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:选择从模板创建项目"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:填写项目名称和所在目录"
+
+\end_inset
+
+所示，填写项目名称和所在目录，Idea自动创建项目目录和一个默认的Main文件。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/idea-new-project-3.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择从模板创建项目
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:选择从模板创建项目"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/idea-new-project-4.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+填写项目名称和所在目录
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:填写项目名称和所在目录"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Enumerate
+编写源代码。在自动打开的Main文件中，编写源代码，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:编写源代码"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/idea-new-project-5.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+编写源代码
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:编写源代码"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+源代码编写完毕后，可以将Main这个文件改名字为HelloWorld，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:修改类名"
+
+\end_inset
+
+所示，当光标停在Main上面时，两次按Shift+F6修改类名。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/idea-new-project-6.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+修改类名
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:修改类名"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+运行应用程序。如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:运行应用程序"
+
+\end_inset
+
+所示，在右键单击弹出的菜单中选择“Run”运行即可。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/idea-new-project-7.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+运行应用程序
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:运行应用程序"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+NetBeans
+\end_layout
+
+\begin_layout Standard
+NetBeans是一个始于1997年的Xelfi计划，本身是捷克布拉格查理大学Charles University的数学及物理学院的学生计划。此计划延伸而成立了
+一家公司进而发展成为商用版本的NetBeans IDE，直到1999年Sun Microsystems电脑买下此公司。Sun Microsystems于2000
+年6月将NetBeans IDE作为开源项目发展。2010年1月，Sun Microsystems成为甲骨文的子公司。 NetBeans IDE最新版下载量已经
+超过18万次，参与开发人员超过80万。NetBeans项目正在蓬勃发展，并将继续成长。
+\end_layout
+
+\begin_layout Standard
+NetBeans包括开源的开发环境和应用平台，NetBeans IDE可以使开发人员利用Java平台能够快速创建Web、企业、桌面以及移动的应用程序，NetBe
+ans IDE已经支持PHP、Ruby、JavaScript、Groovy、Grails和C/C++等开发语言。NetBeans项目由一个活跃的开发社区提供支持
+， NetBean开发环境提供了丰富的产品文档和培训资源以及大量的第三方插件。 NetBeans是开源软件开发集成环境，是一个开放框架，可扩展的开发平台，可以用
+于Java、C/C++，PHP等语言的开发，本身是一个开发平台，可以通过扩展插件来扩展功能。
+\end_layout
+
+\begin_layout Standard
+ubuntu环境下直接执行下面的命令即可安装Netbeans：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ sudo apt-get install netbeans
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+上面的命令虽然只是安装了Netbeans的基本组件，但是对于我们学习Java程序设计语言而言已经足够了！如果你希望尝试最新的Netbeans版本，可以从Netb
+eans官网
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.netbeans.org
+\end_layout
+
+\end_inset
+
+下载并安装，此处不再赘述。
+\end_layout
+
+\begin_layout Standard
+如果你已经使用过任何一种IDE开发环境了，Netbeans是很容易上手的。一般的开发步骤如下：
+\end_layout
+
+\begin_layout Enumerate
+创建新项目：通过File->New Project打开创建新项目的窗口，填写项目目录即可创建一个新的项目
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+没有并排显示，需要修改
+\end_layout
+
+\end_inset
+
+：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imgs/intro/NewJavaApplication_001.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择项目类型
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imgs/intro/NewJavaApplication_002.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+设置项目名称和存储目录
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+创建新项目
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+编写源文件：在第一步中创建新项目后，已经自动打开了HelloWorld.java文件：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/edit-helloworld.png
+	lyxscale 30
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+编辑HelloWorld.java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex Tip
+status open
+
+\begin_layout Itemize
+巧用Netbeans的自动代码提示，比如打出System.之后，会自动提示System类有哪些方法可以调用。
+\end_layout
+
+\begin_layout Itemize
+如果代码中有语法错误，Netbeans会给出提示信息和建议的修改方案，一般情况下选择第一个修正方案即可。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+运行：在IDE中运行Java应用程序很简单，在打开的java文件中右键可以看到run file菜单：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imgs/intro/run-file.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+右键选择Run File菜单
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imgs/intro/run-file-console.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+运行结果
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+在Netbeans中运行文件
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Eclipse
+\end_layout
+
+\begin_layout Standard
+Eclispe是当下非常流行的Java开发IDE环境，以丰富的插件著称，详情可以访问Eclipse的官网：
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.eclipse.org"
+target "http://www.eclipse.org"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+安装Eclipse可以有两种方式：
+\end_layout
+
+\begin_layout Enumerate
+直接在ubuntu执行命令：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ sudo apt-get install eclipse
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+在eclipse的官网下载相应于你的环境（32位或者64位）的合适版本，一般下载最新的稳定版即可。eclipse是绿色软件，直接解压缩运行其中的eclipse文
+件即可。
+\end_layout
+
+\begin_layout Standard
+eclipse的具体用法和Netbeans大同小异，不再赘述。
+\end_layout
+
+\begin_layout Section
+初识Java的输入输出
+\end_layout
+
+\begin_layout Standard
+C语言提供了简单的printf和scanf处理输出和输入，Java的输入输出确实要比C复杂的多。不过，我们在学习C语言的时候也花了不少的时间学习printf的格
+式化输出方式，不是吗？而Java的输出虽然形式上复杂了点，但是却不需要我们学习格式化字符串的语法了。为了学习方便，这里先给出最简单的Java输入输出方法。
+\end_layout
+
+\begin_layout Subsection
+输出到屏幕
+\end_layout
+
+\begin_layout Standard
+在屏幕上输出字符串可以直接调用
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+println
+\end_layout
+
+\end_inset
+
+方法（ln是line的缩写）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+System.out.println(“希望输出的字符串写在这里”);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们先不用理会System和out具体是什么意思（在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:面向字节的流"
+
+\end_inset
+
+我们会详细研究System以及out的用法），
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+println
+\end_layout
+
+\end_inset
+
+的意思是输出双引号内的字符串到屏幕上，并自动回车换行，这正是我们需要的。
+\end_layout
+
+\begin_layout Standard
+另外，在输出字符串到屏幕时，一般情况下我们可以忘掉C中printf函数的格式化输出，因为Java提供了更自然的字符串输出方式：直接使用“+”将多个字符串连接起来
+即可
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:拼接字符串"
+
+\end_inset
+
+我们会更具体的讨论如何连接多个字符串。
+\end_layout
+
+\end_inset
+
+，比如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+System.out.println("variable a = " + a + ",variable b = " + b);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+从键盘输入
+\end_layout
+
+\begin_layout Standard
+从键盘输入的简便方式是使用Scanner类：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Scanner console = new Scanner(System.in);
+\end_layout
+
+\begin_layout Plain Layout
+
+int quantity = console.nextInt();
+\end_layout
+
+\begin_layout Plain Layout
+
+double num = console.nextDouble();
+\end_layout
+
+\begin_layout Plain Layout
+
+String str = console.nextLine();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+同样的，我们在这里先忽略System.in的含义，只需要了解console.nextInt()的意思是从键盘获取一个整数，console.nextDouble的意思是
+从键盘获取一个双精度数字即可。Scanner类的常用函数如表
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Scanner的常用函数"
+
+\end_inset
+
+所示：
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="30line%">
+<column alignment="center" valignment="top" width="60line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+函数名称
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+功能描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nextInt()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+读入下一个整数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nextShort()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+读入下一个短整数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nextLong()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+读入下一个长整数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nextFloat()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+读入下一个浮点数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nextDouble()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+读入下一个双精度浮点数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+next()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+读入下一个token（空白字符隔开的字符串）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nextLine()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+读入下一行
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Scanner的常用函数
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Scanner的常用函数"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+我们会发现，几乎每个Java类都需要创建一个main方法，Idea提供了“模板”机制帮助我们快速创建main方法：尝试在一个类的内部敲入psvm并按回车键看看，
+如下图所示：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/intro/idea-psvm.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+psvm
+\end_layout
+
+\end_inset
+
+: 分别是public static void main的第一个字母。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Java的输入输出
+\end_layout
+
+\begin_layout Example
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "IODemo.java"
+
+\end_inset
+
+，我们从键盘输入什么，就在屏幕上打印出什么。
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/intro/src/IODemo.java"
+lstparams "caption={IODemo.java},label={IODemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写程序，在屏幕打印10行“Hello，Java！”。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写程序，在屏幕上显示如下的图形
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:编写程序，在屏幕上显示如下的图形："
+
+\end_inset
+
+[参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+solutionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "solu:的一个实现如下所示："
+
+\end_inset
+
+]：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename imgs/intro/exe-logo-asterisks.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+熟悉一下常用的Idea快捷键，具体可以参照
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendixname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "chap:Idea的常用快捷键"
+
+\end_inset
+
+。记住一些常用快捷键可以大大提高开发和学习的效率，因此下些功夫练习一下还是值得的。
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,63 @@
+#\DeclareLyXModule{技巧inset}
+#DescriptionBegin
+# To insert a tip environment.
+# Please insert tip from menu:insert->insert custom inset->Tip
+#DescriptionEnd
+# Author : Su Baochen<subaochen@126.com>
+
+Format 49
+
+InsetLayout 	Flex:Tip
+LyXType 	custom
+Labelstring    	技巧
+Decoration  	classic
+LabelFont
+  Color   	collapsable
+  Size    	Small
+EndFont
+MultiPar    	true
+LatexName   	Tip
+LatexType   	Environment
+Preamble
+  \usepackage{tikz}
+  \usetikzlibrary{calc}
+  \usepackage{color}
+  \usepackage[framemethod=tikz]{mdframed}
+  % see http://www.bakoma-tex.com/doc/fonts/fourier/fourier-orns.pdf
+  \usepackage{fourier-orns}
+  \definecolor{tipColor}{named}{black}%TODO：printed book can not deal with color
+\tikzset{
+    tipsymbol/.style={
+        rectangle,
+        draw=tipColor,
+        fill=white,
+        scale=1,
+        overlay}
+}
+\global\mdfdefinestyle{tip}{%
+  hidealllines=true,leftline=true,
+  skipabove=12,skipbelow=12pt,
+  innertopmargin=0.4em,%
+  innerbottommargin=0.4em,%
+  innerrightmargin=0.7em,%
+  rightmargin=0.7em,%
+  innerleftmargin=1.7em,%
+  leftmargin=0.7em,%
+  middlelinewidth=.2em,%
+  linecolor=tipColor,%
+  fontcolor=tipColor,%
+  firstextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[tipsymbol] {\textxswdown};},%
+  secondextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[tipsymbol] {\textxswdown};},%
+  middleextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[tipsymbol] {\textxswdown};},%
+  singleextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[tipsymbol] {\textxswdown};}%
+ }
+
+\newmdenv[style=tip]{Tip}
+
+EndPreamble
+End
+

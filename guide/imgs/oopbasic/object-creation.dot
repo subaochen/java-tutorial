@@ -1,0 +1,13 @@
+digraph G {
+    rankdir=LR;
+    node[fontsize=12,style="filled",color="skyblue"];
+    edge[fontsize=12,color="darkgreen"];
+
+    start[label="new Point()"];
+    mem_alloc[label="分配空间，设置属性的默认值"];
+    recursive_parent[label="递归的构造父类对象"];
+    init_local_fields[label="初始化本类属性"];
+    call_constructor[label="调用本类相应的构造方法"];
+
+    start->mem_alloc->recursive_parent->init_local_fields->call_constructor;
+}

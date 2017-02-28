@@ -1,0 +1,8052 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-bytype
+theorems-chap-bytype
+coderemarks
+note-inset
+tip-inset
+warning-inset
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #d8daeb
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+面向对象编程基础
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:面向对象的基本概念"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/oop.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+再说C语言的struct
+\end_layout
+
+\begin_layout Subsection
+struct的起源
+\end_layout
+
+\begin_layout Standard
+C语言以简练、灵活、高效著称，但是C语言本身提供的基本数据类型有限，描述现实世界的能力自然也有限。比如要求输入班级同学的英语和数学成绩并按照平均成绩排序
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这个例子不恰当，排序任务脱离了对象本身，是否换成画图 or animal，涉及到各种图形和图形的操作？
+\end_layout
+
+\end_inset
+
+，如果我们仅使用C的基本数据类型来设计的话，大概能想到的策略有如下几种：
+\end_layout
+
+\begin_layout Enumerate
+每个同学都用三个变量来表示：zhangsan_name, zhangsan_english, zhangsan_math, wangwu_name,
+ wangwu_english, wangwu_english......。如果班级有40位同学，这需要120个变量来表达，不仅容易写错，还不胜其烦！这个思路显然值得商榷，
+为下策。
+\end_layout
+
+\begin_layout Enumerate
+使用数组来分别存储同学的名字、英语成绩和数学成绩，比如下面的代码片段：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+char* name[40];
+\end_layout
+
+\begin_layout Plain Layout
+
+float english_score[40];
+\end_layout
+
+\begin_layout Plain Layout
+
+float math_score[40];
+\end_layout
+
+\end_inset
+
+使用数组极大减少了变量的数量，但是也存在一个问题，我们其实隐含了这样一条规则：name数组的第i个元素（同学）的英语成绩是english_score数组的第i个
+元素，数学成绩是math_score数组的第i个元素。也就是说，这三个数组的对应元素有一一映射的关系。这个一一映射的关系是需要我们程序员自己维护的，也就是说，如
+果我们破坏了这一隐含的规则，无论有意还是无意，编译器并不能帮助我们发现这个“破坏”，因为从语法上，不符合这个隐含规则也是允许的，这即为程序员带来了负担，也为程序
+埋下了隐患。可以看出，带来这些问题的关键原因是三个数组的一一映射关系不是
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+语法级别的映射
+\end_layout
+
+\end_inset
+
+，编译器无法
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+从语法上保证和检查
+\end_layout
+
+\end_inset
+
+这三个数组是否遵循了一一映射的关系，这就是C语言引入struct概念的原因：将变量之间的映射关系语法化，我们看使用struct如何解决这个问题。
+\end_layout
+
+\begin_layout Enumerate
+使用struct描述同学们的英语和数学成绩，代码片段如下：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+struct score{
+\end_layout
+
+\begin_layout Plain Layout
+
+    char* name;
+\end_layout
+
+\begin_layout Plain Layout
+
+    float english_score;
+\end_layout
+
+\begin_layout Plain Layout
+
+    float math_score;
+\end_layout
+
+\begin_layout Plain Layout
+
+    float avg_score;/*平均成绩*/
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+struct score stu_scores[40];
+\end_layout
+
+\end_inset
+
+struct在语法上保证了name、english_score、math_score这三个变量是一一映射的，是score结构体的“成员分量”，因此struct在
+语法上保证了名字和成绩不可能张冠李戴，杜绝了可能存在的隐患，也减轻了程序员的思想负担（不需要时刻提醒自己要维护姓名和成绩的映射关系）。所以，struct是C语言
+的重要组成部分，是C语言描述现实世界的重武器，在大型项目中大量使用struct来表达同类事物的共同特征（属性）。比如打开Linux内核源代码的头文件目录，我们随
+处可见大量的struct定义：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+struct font_desc {
+\end_layout
+
+\begin_layout Plain Layout
+
+    int idx;
+\end_layout
+
+\begin_layout Plain Layout
+
+    const char *name;
+\end_layout
+
+\begin_layout Plain Layout
+
+    int width, height;
+\end_layout
+
+\begin_layout Plain Layout
+
+    const void *data;
+\end_layout
+
+\begin_layout Plain Layout
+
+    int pref;
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+因此，我们可以这样定义struct：
+\end_layout
+
+\begin_layout Definition
+struct是对一类事物公共属性的描述。
+\end_layout
+
+\begin_layout Subsection
+struct的局限性
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:struct的局限性"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C语言通过struct大大扩充了C的数据类型，每一个struct都定义了一种新的数据类型来对应客观世界的某种事物，这样C语言不但描述客观世界的能力大大加强了，C
+语言程序的可读性、可维护性也大大提高了。
+\end_layout
+
+\begin_layout Standard
+C语言能够更好的描述客观世界，可以给struct记大功一件。但是，我们描述客观世界的目的是认识世界并进而改造世界，struct仅仅是方便了描述世界，对于改造世界
+并没有多大帮助。比如回到我们本章开头的问题：我们不仅仅要输入同学们的成绩，还要按照平均成绩排序。这里至少包含两个方面的“认识世界”和“改造世界”世界的动作：
+\end_layout
+
+\begin_layout Enumerate
+计算平均成绩：这是属于进一步认识世界的范畴：根据已有的事物属性，我们可以计算和推断出新的属性。
+\end_layout
+
+\begin_layout Enumerate
+按照平均成绩排序：这是属于改造世界的范畴：对已有事物重新组合排序。
+\end_layout
+
+\begin_layout Standard
+struct帮助我们很好的描述了同学们的名字和成绩的对应关系，但是计算平均成绩和按照成绩排序这两个“动作”，在C语言中是通过独立的函数来实现的，比如下面的代码片
+段：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void calculate_avg_score(struct score* score) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    /*按照某种权重算法计算平均成绩并保存到score.avg_score中*/
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+struct score[] sort_score(struct score* scores[]) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   /* 将数组scores排序后返回新的struct score数组*/
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，calculate_avg_score函数和sort_score函数虽然都和struct score有关系（作为参数或者返回值），但是这种关系是“弱关
+系”，因为calcuate_avg_score、sort_score可以没有定义，可以存在于另外的文件中，可以被定义为另外的名称等等。也就是说，在语法上，str
+uct score和这两个函数并没有必然的联系，编译器没有办法帮助程序员检查这两个函数和struct score的映射关系，一切还需要程序员人工的
+\begin_inset Quotes erd
+\end_inset
+
+细心
+\begin_inset Quotes erd
+\end_inset
+
+照料。显然，struct一定程度上解决了描述世界的问题，但是没有解决认识世界和改造世界的问题。
+\end_layout
+
+\begin_layout Section
+类和对象的初步概念
+\end_layout
+
+\begin_layout Subsection
+类是struct概念的自然延伸
+\end_layout
+
+\begin_layout Standard
+C中的struct实现了对客观事物属性的分组描述，即同一类型的客观事物的属性可以用一个struct来表达。正如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:struct的局限性"
+
+\end_inset
+
+所述，struct有其局限性，只能描述客观事物的属性，不能表达对客观事物的进一步认知动作和改造利用的动作，于是在面向对象的程序设计语言中引入“类”的概念弥补st
+ruct的这一缺陷。
+\end_layout
+
+\begin_layout Definition
+类是对一类客观事物公共
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+
+和
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+动作
+\end_layout
+
+\end_inset
+
+的描述。
+\end_layout
+
+\begin_layout Standard
+对比struct我们可以看出，类比struct多了“动作”的描述，也就是说，类即可以描述事物的属性，也可以描述我们可以对（用）这类事物“做什么”，是对客观世界的
+完整的描述。Java使用
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+class
+\end_layout
+
+\end_inset
+
+关键字来定义类，一个简单的只包含属性的类和struct非常相似，比如二维坐标中的“点”，一开始可以这样定义(右边作为对照，列出了C中point结构体的定义)：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java的Point类定义
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+class Point {
+\end_layout
+
+\begin_layout Plain Layout
+
+    int x; // 点的x坐标
+\end_layout
+
+\begin_layout Plain Layout
+
+    int y; // 点的y坐标
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+C的point结构体定义
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+struct point {
+\end_layout
+
+\begin_layout Plain Layout
+
+    int x; /*点的x坐标*/
+\end_layout
+
+\begin_layout Plain Layout
+
+    int y; /*点的y坐标*/
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+但是如果只是使用class替换了struct关键字，显然没有发挥类描述客观事物的最大威力，因此一个更合理的Point类如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Point.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub321/Point.java"
+lstparams "caption={Point.java},label={Point.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，在这个版本的Point类定义中，“点”的属性（x，y）和对点的操作moveTo封装在一起了。
+\end_layout
+
+\begin_layout Subsection
+对象的概念
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+画图说明更清晰
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement r
+overhang 0in
+width "30line%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/point-monitor.eps
+	lyxscale 20
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+类和实例的关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:类和实例的关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+类是对一类事物的抽象描述，比如Point类是对二维坐标“点”的抽象描述，它表达了屏幕上的一个点所具有的公共属性：x坐标和y坐标，以及我们可以对“点”的操作，比如
+moveTo操作。但是，Point类并没有和屏幕上的实体点绑在一起，屏幕上的每一个实体点，可以看作Point类的一个具体
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+实例
+\end_layout
+
+\end_inset
+
+，都具有Point类给出的一些属性，在这里就是屏幕上的每一个实体点都有相应的x、y坐标。我们把实体点叫做类Point的
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+实例（instance）
+\end_layout
+
+\end_inset
+
+，或者叫做类Point的
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+对象
+\end_layout
+
+\end_inset
+
+。
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+对象就是实例，实例就是对象
+\end_layout
+
+\end_inset
+
+。可以看出，一个类可以创建若干实例，所有实例（对象）都具有类中定义的属性，只是属性的值各不相同而已，一般称作对象的状态不同。比如，点(1,2),(3,5),(1
+0,50)都是Point的实例。
+\end_layout
+
+\begin_layout Standard
+在这里有必要进一步澄清一下常见的几种说法：
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+类（class）
+\end_layout
+
+\end_inset
+
+就是类型的意思，定义了一个类，就是定义了一个新的数据类型，表达某种事物的公共属性和方法，我们可以根据类创建多个实例（对象）。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+对象（object）即类的实例
+\end_layout
+
+\end_inset
+
+。如果把类看作数据类型，则对象可以看作变量。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+对象的属性（property）即为类的“成员分量”
+\end_layout
+
+\end_inset
+
+（借用struct的叫法），即类中定义的变量。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+对象的方法（method）即为类中定义的函数
+\end_layout
+
+\end_inset
+
+ 。由于这些函数往往是操作类的属性的某种方法，因此大家习惯上称为对象的方法。
+\end_layout
+
+\begin_layout Standard
+在java中，通过new操作符创建类的实例（对象），比如new Point（）创建了一个“点”的实例（对象）。和C语言中访问struct的成员变量类似，访问Ja
+va对象的属性和方法是通过
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+.
+\end_layout
+
+\end_inset
+
+运算符实现的
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+和C语言不同的是，由于Java中没有提供指针，在Java中不存在->运算符。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub321/Draw.java"
+lstparams "caption={Draw.java},label={sub311-Draw.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在程序中，我们通过new操作符创建了2个Point类的对象one和two，并设置了两个对象的状态（即x、y坐标），然后打印出两个对象的状态。
+\end_layout
+
+\begin_layout Example
+根据已有的Point类，编写一个Rectangle和Circle类，并能够计算Rectangle和Circle的面积
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/sub322
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+问题分析
+\end_layout
+
+\begin_layout Standard
+矩形（Rectangle）是由一个点和长、宽决定的，圆形（Circle）是由一个点和半径决定的，因此我们可以在Point类的基础上定义Rectangle和Cir
+cle类。
+\end_layout
+
+\begin_layout Paragraph*
+设计说明
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub322-Rectangle.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub322-Circle.java"
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub322/Rectangle.java"
+lstparams "caption={Rectangle.java},label={sub322-Rectangle.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub322/Circle.java"
+lstparams "caption={Circle.java},label={sub322-Circle.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+主类Draw.java的设计参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub322-Draw.java"
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub322/Draw.java"
+lstparams "float,caption={Draw.java},label={sub322-Draw.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+显示结果
+\end_layout
+
+\begin_layout Standard
+执行文件Draw.java的结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+rect1's area=100
+\end_layout
+
+\begin_layout Plain Layout
+circle1's area=314.159
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+程序说明
+\end_layout
+
+\begin_layout Standard
+注意到我们在Rectangle中使用Point类定义一个startPoint对象的同时初始化了这个对象，即通过new Point()创建了一个空的Point对象
+。这是必要的，因为我们在Draw.java中创建一个Rectangle对象rect1后，通过rect1.startPoint.x设置startPoint的x坐标。如果
+不在Rectangle中创建空的Point对象，则rect1.startPoint.x操作会报告著名的
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+NPE
+\end_layout
+
+\end_inset
+
+（NullPointException：空指针）异常：
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Exception in thread "main" java.lang.NullPointerException
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.oopbasic.sub322.Draw.main(Draw.java:7)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+对象的创建过程
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:对象的创建过程"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当我们使用new Point()创建一个Point类的对象时，Java是如何创建这个对象的呢？
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+画图表示类的创建过程
+\end_layout
+
+\end_inset
+
+实际上，Java创建对象的过程如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:对象的构造过程"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/object-creation.eps
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+对象的构造过程
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:对象的构造过程"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这里我们暂且不讨论“递归的构造父类对象”这个话题（留待
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:再说构造方法"
+
+\end_inset
+
+再讨论），其他的几个步骤是指：
+\end_layout
+
+\begin_layout Itemize
+步骤1：分配空间。我们已经看到，相对于简单的数据类型，Java的对象往往是个复杂的数据结构，其中除了一些基本的数据类型的属性之外，还可能包含其他的对象（比如Re
+ctangle中包含了Point）以及方法代码，因此创建Java对象的第一步是为这些数据和方法分配内存空间。分配内存空间后，类中的基本数据类型属性会被自动设置为
+默认值：数字类型的属性默认值为0（或者0.0），boolean类型的默认为false，字符类型的默认为''（这里是两个单引号，和C语言中的用法一样，表示空字符）
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这些需要验证或者查证： 如何通过示例验证？
+\end_layout
+
+\end_inset
+
+。如果使用类作为属性，则默认为null。
+\end_layout
+
+\begin_layout Itemize
+步骤3：初始化本类属性。如果本类的属性在定义时由初始化表达式，则使用该表达式初始化属性。比如
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int x = 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+Point startPoint = new Point();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+步骤4：调用本类的构造方法，这是本节的重点。
+\end_layout
+
+\begin_layout Subsection
+构造方法
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:构造方法"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+构造方法的用途，我们在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:对象的构造过程"
+
+\end_inset
+
+中已经看到了，那么如何定义构造方法呢？简单的说，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+构造方法就是和类同名并且没有返回值的方法
+\end_layout
+
+\end_inset
+
+。这里有两个关键点：一是构造方法的方法名必须和类名完全相同，包括大小写。二是构造方法不需要返回值，也不允许有返回值。
+\end_layout
+
+\begin_layout Subsection
+默认的构造方法
+\end_layout
+
+\begin_layout Standard
+可是，我们在以前的类中，并没有看到构造方法，是怎么回事呢？原来，如果一个类没有定义任何的构造方法，java编译器会自动增加（插入）一个“默认的构造方法”，即不带
+任何参数的空的构造方法。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要验证在类继承环境下，默认构造方法是否自动调用父类的构造方法？
+\end_layout
+
+\end_inset
+
+也就是说，我们new Point()创建一个对象的时候，最后一步会调用Point类的无参构造方法。如果Point类没有提供这样的构造方法，则调用Point类的默
+认构造方法。
+\end_layout
+
+\begin_layout Standard
+当然，我们也可以“主动”为Point编写一个无参的构造方法，这样new Point()的最后一步就是调用我们自己编写的构造方法而非默认构造方法了。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+重新起一个包，实现所有的无参构造方法。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+注意无参构造方法和默认构造方法的区别：默认构造方法一定是无参的构造方法，但是无参的构造方法不一定是默认构造方法。当一个类没有显式的定义任何构造方法时，编译器自动
+添加默认构造方法；当一个类有任何的构造方法时，编译器都不会自动添加默认构造方法。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+编写程序，覆盖Point类的默认构造方法，为Point对象提供默认的(x,y)坐标为(10,10)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整代码参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/sub332
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+设计说明
+\end_layout
+
+\begin_layout Standard
+这里只列出Point.java和Draw.java两个文件，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub332-Point.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub322-Draw.java"
+
+\end_inset
+
+，Circle.java和Rectangle.java没有变化。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub332/Point.java"
+lstparams "float,caption={Point.java},label={sub332-Point.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub332/Draw.java"
+lstparams "float,caption={Draw.java},label={sub331-Draw.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Draw.java文件结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+rect1的左上角坐标：(10,10),width=10,height=10,面积=100
+\end_layout
+
+\begin_layout Plain Layout
+circle1的原点坐标：(10,10),radius=10.0面积=314.159
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+程序分析
+\end_layout
+
+\begin_layout Standard
+在本例中，Draw.java创建Circle对象circle1的时候，并没有设置原点的坐标，但是从运行结果可以看出，原点坐标的值为（10,10），这就是Point
+类的无参构造方法的作用：当我们使用new Point()创建对象时，最后会调用Point的无参构造方法初始化对象的状态。
+\end_layout
+
+\begin_layout Subsection
+带参数的构造方法
+\end_layout
+
+\begin_layout Standard
+很多时候，我们希望在创建对象的时候就设置对象的初始状态，比如是否可以通过new Point(10,20)这样的方式，创建Point对象的同时，设置Point对象
+的x坐标为10,y坐标为20呢？这可以通过带参数的构造方法来实现。也就是说，当我们通过new Point(10,20)这样的形式创建Point对象时，最后会调用
+Point类中带两个参数的构造方法。
+\end_layout
+
+\begin_layout Example
+编写程序，使用带参数的构造方法创建Point对象
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:编写程序，使用带参数的构造方法创建Point对象"
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+完整代码参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/sub333
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+设计说明
+\end_layout
+
+\begin_layout Standard
+主类Draw.java没有变化，这里就不列出了。其他类参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub333-Point.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub333-Circle.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub333-Rectangle.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub333/Point.java"
+lstparams "float,caption={Point.java},label={sub333-Point.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub333/Circle.java"
+lstparams "float,caption={Circle.java},label={sub333-Circle.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub333/Rectangle.java"
+lstparams "float,caption={Rectangle.java},label={sub333-Rectangle.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Draw.java结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+rect1的左上角坐标：(20,20),width=10,height=10,面积=100
+\end_layout
+
+\begin_layout Plain Layout
+circle1的原点坐标：(0,0),radius=10.0面积=314.159
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+当一个类中定义了任何的构造方法后，编译器就不会自动创建默认的构造方法了。比如Point类中，如果定义了Point的有参构造方法而没有定义无参构造方法，此时Poi
+nt类没有默认构造方法，自然new Point()方式创建Point对象时会因为找不到无参的构造方法而报错。如何解决这个问题呢？请参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:多个构造方法"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+多个构造方法
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:多个构造方法"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java允许在类中定义多个构造方法，以便根据不同的情况初始化对象为不同状态。
+\end_layout
+
+\begin_layout Example
+编写程序，给Point类定义两个构造方法
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/sub334
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+设计说明
+\end_layout
+
+\begin_layout Standard
+主类Draw.java和Rectangle.java和例
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:编写程序，使用带参数的构造方法创建Point对象"
+
+\end_inset
+
+相同，这里仅列出Point.java和Circle.java，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub334-Point.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub334-Circle.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub334/Point.java"
+lstparams "float,caption={Point.java},label={sub334-Point.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/sub334/Circle.java"
+lstparams "float,caption={Circle.java},label={sub334-Circle.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Draw.java结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+rect1的左上角坐标：(10,10),width=10,height=10,面积=100
+\end_layout
+
+\begin_layout Plain Layout
+circle1的原点坐标：(0,0),radius=10.0面积=314.159
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+程序说明
+\end_layout
+
+\begin_layout Standard
+Point类现在有两个构造方法，我们在Circle.java调用了Point的有参构造方法，在Rectangle.java中调用了Point的无参构造方法。
+\end_layout
+
+\begin_layout Subsection
+再说对象的初始化
+\end_layout
+
+\begin_layout Standard
+通过以上分析我们可以看出，构造方法的目的是为了
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+创建对象时设置对象的初始状态
+\end_layout
+
+\end_inset
+
+，因此一个类需要多少个构造方法并没有一定之规，需要根据实际情况来确定。通常，在一开始设计一个类的时候，建议覆盖默认的构造方法即无参构造方法，提供一个默认的对象状
+态。随着开发的深入，可以根据实际情况添加更多的构造方法。
+\end_layout
+
+\begin_layout Standard
+除了通过构造方法设置对象的初始状态外，也可以通过以下的方式进行对象的初始化操作：
+\end_layout
+
+\begin_layout Itemize
+在创建对象后，直接访问对象的属性并设置希望的值。
+\end_layout
+
+\begin_layout Itemize
+在创建对象后通过setter方法设置对象的状态。所谓setter方法，往往是一系列setX，setY方法，其中的X、Y为对象的属性。
+\end_layout
+
+\begin_layout Itemize
+在JavaEE环境下，可以提供一个初始化方法，比如void init()，然后通过注解@PostConstruct的方式实现对象的初始化。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+定义有参构造方法时，要注意参数的个数不要太多，一般不要超过10个。太多的参数往往给使用者带来记忆和匹配的负担。如果需要大量的对象初始化操作，建议编写专门的方法初
+始化对象（比如init()方法就是一个很好的方法名字），然后在创建对象后调用这个init方法即可。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+类的组织：包
+\end_layout
+
+\begin_layout Subsection
+包的概念
+\end_layout
+
+\begin_layout Standard
+在进行文件管理时，我们使用文件夹来组织不同类型的文件。在Java中，我们使用“包”(package）来管理不同类型的Java源文件，其实“包”就是文件夹，我们说
+包cn.edu.sdut.softlab.oopbasic.sub332中的Point.java时，其实是说，位于目录cn/edu/sdut/softlab/oopbasi
+c/sub332目录下的Point.java。也就是说，把目录的分隔符换成“.”，目录名就变成了包名。
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:本章示例代码的目录层级结构"
+
+\end_inset
+
+是本章的主要示例代码的目录层级结构:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/package-tree.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+本章示例代码的目录层级结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:本章示例代码的目录层级结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+包的导入和声明
+\end_layout
+
+\begin_layout Standard
+有了包的概念后，我们就可以使用
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+import
+\end_layout
+
+\end_inset
+
+导入其他包中的Java源代码，这很像C语言中的include关键字的作用。比如下面的代码片段，我们导入了java.util包中的Date类（时间处理类）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+import java.util.Date;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class DateTest {
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Date today = new Date();
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("today is " + today);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+关于包的导入（import），需要注意以下几个方面：
+\end_layout
+
+\begin_layout Itemize
+如果一个Java源代码在一个包中，则这个Java源代码应该首先使用
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+package
+\end_layout
+
+\end_inset
+
+声明自己所在的包，正如本章所有的例子一样，在代码的开头几乎都一句package语句声明了包。建议回顾一下本章学过的例子，重点放在包的命名上面，了解如何在Java
+源代码文件中声明包。
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+只有声明（package）了包的Java源代码，才能够被导入进来
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+如果Java源代码中没有package声明语句，则编译器认为Java文件在
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+默认包
+\end_layout
+
+\end_inset
+
+中，即src根目录下，这通常不是一个好的习惯。
+\end_layout
+
+\begin_layout Itemize
+显然，import应该放在class的定义前面。
+\end_layout
+
+\begin_layout Itemize
+在同一个包下的Java源代码不需要导入（import）。
+\end_layout
+
+\begin_layout Itemize
+Java的核心API，即java.lang包的类，Java编译器会自动导入，也不需要我们手工导入。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在Idea IDE环境下，在使用到一个其他包的Java类时，有两种方式自动导入相应的包：
+\end_layout
+
+\begin_layout Itemize
+使用菜单：code->optimize imports，让Idea自动导入需要的包。
+\end_layout
+
+\begin_layout Itemize
+鼠标移动到未识别的类上面，Idea会给出导入的提示，选择合适的包导入即可。注意，如果Idea给出了多个选择（意味着在多个包中都有这个类），此时要认真甄别要导入的
+包。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Warning
+status open
+
+\begin_layout Plain Layout
+根据Google编码规范（参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:不使用通配符import"
+
+\end_inset
+
+），尽量避免import package.*这样的用法。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+包的命名原则
+\end_layout
+
+\begin_layout Standard
+我们使用包的目的是把Java文件按照逻辑组织起来
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+形式上看是这样，但是包的真正意义和Java虚拟机的类加载机制有关，这里不深入探讨，有兴趣的读者可以参考ClassLoader的相关资料。
+\end_layout
+
+\end_inset
+
+，同时也起到了“隔离”的作用，即不同包中的类即使名字相同也是可以的。或者说，以后我们提到一个类，应该连同它的包一起来考虑，即某某包的某某类。因此，当我们给包起名
+字的时候就要谨慎考虑，最好能够做到你起的包名是全球唯一的，这样你的包里面的类也就是全球唯一的了。而全球唯一的资源，很容易就想到了“域名”，于是通用的和建议的包命
+名规则
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见JLS：http://docs.oracle.com/javase/specs/jls/se8/html/jls-6.html#jls-6.1
+\end_layout
+
+\end_inset
+
+是按照域名的反向
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+为什么要将通常的域名反向排列形成包名呢？我们阅读的顺序是从左向右的，当谈到一个组织结构时，习惯上也是按照从左向右降序排列的，比如山东省淄博市张店区。因此，在命名
+包时把域名的顺序反向过来，更符合人们的阅读和理解习惯。当然，这不是Java的语法规定，只是“约定俗成”，入乡随俗也体现了一个程序员的素质。
+\end_layout
+
+\end_inset
+
+来命名，比如你的域名是lab.company.com，则包的命名可以是：
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+com.company.lab
+\end_layout
+
+\end_inset
+
+。下面是一些典型的包命名示范：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+com.google.android
+\end_layout
+
+\begin_layout Plain Layout
+cn.edu.sdut.java.lesson
+\end_layout
+
+\begin_layout Plain Layout
+org.apache.log4j
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+根据Google的编码规范（参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:包名"
+
+\end_inset
+
+），包的名字应该都使用小写字母，并避免使用下划线。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+类的继承
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+消除冗余，代码复用
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:类的继承"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在编程实践中，我们应该力求消除冗余，即不存在两片相同的代码。比如下面的代码片段：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void method1() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    doSomething();
+\end_layout
+
+\begin_layout Plain Layout
+
+    foo();
+\end_layout
+
+\begin_layout Plain Layout
+
+    bar();
+\end_layout
+
+\begin_layout Plain Layout
+
+    foobar();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void method2() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    doSomeOtherThing();
+\end_layout
+
+\begin_layout Plain Layout
+
+    foo();
+\end_layout
+
+\begin_layout Plain Layout
+
+    bar();
+\end_layout
+
+\begin_layout Plain Layout
+
+    foobar();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们应该这样消除冗余：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void method1() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    doSomething();
+\end_layout
+
+\begin_layout Plain Layout
+
+    fun();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void method2() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    doSomeOtherThing();
+\end_layout
+
+\begin_layout Plain Layout
+
+    fun();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void fun() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    foo();
+\end_layout
+
+\begin_layout Plain Layout
+
+    bar();
+\end_layout
+
+\begin_layout Plain Layout
+
+    foobar();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+虽然后一种方式多定义了一个方法fun()，但是好处显而易见：软件的逻辑性（可读性）和可维护性提高了。如果需要对fun()的流程做任何修改，我们现在只需要在fun
+()方法中修改即可。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Tip
+status collapsed
+
+\begin_layout Plain Layout
+主流的IDE现在都支持对代码进行类似的“重构”(refactor)。比如在Idea中，可以选择一段“重复”的代码，然后通过菜单Refactor->Introdu
+ce->Method...让IDE自动寻找这段重复的代码，一次性抽象出一个方法，这样就消除了代码的冗余。
+\end_layout
+
+\end_inset
+
+增加Idea使用refactor的方法
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+上面代码消除冗余是建立在方法层面上的，在类的层面上应该如何消除冗余呢？比如有如下的两个类：BankCard.java和CreditBandCard.java。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step1/BankCard.java"
+lstparams "float,caption={BankCard.java},label={step1-BankCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step1/CreditCard.java"
+lstparams "float,caption={未使用继承的CreditCard.java},label={step1-CreditBankCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+很明显，CreditBankCard具有BankCard的大部分属性和方法，从尽力消除冗余的角度看，这样的代码太“丑陋”了！java提供了“继承”机制解决了这个
+问题，先看一下代码的实现：BankCard.java的代码没有变化，这里只列出CreditCard.java的代码，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "step2-CreditBankCard.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step2/CreditCard.java"
+lstparams "float,caption={使用了继承的CreditCard.java},label={step2-CreditBankCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，CreditBankCard扩展（extends）了BankCard类：CreditCard自动具有BankCard的属性和方法，只需要在Credit
+Card中定义专属的属性和方法即可。
+\end_layout
+
+\begin_layout Standard
+这就是Java等面向对象程序设计语言的“继承”机制。简单的说，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+继承机制消除了代码的冗余，提高了代码的复用水平
+\end_layout
+
+\end_inset
+
+。继承是面向对象程序设计的重要手段，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:单继承"
+
+\end_inset
+
+进一步分析继承在编程实践中的应用和注意事项。
+\end_layout
+
+\begin_layout Subsection
+单继承
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:单继承"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BankCard的类层次结构"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+这样表示类层次关系的图叫做UML的类图。UML（Universal Model Language，统一建模语言）是IT行业中通用的描述需求和系统设计的建模工具，
+其中常用的图形有：类图、用例图、顺序图、活动图等，本书中只涉及到类图，用来表达类的继承和接口的实现。类图的意义应该是一目了然的，箭头表示类继承的方向，比如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BankCard的类层次结构"
+
+\end_inset
+
+中，CreditCard指向了BankCard即表示CreditCard是从BankCard继承下来的。绘制UML图的工具有很多，本书采用的是umbrello和
+dia，参见本书前言部分的说明。
+\end_layout
+
+\end_inset
+
+的继承关系中，我们把BankCard类称作
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+父类
+\end_layout
+
+\end_inset
+
+，或者超类，把CreditCard、DebitCard类称作
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+子类
+\end_layout
+
+\end_inset
+
+。CreditCard和DebitCard继承了BankCard的属性和方法，并各自扩展了相应的属性和方法（DebitCard只扩展了属性，并没有扩展方法）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/bankcard-hirarchy.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BankCard的类层次结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BankCard的类层次结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+Java只支持单继承，即一个类只允许有一个父类。绕过这个限制的办法是使用接口，请参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:接口"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+再说构造方法
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:再说构造方法"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:对象的创建过程"
+
+\end_inset
+
+中，我们已经看到创建对象的第二步是递归的构造父类对象。我们仍然以银行卡为例来看一下所谓的“递归的构造父类对象”的含义。为了清楚期间，我们增加了一个类的层级结构，
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:银行卡的类层级结构"
+
+\end_inset
+
+所示。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+银行卡的程序示例代码较多，作为一个例子处理如何？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/bankcard-full-hirarchy.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+银行卡的类层级结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:银行卡的类层级结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "step3-Card.java"
+
+\end_inset
+
+可以看出，Card类只定义了所有卡都有的基本属性：卡号。另外，显式定义了无参的构造方法，如果被调用的话，只是打印出一条提示信息。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step3/Card.java"
+lstparams "float,caption={增加无参构造方法的Card.java},label={step3-Card.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+BankCard、CreditCard、DebitCard的设计思路类似，都是增加了一个无参的构造方法，打印出一条提示信息，如果被调用到的话。在Client类中
+，我们分别创建了CreditCard和DebitCard对象，注意观察构造方法的调用顺序。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step3/BankCard.java"
+lstparams "float,caption={带有无参构造方法的BankCard.java},label={step3-BankCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step3/CreditCard.java"
+lstparams "float,caption={带有无参构造方法的CreditCard.java},label={step3-CreditCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step3/DebitCard.java"
+lstparams "float,caption={带有无参构造方法的DebitCard.java},label={step3-DebitCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step3/Client.java"
+lstparams "float,caption={Client.java},label={step3-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+执行Client.java的结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Card constructor called
+\end_layout
+
+\begin_layout Plain Layout
+BankCard constructor called
+\end_layout
+
+\begin_layout Plain Layout
+CreditCard constructor called
+\end_layout
+
+\begin_layout Plain Layout
+Card constructor called
+\end_layout
+
+\begin_layout Plain Layout
+BankCard constructor called
+\end_layout
+
+\begin_layout Plain Layout
+DebitCard constuctor called
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，所谓的“递归的构造父类对象”是指：
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+当初始化子类对象时，从上往下依次调用父类的同名构造方法
+\end_layout
+
+\end_inset
+
+，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:构造方法的递归调用"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/object/constructor-chain.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+构造方法的递归调用
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:构造方法的递归调用"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+在递归构造父类对象的“链条”中，如果其中一环缺失会怎样？请读者自行练习找到此问题的答案：将导致语法错误。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里应该有习题
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+方法的覆盖和重载
+\end_layout
+
+\begin_layout Standard
+方法的覆盖（override）和重载（overload）是面向对象编程中两个重要且容易混淆的概念，因此这里单独拿出来讨论一下。
+\end_layout
+
+\begin_layout Subsubsection
+方法重载
+\end_layout
+
+\begin_layout Standard
+Java中的方法重载（overload）是指在一个类中允许存在
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+多个名字相同但是参数不同的方法
+\end_layout
+
+\end_inset
+
+。这里所谓的“参数不同”有如下的几种情形：
+\end_layout
+
+\begin_layout Itemize
+参数个数不同
+\end_layout
+
+\begin_layout Itemize
+参数类型不同
+\end_layout
+
+\begin_layout Itemize
+参数个数和类型都不相同
+\end_layout
+
+\begin_layout Standard
+如果我们把方法的参数看做一个控制系统的“输入条件”，那么方法的重载意味着同一个动作在不同的输入条件下的表现如何？
+\end_layout
+
+\begin_layout Example
+使用方法重载设计一个计算器类。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Caculator.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/Caculator.java"
+lstparams "caption={Caculator.java},label={Caculator.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java中典型的方法重载场合：
+\end_layout
+
+\begin_layout Itemize
+构造方法的重载：我们在
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:多个构造方法"
+
+\end_inset
+
+中看到，可以编写类的多个构造方法，实际上就是方法的重载的具体体现。构造方法的名字都是相同的（和类名一致），不同的构造方法（参数不同）表示在不同的条件下如何创建对
+象。
+\end_layout
+
+\begin_layout Itemize
+运算符重载：Java的“+”运算符是被重载了的。我们前面已经看到，“+”运算符在不同的表达式中意义不同，用于算数表达式时表示数学运算的加法，用于两个字符串时表示
+首尾相接连接两个字符串。
+\end_layout
+
+\begin_layout Itemize
+String.valueOf方法可以接收的参数有boolean, char, char[], double, float, int, long等
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:字符串处理"
+
+\end_inset
+
+详细讨论String类的用法，String.value方法的形式可参考JDK API，这里暂不详细讨论。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+需要注意的是，只是参数的顺序不同以及参数的名字不同不能构成方法的重载，原因很简单，我们调用方法的时候进行形参和实参的匹配，顺序和名字并不能唯一决定形参和实参的组
+合。比如方法method(String a, String b) 和method (String c, String d)不能构成方法的重载，在Java编译器看
+来，这是两个相同的方法，因而会报告编译错误。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO：需要实例验证
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+举个生活中的例子可能更容易理解方法重载的概念和用途，
+\begin_inset Wrap figure
+lines 0
+placement r
+overhang 0in
+width "30line%"
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imgs/object/socket-plug.eps
+	lyxscale 25
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+生活中的各种插座和多用插座示例
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:生活中的各种插座和多用插座"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+比如我们知道插座有各种规格以便适用不同的电器，有的电器使用两孔插头，有的电器使用三孔插头，插头还可能分为圆形插头和扁平插头等等。正如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:生活中的各种插座和多用插座"
+
+\end_inset
+
+所示，生活中我们经常安装一种所谓的“多用插座”，即一个插座可以使用多种不同的插头，这样就免去安装很多个不同的插座的麻烦，也不需要大家记住插头和插座的对应关系，直
+接拿来用就可以了。这种“多用插座”的设计移植到程序设计上，就叫做“方法重载”（overload），即方法的名字相同（多用插座），但是参数各不相同（适用不同的插头
+），在具体使用时，程序员只需要记住少量的方法的名字，参数类型和个数由IDE自动提示即可。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+方法覆盖
+\end_layout
+
+\begin_layout Standard
+方法覆盖（override）是指子类中重新实现了父类中的同名方法，即子类方法覆盖了父类方法。这样，当调用子类对象的这个方法时，就是使用子类重新实现的方法了。否则
+，就会调用父类中的方法。因此，方法覆盖的主要用意是
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+在子类中提供父类方法的加强版，或者使用不同的逻辑重新实现
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+方法覆盖示例。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Dog.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/Dog.java"
+lstparams "caption={Dog.java},label={Dog.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+方法覆盖是Java多态的基础，具体请参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:多态"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+注意到从JDK 1.5开始，Java允许子类覆盖父类方法时，返回值可以是父类方法返回值的子类。比如：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class A{
+\end_layout
+
+\begin_layout Plain Layout
+
+    Father get(){ return null;}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+public class B extends A{
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    Son get(){ return null;}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+class Father{}
+\end_layout
+
+\begin_layout Plain Layout
+
+class Son extends Father{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+在类B中，方法get返回值类型是Son，而其父类A的get方法的返回值类型是Father，由于Son是Father的子类，因此类B的方法get也属于方法的覆盖（
+override）。
+\end_layout
+
+\begin_layout Plain Layout
+Java是如何做到这一点的呢？我们反编译B.class会发现：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Decompiled by Jad v1.5.8e.
+ Copyright 2001 Pavel Kouznetsov.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+\end_layout
+
+\begin_layout Plain Layout
+
+// Decompiler options: packimports(3) 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Source File Name: B.java
+\end_layout
+
+\begin_layout Plain Layout
+
+public class B extends A{
+\end_layout
+
+\begin_layout Plain Layout
+
+    public B() { 
+\end_layout
+
+\begin_layout Plain Layout
+
+    } 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    Son get(){ 
+\end_layout
+
+\begin_layout Plain Layout
+
+        return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+    } 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    volatile Father get(){ // 桥接方法
+\end_layout
+
+\begin_layout Plain Layout
+
+        return get();
+\end_layout
+
+\begin_layout Plain Layout
+
+    } 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+可以看出，编译器自动增加了一个所谓的“桥接方法”实现了标准的方法覆盖。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+在覆盖父类方法时，可以通过super关键字引用父类的同名方法。
+\end_layout
+
+\begin_layout Plain Layout
+构造方法中的覆盖问题
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+访问控制
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:访问控制"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当我们说到面向对象程序设计的封装时，不仅仅是指把对象的属性和方法“捏合”在了一起，也指从使用者的角度看，访问对象是受到限制的，即对象内部的状态和方法并不总是需要
+暴露给使用者的。推而广之，甚至对类的访问也可以加以限制。
+\end_layout
+
+\begin_layout Subsection
+属性和方法的访问控制
+\end_layout
+
+\begin_layout Standard
+为什么需要对属性和方法进行访问控制呢？从面向对象的设计角度看，一个对象完成了特定的功能，对象的使用者其实并不关心这个特定功能是如何实现的，只要这个功能能够正常工
+作就可以了，这就是所谓的“松耦合”（loose coupling principle）原则。考虑
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:松耦合原则"
+
+\end_inset
+
+所示的情形。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/loose-coupling-model.png
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+松耦合原则示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:松耦合原则"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当Client使用Bean组件（对象）提供的功能时，并不需要知晓Bean组件内部是如何实现的，也就是时说，Bean组件在后续进行算法完善、性能改进或者界面优化...时
+，Client的代码不需要做任何改动。Bean组件只需要对外（Client）暴露必须的调用接口（如何暴露，我们会在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:接口"
+
+\end_inset
+
+讨论），其内部实现及只在内部实现中用到的一些对象状态，应该想办法隐藏起来。换句话说，Bean组件如果对外暴露的调用接口越多，则后续改进时要考虑的因素就越多。
+\end_layout
+
+\begin_layout Standard
+Java提供了完善的访问控制策略来保护属性和方法，如表所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+也参见：http://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
+\end_layout
+
+\end_inset
+
+（形成了一个三角形排列）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+修饰词
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Class（类）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Package（包）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Subclass（子类）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+World（其他）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+protected
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+default 9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+private
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java的访问控制修饰符
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Java的访问控制修饰符"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+default修饰符
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:default修饰符"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在之前我们的代码中，属性和方法前面没有使用任何修饰符，即默认修饰符。对照
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Java的访问控制修饰符"
+
+\end_inset
+
+可以看出，default修饰的（即不使用任何修饰符）的属性和方法对同一个包内的其他类是可见的：即可以读，也可以修改。因此，default修饰符也被称为“
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+包范围
+\end_layout
+
+\end_inset
+
+”的修饰符，它以包为限界定了访问权限，这是一种很自然的权限划分，因此被Java确定为“default”（默认）情形。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Warning
+status open
+
+\begin_layout Plain Layout
+default的意思是默认修饰符，即没有在属性和方法前面指定修饰符的情形，并非要显式的指定一个“default”的修饰符。实际上，java中不存在一个名字叫做“
+default”的修饰符。因此，下文中的default均指：
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+在属性、方法、类前面不使用任何访问控制修饰符
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ac-BankCard.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ac-Client.java"
+
+\end_inset
+
+中，BankCard类中的username和password属性以及withdraw方法都是default的，因此同一个包中的Client类可以随意修改密码，随
+意取钱：
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+这太不安全了！
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/ac/BankCard.java"
+lstparams "float,caption={演示default修饰符的BankCard.java},label={ac-BankCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/ac/Client.java"
+lstparams "float,caption={Client.java},label={ac-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+执行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+BankCard constructor called
+\end_layout
+
+\begin_layout Plain Layout
+钱被取走啦!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Warning
+status open
+
+\begin_layout Plain Layout
+default修饰符意味着同一个包内的其他类都可以随意操纵你的属性和方法，这是一个危险的设置！设想一下，黑客把一个自己写的破坏性Java文件放到你的包里面，然后
+修改你的银行卡密码，盗取你的钱财...因此，default修饰符给软件的安全留了一个后门，并不是一个好的“默认值”！
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+private修饰符
+\end_layout
+
+\begin_layout Standard
+default给了同一个包下的其他类“篡改”本类的机会，private修饰符则完全杜绝了这个问题：从
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Java的访问控制修饰符"
+
+\end_inset
+
+可以看出，private修饰过的属性和方法只有本类可以访问，即只有本类可以读取和修改，对同一个包下的其他类、子类以及所有其他的类都不可见。正如private的名
+字所宣示的， 这是一个完全隐私的保护性设置，特别适合于本节开头所述的“松耦合原则”中组件（对象）内部属性、方法的表达。实际上，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+在绝大多数情况下，我们应该将类的属性和方法设置为private
+\end_layout
+
+\end_inset
+
+，然后根据需要或者设计要求逐步放开限制，以达到对组件（对象）最大程度的封装和保护。
+\end_layout
+
+\begin_layout Standard
+有时我们希望对外一定程度上暴露私有的属性，即不直接暴露私有(private)属性，而是通过一个公有(public)的方法间接的访问私有属性。这样如果需要的话，我
+们可以在这个方法中对属性修改做合法性检查，避免任意的篡改私有属性。这些能够读取和设置私有属性的方法往往以get和set开头，一般称作
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+getter/setter方法
+\end_layout
+
+\end_inset
+
+，比如下面的代码片段：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Person {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private String username;
+\end_layout
+
+\begin_layout Plain Layout
+
+    private String password;
+\end_layout
+
+\begin_layout Plain Layout
+
+    private String email;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void setUsername(String newUsername) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        username = newUsername;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    public String getUsername() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return username;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    // setPassword/getPassword等方法和getUsername/setUsername类似
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+大多数IDE开发环境可以帮助我们自动生成这些getter/setter方法：在类中右键选择“Insert Code...
+\begin_inset Quotes erd
+\end_inset
+
+，然后选择“Getter and Setter...”，选中希望自动生成getter/setter方法的私有属性，可以多选，然后点击“Generate”按钮即可。自动
+产生的getter/setter代码中使用了this关键字，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:对象的存储模型"
+
+\end_inset
+
+讨论它。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+改造
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:default修饰符"
+
+\end_inset
+
+中的例子，使得BankCard类中的username和password都是private的。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "acPrivate-BankCard.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "acPrivate-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/acprivate/BankCard.java"
+lstparams "float,caption={演示private修饰符的BankCard.java},label={acPrivate-BankCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/acprivate/Client.java"
+lstparams "float,caption={Client.java},label={acPrivate-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+可以看出，我们在Client中无法直接修改密码了，否则会报告语法错误。
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+BankCard类的两个属性使用private修饰符后，Client类无法直接访问这两个属性了。可以通过提供getter/setter方法，方便Client访问
+BankCard的这两个属性。请读者试着在BankCard中加上getter/setter方法，并在Client中调用getter/setter修改用户名和密码
+。
+\end_layout
+
+\begin_layout Problem
+构造方法是私有的会怎样？为什么？
+\end_layout
+
+\begin_layout Problem
+我们在Client类中使用new BankCard()创建对象时会试图调用BankCard的构造方法，但是此时BankCard的构造方法是私有的，意味着对同一个
+包下面的Client不可见！因此，如果使用private修饰构造方法，意味着你不希望别人直接通过new操作符创建对象。那么这个类还有啥用处呢？实际上，在这种情况
+下，可以通过提供一个方法来创建对象，比如下面的代码片段：
+\end_layout
+
+\begin_layout Problem
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class BankCard {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ....
+\end_layout
+
+\begin_layout Plain Layout
+
+    private BankCard () {}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static BankCard getInstance() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        new BankCard();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+在本类中new BankCard()当然是没有问题的了，所以通过一个公有的方法getInstance()来创建对象，则Client就可以这样使用：
+\end_layout
+
+\begin_layout Problem
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Client {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ....
+\end_layout
+
+\begin_layout Plain Layout
+
+    BankCard card = BankCard.getInstance();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+此种用法常见于工厂模式
+\begin_inset CommandInset citation
+LatexCommand cite
+key "design-pattern-4gangs"
+
+\end_inset
+
+、单例模式
+\begin_inset CommandInset citation
+LatexCommand cite
+key "design-pattern-4gangs"
+
+\end_inset
+
+等。
+\end_layout
+
+\begin_layout Subsubsection
+protected修饰符
+\end_layout
+
+\begin_layout Standard
+private修饰过的属性和方法只有本类可以访问，default修饰过的属性和方法本类和本包其他类可以访问，protected修饰过的属性和方法则进一步放宽了限
+制：除了本类、本包之外，子类也可以访问。或者说，我们使用protected修饰属性和方法的唯一目的就是：
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+子类可见
+\end_layout
+
+\end_inset
+
+，这也是protected这个修饰符的本意：受保护的本意大概就是家族内无本质纷争的意思，所谓“兄弟阋于墙，外御其辱”，可以理解为一家人不见外，不是一家人就对不起
+了，不可见。因此，protected修饰的属性和方法本人可见（这个很自然），同包内的其他类（同胞）可见，子类（对自己的下一代不隐瞒，即使下一代不在同一个包内）可
+见，其他外族（其他包中的类）则不可见。当然，
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:public修饰符"
+
+\end_inset
+
+的public修饰过的属性和方法在子类也是可见的，但是public往往太宽泛，实际应用的时候应该严格限制。
+\end_layout
+
+\begin_layout Example
+使用protected改造银行卡的例子，观察protected是如何保护属性和方法的
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整代码参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/acprotected/other
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "acprotected-BankCard.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "acprotected-CreditCard.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/acprotected/BankCard.java"
+lstparams "float,caption={演示protected修饰符的BankCard.java},label={acprotected-BankCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/acprotected/other/CreditCard.java"
+lstparams "float,caption={演示protected修饰符的CreditCard.java},label={acprotected-CreditCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/acprotected/other/Test.java"
+lstparams "float,caption={Test.java},label={acprotected-Test.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Client.java得到如下结果：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+BankCard constructor called
+\end_layout
+
+\begin_layout Plain Layout
+钱被取走啦!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+在BankCard中，我们将两个属性和两个方法均使用protected修饰，因此其子类CreditCard能够直接访问这两个属性和方法。注意到CreditCar
+d和BankCard不在一个包内，这并不影响CreditCard访问父类BankCard中protected修饰过的属性和方法，也就是说，Java首先根据“父子
+”关系检查访问权限，然后再根据包内还是包外检查访问权限。
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "acprotected-Test.java"
+
+\end_inset
+
+中创建了一个BankCard对象，但是由于Test类和BankCard不在同一包内，也不是BankCard的子类，因此Test中创建的BankCard对象无法直
+接访问protected修饰过的属性和方法。
+\end_layout
+
+\begin_layout Subsubsection
+public修饰符
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:public修饰符"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+public修饰符当然就是无限制的意思了，在属性和方法的访问控制中，public修饰符应该谨慎使用，只有确定需要公开的情形才使用public修饰属性和方法，否则
+和C语言有啥区别呢？请记住，public意味着公开的承诺，一旦你使用了public修饰属性和方法，就意味着你失去了后续修改这部分代码的机会。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+虽然在属性和方法上要谨慎使用pubic修饰符，但是构造方法往往是public的，这是因为绝大多数情况下，我们编写了一个类是希望任何人都能够创建相应的对象的。试想
+，如果构造方法是protected、default甚至是private的，会怎样？这里列出四种修饰符修饰构造方法的情形：
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+public的构造方法
+\end_layout
+
+\end_inset
+
+：任何人都可以通过new创建对象
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+protected的构造方法
+\end_layout
+
+\end_inset
+
+：只有本类、子类和同一个包内的类可以通过new创建对象
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+default的构造方法
+\end_layout
+
+\end_inset
+
+：只有本类、同一个包内的类可以通过new创建对象
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+private的构造方法
+\end_layout
+
+\end_inset
+
+：只有本类可以通过new创建对象
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+属性和方法的访问控制小结
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:访问控制保护范围示意"
+
+\end_inset
+
+可以帮助我们理解public/protected/private修饰符的保护范围。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/access-control-overview.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+访问控制保护范围示意
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:访问控制保护范围示意"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在编程实践中，我们往往根据以下的原则来确定使用什么修饰符控制属性和方法的访问权限：
+\end_layout
+
+\begin_layout Itemize
+首先考虑使用最严格的访问控制策略，即优先考虑使用private修饰属性和方法，除非你有足够的理由，比如希望子类可见，则选择使用protected修饰符。
+\end_layout
+
+\begin_layout Itemize
+尽量避免default修饰符，即不使用任何修饰符，这是一个危险和不好的编程习惯。
+\end_layout
+
+\begin_layout Itemize
+尽量避免public修饰符，这比default更危险！有两个例外：一是构造方法一般是public的，理由在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:public修饰符"
+
+\end_inset
+
+已经讲过了。二是常量一般也是public的。
+\end_layout
+
+\begin_layout Subsection
+类的访问控制
+\end_layout
+
+\begin_layout Standard
+属性和方法的访问控制有4个级别，类的访问控制则简单的多，只有两个级别：
+\end_layout
+
+\begin_layout Enumerate
+public：public修饰的类，在任何包中都可见。
+\end_layout
+
+\begin_layout Enumerate
+defualt：default修饰（即没有任何修饰符）的类，只在本包中可见。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+在一个Java源文件中，只有一个类可以是public的，而且这个public的类的类名和文件名要严格一致。在这个Java源文件中，除了这个public的类之外，
+依然可以定义其他的default修饰（即没有使用任何修饰符）的类。但是一般情况下不建议这样做，应该每个类建立单独的Java源文件。原因是我们一般是通过浏览这个包
+（目录）了解这个包中包含了哪些类，如果在一个源文件中包含了多个类，一方面我们无法从文件的目录了解包的内容，另一方面，这些隐藏在其他类文件中的类就只能限于包内访问
+了。一个例外是内部类，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:内部类"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+内部类
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:内部类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有的时候，我们为了防止命名冲突，或者为了安全起见，定义一个类只希望局限在某个类内使用，这样的类就是内部类（Inner Class）：
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+定义在一个类内部的类
+\end_layout
+
+\end_inset
+
+，比如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class OuterClass {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    class InnerClass() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+可以把内部类理解为在类内部定义的第三种资源，其他两种是属性和方法，因此类比属性和方法的用法，我们可以这样使用内部类：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+OuterClass.InnerClass innerObject = outerObject.new InnerClass();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:内部类的创建过程"
+
+\end_inset
+
+形象的表示了内部类的创建过程。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/new-innerclass.png
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+内部类的创建过程
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:内部类的创建过程"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+编写NotePad类，使用内部类Editor实现编辑功能
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/ac/innerclass
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "NotePad.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "innerclass-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/ac/innerclass/NotePad.java"
+lstparams "float,caption={NotePad.java},label={NotePad.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/ac/innerclass/Client.java"
+lstparams "float,caption={Client.java},label={innerclass-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+parsing:test string
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+通过这个例子我们要注意到两点：
+\end_layout
+
+\begin_layout Itemize
+如何创建一个内部类对象：首先要创建一个外部类对象，然后才能创建一个内部类对象。
+\end_layout
+
+\begin_layout Itemize
+内部类对象可以访问外部包围类（即内部类是在这个外部包围类中定义的）的属性和方法，即使这个外部类的属性和方法是private的（请读者试着把content属性设置
+为private看看会怎样？试着把parseContent方法设置为private看看会怎样？）。这个很容易理解：内部类和外部类的属性和方法是平等的，就像是本类
+的方法可以无限制访问本类的属性一样，本类的内部类当然可以无限制访问本类的属性和方法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status collapsed
+
+\begin_layout Plain Layout
+也许你会说，NotePad这个例子中，使用内部类Editor实现parseContent这个功能太矫情，根本没有必要！是的，在这种简单的情况下确实没有必要绕道使
+用内部类。但是设想NotePad不仅仅需要提供文本编辑，还需要文本搜索、格式转换等等其他功能，而且每类功能不止包含一个方法，那么为了逻辑上清晰起见，使用内部类将
+文本编辑相关的方法组织为内部类NotePad.Editor，将文本搜索相关的方法组织为内部类NotePad.Search，将格式转换相关的方法组织为内部类NoteP
+ad.Transfer就容易理解了。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+引用类型
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:引用类型"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+很多人会说，Java语言比C语言更“进步”或者“安全”的一个原因是Java没有指针数据类型，其实这是不确切的。Java的确没有像C语言那样提供“指针”这种基本数
+据类型，但是Java确实使用了指针，而且指针的正确使用同样很重要。Java中的指针叫做“引用”。
+\end_layout
+
+\begin_layout Standard
+和C语言一样，我们可以从变量在内存中的存储来理解Java的引用（指针）。Java的基本数据类型所形成的变量不是引用，变量的名字直接代表了变量所在存储单元的内容，
+这和C语言中的非指针变量是一样的。除此之外，Java中的数组、对象、Enum等的名字，都是引用（指针），如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java中的引用"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/reference-object.png
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java中的引用
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java中的引用"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+比如下面的代码：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Person person = new Person();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+之前我们把person叫做“Person”类型的对象，其实这是不严谨的，应该叫做“Peron”类型对象的名字。也就是说，person仅仅是一个对象的名字，这个名
+字其实是指向person对象的一个引用（指针）。因此下面的代码：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Person person;
+\end_layout
+
+\begin_layout Plain Layout
+
+person.goHome();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+就会报“NullPointException
+\begin_inset Quotes erd
+\end_inset
+
+错误，即“空指针异常”。这里只是声明了一个person类型的引用，但是并没有初始化，也就是说，person并没有指向任何实质的Person类型的对象。因此在初始
+化之前，任何对象的引用都是null，这和C语言的指针含义完全一样：在C语言中，任何指针在初始化之前都是null指针，直接使用null指针是有风险的。而在Java
+中，Java虚拟机会自动侦测空指针，任何对空指针（未初始化的对象引用）都会报告NullPointException异常。NullPointException异常
+如此常见，通常大家都把NullPoinitException异常简称为“
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+NPE
+\end_layout
+
+\end_inset
+
+”。
+\end_layout
+
+\begin_layout Standard
+在C语言中，指针作为函数的参数是一个强大的特性，即可以帮助把大量的数据传入函数（输入参数），也可以帮助函数返回大量的数据（输出参数）。在Java中，我们也要区分
+方法的参数为简单数据类型和对象（引用）两种情况。
+\end_layout
+
+\begin_layout Example
+使用对象作为方法的参数
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:使用对象作为方法的参数。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+我们首先定义一个简单的Person类，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "objref-Person.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/objref/Person.java"
+lstparams "float,caption={Person.java},label={objref-Person.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+测试类Client.java的代码参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "objref-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/objref/Client.java"
+lstparams "float,caption={Client.java},label={objref-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+Client的运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align left
+Person[username=zhangsan,password=123456,seniority = 20,salary = 5000.0]
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+Person[username=zhangsan,password=123456,seniority = 20,salary = 6000.0]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+可以看出，adjustSalary方法中改变了person对象的属性slary的值，这和C语言中使用指针作为函数参数的作用如出一辙。
+\end_layout
+
+\begin_layout Example
+两个引用指向同一个对象
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:两个引用指向同一个对象。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+我们借用
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:使用对象作为方法的参数。"
+
+\end_inset
+
+中定义的Person类设计一个测试类，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Client1.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/objref/Client1.java"
+lstparams "caption={Client1.java},label={Client1.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Client1的结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+zhangsan1 == zhangsan2 ? false
+\end_layout
+
+\begin_layout Plain Layout
+zhangsan3 == zhangsan1 ? true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:两个引用指向同一个对象。"
+
+\end_inset
+
+中，看起来zhangsan1和zhangsan2两个对象是一样的，有相同的名字和密码设置。但是，这是两个不同的对象，即不同的引用，在内存中有不同的地址。而zha
+ngsan3指向了zhangsan1，即zhangsan3和zhangsan1指向了同一个对象，因此zhangsan1和zhangsan3是相等的，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:对象的引用示意图"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/object-ref-model.eps
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+对象的引用示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:对象的引用示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+this
+\end_layout
+
+\begin_layout Standard
+Java使用this关键字表示“对象本身”，即
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+指向当前对象的引用
+\end_layout
+
+\end_inset
+
+。比如在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "objref-Person.java"
+
+\end_inset
+
+中，构造方法是这样写的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public Person(String username, String password) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    this.username = username;
+\end_layout
+
+\begin_layout Plain Layout
+
+    this.password = password;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，this.username即指当前对象的username属性，这样就把作为参数的username和作为对象属性的username区分开来了。
+\end_layout
+
+\begin_layout Subsection
+super
+\end_layout
+
+\begin_layout Standard
+我们在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:对象的创建过程"
+
+\end_inset
+
+中已经看到，对象在创建时会“递归的构造父类对象”，也就是说，递归的调用父类的构造方法，这并不需要我们在子类的构造方法中做什么。但是，有时候我们希望能够控制对象的
+构造过程，也就是说，打破java默认的对象构造过程，在构造对象的链条中加入自定义的成分，这个时候我们可以使用super关键字：指向父类对象的引用。我们通过一个例
+子来说明super在对象的构造过程中是如何起作用的。
+\end_layout
+
+\begin_layout Example
+使用super自定义对象的构造过程
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+完整代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/inherit/step4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+限于篇幅，这里只列出了CreditCard.java的完整代码，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "inherit-step4-CreditCard.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/inherit/step4/CreditCard.java"
+lstparams "float,caption={CreditCard.java},label={inherit-step4-CreditCard.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果和分析
+\end_layout
+
+\begin_layout Standard
+我们可以分三种情况运行此例，分别在CreditCard类的构造方法CreditCard(String cardNo)中：
+\end_layout
+
+\begin_layout Enumerate
+调用super()时，输出如下：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Card constructor called
+\end_layout
+
+\begin_layout Plain Layout
+BankCard constructor called
+\end_layout
+
+\begin_layout Plain Layout
+CreditCard constructor called,cardNo=123
+\end_layout
+
+\begin_layout Plain Layout
+==============================
+\end_layout
+
+\begin_layout Plain Layout
+Card constructor called,cardNo=456
+\end_layout
+
+\begin_layout Plain Layout
+BankCard constructor called,cardNo=456
+\end_layout
+
+\begin_layout Plain Layout
+DebitCard constuctor called,cardNo=456
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+可以看出，调用super()会触发“递归的构造父类对象”。
+\end_layout
+
+\begin_layout Enumerate
+调用super(cardNo)时，输出如下：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Card constructor called,cardNo=123
+\end_layout
+
+\begin_layout Plain Layout
+BankCard constructor called,cardNo=123
+\end_layout
+
+\begin_layout Plain Layout
+CreditCard constructor called,cardNo=123
+\end_layout
+
+\begin_layout Plain Layout
+==============================
+\end_layout
+
+\begin_layout Plain Layout
+Card constructor called,cardNo=456
+\end_layout
+
+\begin_layout Plain Layout
+BankCard constructor called,cardNo=456
+\end_layout
+
+\begin_layout Plain Layout
+DebitCard constuctor called,cardNo=456
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+可以看出，调用super(cardNo)后，就不会再调用父类的无参构造方法。
+\end_layout
+
+\begin_layout Enumerate
+不调用父类的构造方法时，输出如下：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Card constructor called
+\end_layout
+
+\begin_layout Plain Layout
+BankCard constructor called
+\end_layout
+
+\begin_layout Plain Layout
+CreditCard constructor called,cardNo=123
+\end_layout
+
+\begin_layout Plain Layout
+==============================
+\end_layout
+
+\begin_layout Plain Layout
+Card constructor called,cardNo=456
+\end_layout
+
+\begin_layout Plain Layout
+BankCard constructor called,cardNo=456
+\end_layout
+
+\begin_layout Plain Layout
+DebitCard constuctor called,cardNo=456
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+可以看出，不显式调用父类的构造方法，实际上也会默认调用父类的无参构造方法，和显式调用super()效果是一样的。也就是说，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+我们在创建子类对象时，要么通过明确调用父类的有参构造方法递归的创建父类对象，要么java会递归的调用父类的无参构造方法来初始化各级父类对象
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Section
+static
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:static"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一个电信的面向对象的设计如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:面向对象编程的基本思路"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oopbasic/book-nostatic.eps
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+面向对象编程的基本思路
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:面向对象编程的基本思路"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，我们在抽象出一类事物的共同特性后，编写相应于这类事物的一个类，在这里是Book；然后根据Book类再创建若干个Book类型的对象，book1、book
+2等等。有了book对象后，就可以访问book对象的属性和方法了，比如调用：book.edit()。总之，原则上我们只有
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+持有一个对象后（其实是持有一个指向对象的引用），才能操作这个对象
+\end_layout
+
+\end_inset
+
+。由
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:面向对象编程的基本思路"
+
+\end_inset
+
+可以看出，不同对象的状态（属性值）往往是不同的。
+\end_layout
+
+\begin_layout Standard
+考虑下面的情形：
+\end_layout
+
+\begin_layout Itemize
+比如无论书籍的类型、开张等，书籍的“章”一般都定义为“第一章”、“第二章”，因此可以将CHAPTER_ONE定义为常量，而且不随Book对象的变化而变化，即无论
+有多少个Book对象，也无论Book对象的其他属性如何，CHAPTER_ONE，CHAPTER_TWO的值都不会变化。在这种情况下，每个Book对象都保存一份C
+HAPTER_ONE，CHAPTER_TWO属性是没有必要的。解决这个问题的方法参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:static常量"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+比如给每个Book对象一个id，要求这个id能够自动增长，即假设第一个Book对象的id为1，第二个Book对象的id自动设置为2，以此类推。解决这个问题的方法
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:static属性"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+比如我们要设计一个方法usage()，当调用这个方法时打印出Book类的用法。可以看出这个方法和对象的状态没有任何关系，也就是说，usage方法没有必要读取对象
+的状态，因此也没有必要每个对象都保存一个usage方法。解决这个问题的方法参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:static方法"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+static常量
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:static常量"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+显然，常量没有必要在每个对象中都保存一份，只需要在类的定义中保存一份即可。因此，正如我们在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:常量和常量的命名"
+
+\end_inset
+
+中提到的，常量一般的命名方式都是public static final的，其中的static表示静态变量，即只在类定义中保存一份的变量，或者说，所有对象共享一份
+的变量。由于是常量，也通常使用final修饰符限定此变量不可修改，即常量（常数变量）。由于静态常量只和类有关而和具体对象无关，因此静态常量又称为
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+类常量
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+在类中定义常量后，我们有两种方式使用（引用）这个常量：
+\end_layout
+
+\begin_layout Enumerate
+直接使用类名引用类常量。也就是说，不需要创建一个此类的对象，可以直接通过类名引用类常量。
+\end_layout
+
+\begin_layout Enumerate
+使用对象引用类常量。如果已经创建了对象，通过对象引用类常量也是可以的。
+\end_layout
+
+\begin_layout Example
+在Book中定义常量CHAPTER_ONE，CHAPTER_TWO，并使用两种方法引用此常量。
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:在Book中定义常量CHAPTER_ONE，CHAPTER_TW"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staticcontant-Book.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staticconstant-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/staticconstant/Book.java"
+lstparams "float,caption={使用了static常量的Book.java},label={staticcontant-Book.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/staticconstant/Client.java"
+lstparams "float,caption={Client.java},label={staticconstant-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果和分析
+\end_layout
+
+\begin_layout Standard
+执行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+第一章
+\end_layout
+
+\begin_layout Plain Layout
+第一章
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+虽然两种方式都打印出了正确的结果，但是第二种引用static常量的方式是不建议的：即不经济，也没必要。
+\end_layout
+
+\begin_layout Exercise
+在JDK源代码中找到一些常量的定义，认真体会：
+\end_layout
+
+\begin_layout Itemize
+常量的惯用命名方式，。
+\end_layout
+
+\begin_layout Itemize
+常量的使用（引用）方式。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+JDK源代码可以从
+\begin_inset CommandInset href
+LatexCommand href
+name "https://github.com/dmlloyd/openjdk"
+target "https://github.com/dmlloyd/openjdk"
+
+\end_inset
+
+下载。在openjdk的源代码目录下执行如下命令可以找到非常多的常量定义：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+$ grep -ri 
+\begin_inset Quotes eld
+\end_inset
+
+public static final
+\begin_inset Quotes erd
+\end_inset
+
+ *
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+static属性
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:static属性"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当我们用static修饰类的属性时，这个属性就成为“类属性”。相对于“实例属性”（每个对象都有一份独立的拷贝），
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+类属性在此类的所有对象之间共享一份拷贝
+\end_layout
+
+\end_inset
+
+。对于类属性，我们需要注意到三点：
+\end_layout
+
+\begin_layout Itemize
+类属性的引用。我们一般采用Book.nextId的方式，即直接使用类来引用类属性，这也是类属性设计的本意。
+\end_layout
+
+\begin_layout Itemize
+类属性相当于在对象之间共享的变量，因此一个对象修改了类属性，会影响另外对象的状态，因此使用类属性实际上导致了对象之间的“紧耦合”，造成了系统模块之间的界面不清晰
+，这是现代软件设计中力图规避的地方。因此，在软件设计实践中要尽量避免使用类属性，除非你有足够的理由。
+\end_layout
+
+\begin_layout Itemize
+类属性的初始化问题。类属性的默认值和普通属性没有任何区别，但是由于类属性和具体对象没有关联，因此无法在对象的构造方法中初始化。Java提供了“
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+static块
+\end_layout
+
+\end_inset
+
+”的方式初始化类属性，比如在Book中这样初始化nextId类属性：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  // 初始化静态属性，这里设置id的起点值
+\end_layout
+
+\begin_layout Plain Layout
+
+  static {
+\end_layout
+
+\begin_layout Plain Layout
+
+    nextId = 100;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+和对象的构造方法不同的是，static代码块在整个应用程序运行期间只会执行一次，而对象的构造方法在创建对象时都会执行一次。
+\end_layout
+
+\begin_layout Example
+编写一个Book类，book对象使用自动增长的id作为对象的标识。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staticvariable-Book.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "staticvariable-Client.java"
+
+\end_inset
+
+ 。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/staticvariable/Book.java"
+lstparams "float,caption={Book.java},label={staticvariable-Book.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/staticvariable/Client.java"
+lstparams "float,caption={Client.java},label={staticvariable-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Book{id=100, title=Thinking in Java, author=null, price=0.0}
+\end_layout
+
+\begin_layout Plain Layout
+Book{id=101, title=Design Patterns, author=null, price=0.0}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+static方法
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:static方法"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+和类属性
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+需要澄清的是，下面两种说法是等价的，我们可能在不同的场合交替使用不同的名称：
+\end_layout
+
+\begin_layout Itemize
+类属性=静态属性
+\end_layout
+
+\begin_layout Itemize
+类方法=静态方法
+\end_layout
+
+\begin_layout Itemize
+实例属性=实例变量=非静态属性=非静态变量
+\end_layout
+
+\begin_layout Itemize
+实例方法=实例函数=对象方法=对象函数=非静态方法
+\end_layout
+
+\end_inset
+
+一样，类方法指使用static修饰的方法，类方法在所有对象之间共享一个拷贝。类方法通常用于一些工具类的定义，比如JDK中的Math类
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见：http://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
+\end_layout
+
+\end_inset
+
+里面的方法都是类方法。
+\end_layout
+
+\begin_layout Standard
+类方法是在对象创建之前就存在的，因此在类方法中不能访问实例属性（对象还没有创建，实例属性根本不存在），只能访问类属性（使用static修饰的属性），见下面的代码
+片段：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Test {
+\end_layout
+
+\begin_layout Plain Layout
+
+    string name;
+\end_layout
+
+\begin_layout Plain Layout
+
+    static int nextId;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    static void testStaticMethod() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        nextId++; // 这是可以的
+\end_layout
+
+\begin_layout Plain Layout
+
+        //name = "zhangsan"; // 这是不允许的，语法错误
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+在Book类中增加一个类方法usage()，调用这个方法显示一段文字，说明这个类的用途。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+设计一个字符串处理工具类，给出如下的方法实现：
+\end_layout
+
+\begin_layout Itemize
+能够方便的删除字符串的最后一个字母；
+\end_layout
+
+\begin_layout Itemize
+能够自动将字符串转化为网址形式，即自动增加
+\begin_inset Quotes erd
+\end_inset
+
+http://
+\begin_inset Quotes erd
+\end_inset
+
+前缀；
+\end_layout
+
+\begin_layout Subsection
+*内部类回头看
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:内部类"
+
+\end_inset
+
+中，我们看到内部类就像是定义在类内部的方法一样。类的方法分为静态方法和非静态方法，静态方法只能访问类的静态属性，那么内部类是不是也可以使用static修饰呢？
+\end_layout
+
+\begin_layout Standard
+实际上，java的内部类分为四种类型：
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+成员内部类（member inner class）
+\end_layout
+
+\end_inset
+
+，即我们在
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "subsec:内部类"
+
+\end_inset
+
+中讨论的，和实例方法用法类似的内部类。
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+静态内部类（static inner class）
+\end_layout
+
+\end_inset
+
+，使用static修饰的内部类。
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+局部内部类（local inner class）
+\end_layout
+
+\end_inset
+
+，定义在方法内部的类。
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+匿名内部类（anonymous inner class）
+\end_layout
+
+\end_inset
+
+，只使用一次的内部类。
+\end_layout
+
+\begin_layout Standard
+内部类的第一种形式：成员内部类我们已经讨论过了，这里不再赘述，下面我们分别看一下其他三种内部类：
+\end_layout
+
+\begin_layout Subsubsection
+静态内部类
+\end_layout
+
+\begin_layout Standard
+静态内部类即使用static修饰的内部类，也常叫做“嵌套类”（Nested Class）。静态内部类有两个重要的意义：
+\end_layout
+
+\begin_layout Enumerate
+正如静态方法一样，使用静态内部类可以限制内部类对外部包围类属性和方法的访问。对比成员内部类，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+静态内部类只能访问外部包围类的静态属性和静态方法
+\end_layout
+
+\end_inset
+
+。使用静态内部类的好处是，如果我们在外部包围类中不定义静态属性和方法，实际上就切断了静态内部类和外部包围类的联系，使得静态内部类成为一个独立的模块，符合“松耦合
+”的现代软件设计理念。因此可以看到在实际的软件开发中，内部类很多都定义为静态内部类，比如Android程序设计中，大量使用到静态内部类。
+\end_layout
+
+\begin_layout Enumerate
+静态内部类对象的创建不需要首先创建外部包围类对象，比如Outer.Inner innerObj = new Outer.Inner();这实际上让静态内部类成为了一
+个受限的顶级类
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要展开说明顶级类和受限的含义吗？
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+编写一个静态内部类，演示静态内部类访问外部包围类的静态属性和静态方法
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+完整代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/nestedclass
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "nestedclass-Book.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "nestedclass-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/nestedclass/Book.java"
+lstparams "caption={Book.java},label={nestedclass-Book.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/nestedclass/Client.java"
+lstparams "caption={Client.java},label={nestedclass-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+edit the book[version=1] by someone
+\end_layout
+
+\begin_layout Plain Layout
+publish the book[Learning Java based on C]
+\end_layout
+
+\begin_layout Plain Layout
+Book.Editor.usage() called
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+局部内部类
+\end_layout
+
+\begin_layout Standard
+局部内部类定义在方法内部，可以认为是方法的局部变量。就像方法的局部变量一样，局部内部类的作用范围仅限于方法内部，即在方法外部是无法创建局部内部类的对象的。局部内
+部类可以使用所在方法中的属性，也可以访问类的实例属性和类属性。
+\end_layout
+
+\begin_layout Standard
+局部内部类的使用场合较少，通常在组织复杂方法代码时使用。但是，由于在方法内部定义类，可能导致方法体臃肿，使得方法的逻辑层次不清晰，在使用局部内部类时要适当取舍。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+举个在openjdk中的例子？或者实际项目中的例子
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+编写一个局部内部类，演示局部内部类对方法属性的访问和局部内部类对象的创建方式
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+完整代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/oopbasic/src/cn/e
+du/sdut/softlab/oopbasic/localinnerclass
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "localninnerclass-Book.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "localninnerclass-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/localinnerclass/Book.java"
+lstparams "float,caption={Book.java},label={localninnerclass-Book.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/localinnerclass/Client.java"
+lstparams "float,caption={Client.java},label={localninnerclass-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+edit the book before publish
+\end_layout
+
+\begin_layout Plain Layout
+publish book[version=1,id=0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+匿名内部类
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:匿名内部类"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:JAVA图形用户界面的事件机制"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:接口上的匿名内部类"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:使用匿名内部类"
+
+\end_inset
+
+中，我们还会看到匿名内部类的使用。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果一个内部类只使用一次的话，就没有必要非要给这个内部类起个名字了，这就是匿名内部类的使用场合。匿名内部类由于没有名字，必须从父类继承下来（在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:接口上的匿名内部类"
+
+\end_inset
+
+中我们可以看到，也可以实现一个接口）。
+\end_layout
+
+\begin_layout Example
+使用匿名内部类
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:使用匿名内部类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "annonymousinnerclass-Book.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "annonymousinnerclass-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/annnoymousinnerclass/Book.java"
+lstparams "float,caption={Book.java},label={annonymousinnerclass-Book.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/annnoymousinnerclass/Client.java"
+lstparams "float,caption={Client.java},label={annonymousinnerclass-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+edit the book before publishing
+\end_layout
+
+\begin_layout Plain Layout
+publish the book[Learning Java Based on C]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:使用匿名内部类"
+
+\end_inset
+
+中，我们组合使用了匿名对象和匿名内部类，这是由于在这种情况下，创建的匿名内部类对象也只使用一次，就没有必要起个名字了。我们给对象一个名字的目的不就是在重复使用这
+个对象的时候方便引用吗？
+\end_layout
+
+\begin_layout Exercise
+还原
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:使用匿名内部类"
+
+\end_inset
+
+为不使用匿名内部类的情形，对比一下说明匿名内部类的优点和缺点。
+\end_layout
+
+\begin_layout Subsection
+*内部类的进一步讨论
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:内部类的进一步讨论"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在前面的讨论中，内部类都是没有父类的。但是，内部类其实也可以是一个子类
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:实现多个接口"
+
+\end_inset
+
+中，我们可以看到，内部类也可以实现（多个）接口，从而更好的实现Java的多继承。
+\end_layout
+
+\end_inset
+
+，这样我们在外部包围类中定义多个内部类，每个内部类继承自一个父类，就巧妙的绕过了Java没有多继承的限制，曲线的实现了多继承。
+\end_layout
+
+\begin_layout Example
+编写程序，使用内部类达到多继承的目的。
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:编写程序，使用内部类达到多继承的目的。"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinherit-Printer.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinherit-Copier.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinherit-SmartPrinter.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinherit-SmartPrinterClient.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/multiinherit/Printer.java"
+lstparams "float,caption={Printer.java},label={multiinherit-Printer.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/multiinherit/Copier.java"
+lstparams "float,caption={Copier.java},label={multiinherit-Copier.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/multiinherit/SmartPrinter.java"
+lstparams "float,caption={SmartPrinter.java},label={multiinherit-SmartPrinter.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopbasic/src/cn/edu/sdut/softlab/oopbasic/multiinherit/SmartPrinterClient.java"
+lstparams "float,caption={SmartPrinter.java},label={multiinherit-SmartPrinterClient.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+basic print
+\end_layout
+
+\begin_layout Plain Layout
+SmartPrinter print
+\end_layout
+
+\begin_layout Plain Layout
+basic copy
+\end_layout
+
+\begin_layout Plain Layout
+SmartPrinter copy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+可以看出，在SmartPrinterTest中，我们只是使用SmartPrinter对象即可同时获得print和copy两个功能，好像同时从Printer和Co
+pier继承下来一样。SmartPrinter类其实是一个Facade类
+\begin_inset CommandInset citation
+LatexCommand cite
+key "design-pattern-4gangs"
+
+\end_inset
+
+，当我们希望在一个类中融合多项功能时，为了代码逻辑清晰起见，借用内部类实现多继承是常见的策略。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+举一个在switch中使用Enum的例子
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+内部类的作用范围
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+思考和练习
+\end_layout
+
+\begin_layout Exercise
+编写一个default修饰的类，尝试在其他包中创建该类的对象，结果会怎样？
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:编写一个default修饰的类，尝试在其他包中创建该类的对象，结"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+考虑下面的代码，指出哪些是类属性，哪些是实例属性？
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+http://docs.oracle.com/javase/tutorial/java/javaOO/QandE/creating-questions.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

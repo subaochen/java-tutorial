@@ -1,0 +1,2601 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+coderemarks
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+面向对象工程思想
+\end_layout
+
+\begin_layout Standard
+不想当将军的士兵不是好士兵，不想当架构师的程序员不是一个好程序员。本章内容不可能涵盖Java架构师的所有内容，只是一个菜鸟Java程序员进阶的必由之路。
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/oop-project-method/programmer-steps.eps
+	lyxscale 50
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+抽象类和抽象方法
+\end_layout
+
+\begin_layout Standard
+在类的继承关系中，有些情况下我们不希望根据父类创建对象，或者说希望禁止创建父类对象。比如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Animal的类层次关系"
+
+\end_inset
+
+所示的情形。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oop-project-method/java-polymorphism.eps
+	width 70col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Animal的类层次关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Animal的类层次关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果我们希望禁止创建Animal对象
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+为什么有这种需求呢？主要的出发点是强制使用具体的子类对象，因为子类对象比父类对象提供了更具体的属性和方法。
+\end_layout
+
+\end_inset
+
+，即只允许创建Dog、Cat等Animal的子类对象，该怎么做呢？Java提供了两种方式：
+\end_layout
+
+\begin_layout Enumerate
+使用抽象类：将Animal定义为抽象类，这样使用new创建Animal对象将导致语法错误，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:抽象类"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Enumerate
+使用接口：将Animal定义为接口，这样便不能直接创建Animal类型的对象，只能通过实现Animal接口创建具体的对象，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:接口"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+抽象类
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:抽象类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+只要一个类使用abstract修饰，这个类就是一个抽象类。抽象类不允许通过new操作符创建对象，抽象类只能作为父类被继承。
+\end_layout
+
+\begin_layout Example
+编写一个抽象的Animal类
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:编写一个抽象的Animal类。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "abstractclass-Animal.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "abstractclass-Dog.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "abstractclass-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/abstractclass/Animal.java"
+lstparams "float,caption={Animal.java},label={abstractclass-Animal.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/abstractclass/Dog.java"
+lstparams "float,caption={Dog.java},label={abstractclass-Dog.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/abstractclass/Client.java"
+lstparams "float,caption={Client.java},label={abstractclass-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+动物在打招呼
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+抽象类是不允许直接实例化的，因此在Client中直接创建Animal类型的对象会报告语法错误。虽然Dog类看起来是一个空的类，但是Dog继承自Animal，因此
+也继承了Animal中已经实现了的公有的hello方法。
+\end_layout
+
+\begin_layout Subsection
+抽象方法
+\end_layout
+
+\begin_layout Standard
+有的时候，我们希望父类的方法仅仅是个声明，即只是说明了方法的名字、返回值类型、参数的类型和个数及其顺序，方法的具体内容（即方法体）需要父类的子类去实现。也就是说
+，父类的这个方法是“抽象”的，因为缺少了方法体，直接调用这个抽象的方法也没有意义，因此Java规定只要类中有一个抽象方法，这个类就必须定义为抽象类。子类在继承抽
+象类后，必须实现父类中的所有抽象方法，除非子类也是抽象类。
+\end_layout
+
+\begin_layout Example
+实现一个包含抽象方法的抽象类。
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:实现一个包含抽象方法的抽象类。"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "abstractmethod-Animal.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "abstractmethod-Dog.java"
+
+\end_inset
+
+，Client的设计和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:编写一个抽象的Animal类。"
+
+\end_inset
+
+一样，这里不再列出。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/abstractmethod/Animal.java"
+lstparams "float,caption={Animal.java},label={abstractmethod-Animal.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/abstractmethod/Dog.java"
+lstparams "float,caption={Dog.java},label={abstractmethod-Dog.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+汪汪
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+可以看出，父类中的抽象方法hello在子类中必须给出具体的实现。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在Idea中，如果没有实现父类中的抽象方法，在类名上面会给出提示信息，此时只要在类名上面按Alt+Enter键组合即可自动给出默认的方法实现，非常方便：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oop-project-method/abstract-method-hint.png
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+如果Dog类也是抽象类，一定需要实现父类Animal中的抽象方法吗？试修改
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:实现一个包含抽象方法的抽象类。"
+
+\end_inset
+
+的Dog为抽象类，然后增加一个Hunter类作为Dog的子类。
+\end_layout
+
+\begin_layout Subsection
+抽象类小结
+\end_layout
+
+\begin_layout Standard
+抽象类是系统架构的常见手段，有两个重要的作用：
+\end_layout
+
+\begin_layout Itemize
+强制继承，即必须提供子类才能使用抽象父类的属性和功能。
+\end_layout
+
+\begin_layout Itemize
+便于合理划分（区分）事物的共性和个性，将个性化的部分设计为抽象方法，强制子类实现父类的抽象方法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+要讨论抽象类和多态吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+接口
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:接口"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+定义接口：纯的抽象类
+\end_layout
+
+\begin_layout Standard
+如果抽象类中所有的方法都是抽象方法会怎样？比如下面的代码：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public abstract class Animal {
+\end_layout
+
+\begin_layout Plain Layout
+
+    public abstract void hello();
+\end_layout
+
+\begin_layout Plain Layout
+
+    public abstract void eat();
+\end_layout
+
+\begin_layout Plain Layout
+
+    public abstract void sleep();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，此时的Animal是一个纯抽象类，Java提供了interface（接口）来表达纯的抽象类，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "interface-Animal.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/pureabstract/Animal.java"
+lstparams "float,caption={Animal.java},label={interface-Animal.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+接口具有如下的特点：
+\end_layout
+
+\begin_layout Itemize
+接口一定是抽象的，因此接口类不需要明确声明是抽象的。即，在定义接口时，下面的两种方式都是可以的，一般采用省略abstract的写法。
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public abstract interface Animal{...}
+\end_layout
+
+\begin_layout Plain Layout
+
+public interface Animal {}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+接口中的方法一定是public的，所以可以省略接口方法的访问控制属性。实际上，在接口方法上使用private或者protected是语法错误，比如尝试在接口方法
+上增加protected：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public interface Animal {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 语法错误！
+\end_layout
+
+\begin_layout Plain Layout
+
+    protected void hello();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正因为接口的以上两个特点，可以认为接口是对“纯的抽象类”的简化写法。
+\end_layout
+
+\begin_layout Subsection
+实现接口
+\end_layout
+
+\begin_layout Standard
+接口虽然很像“纯的抽象类”，但是其用法和用意和抽象类有很多不同，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:抽象类和接口的关系"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抽象类
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+接口
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+意义
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+概括了一类事物的共同属性和行为特征
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+概括了一类事物的共同行为特征
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法的实现
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+可以实现部分方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+只能声明方法，不允许实现方法
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用场合
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+用于明确类的层次关系
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+用于明确类的能力范围
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+用法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+子类通过extends继承父类
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+通过implements实现指定的接口
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+抽象类和接口的关系
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:抽象类和接口的关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将Animal定义为接口，Dog类实现Animal接口。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "interface-Animal.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "pureabstract-Dog.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "pureabstract-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/pureabstract/Dog.java"
+lstparams "float,caption={Dog.java},label={pureabstract-Dog.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/pureabstract/Client.java"
+lstparams "float,caption={Client.java},label={pureabstract-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+汪汪
+\end_layout
+
+\begin_layout Plain Layout
+Dog eat method
+\end_layout
+
+\begin_layout Plain Layout
+Dog sleep method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+Dog类实现了Animal接口即意味着Dog类要给出Animal接口中规定的所有抽象方法的具体实现。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+和实现抽象方法类似，在Idea中，通过快捷键Alt+Enter可自动补全接口的方法，不再赘述。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+实现多个接口
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:实现多个接口"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于抽象类，我们知道需要子类继承抽象的父类并实现父类中的所有抽象方法。但是，Java只支持单继承，即一个子类只能继承自一个抽象类。接口则不同，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+一个类可以“实现”若干个接口
+\end_layout
+
+\end_inset
+
+，这也是接口的强大之处。
+\end_layout
+
+\begin_layout Standard
+现实中，事物总是具有多面性的，比如爱因斯坦不仅仅是物理学家，小提琴也拉的很好。比如大家对毛泽东的评价是伟大的思想家、哲学家、军事家、诗人。通常，我们会把一类事物
+的共同行为特征归纳为一个接口，那么具有多面性的事物，应该可以拥有多个接口才对，或者说，具有多面性的事物，应该实现多个接口。
+\end_layout
+
+\begin_layout Example
+实现多个接口的类。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinterface-Printer.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinterface-Copier.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinterface-SmartPrinter.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinterface-Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/multiinterface/Printer.java"
+lstparams "float,caption={Printer.java},label={multiinterface-Printer.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/multiinterface/Copier.java"
+lstparams "float,caption={Copier.java},label={multiinterface-Copier.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/multiinterface/SmartPrinter.java"
+lstparams "float,caption={SmartPrinter.java},label={multiinterface-SmartPrinter.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/multiinterface/Client.java"
+lstparams "float,caption={Client.java},label={multiinterface-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行Client结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+print called
+\end_layout
+
+\begin_layout Plain Layout
+copy called
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+SmartPrinter实现了两个接口Printer和Copier，也就意味着SmartPrinter同时具有打印和复印两项功能。有人说，这不是多此一举吗？去掉
+两个接口的定义，在SmartPrinter类中直接实现copy和print方法就可以。从功能上看，的确可以这样处理，但是从逻辑上看，不使用接口会带来两个方面的问
+题：
+\end_layout
+
+\begin_layout Itemize
+Print和Copy两个接口定义了功能方法的名称和参数，如果不使用接口，或者不实现规定的接口，那么方法名就失去了参照，很容易造成各自为政的局面，给代码的维护和团
+队的交流带来麻烦。
+\end_layout
+
+\begin_layout Itemize
+使用接口带来的另外一个好处是，我们可以通过“向上塑型”加强软件的健壮性，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:向上塑型：面向接口的编程"
+
+\end_inset
+
+展示这一点。
+\end_layout
+
+\begin_layout Standard
+基于以上的分析，其实SmartPrinter的更合理的实现应该是
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinterface-BetterSmartPrinter.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/multiinterface/BetterSmartPrinter.java"
+lstparams "float,caption={BetterSmartPrinter.java},label={multiinterface-BetterSmartPrinter.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，通过内部类的封装，BetterSmartPrinter类的内部结构更清晰了。
+\end_layout
+
+\begin_layout Subsection
+不懂接口的项目经理不是好的项目经理
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:实现多个接口"
+
+\end_inset
+
+中我们已经看到，通过接口可以帮助我们规划模块的调用界面（界限），这在团队协作中非常重要，也就是说，接口为团队协作提供了有力的语法支持，考虑下面的情形：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oop-project-method/no-interface.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+不引入接口时的团队协作
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:不引入接口时的团队协作"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果不使用接口，团队成员在功能实现时，在方法命名和方法规划上就失去了约束，这在小型项目中也许还是可以接受的，但是随着项目规模的增大，项目成员的增加和更迭，这种没
+有约束的编码方式很容易把项目带到沟里，最终失去控制，导致项目失败。因此，作为项目经理或者项目的架构师，接口是一个有力的工具，在项目之初可以通过定义一系列接口的方
+式规定模块功能和模块之间的交互界面，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:引入接口后的团队协作"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oop-project-method/with-interface.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+引入接口后的团队协作
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:引入接口后的团队协作"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+分别实现
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:不引入接口时的团队协作"
+
+\end_inset
+
+所示的代码和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:引入接口后的团队协作"
+
+\end_inset
+
+所示的代码，认真体会接口在团队协作中的作用。
+\end_layout
+
+\begin_layout Subsection
+接口上的匿名内部类
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:接口上的匿名内部类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果我们确定一个对象只临时使用一次，那么这个对象通常可以采用匿名内部类的方式来实现，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:匿名内部类"
+
+\end_inset
+
+。如果这个临时的对象只是实现了某个接口，那么代码还可以进一步简化，直接可以使用“接口上的匿名类”技术来实现，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "annoymousInnerClass-Client.java"
+
+\end_inset
+
+所示（Printer接口和Copier接口不变，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinterface-Printer.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinterface-Copier.java"
+
+\end_inset
+
+）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/annoymousinnerclass/Client.java"
+lstparams "float,caption={Client.java},label={annoymousInnerClass-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+多态
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:多态"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所谓多态，是指对象在不同阶段或者环境下有不同的行为特征，听起来是不是有点“变色龙”的味道？
+\end_layout
+
+\begin_layout Standard
+先看一个实例，假设有如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Animal的类层次关系"
+
+\end_inset
+
+所示的类层次结构,也就是说，父类Animal有默认的hello()方法，三个子类Dog,Cat,Duke分别重写（overriding）了父类Animal的方法
+hello()。代码实现如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ploymorphism-Animal.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ploymorphism-Dog.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ploymorphism-Cat.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ploymorphism-Duke.java"
+
+\end_inset
+
+、
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ploymorphism-TestAnimal.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/polymorphism/Animal.java"
+lstparams "float,caption={Animal.java},label={ploymorphism-Animal.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/polymorphism/Dog.java"
+lstparams "float,caption={Dog.java},label={ploymorphism-Dog.java}"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/polymorphism/Cat.java"
+lstparams "float,caption={Cat.java},label={ploymorphism-Cat.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/polymorphism/Duke.java"
+lstparams "float,caption={Duke.java},label={ploymorphism-Duke.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/oopm/src/cn/edu/sdut/softlab/oopm/polymorphism/TestAnimal.java"
+lstparams "float,caption={TestAnimal.java},label={ploymorphism-TestAnimal.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在TestAnimal中，animals数组的每个元素是Animal类型的，貌似调用animal数组元素的hello方法应该打印出“动物在打招呼”，但是执行Te
+stAnimal会发现输出结果是：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+汪汪
+\end_layout
+
+\begin_layout Plain Layout
+喵喵
+\end_layout
+
+\begin_layout Plain Layout
+嘎嘎
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，虽然我们调用的是父类对象的方法，但是其实真正执行的确是子类中的方法，这就是
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+多态
+\end_layout
+
+\end_inset
+
+。 但是，同一个对象，在不同的运行时间，怎么会有不同的行为呢？这一点是如何做到的？先从对象的存储说起。
+\end_layout
+
+\begin_layout Subsection
+对象的存储模型
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:对象的存储模型"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在上面的例子中，Dog、Cat、Duke类的对象在内存中是如何存储的呢？比如当Dog dog = new Dog()创建了一个Dog类的实例，则在内存中的存储如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java对象在内存中的存储模型"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement r
+overhang 0in
+width "50line%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oop-project-method/java-instance-storage.eps
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java对象在内存中的存储模型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java对象在内存中的存储模型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，dog是对象的引用，即指针，指向对象在内存的起始地址。对象在内存中的存储分为两个部分：父类的属性和方法存储区域以及子类的属性和方法存储区域，也就是说，子类
+完全包含了父类的所有信息。因此可以看出，我们得到了一个指向子类的引用dog，这个引用dog即可以访问子类的方法和属性，也可以访问父类的方法和属性，无非是通过do
+g指针不同的偏移量指向不同的区域而已。
+\end_layout
+
+\begin_layout Standard
+那么Animal dog = new Dog()是什么意思呢？从
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java对象在内存中的存储模型"
+
+\end_inset
+
+可以看出，此时的dog指针仍然是指向整个Dog对象的指针，但是指针的范围却局限于父类Animal的区域，也就是说，此时的dog指针只能调用父类Animal中的属
+性和方法，而不能调用Dog子类扩展了的属性和方法。
+\end_layout
+
+\begin_layout Standard
+如果子类没有重写（orverriding）父类的方法，子类和父类的存储是泾渭分明的。如果子类重写(orverriding）了父类中的方法，那么父类中被重写的方法
+同样会发生变化，即变的和子类中重写的方法一模一样，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:存在重写情况下的类存储结构"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oop-project-method/java-instance-storage1.eps
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+存在重写情况下的类存储结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:存在重写情况下的类存储结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，当子类重写了父类中的方法时，父类存储区域中被重写的方法就变得和子类中的方法一模一样了，这样就能够理解本文刚开始的例子了：虽然animals数组的元素都
+是Animal类型的对象，但是由于这三个引用分别指向了Dog、Cat、Duke的对象，而Dog等对象重写了Animal中的hello方法，致使我们虽然调用的是父
+类中的方法，但是由于子类重写了父类中的这个方法，父类中的这个方法变得和子类中的方法一模一样了（即所谓的overriding，重写），最终的效果和直接调用子类中的
+方法一样，这就是Java中的多态，其实也是我们期望发生的事情。
+\end_layout
+
+\begin_layout Subsection
+方法重载时的情形
+\end_layout
+
+\begin_layout Standard
+在上例中，如果子类不是重写（overriding）父类的方法，而是重载（overloading）父类的方法，结果会怎样呢？比如，Cat类的hello方法改为（D
+og/Duke以此类推）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public void hello(String name){
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println("喵喵" + name);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，Cat类的hello方法重载了父类的hello方法。执行TestAnimal的结果是：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+动物在打招呼
+\end_layout
+
+\begin_layout Plain Layout
+动物在打招呼
+\end_layout
+
+\begin_layout Plain Layout
+动物在打招呼
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:存在重载情况的类存储结构"
+
+\end_inset
+
+可自行分析执行结果。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/oop-project-method/java-instance-storage2.eps
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+存在重载情况的类存储结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:存在重载情况的类存储结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+多态的应用场合
+\end_layout
+
+\begin_layout Standard
+从以上的分析可以看出，通常会利用方法的重写来达到简化代码的目的，即充分利用Java的多态特性。也就是说，在多态的帮助下，我们只需要调用父类的方法就可以了，具体执
+行的却是子类的对应方法。当然，这里有一个前提，即必须使用子类创建对象的引用，否则多态也就失效了。
+\end_layout
+
+\begin_layout Exercise
+请说明实现Java多态的关键是什么？
+\end_layout
+
+\begin_layout Section
+*向上塑型：面向接口的编程
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:向上塑型：面向接口的编程"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:对象的存储模型"
+
+\end_inset
+
+可以看出，子类对象拥有父类对象的所有属性和方法（当然，在访问控制的限制下），反过来说，父类对象的属性和方法是子类对象的一个子集，因此把子类对象转换为一个父类对象
+是安全的，也就是说，如果我们持有一个子类对象的引用，可以安全的把这个引用转换为父类对象的引用，因为通过这个父类对象的引用，我们访问任何属性和方法都是“可达”的，
+都不会引起任何错误。
+\end_layout
+
+\begin_layout Standard
+但是反过来是不可行的，即把父类对象转换为子类对象。原因很简单，转换后的子类对象引用仍然指向了父类对象，但是却可能试图访问超出了父类对象范围的属性和方法，显然是不
+允许的。
+\end_layout
+
+\begin_layout Standard
+这就是Java中的“向上塑型”，即对象的引用可以向父类的方向转换，但是不允许向子类的方向转换。在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ploymorphism-TestAnimal.java"
+
+\end_inset
+
+中，我们已经看到了向上塑型的应用，可以说，向上塑型是Java多态的的基本形态。
+\end_layout
+
+\begin_layout Standard
+在编程实践中，我们也经常按照接口向上塑型，即把对象的类型转换为其实现的某个接口，比如我们重写
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multiinterface-Client.java"
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    Printer sp = new SmartPrinter(); // 向上塑型为接口类型
+\end_layout
+
+\begin_layout Plain Layout
+
+    sp.print();
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，通过向上塑型为父类对象或者接口类型，实际上我们获得了一个“受限”的对象引用，即这个对象引用只能访问原对象的部分属性和方法，一定程度上提高了程序的安全性
+和健壮性：尽量少的对外暴露调用接口。这也符合面向对象编程的封装原则。
+\end_layout
+
+\begin_layout Subsection
+对象的类型
+\end_layout
+
+\begin_layout Standard
+讨论如下的代码片段：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class SmartPrinter extends BasePrinter implements Printer, Copier
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么以下的用法都是合法的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SmartPrinter sp = new SmartPrinter();
+\end_layout
+
+\begin_layout Plain Layout
+
+BasePrinter sp = new SmartPrinter(); // 向上塑型为父类对象
+\end_layout
+
+\begin_layout Plain Layout
+
+Printer sp = new SmartPrinter(); // 向上塑型为接口类型
+\end_layout
+
+\begin_layout Plain Layout
+
+Copier = new SmartPrinter(); // 向上塑型为接口类型
+\end_layout
+
+\begin_layout Plain Layout
+
+Object sp = new SmartPrinter(); // Object是所有类的父类
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+一个对象可以有多少种类型？试举例说明。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+此话题说清楚有难度，手头资料似乎不够
+\end_layout
+
+\begin_layout Plain Layout
+子类(subtyping)是面向对象编程的重要概念，
+\end_layout
+
+\begin_layout Definition
+子类替换原则
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.1"
+key "java-generics-collections"
+
+\end_inset
+
+是指，凡是我们期望一个对象的时候，都可以使用这个对象的子类对象来替代。
+\end_layout
+
+\begin_layout Definition
+子类替换有两种常见情形：
+\end_layout
+
+\begin_layout Enumerate
+使用子类赋值
+\end_layout
+
+\begin_layout Enumerate
+使用子类替换参数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

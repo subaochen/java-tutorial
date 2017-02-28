@@ -1,0 +1,62 @@
+#\DeclareLyXModule{提示inset}
+#DescriptionBegin
+# To insert a notice environment.
+# Please insert notice from menu:insert->insert custom inset->Notice
+#DescriptionEnd
+# Author : Su Baochen<subaochen@126.com>
+
+Format 49
+
+InsetLayout 	Flex:Notice
+LyXType 	custom
+Labelstring    	提示
+Decoration  	classic
+LabelFont
+  Color   	collapsable
+  Size    	Small
+EndFont
+MultiPar    	true
+LatexName   	Notice
+LatexType   	Environment
+Preamble
+  \usepackage{tikz}
+  \usetikzlibrary{calc}
+  \usepackage{color}
+  \usepackage[framemethod=tikz]{mdframed}
+  \usepackage{fourier-orns}
+  \definecolor{noteColor}{named}{black}%TODO：printed book can not deal with color
+\tikzset{
+    notesymbol/.style={
+        rectangle,
+        draw=noteColor,
+        fill=white,
+        scale=1,
+        overlay}
+}
+\global\mdfdefinestyle{note}{%
+  hidealllines=true,leftline=true,
+  skipabove=12,skipbelow=12pt,
+  innertopmargin=0.4em,%
+  innerbottommargin=0.4em,%
+  innerrightmargin=0.7em,%
+  rightmargin=0.7em,%
+  innerleftmargin=1.7em,%
+  leftmargin=0.7em,%
+  middlelinewidth=.2em,%
+  linecolor=noteColor,%
+  fontcolor=noteColor,%
+  firstextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[notesymbol] {\lefthand};},%
+  secondextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[notesymbol] {\lefthand};},%
+  middleextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[notesymbol] {\lefthand};},%
+  singleextra={\path let \p1=(P), \p2=(O) in ($(\x2,0)+0.5*(0,\y1)$)
+       node[notesymbol] {\lefthand};}%
+ }
+
+\newmdenv[style=note]{Notice}
+
+EndPreamble
+End
+

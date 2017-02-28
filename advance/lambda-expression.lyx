@@ -1,0 +1,2442 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+logicalmkup
+note-inset
+tip-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+lambda表达式
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:lambda表达式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+为什么引入lambda表达式？
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:为什么引入lambda表达式？"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正式介绍lambda表达式之前，我们先看一个常见的情形，假设有类定义如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Student.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/lambda/src/cn/edu/sdut/softlab/lambda/Student.java"
+lstparams "caption={Student.java},label={Student.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+列出大于指定年龄的学生
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:列出大于指定年龄的学生"
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+本部分的完整示例请参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial-examples/tree/master/chap03/src/cn/edu
+/sdut/softlab/lambda
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+在Client中，我们可以设计一个findStudentsOlderThan方法如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void findStudentsOlderThan(int age) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (Student stu : testData) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      if (stu.getAge() > age) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        stu.print();
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+这段代码很容易理解。testData是一个List<Student>集合，作为测试，我们在Student中初始化了testData。findStudentsOl
+derThan遍历所有的testData元素，找出大于指定年龄的学生并输出。
+\end_layout
+
+\begin_layout Standard
+但是，这段代码也不够灵活，比如我们希望找出年龄在20和25之间的所有学生，就不得不重新改写上面的方法，或者重新编写一个新的方法：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void findStudentsAgeBetween(int minAge, int maxAge) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (Student stu : testData) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      if (stu.getAge() > minAge && stu.getAge() < maxAge) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        stu.print();
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+隔离筛选条件
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:隔离筛选条件"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+本质上，
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:列出大于指定年龄的学生"
+
+\end_inset
+
+是根据指定的条件筛选学生。筛选方法是多样化的，有没有办法可以将筛选条件隔离出来呢？这是“设计模式”的重要原则：隔离变化。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计和分析
+\end_layout
+
+\begin_layout Standard
+我们可以设计一个独立的筛选接口：CheckStudent如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public interface CheckStudent {
+\end_layout
+
+\begin_layout Plain Layout
+
+  /**
+\end_layout
+
+\begin_layout Plain Layout
+
+   * 检查学生是否满足筛选条件.
+\end_layout
+
+\begin_layout Plain Layout
+
+   * 
+\end_layout
+
+\begin_layout Plain Layout
+
+   * @param stu 待检查的学生对象
+\end_layout
+
+\begin_layout Plain Layout
+
+   * @return 满足条件返回true，否则返回false
+\end_layout
+
+\begin_layout Plain Layout
+
+   */
+\end_layout
+
+\begin_layout Plain Layout
+
+  boolean test(Student stu);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+针对
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:列出大于指定年龄的学生"
+
+\end_inset
+
+的情形，可以定义一个CheckStudent的实现类如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// 不好的实现
+\end_layout
+
+\begin_layout Plain Layout
+
+public class StudentCheckerOldThan implements CheckStudent { 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+  public boolean test(Student stu) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    return stu.getAge() > 18;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是我们就可以在主类中这样实现对学生的条件筛选：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    findStudents(new StudentCheckerOldThan());
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  public static void findStudents(CheckStudent checker) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for(Student stu : testData) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      if(checker.test(stu)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        stu.print();
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，虽然我们在main中实现了对筛选条件的隔离，但是在StudentCheckerOldThan中却只能将筛选条件（年龄大于18）写死了，很糟糕的设计！如
+何避免写死筛选条件呢？答案是在main方法中使用匿名类：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public static void main(String[] args) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+  findStudents(new CheckStudent() {
+\end_layout
+
+\begin_layout Plain Layout
+
+      public boolean test(Student stu) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return stu.getAge() > 18;
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    });
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这样我们多次调用findStudents方法时，可以传入不同的年龄得到不同的结果，也避免了定义一个写死了年龄的StudentCheckerOlderThan类。
+\end_layout
+
+\begin_layout Standard
+Java8进一步简化了匿名类的写法，这就是lambda表达式。
+\end_layout
+
+\begin_layout Example
+使用lambda表达式简化匿名类的写法
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:使用lambda表达式简化匿名类的写法"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+如下所示：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    findStudents(stu->stu.getAge() > 18);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+可以看出，使用lambda表达式极大的简化了匿名类的写法。那么，如何理解这个lambda表达式呢？
+\end_layout
+
+\begin_layout Example
+实际上，lambda表达式代表了一个匿名函数。每个lambda表达式分为三部分，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lambda表达式的三个组成部分"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Example
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imgs/lamda-expression/lamda-thress-parts.eps
+	width 40line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+lambda表达式的三个组成部分
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:lambda表达式的三个组成部分"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+其中：
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+参数列表
+\end_layout
+
+\end_inset
+
+：在函数体中使用到的参数列表，有几个就列出几个，使用逗号隔开多个参数，并使用小括号包围所有参数。如果只有一个参数，小括号可以省略。在列出参数时，也可以明确说明参
+数的数据类型，但是通常不需要这样做，Java会根据上下文自动推断参数的类型。不明确说明参数类型的好处是，一个lambda表达式可以适用于多种类型的参数，有点泛型
+的味道了。如果参列表为空，使用()表示。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+“使用于”符号
+\end_layout
+
+\end_inset
+
+：“->”仅表示前面的参数列表在函数体中使用，没有更多的含义。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+函数体
+\end_layout
+
+\end_inset
+
+：也就是lambda表达式的执行部分，根据传入的参数执行在函数体中给出的语句。如果语句不止一句，则需要使用大括号括起来。
+\end_layout
+
+\begin_layout Standard
+我们知道函数的4个基本要素是：函数名、参数列表、返回值类型和函数体，lambda表达式是一个匿名函数，参数列表和函数体都在lambda表达式中体现出来了，函数的
+返回值是如何决定的呢？在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:使用lambda表达式简化匿名类的写法"
+
+\end_inset
+
+中，findStudents方法的参数要求一个实现了CheckStudent接口类型的对象，因此lambda表达式作为一个匿名方法，其返回值是CheckStud
+ent接口类型。实际上，Java的lambda表达式的返回值要求是一个“
+\begin_inset Flex Noun
+status open
+
+\begin_layout Plain Layout
+接口函数
+\end_layout
+
+\end_inset
+
+”类型：首先，这是一个接口，其次，这个接口中有且只有一个未实现的方法（抽象方法），比如CheckStudent中的test方法。这样，lambda表达式作为一个
+匿名方法，实际上是实现了这个函数接口，并在函数体中给出了函数接口中抽象方法的一个具体实现。
+\end_layout
+
+\begin_layout Standard
+为了方便编写lambda表达式，Java8新增了java.util.function包，其中包含了一些预定义的“接口函数”，可以“拿来”直接用，常见的接口函数如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Java8新增的函数接口"
+
+\end_inset
+
+所示：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="35line%">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="28line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+接口
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+接口函数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+备注
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+@FunctionalInterface 
+\end_layout
+
+\begin_layout Plain Layout
+public interface Function<T,R>
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R apply(T t) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T为参数，R为lambda表达式的返回值。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+@FunctionalInterface public 
+\end_layout
+
+\begin_layout Plain Layout
+interface Consumer<T>
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void accept(T t)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T为参数，无需返回值。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+@FunctionalInterface 
+\end_layout
+
+\begin_layout Plain Layout
+public interface Supplier<T>
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T get() 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+没有参数，T为返回值类型。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+@FunctionalInterface 
+\end_layout
+
+\begin_layout Plain Layout
+public interface Predicate<T>
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean test(T t)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T为参数，返回一个boolean类型。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java8新增的函数接口
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Java8新增的函数接口"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有了预定义的函数接口，
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:隔离筛选条件"
+
+\end_inset
+
+中的CheckStudent接口就没有存在的必要了，findStudents方法直接使用Predicate接口作为参数即可。
+\end_layout
+
+\begin_layout Example
+使用Java8预定义的接口重新编写
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:隔离筛选条件"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+为了清晰起见，我们重新命名findStudents方法为findStudentsWithLambda：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void findStudentsWithPredinedFunction(Predicate<Student>
+ checker) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for(Student stu : testData) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      if(checker.test(stu))
+\end_layout
+
+\begin_layout Plain Layout
+
+        stu.print();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在main方法中，调用findStudentsWithPredefinedFucntion的方式和findStudents是一样的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+findStudentsWithPredinedFunction(stu -> stu.getAge() > 20);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+可见，借助于Java提供的预定义函数接口，我们在很多情况下就不需要自己再定义函数接口了。但是也需要注意到Java8预定义函数接口的不同应用场景：
+\end_layout
+
+\begin_layout Itemize
+Function：往往用于将参数T转换为指定的返回类型R。比如，我们只希望检查对象T的某个属性R，则可以简单的借用Fucntion函数接口来实现。
+\end_layout
+
+\begin_layout Itemize
+Consumer：只是对参数T执行某种操作（处理），比如打印输出，保存到某种介质（数据库）等。
+\end_layout
+
+\begin_layout Itemize
+Supplier：当我们需要一个和输入条件无关的结论时，Supplier很适合。
+\end_layout
+
+\begin_layout Itemize
+Predicate：判断给定的参数对象T是否满足一定的条件。
+\end_layout
+
+\begin_layout Example
+遍历学生集合，打印年龄大于20岁学生的Email
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+代码如下所示：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void findStudentsEmailByAge(
+\end_layout
+
+\begin_layout Plain Layout
+
+          Predicate<Student> checker, // 筛选学生的条件
+\end_layout
+
+\begin_layout Plain Layout
+
+          Function<Student, String> mapper, // 如何映射筛选出的学生对象
+\end_layout
+
+\begin_layout Plain Layout
+
+          Consumer<String> action) { // 对于映射的部分如何处理
+\end_layout
+
+\begin_layout Plain Layout
+
+    for(Student stu : testData) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      if(checker.test(stu)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        String email = mapper.apply(stu);
+\end_layout
+
+\begin_layout Plain Layout
+
+        action.accept(email);
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+调用方式：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    findStudentsEmailByAge(
+\end_layout
+
+\begin_layout Plain Layout
+
+            stu->stu.getAge() > 20,
+\end_layout
+
+\begin_layout Plain Layout
+
+            stu -> stu.getEmail(),
+\end_layout
+
+\begin_layout Plain Layout
+
+            email -> System.out.println(email));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+参见代码中的注释，我们首先使用了Predicate函数接口来筛选结果集，然后使用Function函数接口抽取（映射）我们感兴趣的部分，最后使用Consume函数
+接口对我们感兴趣的部分进行处理。
+\end_layout
+
+\begin_layout Standard
+上述的findStudentsEmailByAge方法还可以使用泛型进一步“通用化”处理，如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static <X> void findStudents(
+\end_layout
+
+\begin_layout Plain Layout
+
+          Predicate<Student> checker,
+\end_layout
+
+\begin_layout Plain Layout
+
+          Function<Student, X> mapper,
+\end_layout
+
+\begin_layout Plain Layout
+
+          Consumer<X> action) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for(Student stu : testData) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      if(checker.test(stu)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        X info = mapper.apply(stu);
+\end_layout
+
+\begin_layout Plain Layout
+
+        action.accept(info);
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }  
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如此，我们使用findStudents不仅可以处理Email地址，还可以处理任意的Student中的属性了，比如将20岁以上学生的姓名转换为大写字母：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    findStudents(
+\end_layout
+
+\begin_layout Plain Layout
+
+            stu -> stu.getAge() > 20,
+\end_layout
+
+\begin_layout Plain Layout
+
+            stu -> stu.getUsername(),
+\end_layout
+
+\begin_layout Plain Layout
+
+            username -> System.out.println(username.toUpperCase())
+\end_layout
+
+\begin_layout Plain Layout
+
+    );
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于此种应用场景，更好的解决方案是使用集合的流式处理模式，参见
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:集合的流式处理"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+编写lambda表达式时尤其要注意到，lambda表达式要求返回的是一个函数接口类型，请看下面的例子：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+System.out.println(()->10); // 错误的用法，因为根据println的定义，Java无法推断出()->10实现了哪个函数接口
+\end_layout
+
+\begin_layout Plain Layout
+
+System.out.println((Supplier)()->10); // 正确，明确了lambda表达式返回一个Supplier类型的函数接口
+\end_layout
+
+\begin_layout Plain Layout
+
+System.out.println(((Supplier)()->10).get()); // 调用Supplier接口的get方法打印出lambda表达式的值：1
+0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写一个labmda表达式，计算两个整数的和、差、积。
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:编写一个labmda表达式，计算两个整数的和、差、积。"
+
+\end_inset
+
+（参考答案参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+solutionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "solu:计算两个整数的和、差、积的lambda表达式示例如下："
+
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Section
+lambda表达式的类型
+\end_layout
+
+\begin_layout Standard
+上面我们说lambda表达式是一个“匿名函数”，根据我们的经验，函数只有返回值、函数名、参数和函数体四个要素，那么lambda表达式的类型是怎么回事呢？实际上，
+我们可以把lambda表达式理解为“对象”，因为lambda表达式实现了“函数接口”中的唯一抽象方法，那么这个函数接口的类型就可以认为是lambda表达式的类型
+，Java8称之为“目标类型”（target type）。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+如何区分lambda表达式的类型和返回值？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+lambda表达式的应用场景
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:为什么引入lambda表达式？"
+
+\end_inset
+
+所述，lambda表达式可以用于替换匿名类，也就是说，几乎所有使用匿名类的地方都可以使用lambda表达式，前提条件是，匿名类实现的接口是一个函数接口。实际上，
+Java中的匿名类接口很多是函数接口，比如线程中的Runnable接口，GUI中的ActionListener接口等。
+\end_layout
+
+\begin_layout Example
+使用lambda表达式替换线程中的匿名类
+\end_layout
+
+\begin_layout Example
+在引入lambda表达式之前，我们这样创建一个线程：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Thread myThread = new Thread( new Runnable () {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void run() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("myThread created by an anonymous class.");
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+} );
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+借助于lambda表达式，创建线程就简单多了：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Thread myThread = new Thread(()->{
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println("myThread created by lambda")
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+注意第二个线程里的lambda表达式，我们并不需要显式地把它转成一个Runnable，因为Java能根据上下文自动推断出来：一个Thread的构造函数接受一个R
+unnable参数，而传入的lambda表达式正好符合其run()函数，所以Java编译器推断它为Runnable。
+\end_layout
+
+\begin_layout Example
+从形式上看，lambda表达式只是为你节省了几行代码。但将lambda表达式引入Java的动机并不仅仅为此。Java8有一个短期目标和一个长期目标。短期目标是：
+配合“集合类批处理操作”的内部迭代和并行处理（下面将要讲到）；长期目标是将Java向函数式编程语言这个方向引导（并不是要完全变成一门函数式编程语言，只是让它有更
+多的函数式编程语言的特性），也正是由于这个原因，Oracle并没有简单地使用内部类去实现lambda表达式，而是使用了一种更动态、更灵活、易于将来扩展和改变的策
+略（invokedynamic）
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见：http://blog.csdn.net/ioriogami/article/details/12782141
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+lambda表达式实际上是把函数A作为函数B参数的艺术，也就是说，把函数A作为函数B的参数，这样在函数B内部就可以使用函数A所提供的功能了。通常，在函数B内部是
+一个循环或者迭代的过程，而每一次循环或者迭代都会用到函数A进行相应的处理。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+集合的流式处理
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:集合的流式处理"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在Java8之前，我们要遍历或者迭代集合类，只能借助于while/for等循环机制，Java8为每一个集合类增加了stream()方法，将集合类的数据集合转换为
+一个“流”（stream），通过流的方式来操作集合类中的数据集合。我们在
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:Java的IO"
+
+\end_inset
+
+中已经看到了“流”的威力，比如从键盘输入数字最终转换为一个浮点数的过程可以形象的表示为
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:从键盘输入的处理过程"
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/lamda-expression/input-from-keyboard-stream.eps
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+从键盘输入的处理过程
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:从键盘输入的处理过程"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+比如从键盘输入了字符串“123.45”后，InputStream、InputStreamReader、BufferedReader就像是三节管道一样首尾相接协同工
+作，即InputStream的输出（二进制流）作为InputSteamReader的输入，InputStreamReader的输出（字节流）作为Buffered
+Reader的输入，BufferReader的输出是一个去掉了回车换行的字节流。由此可见，“流”是一个很适合数据的过滤、转换等处理的机制，而且非常灵活。Java
+8为集合类引入“流”机制，极大的方便了集合类数据的处理。可以说，有了集合类的流式处理，基本上可以告别for/while循环了。
+\end_layout
+
+\begin_layout Standard
+Java为集合类的流提供了如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Java8的集合类stream方法"
+
+\end_inset
+
+的基本方法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="40line%">
+<column alignment="left" valignment="middle" width="50line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void forEach(Consumer<? super T> action) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+遍历集合数据，在每一个数据上执行lambda表达式action
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<R> Stream<R> map(Function<? super T,? extends R> mapper)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+通过类型为Function的lambda表达式将输入类型T转换为类型R，map的输出是一个流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stream<T> filter(Predicate<? super T> predicate)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+通过类型为Predicate的lambda表达式过滤集合数据，filter的输出是一个流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<R> R collect(Supplier<R> supplier, BiConsumer<R,? super T> accumulator,
+ BiConsumer<R,R> combiner)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java8的集合类stream方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Java8的集合类stream方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过stream方法遍历元素
+\end_layout
+
+\begin_layout Example
+forEach接受一个Consumer类型的lambda表达式，即如何处理集合中的元素的“action”。
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+testData.stream().forEach((stu)->{System.out.println(stu)});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过stream方法过滤元素
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:通过stream方法过滤元素"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+filter方法接受一个Predicate类型的lambda表达式，对集合中的每一个元素都执行Predicate函数接口中的test方法进行验证，其输出是一个经
+过过滤处理的流，因此可以作为forEach的输入：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+testData.stream() // 包含所有数据的流
+\end_layout
+
+\begin_layout Plain Layout
+
+        .filter(stu -> stu.getAge() > 20) // 包含大于20岁学生的流
+\end_layout
+
+\begin_layout Plain Layout
+
+        .forEach(stu -> System.out.println(stu)); // 打印大于20岁的每一个学生
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过stream方法转换元素
+\end_layout
+
+\begin_layout Example
+进一步的，filter的输出流，可以通过map的数据转换处理后，在送给forEach处理。map方法接受一个Function类型的lambda表达式来抽取我们感
+兴趣的数据，其结果是一个转换后的流：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    // 使用stream筛选集合数据并抽取部分数据处理
+\end_layout
+
+\begin_layout Plain Layout
+
+    testData.stream() // 包含所有数据的流
+\end_layout
+
+\begin_layout Plain Layout
+
+            .filter(stu -> stu.getAge() > 18) // 包含大于20岁学生的流
+\end_layout
+
+\begin_layout Plain Layout
+
+            .map(stu -> stu.getEmail())
+\end_layout
+
+\begin_layout Plain Layout
+
+            .forEach(email -> System.out.println(email)); // 打印大于20岁学生的Email
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过stream获得数据子集
+\end_layout
+
+\begin_layout Example
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:通过stream方法过滤元素"
+
+\end_inset
+
+时，我们是将过滤后的数据子集送到forEach中依次进行处理，也可以通过collect方法将数据子集“收集”起来重新放到一个集合中：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    // 获得符合要求的数据子集
+\end_layout
+
+\begin_layout Plain Layout
+
+    List<Student> list = testData.stream()
+\end_layout
+
+\begin_layout Plain Layout
+
+            .filter(stu -> stu.getAge() > 18)
+\end_layout
+
+\begin_layout Plain Layout
+
+            .collect(Collectors.toList());
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println(list);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过stream获得数据子集的部分字段
+\end_layout
+
+\begin_layout Example
+进一步，我们也可以只“收集”感兴趣的部分：
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    // 获得符合要求的数据子集的部分字段收集起来
+\end_layout
+
+\begin_layout Plain Layout
+
+    List<String> emails = testData.stream()
+\end_layout
+
+\begin_layout Plain Layout
+
+            .filter(stu -> stu.getAge() > 20)
+\end_layout
+
+\begin_layout Plain Layout
+
+            .map(stu -> stu.getEmail())
+\end_layout
+
+\begin_layout Plain Layout
+
+            .distinct()  // 去除重复内容
+\end_layout
+
+\begin_layout Plain Layout
+
+            .collect(Collectors.toList());
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println(emails);
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 也可以收集到Map中
+\end_layout
+
+\begin_layout Plain Layout
+
+    Map<String,String> stuMap = testData.stream()
+\end_layout
+
+\begin_layout Plain Layout
+
+            .filter(stu -> stu.getAge() > 20)
+\end_layout
+
+\begin_layout Plain Layout
+
+            .distinct()  // 去除重复内容
+\end_layout
+
+\begin_layout Plain Layout
+
+            .collect(Collectors.toMap(stu -> stu.getUsername(), stu -> stu.getEmail(
+)));
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println(stuMap); 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+注意到Collectors.toMap方法的两个参数都是Function类型的lambda表达式，第一个lambda表达式生成了Map的key，第二个lambda
+表达式生成了Map的value。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过stream方法分组统计元素
+\end_layout
+
+\begin_layout Example
+比如我们统计大于18岁的各个年龄的人数：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要进一步说明summingInt等方法的用法
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    // 统计指定数据子集
+\end_layout
+
+\begin_layout Plain Layout
+
+    Map<Integer, Integer> r = testData.stream()
+\end_layout
+
+\begin_layout Plain Layout
+
+            .filter(stu -> stu.getAge() > 18)
+\end_layout
+
+\begin_layout Plain Layout
+
+            .map(stu -> new Integer(stu.getAge()))
+\end_layout
+
+\begin_layout Plain Layout
+
+            .collect(Collectors.groupingBy(p -> p, Collectors.summingInt(p
+ -> 1)));
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println(r);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+要注意到stream的哪些方法返回流：filter，map，distinct等返回的都是一个新的流，因此可以在这个新的流的基础上继续操作。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里增加一节：方法引用，。形如Person::compareByAge的形式，参考：https://docs.oracle.com/javase/tutorial/
+java/javaOO/methodreferences.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+lambda表达式的作用范围
+\end_layout
+
+\begin_layout Standard
+本质上，lambda表达式是一个匿名函数，因此和匿名类有相似的作用范围：在lambda表达式中可以获取“包围类”（即定义lambda表达式的类）中的变量。
+\end_layout
+
+\begin_layout Example
+lambda表达式的作用范围
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "LambdaScopeTest.java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/lambda/src/cn/edu/sdut/softlab/lambda/LambdaScopeTest.java"
+lstparams "caption={LambdaScopeTest.java},label={LambdaScopeTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在NetBeans IDE中执行LambdaScopeTest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+run:
+\end_layout
+
+\begin_layout Plain Layout
+x = 23
+\end_layout
+
+\begin_layout Plain Layout
+y = 23
+\end_layout
+
+\begin_layout Plain Layout
+this.x = 1
+\end_layout
+
+\begin_layout Plain Layout
+LambdaScopeTest.this.x = 0
+\end_layout
+
+\begin_layout Plain Layout
+成功构建 (总时间: 0 秒)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+理解了
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:内部类的作用范围"
+
+\end_inset
+
+:前面缺少了内部类的作用范围的描述
+\end_layout
+
+\end_inset
+
+这个运行结果是显然的，不再赘述。
+\end_layout
+
+\begin_layout Section*
+参考资料
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html"
+target "http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "http://blog.csdn.net/ioriogami/article/details/12782141"
+target "http://blog.csdn.net/ioriogami/article/details/12782141"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="cn.edu.sdut.softlab.GridBagLayoutDemo">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="382" height="273"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="9ea40" class="javax.swing.JButton" binding="buttonAButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <maximumSize width="1000" height="1000"/>
+          <text value="ButtonA"/>
+        </properties>
+      </component>
+      <component id="a8e62" class="javax.swing.JButton" binding="buttonBButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="ButtonB"/>
+        </properties>
+      </component>
+      <component id="1d649" class="javax.swing.JButton" binding="anotherButtonButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Another Button"/>
+        </properties>
+      </component>
+      <component id="e7992" class="javax.swing.JButton" binding="aLongNameButtonButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="A Long Name Button"/>
+        </properties>
+      </component>
+      <component id="e42bb" class="javax.swing.JButton" binding="lastButtonButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="1" row-span="3" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Last Button"/>
+        </properties>
+      </component>
+      <component id="3bb8e" class="javax.swing.JButton" binding="buttonCButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="ButtonC"/>
+        </properties>
+      </component>
+      <component id="d10eb" class="javax.swing.JButton" binding="buttonDButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="ButtonD"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

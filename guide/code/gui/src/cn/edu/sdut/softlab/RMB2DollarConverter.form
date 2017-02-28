@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="cn.edu.sdut.softlab.RMB2DollarConverter">
+  <grid id="27dc6" binding="mainPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="470" height="364"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="6e2be" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="人民币："/>
+        </properties>
+      </component>
+      <component id="c8ff3" class="javax.swing.JTextField" binding="rmbTextField">
+        <constraints/>
+        <properties>
+          <minimumSize width="14" height="29"/>
+          <preferredSize width="60" height="29"/>
+          <text value="#.##"/>
+          <toolTipText value="请输入人民币数额"/>
+        </properties>
+      </component>
+      <component id="d5aea" class="javax.swing.JButton" binding="convertButton">
+        <constraints/>
+        <properties>
+          <text value="转换"/>
+        </properties>
+      </component>
+      <component id="11800" class="javax.swing.JLabel" binding="dollarLabel">
+        <constraints/>
+        <properties>
+          <preferredSize width="100" height="21"/>
+          <text value="美元："/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
