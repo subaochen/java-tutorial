@@ -8,6 +8,8 @@
 * code：示例代码
 * imgs：本书用到的图片，大多数图片包含dia源文件
 * *.lyx：本教材各章节lyx源代码，其中的java-guide-on-c.lyx为主控文件。
+* preamble.tex：Lyx的导言设置，在这里设置纸张大小、代码列表的样式等。这些也
+可以在Lyx的图形用户界面设置，但是通过导言设置便于大型文档的组织。
 * frontmatter.tex：前言的latex源代码
 * cover.svg：封面，使用inkscape编辑而成
 
@@ -17,9 +19,19 @@
 * code：示例代码
 * imgs：本书用到的图片，大多数图片包含dia源文件
 * *.lyx：本教材各章节lyx源代码，其中的java-advanced.lyx为主控文件。
+* preamble.tex：Lyx的导言设置，在这里设置纸张大小、代码列表的样式等。这些也
+可以在Lyx的图形用户界面设置，但是通过导言设置便于大型文档的组织。
 * frontmatter.tex：前言的latex源代码
 * cover.svg：封面，使用inkscape编辑而成
 
+# 为什么选用Lyx编写本书？
+
+本系列教材是写给程序员或者未来的程序员读的，程序员要求有很高的抽象思维和
+逻辑思维能力，word之流只能培养乱写乱画的能力，所以，Lyx是编写计算机类图书
+的首选工具:-)。
+
+其实上手Lyx很容易，相信用过的都会爱不释手。Lyx自带的用户指南简洁实用，
+关于使用Lyx的一些经验教训，您也可以参考博客：http://dz.sdut.edu.cn/blog/subaochen/category/lyxlatex/
 
 # 如何参与
 

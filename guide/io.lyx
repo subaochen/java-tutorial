@@ -2613,8 +2613,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/io/src/cn/edu/sdu
-t/softlab/SystemInTest.java
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/io/src/cn/edu/s
+dut/softlab/SystemInTest.java
 \end_layout
 
 \end_inset
@@ -2634,7 +2634,7 @@ lines 0
 placement r
 overhang 0in
 width "30line%"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align right
@@ -3737,7 +3737,7 @@ status open
 \end_layout
 
 \begin_layout Section
-文件操作
+*文件操作
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:文件操作"
@@ -4969,7 +4969,7 @@ lstparams "float,caption={PathCompareTest.java},label={PathCompareTest.java}"
 \end_layout
 
 \begin_layout Section
-Files类
+*Files类
 \end_layout
 
 \begin_layout Standard
@@ -9354,7 +9354,7 @@ name "tab:FileVisitor接口方法"
 \end_layout
 
 \begin_layout Section
-访问属性文件
+*访问属性文件
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:读写属性文件"

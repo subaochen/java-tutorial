@@ -105,7 +105,7 @@ PackageOptions url hyphens
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="21" columns="3">
+<lyxtabular version="3" rows="13" columns="3">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="middle" width="5line%">
 <column alignment="left" valignment="middle" width="60line%">
@@ -606,7 +606,7 @@ Java GUI综合示例
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -615,7 +615,7 @@ Java GUI综合示例
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -624,311 +624,11 @@ Java GUI综合示例
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-建议在这里插入一次习题课作为“中场休息”，巩固已学知识。
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Itemize
-为什么要引入泛型？
-\end_layout
-
-\begin_layout Itemize
-泛型的常见形态（用法）
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-要注意到讲述这部分内容时还没有学习“集合类”
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Itemize
-泛型中的通配符
-\end_layout
-
-\begin_layout Itemize
-泛型的类型擦除
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-本部分内容可以作为较高要求
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-15
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-集合类框架
-\end_layout
-
-\begin_layout Plain Layout
-常见集合类：List、Set、Map、Queue的用法
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-通过实例，可结合泛型演示
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-16
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-总结集合类中的泛型
-\end_layout
-
-\begin_layout Plain Layout
-集合类中的PECS原则
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-本部分内容可作为较高要求
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-17
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Itemize
-lambda表达式基本概念：为什么引入lambda表达式？
-\end_layout
-
-\begin_layout Itemize
-lambda表达式的常见形式
-\end_layout
-
-\begin_layout Itemize
-集合类的流式处理
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-本部分可以作为较高要求内容
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-18
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Itemize
-线程的概念
-\end_layout
-
-\begin_layout Itemize
-Java创建线程的两种方法
-\end_layout
-
-\begin_layout Itemize
-竞争资源的概念
-\end_layout
-
-\begin_layout Itemize
-线程的同步和互斥处理方法
-\end_layout
-
-\begin_layout Itemize
-sychronized和wait()/notifyAll()的联合使用举例
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-重点是线程的概念和synchronized如何保护竞争资源
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-19
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Itemize
-网络基础知识简单回顾
-\end_layout
-
-\begin_layout Itemize
-URL的表达和内容读取
-\end_layout
-
-\begin_layout Itemize
-Socket的概念
-\end_layout
-
-\begin_layout Itemize
-Java Socket服务器端和客户端编程
-\end_layout
-
-\begin_layout Itemize
-Apache mina简介
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Apache mina可以简单一提，要求有兴趣的学生自学。
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-20
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Itemize
-注解的基本概念
-\end_layout
-
-\begin_layout Itemize
-注解的基本写法
-\end_layout
-
-\begin_layout Itemize
-什么是DI？
-\end_layout
-
-\begin_layout Itemize
-注解在DI中的应用
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-DI可作为较高要求
+
 \end_layout
 
 \end_inset
