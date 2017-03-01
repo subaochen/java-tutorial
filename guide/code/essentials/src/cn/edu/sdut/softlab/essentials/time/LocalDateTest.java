@@ -8,7 +8,7 @@ import java.time.ZoneId;
 /**
  * 本类演示了Java8的LocalDate的用法 .
  *
- * @author http://www.importnew.com/14140.html
+ * @author 参考了： http://www.importnew.com/14140.html
  */
 public class LocalDateTest {
 
@@ -22,7 +22,7 @@ public class LocalDateTest {
 		LocalDate today = LocalDate.now(); // |\longremark{获取当前日期}|
 		System.out.println("Current Date=" + today);
 
-		LocalDate firstDay2016 = LocalDate.of(2016, Month.JANUARY, 1); // ||\longremark{给定年月日创建特定日期对象}
+		LocalDate firstDay2016 = LocalDate.of(2016, Month.JANUARY, 1); // |\longremark{给定年月日创建特定日期对象}|
 		System.out.println("Specific Date=" + firstDay2016);
 
 

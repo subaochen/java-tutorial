@@ -1,40 +1,35 @@
-/*
- * Copyright 2016 Su Baochen and individual contributors by the 
- * @authors tag. See the copyright.txt in the distribution for
- * a full listing of individual contributors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package cn.edu.sdut.softlab.exception.eshop;
 
 /**
- * 本类 .
+ * 本类演示了用户自定义异常的用法 .
+ *
  * @author Su Baochen
  */
 public class CustomerOrder {
+	private static boolean inventoryOK = false;
+	private static boolean priceOK = false;
 
-  /**
-   * 程序执行入口.
-   * @param args 命令行参数
-   */
-  public static void main(String[] args) {
-      
-  }
-  
-  public void placeOrder(){
-    
-    
-  }
+	/**
+	 * 程序执行入口.
+	 *
+	 * @param args 命令行参数
+	 */
+	public static void main(String[] args) {
+		try {
+			placeOrder();
+		} catch (OutOfInventoryException e) {
+			e.printStackTrace();
+		} catch (PriceNotAvailableException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void placeOrder() throws OutOfInventoryException, PriceNotAvailableException {
+		if (!inventoryOK)
+			throw new OutOfInventoryException("库存不足，请及时补充库存！");
+
+		if (!priceOK)
+			throw new PriceNotAvailableException("价格变化了，请尝试刷新获得新的价格。");
+	}
 
 }

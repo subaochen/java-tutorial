@@ -1607,7 +1607,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "CopyBinary.java"
 
 \end_inset

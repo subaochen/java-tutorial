@@ -154,6 +154,19 @@ status open
 
 \begin_layout Standard
 回到现实的程序中，在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:日期和时间类"
@@ -529,8 +542,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename imgs/exception/exception-overview.svg
+	filename imgs/exception/exception-overview.eps
 	width 100col%
 
 \end_inset
@@ -582,7 +596,27 @@ status open
 status open
 
 \begin_layout Plain Layout
-捕获异常的方式？
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java虚拟机和Java应用程序的关系"
+
+\end_inset
+
+了解Java应用程序和Java虚拟机之间的关系，感性认识Java虚拟机是如何捕获异常的。
 \end_layout
 
 \end_inset
@@ -613,11 +647,11 @@ reference "fig:Java的异常类层次结构"
 \end_inset
 
 ，Error和RuntimeException的子类都是非检查型异常。在程序中可以不捕获非检查型异常，也可以捕获非检查型异常。捕获非检查型异常的目的往往是给用户
-提供更友好的出错提示，单这不是强制的。
+提供更友好的出错提示，但这不是强制的。
 \end_layout
 
 \begin_layout Itemize
-检查型：即Java虚拟机无法自动处理的异常类型，需要在程序中捕获（Catch）。对应于
+检查型：即Java虚拟机无法自动处理的异常类型，需要在程序中捕获（catch）。对应于
 \begin_inset ERT
 status open
 
@@ -684,6 +718,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imgs/exception/jvm-java.eps
 	width 80line%
@@ -762,7 +797,27 @@ try {
 \end_layout
 
 \begin_layout Standard
-在try块中的代码就是所谓的“正常流程”，在catch块中的代码就是所谓的“异常流程”。如果异常流程有多种，就存在多个catch块：
+在try块中的代码就是所谓的“
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+正常流程
+\end_layout
+
+\end_inset
+
+”，在catch块中的代码就是所谓的“
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+异常流程
+\end_layout
+
+\end_inset
+
+”。如果异常流程有多种，就存在多个catch块：
 \end_layout
 
 \begin_layout Standard
@@ -874,6 +929,19 @@ lstparams "float,caption={DivTest.java},label={DivTest.java}"
 
 \begin_layout Standard
 此例的运行需要配置命令行参，配置方法参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:如何设置命令行参数？"
@@ -1136,7 +1204,17 @@ at cn.edu.sdut.softlab.exception.DivTest.main(DivTest.java:33)
 \begin_layout Standard
 但是，ArrayIndexOutOfBoundsException、NumberFormatException、ArithmeticException都是运行时
 异常(RuntimeException)，即非检查型异常，我们在代码中其实不需要主动捕获，当异常发生时虚拟机会自动处理。虚拟机的一般处理策略是打印出异常发生时的
-调用栈，供程序员追查和排错。主动捕获运行时异常的好处是可以给终端用户更友好的错误提示。
+调用栈，供程序员追查和排错。
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+主动捕获运行时异常的好处是可以给终端用户更友好的错误提示
+\end_layout
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Standard
@@ -1155,8 +1233,21 @@ kTrace。
 \begin_layout Itemize
 getMessage()：返回描述异常的一个字符串，对于终端用户更友好一些。但是，默认情况下，getMessage返回的就是stackTrace的内容，因此，调
 用此方法显得更友好的前提条件是，在创建异常对象时设置了描述异常的字符串，通常在用户自定义异常中使用，参见：
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:用户自定义异常"
 
 \end_inset
@@ -1174,8 +1265,8 @@ reference "sec:用户自定义异常"
 status open
 
 \begin_layout Plain Layout
-现代的IDE，包括NetBeans，Eclipse都能够自动检测代码是否应该捕获异常，因此无需记忆哪些代码应该使用try...catch结构包围起来，大部分情况下遵从
-IDE的建议即可。但是，有的时候也需要手工组织一下异常处理的代码层次。
+现代的IDE，包括Idea、NetBeans、Eclipse都能够自动检测代码是否应该捕获异常，因此无需记忆哪些代码应该使用try...catch结构包围起来，大部分
+情况下遵从IDE的建议即可。但是，有的时候也需要手工组织一下异常处理的代码层次。
 \end_layout
 
 \end_inset
@@ -1189,8 +1280,21 @@ IDE的建议即可。但是，有的时候也需要手工组织一下异常处�
 
 \begin_layout Standard
 在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "sec:捕获异常"
 
 \end_inset
@@ -1199,8 +1303,8 @@ reference "sec:捕获异常"
 \end_layout
 
 \begin_layout Standard
-异常对象当然不是从石头缝里蹦出来的，事实上，我们之所以能够捕获某个异常对象，是因为在try代码块中的某个方法调用抛出（throw）了异常对象，即某个方法在运行中
-探测到发生了异常状况，因此创建了异常对象并抛出。
+异常对象当然不是从石头缝里蹦出来的，事实上，我们之所以能够捕获某个异常对象，是因为在try代码块中的某个方法抛出（throw）了异常对象，即某个方法在运行中探测
+到发生了异常状况，因此创建了异常对象并抛出。
 \end_layout
 
 \begin_layout Example
@@ -1294,8 +1398,17 @@ status open
 \end_layout
 
 \begin_layout Standard
-在add方法中，我们故意制造了一个异常：当给定的参数是2时就抛出异常（throw new Exception()）。所谓抛出异常，就是创建某种类型的异常对象，通
-过throw关键字抛出即可，所以抛出异常的的表达方式通常是：
+在add方法中，我们故意制造了一个异常：当给定的参数是2时就抛出异常（throw new Exception()）。
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+所谓抛出异常，就是创建异常对象，通过throw关键字抛出即可
+\end_layout
+
+\end_inset
+
+，所以抛出异常的的表达方式通常是：
 \end_layout
 
 \begin_layout Standard
@@ -1719,7 +1832,31 @@ lstparams "float,caption={PriceNotAvailableException.java},label={PriceNotAvaila
 \end_layout
 
 \begin_layout Standard
-在主类CustomerOrder.java中，我们
+在主类CustomerOrder.java中，我们设置了两个变量inventoryOK和priceOK分别代表库存和价格的状态，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+。读者可以尝试修改这两个变量的值观察输出有什么变化？当然，在实际情况中，应该是根据业务逻辑给这两个变量赋值的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/CustomerOrder.java"
+lstparams "caption={CustomerOrder.java},label={CustomerOrder.java}"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1727,19 +1864,11 @@ lstparams "float,caption={PriceNotAvailableException.java},label={PriceNotAvaila
 status open
 
 \begin_layout Plain Layout
-在NetBeans IDE中，可以通过
+在Idea IDE中，可以通过快捷键Alt+Insert方便的自动产生OutOfInventoryException的构造方法：选择
 \begin_inset Quotes erd
 \end_inset
 
-source
-\begin_inset Quotes erd
-\end_inset
-
-菜单方便的自动产生OutOfInventoryException的构造方法：选择
-\begin_inset Quotes erd
-\end_inset
-
-Insert Code...
+override method...
 \begin_inset Quotes erd
 \end_inset
 
@@ -1747,7 +1876,7 @@ Insert Code...
 \begin_inset Quotes erd
 \end_inset
 
-coustructor”，然后选择重写Exception(String ex)方法即可。
+Exception(s:String)”即可。
 \end_layout
 
 \end_inset
@@ -1768,7 +1897,17 @@ name "sec:finally"
 
 \begin_layout Standard
 try-catch结构完美的诠释了异常处理的一般过程，不过我们考虑一种特殊情况：如果我们希望在执行完try代码块之后总是执行一段代码（不妨称之为“清理代码块”）
-，即无论try代码块是否存在异常，清理代码块总是要执行的。finally即为此而设置，一般结构为：
+，即
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+无论try代码块是否存在异常，清理代码块总是要执行的
+\end_layout
+
+\end_inset
+
+。finally即为此而设置，一般结构为：
 \end_layout
 
 \begin_layout Standard
@@ -1829,8 +1968,21 @@ try {
 \begin_layout Standard
 在网络通讯和数据库编程中，这种情形很常见：无论是否发生异常，网络链接和数据库链接总是要断开的（close），因此很适合在finally代码块中处理断开网络链接和
 数据库链接。我们在也将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "chap:Java的IO"
 
 \end_inset
@@ -1844,8 +1996,21 @@ status open
 
 \begin_layout Plain Layout
 在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:try-with-resources"
 
 \end_inset
@@ -1871,17 +2036,6 @@ name "sec:try-with-resources"
 \end_inset
 
 
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-本部分示例代码参见：http://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceC
-lose.html
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1895,8 +2049,21 @@ status open
 \end_inset
 
 在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:finally"
 
 \end_inset
@@ -1916,19 +2083,14 @@ java.lang.AutoCloseable
 status open
 
 \begin_layout Plain Layout
-由于AutoCloseable接口只有一个抽象方法close，因此AutoCloseable接口是一个函数接口，参见：
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "chap:lambda表达式"
-
-\end_inset
-
-。
+由于AutoCloseable接口只有一个抽象方法close，因此AutoCloseable接口是一个函数接口，参见本系列教程的“提高篇”之“lambda表达式
+”。
 \end_layout
 
 \end_inset
 
-或者Closeable接口，则可以通过try-with-resources结构来保证代码结束时自动关闭这个对象。实现了
+或者Closeable接口（这样的对象就是try-with-resources中的resource），则可以通过try-with-resources结构来保证代
+码结束时自动关闭这个对象。实现了
 \begin_inset Flex Code
 status open
 
@@ -1938,7 +2100,48 @@ java.lang.AutoCloseable
 
 \end_inset
 
-接口（或者Closeable接口）的对象被称为resource。try-with-resources结构的一般形式如下：
+接口（或者Closeable接口）的对象被称为resource。try-with-resources结构的一般形式如下
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+本部分示例代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
+\end_layout
+
+\end_inset
+
+，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Java的IO"
+
+\end_inset
+
+看到比较多的try-with-resources用法。
+\end_layout
+
+\end_inset
+
+：
 \end_layout
 
 \begin_layout Standard
