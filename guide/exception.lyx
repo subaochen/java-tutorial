@@ -364,7 +364,7 @@ reference "exa:从键盘输入字符串创建日期对象"
 \end_inset
 
 中，从键盘输入的字符串如果符合LocalDate的格式要求自然一切正常，但是我们不能总是期望人们每次输入都遵循LocalDate的格式，无论人们是有意还是无意，
-总会有破坏规则的时候，比如输入的月份大于12，天数大于31等，显然，错误的输入是无法获得正确的LocalDate对象的，Java编译器也无法自动纠正这种类型的错
+总会有破坏规则的时候，比如输入的月份大于12、天数大于31等。显然，错误的输入是无法获得正确的LocalDate对象的，Java编译器也无法自动纠正这种类型的错
 误。对于这种情况，Java友好的给出了错误的原因及其关联的程序代码（stack trace），以帮助程序员快速定位错误代码的位置，更快的修复问题。
 \end_layout
 
@@ -625,8 +625,18 @@ reference "fig:Java虚拟机和Java应用程序的关系"
 \end_layout
 
 \begin_layout Itemize
-非检查型：即Java虚拟机能够处理的异常类型，换言之，这种类型的异常不需要在程序中捕获，一旦发生这种类型的异常，Java虚拟机有一套内置的处理方式，比如除数为零
-、数组越界、非法参数等异常类型。对应于
+非检查型：即Java虚拟机能够
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+自动
+\end_layout
+
+\end_inset
+
+处理的异常类型。换言之，这种类型的异常不需要在程序中捕获，一旦发生这种类型的异常，Java虚拟机有一套内置的处理方式，比如除数为零、数组越界、非法参数等异常类型
+。对应于
 \begin_inset ERT
 status open
 
@@ -1231,7 +1241,7 @@ kTrace。
 \end_layout
 
 \begin_layout Itemize
-getMessage()：返回描述异常的一个字符串，对于终端用户更友好一些。但是，默认情况下，getMessage返回的就是stackTrace的内容，因此，调
+getMessage()：返回描述异常的一个字符串，对于终端用户更友好一些。但是，默认情况下，getMessage返回的就是stackTrace的内容。因此，调
 用此方法显得更友好的前提条件是，在创建异常对象时设置了描述异常的字符串，通常在用户自定义异常中使用，参见：
 \begin_inset ERT
 status open
@@ -1299,11 +1309,21 @@ reference "sec:捕获异常"
 
 \end_inset
 
-中，我们捕获（catch）的异常是从哪里来的呢？或者说，我们为什么能够捕获到异常（对象）？异常对象是谁创建的呢？
+中，我们捕获（catch）的异常是从哪里来的呢？或者说，我们为什么能够捕获到异常
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+通常，我们说捕获异常即捕获异常对象的意思，下文不再区分这两者的差异。
+\end_layout
+
+\end_inset
+
+？异常对象是谁创建的呢？
 \end_layout
 
 \begin_layout Standard
-异常对象当然不是从石头缝里蹦出来的，事实上，我们之所以能够捕获某个异常对象，是因为在try代码块中的某个方法抛出（throw）了异常对象，即某个方法在运行中探测
+异常对象当然不是从石头缝里蹦出来的。事实上，我们之所以能够捕获某个异常对象，是因为在try代码块中的某个方法抛出（throw）了异常对象，即某个方法在运行中探测
 到发生了异常状况，因此创建了异常对象并抛出。
 \end_layout
 
@@ -1721,9 +1741,9 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-可以想见，main方法是我们程序员处理异常的最后“关口”，即，如果我们在main方法中也不处理（捕获）异常的话，main方法同样需要声明throws这些异常。m
-ain方法抛出的异常就只有java虚拟机可以处理了，这通常不是一个好的习惯，因为Java虚拟机只能按照默认的异常处理方式打印出调用栈，在终端用户看来，调用栈没有
-任何价值，徒增抱怨而已。
+可以想见，main方法是我们程序员处理异常的最后“关口”，即如果我们在main方法中也不处理（捕获）异常的话，main方法同样需要声明throws这些异常。ma
+in方法抛出的异常就只有java虚拟机可以处理了，这通常不是一个好的习惯，因为Java虚拟机只能按照默认的异常处理方式打印出调用栈，在终端用户看来，调用栈没有任
+何价值，徒增抱怨而已。
 \end_layout
 
 \end_inset

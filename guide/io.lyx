@@ -109,6 +109,19 @@ name "chap:Java的IO"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+内容是否太多？不容易理出一个头绪来
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename imgs/io/Java-IO.png
@@ -1909,9 +1922,21 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imgs/io/datastream-buffer-file.eps
+	lyxscale 70
 	width 90line%
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+此图可以通过层技术画的更好
+\end_layout
 
 \end_inset
 
@@ -2593,54 +2618,21 @@ name "sec:从键盘输入数据"
 \end_inset
 
 
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-借鉴了《Java程序设计》（谌卫军）的案例，感谢作者谌卫军的精彩阐述！
-\end_layout
-
-\end_inset
-
-
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-本节的完整测试代码参见：
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/io/src/cn/edu/s
-dut/softlab/SystemInTest.java
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-对于输入输出而言，使用最多的就是从键盘输入数据，以及在显示器上输出数据。
 \begin_inset Wrap figure
 lines 0
 placement r
 overhang 0in
-width "30line%"
+width "40line%"
 status open
 
 \begin_layout Plain Layout
-\align right
+\align center
 \begin_inset Graphics
 	filename imgs/io/x-memory-layout.eps
-	width 100line%
+	width 90line%
 
 \end_inset
 
@@ -2668,9 +2660,17 @@ name "fig:实数3.125的内存表达"
 
 \end_inset
 
-在Java语言中，数据的输出很方便，使用System.out.println就已经很好用了，无论什么类型的数据，都能够自动转换为字符串输出（在Java8以后，甚至包
-括了List、Map类型的数据），这里不再赘述。但是Java从键盘输入数据确实不是太方便，比如考虑下面的情形：从键盘输入一个实数3.125保存到变量x中，该如何完
-成这个任务呢？如图
+对于输入输出而言，使用最多的就是从键盘输入数据
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p104，输入数据"
+key "java-chenweijun"
+
+\end_inset
+
+，以及在显示器上输出数据。在Java语言中，数据的输出很方便，使用System.out.println就已经很好用了，无论什么类型的数据，都能够自动转换为字符串输出
+（在Java8以后，甚至包括了List、Map类型的数据），这里不再赘述。但是Java从键盘输入数据确实不是太方便，比如考虑下面的情形：从键盘输入一个实数3.12
+5保存到变量x中，该如何完成这个任务呢？如
 \begin_inset ERT
 status open
 
@@ -2685,7 +2685,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand nameref
+LatexCommand ref
 reference "fig:实数3.125的内存表达"
 
 \end_inset
@@ -2774,12 +2774,12 @@ public final class System {
 \end_layout
 
 \begin_layout Standard
-也就是说，in是System类的静态成员变量，在系统初始化的时候，in初始化为一个带缓冲的文件字节流，即in是一个
-\begin_inset Flex Emph
+也就是说，in是System类的静态成员变量，在系统初始化的时候，in初始化为一个带缓冲的文件字节流，即
+\begin_inset Flex Strong
 status open
 
 \begin_layout Plain Layout
-从标准输入设备（FileDescriptor.in）接受二进制数据并实现了缓存处理的字节流
+in是一个从标准输入设备（FileDescriptor.in）接受二进制数据并实现了缓存处理的字节流
 \end_layout
 
 \end_inset
@@ -2791,6 +2791,19 @@ status open
 
 \begin_layout Plain Layout
 参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:多态"
@@ -3106,7 +3119,29 @@ reference "fig:InputStream的read方法"
 Float.valueOf(String s)转换为浮点数。有没有办法从键盘直接获取字符串呢？InputStream和InputStreamReader都没有提供
 这样的功能，即便BufferedInputStream也没有提供直接从键盘获取字符串的功能，这是容易理解的：InputStream、BufferedInputS
 tream的目的是原始的二进制字节，InputStreamReader的目的是为了获取原始的二进制字符，这些都和字符串没有关系。BufferedReader提供
-了从键盘获取字符串的功能，其中的readLine方法可以从键盘获取一行字符，并自动删除了末尾的回车换行符，于是我们有了最终的解决方案：
+了从键盘获取字符串的功能，其中的readLine方法可以从键盘获取一行字符，并自动删除了末尾的回车换行符，于是我们有了最终的解决方案
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+本节的完整测试代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/io/src/cn/edu/s
+dut/softlab/SystemInTest.java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+：
 \end_layout
 
 \begin_layout Standard
@@ -3185,7 +3220,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/lamda-expression/input-from-keyboard-stream.eps
+	filename imgs/io/input-from-keyboard-stream.eps
 	width 90line%
 
 \end_inset
