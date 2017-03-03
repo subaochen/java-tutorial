@@ -2537,8 +2537,8 @@ JLabel示例
 status open
 
 \begin_layout Plain Layout
-完整的代码请参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
-cn/edu/sdut/softlab/，双击JLabelDemo.form即可打开Form Designer查看界面设计效果。
+完整的代码请参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/sr
+c/cn/edu/sdut/softlab/，双击JLabelDemo.form即可打开Form Designer查看界面设计效果。
 \end_layout
 
 \end_inset
@@ -3768,8 +3768,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
-ut/softlab
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
 \end_layout
 
 \end_inset
@@ -4331,8 +4331,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
-ut/softlab
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
 \end_layout
 
 \end_inset
@@ -4736,8 +4736,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
-ut/softlab
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
 \end_layout
 
 \end_inset
@@ -5123,8 +5123,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
-ut/softlab
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
 \end_layout
 
 \end_inset
@@ -5362,8 +5362,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
-ut/softlab
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
 \end_layout
 
 \end_inset
@@ -5389,8 +5389,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
-ut/softlab
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
 \end_layout
 
 \end_inset
@@ -5416,8 +5416,8 @@ status open
 
 \begin_layout Plain Layout
 
-https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/sd
-ut/softlab
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
 \end_layout
 
 \end_inset
@@ -5509,8 +5509,8 @@ reference "fig:BorderLayout示例"
 status collapsed
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn
-/edu/sdut/softlab
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
+cn/edu/sdut/softlab
 \end_layout
 
 \end_inset
@@ -5682,8 +5682,8 @@ reference "fig:FlowLayout示例设计"
 status collapsed
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn
-/edu/sdut/softlab
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
+cn/edu/sdut/softlab
 \end_layout
 
 \end_inset
@@ -5859,8 +5859,8 @@ reference "fig:CardLayout示例设计"
 status collapsed
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn
-/edu/sdut/softlab
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
+cn/edu/sdut/softlab
 \end_layout
 
 \end_inset
@@ -6345,8 +6345,8 @@ GridLayout示例
 status collapsed
 
 \begin_layout Plain Layout
-完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn
-/edu/sdut/softlab
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
+cn/edu/sdut/softlab
 \end_layout
 
 \end_inset
@@ -7879,7 +7879,28 @@ name "fig:Swing事件机制"
 \end_layout
 
 \begin_layout Standard
-常见控件的常见监听器见
+控件的常见监听器
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整的Java GUI控件和事件监听器的对照表参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/tutorial/uiswing/events/eventsandcomponents.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+见
 \begin_inset ERT
 status open
 
@@ -7896,13 +7917,6 @@ tablename
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:控件的常见监听器"
-
-\end_inset
-
-，完整的Java GUI控件和事件监听器的对照表参见
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "chap:Java-GUI控件和事件监听器对照表"
 
 \end_inset
 

@@ -864,6 +864,62 @@ Glob是一个模式匹配字符串，即通过Glob字符串去和一个给定的
 中括号[]：匹配其中的任意一个字符，可以使用“-”代表一个数字或者字符的范围，比如[0-9]，[a-z]，[A-Z]等。
 \end_layout
 
+\begin_layout Itemize
+[^abc]：匹配除a、b、c外的单个字符。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要验证glob是否支持
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+{!glob}：匹配任何不匹配glob的字符串。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要验证是否支持
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Glob也支持以下的特殊转移字符：
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+w：匹配一个字符或者下划线。
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+s：匹配一个空白字符（空格、tab或者回车）
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+S：匹配一个非空白字符。
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+d：匹配一个数字
+\end_layout
+
 \begin_layout Standard
 示例：
 \end_layout
@@ -886,6 +942,14 @@ m}
 \end_layout
 
 \begin_layout Itemize
+*.[ch]：匹配任何c语言源文件和头文件。
+\end_layout
+
+\begin_layout Itemize
+[^#]*：匹配任何不以#开头的文件。
+\end_layout
+
+\begin_layout Itemize
 a?*.java：匹配以字母a开头，并且紧跟着至少一个字符或者字母为文件名，扩展名为java的字符串，比如a3.java，ab.java，abcd.java都能够匹配成
 功，但是a.java则匹配失败。
 \end_layout
@@ -896,32 +960,6 @@ a?*.java：匹配以字母a开头，并且紧跟着至少一个字符或者字�
 
 \begin_layout Itemize
 /home/**：匹配/home/gus、/home/gus/data、/home/gus/data/test。
-\end_layout
-
-\begin_layout Chapter
-Java GUI控件和事件监听器对照表
-\begin_inset CommandInset label
-LatexCommand label
-name "chap:Java-GUI控件和事件监听器对照表"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-参见：
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://docs.oracle.com/javase/tutorial/uiswing/events/eventsandcomponents.html
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter
@@ -3472,158 +3510,6 @@ name "solu:default修饰的类，在其他包中不可见。"
 \end_inset
 
 default修饰的类，在其他包中不可见。
-\end_layout
-
-\begin_layout Section
-\begin_inset CommandInset ref
-LatexCommand nameref
-reference "chap:lambda表达式"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Solution
-计算两个整数的和、差、积的lambda表达式示例如下：
-\begin_inset CommandInset label
-LatexCommand label
-name "solu:计算两个整数的和、差、积的lambda表达式示例如下："
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Solution
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-public class Calculator {
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\end_layout
-
-\begin_layout Plain Layout
-
-    interface IntegerMath {
-\end_layout
-
-\begin_layout Plain Layout
-
-        int operation(int a, int b);   
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\end_layout
-
-\begin_layout Plain Layout
-
-    public int operateBinary(int a, int b, IntegerMath op) {
-\end_layout
-
-\begin_layout Plain Layout
-
-        return op.operation(a, b);
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-    public static void main(String...
- args) {
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\end_layout
-
-\begin_layout Plain Layout
-
-        Calculator myApp = new Calculator();
-\end_layout
-
-\begin_layout Plain Layout
-
-        IntegerMath addition = (a, b) -> a + b;
-\end_layout
-
-\begin_layout Plain Layout
-
-        IntegerMath subtraction = (a, b) -> a - b;
-\end_layout
-
-\begin_layout Plain Layout
-
-        IntegerMath mulitply = (a, b) -> a * b;
-\end_layout
-
-\begin_layout Plain Layout
-
-        System.out.println("40 + 2 = " +
-\end_layout
-
-\begin_layout Plain Layout
-
-            myApp.operateBinary(40, 2, addition));
-\end_layout
-
-\begin_layout Plain Layout
-
-        System.out.println("20 - 10 = " +
-\end_layout
-
-\begin_layout Plain Layout
-
-            myApp.operateBinary(20, 10, subtraction));    
-\end_layout
-
-\begin_layout Plain Layout
-
-        System.out.println("20 * 2 = " +
-\end_layout
-
-\begin_layout Plain Layout
-
-            myApp.operateBinary(20, 2, multiply)); 
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
