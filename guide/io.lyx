@@ -520,10 +520,10 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="middle" width="28line%">
-<column alignment="left" valignment="middle" width="63line%">
-<row>
+<features islongtable="true" longtabularalignment="center">
+<column alignment="left" valignment="middle" width="25line%">
+<column alignment="left" valignment="middle" width="70line%">
+<row endlastfoot="true">
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -589,7 +589,8 @@ PipedInputStream
 \begin_inset Text
 
 \begin_layout Plain Layout
-ByteArrayInputStream
+ByteArrayInput\SpecialChar softhyphen
+Stream
 \end_layout
 
 \end_inset
@@ -609,7 +610,8 @@ ByteArrayInputStream
 \begin_inset Text
 
 \begin_layout Plain Layout
-SequenceInputStream
+SequenceInput\SpecialChar softhyphen
+Stream
 \end_layout
 
 \end_inset
@@ -661,7 +663,7 @@ PushBackInputStream：通常，我们从InputStream读取一个字节后，这�
 \end_inset
 </cell>
 </row>
-<row>
+<row newpage="true">
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -796,7 +798,8 @@ PipedOutputStream
 \begin_inset Text
 
 \begin_layout Plain Layout
-ByteArrayOutputStream
+ByteArrayOutput\SpecialChar softhyphen
+Stream
 \end_layout
 
 \end_inset
@@ -1724,8 +1727,21 @@ status open
 
 \begin_layout Plain Layout
 我们在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "sec:文件操作"
 
 \end_inset
@@ -1735,8 +1751,8 @@ reference "sec:文件操作"
 
 \end_inset
 
-，试将这些数据使用DataOutputStream重新写入文件weather.dat，然后使用DataInputStream读出weather.dat并求温度的平均
-值（）。
+，试将下列数据使用DataOutputStream重新写入文件weather.dat，然后使用DataInputStream读出weather.dat并求温度的平均
+值。
 \end_layout
 
 \begin_layout Standard
@@ -3114,7 +3130,7 @@ reference "fig:InputStream的read方法"
 
 \end_inset
 
-中的数组b是完全一样的，唯一的区别是数据类型发生了变化，b是一个字节类型的数组，每个数组元素只占一个字节；c是一个字符类型的数组，每个数组元素占两个字节。因此，
+中的数组b是完全一样的，唯一的区别是数据类型发生了变化。b是一个字节类型的数组，每个数组元素只占一个字节；c是一个字符类型的数组，每个数组元素占两个字节。因此，
 使用InputStreamReader和使用InputStream输入浮点数会遇到相似的问题：都需要将输入的数据（字节数组或者字符数组）转换为字符串对象然后使用
 Float.valueOf(String s)转换为浮点数。有没有办法从键盘直接获取字符串呢？InputStream和InputStreamReader都没有提供
 这样的功能，即便BufferedInputStream也没有提供直接从键盘获取字符串的功能，这是容易理解的：InputStream、BufferedInputS
@@ -3170,20 +3186,14 @@ float x = Float.parseInt(str);
 \end_layout
 
 \begin_layout Standard
-在这段代码中，以System.in对象为参数，创建了一个InputStreamReader对象，然后以该对象为参数，创建了一个BufferedReader对象，从
-而形成了这几个类之间的连接关系
+在这段代码中，以System.in对象为输入参数，创建了一个InputStreamReader对象，然后以该对象为参数，创建了一个BufferedReader对象
+，从而形成了这几个类之间的连接关系
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-参见
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "sec:装饰模式"
-
-\end_inset
-
-
+这里BufferedReader、InputStreamReader、System.in(InputStream)使用了设计模式中的装饰器模式，详情参见本系列教程
+的“提高篇”。
 \end_layout
 
 \end_inset
@@ -3746,29 +3756,28 @@ reference "exa:从键盘输入两个整数，计算其乘积并输出。"
 \end_layout
 
 \begin_layout Exercise
-使用Scanner读取文件“双城记.txt”，统计该小说有多少个单词？
-\end_layout
-
-\begin_layout Standard
-提示：
-\begin_inset Quotes erd
-\end_inset
-
-双城记.txt
-\begin_inset Quotes erd
-\end_inset
-
-文件下载地址：。
-\begin_inset Note Note
+使用Scanner读取文件“双城记.txt”，统计该小说有多少个单词
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-查询稳定的双城记txt下载地址
+双城记文本下载地址：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://archive.org/stream/ataleoftwocities00098gut/98.txt
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+？
 \end_layout
 
 \begin_layout Section
@@ -3780,6 +3789,14 @@ name "sec:文件操作"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+什么是Path？
+\end_layout
+
+\begin_layout Standard
+在新的文件操作API
 \begin_inset Foot
 status open
 
@@ -3789,15 +3806,7 @@ JDK 1.7引入了新的文件操作API，即NIO.2，本节内容着重于NIO.2，
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Subsection
-什么是Path？
-\end_layout
-
-\begin_layout Standard
-在新的文件操作API中，Path的概念至关重要，类Path是文件操作的入口。
+中，Path的概念至关重要，类Path是文件操作的入口。
 \end_layout
 
 \begin_layout Standard
@@ -3837,6 +3846,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imgs/io/linux-directory-tree.eps
 	width 45line%
@@ -3882,6 +3892,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imgs/io/windows-directory-tree.eps
 	width 45line%
@@ -4242,7 +4253,7 @@ Path对象的主要信息是目录分隔符隔开的一个字符串数组，可�
 status open
 
 \begin_layout Plain Layout
-结合lambda表达式操作这个数组更方便，比如：
+参见本系列教程的“提高篇”，结合lambda表达式操作这个数组更方便，比如：
 \end_layout
 
 \begin_layout Plain Layout
@@ -5029,6 +5040,19 @@ s了。通常，以单数命名的类用来表示一类事物，复数命名的�
 
 \begin_layout Standard
 在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "subsec:Path类"
@@ -5079,7 +5103,11 @@ exists返回false可能存在两种情况：
 \end_layout
 
 \begin_layout Enumerate
-文件或者目录不存文件或者目录不可见，即当前用户没有权限查看该文件或者目录
+文件或者目录不存在；
+\end_layout
+
+\begin_layout Enumerate
+文件或者目录不可见，即当前用户没有权限查看该文件或者目录。
 \end_layout
 
 \end_inset
@@ -7346,7 +7374,7 @@ public static SeekableByteChannel newByteChannel(Path path, Set<? extends
 status open
 
 \begin_layout Plain Layout
-SeekableBytgeChannel
+SeekableByteChannel
 \end_layout
 
 \end_inset
@@ -8067,8 +8095,21 @@ name "subsec:随机读写文件"
 
 \begin_layout Standard
 在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:读写小文件"
 
 \end_inset
@@ -9011,14 +9052,37 @@ ream。
 \end_layout
 
 \begin_layout Standard
-newDirectoryStream允许传入过滤规则作为参数，过滤规则glob参见
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "sec:Glob过滤规则"
+newDirectoryStream允许传入Glob
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendixname
+\end_layout
 
 \end_inset
 
-。
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:什么是Glob？"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+过滤规则作为参数。
 \end_layout
 
 \begin_layout Example
@@ -9124,7 +9188,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "PrintFiles.java"
 
 \end_inset
@@ -9159,7 +9223,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "WalkFileTreeTest.java"
 
 \end_inset
@@ -9195,7 +9259,7 @@ tablename
 
 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:FileVisitor接口方法"
 
 \end_inset
@@ -9557,7 +9621,35 @@ Stream的参数是文件名，注意到该文件名是相对于项目根目录�
 \end_layout
 
 \begin_layout Standard
-实际上，Java在定位文件时，有如下的几种策略：
+实际上，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+Java在定位文件时，有如下的几种策略
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参考了：
+\end_layout
+
+\begin_layout Itemize
+http://www.cnblogs.com/yinger/archive/2011/09/08/2171831.html
+\end_layout
+
+\begin_layout Itemize
+官方教程：https://docs.oracle.com/javase/tutorial/essential/environment/properties.html
+\end_layout
+
+\end_inset
+
+：
 \end_layout
 
 \begin_layout Itemize
@@ -9574,44 +9666,16 @@ Stream的参数是文件名，注意到该文件名是相对于项目根目录�
 
 \begin_layout Itemize
 相对于当前class文件的路径：如果使用Class.getResourceAsStream方法，则获得相对于当前class文件的路径，比如：
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
+\begin_inset listings
+inline false
 status open
 
-\begin_layout Plain Layout
-InputStream path = PropertyFileTest.class.getResourceAsStream(
-\begin_inset Quotes eld
-\end_inset
+\begin_layout Itemize
 
-database-config.properties
-\begin_inset Quotes erd
-\end_inset
-
-);
+InputStream path = PropertyFileTest.class.getResourceAsStream(database-config.prope
+rties);
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 path对象指向的文件database-config.properties和class文件在同一个目录下，即database-config.properties位于
@@ -9620,44 +9684,16 @@ src/cn/edu/sdut/softlab目录下。
 \end_inset
 
 但是，如果参数是绝对路径，则获得是相对于包的文件路径，比如：
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
+\begin_inset listings
+inline false
 status open
 
 \begin_layout Plain Layout
-InputStream path = PropertyFileTest.class.getResourceAsStream(
-\begin_inset Quotes eld
-\end_inset
 
-/database-config.properties
-\begin_inset Quotes erd
-\end_inset
-
-);
+InputStream path = PropertyFileTest.class.getResourceAsStream(/database-config.prop
+erties);
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 则文件database-config.properties位于src目录下。
@@ -9665,44 +9701,16 @@ InputStream path = PropertyFileTest.class.getResourceAsStream(
 
 \begin_layout Itemize
 相对于包的路径：如果使用Class.getClassLoader().getResourceAsStream方法，则获得是相对于包路径的文件，比如：
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
+\begin_inset listings
+inline false
 status open
 
 \begin_layout Plain Layout
-InputStream path = PropertyFileTest.class.getClassLoader().getResourceAsStream(
-\begin_inset Quotes eld
-\end_inset
 
-database-config.properties
-\begin_inset Quotes erd
-\end_inset
-
-);
+InputStream path = PropertyFileTest.class.getClassLoader().getResourceAsStream(data
+base-config.properties);
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 即文件database-config.properties位于src目录下。
@@ -9714,28 +9722,6 @@ database-config.properties
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-http://www.cnblogs.com/yinger/archive/2011/09/08/2171831.html
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-官方教程：https://docs.oracle.com/javase/tutorial/essential/environment/properties.html
-\end_layout
-
-\end_inset
-
 
 \end_layout
 

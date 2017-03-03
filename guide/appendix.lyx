@@ -722,7 +722,7 @@ reference "fig:Idea的命令行参数设置方法"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -827,6 +827,75 @@ name "fig:Idea的命令行参数设置方法"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+什么是Glob？
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:什么是Glob？"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Glob是一个模式匹配字符串，即通过Glob字符串去和一个给定的文件名或者目录名匹配获得相应的结果。Glob的规则很简单，列表如下：
+\end_layout
+
+\begin_layout Itemize
+*：匹配任意数目的字符，包括0个字符。
+\end_layout
+
+\begin_layout Itemize
+**：跨目录匹配。
+\end_layout
+
+\begin_layout Itemize
+?：匹配一个字符。
+\end_layout
+
+\begin_layout Itemize
+大括号{}：匹配其中的任意一个模式。
+\end_layout
+
+\begin_layout Itemize
+中括号[]：匹配其中的任意一个字符，可以使用“-”代表一个数字或者字符的范围，比如[0-9]，[a-z]，[A-Z]等。
+\end_layout
+
+\begin_layout Standard
+示例：
+\end_layout
+
+\begin_layout Itemize
+*.html：匹配所有以html为扩展名的文件，比如index.html。
+\end_layout
+
+\begin_layout Itemize
+{*.html,*.htm}：匹配所有以html或者htm为扩展名的文件，比如index.html, index.htm都能够匹配成功。也可以这样写：*.{html,ht
+m}
+\end_layout
+
+\begin_layout Itemize
+*.???：匹配任意三个字母为扩展名的文件，比如index.htm, index.txt, file.dia等都能够匹配成功。
+\end_layout
+
+\begin_layout Itemize
+*[0-9]*：匹配只包含一个数字的任意字符串。
+\end_layout
+
+\begin_layout Itemize
+a?*.java：匹配以字母a开头，并且紧跟着至少一个字符或者字母为文件名，扩展名为java的字符串，比如a3.java，ab.java，abcd.java都能够匹配成
+功，但是a.java则匹配失败。
+\end_layout
+
+\begin_layout Itemize
+/home/*/*：匹配/home/gus/data，但是/home/gus、/home/gus/data/test则匹配失败。
+\end_layout
+
+\begin_layout Itemize
+/home/**：匹配/home/gus、/home/gus/data、/home/gus/data/test。
 \end_layout
 
 \begin_layout Chapter
