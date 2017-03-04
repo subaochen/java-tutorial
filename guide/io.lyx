@@ -109,11 +109,69 @@ name "chap:Java的IO"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+输入输出（IO）看起来简单，但是却头绪繁多、内容繁杂。这是因为我们要处理的输入输出设备种类众多，导致Java通过面向对象的方式对输入输出设备及其操作的封装也比较
+复杂，因此建议读者在学习本章内容的时候要经常跳出具体的技术细节，回到
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-内容是否太多？不容易理出一个头绪来
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java-IO概览"
+
+\end_inset
+
+从总体上把握Java IO的体系。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/io/Java-IO.png
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java IO概览
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java-IO概览"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -122,10 +180,12 @@ status open
 \end_layout
 
 \begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename imgs/io/Java-IO.png
-	width 100line%
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+内容是否太多？不容易理出一个头绪来
+\end_layout
 
 \end_inset
 
