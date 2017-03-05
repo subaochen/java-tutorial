@@ -428,16 +428,6 @@ String monday = WeekDay.MONDAY;
 
 \begin_layout Plain Layout
 还有一种方式，就是在需要的类上实现（implements）这个接口，然后直接使用常量名称进行赋值，这种方式只做表述，留待读者实现。
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-感觉这句话也可以作为页脚的注释使用！
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
