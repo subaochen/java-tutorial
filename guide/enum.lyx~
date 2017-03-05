@@ -427,7 +427,66 @@ String monday = WeekDay.MONDAY;
 \end_layout
 
 \begin_layout Plain Layout
-还有一种方式，就是在需要的类上实现（implements）这个接口，然后直接使用常量名称进行赋值，这种方式只做表述，留待读者实现。
+还有一种方式，就是在需要的类上实现（implements）这个接口，然后直接访问接口中的常量。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+感觉这句话也可以作为页脚的注释使用！
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+代码如下：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class EnumImpl implements WeekDay {     
+\end_layout
+
+\begin_layout Plain Layout
+
+	public static void main(String[] args) {         
+\end_layout
+
+\begin_layout Plain Layout
+
+		System.out.println(SUNDAY); // implement接口后，可以直接访问该变量         
+\end_layout
+
+\begin_layout Plain Layout
+
+		System.out.println(MONDAY);         
+\end_layout
+
+\begin_layout Plain Layout
+
+		System.out.print(TUESDAY);     
+\end_layout
+
+\begin_layout Plain Layout
+
+	} 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
