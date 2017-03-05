@@ -191,7 +191,7 @@ name "sec:Java的enum：Enum的子类"
 \end_layout
 
 \begin_layout Standard
-Java中枚举类型的定义和c语言非常相似，但是要灵活的多。同样一周的定义，我们看在Java中是如何定义和使用的。
+Java中枚举类型的定义和c语言非常相似，但是要灵活的多。同样是一周的定义，我们看在Java中是如何定义和使用的。
 \end_layout
 
 \begin_layout Standard
