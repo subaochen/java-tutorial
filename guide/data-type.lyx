@@ -2058,16 +2058,39 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+Java数组的意义、用法和C语言几乎完全一致，只是定义方式有两点不同：
+\end_layout
+
+\begin_layout Itemize
+Java定义数组不需要指定数组大小，Java虚拟机能够自动“推断”数组的大小。
+\end_layout
+
+\begin_layout Itemize
+通常，Java将定义数组时的[]放到数据类型的右边，而不是变量的右边，即如：int[] array，这样能够更明确表示array是数组的名字。
+\end_layout
+
+\begin_layout Standard
+Java的数组示例请参见
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Java的数组和C的数组的区别
+
+
+\backslash
+examplename
 \end_layout
 
 \end_inset
 
 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:遍历数组"
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Section
@@ -2219,6 +2242,13 @@ status open
 
 \begin_layout Example
 遍历数组
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:遍历数组"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2615,7 +2645,16 @@ Java的基本语法结构中，哪些方面和C语言一致？Java增加了哪�
 \end_layout
 
 \begin_layout Exercise
-编写一个程序，从键盘输入x，利用下面公式计算的近似值：
+编写一个程序，从键盘输入x，利用下面公式计算的近似值，要求精度到10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+-6
+\end_layout
+
+\end_inset
+
+：
 \end_layout
 
 \begin_layout Exercise
