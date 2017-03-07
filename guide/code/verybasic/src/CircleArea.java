@@ -17,5 +17,14 @@ public class CircleArea {
 		double area = PAI * radius * radius; // |\longremark{表达式的最终类型是double，和C语言的类型转换规则是相同的}|
 		System.out.println("面积=" + area); // |\longremark{println输出内容后自动换行。请思考如何使得输出结果只精确到小数点后3位？ }|
 	}
+
+	// |\longremark{请读者思考如何在main方法中利用下面的两个方法更好的组织代码？}|
+	static double area(float radius) {
+		return PAI * radius * radius;
+	}
+
+	static double round(float radius) {
+		return 2 * PAI * radius;
+	}
 }
 // |\showremarks|
