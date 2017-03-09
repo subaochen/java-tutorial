@@ -31,14 +31,16 @@
 \AtBeginDocument{\providecommand\examplename{例}}
 \AtBeginDocument{\providecommand\solutionname{解答}}
 \AtBeginDocument{\renewcommand\appendixname{附录}}
+\AtBeginDocument{\renewcommand\partname{部分}}
+\AtBeginDocument{\renewcommand*{\lstlistlistingname}{示例代码列表}}
+
+\usepackage{varioref} % 为了防止refxxx没有定义错误
 \AtBeginDocument{\renewcommand\reftextfaraway[1]{[在第~\pageref{#1}页]}}
 \AtBeginDocument{\renewcommand\reftextbefore{[在上一页]}}
 \AtBeginDocument{\renewcommand\reftextafter{[在下一页]}}
 \AtBeginDocument{\renewcommand\reftextcurrent{[在本页]}}
 \AtBeginDocument{\renewcommand\reftextfaceafter{[在对页]}}
 \AtBeginDocument{\renewcommand\reftextfacebefore{[在对页]}}
-\AtBeginDocument{\renewcommand\partname{部分}}
-\AtBeginDocument{\renewcommand*{\lstlistlistingname}{示例代码列表}}
 
 \usepackage{listings}
 \usepackage{color}
