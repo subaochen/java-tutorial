@@ -127,6 +127,16 @@ status open
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+考虑建立一个综合虚拟实验平台？每次试验后自动给出实验成绩？学生不需要提交纸质版的实验报告了
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -707,6 +717,10 @@ Java综合应用
 
 \begin_layout Standard
 考核方式为操作技能考核、实验报告和面试相结合，实验成绩记入总成绩（占比20%）。
+\end_layout
+
+\begin_layout Standard
+本实验手册中给出的代码均为参考代码，建议读者“一题多解”，即如果在实验报告中给出了多种编程方式则可以考虑加分。
 \end_layout
 
 \begin_layout Section*
