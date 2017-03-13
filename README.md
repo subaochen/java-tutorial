@@ -95,9 +95,9 @@ ISSUE#123：修正xxxx问题
 
 ## 管理参考文献
 
-本系列教程的参考文献使用BibTex(www.bibtex.org)，在common目录下的java.bib和
+本系列教程的参考文献使用BibTex( www.bibtex.org )，在common目录下的java.bib和
 other.bib分别是Java相关的参考文献以及其他参考文献。可以手工编写BibTex文件，
-也可以使用jabref(http://www.jabref.org/)管理参考文献，很方便。
+也可以使用jabref( http://www.jabref.org )管理参考文献，很方便。
 
 在插入参考文献时，采用类似如下的格式[4,p101,人工智能的未来]，其中：
 
