@@ -403,11 +403,21 @@ lstparams "caption={GenericBox.java},label={GenericBox.java}"
 \end_layout
 
 \begin_layout Standard
-所有在Box中出现Object的地方都代替以T。你可能会迷惑，T不是标准的JDK中的类，也不是我们自定义的类，Java将如何识别T这个类呢？秘密在第二点。
+1.
+ 所有在Box中出现Object的地方都代替以T。
 \end_layout
 
 \begin_layout Standard
-在GenericBox类名后面使用了一对尖括号，其中列出了在代码中用到的T，也就是说，在这对尖括号中的字母可以在代码中像类那样使用
+你可能会迷惑，T不是标准的JDK中的类，也不是我们自定义的类，Java将如何识别T这个类呢？秘密在第二点。
+\end_layout
+
+\begin_layout Standard
+2.
+ 在GenericBox类名后面使用了一对尖括号，其中列出了在代码中用到的T。
+\end_layout
+
+\begin_layout Standard
+也就是说，在这对尖括号中的字母可以在代码中像类那样使用
 \begin_inset Foot
 status open
 
