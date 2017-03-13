@@ -859,7 +859,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-本例首先定义了一个很常见的Generator接口，用于规范如何获取下一个元素（参见
+本例首先定义了一个很常见的Generator接口，用于规范如何获取下一个元素，参见
 \begin_inset ERT
 status open
 
@@ -879,7 +879,7 @@ reference "Generator.java"
 
 \end_inset
 
-），然后给出了一个generator接口的具体实现FruitGenerator，可以获取（产生）下一个水果的名称，参见
+，然后给出了一个generator接口的具体实现FruitGenerator，可以获取（产生）下一个水果的名称，参见
 \begin_inset ERT
 status open
 
