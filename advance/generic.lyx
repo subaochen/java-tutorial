@@ -1292,7 +1292,7 @@ public void test(Box<?> box) {...}
 \end_layout
 
 \begin_layout Standard
-注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容易任何类型的对象，比如Ob
+注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容纳任何类型的对象，比如Ob
 ject，Integer，String等等。
 \end_layout
 
@@ -1593,6 +1593,26 @@ status open
 
 \begin_layout Plain Layout
 此外，extends即可以用于泛型类的类型参数，也可以用于泛型方法的类型参数。
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+由于在Java中，类是单继承的，所以泛型T不允许继承多个类，而Java中的接口是允许多继承的，所以泛型T可以继承多个接口。
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+针对代码注释中的内容进行解释，先写在这里
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

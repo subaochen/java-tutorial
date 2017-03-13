@@ -1001,7 +1001,7 @@ name "exer:编写一个Generator接口的实现，用于获取下一个连续的
 \end_layout
 
 \begin_layout Standard
-泛型作用在类上，表示类中的属性或者使用到的变量可以泛型化（即抽象化），很自然的，泛型作用在方法上，即泛型方法是指方法中使用到的变量可以泛型化（抽象化）。
+泛型作用在类上，表示类中的属性或者使用到的变量可以泛型化（即抽象化）。很自然的可以想到，泛型作用在方法上，即泛型方法是指方法中使用到的变量可以泛型化（抽象化）。
 \begin_inset Wrap figure
 lines 0
 placement r
@@ -1292,7 +1292,7 @@ public void test(Box<?> box) {...}
 \end_layout
 
 \begin_layout Standard
-注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容易任何类型的对象，比如Ob
+注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容纳任何类型的对象，比如Ob
 ject，Integer，String等等。
 \end_layout
 
