@@ -233,6 +233,16 @@ filename "network-programming.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
+filename "performance-tuning.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
 filename "android.lyx"
 
 \end_inset

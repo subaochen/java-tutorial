@@ -99,6 +99,13 @@ PackageOptions url hyphens
 
 \begin_layout Chapter
 Java的常用类
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Java的常用类"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -694,7 +701,17 @@ String message = String.join("-", "Java", "is", "cool");
 \end_layout
 
 \begin_layout Itemize
-StringBuilder类提供了高效处理字符串的功能，通常涉及到大量字符串拼接时，建议使用StringBuilder来完成：
+StringBuilder类提供了高效处理字符串的功能，通常涉及到大量字符串拼接时，建议使用StringBuilder来完成
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+为什么直接使用“+”连接多个字符串的效率不高呢？这涉及到Java的内存回收机制，这里不展开阐述，详情可参见本系列教程的提高篇：性能调整。
+\end_layout
+
+\end_inset
+
+：
 \begin_inset listings
 inline false
 status open
@@ -725,11 +742,23 @@ String str = sb.toString();
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Flex Tip
 status open
 
 \begin_layout Plain Layout
-是否增加StringBuffer的相干说明？
+另外一个和StringBuilder功能类似的类是StringBuffer。StringBuilder和StringBuffer的最大区别是StringBuff
+er是线程
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+关于线程的概念和用法，请参见本系列教程的提高篇：多线程Java程序设计。
+\end_layout
+
+\end_inset
+
+安全的，即StringBuffer可以安全的用于多线程环境。StringBuilder不是线程安全的，因此只能用于单线程环境。由此也可以知道，StringBui
+lder的效率要比StringBuffer高一些。
 \end_layout
 
 \end_inset
@@ -957,6 +986,97 @@ a string
 \end_inset
 
 创建了几个字符串对象呢？显然是1个。因此可以看出，使用new操作符创建字符串对象一般是没有必要的，徒增Java的内存占用而已。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+来自面试真题：试说明下列代码的执行结果：
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:来自面试真题about StringBuffer"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Lianxi {
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        StringBuffer a = new StringBuffer("a");
+\end_layout
+
+\begin_layout Plain Layout
+
+        StringBuffer b = new StringBuffer("b");
+\end_layout
+
+\begin_layout Plain Layout
+
+        append(a,b);
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println(a);
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println(b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    private static void append(StringBuffer a, StringBuffer b) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        a.append(b);
+\end_layout
+
+\begin_layout Plain Layout
+
+        b = a;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }   
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
