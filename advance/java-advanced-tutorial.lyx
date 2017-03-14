@@ -20,6 +20,13 @@ theorems-bytype
 theorems-chap-bytype
 coderemarks
 \end_modules
+\begin_includeonly
+generic.lyx
+collections.lyx
+lambda-expression.lyx
+thread.lyx
+network-programming.lyx
+\end_includeonly
 \maintain_unincluded_children false
 \begin_local_layout
 PackageOptions url hyphens
@@ -194,10 +201,6 @@ filename "thread.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "annotation.lyx"
@@ -207,15 +210,10 @@ filename "annotation.lyx"
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "reflection.lyx"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -233,10 +231,16 @@ filename "network-programming.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset CommandInset include
+LatexCommand include
+filename "performance-tuning.lyx"
 
-\begin_layout Plain Layout
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "android.lyx"
@@ -246,15 +250,10 @@ filename "android.lyx"
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "community.lyx"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 

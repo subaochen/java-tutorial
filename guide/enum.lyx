@@ -342,7 +342,7 @@ WeekDay> {
 
 \begin_layout Standard
 \begin_inset Flex Notice
-status open
+status collapsed
 
 \begin_layout Plain Layout
 如果不使用enum，在Java中通常如何表达一周7天呢？一般情况下，我们可以在接口中定义常量：
@@ -483,6 +483,32 @@ public class EnumImpl implements WeekDay {
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在编程实践中应该尽力避免使用“魔幻数字”（magic number），即在源代码中避免直接使用数字，比如0x123、3.14159f等。可能在编写代码的当时，编码
+者还能够记得这些数字的含义，过一段时间就很可能印象模糊甚至完全忘记了（只能感叹这些数字像魔术一样难以琢磨），更何况别人呢？魔幻数字的弊端有两个：
+\end_layout
+
+\begin_layout Itemize
+代码可读性差。
+\end_layout
+
+\begin_layout Itemize
+代码可维护性差。比如如果在代码中多处使用了这个数字，一旦有一天要把这个数字修改为其他数字，就要搜索整个源代码，修改多个地方。
+\end_layout
+
+\begin_layout Plain Layout
+很容易想到，避免使用魔幻数字的方法一般有两个：使用常量和Enum，可以有效的克服魔幻数字的两个弊端。
 \end_layout
 
 \end_inset

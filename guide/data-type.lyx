@@ -127,17 +127,73 @@ status open
 \end_layout
 
 \begin_layout Standard
-Java语言中变量的概念和C语言完全一致，这里不再赘述。所不同的是，在Java中，我们一般使用“驼峰命名法”
-\begin_inset Foot
+Java语言中变量的概念和C语言完全一致，这里不再赘述。所不同的是，C语言中一般使用下划线分隔开多个单词，而在Java中，我们一般使用“驼峰命名法”来给变量起名
+字，如
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-驼峰命名法：当使用多个单词命名变量时，除第一个单词外，每个单词首字母大写，看起来就像是驼峰一样高低不一。
+
+
+\backslash
+figurename
 \end_layout
 
 \end_inset
 
-来给变量起名字，而在C语言中一般使用下划线分隔开多个单词，
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:驼峰命名法"
+
+\end_inset
+
+所示，多个单词构成了一个变量，除第一个单词之外，其他单词的第一个字母大写。大写的字母很像隆起的驼峰，因此此种命名法被形象的称之为“驼峰命名法”。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/verybasic/camel-naming-style.eps
+	width 40line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+驼峰命名法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:驼峰命名法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -325,9 +381,18 @@ name "tab:C语言的变量和Java语言变量对照表"
 status open
 
 \begin_layout Plain Layout
-合理的变量命名能够加强代码的可读性，减轻团队沟通的压力，软件后期的维护压力也会缓解。从一开始就要有意识的培养合理命名变量的习惯。善于合理的命名变量也是一种能力，
-这种能力不会从天上掉下来，只有多阅读优秀的代码，注意学习高手的编程思路和变量命名习惯，在平时的练习中坚持给变量合理的命名，才能逐步培养这种能力。本书坚持以合理的
-变量命名方式给出示例程序，希望通过此种方式让初学者在
+合理的变量命名能够加强代码的可读性，减轻团队沟通的压力，软件后期的维护压力也会缓解。从一开始就要
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+有意识的培养合理命名变量的习惯
+\end_layout
+
+\end_inset
+
+。善于合理的命名变量也是一种能力，这种能力不会从天上掉下来，只有多阅读优秀的代码，注意学习高手的编程思路和变量命名习惯，在平时的练习中坚持给变量合理的命名，才能
+逐步培养这种能力。本书坚持以合理的变量命名方式给出示例程序，希望通过此种方式让初学者在
 \begin_inset Flex Strong
 status open
 
@@ -406,22 +471,22 @@ status open
 
 \begin_layout Plain Layout
 
-private static final int RUNNING = 0;
+public static final int RUNNING = 0;
 \end_layout
 
 \begin_layout Plain Layout
 
-private static final int HOOKS = 1;
+public static final int HOOKS = 1;
 \end_layout
 
 \begin_layout Plain Layout
 
-private static final int FINALIZERS = 2;
+public static final int FINALIZERS = 2;
 \end_layout
 
 \begin_layout Plain Layout
 
-private static final int MAX_SYSTEM_HOOKS = 10;
+public static final int MAX_SYSTEM_HOOKS = 10;
 \end_layout
 
 \end_inset
@@ -434,7 +499,7 @@ private static final int MAX_SYSTEM_HOOKS = 10;
 status open
 
 \begin_layout Itemize
-请暂时忽略例子中的private，我们将在
+请暂时忽略例子中的public，我们将在
 \begin_inset ERT
 status open
 
@@ -454,7 +519,7 @@ reference "sec:访问控制"
 
 \end_inset
 
-深入学习private的用法。
+深入学习public的用法。
 \end_layout
 
 \begin_layout Itemize
@@ -1863,7 +1928,24 @@ reference "sec:条件判断和分支"
 \end_layout
 
 \begin_layout Example
-输入圆的半径，求圆的面积
+输入圆的半径，求圆的面积和周长
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:输入圆的半径，求圆的面积"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+增加圆的周长计算，说明如何避免魔幻数字
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -1935,6 +2017,80 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Problem
+请结合
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:输入圆的半径，求圆的面积"
+
+\end_inset
+
+，阐述什么是魔幻数字
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里似乎应该解释什么是魔幻数字？
+\end_layout
+
+\end_inset
+
+（魔幻字符串）？常量在消除魔幻数字中起到怎样的作用？
+\end_layout
+
+\begin_layout Section
+数组
+\end_layout
+
+\begin_layout Standard
+Java数组的意义、用法和C语言几乎完全一致，只是定义方式有两点不同：
+\end_layout
+
+\begin_layout Itemize
+Java定义数组不需要指定数组大小，Java虚拟机能够自动“推断”数组的大小。
+\end_layout
+
+\begin_layout Itemize
+通常，Java将定义数组时的[]放到数据类型的右边，而不是变量的右边，即如：int[] array，这样能够更明确表示array是数组的名字。
+\end_layout
+
+\begin_layout Standard
+Java的数组示例请参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:遍历数组"
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Section
@@ -2086,6 +2242,13 @@ status open
 
 \begin_layout Example
 遍历数组
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:遍历数组"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2482,7 +2645,16 @@ Java的基本语法结构中，哪些方面和C语言一致？Java增加了哪�
 \end_layout
 
 \begin_layout Exercise
-编写一个程序，从键盘输入x，利用下面公式计算的近似值：
+编写一个程序，从键盘输入x，利用下面公式计算的近似值，要求精度到10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+-6
+\end_layout
+
+\end_inset
+
+：
 \end_layout
 
 \begin_layout Exercise

@@ -21,7 +21,7 @@ public class CalculatePi {
 			result += item;
 			sign = -sign;
 			denominator += 2;
-		} while (Math.abs((double) sign / denominator) >= 1e-6);
+		} while (Math.abs(item) >= 1e-6);
 
 		return result * 4;
 	}

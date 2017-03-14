@@ -3515,6 +3515,93 @@ default修饰的类，在其他包中不可见。
 \begin_layout Section
 \begin_inset CommandInset ref
 LatexCommand nameref
+reference "chap:Java的常用类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset label
+LatexCommand label
+name "方法参数传引用的考察"
+
+\end_inset
+
+本例考察的是Java方法的参数传递。Java方法的参数传递存在两种情况：如果参数是一个简单数据类型，则直接传值；如果参数是一个对象，则传该对象的引用，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:方法调用中的参数传递"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/appendix/method-call-parameters.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+方法调用中的参数传递
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:方法调用中的参数传递"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+本例中，如果将append方法中的参数名字改为x，y，即append(StringBuffer x, StringBuffer y)，可能更好理解。这里故意将a
+ppend方法的形参和实参设置为相同，一定程度上容易迷惑读者。
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
 reference "chap:Enum"
 
 \end_inset
