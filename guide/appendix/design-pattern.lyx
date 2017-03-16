@@ -6,22 +6,19 @@
 \origin unavailable
 \textclass ctex-book
 \begin_preamble
-\input{preamble.tex}
+\input{../preamble.tex}
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-bytype
-theorems-chap-bytype
+logicalmkup
 coderemarks
 tip-inset
 note-inset
 warning-inset
-logicalmkup
+theorems-bytype
+theorems-chap-bytype
 \end_modules
 \maintain_unincluded_children false
-\begin_local_layout
-PackageOptions url hyphens
-\end_local_layout
 \language chinese-simplified
 \language_package default
 \inputencoding utf8-plain
@@ -81,12 +78,12 @@ PackageOptions url hyphens
 \color #008000
 \end_index
 \secnumdepth 3
-\tocdepth 2
+\tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -97,120 +94,78 @@ PackageOptions url hyphens
 
 \begin_body
 
-\begin_layout Standard
-\start_of_appendix
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/lesson-schedule.lyx"
-
-\end_inset
-
-
+\begin_layout Chapter
+常见设计模式
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/faq.lyx"
+TBD
+\end_layout
+
+\begin_layout Section
+设计模式概述
+\end_layout
+
+\begin_layout Section
+工厂模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:工厂模式"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/diff-5678.lyx"
+\begin_layout Section
+单例模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:单例模式"
 
 \end_inset
 
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/answers.lyx"
+\begin_layout Section
+构建模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:构建模式"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/classpath.lyx"
+\begin_layout Section
+装饰模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:装饰模式"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/idea-keymap.lyx"
+\begin_layout Section
+代理模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:代理模式"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/code-standard-google.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/design-pattern.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "auto"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "../common/java,../common/others"
-options "IEEEtran"
+\begin_layout Section
+门面模式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:门面模式"
 
 \end_inset
 

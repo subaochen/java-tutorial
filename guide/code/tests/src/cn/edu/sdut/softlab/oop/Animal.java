@@ -13,9 +13,6 @@ public abstract class Animal {
     public Animal() {
     }
 
-    ;
-
-
     /**
      * Set the value of name
      *
@@ -93,13 +90,11 @@ public abstract class Animal {
      */
     abstract public void run();
 
-
     /**
      * 问候
      *
      * @return String
      */
     abstract public String sayHello();
-
 
 }

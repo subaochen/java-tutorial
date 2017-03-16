@@ -10,7 +10,6 @@ public class Dog implements PeopleHelper, MouseKiller {
     public Dog() {
     }
 
-
     /**
      * Set the value of color
      *

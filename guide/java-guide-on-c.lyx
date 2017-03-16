@@ -270,7 +270,7 @@ LatexCommand lstlistoflistings
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "appendix.lyx"
 
 \end_inset

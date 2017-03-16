@@ -1,0 +1,407 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{../preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+logicalmkup
+coderemarks
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Java FAQ
+\end_layout
+
+\begin_layout Section
+如何设置命令行参数？
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:如何设置命令行参数？"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分以下2种情况：
+\end_layout
+
+\begin_layout Enumerate
+如果是从命令行执行，直接在Java应用程序后面设置命令行参数即可，比如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+java Client arg-list
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+如果使用IDE，一般的IDE在run菜单都有一个“configuration....
+\begin_inset Quotes erd
+\end_inset
+
+菜单，通过此菜单可以设置应用程序的命令行参数。比如Idea中，通过如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Idea的命令行参数设置方法"
+
+\end_inset
+
+的方式设置命令行参数。
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/appendix/edit-run-configuration-menu-item.png
+	width 40line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择编辑运行参数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/appendix/run-args-configuration.png
+	width 55line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+设置命令行参数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Idea的命令行参数设置方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Idea的命令行参数设置方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+什么是Glob？
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:什么是Glob？"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Glob是一个模式匹配字符串，即通过Glob字符串去和一个给定的文件名或者目录名匹配获得相应的结果。Glob的规则很简单，列表如下：
+\end_layout
+
+\begin_layout Itemize
+*：匹配任意数目的字符，包括0个字符。
+\end_layout
+
+\begin_layout Itemize
+**：跨目录匹配。
+\end_layout
+
+\begin_layout Itemize
+?：匹配一个字符。
+\end_layout
+
+\begin_layout Itemize
+大括号{}：匹配其中的任意一个模式。
+\end_layout
+
+\begin_layout Itemize
+中括号[]：匹配其中的任意一个字符，可以使用“-”代表一个数字或者字符的范围，比如[0-9]，[a-z]，[A-Z]等。
+\end_layout
+
+\begin_layout Itemize
+[^abc]：匹配除a、b、c外的单个字符。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要验证glob是否支持
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+{!glob}：匹配任何不匹配glob的字符串。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要验证是否支持
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Glob也支持以下的特殊转移字符：
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+w：匹配一个字符或者下划线。
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+s：匹配一个空白字符（空格、tab或者回车）
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+S：匹配一个非空白字符。
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+d：匹配一个数字
+\end_layout
+
+\begin_layout Standard
+示例：
+\end_layout
+
+\begin_layout Itemize
+*.html：匹配所有以html为扩展名的文件，比如index.html。
+\end_layout
+
+\begin_layout Itemize
+{*.html,*.htm}：匹配所有以html或者htm为扩展名的文件，比如index.html, index.htm都能够匹配成功。也可以这样写：*.{html,ht
+m}
+\end_layout
+
+\begin_layout Itemize
+*.???：匹配任意三个字母为扩展名的文件，比如index.htm, index.txt, file.dia等都能够匹配成功。
+\end_layout
+
+\begin_layout Itemize
+*[0-9]*：匹配只包含一个数字的任意字符串。
+\end_layout
+
+\begin_layout Itemize
+*.[ch]：匹配任何c语言源文件和头文件。
+\end_layout
+
+\begin_layout Itemize
+[^#]*：匹配任何不以#开头的文件。
+\end_layout
+
+\begin_layout Itemize
+a?*.java：匹配以字母a开头，并且紧跟着至少一个字符或者字母为文件名，扩展名为java的字符串，比如a3.java，ab.java，abcd.java都能够匹配成
+功，但是a.java则匹配失败。
+\end_layout
+
+\begin_layout Itemize
+/home/*/*：匹配/home/gus/data，但是/home/gus、/home/gus/data/test则匹配失败。
+\end_layout
+
+\begin_layout Itemize
+/home/**：匹配/home/gus、/home/gus/data、/home/gus/data/test。
+\end_layout
+
+\end_body
+\end_document

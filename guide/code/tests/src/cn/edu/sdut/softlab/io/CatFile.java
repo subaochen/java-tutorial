@@ -2,7 +2,6 @@ package cn.edu.sdut.softlab.io;
 
 import java.io.*;
 
-
 /**
  * 文件合并
  */

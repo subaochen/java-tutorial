@@ -1,0 +1,582 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{../preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+logicalmkup
+coderemarks
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+部分练习和思考题参考答案
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:初识Java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exercisename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exer:编写程序，在屏幕上显示如下的图形："
+
+\end_inset
+
+[在
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "exer:编写程序，在屏幕上显示如下的图形："
+
+\end_inset
+
+页]的一个实现如下所示
+\begin_inset CommandInset label
+LatexCommand label
+name "solu:的一个实现如下所示："
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Solution
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class KDW {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**        ***    **********      **          
+   *             **");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**      ***      **        **     **         
+  ***           ** ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**    ***        **         **     **        
+ ** **         **  ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**  ***          **          **     **       **
+   **       **   ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("*****            **          **      **     **
+     **     **    ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**  ***          **          **       **   **
+       **   **     ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**    ***        **         **         ** ** 
+        ** **      ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**      ***      **        **           ***  
+         ***       ");
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("**        ***    **********              *   
+          *        ");
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:面向对象的基本概念"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset label
+LatexCommand label
+name "solu:default修饰的类，在其他包中不可见。"
+
+\end_inset
+
+default修饰的类，在其他包中不可见。
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:Java的常用类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset label
+LatexCommand label
+name "方法参数传引用的考察"
+
+\end_inset
+
+本例考察的是Java方法的参数传递。Java方法的参数传递存在两种情况：如果参数是一个简单数据类型，则直接传值；如果参数是一个对象，则传该对象的引用，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:方法调用中的参数传递"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/appendix/method-call-parameters.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+方法调用中的参数传递
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:方法调用中的参数传递"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+本例中，如果将append方法中的参数名字改为x，y，即append(StringBuffer x, StringBuffer y)，可能更好理解。这里故意将a
+ppend方法的形参和实参设置为相同，一定程度上容易迷惑读者。
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "chap:Enum"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+Planet的定义
+\begin_inset CommandInset label
+LatexCommand label
+name "solu:Planet的定义如下："
+
+\end_inset
+
+如下
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参考：https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public enum Planet {
+\end_layout
+
+\begin_layout Plain Layout
+
+    MERCURY (3.303e+23, 2.4397e6),
+\end_layout
+
+\begin_layout Plain Layout
+
+    VENUS   (4.869e+24, 6.0518e6),
+\end_layout
+
+\begin_layout Plain Layout
+
+    EARTH   (5.976e+24, 6.37814e6),
+\end_layout
+
+\begin_layout Plain Layout
+
+    MARS    (6.421e+23, 3.3972e6),
+\end_layout
+
+\begin_layout Plain Layout
+
+    JUPITER (1.9e+27,   7.1492e7),
+\end_layout
+
+\begin_layout Plain Layout
+
+    SATURN  (5.688e+26, 6.0268e7),
+\end_layout
+
+\begin_layout Plain Layout
+
+    URANUS  (8.686e+25, 2.5559e7),
+\end_layout
+
+\begin_layout Plain Layout
+
+    NEPTUNE (1.024e+26, 2.4746e7);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    private final double mass;   // in kilograms
+\end_layout
+
+\begin_layout Plain Layout
+
+    private final double radius; // in meters
+\end_layout
+
+\begin_layout Plain Layout
+
+    Planet(double mass, double radius) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        this.mass = mass;
+\end_layout
+
+\begin_layout Plain Layout
+
+        this.radius = radius;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    private double mass() { return mass; }
+\end_layout
+
+\begin_layout Plain Layout
+
+    private double radius() { return radius; }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // universal gravitational constant  (m3 kg-1 s-2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final double G = 6.67300E-11;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    double surfaceGravity() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return G * mass / (radius * radius);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    double surfaceWeight(double otherMass) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return otherMass * surfaceGravity();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (args.length != 1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            System.err.println("Usage: java Planet <earth_weight>");
+\end_layout
+
+\begin_layout Plain Layout
+
+            System.exit(-1);
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        double earthWeight = Double.parseDouble(args[0]);
+\end_layout
+
+\begin_layout Plain Layout
+
+        double mass = earthWeight/EARTH.surfaceGravity();
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (Planet p : Planet.values())
+\end_layout
+
+\begin_layout Plain Layout
+
+           System.out.printf("Your weight on %s is %f%n",
+\end_layout
+
+\begin_layout Plain Layout
+
+                             p, p.surfaceWeight(mass));
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

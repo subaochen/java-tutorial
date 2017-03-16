@@ -75,9 +75,10 @@ ISSUE#123：修正xxxx问题
 
 如果您希望共同完善本教程，请继续往下读。
 
-本教程使用lyx 2+编写，搭建书写环境的步骤是：
+本教程使用lyx 2.2+编写，搭建书写环境的步骤是：
  * 建议安装Linux环境，作者是在Linux环境下编写本书的。
- * 安装textlive最新版和lyx 2+。
+ * 安装textlive最新版和lyx 2.2+（目前ubuntu 16.10自带的Lyx版本是2.1，
+到Lyx官网：http://www.lyx.org 下载最新的2.2+版本安装即可）。
  * fork本项目，clone项目到本地。
  * 执行common中的deploy.sh脚本安装lyx的几个模块，然后启动lyx，点击“工具”->"重配置"，重启lyx
  * lyx java-guide-on-c.lyx（基础篇），或者lyx java-advanced.lyx（提高篇），
@@ -85,6 +86,8 @@ ISSUE#123：修正xxxx问题
  * 执行./makebook.sh可以生成本书的pdf文件（包含封面），请到上一级目录查看生成的pdf文件。
  如果只是日常编辑的话，这一步可以忽略。
  * 提交PR或者issue。
+ * 写作中遇到Lyx的使用问题，欢迎联系 subaochen@126.com，或者访问 
+ http://dz.sdut.edu.cn/blog/subaochen ，本人非常乐意分享Lyx的使用心得。
 
 建议打开Lyx的“视图->outline pane”，这样在总控文件中点击章节即可自动
 打开相应章节的lyx文件进行编辑了，非常方便。

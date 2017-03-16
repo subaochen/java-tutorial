@@ -6,22 +6,19 @@
 \origin unavailable
 \textclass ctex-book
 \begin_preamble
-\input{preamble.tex}
+\input{../preamble.tex}
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-bytype
-theorems-chap-bytype
+logicalmkup
 coderemarks
 tip-inset
 note-inset
 warning-inset
-logicalmkup
+theorems-bytype
+theorems-chap-bytype
 \end_modules
 \maintain_unincluded_children false
-\begin_local_layout
-PackageOptions url hyphens
-\end_local_layout
 \language chinese-simplified
 \language_package default
 \inputencoding utf8-plain
@@ -81,12 +78,12 @@ PackageOptions url hyphens
 \color #008000
 \end_index
 \secnumdepth 3
-\tocdepth 2
+\tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -97,11 +94,11 @@ PackageOptions url hyphens
 
 \begin_body
 
-\begin_layout Standard
-\start_of_appendix
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/lesson-schedule.lyx"
+\begin_layout Chapter
+Idea的常用快捷键
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Idea的常用快捷键"
 
 \end_inset
 
@@ -109,112 +106,63 @@ filename "appendix/lesson-schedule.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/faq.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
+完整的Idea的默认快捷键可从这里下载：
+\begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/diff-5678.lyx"
 
-\end_inset
-
-
+https://resources.jetbrains.com/storage/products/idea/docs/IntelliJIDEA_ReferenceC
+ard.pdf
 \end_layout
 
 \end_inset
 
-
+，建议大家打印出来置于案头以便参考。其中最常用的快捷键列表如下：
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/answers.lyx"
-
-\end_inset
-
-
+Ctrl+Space：智能提示
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/classpath.lyx"
-
-\end_inset
-
-
+Alt+Enter：快速修复
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/idea-keymap.lyx"
-
-\end_inset
-
-
+Shift+F6：改名字
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/code-standard-google.lyx"
-
-\end_inset
-
-
+Alt+Insert：代码插入，自动生成代码
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendix/design-pattern.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+Ctrl+W/Ctrl+Shift+W：自动按照语法选中代码
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "auto"
-
-\end_inset
-
-
+Shift+Shift：弹出万能搜索框
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "../common/java,../common/others"
-options "IEEEtran"
+Ctrl+N/Ctrl+Shift+N：搜索并打开指定文件/类
+\end_layout
 
-\end_inset
+\begin_layout Standard
+Ctrl+Alt+L：格式化代码
+\end_layout
 
+\begin_layout Standard
+Ctrl+Alt+O：重新组织化import
+\end_layout
 
+\begin_layout Standard
+Alt+Shift+F10：运行程序
+\end_layout
+
+\begin_layout Standard
+F7/F8/F9：调试时对应Step into/Step over/Continue
 \end_layout
 
 \end_body

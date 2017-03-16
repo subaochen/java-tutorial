@@ -10,5 +10,4 @@ public interface MouseKiller {
      */
     public void killMouse();
 
-
 }
