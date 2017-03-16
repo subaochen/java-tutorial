@@ -1,0 +1,15 @@
+//usr/bin/dot
+digraph G{
+    rankdir=LR;
+    node[shape=box,style=filled,color=lightblue];
+    c[label="C语言教程",style=dotted];
+    java_basic[label="Java基础教程"];
+    java_advanced[label="Java进阶教程"];
+    jsf[label="JSF & Primefaces\n实战教程"];
+    cdi[label="企业级Java\n实战教程"];
+    deltaspike[label="Deltaspike\n实战教程"];
+    android[label="Android实战教程"];
+
+    c->java_basic->java_advanced->jsf->cdi->deltaspike;
+    java_basic->android;
+}
