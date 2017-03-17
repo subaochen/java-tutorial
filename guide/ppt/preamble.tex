@@ -1,0 +1,60 @@
+% see http://deic.uab.es/~iblanes/beamer_gallery/ for how 
+% to choose theme and color
+\usetheme{Warsaw}
+% or AnnArbor, Antibes,Bergen, Berkeley, Berlin, Boadilla,
+%CambridgeUS, Copenhagen, Darmstadt, default, Dresden,
+%Frankfurt, Goettingen, Hannover, Ilmenau, JuanLesPins,
+%Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto,
+%Pittsburgh, Rochester, Singapore, Szeged, Stockton,
+%boxes, Warsaw…
+
+%\usecolortheme{whale}
+%or albatross, orchid, beaver, rose, beetle, seagull, crane.
+%seahorse, default, sidebartab, dolphin , structure
+%dove, whale, fly, wolverine, lily
+
+\usepackage{xeCJK} % 解决中文无法自动换行问题
+
+\AtBeginDocument{\renewcommand\lstlistingname{代码清单}}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{hellgelb}{rgb}{0.97,0.97,1} % 近似白色，便于打印输出，不会和code remarks冲突
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{0.06,0.05,0.03} % 重色便于打印输出，红色打印出来会很模糊
+\definecolor{colString}{rgb}{0,0.5,0}
+\lstset{%
+    language=Java,%
+    float=hbp,%
+    basicstyle=\footnotesize\ttfamily,%
+    identifierstyle=\color{colIdentifier},%
+    keywordstyle=\color{colKeys},%
+    stringstyle=\color{colString},%
+    commentstyle=\itshape\color{colComments},%
+    columns=fixed,
+    tabsize=4,%
+    frame=tb,% 顶部和底部加横线
+    %frame=shadowbox,
+    framerule=1pt,
+    framexleftmargin=2em, % 行号包含在代码区域内
+    showspaces=false,%
+    showstringspaces=false,%不显示代码字符串中间的空格标记
+    numbers=left,%左侧显示行号
+    numberstyle=\tiny\ttfamily,%
+    numbersep=1em,%
+    breaklines=true,% 对过长的代码自动换行
+    breakindent=10pt,%
+    backgroundcolor=\color{hellgelb},%
+    breakautoindent=true,%
+    %escapebegin=\begin{CJK*}{GBK}{hei},escapeend=\end{CJK*},
+    aboveskip=1em, %代码块边框
+    captionpos=t,%
+    %% added by http://bbs.ctex.org/viewthread.php?tid=53451
+    %fontadjust,
+    xleftmargin=1em, xrightmargin=\fboxsep,%设定listing左右的空白
+    %texcl=true,
+    % 设定中文冲突，断行，列模式，数学环境输入，listing数字的样式
+    extendedchars=false,columns=flexible,mathescape=true,
+    escapechar=|
+} 
+
