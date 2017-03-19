@@ -27,5 +27,6 @@ public class StaticDispatch {
 		sd.sayHello(man);
 		sd.sayHello(woman);
 		sd.sayHello((Man)man);
+		//sd.sayHello((Woman)man); // 请说明这一行会发生什么现象？
 	}
 }
