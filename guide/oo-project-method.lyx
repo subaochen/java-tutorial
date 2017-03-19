@@ -2021,7 +2021,7 @@ status open
 \end_layout
 
 \begin_layout Subsection
-对象的存储模型
+对象的概念存储模型
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:对象的存储模型"
@@ -2052,7 +2052,32 @@ reference "fig:Java对象在内存中的存储模型"
 
 \end_inset
 
-所示。
+所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+提请读者注意的是，为了简化问题的描述和避免过多的底层细节，本节的对象存储模型仅仅为了大家理解方便，并非对象在内存的真实存储情形。更多的细节请读者参考Java虚拟
+机规范
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jvm-se8-specification"
+
+\end_inset
+
+，推荐阅读《深入理解Java虚拟机》
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jvm-advanced-feature"
+
+\end_inset
+
+一书。
+\end_layout
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Standard
