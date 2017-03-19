@@ -1,0 +1,314 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{../preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+logicalmkup
+coderemarks
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+常见面试题
+\end_layout
+
+\begin_layout Standard
+面试题往往比较“变态”，要求对Java的特性有深刻的理解才能给出正确答案。这里列出一些常见的面试题目，一方面加深对Java的理解，一方面未来可以更加从容的应对“
+变态”的面试官们。
+\end_layout
+
+\begin_layout Section
+方法的重载
+\end_layout
+
+\begin_layout Problem
+给出
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "StaticDispatch.java"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "虚拟机字节码执行引擎"
+key "jvm-advanced-feature"
+
+\end_inset
+
+的运行结果。
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/subaochen/git/java-tutorial/guide/code/appendix/src/cn/edu/sdut/softlab/interview/StaticDispatch.java"
+lstparams "caption={StaticDispatch.java},label={StaticDispatch.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+执行结果为：
+\end_layout
+
+\begin_layout Problem
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+hello, guy!
+\end_layout
+
+\begin_layout Plain Layout
+hello, guy!
+\end_layout
+
+\begin_layout Plain Layout
+hello, man!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+本题重点考察两个方面：
+\end_layout
+
+\begin_layout Description
+对象的类型 代码Human man = new Man()虽然通过new Man()创建了一个Man类型的对象，但是通过安全的“向上塑性”将这个Man类型的对象
+转换为Human类型，因此man的数据类型是Human类型的。
+\end_layout
+
+\begin_layout Description
+方法的重载是静态分派 即在编译阶段就确定了调用哪个重载的方法。javac在编译以上代码时，根据所传入参数的类型和数量来匹配应该调用哪个方法。本例中，前两次调用s
+ayHello()方法均传递了Human类型的对象，因此实际调用的方法为sayHello(Human guy)，最后一次调用讲man对象强制转换为Man类型，因
+此调用的是sayHello(Man guy）方法，这样就不难理解输出结果了。
+\end_layout
+
+\begin_layout Standard
+我们可以通过分析StaticDispatch的Class文件结构
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+执行javap -verbose StaticDispatch查看完整的class文件结构
+\end_layout
+
+\end_inset
+
+验证这一点（仅截取相关部分代码）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\ttfamily},breaklines=true,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+......
+\end_layout
+
+\begin_layout Plain Layout
+
+// 以下为main()方法的部分字节码
+\end_layout
+
+\begin_layout Plain Layout
+
+23: astore_3
+\end_layout
+
+\begin_layout Plain Layout
+
+24: aload_3
+\end_layout
+
+\begin_layout Plain Layout
+
+25: aload_1
+\end_layout
+
+\begin_layout Plain Layout
+
+26: invokevirtual #13 // Method sayHello:(Lcn/edu/sdut/softlab/interview/StaticD
+ispatch$Human;)V
+\end_layout
+
+\begin_layout Plain Layout
+
+29: aload_3
+\end_layout
+
+\begin_layout Plain Layout
+
+30: aload_2
+\end_layout
+
+\begin_layout Plain Layout
+
+// 调用的是参数为Human类型的sayHello方法
+\end_layout
+
+\begin_layout Plain Layout
+
+31: invokevirtual #13  // Method sayHello:(Lcn/edu/sdut/softlab/interview/Static
+Dispatch$Human;)V 
+\end_layout
+
+\begin_layout Plain Layout
+
+34: aload_3
+\end_layout
+
+\begin_layout Plain Layout
+
+35: aload_1
+\end_layout
+
+\begin_layout Plain Layout
+
+36: checkcast     #7  // class cn/edu/sdut/softlab/interview/StaticDispatch$Man
+\end_layout
+
+\begin_layout Plain Layout
+
+// 调用的是参数为Man类型的sayHello方法
+\end_layout
+
+\begin_layout Plain Layout
+
+39: invokevirtual #14  // Method sayHello:(Lcn/edu/sdut/softlab/interview/Static
+Dispatch$Man;)V 
+\end_layout
+
+\begin_layout Plain Layout
+
+42: return
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
