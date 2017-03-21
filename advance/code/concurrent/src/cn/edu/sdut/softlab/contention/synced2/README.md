@@ -1,0 +1,1 @@
+演示使用synchronized同步属性

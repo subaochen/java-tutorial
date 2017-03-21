@@ -189,31 +189,13 @@ name "fig:多线程应用程序示例"
 Java支持两种方式创建线程：
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Flex Strong
-status open
-
-\begin_layout Plain Layout
-实现Runnable接口
+\begin_layout Description
+实现Runnable接口 只要覆盖Runnable接口的唯一方法run()即可。
 \end_layout
 
-\end_inset
-
-，只要覆盖Runnable接口的唯一方法run()即可。
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Flex Strong
-status open
-
-\begin_layout Plain Layout
-继承Thread类
-\end_layout
-
-\end_inset
-
-，覆盖Thread类的run()方法。实际上，Thread类实现了Runnable接口，因此从Thread继承下来自然也就实现了Runnable接口，这两种方法
-是殊途同归的。
+\begin_layout Description
+继承Thread类 覆盖Thread类的run()方法。实际上，Thread类实现了Runnable接口，因此从Thread继承下来自然也就实现了Runnabl
+e接口，这两种方法是殊途同归的。
 \end_layout
 
 \begin_layout Standard
@@ -737,9 +719,9 @@ Thread Thread9 is running
 
 \begin_layout Standard
 本例中，我们通过一个for循环创建了10个线程并“依次”启动（start），但是仔细观察我们发现，程序的执行结果表明，这10个线程并不是依次顺序启动的！这是Ja
-va线程的重要特点：线程的启动和停止是Java虚拟机根据其调度算法来决定的，我们通过调用start()启动一个线程只是告诉Java虚拟机：现在可以启动这个线程了
-，至于线程真正的启动时间，取决于Java虚拟机的调度算法和当前CPU的运行状态。因此，start/interrupt方法并不能立刻启动或者停止一个线程，仅仅是
-\begin_inset Flex Emph
+va线程的重要特点：线程的启动和停止是Java虚拟机根据其调度算法来决定的。我们通过调用start()启动一个线程只是告诉Java虚拟机：现在可以启动这个线程了
+。至于线程真正的启动时间，取决于Java虚拟机的调度算法和当前CPU的运行状态。因此，start/interrupt方法并不能立刻启动或者停止一个线程，仅仅是
+\begin_inset Flex Strong
 status open
 
 \begin_layout Plain Layout
@@ -1611,7 +1593,7 @@ target "https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.ht
 \end_layout
 
 \begin_layout Itemize
-不直接分享可变对象；如果要分享，创建可变对象的copy来分享，这样万一其他线程改变了可变对象的copy的状态，也不会影响原始的可变对象。
+不直接分享可变对象：如果要分享，创建可变对象的copy来分享，这样万一其他线程改变了可变对象的copy的状态，也不会影响原始的可变对象。
 \end_layout
 
 \end_deeper
@@ -1701,7 +1683,7 @@ lstlistingname
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Counter.java"
+reference "没有使用同步机制的Counter.java"
 
 \end_inset
 
@@ -1722,7 +1704,7 @@ lstlistingname
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "CounterClient.java"
+reference "没有使用同步机制的CounterClient.java"
 
 \end_inset
 
@@ -1959,8 +1941,8 @@ finally, c is 0
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "code/concurrent/src/cn/edu/sdut/softlab/contention/Counter.java"
-lstparams "caption={Counter.java},label={Counter.java}"
+filename "code/concurrent/src/cn/edu/sdut/softlab/unsynced/Counter.java"
+lstparams "caption={没有使用同步机制的Counter.java},label={没有使用同步机制的Counter.java}"
 
 \end_inset
 
@@ -1970,8 +1952,8 @@ lstparams "caption={Counter.java},label={Counter.java}"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "code/concurrent/src/cn/edu/sdut/softlab/contention/CounterClient.java"
-lstparams "caption={CounterClient.java},label={CounterClient.java}"
+filename "code/concurrent/src/cn/edu/sdut/softlab/unsynced/CounterClient.java"
+lstparams "caption={没有使用同步机制的CounterClient.java},label={没有使用同步机制的CounterClient.java}"
 
 \end_inset
 
@@ -1995,7 +1977,7 @@ status open
 
 \end_inset
 
-，只有该方法执行完毕后才会出让cpu时间。修改后的Couter.java类参见
+。只有该方法执行完毕后才会出让cpu时间。修改后的Couter.java类参见
 \begin_inset ERT
 status open
 
@@ -2011,13 +1993,13 @@ lstlistingname
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "加锁属性的Counter.java"
+reference "使用sychronized同步方法的Counter.java"
 
 \end_inset
 
 ，测试类没有变化
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 但是要注意到，在我们提供的示例程序包中实现了同步的测试类在cn.edu.sdut.softlab.contention.synced1包中，不要和包cn.edu.sdut.so
@@ -2161,6 +2143,17 @@ reference "加锁属性的Counter.java"
 \end_inset
 
 。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/concurrent/src/cn/edu/sdut/softlab/contention/synced1/Counter.java"
+lstparams "caption={使用sychronized同步方法的Counter.java},label={使用sychronized同步方法的Counter.java}"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
