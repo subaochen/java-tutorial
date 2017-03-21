@@ -772,8 +772,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-我们知道函数的4个基本要素是：函数名、参数列表、返回值类型和函数体，lambda表达式是一个匿名函数，参数列表和函数体都在lambda表达式中体现出来了，函数的
-返回值是如何决定的呢？在
+我们知道函数的4个基本要素是：函数名、参数列表、返回值类型和函数体，而lambda表达式是一个匿名函数，参数列表和函数体都在lambda表达式中体现出来了，函数
+的返回值是如何决定的呢？在
 \begin_inset ERT
 status open
 
@@ -1513,13 +1513,13 @@ lambda表达式的应用场景
 \begin_layout Standard
 如
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "sec:为什么引入lambda表达式？"
 
 \end_inset
 
-所述，lambda表达式可以用于替换匿名类，也就是说，几乎所有使用匿名类的地方都可以使用lambda表达式，前提条件是，匿名类实现的接口是一个函数接口。实际上，
-Java中的匿名类接口很多是函数接口，比如线程中的Runnable接口，GUI中的ActionListener接口等。
+所述，lambda表达式可以用于替换匿名类。也就是说，几乎所有使用匿名类的地方都可以使用lambda表达式，只要匿名类实现的接口是一个函数接口。实际上，Java
+中的匿名类接口很多是函数接口，比如线程中的Runnable接口，GUI中的ActionListener接口等。
 \end_layout
 
 \begin_layout Example
