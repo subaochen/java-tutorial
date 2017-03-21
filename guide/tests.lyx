@@ -717,6 +717,16 @@ Java综合应用
 
 \begin_layout Standard
 考核方式为操作技能考核、实验报告和面试相结合，实验成绩记入总成绩（占比20%）。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+操作技能考核，建议搭建实验室git环境，减少编写实验报告的时间，直接上代码，解决乱抄实验报告的痛点（做学生的深有体会）！
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1036,6 +1046,16 @@ reference "fig:oop编程实验场景类图"
 \end_inset
 
 。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+图片找不到的问题，我这边也找不到了，文件夹就不存在！
+\end_layout
+
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false

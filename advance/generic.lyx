@@ -163,7 +163,17 @@ name "sec:泛型的引入"
 \end_layout
 
 \begin_layout Standard
-假设有一个Box类（泛型是个框，神马都能装），我们希望这个Box能装任何的对象，因此定义其属性value的类型为Object。其定义见
+假设有一个Box类
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+（泛型是个框，神马都能装）这句话放在这里略显突兀，我的建议是去掉！
+\end_layout
+
+\end_inset
+
+，我们希望这个Box能装任何的对象，因此定义其属性value的类型为Object。其定义见
 \begin_inset ERT
 status open
 
@@ -393,11 +403,21 @@ lstparams "caption={GenericBox.java},label={GenericBox.java}"
 \end_layout
 
 \begin_layout Standard
-所有在Box中出现Object的地方都代替以T。你可能会迷惑，T不是标准的JDK中的类，也不是我们自定义的类，Java将如何识别T这个类呢？秘密在第二点。
+1.
+ 所有在Box中出现Object的地方都代替以T。
 \end_layout
 
 \begin_layout Standard
-在GenericBox类名后面使用了一对尖括号，其中列出了在代码中用到的T，也就是说，在这对尖括号中的字母可以在代码中像类那样使用
+你可能会迷惑，T不是标准的JDK中的类，也不是我们自定义的类，Java将如何识别T这个类呢？秘密在第二点。
+\end_layout
+
+\begin_layout Standard
+2.
+ 在GenericBox类名后面使用了一对尖括号，其中列出了在代码中用到的T。
+\end_layout
+
+\begin_layout Standard
+也就是说，在这对尖括号中的字母可以在代码中像类那样使用
 \begin_inset Foot
 status open
 
@@ -753,7 +773,7 @@ X - 类
 
 \begin_layout Itemize
 S,U,V 等.
- - 第2个，第三个，第4个类等
+ - 第2个，第3个，第4个类等
 \end_layout
 
 \begin_layout Standard
@@ -839,7 +859,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-本例首先定义了一个很常见的Generator接口，用于规范如何获取下一个元素，参见
+本例首先定义了一个很常见的Generator接口，用于规范如何获取下一个元素（参见
 \begin_inset ERT
 status open
 
@@ -859,7 +879,7 @@ reference "Generator.java"
 
 \end_inset
 
-，然后给出了一个generator接口的具体实现FruitGenerator，可以获取（产生）下一个水果的名称，参见
+），然后给出了一个generator接口的具体实现FruitGenerator，可以获取（产生）下一个水果的名称，参见
 \begin_inset ERT
 status open
 
@@ -981,7 +1001,7 @@ name "exer:编写一个Generator接口的实现，用于获取下一个连续的
 \end_layout
 
 \begin_layout Standard
-泛型作用在类上，表示类中的属性或者使用到的变量可以泛型化（即抽象化），很自然的，泛型作用在方法上，即泛型方法是指方法中使用到的变量可以泛型化（抽象化）。
+泛型作用在类上，表示类中的属性或者使用到的变量可以泛型化（即抽象化）。很自然的可以想到，泛型作用在方法上，即泛型方法是指方法中使用到的变量可以泛型化（抽象化）。
 \begin_inset Wrap figure
 lines 0
 placement r
@@ -1272,7 +1292,7 @@ public void test(Box<?> box) {...}
 \end_layout
 
 \begin_layout Standard
-注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容易任何类型的对象，比如Ob
+注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容纳任何类型的对象，比如Ob
 ject，Integer，String等等。
 \end_layout
 
@@ -1573,6 +1593,26 @@ status open
 
 \begin_layout Plain Layout
 此外，extends即可以用于泛型类的类型参数，也可以用于泛型方法的类型参数。
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+由于在Java中，类是单继承的，所以泛型T不允许继承多个类，而Java中的接口是允许多继承的，所以泛型T可以继承多个接口。
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+针对代码注释中的内容进行解释，先写在这里
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
