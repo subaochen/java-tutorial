@@ -1292,7 +1292,7 @@ public void test(Box<?> box) {...}
 \end_layout
 
 \begin_layout Standard
-注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容易任何类型的对象，比如Ob
+注意到Box<Object>和Box<?>是有区别的，Box<Object>表示只能容纳Object类型的对象，而Box<?>则可以容纳任何类型的对象，比如Ob
 ject，Integer，String等等。
 \end_layout
 
@@ -1605,7 +1605,17 @@ status open
 status open
 
 \begin_layout Plain Layout
-由于extends在这里可以表示接口的实现类，因此可以通过extends限定多个接口（可以包括一个类），比如：
+由于extends在这里可以表示接口的实现类，因此可以通过extends限定多个接口（可以包括一个类）
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+由于在Java中，类是单继承的，所以泛型T不允许继承多个类。在Java中接口是允许多继承的，所以泛型T可以继承多个接口。
+\end_layout
+
+\end_inset
+
+，比如：
 \end_layout
 
 \begin_layout Plain Layout
