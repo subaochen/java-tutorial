@@ -163,7 +163,17 @@ name "sec:泛型的引入"
 \end_layout
 
 \begin_layout Standard
-假设有一个Box类（泛型是个框，神马都能装），我们希望这个Box能装任何的对象，因此定义其属性value的类型为Object。其定义见
+假设有一个Box类
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+（泛型是个框，神马都能装）这句话放在这里略显突兀，我的建议是去掉！
+\end_layout
+
+\end_inset
+
+，我们希望这个Box能装任何的对象，因此定义其属性value的类型为Object。其定义见
 \begin_inset ERT
 status open
 
