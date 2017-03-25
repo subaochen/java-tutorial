@@ -127,16 +127,6 @@ status open
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-考虑建立一个综合虚拟实验平台？每次试验后自动给出实验成绩？学生不需要提交纸质版的实验报告了
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection*
@@ -175,6 +165,16 @@ status open
 
 \begin_layout Subsection*
 实验项目及学时分配
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要重构，把提高篇的内容替换掉
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -314,7 +314,7 @@ Java开发环境和简单程序编写
 \begin_inset Text
 
 \begin_layout Plain Layout
-Java基本语法和面向对象编程
+面向对象编程
 \end_layout
 
 \end_inset
@@ -594,7 +594,7 @@ Java的输入输出
 \begin_inset Text
 
 \begin_layout Plain Layout
-图形用户界面设计
+图形用户界面设计1
 \end_layout
 
 \end_inset
@@ -621,7 +621,7 @@ Java的输入输出
 \begin_inset Text
 
 \begin_layout Plain Layout
-验证
+综合
 \end_layout
 
 \end_inset
@@ -650,7 +650,7 @@ Java的输入输出
 \begin_inset Text
 
 \begin_layout Plain Layout
-Java综合应用
+图形用户界面设计2
 \end_layout
 
 \end_inset
@@ -727,10 +727,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-本实验手册中给出的代码均为参考代码，建议读者“一题多解”，即如果在实验报告中给出了多种编程方式则可以考虑加分。
 \end_layout
 
 \begin_layout Section*
@@ -848,7 +844,7 @@ public class HelloWorld {
 \end_layout
 
 \begin_layout Section*
-实验二 Java基本语法和面向对象编程
+实验二 面向对象编程
 \end_layout
 
 \begin_layout Subsection*
@@ -856,128 +852,11 @@ public class HelloWorld {
 \end_layout
 
 \begin_layout Itemize
-对比C语言，掌握Java的基本语法。
+掌握面向对象的基本思想。
 \end_layout
 
 \begin_layout Itemize
-掌握Java面向对象的基本概念。
-\end_layout
-
-\begin_layout Subsection*
-实验内容
-\end_layout
-
-\begin_layout Itemize
-熟悉Java的输入输出，尤其是利用Scanner从键盘输入的方法。
-\end_layout
-
-\begin_layout Itemize
-编写程序，进一步熟悉Java的表达式、分支、循环语句，尤其是加强的switch-case和foreach循环。
-\end_layout
-
-\begin_layout Subsection*
-实验要求
-\end_layout
-
-\begin_layout Itemize
-给出实验中编写的程序源代码和运行结果。
-\end_layout
-
-\begin_layout Itemize
-说明Java定义类的方法。
-\end_layout
-
-\begin_layout Itemize
-说明类和对象的关系。
-\end_layout
-
-\begin_layout Subsection*
-实验步骤
-\end_layout
-
-\begin_layout Standard
-参考
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-figurename
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:几何图形面向对象分析"
-
-\end_inset
-
-，编写相应的实现类和测试类。
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename imgs/tests/oopbasic-model.eps
-	width 70line%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-几何图形面向对象分析
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:几何图形面向对象分析"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-实验三 面向对象工程思想
-\end_layout
-
-\begin_layout Subsection*
-实验目的
-\end_layout
-
-\begin_layout Itemize
-掌握面向对象工程的基本思想。
-\end_layout
-
-\begin_layout Itemize
-掌握Java类的概念和写法，重点体会访问控制（封装）的技术。
+掌握Java类的概念和写法，掌握访问控制（封装）的技术。
 \end_layout
 
 \begin_layout Itemize
@@ -1046,16 +925,6 @@ reference "fig:oop编程实验场景类图"
 \end_inset
 
 。
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-图片找不到的问题，我这边也找不到了，文件夹就不存在！
-\end_layout
-
-\end_inset
-
-
 \begin_inset Float figure
 wide false
 sideways false
@@ -1064,7 +933,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/tests/oop-model.svg
+	filename imgs/experiments/oop-model.svg
 	scale 60
 
 \end_inset
@@ -1179,82 +1048,7 @@ lstparams "caption={PeopleHelper.java},label={PeopleHelper.java}"
 \end_layout
 
 \begin_layout Section*
-实验四 Java常用类
-\end_layout
-
-\begin_layout Subsection*
-实验目的
-\end_layout
-
-\begin_layout Itemize
-熟悉Java的数字、字符串的常见用法。
-\end_layout
-
-\begin_layout Itemize
-熟悉日期、时间的常见用法。
-\end_layout
-
-\begin_layout Subsection*
-实验内容
-\end_layout
-
-\begin_layout Itemize
-编写一个程序，将从键盘输入的数字转换为大写形式输出。
-\end_layout
-
-\begin_layout Subsection*
-实验要求
-\end_layout
-
-\begin_layout Itemize
-给出编写的程序的源代码和执行结果。
-\end_layout
-
-\begin_layout Itemize
-说明数字和字符串的相互转换方法。
-\end_layout
-
-\begin_layout Subsection*
-实验步骤
-\end_layout
-
-\begin_layout Standard
-参考代码参见
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstlistingname
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Money.java"
-
-\end_inset
-
-。
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "code/tests/src/cn/edu/sdut/softlab/essentials/Money.java"
-lstparams "caption={Money.java},label={Money.java}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-实验五 Java的异常处理
+实验三 Java的异常处理
 \end_layout
 
 \begin_layout Subsection*
@@ -1347,7 +1141,7 @@ lstparams "caption={Client.java},label={test-exception-Client.java}"
 \end_layout
 
 \begin_layout Section*
-实验六 Java的输入输出
+实验四 Java的输入输出
 \end_layout
 
 \begin_layout Subsection*
@@ -1446,7 +1240,7 @@ y中的finally关闭，即在finally中调用in.close() 或者 out.close()。
 \end_layout
 
 \begin_layout Section*
-实验七 图形用户界面设计
+实验五 图形用户界面设计
 \end_layout
 
 \begin_layout Subsection*
@@ -1506,7 +1300,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/tests/zhengquan-login.png
+	filename imgs/experiments/zhengquan-login.png
 	width 70line%
 
 \end_inset
@@ -1814,7 +1608,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/tests/login-form-3-design.png
+	filename imgs/experiments/login-form-3-design.png
 	width 80line%
 
 \end_inset
@@ -1855,7 +1649,7 @@ name "fig:组织组件"
 \end_layout
 
 \begin_layout Section*
-实验八 Java综合应用
+实验六 并发应用程序设计
 \end_layout
 
 \begin_layout Subsection*
@@ -1863,42 +1657,61 @@ name "fig:组织组件"
 \end_layout
 
 \begin_layout Itemize
-综合运用本学期所学知识。
+了解线程的概念。
 \end_layout
 
 \begin_layout Itemize
-掌握Java应用程序的基本组织方式。
+掌握创建Java线程的两种方法。
 \end_layout
 
 \begin_layout Itemize
-熟悉Java的常见调试技术。
+了解Java如何通过互斥实现对竞争资源的保护？
+\end_layout
+
+\begin_layout Itemize
+了解Java同步的实现机制。
 \end_layout
 
 \begin_layout Subsection*
 实验内容
 \end_layout
 
-\begin_layout Itemize
-下载和安装robocode，地址：
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://robocode.sourceforge.net/
-\end_layout
-
-\end_inset
-
-。
+\begin_layout Standard
+假设有如下的场景：老公（罗密欧）和老婆（朱丽叶）的共同家底（银行余额）是1000元，两人同时到银行办理业务：罗密欧去存钱，每笔100元，共存了10笔；朱丽叶去取
+钱，每笔100元，共取了10笔。也就是说，两人业务办理完毕后，两人的共同家底（银行余额）应该依然是1000元。试编写一个程序，模拟此操作场景，要求如下：
 \end_layout
 
 \begin_layout Itemize
-编写robocode机器人。
+定义BankAccount类，包含： 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+属性：姓名(name)、帐号(account)、余额(balance)等； 
 \end_layout
 
 \begin_layout Itemize
-不同同学的robocode机器人对战。
+方法：取钱(withdraw)、存钱(deposit)等；
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+定义两个线程类：WithdrawThread(取钱线程)类和DepositThread(存钱线程)类。 
+\end_layout
+
+\begin_layout Itemize
+编写应用程序BankDemo类，在BandDemo中初始化给定的BankAccount对象，启动两个线程类,观察在没有实行同步机制的情况下, BankAccou
+nt类对象中的余额(balance)是否具有不确定性； 
+\end_layout
+
+\begin_layout Itemize
+修改BankAccount类, 利用锁定冲突对象（sychronized(this)或者sychronized(this.account)）的方法实行线程的同步。
+编写程序测试两个线程观察实行同步机制的情况下, BankAccount类对象中余额(balance)的变化。 
+\end_layout
+
+\begin_layout Itemize
+修改BankAccount类, 通过锁定冲突方法对withdraw方法和deposit方法实行同步。编写程序测试两个线程，观察实行同步机制的情况下,
+ BankAccount类对象中余额(balance)的变化。
 \end_layout
 
 \begin_layout Subsection*
@@ -1906,11 +1719,11 @@ http://robocode.sourceforge.net/
 \end_layout
 
 \begin_layout Itemize
-给出所编写程序的源代码和运行结果。
+给出程序的源代码。
 \end_layout
 
 \begin_layout Itemize
-说明调试中遇到的问题和解决方法。
+给出程序运行结果和结果分析。
 \end_layout
 
 \begin_layout Subsection*
@@ -1918,17 +1731,555 @@ http://robocode.sourceforge.net/
 \end_layout
 
 \begin_layout Standard
-可参考：
+分三种情况进行。在这三种情况下，主测试程序BankDemo（参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "BankDemo.java"
+
+\end_inset
+
+）和两个线程（参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "WithdrawThread.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "DepositThread.java"
+
+\end_inset
+
+）基本不变（注意在不同的情形下导入不同包下面的BankAccount），只有BankAccount类有变化。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/concurrency/BankDemo.java"
+lstparams "caption={BankDemo.java},label={BankDemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/concurrency/DepositThread.java"
+lstparams "caption={DepositThread.java},label={DepositThread.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/concurrency/WithdrawThread.java"
+lstparams "caption={WithdrawThread.java},label={WithdrawThread.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+没有同步保护竞争资源时，BankAccount代码设计参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tests-concurrency-nosync-BankAccount.java"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/concurrency/nosync/BankAccount.java"
+lstparams "caption={BankAccount.java},label={tests-concurrency-nosync-BankAccount.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+锁定冲突对象，只是在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tests-concurrency-nosync-BankAccount.java"
+
+\end_inset
+
+的基础上，在withDraw和deposit方法上使用了synchronized关键字锁定this对象，这样this.balance的状态就不会因为交错执行而被破
+坏，或者说，this.balance的状态能够保证“原子性”：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    public void deposit(float money) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        synchronized (this) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            float temp = this.balance;
+\end_layout
+
+\begin_layout Plain Layout
+
+            temp += money;
+\end_layout
+
+\begin_layout Plain Layout
+
+            sleep(); // 模拟银行繁复耗时的操作流程
+\end_layout
+
+\begin_layout Plain Layout
+
+            this.balance = temp;
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("+" + Thread.currentThread().getName() + "存钱：" +
+ money);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+如果把上面的代码修改为：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    public void deposit(float money) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        synchronized (this) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            float temp = this.balance;
+\end_layout
+
+\begin_layout Plain Layout
+
+            temp += money;
+\end_layout
+
+\begin_layout Plain Layout
+
+            sleep(); // 模拟银行繁复耗时的操作流程
+\end_layout
+
+\begin_layout Plain Layout
+
+            this.balance = temp;
+\end_layout
+
+\begin_layout Plain Layout
+
+            System.out.println("+" + Thread.currentThread().getName() + "存钱："
+ + money);
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+试解释执行结果有什么不同？
+\end_layout
+
+\begin_layout Enumerate
+锁定冲突方法，只是在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tests-concurrency-nosync-BankAccount.java"
+
+\end_inset
+
+的基础上，在withDraw和deposit方法上使用了synchronized关键字，其他的没有变化：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public synchronized void withdraw(float money) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public synchronized void deposit(float money) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+实验七 网络编程
+\end_layout
+
+\begin_layout Subsection*
+实验目的
 \end_layout
 
 \begin_layout Itemize
-Robocode教程：
+了解TCP/IP网络的基本概念。
+\end_layout
+
+\begin_layout Itemize
+掌握URL的概念及其读取方法。
+\end_layout
+
+\begin_layout Itemize
+掌握Socket的概念和创建方法。
+\end_layout
+
+\begin_layout Itemize
+掌握Socket编程的基本思路。
+\end_layout
+
+\begin_layout Itemize
+了解Apache mina的基本用法。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Standard
+使用Socket编写一个应用程序，分为服务器端和客户端两部分，要求为：
+\end_layout
+
+\begin_layout Paragraph*
+服务器端
+\end_layout
+
+\begin_layout Standard
+每次收到客户端的一个数据包即追加保存到指定的文件中。
+\end_layout
+
+\begin_layout Paragraph*
+客户端
+\end_layout
+
+\begin_layout Standard
+从给定的URL读取网页内容，按行发送到服务器端。每次发送一行，直到发送完毕为止。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Itemize
+给出所编写的应用程序的源代码。
+\end_layout
+
+\begin_layout Itemize
+给出运行结果，并解释之。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+服务器端代码参考
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ServerDemo.java"
+
+\end_inset
+
+，客户端参考
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ClientDemo.java"
+
+\end_inset
+
+。注意首先运行服务器端，然后再运行客户端。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/network/ServerDemo.java"
+lstparams "caption={ServerDemo.java},label={ServerDemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/network/ClientDemo.java"
+lstparams "caption={ClientDemo.java},label={ClientDemo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+读者也可以自行将
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:使用Socket"
+
+\end_inset
+
+一节的示例程序录入验证和学习。
+\end_layout
+
+\begin_layout Section*
+实验八 使用集合类
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Standard
+了解和掌握ArrayList和LinkedList的不同特点和适用场合。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Standard
+编写程序，考察ArrayList和LinkedList在随机访问和频繁读写情况下的性能对比。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Standard
+在随机访问和频繁读写两种情况下，给出ArrayList和LinkedList的性能对比数据并绘制图表，给出ArrayList和LinkedList各自的适用场合
+的结论。
+\end_layout
+
+\begin_layout Standard
+在不同的读写次数下，ArrayList和LinkedList的对比数据如何变化？
+\end_layout
+
+\begin_layout Standard
+进一步的，如何模拟随机读写情况，即读出和写入的位置使用随机数而不是顺序产生的位置索引数据，再次对比和绘制图表。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+参考程序：
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/collections/ArrayListVsIinkedList.java"
+lstparams "caption={ArrayListVsIinkedList.java},label={ArrayListVsIinkedList.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+参考图表：
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/experiments/arraylistvslinkedlist.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+参考资料
+\end_layout
+
+\begin_layout Itemize
+ArrayList和LinkedList的性能比较：
 \begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
 
-https://site.douban.com/151685/widget/notes/7736245/
+http://javaeye-mao.iteye.com/blog/157977
 \end_layout
 
 \end_inset
@@ -1937,13 +2288,14 @@ https://site.douban.com/151685/widget/notes/7736245/
 \end_layout
 
 \begin_layout Itemize
-重锤痛击 Robocode！
+5 Difference Between ArrayList And LinkedList In Java With Example：
 \begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
 
-http://www.ibm.com/developerworks/cn/java/j-robocode/index.html
+http://javahungry.blogspot.com/2015/04/difference-between-arraylist-and-linkedlist
+-in-java-example.html
 \end_layout
 
 \end_inset
