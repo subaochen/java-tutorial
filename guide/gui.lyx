@@ -3270,19 +3270,22 @@ reference "fig:文本控件示例"
 
 \end_inset
 
-所示，详情请参见：
-\begin_inset Flex URL
+所示
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-https://github.com/subaochen/java-tutorial-examples/blob/master/gui/src/cn/edu/sd
-ut/softlab/TextControlDemo.form
+详情请参见：https://github.com/subaochen/java-tutorial-examples/blob/master/gui/src/cn/
+edu/sdut/softlab/TextControlDemo.form
 \end_layout
 
 \end_inset
 
-。当在文本框中输入一些字符后（失去焦点后），在最下面的Label中显示输入的内容。
+
+\end_layout
+
+\begin_layout Standard
+.当在文本框中输入一些字符后（失去焦点后），在最下面的Label中显示输入的内容。
 \end_layout
 
 \begin_layout Standard
