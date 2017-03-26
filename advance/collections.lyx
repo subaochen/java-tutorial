@@ -1942,7 +1942,7 @@ int lastIndexOf(Object o)
 \begin_inset Text
 
 \begin_layout Plain Layout
-获得对象0在List中最后出现的序号，如果对象不在List中则返回-1
+获得对象o在List中最后出现的序号，如果对象不在List中则返回-1
 \end_layout
 
 \end_inset
