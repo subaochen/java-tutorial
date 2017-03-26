@@ -5144,9 +5144,9 @@ assert nums.toString().equals("[1, 2, 3.45, 1.78]");
 \begin_layout Standard
 我们重点看一下nums.addAll(ints)。可以从两个层面理解这一调用：第一，nums是一个List<Number>类型的对象，它实现了Collection
 <Number>接口，因此nums对象可以调用Collection<Number>接口的addAll(Collection<? extends
- Number> c)方法。第二，List<Integer>是List<? extends Integer>的子类，而List<? extends
+ Number> c)方法；第二，List<Integer>是List<? extends Integer>的子类，而List<? extends
  Integer>是Collection<? extends Number>的子类，因此List<Integer>是Collection<? extends
- Number>的子类，根据子类替换原则，List<Inteber>可以作为nums.addAll的参数。
+ Number>的子类。根据子类替换原则，List<Inteber>可以作为nums.addAll的参数。
 \end_layout
 
 \begin_layout Standard
