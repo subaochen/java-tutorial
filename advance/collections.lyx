@@ -164,7 +164,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-理解集合类框架的接口是用好集合类框架的关键，Java的集合类框架接口如
+理解集合类框架的接口是用好集合类框架的关键。在Java中，集合类框架接口如
 \begin_inset ERT
 status open
 
