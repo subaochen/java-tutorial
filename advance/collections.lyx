@@ -142,7 +142,7 @@ Java提供了集合类框架（Collections Framework），包括以下三个部�
 
 \begin_layout Standard
 Java的集合类框架带给我们的最明显好处就是，对于常见的数据结构，我们不再需要“重新发明轮子”，直接使用集合类框架即可，提高了编写代码的效率，也提高了代码的健壮
-性。z
+性。
 \end_layout
 
 \begin_layout Standard
