@@ -2694,7 +2694,7 @@ subList是一个很有特色的方法，其特点为：
 \end_layout
 
 \begin_layout Itemize
-半开半闭：subList包含起点但是不包含终点位置。
+半开半闭：subList包含起点但是不包含终点位置。可以理解为，高等数学中的集合[a, b)，左闭右开的集合，a代表起点，b代表终点。
 \end_layout
 
 \begin_layout Itemize
