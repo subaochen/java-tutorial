@@ -5640,7 +5640,7 @@ reference "lis:Collections.copy方法"
 
 \end_inset
 
-，注意到dest是目标集合用来接受数据，因此使用List<? super T>来定义，src是源集合，用来读取数据，因此使用List<? etends
+，注意到dest是目标集合用来接受数据，因此使用List<? super T>来定义，src是源集合，用来读取数据，因此使用List<? extends
  T>定义。
 \end_layout
 
