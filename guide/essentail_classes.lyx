@@ -117,16 +117,6 @@ name "chap:Java的常用类"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-这个图似乎和下面的内容不太相符
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -170,37 +160,7 @@ http://docs.oracle.com/javase/8/docs/api/index.html
 \end_layout
 
 \begin_layout Standard
-创建字符串对象的最简单方法是直接使用双引号初始化字符串
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-请读者思考以下两种创建字符串对象的区别：
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-String hello = "hello, world";
-\end_layout
-
-\begin_layout Plain Layout
-
-String hello = new String（"hello, world");
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-：
+创建字符串对象的最简单方法是直接使用双引号初始化字符串：
 \end_layout
 
 \begin_layout Standard
@@ -257,6 +217,44 @@ reference "essentials-Client.java"
 LatexCommand lstinputlisting
 filename "code/essentials/src/cn/edu/sdut/softlab/essentials/string/Client.java"
 lstparams "float,caption={创建字符串对象的几种方法},label={essentials-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+请读者思考以下两种方式创建字符串对象的区别：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String hello = "hello world!";
+\end_layout
+
+\begin_layout Plain Layout
+
+String hello = new String("hello, world!");
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+第一种方式在内存中只创建了一个字符串对象hello，第二种方式则创建了两个字符串对象：hello和字符串内容为“hello world！”的匿名对象。实际上，双
+引号括起来的字符串一般都会在内存中创建一个匿名对象。
+\end_layout
 
 \end_inset
 
@@ -1712,7 +1710,55 @@ reference "exa:Number子类的公共方法。"
 \end_layout
 
 \begin_layout Standard
-这里以Integer为例，其他类型的数值之间的转换类似。
+这里以Integer为例，参见，给出了Integer、int和字符串之间相互转换的方法，其他类型的数值之间的转换类似。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/essentail-classes/integer-transmission.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Integer、int、字符串之间的相互转换方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Integer、int、字符串之间的相互转换方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
