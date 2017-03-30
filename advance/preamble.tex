@@ -4,7 +4,7 @@
 % 页边距设置
 % marginpar=2cm解决margin note在ctex book下无法留出足够空白问题
 % 标准的16开，适合于计算机类图书出版
-\usepackage[paperheight=260mm, paperwidth=185mm, marginpar=2cm,top=2.5cm,bottom=2cm,left=2.2cm,right=2.2cm]{geometry}
+\usepackage[paperheight=260mm, paperwidth=185mm, marginpar=2cm,top=3cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
 % A4版本，适合打印
 %\usepackage[paperheight=297mm, paperwidth=210mm, marginpar=2cm,top=1.65cm,bottom=1.65cm,left=2cm,right=2cm]{geometry}
 % 页眉页脚设置
@@ -44,7 +44,7 @@
 
 \usepackage{listings}
 \usepackage{color}
-\definecolor{hellgelb}{rgb}{0.97,0.97,1} % 近似白色，便于打印输出，不会和code remarks冲突
+\definecolor{colBg}{rgb}{1,1,1} % 白色，便于打印输出，不会和code remarks冲突
 \definecolor{colKeys}{rgb}{0,0,1}
 \definecolor{colIdentifier}{rgb}{0,0,0}
 \definecolor{colComments}{rgb}{0.06,0.05,0.03} % 重色便于打印输出，红色打印出来会很模糊
@@ -62,15 +62,15 @@
     frame=tb,% 顶部和底部加横线
     %frame=shadowbox,
     framerule=1pt,
-    framexleftmargin=2em, % 行号包含在代码区域内
     showspaces=false,%
     showstringspaces=false,%不显示代码字符串中间的空格标记
-    numbers=left,%左侧显示行号
+    %framexleftmargin=2em, % 行号包含在代码区域内
+    %numbers=left,%左侧显示行号
     numberstyle=\tiny\ttfamily,%
     numbersep=1em,%
     breaklines=true,% 对过长的代码自动换行
     breakindent=10pt,%
-    backgroundcolor=\color{hellgelb},%
+    backgroundcolor=\color{colBg},%
     breakautoindent=true,%
     %escapebegin=\begin{CJK*}{GBK}{hei},escapeend=\end{CJK*},
     aboveskip=1em, %代码块边框
@@ -80,7 +80,8 @@
     xleftmargin=1em, xrightmargin=\fboxsep,%设定listing左右的空白
     %texcl=true,
     % 设定中文冲突，断行，列模式，数学环境输入，listing数字的样式
-    extendedchars=false,columns=flexible,mathescape=true,
+    extendedchars=false,columns=flexible,
+    %mathescape=true, % 启用后貌似没法在代码中使用特殊字符，比如$
     escapechar=|
 } 
 
