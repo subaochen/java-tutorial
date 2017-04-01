@@ -3180,7 +3180,7 @@ columns
 \begin_inset Text
 
 \begin_layout Plain Layout
-文本框的长度（多少个字符），仅仅作为计算默认显示宽度的依据
+文本框的长度（多少个字符），一般作为计算默认显示宽度的依据
 \end_layout
 
 \end_inset
