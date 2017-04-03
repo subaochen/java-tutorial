@@ -8,7 +8,17 @@
 \begin_preamble
 \input{preamble.tex}
 \end_preamble
+\options openany
 \use_default_options true
+\begin_modules
+logicalmkup
+coderemarks
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+\end_modules
 \maintain_unincluded_children false
 \begin_local_layout
 PackageOptions url hyphens
@@ -17,9 +27,9 @@ PackageOptions url hyphens
 \language_package default
 \inputencoding utf8-plain
 \fontencoding global
-\font_roman "default" "新宋体"
-\font_sans "default" "新宋体"
-\font_typewriter "default" "新宋体"
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
@@ -96,8 +106,186 @@ PackageOptions url hyphens
 注解的基本概念
 \end_layout
 
+\begin_layout Standard
+从JDK 5开始，Java提供了注解功能，从此摆脱了“XML地狱”
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+“XML地狱”(XML Hell)是指应用程序过度依赖XML文件进行系统配置，导致产生过多的XML配置文件和配置选项，造成配置选项和所配置内容的严重脱节，不容易
+理清楚配置选项之间的关系，也不容易看清楚配置选项和实际代码之间的关联，导致软件学习曲线陡峭以及部署复杂等问题。过度的使用XML文件所导致的这种现象让程序员和实施
+人员头疼不已，犹如坠入地狱一般，因此被人们戏称为“XML地狱”。
+\end_layout
+
+\end_inset
+
+的诟病，注解也为Java应用程序框架的繁荣提供了沃土。可以说，没有注解概念的引入，现在的大部分Java应用程序框架将黯然失色。注解（Annotation）是以@
+开头的特殊描述符：它既不是合法的Java代码，也不是标准的Java注释，比如我们已经耳熟能详的@Override注解，表示方法method()覆盖（重写）了父类
+中的同名方法，@Override注解在此处的作用是告诉Java编译器，在编译这段代码的时候要检查method方法是否符合方法重写的规范。换言之，如果一个方法存在
+@Override注解，则Java编译器会对此方法进行特别的方法重写的语法检查。
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void method() {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+事实上，Java中的注解不仅仅可以配合编译器进行语法检查，概括的说，注解可以：
+\end_layout
+
+\begin_layout Description
+配合编译器进行辅助检查 编译器根据注解进行相应的语法检查、错误检测等，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:JDK中的注解"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Description
+辅助自动生成代码 在常见的应用程序框架中，比如Spring
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.spring.io
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+，Deltaspike
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://deltaspike.apache.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+中，可以通过注解的方式简化代码的编写，应用程序框架提供的工具在生成部署文件时会根据注解自动创建相应的Java源文件或者XML配置文件等。本部分的简单示例参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:注解的定义"
+
+\end_inset
+
+以及
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:注解处理器"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Description
+运行时处理 有的注解是在运行时发挥作用的，比如运行时根据给定的条件选择合适的组件。这部分内容本书没有涉及，感兴趣的读者可以参考CDI
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.cdi-spec.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+的相关资料。
+\end_layout
+
 \begin_layout Section
-JDK中的注解
+JDK中的内置注解
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:JDK中的注解"
@@ -105,6 +293,149 @@ name "sec:JDK中的注解"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+注解既然不是合法的Java关键字，Java编译器是如何识别和处理注解的呢？java编译器中已经内置了以下注解的处理器：
+\end_layout
+
+\begin_layout Description
+@Override 表示子类覆盖（重写）了父类中的同名方法。考虑一种情形：在父类中的方法名为oneMehtod()，我们的本意是在子类中重写父类的oneMeth
+od()方法，却无意中写成了one1Method()。如果没有使用@Override注解，编译器会认为子类定义了一个新的方法，而不是覆盖了父类的同名方法。如果使
+用了@Override注解了one1Method()方法，编译器会报告一个错误：
+\begin_inset Quotes erd
+\end_inset
+
+Method does not override method from its superclass
+\begin_inset Quotes erd
+\end_inset
+
+（该方法没有覆盖父类方法）
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整示例代码参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/advance/code/annotation
+\end_layout
+
+\end_inset
+
+，这里不再列出。
+\end_layout
+
+\end_inset
+
+。可以看出，@Override注解杜绝了我们无意中的疏忽，因此现代的IDE在产生（插入）重写方法时，都会自动在方法上使用@Override注解。
+\end_layout
+
+\begin_layout Description
+@Deprecated 表示该元素已经被遗弃，后续版本可能删除此元素，尽量不要使用这些元素。@Deprecated可以用于类、方法和属性，如果在程序中引用了@D
+eprecated的元素，编译器会给出一条警告信息。一般的，当元素被注解为@Deprecated时，在Javadoc中也相应的使用@deprecated
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+注意到，Javadoc中的@deprecated是小写字母d开头，而注解中的@Deprecated是大写字母D开头。
+\end_layout
+
+\end_inset
+
+标记该元素，以便生成的Javadoc能够标记该元素，便于程序员参考，比如：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @deprecated
+\end_layout
+
+\begin_layout Plain Layout
+
+ * 已经遗弃的方法，不建议使用
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+@Deprecated
+\end_layout
+
+\begin_layout Plain Layout
+
+public void method() {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@SupressWarnings 表示忽略某些编译或者运行时的警告信息。
+\end_layout
+
+\begin_layout Standard
+也就是说，Java编译器已经内置了这三个注解的处理逻辑，因此我们可以在代码中直接使用这三个注解。除此之外，Java编译器不能识别其他的注解。
+\end_layout
+
+\begin_layout Standard
+不过，我们可以通过编写注解处理器传入Java编译器扩展编译器识别和处理注解的能力。以@author为例？
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+参考《深入了解Java虚拟机》
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+注解的定义
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:注解的定义"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注解的一般形式，注解的参数，注解的位置等
+\end_layout
+
+\begin_layout Section
+注解处理器
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:注解处理器"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+应用框架中的注解
 \end_layout
 
 \end_body

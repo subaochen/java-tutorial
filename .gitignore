@@ -4,3 +4,5 @@
 **/#*.*#
 **/*.class
 **/*.swp
+**/*.iml
+**/.idea/workspace.xml
