@@ -184,17 +184,7 @@ filename "collections.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "lambda-expression.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "thread.lyx"
+filename "reflection.lyx"
 
 \end_inset
 
@@ -214,7 +204,17 @@ filename "annotation.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "reflection.lyx"
+filename "lambda-expression.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "thread.lyx"
 
 \end_inset
 

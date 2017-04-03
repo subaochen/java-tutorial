@@ -296,13 +296,17 @@ name "sec:JDK中的注解"
 \end_layout
 
 \begin_layout Standard
-注解既然不是合法的Java关键字，Java编译器是如何识别和处理注解的呢？java编译器中已经内置了以下注解的处理器：
+注解既然不是合法的Java关键字，Java编译器是如何识别和处理注解的呢？截止到Java 8，Java编译器中已经内置了以下注解的处理逻辑，因此可以直接使用：
 \end_layout
 
-\begin_layout Description
-@Override 表示子类覆盖（重写）了父类中的同名方法。考虑一种情形：在父类中的方法名为oneMehtod()，我们的本意是在子类中重写父类的oneMeth
-od()方法，却无意中写成了one1Method()。如果没有使用@Override注解，编译器会认为子类定义了一个新的方法，而不是覆盖了父类的同名方法。如果使
-用了@Override注解了one1Method()方法，编译器会报告一个错误：
+\begin_layout Subsection
+@Override 
+\end_layout
+
+\begin_layout Standard
+@Override表示子类覆盖（重写）了父类中的同名方法。考虑一种情形：在父类中的方法名为oneMehtod()，我们的本意是在子类中重写父类的oneMetho
+d()方法，却无意中写成了one1Method()。如果没有使用@Override注解，编译器会认为子类定义了一个新的方法，而不是覆盖了父类的同名方法。如果使用
+了@Override注解了one1Method()方法，编译器会报告一个错误：
 \begin_inset Quotes erd
 \end_inset
 
@@ -331,12 +335,25 @@ https://github.com/subaochen/java-tutorial/tree/master/advance/code/annotation
 
 \end_inset
 
-。可以看出，@Override注解杜绝了我们无意中的疏忽，因此现代的IDE在产生（插入）重写方法时，都会自动在方法上使用@Override注解。
+。可以看出，@Override注解杜绝了我们无意中的疏忽，因此现代的IDE在产生（插入）重写方法时，都会自动在方法上使用@Override注解。在编程实践中，应
+该坚持使用@Override注解
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p152"
+key "effective-java"
+
+\end_inset
+
+，即需要使用@Override注解的地方就一定使用@Override注解。
 \end_layout
 
-\begin_layout Description
-@Deprecated 表示该元素已经被遗弃，后续版本可能删除此元素，尽量不要使用这些元素。@Deprecated可以用于类、方法和属性，如果在程序中引用了@D
-eprecated的元素，编译器会给出一条警告信息。一般的，当元素被注解为@Deprecated时，在Javadoc中也相应的使用@deprecated
+\begin_layout Subsection
+@Deprecated 
+\end_layout
+
+\begin_layout Standard
+@Deprecated表示该元素已经被遗弃，后续版本可能删除此元素，尽量不要使用这些元素。@Deprecated可以用于类、方法和属性，如果在程序中引用了@De
+precated的元素，编译器会给出一条警告信息。一般的，当元素被注解为@Deprecated时，在Javadoc中也相应的使用@deprecated
 \begin_inset Foot
 status open
 
@@ -386,26 +403,252 @@ public void method() {...}
 
 \end_layout
 
+\begin_layout Subsection
+@SupressWarnings 
+\end_layout
+
+\begin_layout Standard
+@SupressWarnings表示忽略某些编译时的警告信息，目前Java编译器定义了两种类型的警告信息可以用于此注解：
+\end_layout
+
 \begin_layout Description
-@SupressWarnings 表示忽略某些编译或者运行时的警告信息。
+unchecked 使用泛型类时如果没有指定类型，则编译器会报告unchecked警告，即编译器抱怨无法进行类型检查。通常我们应该重视unchecked警告，设
+法消除uncheck警告。但是如果无法消除警告，同时可以证明引起警告的代码类型是安全的，则可以使用@SupressWarnings(
+\begin_inset Quotes eld
+\end_inset
+
+unchecked
+\begin_inset Quotes erd
+\end_inset
+
+)通知编译器忽略此警告
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p103"
+key "effective-java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Description
+deprecation 忽略调用过时方法的警告。
+\end_layout
+
+\begin_layout Subsection
+@SafeVarargs
 \end_layout
 
 \begin_layout Standard
-也就是说，Java编译器已经内置了这三个注解的处理逻辑，因此我们可以在代码中直接使用这三个注解。除此之外，Java编译器不能识别其他的注解。
-\end_layout
+@SafeVarargs在JDK 7中引入，主要目的是处理可变长参数中的泛型，此注解告诉编译器：在可变长参数中的泛型是类型安全的。可变长参数是使用数组存储的，而
+数组和泛型不能很好的混合使用
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p105，第25条：列表优先于数组"
+key "effective-java"
 
-\begin_layout Standard
-不过，我们可以通过编写注解处理器传入Java编译器扩展编译器识别和处理注解的能力。以@author为例？
-\begin_inset Note Note
+\end_inset
+
+，因此当在可变长参数中使用泛型时，编译器会给出警告信息。考虑
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-参考《深入了解Java虚拟机》
+
+
+\backslash
+lstlistingname
 \end_layout
 
 \end_inset
 
 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SafeVarargsTest.java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/annotation/src/cn/edu/sdut/softlab/safevarargs/SafeVarargsTest.java"
+lstparams "caption={可安全忽略的编译警告示例：SafeVarargsTest.java},label={SafeVarargsTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当我们使用-Xlint:unchecked参数编译此代码时
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+如果使用IDE进行编译，需要修改编译参数，增加-Xlint:unchecked编译选项。
+\end_layout
+
+\end_inset
+
+，有如下的警告信息：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ javac -Xlint:unchecked cn/edu/sdut/softlab/safevarargs/SafeVarargsTest.java
+ 
+\end_layout
+
+\begin_layout Plain Layout
+cn/edu/sdut/softlab/safevarargs/SafeVarargsTest.java:18: 警告: [unchecked]
+ 参数化 vararg 类型T的堆可能已受污染
+\end_layout
+
+\begin_layout Plain Layout
+public static <T> void showArgs(T...
+ array) {
+\end_layout
+
+\begin_layout Plain Layout
+^
+\end_layout
+
+\begin_layout Plain Layout
+其中, T是类型变量:
+\end_layout
+
+\begin_layout Plain Layout
+T扩展已在方法 <T>showArgs(T...)中声明的Object
+\end_layout
+
+\begin_layout Plain Layout
+1 个警告
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+但是显然在这个示例中，可变参数的泛型是安全的，因此可以启用
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SafeVarargsTest.java"
+
+\end_inset
+
+中的@SafeVarargs注解消除这个警告信息。请读者自行验证。
+\end_layout
+
+\begin_layout Standard
+@SafeVarargs注解只能用在参数长度可变的方法或构造方法上，且方法必须声明为static或final，否则会出现编译错误
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+but why？
+\end_layout
+
+\end_inset
+
+。一个方法使用@SafeVarargs注解的前提是，开发人员必须确保这个方法的实现中对泛型类型参数的处理不会引发类型安全问题，否则可能导致运行时的类型转换异常，
+比如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "UnsafeMethodTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/annotation/src/cn/edu/sdut/softlab/safevarargs/UnsafeMethodTest.java"
+lstparams "caption={并不安全的@SafeVarargs：UnsafeMethodTest.java},label={UnsafeMethodTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+@FunctionalInterface
+\end_layout
+
+\begin_layout Standard
+JDK 8中引入了@FunctionalInterface注解，表示所声明的类型为函数接口，详情参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "chap:lambda表达式"
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Section
@@ -428,6 +671,20 @@ name "sec:注解的定义"
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:注解处理器"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们可以通过编写注解处理器传入Java编译器扩展编译器识别和处理注解的能力。以@author为例？
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+参考《深入了解Java虚拟机》
+\end_layout
 
 \end_inset
 
