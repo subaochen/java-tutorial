@@ -10,15 +10,16 @@ import java.util.List;
 public class UnsafeMethodTest {
 
     public static void main(String[] args) {
-        List<String> str = Arrays.asList("abc", "def");
-        unsafeMethod(str);
+        List<String> list1 = Arrays.asList("one", "two");
+        List<String> list2 = Arrays.asList("three","four");
+        unsafeMethod(list1, list2);
     }
 
     @SafeVarargs // 其实并不安全！
     static void unsafeMethod(List<String>... stringLists) {
         Object[] array = stringLists;
-        List<Integer> tmpList = Arrays.asList(42);
-        array[0] = tmpList; // 试图将一个List对象赋值给字符串，显然在语法上是错误的，但是由于使用了@SafeVarargs，编译器不做类型检查，能够编译通过
+        List<Integer> tmpList = Arrays.asList(42, 56);
+        array[0] = tmpList; // tmpList是一个List对象（类型已经擦除），赋值给Object类型的对象是允许的（向上塑型），能够编译通过
         String s = stringLists[0].get(0); // 运行时抛出ClassCastException！
     }
 }

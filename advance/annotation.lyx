@@ -441,8 +441,8 @@ deprecation 忽略调用过时方法的警告。
 \end_layout
 
 \begin_layout Standard
-@SafeVarargs在JDK 7中引入，主要目的是处理可变长参数中的泛型，此注解告诉编译器：在可变长参数中的泛型是类型安全的。可变长参数是使用数组存储的，而
-数组和泛型不能很好的混合使用
+@SafeVarargs在JDK 7中引入，主要目的是处理可变长参数中的泛型，此注解告诉编译器：在可变长参数中的泛型是类型安全的，不需要（请忽略）给出警告信息。
+可变长参数是使用数组存储的，而数组和泛型不能很好的混合使用
 \begin_inset CommandInset citation
 LatexCommand cite
 after "p105，第25条：列表优先于数组"
@@ -450,7 +450,19 @@ key "effective-java"
 
 \end_inset
 
-，因此当在可变长参数中使用泛型时，编译器会给出警告信息。考虑
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+简单的说，数组元素的数据类型在编译和运行时都是确定的，而泛型的数据类型只有在运行时才能确定下来，因此当把一个泛型存储到数组中时，编译器在编译阶段无法检查数据类型
+是否匹配，因此会给出警告信息：存在可能的“堆污染”(heap pollution)，即如果泛型的真实数据类型无法和参数数组的类型匹配，会导致ClassCastE
+xception异常。
+\end_layout
+
+\end_inset
+
+，因此当在可变长参数中使用泛型时，编译器都会给出警告信息。考虑
 \begin_inset ERT
 status open
 
@@ -467,6 +479,14 @@ lstlistingname
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "SafeVarargsTest.java"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p35"
+key "java-7-new-feature-cookbook"
 
 \end_inset
 
@@ -588,8 +608,8 @@ but why？
 
 \end_inset
 
-。一个方法使用@SafeVarargs注解的前提是，开发人员必须确保这个方法的实现中对泛型类型参数的处理不会引发类型安全问题，否则可能导致运行时的类型转换异常，
-比如
+。一个方法使用@SafeVarargs注解的前提是，开发人员必须确保这个方法的实现中对泛型类型参数的处理不会引发类型安全问题，否则可能导致运行时的类型转换异常。
+下面给出一个“堆污染”的实例，参见
 \begin_inset ERT
 status open
 
@@ -616,7 +636,271 @@ reference "UnsafeMethodTest.java"
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "code/annotation/src/cn/edu/sdut/softlab/safevarargs/UnsafeMethodTest.java"
-lstparams "caption={并不安全的@SafeVarargs：UnsafeMethodTest.java},label={UnsafeMethodTest.java}"
+lstparams "numbers=left,caption={并不安全的@SafeVarargs：UnsafeMethodTest.java},label={UnsafeMethodTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+运行UnsafeMethodTest的结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Exception in thread "main" java.lang.
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+ClassCastException: java.lang.Integer cannot be cast to java.lang.String
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.safevarargs.UnsafeMethodTest.unsafeMethod( UnsafeMethodTest.java
+:22 )
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.safevarargs.UnsafeMethodTest.main( UnsafeMethodTest.java:14
+ )
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对这个结果意外吗？我们来详细分析一下。在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "UnsafeMethodTest.java"
+
+\end_inset
+
+中，当代码执行到第22行时的状态如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:可变长参数的初始状态"
+
+\end_inset
+
+所示，数组array和stringLists同时指向了参数数组，tmpList是一个包含两个Integer对象的list对象。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/annotation/safevarargs-1.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+可变长参数的初始状态
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:可变长参数的初始状态"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当程序执行到
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+这里的赋值操作是合法的，因为tmplist是List类型的对象，array是一个Object类型的数组，根据Java允许“向上塑型”的原则，array数组能够接
+受任意类型的对象。
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+array[0] = tmpList;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+时，几个变量的关系如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:可变长参数遭到堆污染"
+
+\end_inset
+
+所示，虚线表示原先的指向关系，实线表示新的指向关系。此时，参数数组的第0个元素指向了包含两个Integer对象的list对象tmpList。当进一步执行：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String s = stringLists[0].get(0);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+时，从参数数组中取出第0个元素为list对象（tmpList），再取出list对象的第0个元素为Integer类型的对象（其值为42）。问题在这里出现了，我们试
+图将一个Integer类型的对象赋值给String类型的对象，显然会导致类型转换异常（ClassCastException）。
+\end_layout
+
+\begin_layout Standard
+因此，这个方法是不应该标记为@SafeVarargs的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/annotation/safevarargs-2.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+可变长参数遭到堆污染
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:可变长参数遭到堆污染"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
