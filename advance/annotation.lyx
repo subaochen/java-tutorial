@@ -284,6 +284,75 @@ http://www.cdi-spec.org
 的相关资料。
 \end_layout
 
+\begin_layout Standard
+注解和编译器之间的关系可以用
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:注解和编译器的关系示意图"
+
+\end_inset
+
+来说明。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/annotation/annotation-complier.eps
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+注解和编译器的关系示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:注解和编译器的关系示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 JDK中的内置注解
 \begin_inset CommandInset label
@@ -946,8 +1015,583 @@ name "sec:注解的定义"
 
 \end_layout
 
+\begin_layout Subsection
+注解的最简用法
+\end_layout
+
 \begin_layout Standard
-注解的一般形式，注解的参数，注解的位置等
+正如在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:JDK中的注解"
+
+\end_inset
+
+中提到的大部分注解，注解的最简单用法就是以@符号开头的特定标识符，比如
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void method() {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这种情况下，注解本身就能够表达完整的意义：编译器识别注解，并根据内置的注解处理器进行相关的逻辑处理。
+\end_layout
+
+\begin_layout Subsection
+注解参数的引入
+\end_layout
+
+\begin_layout Standard
+但是在很多情况下，注解需要根据不同的给定条件实施不同的处理逻辑，比如@SupressWarnings注解：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@SupressWarnings("deprecatation") // 忽略过期方法调用
+\end_layout
+
+\begin_layout Plain Layout
+
+public void m() {...}
+\end_layout
+
+\begin_layout Plain Layout
+
+@SupressWarnings({"deprecatation","unchecked"}) // 忽略过期方法调用和范型类型检查
+\end_layout
+
+\begin_layout Plain Layout
+
+public void m() {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+实际上，每一个注解都对应着一个注解处理器（我们会在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:注解处理器"
+
+\end_inset
+
+详细讨论注解处理器）方法，因此可以将注解类比为“方法”（函数）：最简单的注解用法相当于“无参方法”，带参数的注解相当于“有参方法”，注解的参数会传递给注解处理器
+。
+\end_layout
+
+\begin_layout Subsection
+注解的一般形式
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:注解的一般形式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+经过以上的讨论，我们得出使用注解的一般形式为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@AnnotationName(
+\end_layout
+
+\begin_layout Plain Layout
+
+    arg1Name = arg1Value,
+\end_layout
+
+\begin_layout Plain Layout
+
+    arg2Name = arg2Value,
+\end_layout
+
+\begin_layout Plain Layout
+
+    ....
+\end_layout
+
+\begin_layout Plain Layout
+
+    argnName = argnValue
+\end_layout
+
+\begin_layout Plain Layout
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当注解只有一个参数时，其默认的参数名统一规定为“value”，并允许忽略此参数名，即下列的表达方式效果相同：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@SupressWarnings("unchecked")
+\end_layout
+
+\begin_layout Plain Layout
+
+@SupressWarnings(value="unchecked")
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+注解的位置
+\end_layout
+
+\begin_layout Standard
+前面介绍的注解都是在方法上使用的，实际上，注解也可以用于类、属性等几乎所有的代码要素上，比如@Deprecated注解用于类，则表明整个类是过时的；如果@Dep
+recated用于属性，则表明该属性是过时的。下面是一些注解的示例，你不一定需要现在就完全了解这些注解的含义，在这里只需要关注注解的位置即可：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Entity // 用于类的注解
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Student {...}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+private @Ineject @LoggedIn currentUser; // 用于属性的注解
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public void close(@Disposes Connection connection) {...} // 用于参数的注解
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+自定义注解
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:自定义注解"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+JDK内置的注解毕竟数量和作用有限，Java自然支持自定义注解。自定义注解的一般形式为（[]中内容为可选项）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[@Retention]
+\end_layout
+
+\begin_layout Plain Layout
+
+[@Target]
+\end_layout
+
+\begin_layout Plain Layout
+
+[@Inherited]
+\end_layout
+
+\begin_layout Plain Layout
+
+[@Repeatable]
+\end_layout
+
+\begin_layout Plain Layout
+
+[@Documented]
+\end_layout
+
+\begin_layout Plain Layout
+
+@interface AnnotationName {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ArgType arg1Name() [default defaultValue];
+\end_layout
+
+\begin_layout Plain Layout
+
+    ArgType arg2Name() [default defaultValue];
+\end_layout
+
+\begin_layout Plain Layout
+
+    ....
+\end_layout
+
+\begin_layout Plain Layout
+
+    ArgType argnName() [default defaultValue];
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的重点有三个：
+\end_layout
+
+\begin_layout Enumerate
+使用类似接口的形式定义注解类型，只是在interface关键字前面增加@符号表示这是一个注解类型；
+\end_layout
+
+\begin_layout Enumerate
+注解的每个参数都有
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+名称
+\end_layout
+
+\end_inset
+
+和
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+类型
+\end_layout
+
+\end_inset
+
+，一般形式中的ArgType即为参数的类型，argName为参数的名称。为了和接口的定义形式相当，在注解参数名称后面增加()模拟了方法的形式；需要特别说明的是，
+如果注解只有一个参数，那么这个参数的类型通常设置为String，参数的名称通常设置为value
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+是约定俗称，还是语法规定？查阅一下JDK source
+\end_layout
+
+\end_inset
+
+，比如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Interface MyAnnotation {
+\end_layout
+
+\begin_layout Plain Layout
+
+    String value();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+注解的参数可以设置默认值，即如果使用此注解时如果没有给出该参数，则使用该参数的默认值；
+\end_layout
+
+\begin_layout Standard
+@Retention，@Target，@Inherited，@Documented，@Repeatable作为“元注解”，即可以用于其他注解的注解，是JDK内置
+的注解类型，在定义一个注解时作为可选项，其含义如下所示：
+\end_layout
+
+\begin_layout Description
+@Retention 表明注解的有效范围（存活周期）
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里的表述可能有误，需要再仔细斟酌
+\end_layout
+
+\end_inset
+
+，取值范围如下：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+RetentionPolicy.SOURCE： 注解只在源代码中有效，即注解在编译后即被抛弃。
+\end_layout
+
+\begin_layout Itemize
+RetentionPolicy.CLASS：注解在class文件仍然有效，但是JVM会忽略此注解。
+\end_layout
+
+\begin_layout Itemize
+RetentionPolicy.RUNTIME：注解在运行时有效，即JVM虚拟机会使用此注解。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@Target 表明注解可用于哪些元素，取值范围如下：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+ElementType.ANNOTATION_TYPE 可用于注解。
+\end_layout
+
+\begin_layout Itemize
+ElementType.CONSTRUCTOR 可用于构造方法。
+\end_layout
+
+\begin_layout Itemize
+ElementType.FIELD 可用于属性。
+\end_layout
+
+\begin_layout Itemize
+ElementType.LOCAL_VARIABLE 可用于局部变量。
+\end_layout
+
+\begin_layout Itemize
+ElementType.METHOD 可用于方法。
+\end_layout
+
+\begin_layout Itemize
+ElementType.PACKAGE 可用于包声明。
+\end_layout
+
+\begin_layout Itemize
+ElementType.PARAMETER 可用于参数。
+\end_layout
+
+\begin_layout Itemize
+ElementType.TYPE 可用于类。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@Inherited 表明被注解的注解继承自父注解。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+具体实例？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+@Documented 如果使用了此元注解，则javadoc工具会索引被注解的注解。
+\end_layout
+
+\begin_layout Description
+@Repeatable 表明注解是可重复的，即在一个元素上面可以重复多次使用这个注解。从Java 8开始引入此元注解。
+\end_layout
+
+\begin_layout Standard
+我们看一下JDK中@Override的定义：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Target(ElementType.METHOD)
+\end_layout
+
+\begin_layout Plain Layout
+
+@Retention(RetentionPolicy.SOURCE)
+\end_layout
+
+\begin_layout Plain Layout
+
+public @interface Override {
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即，@Override注解只可以用于方法，并且只在源代码中使用。
+\end_layout
+
+\begin_layout Example
+定义一个注解，用于表明一个类的作者、创建时间、版本号。
 \end_layout
 
 \begin_layout Section
