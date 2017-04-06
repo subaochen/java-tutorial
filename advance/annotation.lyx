@@ -312,7 +312,7 @@ reference "fig:注解和编译器的关系示意图"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -346,6 +346,19 @@ name "fig:注解和编译器的关系示意图"
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+注意注解和注释的区别
 \end_layout
 
 \end_inset
@@ -1549,7 +1562,18 @@ status open
 \end_layout
 
 \begin_layout Description
-@Repeatable 表明注解是可重复的，即在一个元素上面可以重复多次使用这个注解。从Java 8开始引入此元注解。
+@Repeatable 表明注解是可重复的，即在一个元素上面可以重复多次使用这个注解。从Java 8开始引入此元注解，详情参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/tutorial/java/annotations/repeating.html
+\end_layout
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Standard
@@ -1592,6 +1616,89 @@ public @interface Override {
 
 \begin_layout Example
 定义一个注解，用于表明一个类的作者、创建时间、版本号。
+\end_layout
+
+\begin_layout Paragraph
+代码说明
+\end_layout
+
+\begin_layout Standard
+习惯上，在类的开头会有一段注释，说明此类的作者、创建时间、版本号、审阅者等信息，一方面是对原作者劳动的尊重，另一方面如果对此类代码有疑问或者意见，可以方便的联系
+到作者。
+\end_layout
+
+\begin_layout Paragraph
+代码设计
+\end_layout
+
+\begin_layout Standard
+注解Author的定义参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Author.java"
+
+\end_inset
+
+，注解的应用案例参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Author annotationed Client.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/annotation/src/cn/edu/sdut/softlab/annotation/Author.java"
+lstparams "caption={Author.java},label={Author.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/annotation/src/cn/edu/sdut/softlab/annotation/Client.java"
+lstparams "caption={使用Author注解的类Client.java},label={Author annotationed Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+代码分析
 \end_layout
 
 \begin_layout Section
