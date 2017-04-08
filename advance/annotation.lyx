@@ -358,7 +358,9 @@ name "fig:注解和编译器的关系示意图"
 status open
 
 \begin_layout Plain Layout
-注意注解和注释的区别
+注意注解（annotation）和注释（comment）的区别：编译器是完全忽略注释的，而注解则不同，编译器是可以“感知”注解的，即编译器内置的注解处理器或者外
+置的注解处理器能够根据注解对源代码做一定的逻辑处理，甚至生成新的代码。每当遇到需要重复编写的代码时，除了创建抽象类、父类、接口等方法外，注解也是减少代码冗余的有
+力工具。
 \end_layout
 
 \end_inset
@@ -1053,7 +1055,7 @@ reference "sec:JDK中的注解"
 
 \end_inset
 
-中提到的大部分注解，注解的最简单用法就是以@符号开头的特定标识符，比如
+中提到的大部分注解，注解的最简单用法就是以@符号开头的特定标识符，比如以下两种用法是完全一致的：
 \end_layout
 
 \begin_layout Standard
@@ -1063,12 +1065,22 @@ status open
 
 \begin_layout Plain Layout
 
-@Override
+@Override // 对于没有参数的注解()可以省略。
 \end_layout
 
 \begin_layout Plain Layout
 
 public void method() {...}
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override()
+\end_layout
+
+\begin_layout Plain Layout
+
+public void method() {...} 
 \end_layout
 
 \end_inset
@@ -1144,7 +1156,7 @@ reference "sec:注解处理器"
 \end_layout
 
 \begin_layout Subsection
-注解的一般形式
+注解的一般使用形式
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:注解的一般形式"
@@ -1274,7 +1286,7 @@ public void close(@Disposes Connection connection) {...} // 用于参数的注�
 \end_layout
 
 \begin_layout Subsection
-自定义注解
+定义注解
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:自定义注解"
@@ -1354,7 +1366,21 @@ status open
 \end_layout
 
 \begin_layout Standard
-这里的重点有三个：
+从形式上看，注解的定义和接口的定义非常类似。实际上，注解经过编译后的class文件即为继承自java.lang.annotation.Annotation的接口
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+请读者自行使用javap反编译一个注解的class文件验证这一点。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+这里的重点是：
 \end_layout
 
 \begin_layout Enumerate
@@ -1382,8 +1408,8 @@ status open
 
 \end_inset
 
-，一般形式中的ArgType即为参数的类型，argName为参数的名称。为了和接口的定义形式相当，在注解参数名称后面增加()模拟了方法的形式；需要特别说明的是，
-如果注解只有一个参数，那么这个参数的类型通常设置为String，参数的名称通常设置为value
+，一般形式中的ArgType即为参数的类型，只能是基本类型、Class、String、Enum或其数组；argName为参数的名称。为了和接口的定义形式相当，在
+注解参数名称后面增加()模拟了方法的形式；需要特别说明的是，如果注解只有一个参数，那么这个参数的类型通常设置为String，参数的名称通常设置为value
 \begin_inset Note Note
 status open
 
@@ -1544,17 +1570,29 @@ ElementType.TYPE 可用于类。
 \end_layout
 
 \begin_layout Description
-@Inherited 表明被注解的注解继承自父注解。
-\begin_inset Note Note
+@Inherited 当该注解用于类时，其子类自动继承该注解；当该注解用于方法时，如果子类没有重写该方法，子类中的方法自动继承该注解
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-具体实例？
+可参考
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/23973107/how-to-use-inherited-annotation-in-ja
+va
 \end_layout
 
 \end_inset
 
+。
+\end_layout
 
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Description
@@ -1614,8 +1652,82 @@ public @interface Override {
 即，@Override注解只可以用于方法，并且只在源代码中使用。
 \end_layout
 
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+请注意注解的命名方式，和类、接口的命名习惯是一样的。这一点很容易理解：注解本质上是一个接口。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面是一些好的注解的定义示例：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+继续补充一下
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public @interface Complexity {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ComplexityLevel value() default ComplexityLevel.MEDIUM;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+public enum ComplexityLevel {
+\end_layout
+
+\begin_layout Plain Layout
+
+    VERY_SIMPLE, SIMPLE, MEDIUM, COMPLEX, VERY_COMPLEX;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Example
 定义一个注解，用于表明一个类的作者、创建时间、版本号。
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:定义一个注解，用于表明一个类的作者、创建时间、版本号。"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -1624,7 +1736,14 @@ public @interface Override {
 
 \begin_layout Standard
 习惯上，在类的开头会有一段注释，说明此类的作者、创建时间、版本号、审阅者等信息，一方面是对原作者劳动的尊重，另一方面如果对此类代码有疑问或者意见，可以方便的联系
-到作者。
+到作者。通过注解同样可以做到这一点，而且可能会带来额外的好处：通过编写注解处理器（参见
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:注解处理器"
+
+\end_inset
+
+），可以在编译阶段收集此类信息做进一步处理。
 \end_layout
 
 \begin_layout Paragraph
@@ -1701,8 +1820,36 @@ lstparams "caption={使用Author注解的类Client.java},label={Author annotatio
 代码分析
 \end_layout
 
+\begin_layout Standard
+注意到：
+\end_layout
+
+\begin_layout Itemize
+Author注解只能用于类，在方法上使用此注解会导致语法错误。
+\end_layout
+
+\begin_layout Itemize
+Author注解的version参数带有默认值，因此在使用Author注解的时候也可以不设置version参数，此时version取默认值。凡是没有默认值的注解
+参数必须在使用注解时明确设置参数的值。
+\end_layout
+
+\begin_layout Exercise
+请定义注解@Test，表明此（类）方法只用于测试，在实际部署时不会用到。编写一个类，使用@Test注解。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+请定义用于类的注解@TestSuite，表明这是一个测试集，在参数中声明此测试集包含哪些测试类？
+\end_layout
+
 \begin_layout Section
-注解处理器
+插入式注解处理器
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:注解处理器"
@@ -1713,21 +1860,118 @@ name "sec:注解处理器"
 \end_layout
 
 \begin_layout Standard
-我们可以通过编写注解处理器传入Java编译器扩展编译器识别和处理注解的能力。以@author为例？
-\begin_inset Note Note
+正如
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-参考《深入了解Java虚拟机》
+
+
+\backslash
+examplename
 \end_layout
 
 \end_inset
 
 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:定义一个注解，用于表明一个类的作者、创建时间、版本号。"
+
+\end_inset
+
+所示，如果只是定义了注解，那么注解相对于注释而言，仅仅是看起来更加规范而已：注解是一种数据类型，编译器能够检查我们是否正确的使用了注解。更进一步的，我们可以定义
+插入式注解处理器，即在编译的时候传入我们自定义的注解处理器，实现个性化的注解处理逻辑。从JDK 6开始，插入式注解处理API已经标准化
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见JSR 269：https://jcp.org/en/jsr/detail?id=269
+\end_layout
+
+\end_inset
+
+，编写插入式注解处理器也变得更加方便了：只需要从
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+javax.annotation.processing.AbstractProcessor
+\end_layout
+
+\end_inset
+
+继承下来并实现
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+process()
+\end_layout
+
+\end_inset
+
+方法即可。在JSR 269中，也定义了三个注解帮助我们更容易的实现插入式注解：
+\end_layout
+
+\begin_layout Description
+SupportedAnnotationTypes 声明该注解处理器可以处理哪些注解？可以使用通配符匹配多个注解。
+\end_layout
+
+\begin_layout Description
+SupportedSourceVersion 声明该注解处理器使用的Java版本。
+\end_layout
+
+\begin_layout Description
+SupportedOptions 声明可以传入命令行的参数。
+\end_layout
+
+\begin_layout Standard
+我们以
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:定义一个注解，用于表明一个类的作者、创建时间、版本号。"
+
+\end_inset
+
+为例编写一个插入式注解处理器，根据
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+@Author
+\end_layout
+
+\end_inset
+
+注解提供的信息自动在
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+toString()
+\end_layout
+
+\end_inset
+
+方法中显示该类的作者、创建时间和版本号信息。
 \end_layout
 
 \begin_layout Section
-应用框架中的注解
+注解的典型应用：Junit
 \end_layout
 
 \end_body

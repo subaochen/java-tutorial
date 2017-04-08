@@ -5,6 +5,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.TYPE)
 @Documented
+@Inherited
 public @interface Author {
     String name();
     String created();
