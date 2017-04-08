@@ -113,7 +113,7 @@ name "chap:初识Java"
 \align center
 \begin_inset Graphics
 	filename imgs/intro/java-concept.png
-	width 80col%
+	width 100col%
 
 \end_inset
 

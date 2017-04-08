@@ -8,7 +8,7 @@
 \begin_preamble
 \input{preamble.tex}
 \end_preamble
-\options openany
+\options openany,schema=chinese,heading=true
 \use_default_options true
 \begin_modules
 logicalmkup

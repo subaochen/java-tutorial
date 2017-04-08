@@ -8,7 +8,7 @@
 \begin_preamble
 \input{preamble.tex}
 \end_preamble
-\options openany
+\options openany,zihao=-4
 \use_default_options true
 \begin_modules
 logicalmkup
