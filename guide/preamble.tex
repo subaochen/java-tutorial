@@ -21,11 +21,23 @@
 % 重新设置fancyhdr的headheight，避免报告Package Fancyhdr Warning: \headheight is too small (12.0pt)
 \setlength{\headheight}{14pt} 
 
+% 目录样式：解决目录中的省略号太稀疏问题
+
+% 表格样式
+% caption在表格上面
+% 表格字体小一号
+%\usepackage{floatrow}
+%\DeclareFloatFont{small}{\small}% "scriptsize" is defined by floatrow, "small" not
+%\floatsetup[table]{font=small,style=plaintop}
+
+% 图片样式：caption字体小一号
+\usepackage[font=small]{caption}
+
+% 章节的序号样式
 \ctexset{
     chapter/number = \arabic{chapter},
     chapter/numberformat = \color{blue}\zihao{0}\itshape,
 }
-
 
 \AtBeginDocument{\renewcommand\lstlistingname{代码清单}}
 \AtBeginDocument{\renewcommand\tablename{表}}
@@ -58,7 +70,7 @@
 \lstset{%
     language=Java,%
     float=hbp,%
-    basicstyle=\footnotesize\ttfamily,%
+    basicstyle=\small\ttfamily,%
     identifierstyle=\color{colIdentifier},%
     keywordstyle=\color{colKeys},%
     stringstyle=\color{colString},%
