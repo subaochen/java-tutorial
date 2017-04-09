@@ -5,6 +5,7 @@
 % marginpar=2cm解决margin note在ctex book下无法留出足够空白问题
 % 标准的16开，适合于计算机类图书出版
 \usepackage[paperheight=260mm, paperwidth=185mm, marginpar=2cm,top=3cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+
 % A4版本，适合打印
 %\usepackage[paperheight=297mm, paperwidth=210mm, marginpar=2cm,top=1.65cm,bottom=1.65cm,left=2cm,right=2cm]{geometry}
 % 页眉页脚设置
@@ -22,18 +23,20 @@
 \setlength{\headheight}{14pt} 
 
 % 目录样式：解决目录中的省略号太稀疏问题
+% 暂时无法解决
+%\usepackage{tocloft}
+%\renewcommand{\@dotsep}{2} %默认值是4.5
+
+% 图片样式：caption字体小一号，参见caption package guide
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
 
 % 表格样式
 % caption在表格上面
 % 表格字体小一号
-%\usepackage{floatrow}
-%\DeclareFloatFont{small}{\small}% "scriptsize" is defined by floatrow, "small" not
-%\floatsetup[table]{font=small,style=plaintop}
+\usepackage{floatrow}
+\floatsetup[table]{font=small,capposition=top}
 
-% 图片样式：caption字体小一号
-\usepackage[font=small]{caption}
-
-% 章节的序号样式
+% 章的序号样式
 \ctexset{
     chapter/number = \arabic{chapter},
     chapter/numberformat = \color{blue}\zihao{0}\itshape,
