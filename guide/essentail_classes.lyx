@@ -1710,7 +1710,27 @@ reference "exa:Number子类的公共方法。"
 \end_layout
 
 \begin_layout Standard
-这里以Integer为例，参见，给出了Integer、int和字符串之间相互转换的方法，其他类型的数值之间的转换类似。
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Integer、int、字符串之间的相互转换方法"
+
+\end_inset
+
+，这里以Integer为例，给出了Integer、int和字符串之间相互转换的方法，其他类型的数值之间的转换类似。
 \end_layout
 
 \begin_layout Standard
@@ -1722,8 +1742,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/essentail-classes/integer-transmission.eps
-	scale 50
+	filename imgs/essentail-classes/integer-string-Integer.eps
+	width 95line%
 
 \end_inset
 
@@ -4169,6 +4189,16 @@ name "sec:日期和时间类"
 
 \begin_layout Standard
 在Java语言中，日期和时间曾经是一个复杂和混乱的问题
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+有必要讲述ZoneId，时区的概念和用法吗？
+\end_layout
+
+\end_inset
+
+
 \begin_inset Foot
 status open
 
@@ -4791,6 +4821,30 @@ reference "exa:LocalDateTime类用法示例"
 。
 \end_layout
 
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+日期(LocalDate)、时间(LocalTime)、日期时间(LocalTime)、字符串之间的相互转化关系参见下图：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/essentail-classes/date-time-string.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Example
 LocalDateTime类用法示例
 \begin_inset CommandInset label
@@ -5363,7 +5417,7 @@ BASIC_ISO_DATE
 \uwave off
 \noun off
 \color none
-Basic ISO date
+基本的 ISO 日期格式
 \end_layout
 
 \end_inset
@@ -5493,7 +5547,7 @@ ISO_OFFSET_DATE
 \uwave off
 \noun off
 \color none
-ISO Date with offset
+显示时区偏移量的 ISO 日期格式
 \end_layout
 
 \end_inset
@@ -5558,7 +5612,7 @@ ISO_DATE
 \uwave off
 \noun off
 \color none
-ISO Date with or without offset
+ISO 日期格式
 \end_layout
 
 \end_inset
@@ -5623,7 +5677,7 @@ ISO_LOCAL_TIME
 \uwave off
 \noun off
 \color none
-Time without offset
+不带时区偏移量的时间格式
 \end_layout
 
 \end_inset
@@ -5688,7 +5742,7 @@ ISO_OFFSET_TIME
 \uwave off
 \noun off
 \color none
-Time with offset
+带时区偏移量的时间格式
 \end_layout
 
 \end_inset
@@ -5753,7 +5807,7 @@ ISO_TIME
 \uwave off
 \noun off
 \color none
-Time with or without offset
+ISO时间格式
 \end_layout
 
 \end_inset
@@ -5831,7 +5885,7 @@ _TIME
 \uwave off
 \noun off
 \color none
-ISO Local Date and Time
+ISO日期和时间格式
 \end_layout
 
 \end_inset
@@ -5909,7 +5963,7 @@ _TIME
 \uwave off
 \noun off
 \color none
-Date Time with Offset
+带时区偏移量的日期时间格式
 \end_layout
 
 \end_inset
@@ -5987,7 +6041,7 @@ _TIME
 \uwave off
 \noun off
 \color none
-Zoned Date Time
+带时区显示的日期时间格式
 \end_layout
 
 \end_inset
@@ -6065,7 +6119,7 @@ ISO_DATE_TIME
 \uwave off
 \noun off
 \color none
-Date and time with ZoneId
+带时区显示的日期时间格式
 \end_layout
 
 \end_inset
@@ -6143,7 +6197,7 @@ ISO_ORDINAL_DATE
 \uwave off
 \noun off
 \color none
-Year and day of year
+显示年份以及第几天
 \end_layout
 
 \end_inset
@@ -6196,19 +6250,7 @@ ISO_WEEK_DATE
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Year and Week
+显示年份和周次
 \end_layout
 
 \end_inset
@@ -6324,6 +6366,16 @@ name "tab:DateTimeFormatter的输出格式控制选项"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要翻译
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -6336,7 +6388,52 @@ name "tab:DateTimeFormatter的输出格式控制选项"
 \end_layout
 
 \begin_layout Standard
-DateTimeFormmater的可定制选项请参考DateTimeFormmater的API文档。
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:DateTimeFormatter的输出格式控制选项"
+
+\end_inset
+
+中，我们常用的日期和时间格式为ISO_LOCAL_DATE，ISO_LOCAL_TIME，ISO_LOCAL_DATE_TIME。
+\end_layout
+
+\begin_layout Standard
+除了可使用
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:DateTimeFormatter的输出格式控制选项"
+
+\end_inset
+
+中预定义的日期和时间格式外，ofPattern()方法支持任意模式的日期和时间格式化输出，具体的格式化字符串可以参照DateTimeFormmater的API文
+档，这里不再一一列出。
 \end_layout
 
 \begin_layout Example

@@ -154,8 +154,246 @@ LatexCommand tableofcontents
 数字类
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+相互转化
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/essentail-classes/integer-transmission.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 日期和时间
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+日期：LocalDate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+获得当前日期：LocalDate.now()
+\end_layout
+
+\begin_layout Itemize
+创建给定日期：
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+LocalDate.of(2016, Month.JANUARY, 1)
+\end_layout
+
+\begin_layout Itemize
+LocalDate.ofYearDay(2016, 100)
+\end_layout
+
+\begin_layout Itemize
+LocalDate.parse("2016-11-21")
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+日期比较：isBefore/isAfter
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+时间：LocalTime
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+获取当前时间：LocalTime.now
+\end_layout
+
+\begin_layout Itemize
+创建给定时间：
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+LocalTime.of(12, 20, 25, 40)
+\end_layout
+
+\begin_layout Itemize
+LocalTime.ofSecondOfDay(10000)
+\end_layout
+
+\begin_layout Itemize
+LocalTime.parse("12:30:55")
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+时间比较：isBefore/isAfter
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+日期时间：LocalDateTime
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+和LocalDate/LocalTime的区别，数据库中的TimeStamp
+\end_layout
+
+\begin_layout Itemize
+获取当前日期和时间：LocalDateTime.now
+\end_layout
+
+\begin_layout Itemize
+创建给定的日期和时间
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+LocalDateTime.of(LocalDate.now(), LocalTime.now())
+\end_layout
+
+\begin_layout Itemize
+LocalDateTime.of(2014, Month.JANUARY, 1,10,10,30)
+\end_layout
+
+\begin_layout Itemize
+LocalDateTime.ofEpochSecond(10000,0,ZoneOffset.UTC)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+日期时间的比较:isAfter/isBefore
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+日期、时间、字符串相互转化
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/essentail-classes/date-time-string.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+格式化输出：DateTimeFormatter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+时间和日期的调整
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

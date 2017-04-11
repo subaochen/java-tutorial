@@ -29,14 +29,17 @@ public class LocalDateTimeTest {
 		today = LocalDateTime.of(LocalDate.now(), LocalTime.now());// |\longremark{根据给定的LocalDate和LocalTime创建日期时间对象}|
 		System.out.println("Current DateTime=" + today);
 
-		LocalDateTime specificDate = LocalDateTime.of(2014, Month.JANUARY, 1, 10, 10, 30);// |\longremark{根据给定的日期和时间创建日期时间对象}|
+		LocalDateTime specificDate = LocalDateTime.of(2014, 1, 1, 10, 10, 30);// |\longremark{根据给定的日期和时间创建日期时间对象}|
 		System.out.println("Specific Date=" + specificDate);
 
-		LocalDateTime todayKolkata = LocalDateTime.now(ZoneId.of("Asia/Kolkata"));// |\longremark{根据给定的时区创建日期时间对象}|
-		System.out.println("Current Date in IST=" + todayKolkata);
+		LocalDateTime todayShanghai = LocalDateTime.now(ZoneId.of("Asia/Shanghai"));// |\longremark{根据给定的时区创建日期时间对象}|
+		System.out.println("Current Date in CST=" + todayShanghai);
 
 		LocalDateTime dateFromBase = LocalDateTime.ofEpochSecond(10000, 0, ZoneOffset.UTC);// |\longremark{从1970-1-1开始计算的日期时间对象}|
 		System.out.println("10000th second time from 01/01/1970= " + dateFromBase);
+
+//		LocalDateTime test1 = LocalDateTime.of(LocalDate.now(), null);
+//		System.out.println("test1:" + test1);
 
 	}
 }

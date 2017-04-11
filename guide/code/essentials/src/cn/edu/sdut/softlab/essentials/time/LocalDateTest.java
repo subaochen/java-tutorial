@@ -22,14 +22,14 @@ public class LocalDateTest {
 		LocalDate today = LocalDate.now(); // |\longremark{获取当前日期}|
 		System.out.println("Current Date=" + today);
 
-		LocalDate firstDay2016 = LocalDate.of(2016, Month.JANUARY, 1); // |\longremark{给定年月日创建特定日期对象}|
+		LocalDate firstDay2016 = LocalDate.of(2016, 1, 1); // |\longremark{给定年月日创建特定日期对象}|
 		System.out.println("Specific Date=" + firstDay2016);
 
 
 		//LocalDate feb29_2014 = LocalDate.of(2014, Month.FEBRUARY, 29); // |\longremark{给定日期不合法}|
-		//Current date in "Asia/Kolkata", you can get it from ZoneId javadoc
-		LocalDate todayKolkata = LocalDate.now(ZoneId.of("Asia/Kolkata")); // |\longremark{根据时区获取当前日期}|
-		System.out.println("Current Date in IST=" + todayKolkata);
+		//Current date in "Asia/Shanghai", you can get it from ZoneId javadoc
+		LocalDate todayShanghai = LocalDate.now(ZoneId.of("Asia/Shanghai")); // |\longremark{根据时区获取当前日期}|
+		System.out.println("Current Date in CST=" + todayShanghai);
 
 
 		//LocalDate todayIST = LocalDate.now(ZoneId.of("IST")); // |\longremark{给定时区不合法}|
