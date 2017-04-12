@@ -757,6 +757,13 @@ name "exer:定义一个enum-Planet表示太阳系各行星的名称、质量和�
 
 \begin_layout Section
 switch中的enum
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:switch中的enum"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

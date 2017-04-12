@@ -127,8 +127,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-Java语言中变量的概念和C语言完全一致，这里不再赘述。所不同的是，C语言中一般使用下划线分隔开多个单词，而在Java中，我们一般使用“驼峰命名法”来给变量起名
-字，如
+Java语言中变量的概念和C语言完全一致，这里不再赘述。所不同的是，C语言中一般使用下划线分隔开多个单词，而在Java中，我们一般使用“驼式命名法”（Camel
+ Case Name）来给变量起名字，如
 \begin_inset ERT
 status open
 
@@ -148,7 +148,7 @@ reference "fig:驼峰命名法"
 
 \end_inset
 
-所示，多个单词构成了一个变量，除第一个单词之外，其他单词的第一个字母大写。大写的字母很像隆起的驼峰，因此此种命名法被形象的称之为“驼峰命名法”。
+所示，多个单词构成了一个变量，除第一个单词之外，其他单词的第一个字母大写。大写的字母很像隆起的驼峰，因此此种命名法被形象的称之为“驼式命名法”。
 \begin_inset Float figure
 wide false
 sideways false
@@ -169,7 +169,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-驼峰命名法
+驼式命名法
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:驼峰命名法"
@@ -1709,7 +1709,7 @@ status open
 \end_layout
 
 \begin_layout Definition
-\begin_inset Float figure
+\begin_inset Float table
 placement tbph
 wide false
 sideways false
@@ -2175,7 +2175,37 @@ name "subsec:Java加强了的switch分支结构"
 \end_layout
 
 \begin_layout Standard
-Java中的switch语句，不仅可以接受一个整数表达式（即表达式的值为整数），也可以接受一个字符串表达式（即表达式的值为字符串）。
+Java中的switch语句，不仅可以接受一个整数表达式（即表达式的值为整数），也可以接受一个字符串表达式（即表达式的值为字符串）和Enum类
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Enum以及Emum用于Switch请参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:switch中的enum"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Example

@@ -8,7 +8,7 @@
 \begin_preamble
 \input{preamble.tex}
 \end_preamble
-\options openany
+\options openany,zihao=-4
 \use_default_options true
 \begin_modules
 logicalmkup
@@ -26,6 +26,7 @@ collections.lyx
 lambda-expression.lyx
 thread.lyx
 network-programming.lyx
+annotation.lyx
 \end_includeonly
 \maintain_unincluded_children false
 \begin_local_layout
@@ -183,17 +184,7 @@ filename "collections.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "lambda-expression.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "thread.lyx"
+filename "reflection.lyx"
 
 \end_inset
 
@@ -213,7 +204,17 @@ filename "annotation.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "reflection.lyx"
+filename "lambda-expression.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "thread.lyx"
 
 \end_inset
 

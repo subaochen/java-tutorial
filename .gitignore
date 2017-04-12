@@ -3,3 +3,5 @@
 **/*.lyx~
 **/#*.*#
 **/*.class
+**/*.swp
+**/.idea/workspace.xml

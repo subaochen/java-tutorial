@@ -1516,6 +1516,26 @@ status open
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+增加volatile的介绍
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+基于内存同步解释线程同步问题的产生原因？
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2993,6 +3013,63 @@ reference "exa:多线程间通信示例"
 \end_inset
 
 中的Buffer替换为一个Queue，重新实现整个代码逻辑。
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TBD
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+防止synchroized滥用问题
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+使用java.util.concurrent包
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TBD
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+综合应用举例
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TBD
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
