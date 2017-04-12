@@ -139,5 +139,31 @@ status open
 性能调优工具
 \end_layout
 
+\begin_layout Section
+案例解析
+\end_layout
+
+\begin_layout Subsection
+StringBuilder和“+”连接字符串的比较
+\end_layout
+
+\begin_layout Standard
+通过观察javap的输出可知，“+”连接多个字符串在编译后也是通过StringBuilder来完成的，比如：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+插入代码和javap的结果
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么，直接使用StringBuilder的效率更高之说的道理何在呢？
+\end_layout
+
 \end_body
 \end_document
