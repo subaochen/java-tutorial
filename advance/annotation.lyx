@@ -103,13 +103,79 @@ PackageOptions url hyphens
 \end_layout
 
 \begin_layout Section
+XML地狱
+\end_layout
+
+\begin_layout Standard
+举例说明配置文件和代码文件
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+失去同步
+\end_layout
+
+\end_inset
+
+会导致的问题：顾头不顾尾的现象时有发生。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+例子可能比较难找，因为涉及到框架：servlet，springmvc。可能的思路：举出框架的例子，比如servlet/web.xml，简单解释问题产生的原因。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+另外一个例子：单纯的摆脱配置文件，比如socket通讯中的host/port配置，数据库链接（JDBC）中的host/usrename/password配置等。
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+@Socket(host="",port="")
+\end_layout
+
+\begin_layout Plain Layout
+
+public void connect() {...}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@JDBC(host="",user="",password="") // 直接作为参数传入呢？
+\end_layout
+
+\begin_layout Plain Layout
+
+public void dbConnect() {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 注解的基本概念
 \end_layout
 
 \begin_layout Standard
 从JDK 5开始，Java提供了注解功能，从此摆脱了“XML地狱”
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 “XML地狱”(XML Hell)是指应用程序过度依赖XML文件进行系统配置，导致产生过多的XML配置文件和配置选项，造成配置选项和所配置内容的严重脱节，不容易
@@ -1881,7 +1947,17 @@ reference "exa:定义一个注解，用于表明一个类的作者、创建时�
 \end_inset
 
 所示，如果只是定义了注解，那么注解相对于注释而言，仅仅是看起来更加规范而已：注解是一种数据类型，编译器能够检查我们是否正确的使用了注解。更进一步的，我们可以定义
-插入式注解处理器，即在编译的时候传入我们自定义的注解处理器，实现个性化的注解处理逻辑。从JDK 6开始，插入式注解处理API已经标准化
+插入式注解处理器，即在
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+编译
+\end_layout
+
+\end_inset
+
+的时候传入我们自定义的注解处理器，实现个性化的注解处理逻辑。从JDK 6开始，插入式注解处理API已经标准化
 \begin_inset Foot
 status open
 
@@ -1911,7 +1987,7 @@ process()
 
 \end_inset
 
-方法即可。在JSR 269中，也定义了三个注解帮助我们更容易的实现插入式注解：
+方法即可。在JSR 269中，也定义了三个注解帮助我们更容易的实现插入式注解处理器：
 \end_layout
 
 \begin_layout Description
@@ -1924,6 +2000,79 @@ SupportedSourceVersion 声明该注解处理器使用的Java版本。
 
 \begin_layout Description
 SupportedOptions 声明可以传入命令行的参数。
+\end_layout
+
+\begin_layout Subsection
+Element
+\end_layout
+
+\begin_layout Standard
+注解处理器是通过扫描Java源代码处理注解的，因此注解处理器会首先将源代码分解为各种元素（Element）
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+详细列表参见javax.lang.model.Element的在线文档：http://docs.oracle.com/javase/8/docs/api/javax/la
+ng/model/element/Element.html
+\end_layout
+
+\end_inset
+
+。比如下面的代码，在注释中已经标注了几种常见的元素（Element）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package cn.edu.sdut.softlab; // PackageElement
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class Student { // TypeElement
+\end_layout
+
+\begin_layout Plain Layout
+
+    private int age;  // VariableElement
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void setAge( // ExcuteableElement
+\end_layout
+
+\begin_layout Plain Layout
+
+        int age // TypeElement
+\end_layout
+
+\begin_layout Plain Layout
+
+    ) {}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1968,6 +2117,93 @@ toString()
 \end_inset
 
 方法中显示该类的作者、创建时间和版本号信息。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+如何打包注解处理器？
+\end_layout
+
+\begin_layout Plain Layout
+目录结构
+\end_layout
+
+\begin_layout Plain Layout
+将打包的jar放到classpath，javac会自动加载javax.annotation.processing.Processor文件中声明的processor为注
+解处理器，效果等同于命令行的-proc参数。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+请注意，插入式注解处理器是在编译阶段起作用的。区别于
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:运行时注解处理器"
+
+\end_inset
+
+中讲述的运行时注解处理器。
+\end_layout
+
+\begin_layout Plain Layout
+分别适用于什么场合？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+可以参考javaassit，ASM，Byteman
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+应用注解的案例分析
+\end_layout
+
+\begin_layout Section
+运行时注解处理器
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:运行时注解处理器"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
