@@ -2012,13 +2012,93 @@ Element
 status open
 
 \begin_layout Plain Layout
-详细列表参见javax.lang.model.Element的在线文档：http://docs.oracle.com/javase/8/docs/api/javax/la
-ng/model/element/Element.html
+详细列表参见javax.lang.model.Element的在线文档：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/8/docs/api/javax/lang/model/element/Element.html
 \end_layout
 
 \end_inset
 
-。比如下面的代码，在注释中已经标注了几种常见的元素（Element）：
+
+\end_layout
+
+\end_inset
+
+，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Element类层次结构"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/annotation/element.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Element类层次结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Element类层次结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意元素（Element）是指代码的“静态”结构，即我们在编写代码时“看上去”的结构层次分解。比如下面的代码，在注释中已经标注了几种常见的元素（Element）
+：
 \end_layout
 
 \begin_layout Standard
@@ -2076,7 +2156,7 @@ public class Student { // TypeElement
 \end_layout
 
 \begin_layout Standard
-Element在Java文件中的布局很像XML文件：层次关系
+一个Java文件的元素（Element）是有层次结构的，因此Element在Java文件中的布局很像XML文件：层次关系
 \end_layout
 
 \begin_layout Standard
@@ -2085,6 +2165,258 @@ Element.getEnclosedElements()
 
 \begin_layout Standard
 Element.getEnclosingElement()
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/annotation/element-methods.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Element的主要方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Element的主要方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+TypeMirror
+\end_layout
+
+\begin_layout Standard
+TypeMirror是对Java语法中
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+“类型”
+\end_layout
+
+\end_inset
+
+的面向对象封装，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:TypeMirror类层次结构图"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/annotation/typemirror.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+TypeMirror类层次结构图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TypeMirror类层次结构图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+TypeKind
+\end_layout
+
+\begin_layout Standard
+TypeKind是TypeMirror的类型枚举，比如TypeKind.DECLARED表示类和接口，TypeKind.INT表示整数等，更多的枚举定义参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/8/docs/api/javax/lang/model/type/TypeKind.html
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+从注解的角度理解Element、Type、TypeKind
+\end_layout
+
+\begin_layout Standard
+注解是Java源代码的合法组成部分，因此JDK API专门定义了和注解相对应的Element、TypeMirror、TypeKind的类：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/annotation/element-type.eps
+	width 90line%
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+根据后面的注解实例重新画图
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+注解中的Element和Type相互转化关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:注解中的Element和Type相互转化关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+AnnotatedElement
+\end_layout
+
+\begin_layout Standard
+代表了一个使用了注解的元素（Element），可以根据此元素获得：
+\end_layout
+
+\begin_layout Standard
+getAnnotation
+\end_layout
+
+\begin_layout Standard
+getAnnotations
+\end_layout
+
+\begin_layout Standard
+isAnnotationPresent
+\end_layout
+
+\begin_layout Standard
+getDeclaredAnnotation
+\end_layout
+
+\begin_layout Standard
+getDeclaredAnnotations
+\end_layout
+
+\begin_layout Standard
+getAnnotationByType
+\end_layout
+
+\begin_layout Standard
+getDeclaredAnnotationByType
+\end_layout
+
+\begin_layout Subsection
+AnnotationMirror
+\end_layout
+
+\begin_layout Standard
+AnnotationMirror代表注解的一个实例，即注解的每个属性均已经有了确定的值。AnnotatationMirror的一个重要方法是getAnnotat
+ationType()，该方法返回DeclaredType，即Java语义中对应的注解类型。可以理解为，DeclaredType相当于数据类型，Annotati
+onMirror相当于变量，而Element是代码字面上的结构。
 \end_layout
 
 \begin_layout Subsection
@@ -2190,6 +2522,14 @@ toString()
 \end_inset
 
 方法中显示该类的作者、创建时间和版本号信息。
+\end_layout
+
+\begin_layout Subsection
+ProcessingEnvironment
+\end_layout
+
+\begin_layout Subsection
+RoundEnvironment
 \end_layout
 
 \begin_layout Standard
