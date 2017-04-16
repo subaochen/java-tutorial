@@ -2410,6 +2410,26 @@ getDeclaredAnnotationByType
 \end_layout
 
 \begin_layout Subsection
+关于名称
+\end_layout
+
+\begin_layout Standard
+name
+\end_layout
+
+\begin_layout Standard
+SimpleName
+\end_layout
+
+\begin_layout Standard
+QualifiedName
+\end_layout
+
+\begin_layout Standard
+CanonicalName Build.class.getCanonicalName()
+\end_layout
+
+\begin_layout Subsection
 AnnotationMirror
 \end_layout
 
@@ -2533,6 +2553,10 @@ RoundEnvironment
 \end_layout
 
 \begin_layout Standard
+轮次的概念，为什么要多轮次？画图说明。
+\end_layout
+
+\begin_layout Standard
 \begin_inset Flex Tip
 status open
 
@@ -2606,6 +2630,19 @@ status open
 
 \begin_layout Subsection
 启用注解处理器的两种方式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+使用注解处理器只能创建新文件，无法修改已有的Java源代码。
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
