@@ -3190,7 +3190,7 @@ String str = reader.readLine();
 
 \begin_layout Plain Layout
 
-float x = Float.parseInt(str);
+float x = Float.parseFloat(str);
 \end_layout
 
 \end_inset
@@ -3647,6 +3647,16 @@ public Scanner useDelimiter(Pattern pattern)
 
 \begin_layout Plain Layout
 使用自定义的token分隔符
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+应该增加一个token的用法示例
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
