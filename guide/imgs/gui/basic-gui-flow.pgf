@@ -1,0 +1,11 @@
+\usetikzlibrary{positioning,arrows.meta}
+\begin{tikzpicture}[every node/.style={draw,fill=orange!50}]
+	\node(新建项目) {新建项目};
+    \node(设计界面) [right=of 新建项目]{ui 设计界面};
+    \node(事件响应) [right=of 设计界面]{事件响应};
+	\node(表单main方法) [right=of 事件响应] {表单main方法};
+    \path[->,>=Stealth,draw](新建项目) -- (设计界面);
+    \path[->,>=Stealth,draw](设计界面) -- (事件响应);
+    \path[->,>=Stealth,draw](事件响应) -- (表单main方法);
+\end{tikzpicture}
+

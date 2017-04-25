@@ -1600,7 +1600,7 @@ reference "fig:RMB2DollarConverter的运行结果"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1644,6 +1644,29 @@ name "fig:RMB2DollarConverter的运行结果"
 \begin_layout Standard
 \begin_inset Flex Notice
 status open
+
+\begin_layout Plain Layout
+虽然在上面我们使用了15个步骤创建了一个简单的GUI应用程序，其实关键的步骤是4个，如下图所示：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "imgs/gui/basic-gui-flow.pgf"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status collapsed
 
 \begin_layout Plain Layout
 你可能会问，在类RMB2DollarConverter中的几个私有属性（对象）：mainPanel、rmbTextField等是什么时候初始化的？很好的问题！
@@ -2018,7 +2041,7 @@ uFF1A");
 
 \begin_layout Standard
 \begin_inset Flex Tip
-status open
+status collapsed
 
 \begin_layout Plain Layout
 在Idea的Form Designer中，我们看到可以直接拖放各种控件到应用程序界面中，并且可以直观的通过“属性查看器”查看和修改控件的属性，其中一个重要的属性

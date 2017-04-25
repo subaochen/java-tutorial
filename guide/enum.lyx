@@ -117,6 +117,16 @@ name "chap:Enum"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+图形的字符太小
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -192,6 +202,16 @@ name "sec:Java的enum：Enum的子类"
 
 \begin_layout Standard
 Java中枚举类型的定义和c语言非常相似，但是要灵活的多。同样是一周的定义，我们看在Java中是如何定义和使用的。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+WeekDay叫做什么？WeekDay.SUNDAY中的SUNDAY又叫做什么？
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -756,6 +776,28 @@ name "exer:定义一个enum-Planet表示太阳系各行星的名称、质量和�
 \end_layout
 
 \begin_layout Section
+从字符串构造枚举对象
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+new TrafficSignal(
+\begin_inset Quotes eld
+\end_inset
+
+stop
+\begin_inset Quotes erd
+\end_inset
+
+)可以吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 switch中的enum
 \begin_inset CommandInset label
 LatexCommand label
@@ -788,6 +830,16 @@ reference "subsec:Java加强了的switch分支结构"
 \end_inset
 
 ）。在Java中，switch的参数不仅可以是整数，也可以是字符串和enum对象。比如我们可以这样使用TrafficSignal：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里实际上涉及到enum对象的比较，即equals方法
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
