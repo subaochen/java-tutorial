@@ -362,7 +362,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
 抽象类可以没有抽象方法
 \end_layout
 
@@ -434,7 +433,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
 具有抽象方法的类必须定义为抽象类
 \end_layout
 
