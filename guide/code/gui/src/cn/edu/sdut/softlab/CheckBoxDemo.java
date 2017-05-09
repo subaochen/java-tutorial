@@ -91,7 +91,7 @@ public class CheckBoxDemo {
             @Override
             public void mouseEntered(MouseEvent mouseEvent) {
                 super.mouseEntered(mouseEvent);
-                sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/baseketball.png")));
+                sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/basketball.png")));
             }
 
             @Override
