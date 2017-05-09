@@ -6,12 +6,12 @@ import javax.swing.*;
  * Created by subaochen on 17-2-7.
  */
 public class BorderLayoutDemo {
-    private JButton button1Button;
+    private JButton northButton;
     private JPanel panel1;
-    private JButton button2Button;
-    private JButton button4Button;
-    private JButton button5Button;
-    private JButton button3Button;
+    private JButton westButton;
+    private JButton eastButton;
+    private JButton southButton;
+    private JButton centerButton;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("BorderLayoutDemo");

@@ -7,34 +7,34 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="7f6c8" class="javax.swing.JButton" binding="button1Button" default-binding="true">
+      <component id="7f6c8" class="javax.swing.JButton" binding="northButton" default-binding="true">
         <constraints border-constraint="North"/>
         <properties>
-          <text value="Button1"/>
+          <text value="North"/>
         </properties>
       </component>
-      <component id="81bd2" class="javax.swing.JButton" binding="button2Button" default-binding="true">
+      <component id="81bd2" class="javax.swing.JButton" binding="westButton" default-binding="true">
         <constraints border-constraint="West"/>
         <properties>
-          <text value="Button2"/>
+          <text value="West"/>
         </properties>
       </component>
-      <component id="c3d82" class="javax.swing.JButton" binding="button4Button" default-binding="true">
+      <component id="c3d82" class="javax.swing.JButton" binding="eastButton" default-binding="true">
         <constraints border-constraint="East"/>
         <properties>
-          <text value="Button4"/>
+          <text value="East"/>
         </properties>
       </component>
-      <component id="eefec" class="javax.swing.JButton" binding="button5Button" default-binding="true">
+      <component id="eefec" class="javax.swing.JButton" binding="southButton" default-binding="true">
         <constraints border-constraint="South"/>
         <properties>
-          <text value="Button5"/>
+          <text value="South"/>
         </properties>
       </component>
-      <component id="13132" class="javax.swing.JButton" binding="button3Button" default-binding="true">
+      <component id="13132" class="javax.swing.JButton" binding="centerButton" default-binding="true">
         <constraints border-constraint="Center"/>
         <properties>
-          <text value="Button3"/>
+          <text value="Center"/>
         </properties>
       </component>
     </children>

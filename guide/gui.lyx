@@ -5463,10 +5463,10 @@ name "sec:布局管理器"
 \end_layout
 
 \begin_layout Standard
-在图形用户界面应用程序的设计中，界面中的控件如何布局总是一个容易让人困扰的问题，尤其是当窗口大小发生改变的时候，如何保证界面布局符合当初的设计（期望）呢？通常有
-两种常见的界面布局思路：绝对布局和相对布局。绝对布局是指使用绝对（像素）坐标确定控件在界面的位置，很显然，当窗口大小发生改变时，绝对布局的界面不会随窗口发生改变
-，于是导致了不能充分利用放大了的窗口或者无法适应缩小了的窗口，因此绝对布局在实际的编程中很少用到，也不建议使用绝对布局，本节主要阐述各种相对布局的基本思路和方法
-。
+在图形用户界面应用程序的设计中，界面中的控件如何布局总是一个容易让人困扰的问题，有过WEB界面设计经历的读者可能对此有更深刻的体会。比如当窗口大小或者分辨率发生
+改变的时候，如何保证界面布局符合当初的设计（期望）呢？通常有两种常见的界面布局思路：绝对布局和相对布局。绝对布局是指使用绝对（像素）坐标确定控件在界面的位置，很
+显然，当窗口大小发生改变时，绝对布局的界面不会随窗口发生改变，于是导致了不能充分利用放大了的窗口或者无法适应缩小了的窗口，因此绝对布局在实际的编程中很少用到，也
+不建议使用绝对布局，本节主要阐述各种相对布局的基本思路和方法。
 \end_layout
 
 \begin_layout Subsection
@@ -5545,7 +5545,7 @@ cn/edu/sdut/softlab
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5617,7 +5617,7 @@ reference "fig:BorderLayout示例运行结果"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
