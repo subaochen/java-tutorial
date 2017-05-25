@@ -349,16 +349,56 @@ BorderLayout
 
 \end_layout
 
-\begin_layout Frame
+\begin_deeper
+\begin_layout Overprint
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+可视化设计器：
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename /home/subaochen/git/java-tutorial/guide/imgs/gui/borderlayout-demo-0.png
-	width 100text%
+	width 90text%
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Overprint
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+运行效果：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/gui/borderlayout-demo-1.png
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Frame
 
 \end_layout

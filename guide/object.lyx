@@ -5117,7 +5117,7 @@ public：public修饰的类，在任何包中都可见。
 \end_layout
 
 \begin_layout Enumerate
-defualt：default修饰（即没有任何修饰符）的类，只在本包中可见。
+default：default修饰（即没有任何修饰符）的类，只在本包中可见。
 \end_layout
 
 \begin_layout Standard
