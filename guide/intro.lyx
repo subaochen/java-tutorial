@@ -212,37 +212,12 @@ Java的前生：Oak的诞生
 \end_layout
 
 \begin_layout Standard
-1990年12月，当时的Sun公司开始了一个叫做“Stealth计划”的内部项目，由帕特里克.诺顿领衔，起因是公司自己开发的C++和C语言编译器很难用，帕特里克被
-搞的焦头烂额。“Stealth计划”后来改名为“Green计划”，詹姆斯.高斯林（人称“Java之父”，见
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-figurename
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:詹姆斯.高斯林"
-
-\end_inset
-
-）和麦克.舍林丹加入到了帕克里克的工作小组。Sun公司预计未来的家用电器必将向智能化方向发展，于是“Green计划”的目标是打造一款智能家电程序设计语言及其平台。
-\end_layout
-
-\begin_layout Standard
 \begin_inset Wrap figure
 lines 0
-placement r
+placement l
 overhang 0in
 width "20line%"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -276,6 +251,31 @@ name "fig:Java的吉祥物"
 
 \end_inset
 
+1990年12月，当时的Sun公司开始了一个叫做“Stealth计划”的内部项目，由帕特里克.诺顿领衔，起因是公司自己开发的C++和C语言编译器很难用，帕特里克被
+搞的焦头烂额。“Stealth计划”后来改名为“Green计划”，詹姆斯.高斯林（人称“Java之父”，见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:詹姆斯.高斯林"
+
+\end_inset
+
+）和麦克.舍林丹加入到了帕克里克的工作小组。Sun公司预计未来的家用电器必将向智能化方向发展，于是“Green计划”的目标是打造一款智能家电程序设计语言及其平台。
+\end_layout
+
+\begin_layout Standard
 团队最初考虑使用C++语言，但是很多成员包括Sun的首席科学家比尔.乔伊，发现C++在嵌入式系统上存在很大问题。因为嵌入式系统可以使用的资源有限，而C++缺乏垃圾
 回收机制以及可移植的安全性、分布式程序设计和多线程等特性。于是，乔伊决定开发一种集C语言和Mesa语言大成的新语言。在一份报告上，乔伊把它叫做“未来”。他提议S
 un公司的工程师应该在C++的基础上，开发一种面向对象的程序设计语言。最初，高斯林试图修改和扩展C++的功能，他自己称这种新语言为C++ ++
@@ -319,13 +319,12 @@ Java拥抱互联网，横空出世
 \end_layout
 
 \begin_layout Standard
-1994年6月，在经历了一场历时三天的脑力激荡的讨论后，约翰·盖吉、詹姆斯·高斯林、比尔·乔伊、帕特里克·诺顿、韦恩·罗斯因和埃里克·斯库米，
 \begin_inset Wrap figure
 lines 0
 placement o
 overhang 0in
 width "50col%"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align right
@@ -360,7 +359,8 @@ name "fig:詹姆斯.高斯林"
 
 \end_inset
 
-团队决定再一次做出重大决定，这次他们决定将该技术应用于万维网。他们认为随着Mosaic浏览器
+1994年6月，在经历了一场历时三天的脑力激荡的讨论后，约翰·盖吉、詹姆斯·高斯林、比尔·乔伊、帕特里克·诺顿、韦恩·罗斯因和埃里克·斯库米，团队决定再一次做出
+重大决定，这次他们决定将该技术应用于万维网。他们认为随着Mosaic浏览器
 \begin_inset Foot
 status open
 
