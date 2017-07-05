@@ -1584,7 +1584,7 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1596,7 +1596,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/experiments/login-form-1.eps
+	filename imgs/tests/login-form-1.eps
 	width 40line%
 
 \end_inset
@@ -1631,7 +1631,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/experiments/login-form-1-design.png
+	filename imgs/tests/login-form-1-design.png
 	width 55line%
 
 \end_inset
@@ -1723,12 +1723,12 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/experiments/login-form-2-design.png
+	filename imgs/tests/login-form-2-design.png
 	width 70line%
 
 \end_inset
