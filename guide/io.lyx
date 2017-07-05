@@ -4019,7 +4019,7 @@ status open
 ，给后来的程序设计带来了一些困扰：你必须正确识别和处理不同操作系统的路径分隔符。你一定会想，要是当初微软在设计Windows的时候使用和Unix相同的路径分隔符
 ，该多好！历史没有如果，现实如此残酷！欲知当初微软选择反斜杠作为文件分隔符的原因，请参考：https://blogs.msdn.microsoft.com/larry
 osterman/2005/06/24/why-is-the-dos-path-character/。简单的说，Windows操作系统脱胎于Dos操作系统，在D
-os操作系统中反斜杠（/）已经作为命令行参数的分隔符了，因此Windows只好选用其他的分隔符（反斜杠）作为文件路径分隔符。
+os操作系统中斜杠（/）已经作为命令行参数的分隔符了，因此Windows只好选用其他的分隔符（反斜杠）作为文件路径分隔符。
 \end_layout
 
 \end_inset
