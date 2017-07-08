@@ -5603,9 +5603,9 @@ person.goHome();
 \end_inset
 
 错误，即“空指针异常”。这里只是声明了一个person类型的引用，但是并没有初始化，也就是说，person并没有指向任何实质的Person类型的对象。因此在初始
-化之前，任何对象的引用都是null，这和C语言的指针含义完全一样：在C语言中，任何指针在初始化之前都是null指针，直接使用null指针是有风险的。而在Java
-中，Java虚拟机会自动侦测空指针，任何对空指针（未初始化的对象引用）都会报告NullPointException异常。NullPointException异常
-如此常见，通常大家都把NullPoinitException异常简称为“
+化之前，任何对象的引用都是null。在C语言中，任何已定义的指针在未初始化之前都是“野指针”，不会自动初始化为NULL，其缺省值是随机的，解引用“野指针”是十分
+危险的行为！只有良好的编程习惯是避免“野指针”的唯一方法。而在Java中，Java虚拟机会自动侦测空指针，任何对空指针（未初始化的对象引用）都会报告NullPo
+intException异常。NullPointException异常如此常见，通常大家都把NullPoinitException异常简称为“
 \begin_inset Flex Strong
 status open
 
