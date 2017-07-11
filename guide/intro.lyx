@@ -873,17 +873,6 @@ $ dpkg -L openjdk-8-jdk-headless | more
 基础开发环境
 \end_layout
 
-\begin_layout Subsubsection
-下载和安装JDK
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:下载和安装JDK"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 在ubuntu环境下，下载和安装JDK可以简单的执行下列命令来完成
 \begin_inset Foot

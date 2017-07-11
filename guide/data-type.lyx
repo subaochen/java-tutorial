@@ -2104,10 +2104,6 @@ name "sec:条件判断和分支"
 
 \end_layout
 
-\begin_layout Subsection
-条件判断
-\end_layout
-
 \begin_layout Standard
 Java中的条件判断语句用法和C语言完全一致，不再赘述，通过一个例子看一下在Java中条件判断语句的基本用法。
 \end_layout
@@ -2163,7 +2159,7 @@ status open
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph*
 Java加强了的switch分支结构
 \begin_inset CommandInset label
 LatexCommand label
@@ -2227,7 +2223,7 @@ lstparams "caption={Month.java},label={Month.java}"
 循环
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph*
 三大循环结构
 \end_layout
 
@@ -2235,7 +2231,7 @@ lstparams "caption={Month.java},label={Month.java}"
 Java中的三大循环结构（for循环、while循环、do-while循环）以及break、continue的用法和C语言完全一致，不再赘述。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph*
 Java加强了的循环结构
 \end_layout
 

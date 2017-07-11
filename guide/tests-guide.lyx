@@ -1,0 +1,1932 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{preamble.tex}
+\date{}
+\end_preamble
+\use_default_options true
+\begin_modules
+note-inset
+tip-inset
+warning-inset
+logicalmkup
+theorems-bytype
+theorems-chap-bytype
+coderemarks
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 185mm
+\paperheight 260mm
+\leftmargin 2cm
+\topmargin 1.65cm
+\rightmargin 1.4cm
+\bottommargin 1.65cm
+\headheight 12pt
+\headsep 6pt
+\footskip 12pt
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+概述
+\end_layout
+
+\begin_layout Standard
+程序设计是一门实践性很强的技能，Java语言的程序设计自然也不例外。“纸上得来终觉浅，绝知此事要躬行”，学好Java程序设计语言的关键是多动手，重视实验，并认真
+思考实验中遇到的问题，不断加强对编程思想的认识。记住，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+编程不难学，练着练着就会了！
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+考虑建立一个综合虚拟实验平台？每次试验后自动给出实验成绩？学生不需要提交纸质版的实验报告了
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+实验目的和任务
+\end_layout
+
+\begin_layout Standard
+本课程主要给学生讲授Java语言的语法知识（包括类的知识点）、面向对象的程序设计思想与算法以及在工程实践中的常见做法，使学生对面向对象编程有有比较深的了解，并具
+备这方面的能力。Java语言是完全面向对象的程序设计语言，内容比较抽象，须经过上机的实践，才能领会面向对象的程序设计思想。 
+\end_layout
+
+\begin_layout Standard
+教学目的主要是培养学生利用计算机处理问题的思维方式和程序设计的基本方法，启发学生主动将计算机引入到其它基础课和专业课。实验目的是为了提高同学们的动手实践能力，逐
+渐习惯Java面向对象的分析问题和描述问题的方式，掌握使用Java语言解决问题的能力。 
+\end_layout
+
+\begin_layout Standard
+本课程的实验任务是：
+\end_layout
+
+\begin_layout Enumerate
+掌握利用JDK工具开发一些简单Java应用程序的方法，本课程主要使用JetBrain Idea，读者也可以自行学习Eclipse、NetBeans等IDE。
+\end_layout
+
+\begin_layout Enumerate
+掌握JAVA语言的面向对象的概念及编程思想，在实验过程中不断加深对抽象、封装、多态等面向对象特点的认识。
+\end_layout
+
+\begin_layout Enumerate
+掌握常见的Java API的用法，养成API手册长置案头的习惯。
+\end_layout
+
+\begin_layout Enumerate
+了解Java编程的工程实践要求，比如编码规范、最佳实践等。
+\end_layout
+
+\begin_layout Subsection*
+实验项目及学时分配
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="3line%">
+<column alignment="center" valignment="top" width="35line%">
+<column alignment="center" valignment="top" width="3line%">
+<column alignment="center" valignment="top" width="6line%">
+<column alignment="center" valignment="top" width="6line%">
+<column alignment="center" valignment="top" width="25line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+序号
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+项目名称
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+学时
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+实验要求
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+实验类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+仪器设备
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java开发环境和简单程序编写
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+必做
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+验证
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+计算机/SDK/Idea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java基本语法和面向对象编程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+必做
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+验证
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+计算机/SDK/Idea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+面向对象工程思想
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+必做
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+验证
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+计算机/SDK/Idea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java常用类
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+必做
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+验证
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+计算机/SDK/Idea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java的异常处理
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+必做
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+验证
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+计算机/SDK/Idea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java的输入输出
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+必做
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+验证
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+计算机/SDK/Idea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+图形用户界面设计
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+必做
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+验证
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+计算机/SDK/Idea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java综合应用
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+必做
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+综合
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+计算机/SDK/Idea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+实验报告和考核方式
+\end_layout
+
+\begin_layout Paragraph*
+实验报告
+\end_layout
+
+\begin_layout Standard
+实验报告要求给出程序清单、运行结果、遇到的问题、调试心得。
+\end_layout
+
+\begin_layout Paragraph*
+考核方式
+\end_layout
+
+\begin_layout Standard
+考核方式为操作技能考核、实验报告和面试相结合，实验成绩记入总成绩（占比20%）。
+\end_layout
+
+\begin_layout Standard
+本实验手册中给出的代码均为参考代码，建议读者“一题多解”，即如果在实验报告中给出了多种编程方式则可以考虑加分。
+\end_layout
+
+\begin_layout Section*
+实验一 Java开发环境和简单程序编写
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Itemize
+掌握搭建Java开发环境的方法。
+\end_layout
+
+\begin_layout Itemize
+掌握JetBrain Idea的基本用法。
+\end_layout
+
+\begin_layout Itemize
+熟悉基本的Java程序设计结构。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Itemize
+配置JDK。 
+\end_layout
+
+\begin_layout Itemize
+熟悉JAVA开发工具JetBrain Idea,编译调试HelloWorld程序。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Itemize
+实验报告中给出配置JDK和Idea的步骤。
+\end_layout
+
+\begin_layout Itemize
+HelloWorld程序输出一条简单的问候信息。
+\end_layout
+
+\begin_layout Itemize
+实验报告中对程序结构做出详细的解释。 
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Enumerate
+下载JDK的最新版本并安装，必要的时候设置合适的环境变量。
+\end_layout
+
+\begin_layout Enumerate
+下载JetBrain Idea的最新版本并安装，了解Idea的基本用法。
+\end_layout
+
+\begin_layout Enumerate
+使用Idea编写第一个Java应用程序：HelloWorld。
+\end_layout
+
+\begin_layout Enumerate
+编写一个打印10行“Hello， World”的Java程序。参考代码：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class HelloWorld {
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        for(int i = 0; i < 10; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            System.out.println("Hello, World!");
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+使用任意的纯文本编辑工具编写HelloWorld，并在命令行编译和执行，了解脱离了IDE如何编写和运行Java应用程序。
+\end_layout
+
+\begin_layout Section*
+实验二 Java基本语法和面向对象编程
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Itemize
+对比C语言，掌握Java的基本语法。
+\end_layout
+
+\begin_layout Itemize
+掌握Java面向对象的基本概念。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Itemize
+熟悉Java的输入输出，尤其是利用Scanner从键盘输入的方法。
+\end_layout
+
+\begin_layout Itemize
+编写程序，进一步熟悉Java的表达式、分支、循环语句，尤其是加强的switch-case和foreach循环。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Itemize
+给出实验中编写的程序源代码和运行结果。
+\end_layout
+
+\begin_layout Itemize
+说明Java定义类的方法。
+\end_layout
+
+\begin_layout Itemize
+说明类和对象的关系。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+参考
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:几何图形面向对象分析"
+
+\end_inset
+
+，编写相应的实现类和测试类。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/tests/oopbasic-model.eps
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+几何图形面向对象分析
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:几何图形面向对象分析"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+实验三 面向对象工程思想
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Itemize
+掌握面向对象工程的基本思想。
+\end_layout
+
+\begin_layout Itemize
+掌握Java类的概念和写法，重点体会访问控制（封装）的技术。
+\end_layout
+
+\begin_layout Itemize
+掌握Java类继承的概念和用法。
+\end_layout
+
+\begin_layout Itemize
+掌握Java接口的概念和用法。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Itemize
+编写Java类和抽象类。
+\end_layout
+
+\begin_layout Itemize
+编写基类的子类。
+\end_layout
+
+\begin_layout Itemize
+编写Java接口及其实现类。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Itemize
+自行构思一个实验场景，在实验报告中画出所编写类的UML图及其层次关系。
+\end_layout
+
+\begin_layout Itemize
+给出所编写类的源代码。
+\end_layout
+
+\begin_layout Itemize
+说明Java定义类和接口的不同使用场合。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+我们假设一个这样的场景，见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:oop编程实验场景类图"
+
+\end_inset
+
+。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/tests/oop-model.svg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+oop编程实验场景类图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:oop编程实验场景类图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+参考代码如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/oop/Animal.java"
+lstparams "caption={Animal.java},label={oop-test-Animal.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/oop/Dog.java"
+lstparams "caption={Dog.java},label={oop-test-Dog.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/oop/Cat.java"
+lstparams "caption={Cat.java},label={oop-tests-Cat.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/oop/SheepDog.java"
+lstparams "caption={SheepDog.java},label={oop-tests-SheepDog.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/oop/MouseKiller.java"
+lstparams "caption={MouseKiller.java},label={MouseKiller.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/oop/PeopleHelper.java"
+lstparams "caption={PeopleHelper.java},label={PeopleHelper.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+请读者自行完善其中的方法，并设计一个测试类验证之。
+\end_layout
+
+\begin_layout Problem
+如果将Animal或者Dog的某些属性修改为private会怎样？请实验证明。
+\end_layout
+
+\begin_layout Section*
+实验四 Java常用类
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Itemize
+熟悉Java的数字、字符串的常见用法。
+\end_layout
+
+\begin_layout Itemize
+熟悉日期、时间的常见用法。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Itemize
+编写一个程序，将从键盘输入的数字转换为大写形式输出。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Itemize
+给出编写的程序的源代码和执行结果。
+\end_layout
+
+\begin_layout Itemize
+说明数字和字符串的相互转换方法。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+参考代码参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Money.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/essentials/Money.java"
+lstparams "caption={Money.java},label={Money.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+实验五 Java的异常处理
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Itemize
+掌握Java异常的基本处理思想，了解Java常见异常类型。
+\end_layout
+
+\begin_layout Itemize
+掌握try/catch/throw/throws的用法。
+\end_layout
+
+\begin_layout Itemize
+掌握自定义异常的方法。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Itemize
+编写一个类，捕获数组越界异常。必须捕获这个异常吗？
+\end_layout
+
+\begin_layout Itemize
+编写一个自定义异常类。
+\end_layout
+
+\begin_layout Itemize
+编写一个测试类，抛出自定义异常对象。
+\end_layout
+
+\begin_layout Itemize
+编写一个测试类，捕获抛出的自定义异常对象。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Itemize
+给出实验中编写的类的源代码。
+\end_layout
+
+\begin_layout Itemize
+说明Java异常处理的基本原则。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+参考代码如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/exception/MyException.java"
+lstparams "caption={MyException.java},label={test-exception-MyException.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/exception/Demo.java"
+lstparams "caption={Demo.java},label={tests-exception-Demo.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/exception/Client.java"
+lstparams "caption={Client.java},label={test-exception-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+实验六 Java的输入输出
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Itemize
+进一步熟悉Java的异常。
+\end_layout
+
+\begin_layout Itemize
+掌握常见的面向字节和面向字符的Java IO类。
+\end_layout
+
+\begin_layout Itemize
+熟练掌握从键盘输入的方法。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Itemize
+编写一个程序，统计从键盘输入的字符的个数，按照单词、空白字符、数字分别输出。
+\end_layout
+
+\begin_layout Itemize
+编写一个程序，将给定的两个文件收尾连接后保存到新文件中，其中给定文件和新文件名从命令行输入。
+\end_layout
+
+\begin_layout Itemize
+编写一个程序，从键盘输入两个整数，打印出较大的那个。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Itemize
+给出实验中编写的类的源代码。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+参考程序：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/io/StandardIO.java"
+lstparams "caption={StandardIO.java},label={StandardIO.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/io/CatFile.java"
+lstparams "caption={CatFile.java},label={CatFile.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/tests/src/cn/edu/sdut/softlab/io/MaxMin.java"
+lstparams "caption={MaxMin.java},label={MaxMin.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+注意try-with-resources结构的用法。如果不使用try-with-resources结构，打开的输入输出流需要通过try-catch-finall
+y中的finally关闭，即在finally中调用in.close() 或者 out.close()。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+实验七 图形用户界面设计
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Itemize
+了解java图形用户界面设计的基本方法。
+\end_layout
+
+\begin_layout Itemize
+熟悉Java Swing的各种组件。
+\end_layout
+
+\begin_layout Itemize
+熟悉Java的常见布局管理器。
+\end_layout
+
+\begin_layout Itemize
+熟悉Java GUI的事件处理机制。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Standard
+使用Idea实现一个证券交易软件的登录界面（见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:证券交易软件的登录界面示意图"
+
+\end_inset
+
+），只要实现该界面本身即可，不要求实现真正的登录功能。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/tests/zhengquan-login.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+证券交易软件的登录界面示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:证券交易软件的登录界面示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Standard
+给出源代码和Idea的设计界面。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+可以分以下几个步骤
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/tests/sr
+c/cn/edu/sdut/softlab/gui
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Enumerate
+使用GridLayout将整个界面分为三个部分，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:界面的第一步划分"
+
+\end_inset
+
+所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+测试页脚
+\end_layout
+
+\end_inset
+
+。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/tests/login-form-1.eps
+	width 40line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+设计图
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/tests/login-form-1-design.png
+	width 55line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+实现图
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+界面的第一步划分
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:界面的第一步划分"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+将主窗口再划分三个部分，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:主窗口的进一步划分"
+
+\end_inset
+
+所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+测试页脚
+\end_layout
+
+\end_inset
+
+。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/tests/login-form-2-design.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+主窗口的进一步划分
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:主窗口的进一步划分"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+分别在各个部分放置需要的组件，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:组织组件"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/tests/login-form-3-design.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+组织组件
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:组织组件"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+如何使得按钮的长度适中？
+\end_layout
+
+\begin_layout Section*
+实验八 Java综合应用
+\end_layout
+
+\begin_layout Subsection*
+实验目的
+\end_layout
+
+\begin_layout Itemize
+综合运用本学期所学知识。
+\end_layout
+
+\begin_layout Itemize
+掌握Java应用程序的基本组织方式。
+\end_layout
+
+\begin_layout Itemize
+熟悉Java的常见调试技术。
+\end_layout
+
+\begin_layout Subsection*
+实验内容
+\end_layout
+
+\begin_layout Itemize
+下载和安装robocode，地址：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://robocode.sourceforge.net/
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+编写robocode机器人。
+\end_layout
+
+\begin_layout Itemize
+不同同学的robocode机器人对战。
+\end_layout
+
+\begin_layout Subsection*
+实验要求
+\end_layout
+
+\begin_layout Itemize
+给出所编写程序的源代码和运行结果。
+\end_layout
+
+\begin_layout Itemize
+说明调试中遇到的问题和解决方法。
+\end_layout
+
+\begin_layout Subsection*
+实验步骤
+\end_layout
+
+\begin_layout Standard
+可参考：
+\end_layout
+
+\begin_layout Itemize
+Robocode教程：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://site.douban.com/151685/widget/notes/7736245/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+重锤痛击 Robocode！
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.ibm.com/developerworks/cn/java/j-robocode/index.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

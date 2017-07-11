@@ -123,10 +123,6 @@ name "chap:面向对象的基本概念"
 再说C语言的struct
 \end_layout
 
-\begin_layout Subsection
-struct的起源
-\end_layout
-
 \begin_layout Standard
 C语言以简练、灵活、高效著称，但是C语言本身提供的基本数据类型有限，描述现实世界的能力自然也有限。比如要求输入班级同学的英语和数学成绩并按照平均成绩排序
 \begin_inset Note Note
@@ -1330,7 +1326,7 @@ status open
 。这里有两个关键点：一是构造方法的方法名必须和类名完全相同，包括大小写。二是构造方法不需要返回值，也不允许有返回值。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection*
 默认的构造方法
 \end_layout
 
@@ -1526,7 +1522,7 @@ circle1的原点坐标：(10,10),radius=10.0面积=314.159
 类的无参构造方法的作用：当我们使用new Point()创建对象时，最后会调用Point的无参构造方法初始化对象的状态。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection*
 带参数的构造方法
 \end_layout
 
@@ -1739,7 +1735,7 @@ reference "subsec:多个构造方法"
 。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection*
 多个构造方法
 \begin_inset CommandInset label
 LatexCommand label
@@ -3172,7 +3168,7 @@ status open
 方法的覆盖（override）和重载（overload）是面向对象编程中两个重要且容易混淆的概念，因此这里单独拿出来讨论一下。
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 方法重载
 \end_layout
 
@@ -3406,7 +3402,7 @@ reference "fig:生活中的各种插座和多用插座"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 方法覆盖
 \end_layout
 
