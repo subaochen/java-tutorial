@@ -243,33 +243,6 @@ filename "gui.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
-filename "tests.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList table
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset toc
-LatexCommand lstlistoflistings
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
 LatexCommand input
 filename "appendix.lyx"
 

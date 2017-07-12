@@ -298,7 +298,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "abstractclass-Animal.java"
 
 \end_inset
@@ -318,7 +318,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "abstractclass-Dog.java"
 
 \end_inset
@@ -338,7 +338,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "abstractclass-Client.java"
 
 \end_inset
@@ -1570,7 +1570,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:引入接口后的团队协作"
 
 \end_inset
@@ -1639,7 +1639,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:不引入接口时的团队协作"
 
 \end_inset
@@ -1659,7 +1659,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:引入接口后的团队协作"
 
 \end_inset

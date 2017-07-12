@@ -4178,7 +4178,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "CreatePathTest.java"
 
 \end_inset
@@ -4213,7 +4213,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:在Ideal中通过调试观察Path对象"
 
 \end_inset
@@ -4312,7 +4312,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathInfoTest.java"
 
 \end_inset
@@ -4346,7 +4346,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathInfoTest.java"
 
 \end_inset
@@ -4366,7 +4366,7 @@ tablename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "tab:Path信息相关方法"
 
 \end_inset
@@ -4606,7 +4606,7 @@ tablename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "tab:Path转换方法"
 
 \end_inset
@@ -4769,7 +4769,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathConversionTest.java"
 
 \end_inset
@@ -4808,7 +4808,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathResolveTest.java"
 
 \end_inset
@@ -4859,6 +4859,13 @@ status open
 \backslash
 tablename
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:比较两个Path的方法"
 
 \end_inset
 
@@ -5018,7 +5025,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathCompareTest.java"
 
 \end_inset
@@ -5187,7 +5194,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathDeleteTest.java"
 
 \end_inset
@@ -5302,7 +5309,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathMoveTest.java"
 
 \end_inset
@@ -6021,7 +6028,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:读取和设置文件属性的View接口"
 
 \end_inset
@@ -6112,7 +6119,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathMetadataTest.java"
 
 \end_inset
@@ -6716,7 +6723,7 @@ test string
 \begin_layout Standard
 处理文本文件时，通常需要借助于缓存提高效率，我们在
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand vref
 reference "subsec:面向字符的流"
 
 \end_inset
@@ -6736,7 +6743,7 @@ tablename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "tab:Files中带缓存的文本读写方法"
 
 \end_inset
@@ -7030,7 +7037,7 @@ tablename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "tab:Files中不带缓存的输入输出流"
 
 \end_inset
@@ -7172,7 +7179,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PathWithoutBufferTest.java"
 
 \end_inset
@@ -7467,7 +7474,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "FileRandomAccessTest.java"
 
 \end_inset
@@ -7515,7 +7522,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:Buffer的类层次结构"
 
 \end_inset
@@ -7982,7 +7989,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "FileCreateTest.java"
 
 \end_inset
@@ -8463,7 +8470,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "FileRandomAccessTest.java"
 
 \end_inset
@@ -9037,7 +9044,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "ListDirectoryTest.java"
 
 \end_inset
@@ -9132,7 +9139,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "ListDirectoryWithGlobTest.java"
 
 \end_inset
@@ -9567,7 +9574,7 @@ lstlistingname
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "PropertyFileTest.java"
 
 \end_inset

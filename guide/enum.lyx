@@ -775,8 +775,22 @@ name "exer:定义一个enum-Planet表示太阳系各行星的名称、质量和�
 
 \end_layout
 
-\begin_layout Section
-从字符串构造枚举对象
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+section:从字符串构造枚举对象
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 

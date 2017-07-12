@@ -5371,6 +5371,10 @@ name "fig:JComboBox示例的运行结果"
 \end_layout
 
 \begin_layout Subsection
+其他常见控件
+\end_layout
+
+\begin_layout Subsubsection*
 Spinner
 \begin_inset CommandInset label
 LatexCommand label
@@ -5397,7 +5401,7 @@ sdut/softlab
 及其注释。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection*
 Slider
 \begin_inset CommandInset label
 LatexCommand label
@@ -5424,7 +5428,7 @@ sdut/softlab
 及其注释。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection*
 Tabbed Pane
 \begin_inset CommandInset label
 LatexCommand label

@@ -455,7 +455,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "45col%"
+width "40line%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -523,7 +523,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "45col%"
+width "45line%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -621,11 +621,21 @@ lstparams "caption={Point.java},label={Point.java}"
 可以看出，在这个版本的Point类定义中，“点”的属性（x，y）和对点的操作moveTo封装在一起了。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 定义Java类
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:定义Java类"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+为了满足李震梅老师的审美观，修改为star form section
+\end_layout
 
 \end_inset
 
@@ -1281,7 +1291,7 @@ Point startPoint = new Point();
 步骤4：调用本类的构造方法，这是本节的重点。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection*
 构造方法
 \begin_inset CommandInset label
 LatexCommand label
@@ -2672,7 +2682,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:BankCard的类层次结构"
 
 \end_inset
@@ -2807,6 +2817,30 @@ reference "sec:接口"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+下面的用法是正确的：
+\end_layout
+
+\begin_layout LyX-Code
+public class CreditCard extends BandCard{...}
+\end_layout
+
+\begin_layout LyX-Code
+public class DebitCard extends BandCard{...}
+\end_layout
+
+\begin_layout Standard
+下面的用法是错误的：
+\end_layout
+
+\begin_layout LyX-Code
+public class CreditCard extend BandCard{...}
+\end_layout
+
+\begin_layout LyX-Code
+public class CreditCard extends BandCard, Card{...}
 \end_layout
 
 \begin_layout Subsection
@@ -5962,8 +5996,18 @@ name "fig:对象的引用示意图"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 this
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+满足李震梅老师的要求
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6034,8 +6078,18 @@ status open
 其中，this.username即指当前对象的username属性，这样就把作为参数的username和作为对象属性的username区分开来了。
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 super
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+满足李震梅老师的要求
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

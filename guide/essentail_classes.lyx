@@ -294,8 +294,8 @@ char c = 'A'; // 一个字符变量
 常见字符串处理方法
 \end_layout
 
-\begin_layout Subsubsection
-字符串的长度
+\begin_layout Subsubsection*
+求字符串的长度
 \end_layout
 
 \begin_layout Standard
@@ -351,7 +351,7 @@ status open
 ，因此上面的代码片段输出结果为8。
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 截取字符串
 \end_layout
 
@@ -457,7 +457,7 @@ status open
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 分割字符串
 \begin_inset CommandInset label
 LatexCommand label
@@ -612,7 +612,7 @@ reference "chap:Java的IO"
 ）。
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 拼接字符串
 \begin_inset CommandInset label
 LatexCommand label
@@ -805,7 +805,7 @@ lder的效率要比StringBuffer高一些。
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 查找（匹配）字符串
 \begin_inset CommandInset label
 LatexCommand label
@@ -897,7 +897,7 @@ status open
 。
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 其他字符串处理方法
 \end_layout
 
