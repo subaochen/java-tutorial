@@ -50,3 +50,61 @@
 %\renewcommand{\CJKglue}{\hskip 0.9bp plus 0.03\baselineskip minus 0.03\baselineskip}
 \input{/home/subaochen/git/writing-common/translations.tex}
 \input{/home/subaochen/git/writing-common/listing.tex}
+
+% 页面章节导航
+\usepackage[contents={},opacity=1,scale=1,color=white]{background}
+\usepackage{tikzpagenodes}
+\usepackage{totcount}
+\usetikzlibrary{calc}
+\usepackage{assoccnt}
+
+\newif\ifMaterial
+
+\newlength\LabelSize
+\setlength\LabelSize{2.5cm}
+
+% auxiliary counter
+\newcounter{chapshift}
+\DeclareAssociatedCounters{chapter}{chapshift}
+
+\AtBeginDocument{%
+    \regtotcounter{chapter}
+    \setlength\LabelSize{\dimexpr\textheight/\totvalue{chapter}\relax}
+    \ifdim\LabelSize>2.5cm\relax
+    \global\setlength\LabelSize{2.5cm}
+    \fi
+}
+
+\newcommand\AddLabels{%
+    \Materialtrue%
+    \AddEverypageHook{%
+        \ifMaterial%
+        \ifodd\value{page} %
+        \backgroundsetup{
+            angle=90,
+            position={current page.east|-current page text area.north  east},
+            vshift=12pt,
+            %hshift=-\thechapter*\LabelSize,
+            hshift=-\thechapshift*\LabelSize,
+            contents={%
+                \tikz\node[fill=DodgerBlue4,anchor=west,text width=\LabelSize,
+                align=center,text height=15pt,text depth=13pt,font=\large\sffamily] {\thechapter};
+            }%
+        }
+        \else
+        \backgroundsetup{
+            angle=90,
+            position={current page.west|-current page text area.north west},
+            vshift=-12pt,
+            hshift=-\thechapshift*\LabelSize,
+            %hshift=-\thechapter*\LabelSize,
+            contents={%
+                \tikz\node[fill=DodgerBlue4,anchor=west,text width=\LabelSize,
+                align=center,text height=15pt,text depth=13pt,font=\large\sffamily] {\rotatebox{180}{\thechapter}};
+            }%
+        }
+        \fi
+        \BgMaterial%
+    \else\relax\fi}%
+}
+\newcommand\RemoveLabels{\Materialfalse}
