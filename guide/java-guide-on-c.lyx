@@ -91,7 +91,7 @@ PackageOptions url hyphens
 \quotes_language english
 \papercolumns 1
 \papersides 2
-\paperpagestyle fancy
+\paperpagestyle empty
 \tracking_changes false
 \output_changes false
 \html_math_output 0
