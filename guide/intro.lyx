@@ -793,6 +793,10 @@ javap
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 详细的JDK工具列表在
 \begin_inset CommandInset ref
 LatexCommand nameref
@@ -822,7 +826,7 @@ reference "subsec:下载和安装JDK"
 
 ）之后转到bin目录浏览，在ubuntu下面通过以下命令
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 也许你安装的JDK版本和这里不一致。可以通过这个命令了解你的电脑上安装的是哪个版本的JDK：dpkg -l | grep -i 
@@ -841,7 +845,7 @@ openjdk
 了解JDK包含了哪些命令和工具：
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Box Shadowbox
 position "t"
 hor_pos "c"
@@ -862,6 +866,11 @@ status open
 
 \begin_layout Plain Layout
 $ dpkg -L openjdk-8-jdk-headless | more
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1180,29 +1189,9 @@ https://www.jetbrains.com/idea/
 
 \end_inset
 
- 选择Community版本下载即可。请根据所使用的操作系统选择不同的压缩格式。作者使用的是Linux操作系统，因此选择的是tar.gz不带JDK的安装包（JDK
-已经在
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-sectionname
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "subsec:JDK的概念"
-
-\end_inset
-
-一节安装过了）。假设最新的idea下载到了～/downloads目录下。作者的习惯是在家目录建立一个devel目录，然后将所有软件开发相关的工具等都放到deve
-l目录下，因此将下载的idea安装文件解压缩：
+ 选择Community版本下载即可。请根据所使用的操作系统选择不同的压缩格式。作者使用的是Linux操作系统，因此选择的是tar.gz不带JDK的安装包。假设最
+新的idea下载到了～/downloads目录下。作者的习惯是在家目录建立一个devel目录，然后将所有软件开发相关的工具等都放到devel目录下，因此将下载的
+idea安装文件解压缩：
 \end_layout
 
 \begin_layout Standard
