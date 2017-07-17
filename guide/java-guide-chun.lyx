@@ -6,7 +6,7 @@
 \origin unavailable
 \textclass ctex-book
 \begin_preamble
-\input{../../writing-common/book-preamble.tex}
+\input{preamble.tex}
 \end_preamble
 \options openany,schema=chinese,heading=true
 \use_default_options true
@@ -91,7 +91,7 @@ PackageOptions url hyphens
 \quotes_language english
 \papercolumns 1
 \papersides 2
-\paperpagestyle empty
+\paperpagestyle fancy
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -152,19 +152,6 @@ CS呢？角色扮演。Mud？
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-AddLabels
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset include
 LatexCommand include
 filename "intro.lyx"
