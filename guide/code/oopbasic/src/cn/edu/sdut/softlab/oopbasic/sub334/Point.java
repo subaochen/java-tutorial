@@ -4,6 +4,7 @@ package cn.edu.sdut.softlab.oopbasic.sub334;
  * 这个例子演示了多个构造方法时的情形.
  *
  * @author SuBaochen:subaochen@126.com
+ * (*@\srcidx{\vref{sub334-Point.java}}@*)
  */
 public class Point {
 
