@@ -7,11 +7,11 @@
 \textclass ctex-book
 \begin_preamble
 \input{../../writing-common/book-preamble.tex}
-\usepackage[draft=true,allpages=true,fontfamily=pag,color=gray,
-grayness=0.8,mark=DRAFT,angle=45,scale=0.8,
-xcoord=0,ycoord=0]{draftmark}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,fontfamily=bch,color=gray!25,angle=45,scale=3,
+xpos=0,ypos=0]{DRAFT}
 \end_preamble
-\options openany,schema=chinese,heading=true,draft
+\options openany,schema=chinese,heading=true
 \use_default_options true
 \begin_modules
 logicalmkup
