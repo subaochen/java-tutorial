@@ -285,5 +285,15 @@ filename "appendix.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
