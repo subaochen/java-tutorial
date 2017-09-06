@@ -127,8 +127,17 @@ status open
 \end_layout
 
 \begin_layout Standard
-Java语言中变量的概念和C语言完全一致，这里不再赘述。所不同的是，C语言中一般使用下划线分隔开多个单词，而在Java中，我们一般使用“驼式命名法”（Camel
- Case Name）来给变量起名字，如
+Java语言中变量的概念和C语言完全一致，这里不再赘述。所不同的是，C语言中一般使用下划线分隔开多个单词，而在Java中，我们一般使用“驼式命名法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+驼式命名法
+\end_layout
+
+\end_inset
+
+”（Camel Case Name）来给变量起名字，如
 \begin_inset ERT
 status open
 
@@ -433,8 +442,26 @@ name "sec:常量和常量的命名"
 
 \begin_layout Standard
 常量是一种特殊的变量：其值不允许改变的变量。在C语言中，我们一般使用全大写字母表示常量，Java也完全遵守这一通用规则。所不同的是，Java语言中的常量通常使用
-final static进行联合修饰：final表示不可修改，static表示类变量，即所有对象共享一个此常量的备份。显然，对于常量而言，这样的修饰是十分合理和
-必要的，举例
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+final
+\end_layout
+
+\end_inset
+
+final static
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+static
+\end_layout
+
+\end_inset
+
+进行联合修饰：final表示不可修改，static表示类变量，即所有对象共享一个此常量的备份。显然，对于常量而言，这样的修饰是十分合理和必要的，举例
 \begin_inset Foot
 status open
 
@@ -567,7 +594,17 @@ status open
 \end_layout
 
 \begin_layout Standard
-Java的简单数据类型（又称为基本数据类型）和C语言几乎完全一致，如
+Java的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+简单数据类型
+\end_layout
+
+\end_inset
+
+简单数据类型（又称为基本数据类型）和C语言几乎完全一致，如
 \begin_inset ERT
 status open
 
@@ -1356,7 +1393,17 @@ reference "sec:字符串处理"
 
 \end_inset
 
-讨论使用JDK中提供的String类来表示字符串以及字符串的相关操作。
+讨论使用JDK中提供的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+String
+\end_layout
+
+\end_inset
+
+String类来表示字符串以及字符串的相关操作。
 \end_layout
 
 \end_inset
@@ -1457,7 +1504,27 @@ reference "fig:Java中的运算符"
 
 \end_inset
 
-，除了instanceof和new运算符外，Java的运算符及其优先级规则和C是一样的：
+，除了
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+instanceof
+\end_layout
+
+\end_inset
+
+instanceof和
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+new
+\end_layout
+
+\end_inset
+
+new运算符外，Java的运算符及其优先级规则和C是一样的：
 \end_layout
 
 \begin_layout Standard
@@ -1696,8 +1763,37 @@ status open
 \end_layout
 
 \begin_layout Standard
-我们说“C语言是一种表达式语言”，可见表达式的概念是多么的重要！实际上，现代的程序设计语言，包括Java都可以称作“表达式语言”，表达式由参与运算的元素（称为运
-算数）和运算符的不同组合而成，即：
+我们说“C语言是一种表达式语
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+表达式语
+\end_layout
+
+\end_inset
+
+言”，可见表达式的概念是多么的重要！实际上，现代的程序设计语言，包括Java都可以称作“表达式语言”，表达式由参与运算的元素（称为运算数
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+运算数
+\end_layout
+
+\end_inset
+
+）和运算符
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+运算符
+\end_layout
+
+\end_inset
+
+的不同组合而成，即：
 \end_layout
 
 \begin_layout Definition
@@ -1705,7 +1801,17 @@ status open
 \end_layout
 
 \begin_layout Definition
-要特别强调的是，每一个表达式都一定有一个确定的值，即“表达式的值”。举例说明：
+要特别强调的是，每一个表达式都一定有一个确定的值，即“表达式的值
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+表达式的值
+\end_layout
+
+\end_inset
+
+”。举例说明：
 \end_layout
 
 \begin_layout Definition
@@ -2171,7 +2277,17 @@ name "subsec:Java加强了的switch分支结构"
 \end_layout
 
 \begin_layout Standard
-Java中的switch语句，不仅可以接受一个整数表达式（即表达式的值为整数），也可以接受一个字符串表达式（即表达式的值为字符串）和Enum类
+Java中的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+switch
+\end_layout
+
+\end_inset
+
+switch语句，不仅可以接受一个整数表达式（即表达式的值为整数），也可以接受一个字符串表达式（即表达式的值为字符串）和Enum类
 \begin_inset Foot
 status open
 
@@ -2228,7 +2344,57 @@ lstparams "caption={Month.java},label={Month.java}"
 \end_layout
 
 \begin_layout Standard
-Java中的三大循环结构（for循环、while循环、do-while循环）以及break、continue的用法和C语言完全一致，不再赘述。
+Java中的三大循环结构（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+for
+\end_layout
+
+\end_inset
+
+for循环、while
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+while
+\end_layout
+
+\end_inset
+
+循环、do-while
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+do-while
+\end_layout
+
+\end_inset
+
+循环）以及break
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+break
+\end_layout
+
+\end_inset
+
+、continue
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+continue
+\end_layout
+
+\end_inset
+
+的用法和C语言完全一致，不再赘述。
 \end_layout
 
 \begin_layout Paragraph*
@@ -2293,8 +2459,17 @@ lstparams "caption={EnhancedFor.java},label={EnhancedFor.java}"
 \end_layout
 
 \begin_layout Standard
-Java方法的参数可以是不定长的，即任意个数的参数。不定长参数的表示方法是在参数类型和参数名之间使用...隔开，这样参数名在方法体内就被当做一个数组看待，在方法体内可
-以遍历这个数组取得每一个参数。
+Java方法的参数可以是不定长的，即任意个数的参数。
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+不定长参数
+\end_layout
+
+\end_inset
+
+不定长参数的表示方法是在参数类型和参数名之间使用...隔开，这样参数名在方法体内就被当做一个数组看待，在方法体内可以遍历这个数组取得每一个参数。
 \end_layout
 
 \begin_layout Standard
@@ -2350,7 +2525,17 @@ Java的注释
 \end_layout
 
 \begin_layout Standard
-Java支持两种方式的注释：
+Java支持两种方式的注
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+注
+\end_layout
+
+\end_inset
+
+释：
 \end_layout
 
 \begin_layout Enumerate

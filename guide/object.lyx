@@ -193,7 +193,17 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-使用struct描述同学们的英语和数学成绩，代码片段如下：
+使用
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+struct
+\end_layout
+
+\end_inset
+
+struct描述同学们的英语和数学成绩，代码片段如下：
 \begin_inset listings
 inline false
 status open
@@ -235,10 +245,19 @@ struct score stu_scores[40];
 
 \end_inset
 
-struct在语法上保证了name、english_score、math_score这三个变量是一一映射的，是score结构体的“成员分量”，因此struct在
-语法上保证了名字和成绩不可能张冠李戴，杜绝了可能存在的隐患，也减轻了程序员的思想负担（不需要时刻提醒自己要维护姓名和成绩的映射关系）。所以，struct是C语言
-的重要组成部分，是C语言描述现实世界的重武器，在大型项目中大量使用struct来表达同类事物的共同特征（属性）。比如打开Linux内核源代码的头文件目录，我们随
-处可见大量的struct定义：
+struct在语法上保证了name、english_score、math_score这三个变量是一一映射的，是score结构体的“成员分量
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+成员分量
+\end_layout
+
+\end_inset
+
+”，因此struct在语法上保证了名字和成绩不可能张冠李戴，杜绝了可能存在的隐患，也减轻了程序员的思想负担（不需要时刻提醒自己要维护姓名和成绩的映射关系）。所以
+，struct是C语言的重要组成部分，是C语言描述现实世界的重武器，在大型项目中大量使用struct来表达同类事物的共同特征（属性）。比如打开Linux内核源代
+码的头文件目录，我们随处可见大量的struct定义：
 \begin_inset listings
 inline false
 status open
@@ -284,6 +303,15 @@ struct font_desc {
 \end_layout
 
 \begin_layout Definition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+struct
+\end_layout
+
+\end_inset
+
 struct是对一类事物公共属性的描述。
 \end_layout
 
@@ -404,8 +432,17 @@ reference "subsec:struct的局限性"
 
 \end_inset
 
-所述，struct有其局限性，只能描述客观事物的属性，不能表达对客观事物的进一步认知动作和改造利用的动作，于是在面向对象的程序设计语言中引入“类”的概念弥补st
-ruct的这一缺陷。
+所述，struct有其局限性，只能描述客观事物的属性，不能表达对客观事物的进一步认知动作和改造利用的动作，于是在面向对象的程序设计语言中引入“
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+类
+\end_layout
+
+\end_inset
+
+类”的概念弥补struct的这一缺陷。
 \end_layout
 
 \begin_layout Definition
@@ -664,7 +701,17 @@ status open
 \end_layout
 
 \begin_layout Itemize
-大部分情况下需要将类定义为public的，参见
+大部分情况下需要将类定义为
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+public
+\end_layout
+
+\end_inset
+
+public的，参见
 \begin_inset ERT
 status open
 
@@ -688,7 +735,17 @@ reference "subsec:类的访问控制"
 \end_layout
 
 \begin_layout Itemize
-类名的常规命名方式驼峰命名法，并且第一个字母是大写的。
+类名的常规命名遵循驼式命名法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+驼式命名法
+\end_layout
+
+\end_inset
+
+，并且第一个字母是大写的。
 \end_layout
 
 \begin_layout Itemize
@@ -760,6 +817,15 @@ moveTo操作。但是，Point类并没有和屏幕上的实体点绑在一起，
 status open
 
 \begin_layout Plain Layout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+实例
+\end_layout
+
+\end_inset
+
 实例
 \end_layout
 
@@ -780,6 +846,15 @@ status open
 status open
 
 \begin_layout Plain Layout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+对象
+\end_layout
+
+\end_inset
+
 对象
 \end_layout
 
@@ -834,7 +909,17 @@ status open
 status open
 
 \begin_layout Plain Layout
-对象的属性（property）即为类的“成员分量”
+对象的属性
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+
+（property）即为类的“成员分量”
 \end_layout
 
 \end_inset
@@ -847,7 +932,27 @@ status open
 status open
 
 \begin_layout Plain Layout
-对象的方法（method）即为类中定义的函数
+对象的方法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+
+（method）即为类中定义的函数
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+函数
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -856,8 +961,18 @@ status open
 \end_layout
 
 \begin_layout Standard
-在java中，通过new操作符创建类的实例（对象），比如new Point（）创建了一个“点”的实例（对象）。和C语言中访问struct的成员变量类似，访问Ja
-va对象的属性和方法是通过
+在java中，通过
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+new
+\end_layout
+
+\end_inset
+
+new操作符创建类的实例（对象），比如new Point（）创建了一个“点”的实例（对象）。和C语言中访问struct的成员变量类似，访问Java对象的属性和方
+法是通过
 \begin_inset Flex Strong
 status open
 
@@ -1080,13 +1195,32 @@ circle1's area=314.159
 \end_layout
 
 \begin_layout Standard
-注意到我们在Rectangle中使用Point类定义一个startPoint对象的同时初始化了这个对象，即通过new Point()创建了一个空的Point对象
-。这是必要的，因为我们在Draw.java中创建一个Rectangle对象rect1后，通过rect1.startPoint.x设置startPoint的x坐标。如果
-不在Rectangle中创建空的Point对象，则rect1.startPoint.x操作会报告著名的
+注意到我们在Rectangle中使用Point类定义一个startPoint对象的同时
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+初始化
+\end_layout
+
+\end_inset
+
+初始化了这个对象，即通过new Point()创建了一个空的Point对象。这是必要的，因为我们在Draw.java中创建一个Rectangle对象rect1后，
+通过rect1.startPoint.x设置startPoint的x坐标。如果不在Rectangle中创建空的Point对象，则rect1.startPoint.x操作
+会报告著名的
 \begin_inset Flex Strong
 status open
 
 \begin_layout Plain Layout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+NPE
+\end_layout
+
+\end_inset
+
 NPE
 \end_layout
 
@@ -1143,7 +1277,17 @@ name "sec:对象的创建过程"
 \end_layout
 
 \begin_layout Standard
-当我们使用new Point()创建一个Point类的对象时，Java是如何创建这个对象的呢？
+当我们使用
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+new
+\end_layout
+
+\end_inset
+
+new Point()创建一个Point类的对象时，Java是如何创建这个对象的呢？
 \begin_inset Note Note
 status open
 
@@ -1173,7 +1317,24 @@ reference "fig:对象的构造过程"
 
 \end_inset
 
-所示。
+所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+实际上，为了理解方便，这是一个简化了的对象创建过程，对象的完整创建过程可参考JVM Specification
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jvm-se8-specification"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Standard
@@ -1303,6 +1464,15 @@ name "subsec:构造方法"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+构造方法
+\end_layout
+
+\end_inset
+
 构造方法的用途，我们在
 \begin_inset ERT
 status open

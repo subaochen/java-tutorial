@@ -738,7 +738,7 @@ JVM）以及一些标准的类库（Class Library）。通过JVM才能在电脑�
 status open
 
 \begin_layout Plain Layout
-比如GCJ
+GCJ
 \end_layout
 
 \end_inset
@@ -768,18 +768,18 @@ Java语言使用解释层最初是为了轻巧性。所以这些程序的运行�
 \end_layout
 
 \begin_layout Standard
-Java语言在最开始应用的时候是没有解释层的，所有需要编译的代码都直接转换成机器的原始代码。这样做的后果就是获得了最佳的性能，但是程序臃肿异常。从JIT
+Java语言在最开始应用的时候是没有解释层的，所有需要编译的代码都直接转换成机器的原始代码。这样做的后果就是获得了最佳的性能，但是程序臃肿异常。从
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-从JIT技术开始
+JIT
 \end_layout
 
 \end_inset
 
-技术开始，Java的程序都经过一次转换之后才变成机器码。很多老牌的第三方虚拟机都使用一种叫做“动态编译”的技术，也就是说虚拟机实时监测和分析程序的运行行为，同时
-选择性地对程序所需要的部分进行编译和优化。所有这些技术都改善了代码的运行速度，但是又不会让程序的体积变得失常。
+JIT技术开始，Java的程序都经过一次转换之后才变成机器码。很多老牌的第三方虚拟机都使用一种叫做“动态编译”的技术，也就是说虚拟机实时监测和分析程序的运行行为
+，同时选择性地对程序所需要的部分进行编译和优化。所有这些技术都改善了代码的运行速度，但是又不会让程序的体积变得失常。
 \end_layout
 
 \begin_layout Standard
