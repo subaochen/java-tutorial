@@ -240,6 +240,58 @@ public class KDW {
 \begin_layout Section
 \begin_inset CommandInset ref
 LatexCommand nameref
+reference "chap:Java的基础语法"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "exer:从键盘输入球体的半径，求球体的体积。"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/linux/java/java-tutorial/guide/code/answers/src/Ball.java"
+lstparams "language=Java,caption={求球体体积示例},label={ball volume example}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "exer:编写一个程序，寻找一组整数中的最大值和最小值。输入格式：首先输入"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/linux/java/java-tutorial/guide/code/answers/src/MaxMin.java"
+lstparams "language=Java,caption={求给定整数序列的最大值和最小值},label={max and min value from integer array}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset ref
+LatexCommand nameref
 reference "chap:面向对象的基本概念"
 
 \end_inset

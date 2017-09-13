@@ -99,6 +99,13 @@ PackageOptions url hyphens
 
 \begin_layout Chapter
 Java的基础语法
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Java的基础语法"
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -2125,7 +2132,14 @@ status open
 
 \end_layout
 
-\begin_layout Problem
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
 请结合
 \begin_inset ERT
 status open
@@ -2157,6 +2171,24 @@ status open
 \end_inset
 
 （魔幻字符串）？常量在消除魔幻数字中起到怎样的作用？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+从键盘输入球体的半径，求球体的体积
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:从键盘输入球体的半径，求球体的体积。"
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Section
@@ -2406,21 +2438,26 @@ Java提供了一种加强了的for循环语句，可以很方便的遍历集合�
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex Strong
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
 for(元素类型T 循环变量t:集合s) {...}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-更好的表现形式？
 \end_layout
 
 \end_inset
@@ -2646,6 +2683,17 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Java的基本语法结构中，哪些方面和C语言一致？Java增加了哪些新特性？
+\end_layout
+
 \begin_layout Section
 综合应用举例
 \end_layout
@@ -2807,14 +2855,6 @@ pi$
 号的变换。
 \end_layout
 
-\begin_layout Section*
-思考和练习
-\end_layout
-
-\begin_layout Exercise
-Java的基本语法结构中，哪些方面和C语言一致？Java增加了哪些新特性？
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2823,18 +2863,14 @@ Java的基本语法结构中，哪些方面和C语言一致？Java增加了哪�
 \end_layout
 
 \begin_layout Exercise
-从键盘输入球体的半径，求球体的体积。
-\end_layout
+编写一个程序，寻找一组整数中的最大值和最小值。输入格式：首先输入N，表示这组整数的个数，然后依次输入这组整数
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:编写一个程序，寻找一组整数中的最大值和最小值。输入格式：首先输入"
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
-
-\end_layout
-
-\begin_layout Exercise
-编写一个程序，寻找一组整数中的最大值和最小值。输入格式：首先输入N，表示这组整数的个数，然后依次输入这组整数。
+。
 \end_layout
 
 \begin_layout Standard
