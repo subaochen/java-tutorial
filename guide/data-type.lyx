@@ -2672,7 +2672,17 @@ status open
 
 \end_inset
 
-不定长参数的表示方法是在参数类型和参数名之间使用...隔开，这样参数名在方法体内就被当做一个数组看待，在方法体内可以遍历这个数组取得每一个参数。
+不定长参数的表示方法是在参数类型和参数名之间使用...隔开，当实参和形参匹配时，实参列表会保存到一个指定的
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+数组
+\end_layout
+
+\end_inset
+
+中（即不定长参数名），在方法体内可以遍历这个数组访问每一个参数。
 \end_layout
 
 \begin_layout Standard
