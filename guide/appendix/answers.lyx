@@ -289,6 +289,34 @@ lstparams "language=Java,caption={求给定整数序列的最大值和最小值}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "exer:请使用switch-case结构重新实现。"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/linux/java/java-tutorial/guide/code/answers/src/ShowGrade.java"
+lstparams "language=Java,caption={使用switch-case结构的成绩等级分示例},label={switch-case showgrade}"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset ref
 LatexCommand nameref

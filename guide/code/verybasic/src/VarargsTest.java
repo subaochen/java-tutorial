@@ -9,11 +9,11 @@ public class VarargsTest {
 
 	/**
 	 *
-	 * @param x
+	 * @param x 不定长参数，实际是一个数组
 	 * @return
 	 */
-	public static int add(int... x) {
-		int result = 0;
+	public static float add(int... x) {
+		float result = 0;
 		for (int i = 0; i < x.length; i++)
 			result += x[i];
 
