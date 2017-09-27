@@ -1522,8 +1522,27 @@ status open
 
 \end_inset
 
-也就是说，我们new Point()创建一个对象的时候，最后一步会调用Point类的无参构造方法。如果Point类没有提供这样的构造方法，则调用Point类的默
-认构造方法。
+也就是说，我们new Point()创建一个对象的时候，最后一步会调用Point类的无参构造方法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+无参构造方法
+\end_layout
+
+\end_inset
+
+。如果Point类没有提供这样的构造方法，则调用Point类的默认构造方法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+默认构造方法
+\end_layout
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Standard
@@ -1548,8 +1567,28 @@ status open
 status open
 
 \begin_layout Plain Layout
-注意无参构造方法和默认构造方法的区别：默认构造方法一定是无参的构造方法，但是无参的构造方法不一定是默认构造方法。当一个类没有显式的定义任何构造方法时，编译器自动
-添加默认构造方法；当一个类有任何的构造方法时，编译器都不会自动添加默认构造方法。
+注意
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+无参构造方法
+\end_layout
+
+\end_inset
+
+无参构造方法和
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+默认构造方法
+\end_layout
+
+\end_inset
+
+默认构造方法的区别：默认构造方法一定是无参的构造方法，但是无参的构造方法不一定是默认构造方法。当一个类没有显式的定义任何构造方法时，编译器自动添加默认构造方法；
+当一个类有任何的构造方法时，编译器都不会自动添加默认构造方法。
 \end_layout
 
 \end_inset
@@ -2150,9 +2189,29 @@ name "exer:Java的构造方法有哪些特点？"
 \end_layout
 
 \begin_layout Standard
-在进行文件管理时，我们使用文件夹来组织不同类型的文件。在Java中，我们使用“包”(package）来管理不同类型的Java源文件，其实“包”就是文件夹，我们说
-包cn.edu.sdut.softlab.oopbasic.sub332中的Point.java时，其实是说，位于目录cn/edu/sdut/softlab/oopbasi
-c/sub332目录下的Point.java。也就是说，把目录的分隔符换成“.”，目录名就变成了包名。
+在进行文件管理时，我们使用文件夹来组织不同类型的文件。在Java中，我们使用“
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+包
+\end_layout
+
+\end_inset
+
+包”(
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+package
+\end_layout
+
+\end_inset
+
+package）来管理不同类型的Java源文件，其实“包”就是文件夹，我们说包cn.edu.sdut.softlab.oopbasic.sub332中的Point.java
+时，其实是说，位于目录cn/edu/sdut/softlab/oopbasic/sub332目录下的Point.java。也就是说，把目录的分隔符换成“.”，目录名
+就变成了包名。
 \begin_inset ERT
 status open
 
@@ -2827,7 +2886,17 @@ Card中定义专属的属性和方法即可。
 \end_layout
 
 \begin_layout Standard
-这就是Java等面向对象程序设计语言的“继承”机制。简单的说，
+这就是Java等面向对象程序设计语言的“
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+继承
+\end_layout
+
+\end_inset
+
+继承”机制。简单的说，
 \begin_inset Flex Strong
 status open
 
@@ -2897,8 +2966,18 @@ reference "fig:BankCard的类层次结构"
 status open
 
 \begin_layout Plain Layout
-这样表示类层次关系的图叫做UML的类图。UML（Universal Model Language，统一建模语言）是IT行业中通用的描述需求和系统设计的建模工具，
-其中常用的图形有：类图、用例图、顺序图、活动图等，本书中只涉及到类图，用来表达类的继承和接口的实现。类图的意义应该是一目了然的，箭头表示类继承的方向，比如
+这样表示类层次关系的图叫做
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+UML
+\end_layout
+
+\end_inset
+
+UML的类图。UML（Universal Model Language，统一建模语言）是IT行业中通用的描述需求和系统设计的建模工具，其中常用的图形有：类图、用
+例图、顺序图、活动图等，本书中只涉及到类图，用来表达类的继承和接口的实现。类图的意义应该是一目了然的，箭头表示类继承的方向，比如
 \begin_inset ERT
 status open
 
@@ -2929,6 +3008,15 @@ dia，参见本书前言部分的说明。
 status open
 
 \begin_layout Plain Layout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+父类
+\end_layout
+
+\end_inset
+
 父类
 \end_layout
 
@@ -2939,6 +3027,15 @@ status open
 status open
 
 \begin_layout Plain Layout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+子类
+\end_layout
+
+\end_inset
+
 子类
 \end_layout
 
@@ -3046,6 +3143,166 @@ public class CreditCard extend BandCard{...}
 
 \begin_layout LyX-Code
 public class CreditCard extends BandCard, Card{...}
+\end_layout
+
+\begin_layout Standard
+在Java中，
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Object
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Object
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+类是所有类的基类（父类），即在Java的类树结构中，
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Object
+\end_layout
+
+\end_inset
+
+是“根”。因此，Java中的所有类都继承了
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Object
+\end_layout
+
+\end_inset
+
+类中定义的属性和方法，具体请参见JDK API中关于
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Object
+\end_layout
+
+\end_inset
+
+类的介绍。特别的，
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Object
+\end_layout
+
+\end_inset
+
+类的以下方法在（初级）编程实践中经常用到：
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+toString
+\end_layout
+
+\end_inset
+
+方法
+\end_layout
+
+\end_inset
+
+ 输出当前对象的字符串表达，一般用于调式输出。实际上，当直接输出一个对象时，即调用了该对象的
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+toString
+\end_layout
+
+\end_inset
+
+方法，也就是说，
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+System.out.println(aObject
+\end_layout
+
+\end_inset
+
+)和
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+System.out.println(aObject.toString())
+\end_layout
+
+\end_inset
+
+的结果是一样的。通常情况下，子类需要覆盖
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Object
+\end_layout
+
+\end_inset
+
+类的
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+toString
+\end_layout
+
+\end_inset
+
+方法，以便更好的描述类的内部结构。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+equals
+\end_layout
+
+\end_inset
+
+方法
+\end_layout
+
+\end_inset
+
+ 比较两个对象是否相等。不像简单数据类型的比较，对象的比较复杂，这里不展开阐述，详情可参见以下资料：https://dzone.com/articles/obje
+ct-identity-and-equality-in-java，或者：https://stackoverflow.com/questions/13387742/
+compare-two-objects-with-equals-and-operator。
 \end_layout
 
 \begin_layout Subsection
