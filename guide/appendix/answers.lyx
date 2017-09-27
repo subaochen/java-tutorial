@@ -337,6 +337,43 @@ name "solu:default修饰的类，在其他包中不可见。"
 default修饰的类，在其他包中不可见。
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "exer:Java的构造方法有哪些特点？"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+Java的构造方法有4个特点：
+\end_layout
+
+\begin_layout Enumerate
+构造方法的方法名必须和类名保持完全一致。
+\end_layout
+
+\begin_layout Enumerate
+构造方法没有返回值。
+\end_layout
+
+\begin_layout Enumerate
+一个Java类中可以定义多个构造方法。
+\end_layout
+
+\begin_layout Enumerate
+在构造对象时，首先调用父类的构造方法，再调用本类的构造方法。
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset ref
 LatexCommand nameref

@@ -2130,6 +2130,17 @@ status open
 
 \end_layout
 
+\begin_layout Exercise
+Java的构造方法有哪些特点？
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:Java的构造方法有哪些特点？"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 类的组织：包
 \end_layout
@@ -2333,6 +2344,30 @@ status open
 
 \begin_layout Itemize
 Java的核心API，即java.lang包的类，Java编译器会自动导入，也不需要我们手工导入。
+\end_layout
+
+\begin_layout Itemize
+可以通过*实现批量导入，比如：
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+import com.company.lab.*
+\end_layout
+
+\end_inset
+
+表示导入
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+com.company.lab
+\end_layout
+
+\end_inset
+
+包中的所有类。
 \end_layout
 
 \begin_layout Standard
@@ -4008,17 +4043,35 @@ status open
 
 \begin_layout Standard
 \begin_inset Float table
-placement tbph
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java的访问控制修饰符
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Java的访问控制修饰符"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="5">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="15line%">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4169,7 +4222,7 @@ X
 \begin_inset Text
 
 \begin_layout Plain Layout
-default
+（default）
 \end_layout
 
 \end_inset
@@ -4262,29 +4315,6 @@ X
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Java的访问控制修饰符
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Java的访问控制修饰符"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
