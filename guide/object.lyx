@@ -6096,8 +6096,17 @@ name "sec:引用类型"
 \end_layout
 
 \begin_layout Standard
-很多人会说，Java语言比C语言更“进步”或者“安全”的一个原因是Java没有指针数据类型，其实这是不确切的。Java的确没有像C语言那样提供“指针”这种基本数
-据类型，但是Java确实使用了指针，而且指针的正确使用同样很重要。Java中的指针叫做“
+很多人会说，Java语言比C语言更“进步”或者“安全”的一个原因是Java没有指针数据类型，其实这是不确切的。Java的确没有像C语言那样提供“指针
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+指针
+\end_layout
+
+\end_inset
+
+”这种基本数据类型，但是Java确实使用了指针，而且指针的正确使用同样很重要。Java中的指针叫做“
 \begin_inset Index idx
 status open
 
