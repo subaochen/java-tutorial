@@ -4194,7 +4194,17 @@ name "sec:访问控制"
 
 \begin_layout Standard
 为什么需要对属性和方法进行访问控制呢？从面向对象的设计角度看，一个对象完成了特定的功能，对象的使用者其实并不关心这个特定功能是如何实现的，只要这个功能能够正常工
-作就可以了，这就是所谓的“松耦合”（loose coupling principle）原则。考虑
+作就可以了，这就是所谓的“
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+松耦合
+\end_layout
+
+\end_inset
+
+松耦合”（loose coupling principle）原则。考虑
 \begin_inset ERT
 status open
 
@@ -4281,7 +4291,8 @@ reference "sec:接口"
 
 \end_inset
 
-讨论），其内部实现及只在内部实现中用到的一些对象状态，应该想办法隐藏起来。换句话说，Bean组件如果对外暴露的调用接口越多，则后续改进时要考虑的因素就越多。
+讨论），其内部实现及只在内部实现中用到的一些对象状态，应该想办法隐藏起来。换句话说，Bean组件如果对外暴露的调用接口越多，则后续改进时要考虑的因素就越多，困难
+也越大。
 \end_layout
 
 \begin_layout Standard
@@ -4592,7 +4603,17 @@ name "subsec:default修饰符"
 \end_layout
 
 \begin_layout Standard
-在之前我们的代码中，属性和方法前面没有使用任何修饰符，即默认修饰符。对照
+在之前我们的代码中，属性和方法前面没有使用任何修饰符，即默认修饰符
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+默认修饰符
+\end_layout
+
+\end_inset
+
+。对照
 \begin_inset ERT
 status open
 
@@ -4781,7 +4802,17 @@ private修饰符
 \end_layout
 
 \begin_layout Standard
-default给了同一个包下的其他类“篡改”本类的机会，private修饰符则完全杜绝了这个问题：从
+default给了同一个包下的其他类“篡改”本类的机会，
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+private
+\end_layout
+
+\end_inset
+
+private修饰符则完全杜绝了这个问题：从
 \begin_inset ERT
 status open
 
@@ -5177,8 +5208,17 @@ protected修饰符
 \end_layout
 
 \begin_layout Standard
-private修饰过的属性和方法只有本类可以访问，default修饰过的属性和方法本类和本包其他类可以访问，protected修饰过的属性和方法则进一步放宽了限
-制：除了本类、本包之外，子类也可以访问。或者说，我们使用protected修饰属性和方法的唯一目的就是：
+private修饰过的属性和方法只有本类可以访问，default修饰过的属性和方法本类和本包其他类可以访问，
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+protected
+\end_layout
+
+\end_inset
+
+protected修饰过的属性和方法则进一步放宽了限制：除了本类、本包之外，子类也可以访问。或者说，我们使用protected修饰属性和方法的唯一目的就是：
 \begin_inset Flex Strong
 status open
 
@@ -5210,7 +5250,27 @@ reference "subsec:public修饰符"
 
 \end_inset
 
-的public修饰过的属性和方法在子类也是可见的，但是public往往太宽泛，实际应用的时候应该严格限制。
+的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+public
+\end_layout
+
+\end_inset
+
+public修饰过的属性和方法在子类也是可见的，但是
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+public
+\end_layout
+
+\end_inset
+
+public往往太宽泛，实际应用的时候应该严格限制。
 \end_layout
 
 \begin_layout Example
@@ -5406,6 +5466,15 @@ name "subsec:public修饰符"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+public
+\end_layout
+
+\end_inset
+
 public修饰符当然就是无限制的意思了，在属性和方法的访问控制中，public修饰符应该谨慎使用，只有确定需要公开的情形才使用public修饰属性和方法，否则
 和C语言有啥区别呢？请记住，public意味着公开的承诺，一旦你使用了public修饰属性和方法，就意味着你失去了后续修改这部分代码的机会。
 \end_layout
@@ -5495,12 +5564,33 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:访问控制保护范围示意"
 
 \end_inset
 
-可以帮助我们理解public/protected/private修饰符的保护范围。
+可以帮助我们理解public/protected/private修饰符的保护范围。一般的，可以根据
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Java的访问控制修饰符"
+
+\end_inset
+
+按照从左向右的顺序推断修饰符在当前语境中的保护作用。比如，如果父类中的属性是default的，并且子类和父类不在同一个包中，则子类是无法访问父类中该属性的。但是
+如果子类和父类在同一个包中，则子类可以访问父类中这个default修饰的属性—此时default修饰符允许同一包中的类访问这个条件起了作用。
 \end_layout
 
 \begin_layout Standard
@@ -5600,10 +5690,28 @@ name "subsec:类的访问控制"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+public
+\end_layout
+
+\end_inset
+
 public：public修饰的类，在任何包中都可见。
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+default
+\end_layout
+
+\end_inset
+
 default：default修饰（即没有任何修饰符）的类，只在本包中可见。
 \end_layout
 
@@ -5655,7 +5763,17 @@ name "subsec:内部类"
 \end_layout
 
 \begin_layout Standard
-有的时候，我们为了防止命名冲突，或者为了安全起见，定义一个类只希望局限在某个类内使用，这样的类就是内部类（Inner Class）：
+有的时候，我们为了防止命名冲突，或者为了安全起见，定义一个类只希望局限在某个类内使用，这样的类就是
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+内部类
+\end_layout
+
+\end_inset
+
+内部类（Inner Class）：
 \begin_inset Flex Strong
 status open
 
@@ -5937,8 +6055,17 @@ parsing:test string
 
 \begin_layout Itemize
 内部类对象可以访问外部包围类（即内部类是在这个外部包围类中定义的）的属性和方法，即使这个外部类的属性和方法是private的（请读者试着把content属性设置
-为private看看会怎样？试着把parseContent方法设置为private看看会怎样？）。这个很容易理解：内部类和外部类的属性和方法是平等的，就像是本类
-的方法可以无限制访问本类的属性一样，本类的内部类当然可以无限制访问本类的属性和方法。
+为private看看会怎样？试着把parseContent方法设置为private看看会怎样？）。这个很容易理解：内部类和外部类的属性和方法是平等的，
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+就像是本类的方法可以无限制访问本类的属性一样
+\end_layout
+
+\end_inset
+
+，本类的内部类当然可以无限制访问本类的属性和方法。
 \end_layout
 
 \begin_layout Standard
@@ -5970,7 +6097,17 @@ name "sec:引用类型"
 
 \begin_layout Standard
 很多人会说，Java语言比C语言更“进步”或者“安全”的一个原因是Java没有指针数据类型，其实这是不确切的。Java的确没有像C语言那样提供“指针”这种基本数
-据类型，但是Java确实使用了指针，而且指针的正确使用同样很重要。Java中的指针叫做“引用”。
+据类型，但是Java确实使用了指针，而且指针的正确使用同样很重要。Java中的指针叫做“
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+引用
+\end_layout
+
+\end_inset
+
+引用”。
 \end_layout
 
 \begin_layout Standard
@@ -6091,13 +6228,33 @@ person.goHome();
 
 错误，即“空指针异常”。这里只是声明了一个person类型的引用，但是并没有初始化，也就是说，person并没有指向任何实质的Person类型的对象。因此在初始
 化之前，任何对象的引用都是null，这和C语言的指针含义完全一样：在C语言中，任何指针在初始化之前都是null指针，直接使用null指针是有风险的。而在Java
-中，Java虚拟机会自动侦测空指针，任何对空指针（未初始化的对象引用）都会报告NullPointException异常。NullPointException异常
-如此常见，通常大家都把NullPoinitException异常简称为“
+中，Java虚拟机会自动侦测空指针，任何对空指针
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+空指针
+\end_layout
+
+\end_inset
+
+（未初始化的对象引用）都会报告NullPointException异常。NullPointException异常如此常见，通常大家都把NullPoinitExc
+eption异常简称为“
 \begin_inset Flex Strong
 status open
 
 \begin_layout Plain Layout
 NPE
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+NPE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -6242,7 +6399,17 @@ Person[username=zhangsan,password=123456,seniority = 20,salary = 6000.0]
 \end_layout
 
 \begin_layout Standard
-可以看出，adjustSalary方法中改变了person对象的属性slary的值，这和C语言中使用指针作为函数参数的作用如出一辙。
+可以看出，adjustSalary方法中改变了person对象的属性slary的值，
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+这和C语言中使用指针作为函数参数的作用如出一辙
+\end_layout
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Example
@@ -6468,7 +6635,17 @@ status open
 \end_layout
 
 \begin_layout Standard
-Java使用this关键字表示“对象本身”，即
+Java使用
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+this
+\end_layout
+
+\end_inset
+
+this关键字表示“对象本身”，即
 \begin_inset Flex Strong
 status open
 
@@ -6571,8 +6748,27 @@ reference "sec:对象的创建过程"
 \end_inset
 
 中已经看到，对象在创建时会“递归的构造父类对象”，也就是说，递归的调用父类的构造方法，这并不需要我们在子类的构造方法中做什么。但是，有时候我们希望能够控制对象的
-构造过程，也就是说，打破java默认的对象构造过程，在构造对象的链条中加入自定义的成分，这个时候我们可以使用super关键字：指向父类对象的引用。我们通过一个例
-子来说明super在对象的构造过程中是如何起作用的。
+构造过程，也就是说，打破java默认的对象构造过程，在构造对象的链条中加入自定义的成分，这个时候我们可以使用
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+super
+\end_layout
+
+\end_inset
+
+super关键字：指向父类对象的引用。我们通过一个例子来说明
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+super
+\end_layout
+
+\end_inset
+
+super在对象的构造过程中是如何起作用的。
 \end_layout
 
 \begin_layout Example
@@ -6853,7 +7049,7 @@ name "sec:static"
 \end_layout
 
 \begin_layout Standard
-一个电信的面向对象的设计如
+一个典型的面向对象的设计如
 \begin_inset ERT
 status open
 
@@ -6868,7 +7064,7 @@ figurename
 
 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "fig:面向对象编程的基本思路"
 
 \end_inset
@@ -7065,11 +7261,30 @@ reference "sec:常量和常量的命名"
 \end_inset
 
 中提到的，常量一般的命名方式都是public static final的，其中的static表示静态变量，即只在类定义中保存一份的变量，或者说，所有对象共享一份
-的变量。由于是常量，也通常使用final修饰符限定此变量不可修改，即常量（常数变量）。由于静态常量只和类有关而和具体对象无关，因此静态常量又称为
+的变量。由于是常量，也通常使用final修饰符限定此变量不可修改，即常量（常数变量）。由于静态常量只和类有关而和具体对象无关，因此静态常量
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+静态常量
+\end_layout
+
+\end_inset
+
+又称为
 \begin_inset Flex Strong
 status open
 
 \begin_layout Plain Layout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+类常量
+\end_layout
+
+\end_inset
+
 类常量
 \end_layout
 
@@ -7296,7 +7511,27 @@ name "subsec:static属性"
 \end_layout
 
 \begin_layout Standard
-当我们用static修饰类的属性时，这个属性就成为“类属性”。相对于“实例属性”（每个对象都有一份独立的拷贝），
+当我们用static修饰类的属性时，这个属性就成为“
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+类属性
+\end_layout
+
+\end_inset
+
+类属性”。相对于“
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+实例属性
+\end_layout
+
+\end_inset
+
+实例属性”（每个对象都有一份独立的拷贝），
 \begin_inset Flex Strong
 status open
 
@@ -7515,7 +7750,17 @@ status open
 
 \end_inset
 
-一样，类方法指使用static修饰的方法，类方法在所有对象之间共享一个拷贝。类方法通常用于一些工具类的定义，比如JDK中的Math类
+一样，
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+类方法
+\end_layout
+
+\end_inset
+
+类方法指使用static修饰的方法，类方法在所有对象之间共享一个拷贝。类方法通常用于一些工具类的定义，比如JDK中的Math类
 \begin_inset Foot
 status open
 
