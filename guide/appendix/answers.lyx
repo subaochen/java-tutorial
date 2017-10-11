@@ -457,6 +457,74 @@ name "fig:方法调用中的参数传递"
 ppend方法的形参和实参设置为相同，一定程度上容易迷惑读者。
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "exer:试根据编写相应的Bus、Classroom类和接口Wifi、Se"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "solu:abstract class and interface"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/linux/java/java-tutorial/guide/code/answers/src/chap04/Bus.java"
+lstparams "language=Java,caption={Bus.java},label={answer-Bus.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/linux/java/java-tutorial/guide/code/answers/src/chap04/Classroom.java"
+lstparams "language=Java,caption={Classroom.java},label={answer-Classroom.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/linux/java/java-tutorial/guide/code/answers/src/chap04/Wifi.java"
+lstparams "language=Java,caption={Wifi.java},label={answer-Wifi.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/linux/java/java-tutorial/guide/code/answers/src/chap04/Seat.java"
+lstparams "language=Java,caption={Seat.java},label={answer-Seat.java}"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset ref
 LatexCommand nameref

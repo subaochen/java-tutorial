@@ -122,7 +122,17 @@ PackageOptions url hyphens
 \end_layout
 
 \begin_layout Standard
-在类的继承关系中，有些情况下我们不希望根据父类创建对象，或者说希望禁止创建父类对象。比如
+在类的继承关系中，有些情况下我们不希望根据父类创建对象，或者说希望
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+禁止创建父类对象
+\end_layout
+
+\end_inset
+
+。比如
 \begin_inset ERT
 status open
 
@@ -205,7 +215,17 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-使用抽象类：将Animal定义为抽象类，这样使用new创建Animal对象将导致语法错误，参见
+使用抽象类
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+抽象类
+\end_layout
+
+\end_inset
+
+：将Animal定义为抽象类，这样使用new创建Animal对象将导致语法错误，参见
 \begin_inset ERT
 status open
 
@@ -229,7 +249,17 @@ reference "subsec:抽象类"
 \end_layout
 
 \begin_layout Enumerate
-使用接口：将Animal定义为接口，这样便不能直接创建Animal类型的对象，只能通过实现Animal接口创建具体的对象，参见
+使用接口
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+接口
+\end_layout
+
+\end_inset
+
+：将Animal定义为接口，这样便不能直接创建Animal类型的对象，只能通过实现Animal接口创建具体的对象，参见
 \begin_inset ERT
 status open
 
@@ -264,7 +294,17 @@ name "subsec:抽象类"
 \end_layout
 
 \begin_layout Standard
-只要一个类使用abstract修饰，这个类就是一个抽象类。抽象类不允许通过new操作符创建对象，抽象类只能作为父类被继承。
+只要一个类使用
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+abstract
+\end_layout
+
+\end_inset
+
+abstract修饰，这个类就是一个抽象类。抽象类不允许通过new操作符创建对象，抽象类只能作为父类被继承。
 \end_layout
 
 \begin_layout Example
@@ -420,8 +460,18 @@ status open
 \end_layout
 
 \begin_layout Standard
-抽象类是不允许直接实例化的，因此在Client中直接创建Animal类型的对象会报告语法错误。虽然Dog类看起来是一个空的类，但是Dog继承自Animal，因此
-也继承了Animal中已经实现了的公有的hello方法。
+抽象类是不允许直接实例化
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+实例化
+\end_layout
+
+\end_inset
+
+的，因此在Client中直接创建Animal类型的对象会报告语法错误。虽然Dog类看起来是一个空的类，但是Dog继承自Animal，因此也继承了Animal中已
+经实现了的公有的hello方法。
 \end_layout
 
 \begin_layout Subsection
@@ -430,8 +480,17 @@ status open
 
 \begin_layout Standard
 有的时候，我们希望父类的方法仅仅是个声明，即只是说明了方法的名字、返回值类型、参数的类型和个数及其顺序，方法的具体内容（即方法体）需要父类的子类去实现。也就是说
-，父类的这个方法是“抽象”的，因为缺少了方法体，直接调用这个抽象的方法也没有意义，因此Java规定只要类中有一个抽象方法，这个类就必须定义为抽象类。子类在继承抽
-象类后，必须实现父类中的所有抽象方法，除非子类也是抽象类。
+，父类的这个方法是“抽象”的，因为缺少了方法体，直接调用这个抽象的方法也没有意义，因此Java规定只要类中有一个抽象方法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+抽象方法
+\end_layout
+
+\end_inset
+
+，这个类就必须定义为抽象类。子类在继承抽象类后，必须实现父类中的所有抽象方法，除非该子类也是抽象类。
 \end_layout
 
 \begin_layout Example
@@ -636,11 +695,12 @@ reference "exa:实现一个包含抽象方法的抽象类。"
 \end_layout
 
 \begin_layout Itemize
-强制继承，即必须提供子类才能使用抽象父类的属性和功能。
+强制继承，不允许实例化父类，即必须提供子类才能使用抽象父类的属性和功能。
 \end_layout
 
 \begin_layout Itemize
-便于合理划分（区分）事物的共性和个性，将个性化的部分设计为抽象方法，强制子类实现父类的抽象方法。
+便于合理划分（区分）事物的共性和个性，将个性化的部分设计为抽象方法，强制子类实现父类的抽象方法，同时子类中的这些方法其名称、参数和返回值也会受到抽象父类的约束，
+这在系统架构和团队合作中显得尤为重要。
 \end_layout
 
 \begin_layout Standard
@@ -711,7 +771,27 @@ public abstract class Animal {
 \end_layout
 
 \begin_layout Standard
-也就是说，此时的Animal是一个纯抽象类，Java提供了interface（接口）来表达纯的抽象类，如
+也就是说，此时的Animal是一个纯抽象类
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+纯抽象类
+\end_layout
+
+\end_inset
+
+，Java提供了interface（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+接口
+\end_layout
+
+\end_inset
+
+接口）来表达纯的抽象类，如
 \begin_inset ERT
 status open
 
@@ -746,6 +826,15 @@ lstparams "float,caption={Animal.java},label={interface-Animal.java}"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+接口
+\end_layout
+
+\end_inset
+
 接口具有如下的特点：
 \end_layout
 
@@ -811,7 +900,17 @@ public interface Animal {
 \end_layout
 
 \begin_layout Standard
-正因为接口的以上两个特点，可以认为接口是对“纯的抽象类”的简化写法。
+正因为接口的以上两个特点，可以认为
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+接口是对“纯的抽象类”的简化写法
+\end_layout
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Subsection
@@ -1480,6 +1579,91 @@ lstparams "float,caption={BetterSmartPrinter.java},label={multiinterface-BetterS
 \end_layout
 
 \begin_layout Subsection
+抽象类和接口的区别
+\end_layout
+
+\begin_layout Standard
+抽象类和接口是从不同的方向来分析和看待事物—抽象类是纵向分析，接口是横向分析。如
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:抽象类和接口的区别"
+
+\end_inset
+
+所示，纵向来看，Bus类描述了公交车的公共属性和方法，Classroom类描述了教室的公共属性和方法。但是在Bus和Classroom类中，某些方法是公共的，比
+如都提供Wifi接入服务和休息座椅，这些在不同事物中的公共方法，横向（切片）来看就是接口的意义。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imgs/oop-project-method/abstract-class-interface.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+抽象类和接口的区别
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:抽象类和接口的区别"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+试根据
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:抽象类和接口的区别"
+
+\end_inset
+
+编写相应的Bus、Classroom类和接口Wifi、Seat。
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:试根据编写相应的Bus、Classroom类和接口Wifi、Se"
+
+\end_inset
+
+(参见：
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "solu:abstract class and interface"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
 不懂接口的项目经理不是好的项目经理
 \end_layout
 
@@ -1554,8 +1738,27 @@ name "fig:不引入接口时的团队协作"
 
 \begin_layout Standard
 如果不使用接口，团队成员在功能实现时，在方法命名和方法规划上就失去了约束，这在小型项目中也许还是可以接受的，但是随着项目规模的增大，项目成员的增加和更迭，这种没
-有约束的编码方式很容易把项目带到沟里，最终失去控制，导致项目失败。因此，作为项目经理或者项目的架构师，接口是一个有力的工具，在项目之初可以通过定义一系列接口的方
-式规定模块功能和模块之间的交互界面，如
+有约束的编码方式很容易把项目带到沟里，最终失去控制，导致项目失败。因此，作为
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+项目经理
+\end_layout
+
+\end_inset
+
+项目经理或者项目的架构师
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+架构师
+\end_layout
+
+\end_inset
+
+，接口是一个有力的工具，在项目之初可以通过定义一系列接口的方式规定模块功能和模块之间的交互界面，如
 \begin_inset ERT
 status open
 
@@ -1679,7 +1882,17 @@ name "subsec:接口上的匿名内部类"
 \end_layout
 
 \begin_layout Standard
-如果我们确定一个对象只临时使用一次，那么这个对象通常可以采用匿名内部类的方式来实现，参见
+如果我们确定一个对象只临时使用一次，那么这个对象通常可以采用匿名内部类
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+匿名内部类
+\end_layout
+
+\end_inset
+
+的方式来实现，参见
 \begin_inset ERT
 status open
 
@@ -1785,7 +1998,17 @@ name "sec:多态"
 \end_layout
 
 \begin_layout Standard
-所谓多态，是指对象在不同阶段或者环境下有不同的行为特征，听起来是不是有点“变色龙”的味道？
+所谓
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+多态
+\end_layout
+
+\end_inset
+
+多态，是指对象在不同阶段或者环境下有不同的行为特征，听起来是不是有点“变色龙”的味道？
 \end_layout
 
 \begin_layout Standard
@@ -2155,8 +2378,18 @@ reference "fig:Java对象在内存中的存储模型"
 \end_layout
 
 \begin_layout Standard
-如果子类没有重写（orverriding）父类的方法，子类和父类的存储是泾渭分明的。如果子类重写(orverriding）了父类中的方法，那么父类中被重写的方法
-同样会发生变化，即变的和子类中重写的方法一模一样，如
+如果子类没有重写
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+重写
+\end_layout
+
+\end_inset
+
+（orverriding）父类的方法，子类和父类的存储是泾渭分明的。如果子类重写(orverriding）了父类中的方法，那么父类中被重写的方法同样会发生变化，
+即变的和子类中重写的方法一模一样，如
 \begin_inset ERT
 status open
 
@@ -2232,8 +2465,17 @@ name "fig:存在重写情况下的类存储结构"
 \end_layout
 
 \begin_layout Standard
-在上例中，如果子类不是重写（overriding）父类的方法，而是重载（overloading）父类的方法，结果会怎样呢？比如，Cat类的hello方法改为（D
-og/Duke以此类推）：
+在上例中，如果子类不是重写（overriding）父类的方法，而是
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+重载
+\end_layout
+
+\end_inset
+
+重载（overloading）父类的方法，结果会怎样呢？比如，Cat类的hello方法改为（Dog/Duke以此类推）：
 \end_layout
 
 \begin_layout Standard
