@@ -1161,7 +1161,17 @@ byte mask = 0xff;
 \end_layout
 
 \begin_layout Standard
-如果需要对数字做更深入的处理怎么办呢？Java提供了各种基本数字类型的包裹类（Wrapper Class），如
+如果需要对数字做更深入的处理怎么办呢？Java提供了各种基本数字类型的包裹类
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+包裹类
+\end_layout
+
+\end_inset
+
+（Wrapper Class），如
 \begin_inset ERT
 status open
 
@@ -1633,6 +1643,15 @@ status open
 status open
 
 \begin_layout Plain Layout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+自动装箱
+\end_layout
+
+\end_inset
+
 自动装箱（autoboxing）
 \end_layout
 
@@ -1643,7 +1662,17 @@ status open
 status open
 
 \begin_layout Plain Layout
-自动拆箱（unboxing）
+自动拆箱
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+自动拆箱
+\end_layout
+
+\end_inset
+
+（unboxing）
 \end_layout
 
 \end_inset

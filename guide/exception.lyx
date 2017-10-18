@@ -498,7 +498,37 @@ name "sec:Java的异常处理方式"
 \end_layout
 
 \begin_layout Standard
-当然，在Java中我们依然可以像C语言那样去处理异常。不过，Java提供了更棒的异常处理机制：将异常情况抽象为异常对象，并采用责任链处理机制处理异常对象。
+当然，在Java中我们依然可以像C语言那样去处理异常
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+异常
+\end_layout
+
+\end_inset
+
+。不过，Java提供了更棒的异常处理机制：将异常情况抽象为异常对象
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+异常对象
+\end_layout
+
+\end_inset
+
+，并采用责任链
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+责任链
+\end_layout
+
+\end_inset
+
+处理机制处理异常对象。
 \begin_inset Note Note
 status open
 
@@ -581,7 +611,17 @@ name "fig:Java的异常类层次结构"
 \end_layout
 
 \begin_layout Standard
-当异常情况出现时，Java虚拟机能够“捕获”
+当异常情况出现时，Java虚拟机能够“捕获
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+捕获
+\end_layout
+
+\end_inset
+
+”
 \begin_inset Note Note
 status open
 
@@ -1323,8 +1363,17 @@ status open
 \end_layout
 
 \begin_layout Standard
-异常对象当然不是从石头缝里蹦出来的。事实上，我们之所以能够捕获某个异常对象，是因为在try代码块中的某个方法抛出（throw）了异常对象，即某个方法在运行中探测
-到发生了异常状况，因此创建了异常对象并抛出。
+异常对象当然不是从石头缝里蹦出来的。事实上，我们之所以能够捕获某个异常对象，是因为在try代码块中的某个方法抛出
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+抛出
+\end_layout
+
+\end_inset
+
+（throw）了异常对象，即某个方法在运行中探测到发生了异常状况，因此创建了异常对象并抛出。
 \end_layout
 
 \begin_layout Example
