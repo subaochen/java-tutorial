@@ -1801,159 +1801,6 @@ in方法抛出的异常就只有java虚拟机可以处理了，这通常不是�
 \end_layout
 
 \begin_layout Section
-用户自定义异常
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:用户自定义异常"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-异常类代表了一种异常的类型，自然我们也可以根据实际的业务逻辑自定义异常类，通常是从Exception类继承下来即可。比如在电子商务的业务流程中，“下订单”的过程
-可能会遇到以下的异常情况：
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-写出完整的例子，演示抛出异常和catch多种异常的情形，也演示getMessage的好处
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-库存不足：所订购的商品没有及时付款，提交订单时库存不足了，导致提交失败。我们定义这种异常为OutOfInventoryException。
-\end_layout
-
-\begin_layout Itemize
-价格变更：提交订单时商品的价格已经改变了，此时应该阻止提交订单。我们定义这种异常为PriceNotAvailableException。
-\end_layout
-
-\begin_layout Standard
-首先我们定义这两个异常类，如
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstlistingname
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "OutOfIventoryException.java"
-
-\end_inset
-
-和
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstlistingname
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "PriceNotAvailableException.java"
-
-\end_inset
-
-所示。
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/OutOfInventoryException.java"
-lstparams "float,caption={OutOfIventoryException.java},label={OutOfIventoryException.java}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/PriceNotAvailableException.java"
-lstparams "float,caption={PriceNotAvailableException.java},label={PriceNotAvailableException.java}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-在主类CustomerOrder.java中，我们设置了两个变量inventoryOK和priceOK分别代表库存和价格的状态，参见
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstlistingname
-\end_layout
-
-\end_inset
-
-。读者可以尝试修改这两个变量的值观察输出有什么变化？当然，在实际情况中，应该是根据业务逻辑给这两个变量赋值的。
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/CustomerOrder.java"
-lstparams "caption={CustomerOrder.java},label={CustomerOrder.java}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex Tip
-status open
-
-\begin_layout Plain Layout
-在Idea IDE中，可以通过快捷键Alt+Insert方便的自动产生OutOfInventoryException的构造方法：选择
-\begin_inset Quotes erd
-\end_inset
-
-override method...
-\begin_inset Quotes erd
-\end_inset
-
-，在随后弹出的窗口中选择
-\begin_inset Quotes erd
-\end_inset
-
-Exception(s:String)”即可。
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 finally
 \begin_inset CommandInset label
 LatexCommand label
@@ -2639,6 +2486,159 @@ status open
 
 \begin_layout Plain Layout
 图示责任链
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+用户自定义异常
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:用户自定义异常"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+异常类代表了一种异常的类型，自然我们也可以根据实际的业务逻辑自定义异常类，通常是从Exception类继承下来即可。比如在电子商务的业务流程中，“下订单”的过程
+可能会遇到以下的异常情况：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+写出完整的例子，演示抛出异常和catch多种异常的情形，也演示getMessage的好处
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+库存不足：所订购的商品没有及时付款，提交订单时库存不足了，导致提交失败。我们定义这种异常为OutOfInventoryException。
+\end_layout
+
+\begin_layout Itemize
+价格变更：提交订单时商品的价格已经改变了，此时应该阻止提交订单。我们定义这种异常为PriceNotAvailableException。
+\end_layout
+
+\begin_layout Standard
+首先我们定义这两个异常类，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "OutOfIventoryException.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PriceNotAvailableException.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/OutOfInventoryException.java"
+lstparams "float,caption={OutOfIventoryException.java},label={OutOfIventoryException.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/PriceNotAvailableException.java"
+lstparams "float,caption={PriceNotAvailableException.java},label={PriceNotAvailableException.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在主类CustomerOrder.java中，我们设置了两个变量inventoryOK和priceOK分别代表库存和价格的状态，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+。读者可以尝试修改这两个变量的值观察输出有什么变化？当然，在实际情况中，应该是根据业务逻辑给这两个变量赋值的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/CustomerOrder.java"
+lstparams "caption={CustomerOrder.java},label={CustomerOrder.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在Idea IDE中，可以通过快捷键Alt+Insert方便的自动产生OutOfInventoryException的构造方法：选择
+\begin_inset Quotes erd
+\end_inset
+
+override method...
+\begin_inset Quotes erd
+\end_inset
+
+，在随后弹出的窗口中选择
+\begin_inset Quotes erd
+\end_inset
+
+Exception(s:String)”即可。
 \end_layout
 
 \end_inset

@@ -26,10 +26,10 @@ public class DivTest {
 			System.out.println("数字格式异常，程序只能接受整数形式的参数");
 			e.printStackTrace();
 		} catch (ArithmeticException e) {
-			System.out.println("算数异常，除数不能为0");
+			System.out.println("数学异常，除数不能为0");
 			e.printStackTrace();
 		} catch (Exception e) {
-			System.out.println("我不知道发生了什么，总是情况不对");
+			System.out.println("天知道发生了什么，总之情况不对");
 			e.printStackTrace();
 		}
 	}

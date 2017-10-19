@@ -22,7 +22,7 @@ public class Example {
 
 	public void f() throws Exception {
 		add(2);
-		add(3);
+		mult(3);
 	}
 
 	public void add(int val) throws Exception {
