@@ -134,7 +134,17 @@ C语言中的enum数据类型
 \end_layout
 
 \begin_layout Standard
-在C语言中，enum数据类型代表了一系列预定义的常量及其序号，比如一周的定义：
+在C语言中，enum
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+enum
+\end_layout
+
+\end_inset
+
+数据类型代表了一系列预定义的常量及其序号，比如一周的定义：
 \end_layout
 
 \begin_layout Standard
@@ -185,8 +195,17 @@ enum WEEK tuesday;
 \end_layout
 
 \begin_layout Standard
-monday和tuesday变量的数据类型是enum WEEK类型的，而且monday和tuesday的数据范围限于enum week中定义的常量。monday
-的实际数值是整数1。
+monday和tuesday变量的数据类型是enum
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+enum
+\end_layout
+
+\end_inset
+
+ WEEK类型的，而且monday和tuesday的数据范围限于enum week中定义的常量。monday的实际数值是整数1。
 \end_layout
 
 \begin_layout Section
@@ -201,7 +220,17 @@ name "sec:Java的enum：Enum的子类"
 \end_layout
 
 \begin_layout Standard
-Java中枚举类型的定义和c语言非常相似，但是要灵活的多。同样是一周的定义，我们看在Java中是如何定义和使用的。
+Java中
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+枚举类型
+\end_layout
+
+\end_inset
+
+枚举类型的定义和c语言非常相似，但是要灵活的多。同样是一周的定义，我们看在Java中是如何定义和使用的。
 \begin_inset Note Note
 status open
 
@@ -246,7 +275,17 @@ lues()等等。
 \end_layout
 
 \begin_layout Standard
-实际上，每一个enum类型的对象都自动继承自Enum类
+实际上，每一个enum类型的对象都自动继承自Enum
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Enum
+\end_layout
+
+\end_inset
+
+类
 \begin_inset Foot
 status open
 
@@ -262,6 +301,16 @@ status open
 
 \begin_layout Standard
 我们可以尝试反编译
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+反编译
+\end_layout
+
+\end_inset
+
+
 \begin_inset Foot
 status open
 
@@ -356,8 +405,18 @@ WeekDay> {
 \end_layout
 
 \begin_layout Standard
-也就是说，enum其实是Java提供给我们的“语法糖”，当我们使用enum定义一个枚举类型时，Java在编译时会将枚举类型扩展为一个Enum的一个子类。注意到当
-我们定义一个普通的Java类时，编译器会自动从Object继承下来的，这也是enum枚举类型对象和普通对象的区别。
+也就是说，enum其实是Java提供给我们的“语法糖
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+语法糖
+\end_layout
+
+\end_inset
+
+”，当我们使用enum定义一个枚举类型时，Java在编译时会将枚举类型扩展为一个Enum的一个子类。注意到当我们定义一个普通的Java类时，编译器会自动从Obj
+ect继承下来的，这也是enum枚举类型对象和普通对象的区别。
 \end_layout
 
 \begin_layout Standard
@@ -456,8 +515,18 @@ String monday = WeekDay.MONDAY;
 status open
 
 \begin_layout Plain Layout
-在编程实践中应该尽力避免使用“魔幻数字”（magic number），即在源代码中避免直接使用数字，比如0x123、3.14159f等。可能在编写代码的当时，编码
-者还能够记得这些数字的含义，过一段时间就很可能印象模糊甚至完全忘记了（只能感叹这些数字像魔术一样难以琢磨），更何况别人呢？魔幻数字的弊端有两个：
+在编程实践中应该尽力避免使用“魔幻数字
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+魔幻数字
+\end_layout
+
+\end_inset
+
+”（magic number），即在源代码中避免直接使用数字，比如0x123、3.14159f等。可能在编写代码的当时，编码者还能够记得这些数字的含义，过一段时间
+就很可能印象模糊甚至完全忘记了（只能感叹这些数字像魔术一样难以琢磨），更何况别人呢？魔幻数字的弊端有两个：
 \end_layout
 
 \begin_layout Itemize
@@ -491,6 +560,15 @@ name：名字，即enum的字面意义，通过调用name()方法返回这个属
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ordinal
+\end_layout
+
+\end_inset
+
 ordinal：序号，即enum在定义中的序号，默认从0开始依次递增，通过调用ordinal()方法返回这个属性值。通常我们不需要使用ordinal这个属性，毕
 竟我们定义enum的主要目的是表达一系列常量，常量的定义位置（序号）通常没有多大意义。
 \end_layout
@@ -515,7 +593,17 @@ enum的构造方法
 \end_layout
 
 \begin_layout Standard
-enum既然是一个Enum的子类，自然可以拥有自己的构造方法，比如我们可以这样定义12个月份：
+enum既然是一个Enum的子类，自然可以拥有自己的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+构造方法
+\end_layout
+
+\end_inset
+
+构造方法，比如我们可以这样定义12个月份：
 \end_layout
 
 \begin_layout Standard
@@ -823,7 +911,17 @@ name "sec:switch中的enum"
 \end_layout
 
 \begin_layout Standard
-Java的在switch语句比C的switch语句更强大（参见
+Java的在switch
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+switch
+\end_layout
+
+\end_inset
+
+语句比C的switch语句更强大（参见
 \begin_inset ERT
 status open
 

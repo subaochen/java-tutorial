@@ -117,10 +117,39 @@ Java的图形用户界面（GUI）设计概述
 \end_layout
 
 \begin_layout Standard
-Java的图形用户界面（GUI）是由JFC（Java Foundation Classes）支撑的，JFC包括了以下几个方面：
+Java的图形用户界面（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GUI
+\end_layout
+
+\end_inset
+
+GUI）是由
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JFC
+\end_layout
+
+\end_inset
+
+JFC（Java Foundation Classes）支撑的，JFC包括了以下几个方面：
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Swing
+\end_layout
+
+\end_inset
+
 Swing GUI组件：包含了图形用户界面设计中的人机交互组件，从最简单的按钮到复杂的图表等无所不包，这是我们学习的重点内容。
 \end_layout
 
@@ -137,6 +166,15 @@ Java 2D API：完善的2D绘图API。
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+国际化
+\end_layout
+
+\end_inset
+
 国际化支持：秉承Java一贯的国际化支持，能够方便的在GUI中处理各种编码的文字。
 \end_layout
 
@@ -160,7 +198,17 @@ Swing入门
 \end_layout
 
 \begin_layout Standard
-本节以JetBrain Idea为例说明如何创建和运行简单的Swing应用程序。
+本节以JetBrain Idea为例说明如何创建和运行简单的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Swing
+\end_layout
+
+\end_inset
+
+Swing应用程序。
 \end_layout
 
 \begin_layout Example
@@ -391,7 +439,17 @@ name "fig:给项目起个名字"
 \end_layout
 
 \begin_layout Standard
-在项目的“project视图”中，右键点击src，在弹出的菜单中选择New->GUI Form，新建一个Form表单，参见
+在项目的“project视图”中，右键点击src，在弹出的菜单中选择New->GUI Form，新建一个Form表单
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Form表单
+\end_layout
+
+\end_inset
+
+，参见
 \begin_inset ERT
 status open
 
@@ -464,8 +522,17 @@ name "fig:准备新建一个Form表单"
 status open
 
 \begin_layout Plain Layout
-如果在菜单中没有出现GUI Form子菜单，系没有安装Form Designer插件所致，请在系统设置中激活Form Designer即可，方法是在File->
-Settings...菜单中搜索“UI Designer”插件并安装激活，如
+如果在菜单中没有出现GUI Form子菜单，系没有安装Form Designer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Form Designer
+\end_layout
+
+\end_inset
+
+插件所致，请在系统设置中激活Form Designer即可，方法是在File->Settings...菜单中搜索“UI Designer”插件并安装激活，如
 \begin_inset ERT
 status open
 
@@ -777,7 +844,17 @@ reference "sec:布局管理器"
 
 \end_inset
 
-一节详细的阐述各种布局管理器的用法。
+一节详细的阐述各种布局管理器
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+布局管理器
+\end_layout
+
+\end_inset
+
+的用法。
 \end_layout
 
 \begin_layout Standard
@@ -831,7 +908,17 @@ name "fig:给主Panel起个名字"
 
 \begin_layout Standard
 在“组件面板”窗口选择JLabel组件拖放到主设计界面，可以看到在“界面组件关系”窗口中，JLabel包含在mainPanel中。这里只是简单的设置这个JLab
-el的text属性为“人民币：”即可。JLabel的目的是显示一个标签，我们将在
+el的text属性为“人民币：”即可。JLabel的目的是显示一个标签
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+标签
+\end_layout
+
+\end_inset
+
+，我们将在
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "subsec:JLabel"
@@ -911,7 +998,17 @@ reference "fig:添加JTextField组件"
 
 \end_inset
 
-所示，接着添加一个JTextField组件到主设计界面。这个JTextField我们用来输入人民币数额，因此要设置其
+所示，接着添加一个JTextField
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JTextField
+\end_layout
+
+\end_inset
+
+组件到主设计界面。这个JTextField我们用来输入人民币数额，因此要设置其
 \begin_inset Quotes erd
 \end_inset
 
@@ -992,7 +1089,17 @@ reference "fig:添加转换按钮"
 
 \end_inset
 
-所示，再增加一个“转换”按钮，设置这个按钮的field name和text属性。
+所示，再增加一个“转换”按钮
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+按钮
+\end_layout
+
+\end_inset
+
+，设置这个按钮的field name和text属性。
 \end_layout
 
 \begin_layout Standard
@@ -1219,7 +1326,17 @@ reference "fig:选择Listener的类型"
 
 \end_inset
 
-所示，在接下来的窗口中选择Listener的类型为“ActionListener”。
+所示，在接下来的窗口中选择Listener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Listener
+\end_layout
+
+\end_inset
+
+的类型为“ActionListener”。
 \end_layout
 
 \begin_layout Standard
@@ -1292,7 +1409,17 @@ reference "fig:选择需要覆盖的方法"
 
 \end_inset
 
-所示，在接下来的窗口中，选择ActionListener需要覆盖的方法。这里只有一个选项，已经自动选中了。
+所示，在接下来的窗口中，选择ActionListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ActionListener
+\end_layout
+
+\end_inset
+
+需要覆盖的方法。这里只有一个选项，已经自动选中了。
 \end_layout
 
 \begin_layout Standard
@@ -1357,7 +1484,17 @@ reference "fig:选择需要覆盖的方法"
 
 \end_inset
 
-中的“OK”按钮后，在所绑定的方法中自动添加了一个构造方法，内容如下（行5-7是自己编写的）：
+中的“OK”按钮后，在所绑定的方法中自动添加了一个构造方法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+构造方法
+\end_layout
+
+\end_inset
+
+，内容如下（行5-7是自己编写的）：
 \end_layout
 
 \begin_layout Standard
@@ -1437,7 +1574,17 @@ reference "sec:JAVA图形用户界面的事件机制"
 
 \begin_layout Standard
 最后一步，我们需要在类RMB2DollarConverter中增加一个main方法并初始化和显示应用程序窗口，JetBrain Idea提供了自动化的代码生成工
-具，只需要在代码的合适位置（希望插入main方法的位置）按下Alt+Insert组合键，在如
+具，只需要在代码的合适位置（希望插入main方法的位置）按下Alt+Insert
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Alt+Insert
+\end_layout
+
+\end_inset
+
+组合键，在如
 \begin_inset ERT
 status open
 
@@ -2134,12 +2281,42 @@ name "fig:Java图形用户界面应用程序的大致布局"
 \end_layout
 
 \begin_layout Standard
-整个应用程序框架使用JFrame来表示，在JFrame内部布置了菜单栏（JMenuBar）、工具栏（JToolBar）、内容区（ContentPane），我们最
-经常操作的区域是ContentPane，即几乎所有的界面设计工作集中在ContentPane上面。
+整个应用程序框架使用JFrame
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JFrame
+\end_layout
+
+\end_inset
+
+来表示，在JFrame内部布置了菜单栏（JMenuBar）、工具栏（JToolBar）、内容区（ContentPane），我们最经常操作的区域是ContentP
+ane，即几乎所有的界面设计工作集中在ContentPane上面。
 \end_layout
 
 \begin_layout Standard
-所以，JFrame是一个顶层的容器，其他所有的界面组件都放置在顶层容器之中，如
+所以，JFrame是一个顶层的容器
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+容器
+\end_layout
+
+\end_inset
+
+，其他所有的界面组件都放置在顶层容器
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+顶层容器
+\end_layout
+
+\end_inset
+
+之中，如
 \begin_inset ERT
 status open
 
@@ -2159,7 +2336,17 @@ reference "fig:Java-GUI应用程序的基本结构"
 
 \end_inset
 
-所示。除了JFrame之外，Java也提供了JDialog、JApplet顶层容器，分别用于对话框的设计和Applet
+所示。除了JFrame之外，Java也提供了JDialog、JApplet
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JApplet
+\end_layout
+
+\end_inset
+
+顶层容器，分别用于对话框的设计和Applet
 \begin_inset Foot
 status open
 
@@ -2169,7 +2356,17 @@ status open
 
 \end_inset
 
-的设计。本章重点介绍基于JFrame的Java图形用户界面设计，JDialog的用法于此类似。
+的设计。本章重点介绍基于JFrame的Java图形用户界面设计，JDialog
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JDialog
+\end_layout
+
+\end_inset
+
+的用法于此类似。
 \end_layout
 
 \begin_layout Standard
@@ -2319,6 +2516,15 @@ Label（文本标签）也许是最简单的Swing控件了，一般用来表示�
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JLabel
+\end_layout
+
+\end_inset
+
 JLabel的主要属性如
 \begin_inset ERT
 status open
@@ -2339,7 +2545,17 @@ reference "tab:JLabel的主要属性"
 
 \end_inset
 
-所示（每个属性对应一对get/set方法），请参照Form Designer的属性对话框了解属性值的可能取值范围。
+所示（每个属性对应一对get/set方法），请参照Form Designer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Form Designer
+\end_layout
+
+\end_inset
+
+的属性对话框了解属性值的可能取值范围。
 \end_layout
 
 \begin_layout Standard
