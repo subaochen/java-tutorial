@@ -6,6 +6,6 @@ package cn.edu.sdut.softlab;
 public class MonthTest {
     public static  void main(String[] args) {
         Month jan = Month.JAN;
-        System.out.println(Month.JAN.toString() + " days is:" + Month.JAN.days());
+        System.out.println(jan + " days = " + jan.days());
     }
 }
