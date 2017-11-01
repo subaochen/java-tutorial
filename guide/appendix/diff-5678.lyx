@@ -1085,7 +1085,7 @@ return b.compareTo(a);
 \end_layout
 
 \begin_layout Standard
-看到了吧，代码变得更段且更具有可读性，但是实际上还可以写得更短：
+看到了吧，代码变得更短且更具有可读性，但是实际上还可以写得更短：
 \end_layout
 
 \begin_layout Standard
