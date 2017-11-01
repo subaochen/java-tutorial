@@ -3071,7 +3071,27 @@ reference "fig:水平方法后的窗口"
 
 \end_inset
 
-所示。请任意缩放窗口请注意观察这三个Label位置的变化，体会水平对齐、垂直对齐等的效果。
+所示。请任意缩放窗口请注意观察这三个Label位置的变化，体会水平对齐
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+水平对齐
+\end_layout
+
+\end_inset
+
+、垂直对齐
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+垂直对齐
+\end_layout
+
+\end_inset
+
+等的效果。
 \end_layout
 
 \begin_layout Standard
@@ -3210,7 +3230,27 @@ Form Designer界面直接右键选择“preview”即可）。
 \end_layout
 
 \begin_layout Itemize
-在组合使用文本和图片时，还要注意horizentalTextPosition和verticalTextPosition这两个属性的效果。
+在组合使用文本和图片时，还要注意horizentalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+
+和verticalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+verticalTextPosition
+\end_layout
+
+\end_inset
+
+这两个属性的效果。
 \end_layout
 
 \begin_layout Subsection
@@ -8288,7 +8328,7 @@ JCheckBox
 \begin_inset Text
 
 \begin_layout Plain Layout
-actionListener：响应选项选择事件
+ActionListener：响应选项选择事件
 \end_layout
 
 \begin_layout Plain Layout
@@ -8312,7 +8352,7 @@ JComboBox
 \begin_inset Text
 
 \begin_layout Plain Layout
-actionListener：响应选项选择事件
+ActionListener：响应选项选择事件
 \end_layout
 
 \end_inset
