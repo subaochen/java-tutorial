@@ -3221,7 +3221,17 @@ JLabelDemo运行结果
 \end_layout
 
 \begin_layout Itemize
-这三个JLabel都无需设置field name属性值。
+这三个
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JLabel
+\end_layout
+
+\end_inset
+
+JLabel都无需设置field name属性值。
 \end_layout
 
 \begin_layout Itemize
@@ -3265,8 +3275,37 @@ name "subsec:JTextField"
 \end_layout
 
 \begin_layout Standard
-Swing的文本控件是指能够输入文本的控件，比如文本框（JTextField）、文本域（JTextArea）、富文本编辑器（JEdtiorPane）等。Swin
-g的文本控件类的关系如
+Swing的文本控件是指能够输入文本的控件，比如文本框（JTextField
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JTextField
+\end_layout
+
+\end_inset
+
+）、文本域（JTextArea
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JTextArea
+\end_layout
+
+\end_inset
+
+）、富文本编辑器（JEdtiorPane
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JEdtiorPane
+\end_layout
+
+\end_inset
+
+）等。Swing的文本控件类的关系如
 \begin_inset ERT
 status open
 
@@ -3336,12 +3375,41 @@ name "fig:文本输入控件"
 \end_layout
 
 \begin_layout Itemize
-单行纯文本控件：用于输入一行纯文本字符串。根据场合不同，可以选择使用JTextField，输入简单的单行字符串；或者JFormattedTextField，输入
-格式化的单行字符串，比如表示日期的“2017-3-12”等；或者JPasswordField，输入密码（默认不显示输入的密码）。
+单行纯文本控件：用于输入一行纯文本字符串。根据场合不同，可以选择使用JTextField，输入简单的单行字符串；或者JFormattedTextField
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JFormattedTextField
+\end_layout
+
+\end_inset
+
+，输入格式化的单行字符串，比如表示日期的“2017-3-12”等；或者JPasswordField
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JPasswordField
+\end_layout
+
+\end_inset
+
+，输入密码（默认不显示输入的密码）。
 \end_layout
 
 \begin_layout Itemize
-多行纯文本控件：用于输入多行纯文本字符串。如果需要输入的字符串比较长，可以采用JTextArea，会显示一个多行的文本编辑区域供输入。
+多行纯文本控件：用于输入多行纯文本字符串。如果需要输入的字符串比较长，可以采用JTextArea
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JTextArea
+\end_layout
+
+\end_inset
+
+，会显示一个多行的文本编辑区域供输入。
 \end_layout
 
 \begin_layout Itemize
@@ -3564,7 +3632,17 @@ edu/sdut/softlab/TextControlDemo.form
 \end_layout
 
 \begin_layout Standard
-.当在文本框中输入一些字符后（失去焦点后），在最下面的Label中显示输入的内容。
+.当在文本框中输入一些字符后（失去焦点后），在最下面的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Label
+\end_layout
+
+\end_inset
+
+Label中显示输入的内容。
 \end_layout
 
 \begin_layout Standard
@@ -3690,12 +3768,42 @@ name "fig:文本控件示例运行结果"
 \end_layout
 
 \begin_layout Standard
-这个简单的示例我们要注意两点：
+这个简单的示例我们要注意以下三点：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+示例代码的布局要说明吗？
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-可以通过Panel进一步组织控件，这是一种常见的手段。在例中，我们把三个TextField控件放到一个Panel中，在把这Panel添加到mainPanel中。
-并且，放置三个TextField的Panel添加了标题（title）：“单行纯文本控件”，以更清晰的表达这个Panel的意义，这也是一种常见的手段。
+可以通过
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Panel
+\end_layout
+
+\end_inset
+
+Panel进一步组织控件，这是一种常见的手段。在例中，我们把三个
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TextField
+\end_layout
+
+\end_inset
+
+TextField控件放到一个Panel中，在把这Panel添加到mainPanel中。并且，放置三个TextField的Panel添加了标题（title）：“
+单行纯文本控件”，以更清晰的表达这个Panel的意义，这也是一种常见的手段。
 \end_layout
 
 \begin_layout Itemize
@@ -3719,7 +3827,17 @@ reference "par:步骤12"
 
 \end_inset
 
-为三个TextField添加FocusListener，这里我们重点监听了失去焦点的事件。
+为三个TextField添加FocusListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FocusListener
+\end_layout
+
+\end_inset
+
+，这里我们重点监听了失去焦点的事件。
 \end_layout
 
 \begin_layout Itemize
@@ -3731,8 +3849,18 @@ reference "par:步骤12"
 status open
 
 \begin_layout Plain Layout
-焦点（Focus）通常是指文本输入框是否正在接受输入。获得焦点即文本输入框可以输入文字，失去焦点即文本输入框不再能够输入文字，即光标已经离开了此输入框。失去焦点
-往往意味着用户结束了输入，因此，我们可以通过监听失去焦点事件来获得文本输入框中的内容。
+焦点
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+焦点
+\end_layout
+
+\end_inset
+
+（Focus）通常是指文本输入框是否正在接受输入。获得焦点即文本输入框可以输入文字，失去焦点即文本输入框不再能够输入文字，即光标已经离开了此输入框。失去焦点往往
+意味着用户结束了输入，因此，我们可以通过监听失去焦点事件来获得文本输入框中的内容。
 \end_layout
 
 \begin_layout Plain Layout
@@ -3756,7 +3884,27 @@ name "subsec:JButton"
 \end_layout
 
 \begin_layout Standard
-按钮（Button）是一种常见的交互控件，在Swing中最常见的按钮通过JButton来描述。按钮用法很直接，通常涉及到以下三个方面：
+按钮（Button
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Button
+\end_layout
+
+\end_inset
+
+）是一种常见的交互控件，在Swing中最常见的按钮通过JButton
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JButton
+\end_layout
+
+\end_inset
+
+来描述。按钮用法很直接，通常涉及到以下三个方面：
 \end_layout
 
 \begin_layout Itemize
@@ -3764,11 +3912,41 @@ name "subsec:JButton"
 \end_layout
 
 \begin_layout Itemize
-有的时候希望在按钮上面也显示图标以更明确的表达按钮的意思，可以通过按钮的icon属性来设置图标。
+有的时候希望在按钮上面也显示图标以更明确的表达按钮的意思，可以通过按钮的icon
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+icon
+\end_layout
+
+\end_inset
+
+属性来设置图标。
 \end_layout
 
 \begin_layout Itemize
-给按钮添加鼠标点击的响应代码（ActionListener或者MouseListener）。
+给按钮添加鼠标点击的响应代码（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ActionListener
+\end_layout
+
+\end_inset
+
+ActionListener或者MouseListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+MouseListener
+\end_layout
+
+\end_inset
+
+）。
 \end_layout
 
 \begin_layout Standard
@@ -4117,7 +4295,7 @@ reference "par:步骤12"
 
 \end_inset
 
-为这三个Button 添加三个actionListener，分别响应鼠标左键单击事件。
+为这三个Button 添加三个ActionListener，分别响应鼠标左键单击事件。
 \end_layout
 
 \begin_layout Paragraph*
@@ -4202,13 +4380,51 @@ name "fig:Button示例运行结果"
 \end_layout
 
 \begin_layout Itemize
-第一个按钮演示了按钮上是可以图文并茂的（设置icon属性即可），并且通过设置horizentalTextPosition属性为Leading（在开头），将图片放
-到了文字的后面。
+第一个按钮演示了按钮上是可以图文并茂的（设置icon
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+icon
+\end_layout
+
+\end_inset
+
+属性即可），并且通过设置horizentalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+
+属性为Leading（在开头），将图片放到了文字的后面。
 \end_layout
 
 \begin_layout Itemize
-第二个按钮演示了如何将按钮上的文字和图片上下布局：首先让按钮上的内容水平居中（horizentalTextPosition属性为Center），然后设置vert
-icalTextPosition属性为Bottom即可。
+第二个按钮演示了如何将按钮上的文字和图片上下布局：首先让按钮上的内容水平居中（horizentalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+
+属性为Center），然后设置verticalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+verticalTextPosition
+\end_layout
+
+\end_inset
+
+属性为Bottom即可。
 \end_layout
 
 \begin_layout Itemize
@@ -4321,6 +4537,15 @@ name "subsec:JCheckBox"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JCheckBox
+\end_layout
+
+\end_inset
+
 JCheckBox通常叫做“复选框”，即可以同时打开或关闭多个选项
 \begin_inset Foot
 status open
@@ -4875,8 +5100,27 @@ name "fig:JCheckBox运行结果"
 \end_layout
 
 \begin_layout Standard
-我们为每个JCheckBox添加了两个事件监听器，一个ActionListener用于监听鼠标左键单击选项选择或者反选时产生的事件，一个MouseListene
-r用于监听当鼠标进入或者离开选项所在区域时产生的事件。
+我们为每个JCheckBox添加了两个事件监听器，一个ActionListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ActionListener
+\end_layout
+
+\end_inset
+
+用于监听鼠标左键单击选项选择或者反选时产生的事件，一个MouseListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+MouseListener
+\end_layout
+
+\end_inset
+
+用于监听当鼠标进入或者离开选项所在区域时产生的事件。
 \end_layout
 
 \begin_layout Paragraph
@@ -4884,7 +5128,47 @@ r用于监听当鼠标进入或者离开选项所在区域时产生的事件。
 \end_layout
 
 \begin_layout Standard
-其实，JButton, JCheckBox, JRadionButton等都从AbstractButton继承下来的，即JButton一族的类层次关系如
+其实，JButton
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JButton
+\end_layout
+
+\end_inset
+
+, JCheckBox
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JCheckBox
+\end_layout
+
+\end_inset
+
+, JRadionButton
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JRadionButton
+\end_layout
+
+\end_inset
+
+等都从
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+AbstractButton
+\end_layout
+
+\end_inset
+
+AbstractButton继承下来的，即JButton一族的类层次关系如
 \begin_inset ERT
 status open
 
@@ -4968,6 +5252,15 @@ name "subsec:JRadioButton"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JRadioButton
+\end_layout
+
+\end_inset
+
 JRadioButton通常叫做“单选框”，即通过JRadionButton可以展示一组选项，但是只能有一个选项处于“选中”状态。当选择另外一个选项时，原先被选
 中的选项自动失效。
 \end_layout
@@ -5175,9 +5468,19 @@ name "fig:JRadionButton示例运行结果"
 \end_layout
 
 \begin_layout Standard
-本例中，我们手工创建了ActionListener，通常JRadioButton的ActionListener需要手工创建更合适，因为JRadioButton一
-般需要设置为属于某个ButtonGroup，整个ButtonGroup设计一个ActionListener就可以了，没有必要每个JRadioButton都独立设
-计一个ActionListener，如下列代码所示：
+本例中，我们手工创建了ActionListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ActionListener
+\end_layout
+
+\end_inset
+
+，通常JRadioButton的ActionListener需要手工创建更合适，因为JRadioButton一般需要设置为属于某个ButtonGroup，整个B
+uttonGroup设计一个ActionListener就可以了，没有必要每个JRadioButton都独立设计一个ActionListener，如下列代码所示
+：
 \end_layout
 
 \begin_layout Standard
@@ -5271,7 +5574,17 @@ status open
 \end_layout
 
 \begin_layout Standard
-在以上代码中，我们在构造方法中为每个JRadioButton指定了actionCommand以便在监听器代码中获取actionCommand拼装图片的路径。
+在以上代码中，我们在构造方法中为每个JRadioButton指定了actionCommand
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+actionCommand
+\end_layout
+
+\end_inset
+
+以便在监听器代码中获取actionCommand拼装图片的路径。
 \end_layout
 
 \begin_layout Standard
@@ -5295,7 +5608,17 @@ reference "fig:设置ButtonGroup"
 
 \end_inset
 
-所示，创建一个新的ButtonGroup，并将所有JRadioButton的ButtonGroup属性都设置为这个新建的ButtonGroup。
+所示，创建一个新的ButtonGroup
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ButtonGroup
+\end_layout
+
+\end_inset
+
+，并将所有JRadioButton的ButtonGroup属性都设置为这个新建的ButtonGroup。
 \end_layout
 
 \begin_layout Standard
@@ -5355,6 +5678,15 @@ name "subsec:JComboBox"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JcomboBox
+\end_layout
+
+\end_inset
+
 JcomboBox表示“下列选择框”，通常在空间比较紧张或者选项很多时采用下拉选择框比较合适。
 \end_layout
 
