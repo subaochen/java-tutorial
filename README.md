@@ -80,6 +80,8 @@ ISSUE#123：修正xxxx问题
  * 安装textlive最新版和lyx 2.2+（目前ubuntu 16.10自带的Lyx版本是2.1，
 到Lyx官网：http://www.lyx.org 下载最新的2.2+版本安装即可）。
  * fork本项目，clone项目到本地。
+ * fork writing-common项目，clone项目到本地。
+ * 修改Lyx的TEXINPUTS设置，方法是从“工具”菜单找到“首选项“，然后在“路径”的TEXINPUTS中设置为“.:$HOME/git/writing-common”（假设writing-common项目clone到了$HOME/git/writing-common目录）
  * 执行common中的deploy.sh脚本安装lyx的几个模块，然后启动lyx，点击“工具”->"重配置"，重启lyx
  * lyx java-guide-on-c.lyx（基础篇），或者lyx java-advanced.lyx（提高篇），
  即可开始愉快的写作:-)
