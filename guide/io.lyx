@@ -1,12 +1,12 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass ctex-book
 \begin_preamble
-\input{../../writing-common/book-preamble.tex}
+\input{book-preamble.tex}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -36,6 +36,8 @@ PackageOptions url hyphens
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -75,6 +77,7 @@ PackageOptions url hyphens
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -84,7 +87,10 @@ PackageOptions url hyphens
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
@@ -658,19 +664,20 @@ rInputStream通常用来对数据进行筛选、变换、编码等处理，Filte
 utStream的子类如下：
 \end_layout
 
-\begin_layout Itemize
-BufferedInputStream：对于任何InputStream提供了缓存处理功能，提高了输入处理的效率。
+\begin_layout Description
+BufferedInputStream： 对于任何InputStream提供了缓存处理功能，提高了输入处理的效率。
 \end_layout
 
-\begin_layout Itemize
-DataInputStream：如果我们确定InputStream中存储的是基本类型数据，则可以借助于DataInputStream提供的读取基本类型数据方法简
-化操作，这些方法直接返回所需要的基本类型变量，比如readInt。注意到DataInputStream也实现了DataInput接口，在DataInput接口中
-规范了读取基本类型数据的方法。
+\begin_layout Description
+DataInputStream： 如果我们确定InputStream中存储的是基本类型数据，则可以借助于DataInputStream提供的读取基本类型数据方法
+简化操作，这些方法直接返回所需要的基本类型变量，比如readInt。注意到DataInputStream也实现了DataInput接口，在DataInput接口
+中规范了读取基本类型数据的方法。
 \end_layout
 
-\begin_layout Itemize
-PushBackInputStream：通常，我们从InputStream读取一个字节后，这个字节就从InputStream移除了，再次从InputStream
-读取数据会从下一个字节开始。PushBackInputStream的设计目的是把刚刚读取的字节再次送回InputStream，以便有机会再次读取这个字节的数据。
+\begin_layout Description
+PushBackInputStream： 通常，我们从InputStream读取一个字节后，这个字节就从InputStream移除了，再次从InputStrea
+m读取数据会从下一个字节开始。PushBackInputStream的设计目的是把刚刚读取的字节再次送回InputStream，以便有机会再次读取这个字节的数据
+。
 \end_layout
 
 \end_inset
@@ -2694,6 +2701,7 @@ name "fig:实数3.125的内存表达"
 LatexCommand cite
 after "p104，输入数据"
 key "java-chenweijun"
+literal "true"
 
 \end_inset
 
@@ -5358,9 +5366,15 @@ reference "tab:File操作文件属性的方法"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="12" columns="3">
+<lyxtabular version="3" rows="11" columns="3">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="middle" width="10line%">
 <column alignment="left" valignment="middle" width="35line%">
@@ -5724,9 +5738,12 @@ public static boolean isHidden(Path path) throws IOException
 \end_inset
 </cell>
 </row>
-<row endfirsthead="true" caption="true">
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5747,28 +5764,9 @@ name "tab:File操作文件属性的方法"
 
 \end_layout
 
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
 
 \end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
 
 \end_inset
 
@@ -9700,7 +9698,7 @@ http://www.cnblogs.com/yinger/archive/2011/09/08/2171831.html
 inline false
 status open
 
-\begin_layout Itemize
+\begin_layout Plain Layout
 
 InputStream path = PropertyFileTest.class.getResourceAsStream(database-config.prope
 rties);

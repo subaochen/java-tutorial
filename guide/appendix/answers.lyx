@@ -1,12 +1,12 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass ctex-book
 \begin_preamble
-\input{../../../writing-common/book-preamble.tex}
+\input{book-preamble.tex}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -33,6 +33,8 @@ theorems-chap-bytype
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -72,6 +74,7 @@ theorems-chap-bytype
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -81,7 +84,10 @@ theorems-chap-bytype
 \tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -260,7 +266,7 @@ reference "exer:从键盘输入球体的半径，求球体的体积。"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/linux/java/java-tutorial/guide/code/answers/src/Ball.java"
+filename "/home/subaochen/git/java-tutorial/guide/code/answers/src/Ball.java"
 lstparams "language=Java,caption={求球体体积示例},label={ball volume example}"
 
 \end_inset
@@ -281,7 +287,7 @@ reference "exer:编写一个程序，寻找一组整数中的最大值和最小�
 \begin_layout Solution
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/linux/java/java-tutorial/guide/code/answers/src/MaxMin.java"
+filename "/home/subaochen/git/java-tutorial/guide/code/answers/src/MaxMin.java"
 lstparams "language=Java,caption={求给定整数序列的最大值和最小值},label={max and min value from integer array}"
 
 \end_inset
@@ -309,7 +315,7 @@ reference "exer:请使用switch-case结构重新实现。"
 \begin_layout Solution
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/linux/java/java-tutorial/guide/code/answers/src/ShowGrade.java"
+filename "/home/subaochen/git/java-tutorial/guide/code/answers/src/ShowGrade.java"
 lstparams "language=Java,caption={使用switch-case结构的成绩等级分示例},label={switch-case showgrade}"
 
 \end_inset
@@ -484,7 +490,7 @@ name "solu:abstract class and interface"
 \begin_layout Solution
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/linux/java/java-tutorial/guide/code/answers/src/chap04/Bus.java"
+filename "/home/subaochen/git/java-tutorial/guide/code/answers/src/chap04/Bus.java"
 lstparams "language=Java,caption={Bus.java},label={answer-Bus.java}"
 
 \end_inset
@@ -495,7 +501,7 @@ lstparams "language=Java,caption={Bus.java},label={answer-Bus.java}"
 \begin_layout Solution
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/linux/java/java-tutorial/guide/code/answers/src/chap04/Classroom.java"
+filename "/home/subaochen/git/java-tutorial/guide/code/answers/src/chap04/Classroom.java"
 lstparams "language=Java,caption={Classroom.java},label={answer-Classroom.java}"
 
 \end_inset
@@ -506,7 +512,7 @@ lstparams "language=Java,caption={Classroom.java},label={answer-Classroom.java}"
 \begin_layout Solution
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/linux/java/java-tutorial/guide/code/answers/src/chap04/Wifi.java"
+filename "/home/subaochen/git/java-tutorial/guide/code/answers/src/chap04/Wifi.java"
 lstparams "language=Java,caption={Wifi.java},label={answer-Wifi.java}"
 
 \end_inset
@@ -517,7 +523,7 @@ lstparams "language=Java,caption={Wifi.java},label={answer-Wifi.java}"
 \begin_layout Solution
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/linux/java/java-tutorial/guide/code/answers/src/chap04/Seat.java"
+filename "/home/subaochen/git/java-tutorial/guide/code/answers/src/chap04/Seat.java"
 lstparams "language=Java,caption={Seat.java},label={answer-Seat.java}"
 
 \end_inset
