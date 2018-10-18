@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -42,6 +42,8 @@ coderemarks
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -81,6 +83,7 @@ coderemarks
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -90,7 +93,10 @@ coderemarks
 \tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -108,20 +114,11 @@ coderemarks
 \end_layout
 
 \begin_layout Author
-\begin_inset Note Note
-status open
-
-\begin_layout Author
 宿宝臣 <subaochen@126.com>
 \end_layout
 
 \begin_layout Institute
 山东理工大学
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -155,6 +152,44 @@ LatexCommand tableofcontents
 status open
 
 \begin_layout Plain Layout
+两种分析思路
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+以ATM机存款为例：
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+竖切，时间线是关键，表达方式：流程图(flowchart)
+\end_layout
+
+\begin_layout Itemize
+横切，相互关系是关键，表达方式：用例图(use case)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 struct是对C语言数据类型的扩展
 \end_layout
 
@@ -163,6 +198,24 @@ struct是对C语言数据类型的扩展
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+什么是数据类型？
+\end_layout
+
+\begin_layout Itemize
+简单数据类型？
+\end_layout
+
+\begin_layout Itemize
+C语言的复杂数据类型：struct
+\end_layout
+
+\begin_layout Itemize
+struct point
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -183,6 +236,24 @@ class是对Java数据类型的扩展
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Java的简单数据类型
+\end_layout
+
+\begin_layout Itemize
+String是简单数据类型吗？
+\end_layout
+
+\begin_layout Itemize
+struct的进一步扩展：class
+\end_layout
+
+\begin_layout Itemize
+class point
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -195,7 +266,7 @@ class是对Java数据类型的扩展
 status open
 
 \begin_layout Plain Layout
-Java如何定义类
+Java如何定义类:class
 \end_layout
 
 \end_inset
@@ -203,8 +274,43 @@ Java如何定义类
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+关键字：class
+\end_layout
+
+\begin_layout Itemize
+语法规范
+\end_layout
+
+\begin_layout Itemize
+属性(property)=field/variable
+\end_layout
+
+\begin_layout Itemize
+方法(method)=function
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 类和对象
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在这个阶段不要引入public/private等关键字
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -217,6 +323,20 @@ status open
 
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+类：对象=1:n
+\end_layout
+
+\begin_layout Itemize
+object=instance
+\end_layout
+
+\end_deeper
+\begin_layout Frame
 
 \end_layout
 
@@ -240,6 +360,20 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+new
+\end_layout
+
+\begin_layout Itemize
+instanceof
+\end_layout
+
+\begin_layout Itemize
+构造方法的基本概念
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -252,11 +386,21 @@ status open
 status open
 
 \begin_layout Plain Layout
-属性和方法的引用方法
+属性和方法的引用
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+运算符.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
 
 \end_layout
 
@@ -280,6 +424,12 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+static
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -300,6 +450,20 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Point/Rectangle/Circle/Draw
+\end_layout
+
+\begin_layout Itemize
+.运算符可以用来访问属性和执行方法，就像struct中访问成员分量
+\end_layout
+
+\begin_layout Itemize
+不断提高自己的抽象思维能力
+\end_layout
+
+\end_deeper
 \begin_layout Section
 类的组织
 \end_layout
