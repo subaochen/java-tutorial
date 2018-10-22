@@ -301,16 +301,6 @@ Java如何定义类:class
 
 \begin_layout Section
 类和对象
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-在这个阶段不要引入public/private等关键字
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -352,7 +342,7 @@ object=instance
 status open
 
 \begin_layout Plain Layout
-对象的创建方法
+对象的创建
 \end_layout
 
 \end_inset
@@ -371,6 +361,10 @@ instanceof
 
 \begin_layout Itemize
 构造方法的基本概念
+\end_layout
+
+\begin_layout Itemize
+构造方法的几种形式和演示
 \end_layout
 
 \end_deeper
@@ -426,7 +420,23 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
-static
+为什么要引入类属性和类方法？
+\end_layout
+
+\begin_layout Itemize
+类属性和类方法的表达：static
+\end_layout
+
+\begin_layout Itemize
+类属性和类方法的引用
+\end_layout
+
+\begin_layout Itemize
+类属性和类方法的使用限制：实例属性和方法的引用冲突
+\end_layout
+
+\begin_layout Itemize
+演示：
 \end_layout
 
 \end_deeper
@@ -481,6 +491,12 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+包=目录
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -501,6 +517,16 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+保证项目内的唯一性
+\end_layout
+
+\begin_layout Itemize
+常见：逆序域名，保证了全球唯一性
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -521,6 +547,20 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+导入单个类
+\end_layout
+
+\begin_layout Itemize
+导入多个类
+\end_layout
+
+\begin_layout Itemize
+导入类属性
+\end_layout
+
+\end_deeper
 \begin_layout Section
 类的层次
 \end_layout
@@ -530,7 +570,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-继承的概念
+继承的引入
 \end_layout
 
 \end_inset
@@ -538,6 +578,16 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Shape类的引入
+\end_layout
+
+\begin_layout Itemize
+继承：更高的抽象，找出现有类的公共特征（属性、方法）
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -558,6 +608,16 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+优点：更高的抽象，精简的代码，构造树状类层次结构
+\end_layout
+
+\begin_layout Itemize
+缺点：高度依赖
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -570,7 +630,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-方法覆盖和重载
+方法覆盖（orverride）和重载(orverload)
 \end_layout
 
 \end_inset
@@ -578,6 +638,16 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+override/@override
+\end_layout
+
+\begin_layout Itemize
+overload
+\end_layout
+
+\end_deeper
 \begin_layout Section
 类的保护
 \end_layout
@@ -595,6 +665,16 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+保护：有限制的访问
+\end_layout
+
+\begin_layout Itemize
+属性和方法的作用范围的进一步延伸
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -615,6 +695,267 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+语法上的限制
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="15line%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+修饰词
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Class
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Package
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color magenta
+Subclass
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+World
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+protected
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+（default）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+private
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+√
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -627,27 +968,18 @@ status open
 status open
 
 \begin_layout Plain Layout
-保护种族：包
+保护详解
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_inset Argument 2
 status open
 
 \begin_layout Plain Layout
-保护家族：父类
+
++-
 \end_layout
 
 \end_inset
@@ -655,6 +987,20 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+保护种族（包）：(default)，即无须声明任何访问限制
+\end_layout
+
+\begin_layout Itemize
+保护家族（父类）：protected
+\end_layout
+
+\begin_layout Itemize
+保护自己：private
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -675,6 +1021,16 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+实验包范围的保护
+\end_layout
+
+\begin_layout Itemize
+实验父类属性和方法的保护
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -687,7 +1043,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-构造方法的保护
+专题：构造方法的保护
 \end_layout
 
 \end_inset
@@ -695,5 +1051,11 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+了解不同保护范围的构造方法的意义
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
