@@ -1000,6 +1000,10 @@ status open
 保护自己：private
 \end_layout
 
+\begin_layout Itemize
+最佳实践：private->(default)->protected->public，让代码更安全
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
