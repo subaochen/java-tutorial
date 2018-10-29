@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -36,6 +36,8 @@ PackageOptions url hyphens
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -75,6 +77,7 @@ PackageOptions url hyphens
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -84,7 +87,10 @@ PackageOptions url hyphens
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
@@ -1326,6 +1332,16 @@ status open
 
 \begin_layout Example
 实现多个接口的类。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要画出类的UML类图
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph*
@@ -2285,6 +2301,7 @@ status open
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jvm-se8-specification"
+literal "true"
 
 \end_inset
 
@@ -2292,6 +2309,7 @@ key "jvm-se8-specification"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jvm-advanced-feature"
+literal "true"
 
 \end_inset
 
@@ -2841,6 +2859,7 @@ status open
 LatexCommand cite
 after "2.1"
 key "java-generics-collections"
+literal "true"
 
 \end_inset
 
