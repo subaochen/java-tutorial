@@ -4305,6 +4305,16 @@ status open
 
 \begin_layout Subsection
 日期操作类：LocalDate
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+最新的API文档在：https://docs.oracle.com/javase/10/docs/api/java/time/LocalDate.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4689,6 +4699,16 @@ Current Date in IST=2016-11-20
 
 \begin_layout Subsection
 时间操作类：LocalTime
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+最新的API文档在：https://docs.oracle.com/javase/10/docs/api/java/time/LocalTime.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4831,6 +4851,16 @@ Current Time in IST=12:37:13.775
 
 \begin_layout Subsection
 日期时间类：LocalDateTime
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+最新的API文档在：https://docs.oracle.com/javase/10/docs/api/java/time/LocalDateTime.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4985,6 +5015,17 @@ Current Date in IST=2016-11-20T12:38:15.972
 
 \begin_layout Subsection
 日期和时间的格式化输出类：DateTimeFormatter
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+最新的API文档在：https://docs.oracle.com/javase/10/docs/api/java/time/format/DateTimeForm
+atter.html
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:日期和时间的格式化输出类：DateTimeFormatter"
