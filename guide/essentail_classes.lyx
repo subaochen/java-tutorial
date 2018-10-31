@@ -142,13 +142,14 @@ name "sec:字符串处理"
 status open
 
 \begin_layout Plain Layout
-建议将JDK API的文档常置手边，方便查询。JDK8 API文档在线版：
+建议将JDK API的文档常置手边，方便查询。JDK9以后，本教程中涉及到的API转移到了java.base模块中，相应的在线文档为（以Java9为例，更新的版本
+只需要将其中的数字9替换为更新的版本号即可）：
 \begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
 
-http://docs.oracle.com/javase/8/docs/api/index.html
+https://docs.oracle.com/javase/9/docs/api/java.base-summary.html
 \end_layout
 
 \end_inset
@@ -185,12 +186,12 @@ String hello = "Hello, World!";
 \end_layout
 
 \begin_layout Standard
-除此之外，JDK8提供了多达15个构造方法可以用来创建字符串对象
+除此之外，JDK10提供了多达15个构造方法可以用来创建字符串对象
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-参见：http://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+参见：http://docs.oracle.com/javase/10/docs/api/java/lang/String.html
 \end_layout
 
 \end_inset
@@ -342,14 +343,24 @@ System.out.println(str.length());
 \end_layout
 
 \begin_layout Standard
-length方法返回的字符串长度不包括“字符串结束符”
+length方法返回的字符串长度不包括“字符串结束符
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+字符串结束符
+\end_layout
+
+\end_inset
+
+”
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
 在C语言中，每个字符串都有一个字符串结束符，即'
 \backslash
-0'，在计算字符串的长度时一般不包括字符串结束符。
+0'，在计算字符串的长度时不包括字符串结束符。
 \end_layout
 
 \end_inset

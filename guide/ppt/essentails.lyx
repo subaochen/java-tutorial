@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -42,6 +42,8 @@ coderemarks
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -81,6 +83,7 @@ coderemarks
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -90,7 +93,10 @@ coderemarks
 \tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -108,20 +114,11 @@ Java常用类
 \end_layout
 
 \begin_layout Author
-\begin_inset Note Note
-status open
-
-\begin_layout Author
 宿宝臣 <subaochen@126.com>
 \end_layout
 
 \begin_layout Institute
 山东理工大学
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -150,8 +147,77 @@ LatexCommand tableofcontents
 字符串
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+String是多面手
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+String的构造方法
+\end_layout
+
+\begin_layout Itemize
+length
+\end_layout
+
+\begin_layout Itemize
+substring
+\end_layout
+
+\begin_layout Itemize
+split
+\end_layout
+
+\begin_layout Itemize
+join
+\end_layout
+
+\begin_layout Itemize
+match
+\end_layout
+
+\end_deeper
 \begin_layout Section
 数字类
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Number和数字包裹类
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/essentail-classes/number-classes.svg
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -169,7 +235,7 @@ status open
 
 \begin_layout Frame
 \begin_inset Graphics
-	filename /home/subaochen/git/java-tutorial/guide/imgs/essentail-classes/integer-transmission.eps
+	filename /home/subaochen/git/java-tutorial/guide/imgs/essentail-classes/integer-string-Integer.eps
 	width 80line%
 
 \end_inset
@@ -376,25 +442,15 @@ status open
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_deeper
+\begin_layout Itemize
+ISO预定义格式
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-时间和日期的调整
+\begin_layout Itemize
+自定义格式，无须记忆，参见其API文档
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
+\end_deeper
 \end_body
 \end_document
