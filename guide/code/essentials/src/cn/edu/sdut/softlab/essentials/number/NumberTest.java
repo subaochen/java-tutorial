@@ -18,6 +18,7 @@ public class NumberTest {
     //System.out.println(Integer.parseInt("123.4")); // 格式错误
     Integer num = 123;
     System.out.println("num=" + num);
+    System.out.println("num=" + num.intValue());
     System.out.println("num=" + num.toString());
     System.out.println(Integer.parseInt("10",8));
     System.out.println(Integer.valueOf(123)); // |\longremark{注意这里实际上分两步走：第一步根据数字123获得了一个Integer类型的对象，第二步调用了Integer类型对象的toString方法输出了“123”字符串}|
