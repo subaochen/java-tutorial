@@ -178,11 +178,49 @@ split
 \end_layout
 
 \begin_layout Itemize
-join
+join、StringBuffer
 \end_layout
 
 \begin_layout Itemize
 match
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+综合练习
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+编写一个测试程序，显示出分别使用“+”运算符连接10000个字符串
+\end_layout
+
+\begin_layout Standard
+以及StringBuffer连接10000个字符串所用的时间。
+\end_layout
+
+\begin_layout Standard
+连接20000个字符串呢？ 连接100000个字符串呢？
+\end_layout
+
+\begin_layout Standard
+思考为什么会有这样的差距？
 \end_layout
 
 \end_deeper
@@ -236,8 +274,43 @@ status open
 \begin_layout Frame
 \begin_inset Graphics
 	filename /home/subaochen/git/java-tutorial/guide/imgs/essentail-classes/integer-string-Integer.eps
-	width 80line%
+	width 90line%
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+综合练习
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+写一个程序，将一个整数输出为大写形式。
+\end_layout
+
+\begin_layout Frame
+比如，123输出为“壹佰贰拾叁”。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
