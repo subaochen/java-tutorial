@@ -233,6 +233,14 @@ status open
 try {...} catch(Exception e) {...}
 \end_layout
 
+\begin_layout Itemize
+Java虚拟机如何匹配异常对象和catch代码块?
+\end_layout
+
+\begin_layout Itemize
+只会执行一个catch代码块
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -298,6 +306,36 @@ Java的异常类
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+两种类型异常
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+非检查型异常:可以不处理,交给虚拟机自动处理.处理的原因?
+\end_layout
+
+\begin_layout Itemize
+检查型异常:必须处理
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -474,6 +512,32 @@ status open
 \begin_deeper
 \begin_layout Itemize
 extends Exception
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+异常处理太麻烦了!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+IDE帮助很大
 \end_layout
 
 \end_deeper
