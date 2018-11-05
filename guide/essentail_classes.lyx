@@ -1230,7 +1230,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/essentail-classes/number-classes.svg
+	filename imgs/essentail-classes/number-classes.eps
+	lyxscale 60
 	width 60col%
 
 \end_inset

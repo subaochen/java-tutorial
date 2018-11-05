@@ -2,7 +2,7 @@ package cn.edu.sdut.softlab.essentials.string;
 
 public class StringBufferTest {
     public static void main(String[] args) {
-        int loops = 20000;
+        int loops = 5000;
         System.out.println(System.currentTimeMillis());
         String s = "";
         for(int i = 0; i < loops; i++)
