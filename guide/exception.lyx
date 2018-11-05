@@ -1618,7 +1618,7 @@ reference "fig:抛出异常和捕获异常的关系"
 placement tbph
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1651,6 +1651,29 @@ name "fig:抛出异常和捕获异常的关系"
 \end_layout
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+翻一下JDK的源代码，也许有助于深刻理解Java的异常处理机制。比如
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里寻找一个合适易懂的Java源代码，在：http://hg.openjdk.java.net/jdk10/jdk10/jdk/file/777356696811
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
