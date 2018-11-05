@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -36,6 +36,8 @@ PackageOptions url hyphens
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -51,7 +53,7 @@ PackageOptions url hyphens
 \pdf_bookmarksopenlevel 3
 \pdf_breaklinks true
 \pdf_pdfborder true
-\pdf_colorlinks true
+\pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize default
@@ -75,6 +77,7 @@ PackageOptions url hyphens
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -84,7 +87,10 @@ PackageOptions url hyphens
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
@@ -243,7 +249,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "100col%"
+width "100line%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -282,7 +288,7 @@ Text '2016-13-22' could not be parsed: Invalid value for MonthOfYear (valid
 \end_layout
 
 \begin_layout Plain Layout
-at java.time.format.DateTimeFormatter.createError(DateTimeFormatter
+at java.time.format.DateTimeFormatter.createError(
 \begin_inset ERT
 status open
 
@@ -295,7 +301,7 @@ hspace{0pt}
 
 \end_inset
 
-.java:1920)
+DateTimeFormatter.java:1920)
 \end_layout
 
 \begin_layout Plain Layout
@@ -303,7 +309,7 @@ hspace{0pt}
 \end_layout
 
 \begin_layout Plain Layout
-at cn.edu.sdut.softlab.exception.WhatIfNoException.main(WhatIfNoException
+at cn.edu.sdut.softlab.exception.WhatIfNoException.main(
 \begin_inset ERT
 status open
 
@@ -316,7 +322,7 @@ hspace{0pt}
 
 \end_inset
 
-.java:30)
+WhatIfNoException.java:30)
 \end_layout
 
 \begin_layout Plain Layout
@@ -325,16 +331,24 @@ Caused by: java.time.DateTimeException: Invalid value for MonthOfYear (valid
 \end_layout
 
 \begin_layout Plain Layout
-at java.time.temporal.ValueRange.checkValidIntValue(ValueRange.java:330)
+at java.time.temporal.ValueRange.checkValidIntValue(ValueRange
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+.java:330)
 \end_layout
 
 \begin_layout Plain Layout
 ......
-\end_layout
-
-\begin_layout Plain Layout
-...
- 3 more
 \end_layout
 
 \end_inset
@@ -601,10 +615,6 @@ name "fig:Java的异常类层次结构"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -665,7 +675,16 @@ reference "fig:Java虚拟机和Java应用程序的关系"
 \end_layout
 
 \begin_layout Itemize
-非检查型：即Java虚拟机能够
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+非检查型异常
+\end_layout
+
+\end_inset
+
+非检查型异常：即Java虚拟机能够
 \begin_inset Flex Strong
 status open
 
@@ -701,7 +720,16 @@ reference "fig:Java的异常类层次结构"
 \end_layout
 
 \begin_layout Itemize
-检查型：即Java虚拟机无法自动处理的异常类型，需要在程序中捕获（catch）。对应于
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+检查型异常
+\end_layout
+
+\end_inset
+
+检查型异常：即Java虚拟机无法自动处理的异常类型，需要在程序中捕获（catch）。对应于
 \begin_inset ERT
 status open
 
@@ -794,10 +822,6 @@ name "fig:Java虚拟机和Java应用程序的关系"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1253,8 +1277,17 @@ at cn.edu.sdut.softlab.exception.DivTest.main(DivTest.java:33)
 
 \begin_layout Standard
 但是，ArrayIndexOutOfBoundsException、NumberFormatException、ArithmeticException都是运行时
-异常(RuntimeException)，即非检查型异常，我们在代码中其实不需要主动捕获，当异常发生时虚拟机会自动处理。虚拟机的一般处理策略是打印出异常发生时的
-调用栈，供程序员追查和排错。
+异常(RuntimeException)，即非检查型异常
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+非检查型异常
+\end_layout
+
+\end_inset
+
+，我们在代码中其实不需要主动捕获，当异常发生时虚拟机会自动处理。虚拟机的一般处理策略是打印出异常发生时的调用栈，供程序员追查和排错。
 \begin_inset Flex Strong
 status open
 
@@ -1373,7 +1406,17 @@ status open
 
 \end_inset
 
-（throw）了异常对象，即某个方法在运行中探测到发生了异常状况，因此创建了异常对象并抛出。
+（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+throw
+\end_layout
+
+\end_inset
+
+throw）了异常对象，即某个方法在运行中探测到发生了异常状况，因此创建了异常对象并抛出。
 \end_layout
 
 \begin_layout Example
@@ -1944,6 +1987,179 @@ reference "sec:try-with-resources"
 \end_layout
 
 \begin_layout Section
+用户自定义异常
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:用户自定义异常"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+异常类代表了一种异常的类型，自然我们也可以根据实际的业务逻辑自定义异常类，通常是从Exception类继承下来即可。比如在电子商务的业务流程中，“下订单”的过程
+可能会遇到以下的异常情况
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在真实的电子商务系统中，往往会采取更为灵活的方式处理下订单时的此类异常，这里仅为简化后的情形。
+\end_layout
+
+\end_inset
+
+：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+写出完整的例子，演示抛出异常和catch多种异常的情形，也演示getMessage的好处
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+库存不足：所订购的商品没有及时付款，提交订单时库存不足了，导致提交失败。我们定义这种异常为OutOfInventoryException。
+\end_layout
+
+\begin_layout Itemize
+价格变更：提交订单时商品的价格已经改变了，此时应该阻止提交订单。我们定义这种异常为PriceNotAvailableException。
+\end_layout
+
+\begin_layout Standard
+首先我们定义这两个异常类，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "OutOfIventoryException.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PriceNotAvailableException.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/OutOfInventoryException.java"
+lstparams "float,caption={OutOfIventoryException.java},label={OutOfIventoryException.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/PriceNotAvailableException.java"
+lstparams "float,caption={PriceNotAvailableException.java},label={PriceNotAvailableException.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在主类CustomerOrder.java中，我们设置了两个变量inventoryOK和priceOK分别代表库存和价格的状态，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CustomerOrder.java"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+。读者可以尝试修改这两个变量的值观察输出有什么变化？当然，在实际情况中，应该是根据业务逻辑给这两个变量赋值的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/CustomerOrder.java"
+lstparams "caption={CustomerOrder.java},label={CustomerOrder.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在Idea IDE中，可以通过快捷键Alt+Insert方便的自动产生OutOfInventoryException的构造方法：选择
+\begin_inset Quotes erd
+\end_inset
+
+override method...
+\begin_inset Quotes erd
+\end_inset
+
+，在随后弹出的窗口中选择
+\begin_inset Quotes erd
+\end_inset
+
+Exception(s:String)”即可。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 try with resources
 \begin_inset CommandInset label
 LatexCommand label
@@ -2486,159 +2702,6 @@ status open
 
 \begin_layout Plain Layout
 图示责任链
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-用户自定义异常
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:用户自定义异常"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-异常类代表了一种异常的类型，自然我们也可以根据实际的业务逻辑自定义异常类，通常是从Exception类继承下来即可。比如在电子商务的业务流程中，“下订单”的过程
-可能会遇到以下的异常情况：
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-写出完整的例子，演示抛出异常和catch多种异常的情形，也演示getMessage的好处
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-库存不足：所订购的商品没有及时付款，提交订单时库存不足了，导致提交失败。我们定义这种异常为OutOfInventoryException。
-\end_layout
-
-\begin_layout Itemize
-价格变更：提交订单时商品的价格已经改变了，此时应该阻止提交订单。我们定义这种异常为PriceNotAvailableException。
-\end_layout
-
-\begin_layout Standard
-首先我们定义这两个异常类，如
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstlistingname
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "OutOfIventoryException.java"
-
-\end_inset
-
-和
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstlistingname
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "PriceNotAvailableException.java"
-
-\end_inset
-
-所示。
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/OutOfInventoryException.java"
-lstparams "float,caption={OutOfIventoryException.java},label={OutOfIventoryException.java}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/PriceNotAvailableException.java"
-lstparams "float,caption={PriceNotAvailableException.java},label={PriceNotAvailableException.java}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-在主类CustomerOrder.java中，我们设置了两个变量inventoryOK和priceOK分别代表库存和价格的状态，参见
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstlistingname
-\end_layout
-
-\end_inset
-
-。读者可以尝试修改这两个变量的值观察输出有什么变化？当然，在实际情况中，应该是根据业务逻辑给这两个变量赋值的。
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "code/exception/src/cn/edu/sdut/softlab/exception/eshop/CustomerOrder.java"
-lstparams "caption={CustomerOrder.java},label={CustomerOrder.java}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex Tip
-status open
-
-\begin_layout Plain Layout
-在Idea IDE中，可以通过快捷键Alt+Insert方便的自动产生OutOfInventoryException的构造方法：选择
-\begin_inset Quotes erd
-\end_inset
-
-override method...
-\begin_inset Quotes erd
-\end_inset
-
-，在随后弹出的窗口中选择
-\begin_inset Quotes erd
-\end_inset
-
-Exception(s:String)”即可。
 \end_layout
 
 \end_inset
