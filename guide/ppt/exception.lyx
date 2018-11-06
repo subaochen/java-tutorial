@@ -20,6 +20,8 @@
 %or albatross, orchid, beaver, rose, beetle, seagull, crane.
 %seahorse, default, sidebartab, dolphin , structure
 %dove, whale, fly, wolverine, lily
+\setbeamercovered{dynamic} 
+\usepackage[os=win]{menukeys}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -114,20 +116,11 @@ coderemarks
 \end_layout
 
 \begin_layout Author
-\begin_inset Note Note
-status open
-
-\begin_layout Author
 宿宝臣 <subaochen@126.com>
 \end_layout
 
 \begin_layout Institute
 山东理工大学
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -152,8 +145,94 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-异常(Exception)的概念
+异常概念的导入
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+从一个例子说起
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+输出两个参数的商:
+\end_layout
+
+\end_deeper
+\begin_layout FragileFrame
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Java,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    int a = Integer.parseInt(args[0]);
+\end_layout
+
+\begin_layout Plain Layout
+
+    int b = Integer.parseInt(args[1]);
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println("a/b = " +  a/b);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -168,7 +247,18 @@ LatexCommand tableofcontents
 status open
 
 \begin_layout Plain Layout
-C语言的异常处理
+Let's try:步步惊心
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
 \end_layout
 
 \end_inset
@@ -178,7 +268,15 @@ C语言的异常处理
 
 \begin_deeper
 \begin_layout Itemize
-if...else if...else...
+没有给出足够数量的参数
+\end_layout
+
+\begin_layout Itemize
+参数格式不合法:不能转换成整数
+\end_layout
+
+\begin_layout Itemize
+除数为0
 \end_layout
 
 \end_deeper
@@ -194,7 +292,7 @@ if...else if...else...
 status open
 
 \begin_layout Plain Layout
-如何突出正常流程?
+C style解决方案
 \end_layout
 
 \end_inset
@@ -203,8 +301,60 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-try{...}
+\begin_layout LyX-Code
+public static void main(String[] args) {
+\end_layout
+
+\begin_layout LyX-Code
+  if(args.length != 2){
+\end_layout
+
+\begin_layout LyX-Code
+    System.out.println("请提供2个参数!");
+\end_layout
+
+\begin_layout LyX-Code
+    return;
+\end_layout
+
+\begin_layout LyX-Code
+  }
+\end_layout
+
+\begin_layout LyX-Code
+  if(args[1].equalsIgnoreCase("0")){
+\end_layout
+
+\begin_layout LyX-Code
+    System.out.println("除数不能为0!");
+\end_layout
+
+\begin_layout LyX-Code
+    return;
+\end_layout
+
+\begin_layout LyX-Code
+  }
+\end_layout
+
+\begin_layout LyX-Code
+  int a = Integer.parseInt(args[0]);
+\end_layout
+
+\begin_layout LyX-Code
+  int b = Integer.parseInt(args[1]);
+\end_layout
+
+\begin_layout LyX-Code
+  System.out.println("a/b = " +  a/b);
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+完整示例参见:DivTestCLike.java
 \end_layout
 
 \end_deeper
@@ -220,7 +370,18 @@ try{...}
 status open
 
 \begin_layout Plain Layout
-如何陈述异常流程?
+C style解决方案有什么问题吗?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
 \end_layout
 
 \end_inset
@@ -230,10 +391,856 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
-try {...} catch(Exception e) {...}
+any problems?
+\end_layout
+
+\begin_layout Itemize
+语法正确,语义明确,思路清晰,考虑周全
+\end_layout
+
+\begin_layout Itemize
+值得赞赏
+\end_layout
+
+\begin_layout Itemize
+但是,Java可以让生活更完美,更轻松
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java style解决方案
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+public static void main(String[] args) {
+\end_layout
+
+\begin_layout LyX-Code
+   try {
+\end_layout
+
+\begin_layout LyX-Code
+      int a = Integer.parseInt(args[0]);
+\end_layout
+
+\begin_layout LyX-Code
+      int b = Integer.parseInt(args[1]);
+\end_layout
+
+\begin_layout LyX-Code
+      System.out.println("a/b = " + a / b);
+\end_layout
+
+\begin_layout LyX-Code
+   } 
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java style解决方案(续)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+    catch (ArrayIndexOutOfBoundsException e) {
+\end_layout
+
+\begin_layout LyX-Code
+        System.out.println("数组越界，运行程序时输入的
+\end_layout
+
+\begin_layout LyX-Code
+           参数个数不对。应该输入2个参数，您输入的参数
+\end_layout
+
+\begin_layout LyX-Code
+           个数是：" + args.length);
+\end_layout
+
+\begin_layout LyX-Code
+        //e.printStackTrace();
+\end_layout
+
+\begin_layout LyX-Code
+    } catch (NumberFormatException e) {
+\end_layout
+
+\begin_layout LyX-Code
+        System.out.println("数字格式异常，
+\end_layout
+
+\begin_layout LyX-Code
+            程序只能接受整数形式的参数");
+\end_layout
+
+\begin_layout LyX-Code
+        //e.printStackTrace();
+\end_layout
+
+\begin_layout LyX-Code
+    } catch (ArithmeticException e) {
+\end_layout
+
+\begin_layout LyX-Code
+        System.out.println("数学异常，除数不能为0");
+\end_layout
+
+\begin_layout LyX-Code
+        //e.printStackTrace();
+\end_layout
+
+\begin_layout LyX-Code
+    } catch (Exception e) {
+\end_layout
+
+\begin_layout LyX-Code
+        System.out.println("天知道发生了什么，
+\end_layout
+
+\begin_layout LyX-Code
+            总之情况不对");
+\end_layout
+
+\begin_layout LyX-Code
+        //e.printStackTrace();
+\end_layout
+
+\begin_layout LyX-Code
+    }
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java异常处理的标准模板
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/java-style-exception-blocks.eps
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+敲重点
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+合理规划正常流程和异常流程
+\end_layout
+
+\begin_layout Itemize
+正常流程不一定能够完全执行：
+\begin_inset Newline newline
+\end_inset
+
+一旦遇到异常即转入异常流程，异常流程执行完毕后退出程序。
+\end_layout
+
+\begin_layout Itemize
+只有一个异常流程会被执行到
+\end_layout
+
+\begin_layout Itemize
+catch块的最后无需return语句
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+C style vs.
+ Java style
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+层次更清晰,很容易辨识主流程和异常流程
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这个图应该针对上面的例子重新画
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/java-style-exception-blocks.eps
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+异常对象化,可以更好的描述异常流程和现象
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java异常类
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+异常对象从哪里来？
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+t
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Java API中定义了常见的异常类
+\end_layout
+
+\begin_layout Itemize
+用户自定义异常类
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java API内置的异常类
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+概述
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/exception-overview.eps
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+两种异常类
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+非检查型异常
+\end_layout
+
+\end_inset
+
+JVM知道如何处理此类异常，
+\begin_inset Newline newline
+\end_inset
+
+可自动处置，无需捕获（catch）；
+\begin_inset Newline newline
+\end_inset
+
+也可以捕获（catch）此类异常，给出更明确的提示信息
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+检查型异常
+\end_layout
+
+\end_inset
+
+ 必须捕获（catch），否则为语法错误
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+用户自定义异常
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+定义方法：extends Exception
+\end_layout
+
+\begin_layout Itemize
+定义原则：依业务而定
+\end_layout
+
+\begin_layout Itemize
+如果所有的异常都叫Exception？
+\end_layout
+
+\begin_layout Itemize
+示例：SomeException
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Example例子中用到
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+用户自定义异常全部是检查型异常！
+\end_layout
+
+\end_inset
+
+So,必须捕获所有的用户自定义异常
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java异常处理机制
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+如何以及为何抛出异常：throw/throws
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+catch的参数：异常对象从哪里来？全部来自于throw new...
+\end_layout
+
+\begin_layout Itemize
+如何throw？配合if语句
+\end_layout
+
+\begin_layout Itemize
+为什么要使用throws？
+\end_layout
+
+\begin_layout Itemize
+如何/在哪里catch？责任链机制
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+throw示例
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/throw-catch-exmaple.eps
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+异常处理的责任链机制
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+演示Example责任链的几种情形
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/exception-chain.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+原则
+\end_layout
+
+\end_inset
+
+领导不易，最好各负其责，不要将异常处理的责任都推到上面来
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+异常处理太麻烦了!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+神助攻：IDE帮助很大
+\end_layout
+
+\begin_layout Itemize
+Idea快捷键： 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+keys{
+\backslash
+Alt+
+\backslash
+enter}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+注意控制好正常流程的粒度
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+练习
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+从键盘输入日期字符串，转换为LocalDate对象并打印
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+DateTimeParseException
+\end_layout
+
+\begin_layout Itemize
+体会“流程”定义的粒度是如何影响代码的？
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+真的需要捕获所有异常吗？
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+重写DivTest.java
+\end_layout
+
+\begin_layout Itemize
+不捕获任何异常
+\end_layout
+
+\begin_layout Itemize
+只捕获ArrayIndexOutofBoundsException
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+回顾Java运行机制
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/jvm-java.eps
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -264,266 +1271,5 @@ status open
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Java的异常类
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Graphics
-	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/exception-overview.eps
-	width 100line%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-练习
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-熟悉Java异常的表达方式
-\end_layout
-
-\begin_layout Itemize
-了解常见的Java异常对象
-\end_layout
-
-\begin_layout Itemize
-引申出自定义异常和抛出异常
-\end_layout
-
-\end_deeper
-\begin_layout Section
-抛出异常
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-异常的来龙去脉
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-异常从哪里来：throw
-\end_layout
-
-\begin_layout Itemize
-异常到哪里去：catch
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-异常处理的责任链
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-throws vs.
- throw
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-用途不同
-\end_layout
-
-\begin_layout Itemize
-位置不同
-\end_layout
-
-\end_deeper
-\begin_layout Section
-用户自定义异常
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-业务逻辑异常
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Java API定义的异常并没有囊括所有情况
-\end_layout
-
-\begin_layout Itemize
-业务异常举例
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-自定义异常的方法
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-extends Exception
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-练习
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Section
-try-with-resources
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-结合Java IO讲解此部分
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \end_body
 \end_document
