@@ -114,20 +114,11 @@ coderemarks
 \end_layout
 
 \begin_layout Author
-\begin_inset Note Note
-status open
-
-\begin_layout Author
 宿宝臣 <subaochen@126.com>
 \end_layout
 
 \begin_layout Institute
 山东理工大学
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -153,7 +144,93 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-异常(Exception)的概念
+异常(Exception)概念的导入
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+从一个例子说起
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+输出两个参数的商:
+\end_layout
+
+\end_deeper
+\begin_layout FragileFrame
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Java,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    int a = Integer.parseInt(args[0]);
+\end_layout
+
+\begin_layout Plain Layout
+
+    int b = Integer.parseInt(args[1]);
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println("a/b = " +  a/b);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -168,7 +245,18 @@ LatexCommand tableofcontents
 status open
 
 \begin_layout Plain Layout
-C语言的异常处理
+Let's try:步步惊心
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
 \end_layout
 
 \end_inset
@@ -178,7 +266,15 @@ C语言的异常处理
 
 \begin_deeper
 \begin_layout Itemize
-if...else if...else...
+没有给出足够数量的参数
+\end_layout
+
+\begin_layout Itemize
+参数格式不合法:不能转换成整数
+\end_layout
+
+\begin_layout Itemize
+除数为0
 \end_layout
 
 \end_deeper
@@ -194,7 +290,7 @@ if...else if...else...
 status open
 
 \begin_layout Plain Layout
-如何突出正常流程?
+C style解决方案
 \end_layout
 
 \end_inset
@@ -203,8 +299,60 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-try{...}
+\begin_layout LyX-Code
+public static void main(String[] args) {
+\end_layout
+
+\begin_layout LyX-Code
+  if(args.length != 2){
+\end_layout
+
+\begin_layout LyX-Code
+    System.out.println("请提供2个参数!");
+\end_layout
+
+\begin_layout LyX-Code
+    return;
+\end_layout
+
+\begin_layout LyX-Code
+  }
+\end_layout
+
+\begin_layout LyX-Code
+  if(args[1].equalsIgnoreCase("0")){
+\end_layout
+
+\begin_layout LyX-Code
+    System.out.println("除数不能为0!");
+\end_layout
+
+\begin_layout LyX-Code
+    return;
+\end_layout
+
+\begin_layout LyX-Code
+  }
+\end_layout
+
+\begin_layout LyX-Code
+  int a = Integer.parseInt(args[0]);
+\end_layout
+
+\begin_layout LyX-Code
+  int b = Integer.parseInt(args[1]);
+\end_layout
+
+\begin_layout LyX-Code
+  System.out.println("a/b = " +  a/b);
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+完整示例参见:DivTestCLike.java
 \end_layout
 
 \end_deeper
@@ -220,7 +368,359 @@ try{...}
 status open
 
 \begin_layout Plain Layout
-如何陈述异常流程?
+C style解决方案有什么问题吗?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
++-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+any problems?
+\end_layout
+
+\begin_layout Itemize
+语法正确,语义明确,思路清晰,考虑周全
+\end_layout
+
+\begin_layout Itemize
+值得赞赏
+\end_layout
+
+\begin_layout Itemize
+但是,Java可以让生活更完美,更轻松
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java style解决方案
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+public static void main(String[] args) {
+\end_layout
+
+\begin_layout LyX-Code
+   try {
+\end_layout
+
+\begin_layout LyX-Code
+      int a = Integer.parseInt(args[0]);
+\end_layout
+
+\begin_layout LyX-Code
+      int b = Integer.parseInt(args[1]);
+\end_layout
+
+\begin_layout LyX-Code
+      System.out.println("a/b = " + a / b);
+\end_layout
+
+\begin_layout LyX-Code
+   } 
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java style解决方案(续)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+plain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+    catch (ArrayIndexOutOfBoundsException e) {
+\end_layout
+
+\begin_layout LyX-Code
+        System.out.println("数组越界，运行程序时输入的
+\end_layout
+
+\begin_layout LyX-Code
+           参数个数不对。应该输入2个参数，您输入的参数
+\end_layout
+
+\begin_layout LyX-Code
+           个数是：" + args.length);
+\end_layout
+
+\begin_layout LyX-Code
+        //e.printStackTrace();
+\end_layout
+
+\begin_layout LyX-Code
+    } catch (NumberFormatException e) {
+\end_layout
+
+\begin_layout LyX-Code
+        System.out.println("数字格式异常，
+\end_layout
+
+\begin_layout LyX-Code
+            程序只能接受整数形式的参数");
+\end_layout
+
+\begin_layout LyX-Code
+        //e.printStackTrace();
+\end_layout
+
+\begin_layout LyX-Code
+    } catch (ArithmeticException e) {
+\end_layout
+
+\begin_layout LyX-Code
+        System.out.println("数学异常，除数不能为0");
+\end_layout
+
+\begin_layout LyX-Code
+        //e.printStackTrace();
+\end_layout
+
+\begin_layout LyX-Code
+    } catch (Exception e) {
+\end_layout
+
+\begin_layout LyX-Code
+        System.out.println("天知道发生了什么，
+\end_layout
+
+\begin_layout LyX-Code
+            总之情况不对");
+\end_layout
+
+\begin_layout LyX-Code
+        //e.printStackTrace();
+\end_layout
+
+\begin_layout LyX-Code
+    }
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+C style vs.
+ Java style
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
++-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+层次更清晰,很容易辨识主流程和异常流程
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这个图应该针对上面的例子重新画
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/java-style-exception-blocks.eps
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+异常对象化,可以更好的描述异常流程和现象
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Java的异常类
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/exception-overview.eps
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+真的需要catch每一个异常吗?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+why catch,catch what?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+?
 \end_layout
 
 \end_inset
@@ -272,40 +772,6 @@ status open
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Java的异常类
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Graphics
-	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/exception-overview.eps
-	width 100line%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
