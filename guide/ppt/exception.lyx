@@ -145,15 +145,15 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Section
-异常(Exception)概念的导入
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+异常概念的导入
 \end_layout
 
 \begin_layout FragileFrame
@@ -627,6 +627,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 +-
 \end_layout
 
@@ -727,6 +728,10 @@ status open
 
 \end_layout
 
+\begin_layout Section
+Java异常类
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
@@ -781,6 +786,16 @@ Java API内置的异常类
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+概述
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename /home/subaochen/git/java-tutorial/guide/imgs/exception/exception-overview.eps
 	width 100line%
@@ -872,6 +887,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 +-
 \end_layout
 
@@ -928,6 +944,10 @@ So,必须捕获所有的用户自定义异常
 
 \end_layout
 
+\begin_layout Section
+Java异常处理机制
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
@@ -943,6 +963,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 +-
 \end_layout
 
@@ -1031,6 +1052,7 @@ plain
 status open
 
 \begin_layout Plain Layout
+
 +-
 \end_layout
 
@@ -1106,13 +1128,13 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 keys{
-
 \backslash
 Alt+
 \backslash
-enter
+enter}
 \end_layout
 
 \end_inset
@@ -1231,86 +1253,6 @@ plain
 status open
 
 \begin_layout Plain Layout
-把重点放到检查型异常上来
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-通常，非检查型异常不需要处理（catch）
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-why catch,catch what?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-try {...} catch(Exception e) {...}
-\end_layout
-
-\begin_layout Itemize
-Java虚拟机如何匹配异常对象和catch代码块?
-\end_layout
-
-\begin_layout Itemize
-只会执行一个catch代码块
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 最后的清理:finally
 \end_layout
 
@@ -1329,249 +1271,5 @@ status open
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-练习
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-熟悉Java异常的表达方式
-\end_layout
-
-\begin_layout Itemize
-了解常见的Java异常对象
-\end_layout
-
-\begin_layout Itemize
-引申出自定义异常和抛出异常
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-用户自定义异常
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-业务逻辑异常
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Java API定义的异常并没有囊括所有情况
-\end_layout
-
-\begin_layout Itemize
-业务异常举例
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-自定义异常的方法
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-extends Exception
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-练习
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-
-\end_layout
-
-\begin_layout Section
-抛出异常
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-异常的来龙去脉
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-异常从哪里来：throw
-\end_layout
-
-\begin_layout Itemize
-异常到哪里去：catch
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-异常处理的责任链
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-当领导不容易！
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-throws vs.
- throw
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-用途不同
-\end_layout
-
-\begin_layout Itemize
-位置不同
-\end_layout
-
-\end_deeper
-\begin_layout Section
-try-with-resources
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-结合Java IO讲解此部分
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \end_body
 \end_document
