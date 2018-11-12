@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -36,6 +36,8 @@ PackageOptions url hyphens
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -75,6 +77,7 @@ PackageOptions url hyphens
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -84,7 +87,10 @@ PackageOptions url hyphens
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
@@ -154,7 +160,7 @@ status open
 
 \begin_layout Plain Layout
 
-enum WEEK{SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY};
+enum WEEKDAY{SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY};
 \end_layout
 
 \end_inset
@@ -167,27 +173,14 @@ enum WEEK{SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY};
 \begin_inset Quotes erd
 \end_inset
 
-,于是我们可以在程序中这样定义变量：
+,于是我们可以在程序中这样定义和使用enum WEEKDAY：
 \end_layout
 
 \begin_layout Standard
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-enum WEEK monday = MONDAY;
-\end_layout
-
-\begin_layout Plain Layout
-
-enum WEEK tuesday;
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "code/enum/enum_demo.c"
+lstparams "language=C,caption={C语言enum用法示例},label={enum_demo.c}"
 
 \end_inset
 
@@ -195,7 +188,7 @@ enum WEEK tuesday;
 \end_layout
 
 \begin_layout Standard
-monday和tuesday变量的数据类型是enum
+monday变量的数据类型是enum
 \begin_inset Index idx
 status open
 
@@ -205,7 +198,7 @@ enum
 
 \end_inset
 
- WEEK类型的，而且monday和tuesday的数据范围限于enum week中定义的常量。monday的实际数值是整数1。
+ WEEKDAY类型的，而且monday的数据范围限于enum week中定义的常量。monday的实际数值是整数1。
 \end_layout
 
 \begin_layout Section
@@ -364,7 +357,7 @@ WeekDay> {
 \end_layout
 
 \begin_layout Plain Layout
-  public static final cn.edu.sdut.softlab.WeekDay TUESDAY;
+public static final cn.edu.sdut.softlab.WeekDay TUESDAY;
 \end_layout
 
 \begin_layout Plain Layout
@@ -421,7 +414,7 @@ ect继承下来的，这也是enum枚举类型对象和普通对象的区别。
 
 \begin_layout Standard
 \begin_inset Flex Notice
-status collapsed
+status open
 
 \begin_layout Plain Layout
 如果不使用enum，在Java中通常如何表达一周7天呢？一般情况下，我们可以在接口中定义常量：
@@ -990,7 +983,7 @@ import static cn.edu.sdut.softlab.TrafficSignal.GREEN;
 
 \begin_layout Plain Layout
 
-TrafficSignal ts = RED;
+TrafficSignal ts = GREEN;
 \end_layout
 
 \begin_layout Plain Layout
