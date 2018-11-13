@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="slf4j-api-1.7.21">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/devel/apache-mina-2.0.16/lib/slf4j-api-1.7.21.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
