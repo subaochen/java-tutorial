@@ -413,6 +413,21 @@ ect继承下来的，这也是enum枚举类型对象和普通对象的区别。
 \end_layout
 
 \begin_layout Standard
+注意到，enum对象中的属性，比如SUNDAY也是一个对象，而且是WeekDay类型的对象，我们从反编译后的代码可以看出这一点。因此，SUNDAY这样的属性就有
+name()方法和ordinal()方法。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里的描述不够清晰，值得商榷
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Flex Notice
 status open
 
@@ -579,6 +594,17 @@ ordinal：序号，即enum在定义中的序号，默认从0开始依次递增�
 
 \begin_layout Exercise
 定义一个enum，表达三基色（红绿蓝）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+在WeekDay的定义中，SUNDAY是一个字符串，还是一个对象？如果是一个对象，这个对象是什么类型的？
 \end_layout
 
 \begin_layout Section
@@ -800,8 +826,8 @@ cSignal增加了value属性以表明不同颜色交通信号灯所代表的意�
 \begin_inset Quotes erd
 \end_inset
 
-时，只需要修改TrafficSignal类的定义即可，其他引用TrafficSignal的类都不需要修改，也就是说，我们的代码可以很好的适用未来的变化：用尽量小
-的代价应对未来的需求变化，软件的可维护性就大大提高了。
+或者“hold on”时，只需要修改TrafficSignal类的定义即可，其他引用TrafficSignal的类都不需要修改，也就是说，我们的代码可以很好的适
+用未来的变化：用尽量小的代价应对未来的需求变化，软件的可维护性就大大提高了。
 \begin_inset Flex Emph
 status open
 
@@ -853,7 +879,7 @@ name "exer:定义一个enum-Planet表示太阳系各行星的名称、质量和�
 
 \end_inset
 
-
+通过这个练习，我们可以看到，enum将行星的名称、质量和半径这三个常量组织到一个Planet对象中了。
 \end_layout
 
 \begin_layout Standard
@@ -963,7 +989,28 @@ lstparams "caption={EnumInSwitchTest.java},label={EnumInSwitchTest.java}"
 status open
 
 \begin_layout Plain Layout
-关于enum的静态导入：在实际使用enum对象的时候，如果我们多次使用了同一个enum对象，可以使用静态导入技术适当简化代码，比如下面这样：
+关于enum的静态导入
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+静态导入
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+注意到，静态导入的对象不能在默认包中，因此必须将TrafficSignal类放到一个包里面。这在实际的项目中一般没有问题，在练习的时候要注意创建一个包来容纳Tr
+afficSignal类。
+\end_layout
+
+\end_inset
+
+：在实际使用enum对象的时候，如果我们多次使用了同一个enum对象，可以使用静态导入技术适当简化代码，比如下面这样：
 \end_layout
 
 \begin_layout Plain Layout
