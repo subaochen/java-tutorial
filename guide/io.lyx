@@ -164,11 +164,31 @@ C的IO回顾
 \end_layout
 
 \begin_layout Itemize
-输入输出的“源”都被看做设备，使用设备描述符来区分不同的输入输出源。
+输入输出的“源”都被看做设备，使用设备描述符
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+设备描述符
+\end_layout
+
+\end_inset
+
+来区分不同的输入输出源。
 \end_layout
 
 \begin_layout Itemize
-从设备输入或者输出的数据通过“流”（stream）模型来处理，参见
+从设备输入或者输出的数据通过“流”（stream
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+stream
+\end_layout
+
+\end_inset
+
+）模型来处理，参见
 \begin_inset ERT
 status open
 
@@ -209,6 +229,16 @@ reference "fig:C的输出模型"
 \end_inset
 
 。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+把下图的输入流和输出流画成管道的形状
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -386,9 +416,28 @@ Java的IO体系
 
 \begin_layout Standard
 Java继承了C对输入输出的基本认识：无论输入输出来自何处（设备），去往何处（设备），一律当做“流”的方式来处理。流就像一个仅容一个bit数据通过的管道一样，是
-一个有序的数据序列。如果我们按照8位（1个字节）来分割解读流中的数据序列，就是“面向字节的流”，有时也简称“字节流”；如果我们以16位（2个字节，即1个字符）来
-分割和解读流中的数据，就是“面向字符的流”，有时也简称“字符流”。其实，字节流和字符流的区分并没有改变流的数据本质，只是我们以不同的视角解读数据罢了，就像一部红
-楼，经学家看见《易》，道学家看见淫，才子看见缠绵，革命家看见排满，流言家看见宫闱秘事
+一个有序的数据序列。如果我们按照8位（1个字节）来分割解读流中的数据序列，就是“面向字节的流”，有时也简称“字节流
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+字节流
+\end_layout
+
+\end_inset
+
+”；如果我们以16位（2个字节，即1个字符）来分割和解读流中的数据，就是“面向字符的流”，有时也简称“字符流
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+字符流
+\end_layout
+
+\end_inset
+
+”。其实，字节流和字符流的区分并没有改变流的数据本质，只是我们以不同的视角解读数据罢了，就像一部红楼，经学家看见《易》，道学家看见淫，才子看见缠绵，革命家看见排
+满，流言家看见宫闱秘事
 \begin_inset Foot
 status open
 
@@ -1398,7 +1447,47 @@ ASCII文件可以安全的使用面向字节的流读写，因为ASCII字符的�
 \end_layout
 
 \begin_layout Standard
-我们之前一直在使用的System.in，实际上一个InputStream类型的对象，Sytsem.out实际上是一个PrintStream类型的对象
+我们之前一直在使用的System.in
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+System.in
+\end_layout
+
+\end_inset
+
+，实际上一个InputStream
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+InputStream
+\end_layout
+
+\end_inset
+
+类型的对象，Sytsem.out
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Sytsem.out
+\end_layout
+
+\end_inset
+
+实际上是一个PrintStream
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PrintStream
+\end_layout
+
+\end_inset
+
+类型的对象
 \begin_inset Foot
 status open
 
