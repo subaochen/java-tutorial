@@ -1709,7 +1709,14 @@ reference "sec:try-with-resources"
 \end_layout
 
 \begin_layout Example
-复制二进制文件。
+复制二进制文件
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:复制二进制文件。"
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Paragraph*
@@ -1753,6 +1760,16 @@ lstparams "caption={CopyBinary.java},label={CopyBinary.java}"
 
 \begin_layout Paragraph*
 运行结果
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+要复制的文件从哪里来？
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2156,6 +2173,40 @@ status open
 
 \begin_layout Exercise
 使用C语言通过面向字节的方式打开一个文件写入“你好，世界!”，然后使用Java的面向字节的流读取此文件，看看有什么变化？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+请将
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exercisename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:复制二进制文件。"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+改造为从命令行输入源文件和目标文件，然后将源文件复制为目标文件。
 \end_layout
 
 \begin_layout Subsection
