@@ -1690,6 +1690,30 @@ reference "solu:abstract class and interface"
 \end_layout
 
 \begin_layout Subsection
+接口中的常量
+\end_layout
+
+\begin_layout Standard
+TBD
+\end_layout
+
+\begin_layout Subsection
+接口的继承
+\end_layout
+
+\begin_layout Standard
+TBD
+\end_layout
+
+\begin_layout Subsection
+接口中的默认实现
+\end_layout
+
+\begin_layout Standard
+TBD
+\end_layout
+
+\begin_layout Subsection
 不懂接口的项目经理不是好的项目经理
 \end_layout
 
