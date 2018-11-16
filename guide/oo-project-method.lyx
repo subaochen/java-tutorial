@@ -1694,7 +1694,31 @@ reference "solu:abstract class and interface"
 \end_layout
 
 \begin_layout Standard
-TBD
+接口中除了抽象方法外，也可以持有常量，这也是一种常见的情形。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要进一步解释为什么常量是常见情形？JDK中的例子找出来
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+但是，接口中不允许持有变量。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要进一步解释为什么？
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1702,15 +1726,35 @@ TBD
 \end_layout
 
 \begin_layout Standard
-TBD
+接口是“纯的抽象类”，因此接口和其他类一样，也可以实现继承关系，即接口的继承和类的继承有相同的语法和限制，不再赘述。
 \end_layout
 
 \begin_layout Subsection
-接口中的默认实现
+接口中的默认方法
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+自JDK8开始支持此特性。
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 TBD
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+可以参考：http://www.cnblogs.com/guangshan/p/4889732.html
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
