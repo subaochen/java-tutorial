@@ -219,5 +219,33 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+从键盘输入数据的具体分析
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+IDEA的调试功能
+\end_layout
+
+\begin_layout Section
+Paths和Files
+\end_layout
+
 \end_body
 \end_document
