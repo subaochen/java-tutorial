@@ -3978,6 +3978,16 @@ JDK 1.7引入了新的文件操作API，即NIO.2，本节内容着重于NIO.2，
 \end_inset
 
 中，Path的概念至关重要，类Path是文件操作的入口。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里简要说明Path的功能
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5209,7 +5219,17 @@ s了。通常，以单数命名的类用来表示一类事物，复数命名的�
 
 \end_inset
 
-类是Java文件操作新API（java.nio.file包）中文件操作的核心类。相对于Path类，Files类聚焦于文件相关的操作。
+类是Java文件操作新API（java.nio.file包）中文件操作的核心类。相对于Path类，Files类聚焦于文件相关的操作：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+进一步概括说明Files类的功能
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
