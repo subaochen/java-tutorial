@@ -17,6 +17,7 @@
           <horizontalTextPosition value="0"/>
           <icon value="images/duke.gif"/>
           <text value="Image and Text"/>
+          <verticalAlignment value="3"/>
           <verticalTextPosition value="3"/>
         </properties>
       </component>
@@ -25,6 +26,8 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
           <text value="Text-only Label"/>
         </properties>
       </component>
