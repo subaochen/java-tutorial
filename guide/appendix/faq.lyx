@@ -411,6 +411,16 @@ a?*.java：匹配以字母a开头，并且紧跟着至少一个字符或者字�
 
 \begin_layout Section
 如何运行示例工程？
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要进一步细化，包括语言和图片
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -428,7 +438,61 @@ figurename
 
 \end_inset
 
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:设置JDK"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/appendix/modulesetting-sdk.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+设置JDK
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:设置JDK"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -445,7 +509,132 @@ figurename
 
 \end_inset
 
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:设置source路径"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/appendix/modulesetting-source-path.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+设置source路径
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:设置source路径"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设置source路径后，应该如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:设置source路径后的效果"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/subaochen/git/java-tutorial/guide/imgs/appendix/modulesetting-source-path-ok.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+设置source路径后的效果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:设置source路径后的效果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
