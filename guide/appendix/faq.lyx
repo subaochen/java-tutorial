@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -33,6 +33,8 @@ theorems-chap-bytype
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -72,6 +74,7 @@ theorems-chap-bytype
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -81,7 +84,10 @@ theorems-chap-bytype
 \tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
@@ -401,6 +407,45 @@ a?*.java：匹配以字母a开头，并且紧跟着至少一个字符或者字�
 
 \begin_layout Itemize
 /home/**：匹配/home/gus、/home/gus/data、/home/gus/data/test。
+\end_layout
+
+\begin_layout Section
+如何运行示例工程？
+\end_layout
+
+\begin_layout Standard
+使用Idea打开给出的示例工程时，由于JDK版本的差异，往往需要调整一下工程的设置：鼠标右键点击项目名称，选择“Open Module Settings”菜单，
+选择你的电脑的JDK路径即可，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+有的时候，也可能需要设置项目的源代码所在路径（如果配置环境被弄乱了的话，典型的表现是项目的包无法识别，只能展示为文件目录。），如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+所示。
 \end_layout
 
 \end_body
