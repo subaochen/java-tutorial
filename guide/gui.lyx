@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -36,6 +36,8 @@ PackageOptions url hyphens
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -75,6 +77,7 @@ PackageOptions url hyphens
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #dad3d7
 \index Index
 \shortcut idx
@@ -84,7 +87,10 @@ PackageOptions url hyphens
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
@@ -6258,6 +6264,97 @@ name "fig:BorderLayout示例运行结果"
 这个示例很简单，我们只是修改了Panel的Layout Manager为BorderLayout，然后将5个按钮依次放到界面的合适位置即可。
 \end_layout
 
+\begin_layout Exercise
+尝试将
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BorderLayout示例运行结果"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+中“Center”按钮所在的位置替换为另外一个“麻将桌”，即如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BorderLayout练习1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+示的效果。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/gui/BorderLayout-exe1.1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BorderLayout练习1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BorderLayout练习1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 FlowLayout
 \end_layout
@@ -6671,6 +6768,16 @@ name "fig:CardLayout示例运行结果"
 
 \begin_layout Paragraph*
 代码说明
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+增加代码的分析，因为CardLayout的代码不是特别直观
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
