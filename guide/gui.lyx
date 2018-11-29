@@ -8555,6 +8555,16 @@ status open
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+是否可以在这里增加一个设计模式的示例？比如设计一个Container模拟OS，设计一个Listener模拟按钮、checkbox等
+\end_layout
+
+\end_inset
+
 ，其他类型的事件处理过程与此类似。
 \end_layout
 
