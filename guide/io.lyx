@@ -4571,7 +4571,16 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 String toString()
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4591,7 +4600,16 @@ String toString()
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 Path getFileName()
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4612,7 +4630,16 @@ etFileName实际上会调用返回的Path对象的toString方法。
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 Path getName(int index)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4632,7 +4659,16 @@ Path getName(int index)
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 int getNameCount()
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4652,7 +4688,16 @@ int getNameCount()
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 Path subpath(int beginIndex, int endIndex)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4673,7 +4718,16 @@ Path subpath(int beginIndex, int endIndex)
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 Path getParent()
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4694,7 +4748,16 @@ Path getParent()
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 Path getRoot()
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4811,7 +4874,16 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 URI toUri()
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4820,7 +4892,17 @@ URI toUri()
 \begin_inset Text
 
 \begin_layout Plain Layout
-使用Uri方式描述路径。对于本地文件（文件系统）使用file协议，因此URI的形式如file:///path-to-file
+使用
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Uri
+\end_layout
+
+\end_inset
+
+方式描述路径。对于本地文件（文件系统）使用file协议，因此URI的形式如file:///path-to-file
 \end_layout
 
 \end_inset
@@ -4831,7 +4913,16 @@ URI toUri()
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 Path toAbsolutePath()
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4851,8 +4942,17 @@ Path toAbsolutePath()
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
 Path toRealPath(LinkOption...
  options) throws IOException
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
