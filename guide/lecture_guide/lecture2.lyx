@@ -1,0 +1,3770 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{../../../writing-common/book-preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+tip-inset
+note-inset
+warning-inset
+coderemarks
+logicalmkup
+theorems-bytype
+theorems-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\size larger
+\bar under
+山东理工大学教案
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="70col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第二次课
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学课型：理论课□√ 实验课□√ 习题课□ 实践课□ 技能课□ 其它□
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要教学内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:变量和变量的命名"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:变量和变量的命名"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:常量和常量的命名"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:常量和常量的命名"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:简单数据类型"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:简单数据类型"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:运算符"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:运算符"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:表达式"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:表达式"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:数组"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:数组"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:条件判断和分支"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:条件判断和分支"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:循环"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:循环"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:方法的不定长参数"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:方法的不定长参数"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Java的注释"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Java的注释"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:综合应用举例"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:综合应用举例"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java的命名规范；
+\end_layout
+
+\begin_layout Enumerate
+加强了Java循环表达式；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+难点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+加强了Java循环表达式；
+\end_layout
+
+\begin_layout Enumerate
+Java的不定长参数；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+课程目标及要求
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+课程目标：课程目标1
+\end_layout
+
+\begin_layout Plain Layout
+要求：
+\end_layout
+
+\begin_layout Enumerate
+能够和C语言对照，快速掌握Java的基本语法和关键词；
+\end_layout
+
+\begin_layout Enumerate
+熟练掌握Java语言的条件判断、循环的用法；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学方法和手段
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+板书和多媒体相结合，边讲边练，当堂消化。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+讨论、思考题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+列出Java和C语言在数据类型、表达式等方面的异同点；
+\end_layout
+
+\begin_layout Enumerate
+Java在哪些方面加强了C语言的数据类型、表达式？
+\end_layout
+
+\begin_layout Enumerate
+作业：
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exer:编写一个程序，寻找一组整数中的最大值和最小值。输入格式：首先输入"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参考资料
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Java的基础语法
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Java的基础语法"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+附录增加一个quick reference card
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../imgs/verybasic/data-type.png
+	width 70col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+变量和变量的命名
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:变量和变量的命名"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java语言中变量的概念和C语言完全一致，这里不再赘述。所不同的是，C语言中一般使用下划线分隔开多个单词，而在Java中，我们一般使用“驼式命名法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+驼式命名法
+\end_layout
+
+\end_inset
+
+”（Camel Case Name）来给变量起名字，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:驼峰命名法"
+
+\end_inset
+
+所示，多个单词构成了一个变量，除第一个单词之外，其他单词的第一个字母大写。大写的字母很像隆起的驼峰，因此此种命名法被形象的称之为“驼式命名法”。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/verybasic/camel-naming-style.eps
+	width 40line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+驼式命名法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:驼峰命名法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:C语言的变量和Java语言变量对照表"
+
+\end_inset
+
+是常见的C语言变量
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+摘自Linux内核源代码
+\end_layout
+
+\end_inset
+
+和Java语言变量的对照，也是优秀变量命名的典范：
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C中的常见变量
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java中的变量表示方法
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boot_info
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bootInfo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cmdline_boot_cpuid
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cmdlineBootCpuid
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+time_attrs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+timeAttrs
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lookup_flags
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lookupFlag
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+C语言的变量和Java语言变量对照表
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:C语言的变量和Java语言变量对照表"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+合理的变量命名能够加强代码的可读性，减轻团队沟通的压力，软件后期的维护压力也会缓解。从一开始就要
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+有意识的培养合理命名变量的习惯
+\end_layout
+
+\end_inset
+
+。善于合理的命名变量也是一种能力，这种能力不会从天上掉下来，只有多阅读优秀的代码，注意学习高手的编程思路和变量命名习惯，在平时的练习中坚持给变量合理的命名，才能
+逐步培养这种能力。本书坚持以合理的变量命名方式给出示例程序，希望通过此种方式让初学者在
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+潜移默化
+\end_layout
+
+\end_inset
+
+中获得这种能力。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+关于C中的__file这样的变量命名，有必要在这里说道一下吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+常量和常量的命名
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:常量和常量的命名"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+常量是一种特殊的变量：其值不允许改变的变量。在C语言中，我们一般使用全大写字母表示常量，Java也完全遵守这一通用规则。所不同的是，Java语言中的常量通常使用
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+final
+\end_layout
+
+\end_inset
+
+final static
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+static
+\end_layout
+
+\end_inset
+
+进行联合修饰：final表示不可修改，static表示类变量，即所有对象共享一个此常量的备份。显然，对于常量而言，这样的修饰是十分合理和必要的，举例
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+摘自openjdk源代码：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/l
+ang/Shutdown.java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/* Shutdown state */
+\end_layout
+
+\begin_layout Plain Layout
+
+public static final int RUNNING = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+public static final int HOOKS = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+public static final int FINALIZERS = 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+public static final int MAX_SYSTEM_HOOKS = 10;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Itemize
+请暂时忽略例子中的public，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:访问控制"
+
+\end_inset
+
+深入学习public的用法。
+\end_layout
+
+\begin_layout Itemize
+我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:static常量"
+
+\end_inset
+
+深入学习static的用法，这里可以简单理解为和C语言中的static用法类似：在C语言中，static变量表示变量位于静态存储区，因此可以在函数之间共享此变量
+。在Java中使用static修饰变量其实用意很相似：static变量在多个对象中只保存一份，即static变量的目的是
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+在多个对象中共享变量
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+简单数据类型
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:简单数据类型"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+简单数据类型
+\end_layout
+
+\end_inset
+
+简单数据类型（又称为基本数据类型）和C语言几乎完全一致，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Java的数据类型"
+
+\end_inset
+
+所示。
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="7line%">
+<column alignment="center" valignment="middle" width="10line%">
+<column alignment="center" valignment="middle" width="5line%">
+<column alignment="center" valignment="middle" width="30line%">
+<column alignment="center" valignment="middle" width="35line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类别
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+字节数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+取值范围
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+举例
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+整数类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+byte
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-128～127
+\end_layout
+
+\begin_layout Plain Layout
+(-2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
+～2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
+-1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+byte minor;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+byte[] image; 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+short
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-32768～32767
+\end_layout
+
+\begin_layout Plain Layout
+-2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+
+～2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+short state;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+short index = indexArray[i];
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2147483648～2147483647
+\end_layout
+
+\begin_layout Plain Layout
+-2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+31
+\end_layout
+
+\end_inset
+
+～2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+31
+\end_layout
+
+\end_inset
+
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+int searchOffset;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+int nextComma;
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+long
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-9223372036854775808～9223372036854775807
+\end_layout
+
+\begin_layout Plain Layout
+-2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+63
+\end_layout
+
+\end_inset
+
+～2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+63
+\end_layout
+
+\end_inset
+
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+long timeout;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+long remaining = 100L;
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+浮点类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+float
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pm1.4E-45f$
+\end_inset
+
+～
+\begin_inset Formula $\pm3.4028235E+38f$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+float loadFactor;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+float f = 2.5F;
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+double
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pm4.9E-324$
+\end_inset
+
+～
+\begin_inset Formula $\pm1.796931348623157E+308$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+double scaledFractional;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+double approxMax;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+double myNumber = -1234.56;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+double[] limits = {1,2,3,4,5,6,7};
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+字符类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+char
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+u0000～
+\backslash
+uffff
+\end_layout
+
+\begin_layout Plain Layout
+(0～65535)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+char c = 'a';
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+char[] text;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+char trailChar;
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+布尔类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+true,false
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+boolean isDefaultLevel;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+boolean isInverse;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+boolean mayAllocateText;
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+boolean first = true;
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java的数据类型
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Java的数据类型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SimpleDataType.java"
+
+\end_inset
+
+演示了Java中的简单数据类型：
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/verybasic/src/SimpleDataType.java"
+lstparams "caption={SimpleDataType.java},label={SimpleDataType.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+执行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+c(char) = a,size of c = 2
+\end_layout
+
+\begin_layout Plain Layout
+b(byte) = 20,size of n = 1
+\end_layout
+
+\begin_layout Plain Layout
+n(int) = 10,size of n = 4
+\end_layout
+
+\begin_layout Plain Layout
+s(short) = 2,size of s = 2
+\end_layout
+
+\begin_layout Plain Layout
+l(long) = 100,size of l = 8
+\end_layout
+
+\begin_layout Plain Layout
+f(float) = 2.5,size of f = 4
+\end_layout
+
+\begin_layout Plain Layout
+d(double) = 2.5,size of d = 8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+C语言中没有字符串数据类型，Java语言中同样没有字符串这种简单数据类型。不过，Java是面向对象的程序设计语言，允许通过定义类来无限扩展数据类型，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:字符串处理"
+
+\end_inset
+
+讨论使用JDK中提供的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+String
+\end_layout
+
+\end_inset
+
+String类来表示字符串以及字符串的相关操作。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这部分内容可以删除？在openjdk中long/double/float没有采用此种方式来表示数字。
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+注意到，我们在Java中采用了和C中类似的方法，往往在数字的末尾使用不同的字母表示不同的数据类型：
+\end_layout
+
+\begin_layout Itemize
+L表示long；
+\end_layout
+
+\begin_layout Itemize
+F表示float；
+\end_layout
+
+\begin_layout Itemize
+D表示double；
+\end_layout
+
+\begin_layout Plain Layout
+当然，不这样表示在语法上也是正确的。但是，通过这种方式可以明确告诉Java编译器数字的类型，编译器能够帮助检查数字类型是否匹配。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Warning
+status open
+
+\begin_layout Plain Layout
+实际上，Java的数据类型分为基本数据类型和引用数据类型，我们在这里只讨论基本数据类型，引用数据类型延迟到
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:引用类型"
+
+\end_inset
+
+讨论。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+运算符
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:运算符"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+参见表
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java中的运算符"
+
+\end_inset
+
+，除了
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+instanceof
+\end_layout
+
+\end_inset
+
+instanceof和
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+new
+\end_layout
+
+\end_inset
+
+new运算符外，Java的运算符及其优先级规则和C是一样的：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+运算符
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+算术运算符
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++,-,*,/,%，++，-- 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+关系运算符
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<,<=,>,>=,==,!=
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+逻辑运算符
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+&&,||,!
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+位运算符
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+&,|,~,^,<<,>>,>>>
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+赋值运算符
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=,*=,+=,-=,/=,%=,<<=,>>=,>>>=,&=,^=,|=
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+对象运算符
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+instanceof
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java中的运算符
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java中的运算符"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里有一个综合的运算符示例程序
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+表达式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:表达式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们说“C语言是一种表达式语
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+表达式语
+\end_layout
+
+\end_inset
+
+言”，可见表达式的概念是多么的重要！实际上，现代的程序设计语言，包括Java都可以称作“表达式语言”，表达式由参与运算的元素（称为运算数
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+运算数
+\end_layout
+
+\end_inset
+
+）和运算符
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+运算符
+\end_layout
+
+\end_inset
+
+的不同组合而成，即：
+\end_layout
+
+\begin_layout Definition
+表达式=运算数 + 运算符
+\end_layout
+
+\begin_layout Definition
+要特别强调的是，每一个表达式都一定有一个确定的值，即“表达式的值
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+表达式的值
+\end_layout
+
+\end_inset
+
+”。举例说明：
+\end_layout
+
+\begin_layout Definition
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+表达式类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+表达式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+表达式的值
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+算术表达式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 + 2 - (3 * 4)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+关系表达式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 > 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+false
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+逻辑表达式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 && 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+true
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+赋值表达式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a = 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+true
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+表达式和表达式的值
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:表达式和表达式的值"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+我们经常在条件判断语句中使用表达式及表达式的值，请参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:条件判断和分支"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+输入圆的半径，求圆的面积和周长
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:输入圆的半径，求圆的面积"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+增加圆的周长计算，说明如何避免魔幻数字
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CircleArea.java"
+
+\end_inset
+
+中，我们将综合运用Java的输入输出和算术表达式。也请注意Java常量的定义和使用方式。
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/verybasic/src/CircleArea.java"
+lstparams "caption={CircleArea.java},label={CircleArea.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+执行结果如下：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+请输入半径：10.3
+\end_layout
+
+\begin_layout Plain Layout
+面积=333.12261233749405
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+请结合
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:输入圆的半径，求圆的面积"
+
+\end_inset
+
+，阐述什么是魔幻数字
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里似乎应该解释什么是魔幻数字？
+\end_layout
+
+\end_inset
+
+（魔幻字符串）？常量在消除魔幻数字中起到怎样的作用？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+从键盘输入球体的半径，求球体的体积
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:从键盘输入球体的半径，求球体的体积。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Section
+数组
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:数组"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java数组的意义、用法和C语言几乎完全一致，只是定义方式有两点不同：
+\end_layout
+
+\begin_layout Itemize
+Java定义数组不需要指定数组大小，Java虚拟机能够自动“推断”数组的大小。
+\end_layout
+
+\begin_layout Itemize
+通常，Java将定义数组时的[]放到数据类型的右边，而不是变量的右边，即如：int[] array，这样能够更明确表示array是数组的名字。
+\end_layout
+
+\begin_layout Standard
+Java的数组示例请参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:遍历数组"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Section
+条件判断和分支
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:条件判断和分支"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java中的条件判断语句用法和C语言完全一致，不再赘述，通过一个例子看一下在Java中条件判断语句的基本用法。
+\end_layout
+
+\begin_layout Example
+输入成绩，输出成绩的等级（优秀、良好、及格、不及格）
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:输入成绩，输出成绩的等级（优秀、良好、及格、不及格）"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/verybasic/src/ShowGrade.java"
+lstparams "caption={ShowGrade.java},label={ShowGrade.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+执行结果为：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+请输入成绩：87
+\end_layout
+
+\begin_layout Plain Layout
+成绩87.0的等级为：优秀
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Java加强了的switch分支结构
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Java加强了的switch分支结构"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java中的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+switch
+\end_layout
+
+\end_inset
+
+switch语句，不仅可以接受一个整数表达式（即表达式的值为整数），也可以接受一个字符串表达式（即表达式的值为字符串）和Enum类
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Enum以及Emum用于Switch请参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:switch中的enum"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+输入月份的英文缩写，输出月份的天数
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:输入月份的英文缩写，输出月份的天数"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/verybasic/src/Month.java"
+lstparams "caption={Month.java},label={Month.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+请使用switch-case结构重新实现
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:输入成绩，输出成绩的等级（优秀、良好、及格、不及格）"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:请使用switch-case结构重新实现。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+改进
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:输入成绩，输出成绩的等级（优秀、良好、及格、不及格）"
+
+\end_inset
+
+，使得可以录入任意多的成绩并给出相应的等级分。录入-1表示录入结束
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:改进，使得可以录入任意多的成绩并给出相应的等级分。录入-1表示录"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+尝试使用C语言的思路重新实现
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:输入月份的英文缩写，输出月份的天数"
+
+\end_inset
+
+，即switch中的表达式只允许为整数，应该如何改写？
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:尝试使用C语言的思路重新实现，即switch中的表达式只允许为整"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "exa:输入成绩，输出成绩的等级（优秀、良好、及格、不及格）"
+
+\end_inset
+
+中并没有考虑闰月问题，请补充完整
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:在中并没有考虑闰月问题，请补充完整。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Section
+循环
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:循环"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+三大循环结构
+\end_layout
+
+\begin_layout Standard
+Java中的三大循环结构（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+for
+\end_layout
+
+\end_inset
+
+for循环、while
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+while
+\end_layout
+
+\end_inset
+
+循环、do-while
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+do-while
+\end_layout
+
+\end_inset
+
+循环）以及break
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+break
+\end_layout
+
+\end_inset
+
+、continue
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+continue
+\end_layout
+
+\end_inset
+
+的用法和C语言完全一致，不再赘述。
+\end_layout
+
+\begin_layout Paragraph*
+Java加强了的循环结构
+\end_layout
+
+\begin_layout Standard
+Java提供了一种加强了的for循环语句，可以很方便的遍历集合（包括数组），其基本结构为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+for(元素类型T 循环变量t:集合s) {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+此加强了的for循环会自动从集合s中取出每一个元素赋值给“:”前面定义的循环变量t，这样在循环体中就可以使用这个变量t了。
+\end_layout
+
+\begin_layout Example
+遍历数组
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:遍历数组"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/verybasic/src/EnhancedFor.java"
+lstparams "caption={EnhancedFor.java},label={EnhancedFor.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+方法的不定长参数
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:方法的不定长参数"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java方法的参数可以是不定长的，即任意个数的参数。
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+不定长参数
+\end_layout
+
+\end_inset
+
+不定长参数的表示方法是在参数类型和参数名之间使用...隔开，当实参和形参匹配时，实参列表会保存到一个指定的
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+数组
+\end_layout
+
+\end_inset
+
+中（即不定长参数名），在方法体内可以遍历这个数组访问每一个参数。
+\end_layout
+
+\begin_layout Standard
+比如将任意多个整数相加的方法，可以如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "VarargsTest.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/verybasic/src/VarargsTest.java"
+lstparams "float,caption={VarargsTest.java},label={VarargsTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+作为单独的一节介绍main方法及其参数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java的注释
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java的注释"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java支持两种方式的注
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+注
+\end_layout
+
+\end_inset
+
+释：
+\end_layout
+
+\begin_layout Enumerate
+C语言风格的注释：即/*...*/方式的注释。
+\end_layout
+
+\begin_layout Enumerate
+C++语言风格的注释：即//...方式的注释。
+\end_layout
+
+\begin_layout Standard
+通常，多行的注释采用C语言风格比较方便，单行注释采用C++语言风格比较方便。习惯上，多行的注释使用/**开头，比如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * 方法的功能描述.
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param param1 参数1的描述
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param param2 参数2的描述
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @return 返回值的描述
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+public String method(String param1, int param2) {...}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在上面的例子中，@param， @return分别用于描述方法的参数和返回值，javadoc
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+javadoc是Java提供的API文档生成工具，位于SDK的bin目录下，即和java、java在同一个目录下。Java SDK的API文档就是通过javad
+oc工具生成的，简单的用法是运行：javadoc 包名（类名列表），即可在当前目录下生成HTML格式的标准API文档，读者可自行尝试和体会。详细了解javado
+c可以参考：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/Javadoc
+\end_layout
+
+\end_inset
+
+和
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.oracle.com/technetwork/articles/java/index-137868.html
+\end_layout
+
+\end_inset
+
+，使用Linux的读者也可以执行man javadoc。
+\end_layout
+
+\end_inset
+
+可以根据这些标签自动生成API文档，建议读者在阅读优秀的源代码时注意学习注释的写法，养成写规范注释的习惯。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+大多数IDE都支持自动插入注释框架，比如在Idea中，只要在方法（函数）的上一行输入/**（注意是两个*）再按回车，然后在空白处补充描述即可。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Java的基本语法结构中，哪些方面和C语言一致？Java增加了哪些新特性？
+\end_layout
+
+\begin_layout Section
+综合应用举例
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:综合应用举例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+利用下面的公式计算
+\begin_inset Formula $\pi$
+\end_inset
+
+的近似值，要求精确到
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+为止。
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:利用下面的公式计算的近似值，要求精确到为止。"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi/4\approx1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+问题分析
+\end_layout
+
+\begin_layout Standard
+这是利用级数公式近似计算某个特定值的典型应用，计算结果的精确度取决于累加的项数多少，累加的项数越多，精度越好。
+\end_layout
+
+\begin_layout Paragraph*
+设计说明
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "CalculatePi.java"
+
+\end_inset
+
+中，设计了一个计算
+\begin_inset Formula $\pi$
+\end_inset
+
+近似值的方法
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+本书大多数地方把C语言中的函数（function）称作“方法”（method），这是面向对象程序设计语言中对函数的称呼。其实，这两者没有差别，只是叫法不同而已。
+也就是说，在面向过程的语言中，通常称作函数；在面向对象的语言中，通常称作方法。
+\end_layout
+
+\end_inset
+
+，这样在main方法中调用这个方法即可。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/verybasic/src/CalculatePi.java"
+lstparams "caption={CalculatePi.java},label={CalculatePi.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+显示结果
+\end_layout
+
+\begin_layout Standard
+运行例
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:利用下面的公式计算的近似值，要求精确到为止。"
+
+\end_inset
+
+后，输出结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+pai = 3.141591
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+程序说明
+\end_layout
+
+\begin_layout Standard
+本例的主要内容是计算
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+pi$
+\end_layout
+
+\end_inset
+
+近似值的方法pi()。其设计思路很直接，利用变量item保存每个迭代项的数值，然后累加到result中即可。注意到sign的用法很常见，在每次迭代的时候实现了符
+号的变换。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写一个程序，寻找一组整数中的最大值和最小值。输入格式：首先输入N，表示这组整数的个数，然后依次输入这组整数
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:编写一个程序，寻找一组整数中的最大值和最小值。输入格式：首先输入"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写字符界面版计算器程序，运行时提示输入两个操作数，然后输出加减乘除运行结果。
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:编写字符界面版计算器程序，运行时提示输入两个操作数，然后输出加减"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写一个程序，从键盘输入x，利用下面公式计算的近似值，要求精度到10
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+-6
+\end_layout
+
+\end_inset
+
+：
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:编写一个程序，从键盘输入x，利用下面公式计算的近似值，要求精度到"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula 
+\[
+\cos(x)=1-\frac{x^{2}}{2!}+\frac{x^{4}}{4!}-\frac{x^{6}}{6!}+\frac{x^{8}}{8!}-\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+
+\end_layout
+
+\end_body
+\end_document

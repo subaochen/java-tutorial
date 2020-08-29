@@ -1047,8 +1047,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/tests/oop-model.svg
-	scale 60
+	filename imgs/tests/oop-model.eps
+	width 80line%
 
 \end_inset
 

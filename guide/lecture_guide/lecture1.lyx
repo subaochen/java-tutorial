@@ -6,7 +6,7 @@
 \origin unavailable
 \textclass ctex-book
 \begin_preamble
-\input{../../writing-common/book-preamble.tex}
+\input{../../../writing-common/book-preamble.tex}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -103,6 +103,422 @@ PackageOptions url hyphens
 
 \begin_body
 
+\begin_layout Standard
+\align center
+
+\size larger
+\bar under
+山东理工大学教案
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="70col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第一次课
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学课型：理论课□√ 实验课□√ 习题课□ 实践课□ 技能课□ 其它□
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要教学内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Java在程序设计语言中的霸主地位"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Java在程序设计语言中的霸主地位"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Java简史"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Java简史"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Java的特点"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Java的特点"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Java开发环境的搭建"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Java开发环境的搭建"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:初识Java的输入输出"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:初识Java的输入输出"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java的开发环境如何搭建
+\end_layout
+
+\begin_layout Enumerate
+如何创建简单的Java应用程序
+\end_layout
+
+\begin_layout Enumerate
+对Java的输入输出有个初步的印象
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+难点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Java的输入输出
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+课程目标及要求
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+课程目标：课程目标1
+\end_layout
+
+\begin_layout Plain Layout
+要求：
+\end_layout
+
+\begin_layout Enumerate
+了解Java语言的来历和特点；
+\end_layout
+
+\begin_layout Enumerate
+掌握Java开发环境的搭建方法和基本用法；
+\end_layout
+
+\begin_layout Enumerate
+熟悉Java的输入输出方法。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学方法和手段
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+板书和多媒体相结合，边讲边练，当堂消化。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+讨论、思考题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java为什么能够异军突起，在众多程序设计语言中发展的这么好？
+\end_layout
+
+\begin_layout Enumerate
+在大数据、人工智能蓬勃发展的今天，Java是否依然是主流程序设计语言，为什么？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参考资料
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 初识Java
 \begin_inset CommandInset label
@@ -117,7 +533,7 @@ name "chap:初识Java"
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename imgs/intro/java-concept.png
+	filename ../imgs/intro/java-concept.png
 	width 100col%
 
 \end_inset
@@ -127,6 +543,13 @@ name "chap:初识Java"
 
 \begin_layout Section
 Java在程序设计语言中的霸主地位
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java在程序设计语言中的霸主地位"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -172,7 +595,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/tiobe_top_langs.pdf
+	filename ../imgs/intro/tiobe_top_langs.pdf
 	width 100line%
 
 \end_inset
@@ -199,6 +622,13 @@ status open
 
 \begin_layout Section
 Java简史
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java简史"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -232,7 +662,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/duke.png
+	filename ../imgs/intro/duke.png
 	width 90line%
 
 \end_inset
@@ -389,7 +819,7 @@ status open
 \begin_layout Plain Layout
 \align right
 \begin_inset Graphics
-	filename imgs/intro/James_Gosling_2008.jpg
+	filename ../imgs/intro/James_Gosling_2008.jpg
 	lyxscale 30
 	width 90line%
 
@@ -606,7 +1036,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/java-history.png
+	filename ../imgs/intro/java-history.png
 	width 100line%
 
 \end_inset
@@ -650,6 +1080,13 @@ status open
 
 \begin_layout Section
 Java的特点
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java的特点"
+
+\end_inset
+
+
 \begin_inset Foot
 status open
 
@@ -922,6 +1359,13 @@ Java语言可以跨平台的秘诀是什么？
 
 \begin_layout Section
 Java开发环境的搭建
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java开发环境的搭建"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1319,7 +1763,7 @@ JDK。对于我们学习Java程序设计而言，openjdk就足够了。如果你
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "code/intro/src/HelloWorld.java"
+filename "../code/intro/src/HelloWorld.java"
 lstparams "caption={HelloWorld.java},label={HelloWorld.java}"
 
 \end_inset
@@ -1619,7 +2063,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/idea-new-project-1.png
+	filename ../imgs/intro/idea-new-project-1.png
 	width 70line%
 
 \end_inset
@@ -1661,7 +2105,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/idea-new-project-2.png
+	filename ../imgs/intro/idea-new-project-2.png
 	width 90line%
 
 \end_inset
@@ -1747,7 +2191,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/idea-new-project-3.png
+	filename ../imgs/intro/idea-new-project-3.png
 	width 80line%
 
 \end_inset
@@ -1789,7 +2233,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/idea-new-project-4.png
+	filename ../imgs/intro/idea-new-project-4.png
 	width 80line%
 
 \end_inset
@@ -1859,7 +2303,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/idea-new-project-5.png
+	filename ../imgs/intro/idea-new-project-5.png
 	width 70line%
 
 \end_inset
@@ -1921,7 +2365,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/idea-new-project-6.png
+	filename ../imgs/intro/idea-new-project-6.png
 	width 70line%
 
 \end_inset
@@ -1997,7 +2441,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/idea-new-project-7.png
+	filename ../imgs/intro/idea-new-project-7.png
 	width 70line%
 
 \end_inset
@@ -2230,7 +2674,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename imgs/intro/NewJavaApplication_001.pdf
+	filename ../imgs/intro/NewJavaApplication_001.pdf
 	width 100col%
 
 \end_inset
@@ -2292,7 +2736,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename imgs/intro/NewJavaApplication_002.pdf
+	filename ../imgs/intro/NewJavaApplication_002.pdf
 	width 100col%
 
 \end_inset
@@ -2363,7 +2807,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/edit-helloworld.png
+	filename ../imgs/intro/edit-helloworld.png
 	lyxscale 30
 	scale 30
 
@@ -2445,7 +2889,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename imgs/intro/run-file.png
+	filename ../imgs/intro/run-file.png
 	width 100col%
 
 \end_inset
@@ -2507,7 +2951,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename imgs/intro/run-file-console.png
+	filename ../imgs/intro/run-file-console.png
 	width 100col%
 
 \end_inset
@@ -2633,6 +3077,13 @@ eclipse的具体用法和Netbeans大同小异，不再赘述。
 
 \begin_layout Section
 初识Java的输入输出
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:初识Java的输入输出"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3056,7 +3507,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename imgs/intro/idea-psvm.png
+	filename ../imgs/intro/idea-psvm.png
 	width 80line%
 
 \end_inset
@@ -3113,7 +3564,7 @@ reference "IODemo.java"
 \begin_layout Example
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "code/intro/src/IODemo.java"
+filename "../code/intro/src/IODemo.java"
 lstparams "caption={IODemo.java},label={IODemo.java}"
 
 \end_inset
@@ -3166,7 +3617,7 @@ reference "solu:的一个实现如下所示："
 
 
 \begin_inset Graphics
-	filename imgs/intro/exe-logo-asterisks.png
+	filename ../imgs/intro/exe-logo-asterisks.png
 	scale 20
 
 \end_inset
