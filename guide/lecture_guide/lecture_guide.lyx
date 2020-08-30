@@ -167,6 +167,10 @@ CS呢？角色扮演。Mud？
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -175,6 +179,11 @@ status open
 
 \backslash
 AddLabels
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -216,6 +225,46 @@ filename "lecture2.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "lecture3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "lecture4.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "lecture5.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "lecture6.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "lecture7.lyx"
 
 \end_inset
 

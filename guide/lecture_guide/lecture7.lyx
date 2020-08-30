@@ -1,0 +1,7179 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{../../../writing-common/book-preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+note-inset
+tip-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+coderemarks
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\size larger
+\bar under
+山东理工大学教案
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="70col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第七次课
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学课型：理论课□√ 实验课□√ 习题课□ 实践课□ 技能课□ 其它□
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要教学内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:字符串处理"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:字符串处理"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:数字类"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:数字类"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:日期和时间类"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:日期和时间类"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+字符串类String的构造方法和各种类方法；
+\end_layout
+
+\begin_layout Enumerate
+字符串、数字和数字包裹类的转换关系；
+\end_layout
+
+\begin_layout Enumerate
+日期、时间的表示方法和处理方法；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+难点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+字符串、数字和数字包裹类的转换关系
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+课程目标及要求
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+课程目标：课程目标1
+\end_layout
+
+\begin_layout Plain Layout
+要求：
+\end_layout
+
+\begin_layout Enumerate
+熟练掌握String类的常见构造方法和字符串的处理方法；
+\end_layout
+
+\begin_layout Enumerate
+熟练掌握字符串、数字和数字包裹类的相互转换方法；
+\end_layout
+
+\begin_layout Enumerate
+了解日期、时间相应的API。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学方法和手段
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+板书和多媒体相结合，边讲边练，当堂消化。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+讨论、思考题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+String是Java的基本数据类型吗？
+\end_layout
+
+\begin_layout Enumerate
+字符串、数字和数字包裹类的相互转换有什么规律可循？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参考资料
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Java的常用类
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Java的常用类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../imgs/essentail-classes/essentail-classes.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+字符串类
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:字符串处理"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+字符和字符串是程序设计中最常见的数据类型了。在C语言中只有字符类型，字符串需要通过字符数组或者指向字符的指针来表达，而Java直接提供了String类
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+建议将JDK API的文档常置手边，方便查询。JDK9以后，本教程中涉及到的API转移到了java.base模块中，相应的在线文档为（以Java9为例，更新的版本
+只需要将其中的数字9替换为更新的版本号即可）：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://docs.oracle.com/javase/9/docs/api/java.base-summary.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+来表示字符串，对字符串的处理就方便多了。
+\end_layout
+
+\begin_layout Subsection
+字符串对象的定义和初始化
+\end_layout
+
+\begin_layout Standard
+创建字符串对象的最简单方法是直接使用双引号初始化字符串：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String hello = "Hello, World!";
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+除此之外，JDK10提供了多达15个构造方法可以用来创建字符串对象
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见：http://docs.oracle.com/javase/10/docs/api/java/lang/String.html
+\end_layout
+
+\end_inset
+
+，在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "essentials-Client.java"
+
+\end_inset
+
+中演示了创建字符串对象的常见形式。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/string/Client.java"
+lstparams "float,caption={创建字符串对象的几种方法},label={essentials-Client.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+请读者思考以下两种方式创建字符串对象的区别：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String hello = "hello world!";
+\end_layout
+
+\begin_layout Plain Layout
+
+String hello = new String("hello, world!");
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+第一种方式在内存中只创建了一个字符串对象hello，第二种方式则创建了两个字符串对象：hello和字符串内容为“hello world！”的匿名对象。实际上，双
+引号括起来的字符串一般都会在内存中创建一个匿名对象。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Warning
+status open
+
+\begin_layout Plain Layout
+注意双引号和单引号的用法区别：双引号用来表示字符串，单引号用来表示字符，比如：
+\end_layout
+
+\begin_layout Plain Layout
+String str =
+\begin_inset Quotes eld
+\end_inset
+
+a string
+\begin_inset Quotes erd
+\end_inset
+
+；// 一个字符串对象
+\end_layout
+
+\begin_layout Plain Layout
+char c = 'A'; // 一个字符变量
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+常见字符串处理方法
+\end_layout
+
+\begin_layout Subsubsection*
+求字符串的长度
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+字符串结束符？在这里讲解字符串的不变性？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+获取字符串的长度使用String类提供的length()方法：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String str = "a string";
+\end_layout
+
+\begin_layout Plain Layout
+
+System.out.println(str.length());
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+length方法返回的字符串长度不包括“字符串结束符
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+字符串结束符
+\end_layout
+
+\end_inset
+
+”
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在C语言中，每个字符串都有一个字符串结束符，即'
+\backslash
+0'，在计算字符串的长度时不包括字符串结束符。
+\end_layout
+
+\end_inset
+
+，因此上面的代码片段输出结果为8。
+\end_layout
+
+\begin_layout Subsubsection*
+截取字符串
+\end_layout
+
+\begin_layout Standard
+如果把字符串看做字符的有序序列，那么我们可以任意截取这个字符序列的一小段，String类提供了substring方法，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SubStringTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/string/SubStringTest.java"
+lstparams "float,caption={SubStringTest.java},label={SubStringTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一个常见的任务是去掉字符串开头或者末尾的某个特殊字符，比如字符串 
+\begin_inset Quotes eld
+\end_inset
+
+zhangsan,lisi,
+\begin_inset Quotes erd
+\end_inset
+
+，我们希望去掉最后的逗号变成
+\begin_inset Quotes erd
+\end_inset
+
+zhagnsan,lisi
+\begin_inset Quotes erd
+\end_inset
+
+，可以使用下面的代码：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String str = "zhangsan,lisi,";
+\end_layout
+
+\begin_layout Plain Layout
+
+System.out.println(str.substring(0,str.length() - 1));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+注意到，substring方法中，开始字符串的索引和结束字符串的索引都是从0开始的。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+如果仅仅是去掉字符串两端的空白字符（包括空格、回车、Tab），则可以使用String提供的trim()方法，这在WEB开发中很常见：用户从浏览器输入的表单中输入
+的字符串一般需要使用trim处理一下，去掉用户无意中输入的空白字符。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+分割字符串
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:分割字符串"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有的字符串存在明显的分隔符，比如linux的passwd文件，使用“:”隔开了各个区域：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+root:x:0:0:root:/root:/bin/bash
+\end_layout
+
+\begin_layout Plain Layout
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+\end_layout
+
+\begin_layout Plain Layout
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+\end_layout
+
+\begin_layout Plain Layout
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+\end_layout
+
+\begin_layout Plain Layout
+sync:x:4:65534:sync:/bin:/bin/sync
+\end_layout
+
+\begin_layout Plain Layout
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+\end_layout
+
+\begin_layout Plain Layout
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如何方便的把这类字符串解析为一个字符串数组呢？String提供了方便的split方法：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    String str = "root:x:0:0:root:/root:/bin/bash";
+\end_layout
+
+\begin_layout Plain Layout
+
+    String[] result = str.split(":");
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (String s : result) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      System.out.println(s);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意到，split方法的参数不仅仅可以是一个简单的字符串，还可以是一个正则表达式
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+详情请参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://docs.oracle.com/javase/tutorial/essential/regex/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+，能够处理复杂的字符串分割的情形。
+\end_layout
+
+\begin_layout Exercise
+编写一个程序，解析Linux的passwd文件，输出用户名和该用户的登录shell。（关于如何打开文件请参阅
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "chap:Java的IO"
+
+\end_inset
+
+）。
+\end_layout
+
+\begin_layout Subsubsection*
+拼接字符串
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:拼接字符串"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java中拼接两个字符串的方法有以下几种：
+\end_layout
+
+\begin_layout Itemize
+重载
+\begin_inset Quotes erd
+\end_inset
+
++
+\begin_inset Quotes erd
+\end_inset
+
+运算符：Java重载了
+\begin_inset Quotes erd
+\end_inset
+
++
+\begin_inset Quotes erd
+\end_inset
+
+运算符，允许直接将两个字符串首尾连接起来。注意到如果“+”的两个操作数只要任一个是字符串，另外一个操作数都会自动转换为字符串形式，比如下面的代码片段：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String str = "Java " + "cool!";
+\end_layout
+
+\begin_layout Plain Layout
+
+int a = 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+System.out.println("variable a=" + a); // 打印出：variable a=10
+\end_layout
+
+\begin_layout Plain Layout
+
+String str2 = a + ""; // 简单的方法把数字a转化为字符串"10"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+使用String的concat方法可以达到和使用+同样的效果，比如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+"java".concat(" language"); //返回 java language
+\end_layout
+
+\begin_layout Plain Layout
+
+"java".concat(" programming").concat(" language");// 返回java programming language
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+使用String的join方法
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+这是一个类方法（静态方法）
+\end_layout
+
+\end_inset
+
+，这个方法是split方法的“反方法”，比如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+String message = String.join("-", "Java", "is", "cool");
+\end_layout
+
+\begin_layout Plain Layout
+
+// message returned is: "Java-is-cool"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+StringBuilder类提供了高效处理字符串的功能，通常涉及到大量字符串拼接时，建议使用StringBuilder来完成
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+其实当使用“+”连接多个字符串时，最终经过编译后也是通过StringBuilder来完成的。但是为什么说直接使用“+”连接多个字符串的效率不高呢？这涉及到Jav
+a的内存回收机制，这里不展开阐述，详情可参见本系列教程的提高篇：性能调整。
+\end_layout
+
+\end_inset
+
+：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+StringBuilder sb = new StringBuilder();
+\end_layout
+
+\begin_layout Plain Layout
+
+sb.append("Java");
+\end_layout
+
+\begin_layout Plain Layout
+
+sb.append("is cool!");
+\end_layout
+
+\begin_layout Plain Layout
+
+String str = sb.toString();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+另外一个和StringBuilder功能类似的类是StringBuffer。StringBuilder和StringBuffer的最大区别是StringBuff
+er是线程
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+关于线程的概念和用法，请参见本系列教程的提高篇：多线程Java程序设计。
+\end_layout
+
+\end_inset
+
+安全的，即StringBuffer可以安全的用于多线程环境。StringBuilder不是线程安全的，因此只能用于单线程环境。由此也可以知道，StringBui
+lder的效率要比StringBuffer高一些。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+查找（匹配）字符串
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:查找（匹配）字符串"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分为以下几种情形：
+\end_layout
+
+\begin_layout Itemize
+检查是否以特定字符串开头的startsWith
+\end_layout
+
+\begin_layout Itemize
+检查是否以特定字符串结尾的endsWith
+\end_layout
+
+\begin_layout Itemize
+检查是否包含特定字符串的contains
+\end_layout
+
+\begin_layout Itemize
+检查字符串是否满足正则表达式的matches
+\end_layout
+
+\begin_layout Example
+综合示例String的字符串匹配方法
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "StringMatch.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/string/StringMatchTest.java"
+lstparams "float,caption={StringMatch.java},label={StringMatch.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+这里尤其要注意matches方法，其参数是一个正则表达式
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+由于本书没有讲述正则表达式，这里仅仅提及，将来可以补充一个交叉链接进来
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsubsection*
+其他字符串处理方法
+\end_layout
+
+\begin_layout Standard
+JDK的String类提供了丰富的字符串处理功能，除了上面介绍的常见方法外，还有如下的方法也很常用，请大家自行参考
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+\end_layout
+
+\end_inset
+
+ 学习：
+\end_layout
+
+\begin_layout Itemize
+根据索引提取字符串中的字符：charAt
+\end_layout
+
+\begin_layout Itemize
+比较两个字符串：equals
+\end_layout
+
+\begin_layout Itemize
+比较两个字符串（忽略大小写）equalsIgnoreCase
+\end_layout
+
+\begin_layout Itemize
+判断字符串是否为空：isEmpty
+\end_layout
+
+\begin_layout Itemize
+替换字符串：replace
+\end_layout
+
+\begin_layout Itemize
+转换大小写：toLowerCase，toUppperCase
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5.1.3 字符串综合示例
+\end_layout
+
+\begin_layout Plain Layout
+在应用需求中，我们会遇到这样的客户需求，要把账单上的小写数据转换为大写的数据。比如对于
+\begin_inset Quotes erd
+\end_inset
+
+308.7
+\begin_inset Quotes erd
+\end_inset
+
+，我们希望得到的结果是“叁佰零捌元柒角”。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要补充代码
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Plain Layout
+暂时没有准备好示例程序
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+Java面试中经常遇到的问题：String str = new String(
+\begin_inset Quotes eld
+\end_inset
+
+a string
+\begin_inset Quotes erd
+\end_inset
+
+)创建了几个字符串对象？答案是2个：
+\begin_inset Quotes erd
+\end_inset
+
+a string
+\begin_inset Quotes erd
+\end_inset
+
+作为string构造方法的参数本身是一个字符串对象，根据
+\begin_inset Quotes erd
+\end_inset
+
+a string
+\begin_inset Quotes erd
+\end_inset
+
+这个字符串使用String的构造方法又创建了一个字符串对象str，因此这一句创建了2个字符串对象。那么String str = 
+\begin_inset Quotes eld
+\end_inset
+
+a string
+\begin_inset Quotes erd
+\end_inset
+
+创建了几个字符串对象呢？显然是1个。因此可以看出，使用new操作符创建字符串对象一般是没有必要的，徒增Java的内存占用而已。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+来自面试真题：试说明下列代码的执行结果：
+\begin_inset CommandInset label
+LatexCommand label
+name "exer:来自面试真题about StringBuffer"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Lianxi {
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        StringBuffer a = new StringBuffer("a");
+\end_layout
+
+\begin_layout Plain Layout
+
+        StringBuffer b = new StringBuffer("b");
+\end_layout
+
+\begin_layout Plain Layout
+
+        append(a,b);
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println(a);
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println(b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    private static void append(StringBuffer a, StringBuffer b) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        a.append(b);
+\end_layout
+
+\begin_layout Plain Layout
+
+        b = a;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }   
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+数字类
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:数字类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+基本数字类型变量的包裹类
+\end_layout
+
+\begin_layout Standard
+在程序中，当我们用到数字时，一般使用数字的基本数据类型来表达，比如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int age = 20;
+\end_layout
+
+\begin_layout Plain Layout
+
+float money = 23456.5f;
+\end_layout
+
+\begin_layout Plain Layout
+
+byte mask = 0xff;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果需要对数字做更深入的处理怎么办呢？Java提供了各种基本数字类型的包裹类
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+包裹类
+\end_layout
+
+\end_inset
+
+（Wrapper Class），如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:java中的数字类型包裹类"
+
+\end_inset
+
+所示。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+BigDecimal的讲解？放到精度控制中？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/essentail-classes/number-classes.eps
+	lyxscale 60
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+java中的数字类型包裹类
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:java中的数字类型包裹类"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一般以下情形中，我们需要数字类型的包裹类：
+\end_layout
+
+\begin_layout Itemize
+有的方法参数明确声明需要一个数字类型的对象，比如：int toInt(Integer obj)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+从openjdk中找到这样的一个方法
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+使用包裹类中定义的常量，比如MAX_VALUE，MIN_VALUE，SIZE，TYPE等。
+\end_layout
+
+\begin_layout Itemize
+在数字和字符串之间转换或者不同数制之间转换时。
+\end_layout
+
+\begin_layout Standard
+所有Number的子类都实现了的方法如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Number子类的方法列表"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="45col%">
+<column alignment="left" valignment="middle" width="54col%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+byte byteValue() 
+\end_layout
+
+\begin_layout Plain Layout
+short shortValue() 
+\end_layout
+
+\begin_layout Plain Layout
+int intValue() 
+\end_layout
+
+\begin_layout Plain Layout
+long longValue() 
+\end_layout
+
+\begin_layout Plain Layout
+float floatValue() 
+\end_layout
+
+\begin_layout Plain Layout
+double doubleValue()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回请求的基本数字类型数值，可能存在损失精度情况，比如一个Double类型的对象使用intValue时。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int compareTo(Byte anotherByte) 
+\end_layout
+
+\begin_layout Plain Layout
+int compareTo(Double anotherDouble) 
+\end_layout
+
+\begin_layout Plain Layout
+int compareTo(Float anotherFloat) 
+\end_layout
+
+\begin_layout Plain Layout
+int compareTo(Integer anotherInteger) 
+\end_layout
+
+\begin_layout Plain Layout
+int compareTo(Long anotherLong) 
+\end_layout
+
+\begin_layout Plain Layout
+int compareTo(Short anotherShort)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+数字类型对象的比较，返回值的意义：
+\end_layout
+
+\begin_layout Plain Layout
+0：两个数字类型对象代表的数字相等
+\end_layout
+
+\begin_layout Plain Layout
+<0：本数字类型对象小于参数中的数字类型对象
+\end_layout
+
+\begin_layout Plain Layout
+>0：本数字类型对象大于参数中的数字类型对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean equals(Object obj)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+覆盖了Object类的equals方法，仅当两个包裹对象不是Null并且代表的数字相等时返回true。不过有两个例外情况，请参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Number子类的方法列表
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Number子类的方法列表"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Number子类的公共方法。
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:Number子类的公共方法。"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "WrapperNumberTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/number/WrapperNumberTest.java"
+lstparams "float,caption={WrapperNumberTest.java},label={WrapperNumberTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行WrapperNumberTest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Integer max value=2147483647
+\end_layout
+
+\begin_layout Plain Layout
+Short max value=32767
+\end_layout
+
+\begin_layout Plain Layout
+Long max value=9223372036854775807
+\end_layout
+
+\begin_layout Plain Layout
+Float max value=3.4028235E38
+\end_layout
+
+\begin_layout Plain Layout
+Double max value=1.7976931348623157E308
+\end_layout
+
+\begin_layout Plain Layout
+byteValue=123
+\end_layout
+
+\begin_layout Plain Layout
+intValue=123
+\end_layout
+
+\begin_layout Plain Layout
+shortValue=123
+\end_layout
+
+\begin_layout Plain Layout
+longValue=123
+\end_layout
+
+\begin_layout Plain Layout
+floatValue=123.45
+\end_layout
+
+\begin_layout Plain Layout
+doubleValue=123.44999694824219
+\end_layout
+
+\begin_layout Plain Layout
+compareTo 123.45f=0
+\end_layout
+
+\begin_layout Plain Layout
+eqauls 123.45f=true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+可以看出，从float到byte、int、short、long转换时丢失了精度，在实际编程实践中，要根据具体需求需用合适的xxxValue方法获得相应的基本类型
+数值。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+自动装箱
+\end_layout
+
+\end_inset
+
+自动装箱（autoboxing）
+\end_layout
+
+\end_inset
+
+和
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+自动拆箱
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+自动拆箱
+\end_layout
+
+\end_inset
+
+（unboxing）
+\end_layout
+
+\end_inset
+
+是指Java编译器自动在基本数据类型和其包裹类之间转换，即在需要一个包裹类的地方，我们只需要给出一个基本类型的数字即可，Java编译器会自动将这个基本类型的数字
+转化为一个相应的包裹类的对象，称为“自动装箱”，相反的过程称为“自动拆箱”。比如在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "WrapperNumberTest.java"
+
+\end_inset
+
+中，我们使用自动装箱机制初始化一个Float类型的对象：Float num = 123.45f。
+\end_layout
+
+\begin_layout Plain Layout
+在Java编程实践中建议使用自动装箱和卸箱机制来处理基本数字类型变量和对象之间的转换，简化了代码，也提高了代码的可读性。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+根据
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:Number子类的公共方法。"
+
+\end_inset
+
+，请写出其他数字类的公共方法的测试类。
+\end_layout
+
+\begin_layout Subsection
+不同数字类型之间的转换
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Integer、int、字符串之间的相互转换方法"
+
+\end_inset
+
+，这里以Integer为例，给出了Integer、int和字符串之间相互转换的方法，其他类型的数值之间的转换类似。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/essentail-classes/integer-string-Integer.eps
+	width 95line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Integer、int、字符串之间的相互转换方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Integer、int、字符串之间的相互转换方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Integer的转换方法"
+
+\end_inset
+
+列出了Integer支持的转换方法（全部是
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+类方法
+\end_layout
+
+\end_inset
+
+）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="37line%">
+<column alignment="left" valignment="middle" width="57line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static Integer decode(String s)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将字符串转换为整数，可以接收十进制、八进制和十六进制的表示方式。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static int parseInt(String s)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将字符串转换为整数，最常见的使用方式，只接受十进制表示方式。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static int parseInt(String s, int radix)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将字符串转换为整数，radix为进制形式，可以为10,2,8,16。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+String toString()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将数字转换为字符串。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static String toString(int i)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+静态方法，将给定的整数转换为字符串。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static Integer valueOf(int i)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的整数创建一个整数对象。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static Integer valueOf(String s)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的字符串创建一个整数对象。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+static Integer valueOf(String s, int radix)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的字符串和进制形式创建一个整数对象。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Integer的转换方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Integer的转换方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+演示数字之间的转换。
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:演示数字之间的转换。"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "NumberTest.java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/number/NumberTest.java"
+lstparams "float,caption={NumberTest.java},label={NumberTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行NumberTest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\begin_layout Plain Layout
+num=123
+\end_layout
+
+\begin_layout Plain Layout
+num=123
+\end_layout
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+首先要注意到不同进制数字的表示方式，可以看出，decode方法可以自动判别不同进制的数字字符串并转换为一个整数对象。另外，在将字符串转换为整数时，格式不符的字符
+串会导致Java抛出异常。
+\end_layout
+
+\begin_layout Exercise
+仿照
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:演示数字之间的转换。"
+
+\end_inset
+
+，写一个Double类型的数字、字符串之间相互转换的测试类DoubleTest.java。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+待补充，数字的格式化输出，作为独立的一节
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+*BigDecimal
+\end_layout
+
+\begin_layout Standard
+float和double主要是为了科学计算和工程计算而设计的，其数值的表达和计算结果都是一个近似值，比如float和double无法精确的表示0.1（或者10的任
+何负数次方值），因此在需要精确运算的场合不能使用float和double，比如常见的货币计算
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p190"
+key "effective-java"
+literal "true"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+例如，假设你现在有￥10.03，花掉了￥4.36，剩下多少钱呢？如果我们用下面的代码片段计算：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+System.out.println(10.03-4.36);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果不是你想要的5.67,而是5.669999999999999。
+\end_layout
+
+\begin_layout Standard
+是不是四舍五入就能解决问题呢？我们看下面的问题：
+\end_layout
+
+\begin_layout Standard
+假设你有1元，货架上的铅笔标价分别为0.1元、0.2元、0.3元，直到1元。你打算从0.1元/支的开始，每种买一支，直到买不起为止，请问可以买多少支铅笔，找回多少零头？
+这个题目似乎可以用下面的简单代码解决：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    double funds = 1.00;
+\end_layout
+
+\begin_layout Plain Layout
+
+    int itemsBought = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+    for(double price = .10; funds >= price; price += .10) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      funds -= price;
+\end_layout
+
+\begin_layout Plain Layout
+
+      itemsBought++;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println(itemsBought + " items bought.");
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println("Charge: ￥" + funds);
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+问题很简单，显然应该可以买4支铅笔，但是当运行这段代码时，其结果为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+3 items bought.
+\end_layout
+
+\begin_layout Plain Layout
+Charge: ￥0.3999999999999999
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如何正确的解决这个问题呢？或者说，如何精确的表达计算结果呢？答案是使用BigDecimal，或者int、long进行货币运算。使用int、long进行货币运算需
+要我们自己控制金额的放大系数（小数点位置），而BigDecimal则可以帮助我们处理小数点问题，并提供了很多计算功能，比如将上面代码中的double替换为Big
+Decimal的后：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    BigDecimal funds = new BigDecimal("1.00");
+\end_layout
+
+\begin_layout Plain Layout
+
+    final BigDecimal TEN_CENTS = new BigDecimal(".10");
+\end_layout
+
+\begin_layout Plain Layout
+
+    int itemsBought = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (BigDecimal price = TEN_CENTS; 
+\end_layout
+
+\begin_layout Plain Layout
+
+            funds.compareTo(price) >= 0; 
+\end_layout
+
+\begin_layout Plain Layout
+
+            price = price.add(TEN_CENTS)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      itemsBought++;
+\end_layout
+
+\begin_layout Plain Layout
+
+      funds = funds.subtract(price);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println(itemsBought + " items bought.");
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.out.println("Money left over: ￥" + funds);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+4 items bought.
+\end_layout
+
+\begin_layout Plain Layout
+Money left over: ￥0.00
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写一个程序，将买铅笔问题使用int或者long处理。提示：找到货币的最小单位，使用最小单位表示单价和金额。
+\end_layout
+
+\begin_layout Subsubsection
+BigDecimal的常见构造方法
+\end_layout
+
+\begin_layout Standard
+见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:BigDecimal的常见构造方法"
+
+\end_inset
+
+，按照使用方便性列出了常见的BigDecimal构造方法
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整的构造方法列表参见：http://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="27line%">
+<column alignment="left" valignment="middle" width="35line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+构造方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+示例
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal(String val)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用字符串构造BigDecimal对象
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+123.456
+\begin_inset Quotes erd
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+-123.456
+\begin_inset Quotes erd
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+1.23E3
+\begin_inset Quotes erd
+\end_inset
+
+);
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal(int val)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用基本的整数构造BigDecimal对象
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(123);
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal(long val)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用基本的long构造BigDecimal对象
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(123L);
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal(double val)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用基本的double构造BigDecimal对象
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(123.456D);
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal(char[] in)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用字符序列构造BigDecimal对象
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+char in = {'1','2','3'};
+\end_layout
+
+\begin_layout Plain Layout
+new BigDecimal(in);
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BigDecimal的常见构造方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:BigDecimal的常见构造方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+BigDecimal提供的计算方法
+\end_layout
+
+\begin_layout Standard
+BigDecimal不仅可以任意精度的数字，还提供了如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:BigDecimal的计算方法"
+
+\end_inset
+
+所示的计算方法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="20line%">
+<column alignment="left" valignment="middle" width="42line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名称
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+示例
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal add(BigDecimal augend)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前的BigDecimal对象和augend对象相加
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+123.456
+\begin_inset Quotes erd
+\end_inset
+
+).add(new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+234.5432
+\begin_inset Quotes erd
+\end_inset
+
+));
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal subtract(BigDecimal subtrahend)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前的BigDecimal对象和subtrahend对象相减
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+123.456
+\begin_inset Quotes erd
+\end_inset
+
+).substract(new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+234.5432
+\begin_inset Quotes erd
+\end_inset
+
+));
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal multiply(BigDecimal multiplicand)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前的BigDecimal对象和multiplicand对象相乘
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+123.456
+\begin_inset Quotes erd
+\end_inset
+
+).multiploy(new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+234.5432
+\begin_inset Quotes erd
+\end_inset
+
+));
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal divide(BigDecimal divisor)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前的BigDecimal对象和divisor对象相除
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+123.456
+\begin_inset Quotes erd
+\end_inset
+
+).divide(new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+234.5432
+\begin_inset Quotes erd
+\end_inset
+
+));
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public BigDecimal pow(int n)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前对象的n次方
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+new BigDecimal(
+\begin_inset Quotes eld
+\end_inset
+
+123.456
+\begin_inset Quotes erd
+\end_inset
+
+).pow(3);
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BigDecimal的计算方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:BigDecimal的计算方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+BigDecimal的舍入处理策略
+\end_layout
+
+\begin_layout Standard
+由于BigDecimal提供的是精确的数值计算，我们经常需要根据实际情况进行适当的舍入处理，BigDecimal提供了多达8种舍入处理模式，这8种舍入模式在Ro
+undingMode中定义，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:RoundingMode中定义的8种舍入模式"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="9">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="6line%">
+<column alignment="center" valignment="middle" width="5line%">
+<column alignment="center" valignment="middle" width="7line%">
+<column alignment="center" valignment="middle" width="8line%">
+<column alignment="center" valignment="middle" width="8line%">
+<column alignment="center" valignment="middle" width="8line%">
+<column alignment="center" valignment="middle" width="9line%">
+<column alignment="center" valignment="middle" width="9line%">
+<column alignment="center" valignment="middle" width="12line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+输入数据
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DOWN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CEIL
+\end_layout
+
+\begin_layout Plain Layout
+-ING
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FLOOR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HALF
+\end_layout
+
+\begin_layout Plain Layout
+_UP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HALF
+\end_layout
+
+\begin_layout Plain Layout
+_DOWN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HALF
+\end_layout
+
+\begin_layout Plain Layout
+_EVEN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UNNECE
+\end_layout
+
+\begin_layout Plain Layout
+-SSARY
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛出异常
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+RoundingMode中定义的8种舍入模式
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:RoundingMode中定义的8种舍入模式"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，HALF_UP即我们最常用的“四舍五入”模式。
+\end_layout
+
+\begin_layout Standard
+下面的代码片段演示了编程实践中的常见情形：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// 计算结果四舍五入保留2位小数
+\end_layout
+
+\begin_layout Plain Layout
+
+new BigDecimal("123.456").multiply(new BigDecimal("1.23")).setScale(2, RoundingMode.H
+ALF_UP);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+对于任何需要精确答案的计算任务，请不要使用float或者double。如果你想让系统来记录十进制小数点，并且不介意因为不使用基本类型而带来的不便，请使用BigD
+ecimal。使用BigDecimal还有一些额外的好处，允许你完全控制舍入。每当一个计算涉及到舍入的时候，BigDecimal允许你8种舍入模式中选择其一。但
+是BigDecimal有一定的性能问题，即比使用float和double要慢（大约上百倍的差距）。如果性能非常关键，那么使用int或者long处理精确计算问题。
+要注意的是，int最多只能处理9位十进制数字，long最多只能处理18位十进制数字。如果数值可能超过18位，就必须使用BigDecimal。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+日期和时间类
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:日期和时间类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在Java语言中，日期和时间曾经是一个复杂和混乱的问题
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+有必要讲述ZoneId，时区的概念和用法吗？
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+关于Java8之前的日期和时间API，在互联网上有大量的吐槽，比如：
+\end_layout
+
+\begin_layout Itemize
+JDK BUG吗? 混乱的日期API：
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.importnew.com/20098.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+为什么我们需要新的Java日期/时间API：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.importnew.com/14140.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+What's wrong with Java Date & Time API：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://stackoverflow.com/questions/1969442/whats-wrong-with-java-date-time-api
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+，Java8终于给Java带来了一致的日期和时间实现！Java8的日期和时间类是JSR310
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见：https://jcp.org/en/jsr/detail?id=310
+\end_layout
+
+\end_inset
+
+的一个具体实现，是Java8的重要新特性。本书只介绍Java8中新的日期和时间类API，不再涉及旧的日期和时间API，也建议读者在编写Java应用程序的时候不要
+再使用旧版本的日期和时间API。
+\end_layout
+
+\begin_layout Subsection
+日期操作类：LocalDate
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+最新的API文档在：https://docs.oracle.com/javase/10/docs/api/java/time/LocalDate.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+顾名思义，LocalDate的“本意”似乎是“本地日期”，但是遗憾的是，LocalDate的本意应该是“日期”。这是因为Java8之前的日期类（旧的日期API）
+叫做Date，因此新的日期API只好另起炉灶，就被称作“LocalDate”了。LocalDate的常见用法见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:LocalDate的常见用法"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="50col%">
+<column alignment="left" valignment="middle" width="48col%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static LocalDate now()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据默认时区获得当前日期
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static LocalDate of(int year, int month, int dayOfMonth)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的年月日创建LocalDate对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static LocalDate ofYearDay(int year, int dayOfYear)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的年份和天数创建LocalDate对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static LocalDate parse(CharSequence text)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的字符串创建LocalDate对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static LocalDate parse(CharSequence text, DateTimeFormatter formatter)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的字符串及其格式创建LocalDate对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public String format(DateTimeFormatter formatter)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+格式化输出日期（参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:日期和时间的格式化输出类：DateTimeFormatter"
+
+\end_inset
+
+）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public boolean isAfter(ChronoLocalDate other)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断日期对象是否在other日期对象之后
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public boolean isBefore(ChronoLocalDate other)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断日期对象是否在other日期对象之前
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LocalDate的常见用法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:LocalDate的常见用法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+LocalDate用法示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "LocalDateTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/time/LocalDateTest.java"
+lstparams "caption={LocalDateTest.java},label={LocalDateTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行LocalDateTest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Current Date=2016-11-20
+\end_layout
+
+\begin_layout Plain Layout
+Specific Date=2016-01-01
+\end_layout
+
+\begin_layout Plain Layout
+Current Date in IST=2016-11-20
+\end_layout
+
+\begin_layout Plain Layout
+365th day from base date= 1971-01-01
+\end_layout
+
+\begin_layout Plain Layout
+100th day of 2016=2016-04-09
+\end_layout
+
+\begin_layout Plain Layout
+2016-11-21 parsed to LocalDate = 2016-11-21
+\end_layout
+
+\begin_layout Plain Layout
+2016-11-21 < 2016-11-22 ? true
+\end_layout
+
+\begin_layout Plain Layout
+2016-11-21 < 2016-11-21 ? false
+\end_layout
+
+\begin_layout Plain Layout
+2016-11-22 > 2016-11-21 ? true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+时间操作类：LocalTime
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+最新的API文档在：https://docs.oracle.com/javase/10/docs/api/java/time/LocalTime.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+LocalTime是表示时间的操作类，其API设计和LocalDate很相似，这里不再详细列出LocalTime的方法，具体可以参考
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:LocalTime类用法示例"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+LocalTime类用法示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:LocalTime类用法示例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "LocalTimeTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/time/LocalTimeTest.java"
+lstparams "caption={LocalTimeTest．java},label={LocalTimeTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行LocalTimeTest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Current Time=15:07:13.774
+\end_layout
+
+\begin_layout Plain Layout
+Specific Time of Day=12:20:25.000000040
+\end_layout
+
+\begin_layout Plain Layout
+Current Time in IST=12:37:13.775
+\end_layout
+
+\begin_layout Plain Layout
+10000th second time= 02:46:40
+\end_layout
+
+\begin_layout Plain Layout
+12:30:55 parsed to LocalDate = 12:30:55
+\end_layout
+
+\begin_layout Plain Layout
+12:30:55 < 13:02:15 ? true
+\end_layout
+
+\begin_layout Plain Layout
+12:30:55 < 12:30:55 ? false
+\end_layout
+
+\begin_layout Plain Layout
+13:02:15 > 12:30:55 ? true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+日期时间类：LocalDateTime
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+最新的API文档在：https://docs.oracle.com/javase/10/docs/api/java/time/LocalDateTime.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+LocalDateTime是表示日期时间的操作类，其API设计和LocalDate很相似，这里不再详细列出LocalDateTime的方法，具体可以参考
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:LocalDateTime类用法示例"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+日期(LocalDate)、时间(LocalTime)、日期时间(LocalTime)、字符串之间的相互转化关系参见下图：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/essentail-classes/date-time-string.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+LocalDateTime类用法示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:LocalDateTime类用法示例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "LocalDateTimeTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/time/LocalDateTimeTest.java"
+lstparams "caption={LocalDateTimeTest．java},label={LocalDateTimeTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行LocalDateTimeTest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Current DateTime=2016-11-20T15:08:15.970
+\end_layout
+
+\begin_layout Plain Layout
+Current DateTime=2016-11-20T15:08:15.971
+\end_layout
+
+\begin_layout Plain Layout
+Specific Date=2014-01-01T10:10:30
+\end_layout
+
+\begin_layout Plain Layout
+Current Date in IST=2016-11-20T12:38:15.972
+\end_layout
+
+\begin_layout Plain Layout
+10000th second time from 01/01/1970= 1970-01-01T02:46:40
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+日期和时间的格式化输出类：DateTimeFormatter
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+最新的API文档在：https://docs.oracle.com/javase/10/docs/api/java/time/format/DateTimeForm
+atter.html
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:日期和时间的格式化输出类：DateTimeFormatter"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在大部分情况下，LocalDate和LocalTime的默认输出即符合预期，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "LocalDateTest.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "LocalTimeTest.java"
+
+\end_inset
+
+中LocalDate和LocalTime对象的输出。如果需要定制日期和时间的输出格式，DateTimeFormatter提供了丰富的内置格式支持和可定制选项。D
+ateTimeFormatter内置的输出格式如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:DateTimeFormatter的输出格式控制选项"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="19" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="30line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+格式控制选项
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+示例
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ofLocalizedDate(date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+Style)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Formatter with date style from the locale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2011-12-03'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ofLocalizedTime(time
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+Style)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Formatter with time style from the locale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'10:15:30'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ofLocalizedDateTime(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+dateTimeStyle)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Formatter with a style for date and time from the locale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'3 Jun 2008 11:05:30'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ofLocalizedDateTime(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+dateStyle,timeStyle)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Formatter with date and time styles from the locale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'3 Jun 2008 11:05'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+BASIC_ISO_DATE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+基本的 ISO 日期格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'20111203'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_LOCAL_DATE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO Local Date
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2011-12-03'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_OFFSET_DATE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+显示时区偏移量的 ISO 日期格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2011-12-03+01:00'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_DATE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO 日期格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2011-12-03+01:00'; '2011-12-03'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_LOCAL_TIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+不带时区偏移量的时间格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'10:15:30'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_OFFSET_TIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+带时区偏移量的时间格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'10:15:30+01:00'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_TIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO时间格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'10:15:30+01:00'; '10:15:30'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_LOCAL_DATE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+_TIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO日期和时间格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2011-12-03T10:15:30'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_OFFSET_DATE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+_TIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+带时区偏移量的日期时间格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2011-12-03T10:15:30+01:00'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_ZONED_DATE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+_TIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+带时区显示的日期时间格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2011-12-03T10:15:30+01:00[
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+Europe/Paris]'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_DATE_TIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+带时区显示的日期时间格式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2011-12-03T10:15:30+01:00[
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+Europe/Paris]'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_ORDINAL_DATE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+显示年份以及第几天
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2012-337'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_WEEK_DATE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+显示年份和周次
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+'2012-W48-6'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ISO_INSTANT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Date and Time of an Instant
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+RFC_1123_DATE_TIME	RFC 1123 / RFC 822	'Tue, 3 Jun 2008 11:05:30 GMT'
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DateTimeFormatter的输出格式控制选项
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:DateTimeFormatter的输出格式控制选项"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+需要翻译
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:DateTimeFormatter的输出格式控制选项"
+
+\end_inset
+
+中，我们常用的日期和时间格式为ISO_LOCAL_DATE，ISO_LOCAL_TIME，ISO_LOCAL_DATE_TIME。
+\end_layout
+
+\begin_layout Standard
+除了可使用
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:DateTimeFormatter的输出格式控制选项"
+
+\end_inset
+
+中预定义的日期和时间格式外，ofPattern()方法支持任意模式的日期和时间格式化输出，具体的格式化字符串可以参照DateTimeFormmater的API文
+档，这里不再一一列出。
+\end_layout
+
+\begin_layout Example
+使用DateTimeFormmater定制日期和时间的输出
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "DateTimeFormatterTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/time/DateTimeFormatterTest.java"
+lstparams "caption={DateTimeFormatterTest.java},label={DateTimeFormatterTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行DateTimeFormatterTest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Default format of LocalDate=2016-11-20
+\end_layout
+
+\begin_layout Plain Layout
+20::十一月::2016
+\end_layout
+
+\begin_layout Plain Layout
+20161120
+\end_layout
+
+\begin_layout Plain Layout
+Default format of LocalDateTime=2016-11-20T15:18:44.241
+\end_layout
+
+\begin_layout Plain Layout
+20::十一月::2016 15::18::44
+\end_layout
+
+\begin_layout Plain Layout
+20161120
+\end_layout
+
+\begin_layout Plain Layout
+Default format after parsing = 2014-04-27T21:39:48
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+*日期和时间的调整
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+作为较高要求，可以不写这部分？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+大多数日期/时间API类都实现了一系列工具方法，如：加/减天数、周数、月份数，等等。还有其他的工具方法能够使用TemporalAdjuster调整日期，并计算两
+个日期间的周期。
+\end_layout
+
+\begin_layout Example
+使用日期和时间类调整日期和时间
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "DateTimeAPITest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/essentials/src/cn/edu/sdut/softlab/essentials/time/DateTimeAPITest.java"
+lstparams "caption={DateTimeAPITest.java},label={DateTimeAPITest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行DateTimeAPITest结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Year 2016 is Leap Year? true
+\end_layout
+
+\begin_layout Plain Layout
+Today is before 01/01/2015? false
+\end_layout
+
+\begin_layout Plain Layout
+Current Time=2016-11-20T15:26:02.947
+\end_layout
+
+\begin_layout Plain Layout
+10 days after today will be 2016-11-30
+\end_layout
+
+\begin_layout Plain Layout
+3 weeks after today will be 2016-12-11
+\end_layout
+
+\begin_layout Plain Layout
+20 months after today will be 2018-07-20
+\end_layout
+
+\begin_layout Plain Layout
+10 days before today will be 2016-11-10
+\end_layout
+
+\begin_layout Plain Layout
+3 weeks before today will be 2016-10-30
+\end_layout
+
+\begin_layout Plain Layout
+20 months before today will be 2015-03-20
+\end_layout
+
+\begin_layout Plain Layout
+First date of this month= 2016-11-01
+\end_layout
+
+\begin_layout Plain Layout
+Last date of this year= 2016-12-31
+\end_layout
+
+\begin_layout Plain Layout
+Period Format= P1M11D
+\end_layout
+
+\begin_layout Plain Layout
+Months remaining in the year= 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
