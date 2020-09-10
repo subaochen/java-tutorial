@@ -1,0 +1,3197 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{../../../writing-common/book-preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+logicalmkup
+coderemarks
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\size larger
+\bar under
+山东理工大学教案
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="70col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第八次课
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学课型：理论课□√ 实验课□√ 习题课□ 实践课□ 技能课□ 其它□
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要教学内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:异常的概念"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:异常的概念"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Ｃ中的异常处理方式"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Ｃ中的异常处理方式"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Java的异常处理方式"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Java的异常处理方式"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:捕获异常"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:捕获异常"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:抛出异常"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:抛出异常"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+C和Java异常处理的思路差异；
+\end_layout
+
+\begin_layout Enumerate
+Java的异常类层次；
+\end_layout
+
+\begin_layout Enumerate
+Java异常的捕获和抛出方式及其原理；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+难点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java异常的捕获和抛出原理；
+\end_layout
+
+\begin_layout Enumerate
+Java异常的链式责任传递机制；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+课程目标及要求
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+课程目标：课程目标1
+\end_layout
+
+\begin_layout Plain Layout
+要求：
+\end_layout
+
+\begin_layout Enumerate
+熟练掌握Java异常的概念和常见Java异常类；
+\end_layout
+
+\begin_layout Enumerate
+深刻理解Java异常抛出和捕获的机制，清楚Java异常处理的责任链机制；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学方法和手段
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+板书和多媒体相结合，边讲边练，当堂消化。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+讨论、思考题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+你认为Java的异常处理方式有什么优缺点？
+\end_layout
+
+\begin_layout Enumerate
+举例说明Java的异常处理责任链机制是如何运作的？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参考资料
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+异常处理
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../imgs/exception/exception-vym.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+异常的概念
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:异常的概念"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+“人生不如意事十之八九”
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+南宋词人辛弃疾词《贺新郎·用前韵再赋》：“叹人生、不如意事，十常八九。”
+\end_layout
+
+\end_inset
+
+，编程同样道理：世事纷繁复杂，情况千变万化，代码要正确运行，不仅要处理正常的流程，更要处理多样化的非正常流程。比如常见的情形：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+举例说明异常流程之多样化
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+街头的投币电话，总有人尝试用游戏币看看能不能蒙混过关；
+\end_layout
+
+\begin_layout Itemize
+长城的古砖墙是为御敌而生，却被人刻上“到此一游”；
+\end_layout
+
+\begin_layout Itemize
+机动车道上的行人，人行道上的机动车；
+\end_layout
+
+\begin_layout Standard
+回到现实的程序中，在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:日期和时间类"
+
+\end_inset
+
+中，我们看到日期和时间类都定义了一个parse方法，能够将字符串解析为LocalDate、LocalTime或者LocalDateTime对象，很直观，很方便，
+因此在编程实践中很常见。试运行下面的示例：
+\end_layout
+
+\begin_layout Example
+从键盘输入字符串创建日期对象
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:从键盘输入字符串创建日期对象"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "WhatIfNoException.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/exception/src/cn/edu/sdut/softlab/exception/WhatIfNoException.java"
+lstparams "caption={WhatIfNoException.java},label={WhatIfNoException.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行WhatIfNoException结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Please input date:2016-11-22
+\end_layout
+
+\begin_layout Plain Layout
+2016-11-22
+\end_layout
+
+\begin_layout Plain Layout
+Please input date:2016-13-22
+\end_layout
+
+\begin_layout Plain Layout
+Exception in thread "main" java.time.format.DateTimeParseException: 
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+Text '2016-13-22' could not be parsed: Invalid value for MonthOfYear (valid
+ values 1 - 12): 13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+at java.time.format.DateTimeFormatter.createError(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+DateTimeFormatter.java:1920)
+\end_layout
+
+\begin_layout Plain Layout
+......
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.exception.WhatIfNoException.main(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+WhatIfNoException.java:30)
+\end_layout
+
+\begin_layout Plain Layout
+Caused by: java.time.DateTimeException: Invalid value for MonthOfYear (valid
+ values 1 - 12): 13
+\end_layout
+
+\begin_layout Plain Layout
+at java.time.temporal.ValueRange.checkValidIntValue(ValueRange
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+.java:330)
+\end_layout
+
+\begin_layout Plain Layout
+......
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:从键盘输入字符串创建日期对象"
+
+\end_inset
+
+中，从键盘输入的字符串如果符合LocalDate的格式要求自然一切正常，但是我们不能总是期望人们每次输入都遵循LocalDate的格式，无论人们是有意还是无意，
+总会有破坏规则的时候，比如输入的月份大于12、天数大于31等。显然，错误的输入是无法获得正确的LocalDate对象的，Java编译器也无法自动纠正这种类型的错
+误。对于这种情况，Java友好的给出了错误的原因及其关联的程序代码（stack trace），以帮助程序员快速定位错误代码的位置，更快的修复问题。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+实际上，类似
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:从键盘输入字符串创建日期对象"
+
+\end_inset
+
+的错误提示方式，对于程序员而言是友好的，但是对于终端用户而言是不友好的：终端用户并不关心程序哪一行出错了。对于终端用户而言，程序应该给出更人性化的提示，比如提示
+“日期格式有错误，月份应该在1-12之间”等等。我们将在
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Java的异常处理方式"
+
+\end_inset
+
+中介绍如何更人性化的处理。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ｃ中的异常处理方式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Ｃ中的异常处理方式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们先回顾一下在C语言中如何判断用户的输入是否合法，大致应该是如下的代码片段：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if(month < 1 || month > 12) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("wrong month num:%d",month);
+\end_layout
+
+\begin_layout Plain Layout
+
+    return -1;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if(day < 1 || day > 31) { /* 没有考虑二月份情况 */
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("wrong day num:%d",day);
+\end_layout
+
+\begin_layout Plain Layout
+
+    return -1;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+/* 用户的输入合法，下面继续处理正常流程 */
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，我们只能通过一系列的if条件判断来分析用户的输入是否合法，如果可能的异常情形比较多，势必会存在更多的if条件判断，造成程序的流程不清晰：哪些是正常流程
+处理代码，哪些是异常流程处理代码，除非通过注释标识出来，否则很难一眼看清楚。
+\end_layout
+
+\begin_layout Section
+Java的异常处理方式
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java的异常处理方式"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当然，在Java中我们依然可以像C语言那样去处理异常
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+异常
+\end_layout
+
+\end_inset
+
+。不过，Java提供了更棒的异常处理机制：将异常情况抽象为异常对象
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+异常对象
+\end_layout
+
+\end_inset
+
+，并采用责任链
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+责任链
+\end_layout
+
+\end_inset
+
+处理机制处理异常对象。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这部分讲的不清楚
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java内置了常见的异常类，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java的异常类层次结构"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/exception/exception-overview.eps
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java的异常类层次结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java的异常类层次结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当异常情况出现时，Java虚拟机能够“捕获
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+捕获
+\end_layout
+
+\end_inset
+
+”
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+如何捕获？如何感知？这里可能是许多初学者迷惑的地方。
+\end_layout
+
+\end_inset
+
+（catch）
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java虚拟机和Java应用程序的关系"
+
+\end_inset
+
+了解Java应用程序和Java虚拟机之间的关系，感性认识Java虚拟机是如何捕获异常的。
+\end_layout
+
+\end_inset
+
+异常对象，并根据异常对象的类型进行相应的处理。Java将异常类分为两大类：
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+非检查型异常
+\end_layout
+
+\end_inset
+
+非检查型异常：即Java虚拟机能够
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+自动
+\end_layout
+
+\end_inset
+
+处理的异常类型。换言之，这种类型的异常不需要在程序中捕获，一旦发生这种类型的异常，Java虚拟机有一套内置的处理方式，比如除数为零、数组越界、非法参数等异常类型
+。对应于
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java的异常类层次结构"
+
+\end_inset
+
+，Error和RuntimeException的子类都是非检查型异常。在程序中可以不捕获非检查型异常，也可以捕获非检查型异常。捕获非检查型异常的目的往往是给用户
+提供更友好的出错提示，但这不是强制的。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+检查型异常
+\end_layout
+
+\end_inset
+
+检查型异常：即Java虚拟机无法自动处理的异常类型，需要在程序中捕获（catch）。对应于
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java的异常类层次结构"
+
+\end_inset
+
+，ClassNotFoundException和IOException的子类都是检查型异常。要注意的是，检查型异常是必须捕获的，否则会导致语法错误，因此在程序中
+捕获检查型异常是强制的。
+\end_layout
+
+\begin_layout Section
+捕获异常
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:捕获异常"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们首先简单回顾一下Java虚拟机和Java应用程序的关系，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java虚拟机和Java应用程序的关系"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/exception/jvm-java.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java虚拟机和Java应用程序的关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java虚拟机和Java应用程序的关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java应用程序编译为class文件后，经过Java虚拟机的类加载器解析class文件在内存中创建相应的存储模型然后执行该应用程序。也就是说，Java虚拟机完全
+掌控Java应用程序的执行过程，包括应用程序出现异常情况时。Java通过如下的程序结构捕获异常：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 一段可能存在SomeException类型异常的代码
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (SomeException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    e.printStackTrace();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在try块中的代码就是所谓的“
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+正常流程
+\end_layout
+
+\end_inset
+
+”，在catch块中的代码就是所谓的“
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+异常流程
+\end_layout
+
+\end_inset
+
+”。如果异常流程有多种，就存在多个catch块：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 一段可能存在SomeException类型异常的代码
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (SomeException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    e.printStackTrace();
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (OtherException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    e.printStackTrace();
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (FooException e ) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    e.printStackTrace();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对比C语言中使用if...else结构的异常处理方式，Java的try...catch更清晰的区分了正常流程和异常流程：通过不同的异常类也清晰的表达了异常的类型，甚至无需借
+助注释，只是根据异常类的名字，我们也很容易判断异常的类型及其大致的处理方式。
+\end_layout
+
+\begin_layout Example
+捕获异常
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "DivTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/exception/src/cn/edu/sdut/softlab/exception/DivTest.java"
+lstparams "float,caption={DivTest.java},label={DivTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+此例的运行需要配置命令行参，配置方法参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:如何设置命令行参数？"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当命令行参数为“24 3”时的输出结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+您输入的两个数相除的结果是： 8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+修改命令行参数为“24 3.5”可以看到输出变为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+数字格式异常，程序只能接受整数形式的参数
+\end_layout
+
+\begin_layout Plain Layout
+java.lang.NumberFormatException: For input string: "3.5"
+\end_layout
+
+\begin_layout Plain Layout
+at java.lang.NumberFormatException.forInputString(NumberFormatException
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+.java:65)
+\end_layout
+
+\begin_layout Plain Layout
+at java.lang.Integer.parseInt(Integer.java:580)
+\end_layout
+
+\begin_layout Plain Layout
+at java.lang.Integer.parseInt(Integer.java:615)
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.exception.DivTest.main(DivTest.java:34)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+修改命令行参数为“24 0”，输出结果为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+算数异常，除数不能为0
+\end_layout
+
+\begin_layout Plain Layout
+java.lang.ArithmeticException: / by zero
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.exception.DivTest.main(DivTest.java:35)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+修改命令行参数为“24”，输出结果为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+数组越界，运行程序时输入的参数个数不对。应该输入2个参数，您输入的参数个数是：1
+\end_layout
+
+\begin_layout Plain Layout
+java.lang.ArrayIndexOutOfBoundsException: 1
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.exception.DivTest.main(DivTest.java:34)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+修改命令行参数为“24.5”，输出结果为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+数字格式异常，程序只能接受整数形式的参数
+\end_layout
+
+\begin_layout Plain Layout
+java.lang.NumberFormatException: For input string: "24.5"
+\end_layout
+
+\begin_layout Plain Layout
+at java.lang.NumberFormatException.forInputString(NumberFormatException
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0pt}
+\end_layout
+
+\end_inset
+
+.java:65)
+\end_layout
+
+\begin_layout Plain Layout
+at java.lang.Integer.parseInt(Integer.java:580)
+\end_layout
+
+\begin_layout Plain Layout
+at java.lang.Integer.parseInt(Integer.java:615)
+\end_layout
+
+\begin_layout Plain Layout
+at cn.edu.sdut.softlab.exception.DivTest.main(DivTest.java:33)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+可以看出，Java遇到异常时即退出整个应用程序。也就是说，尽管我们在代码中可以捕获多个异常，但是当一个异常发生时就会退出整个应用程序。
+\end_layout
+
+\begin_layout Standard
+但是，ArrayIndexOutOfBoundsException、NumberFormatException、ArithmeticException都是运行时
+异常(RuntimeException)，即非检查型异常
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+非检查型异常
+\end_layout
+
+\end_inset
+
+，我们在代码中其实不需要主动捕获，当异常发生时虚拟机会自动处理。虚拟机的一般处理策略是打印出异常发生时的调用栈，供程序员追查和排错。
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+主动捕获运行时异常的好处是可以给终端用户更友好的错误提示
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+所有的Java异常类都是Throwable的子类，Throwable类的下列方法能够帮助我们更详细的了解异常的情况：
+\end_layout
+
+\begin_layout Itemize
+printStackTrace()：打印出异常发生时的调用栈(call stack)，对于程序员排错特别有用，因此在catch块中经常看到调用printStac
+kTrace。
+\end_layout
+
+\begin_layout Itemize
+getMessage()：返回描述异常的一个字符串，对于终端用户更友好一些。但是，默认情况下，getMessage返回的就是stackTrace的内容。因此，调
+用此方法显得更友好的前提条件是，在创建异常对象时设置了描述异常的字符串，通常在用户自定义异常中使用，参见：
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:用户自定义异常"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+现代的IDE，包括Idea、NetBeans、Eclipse都能够自动检测代码是否应该捕获异常，因此无需记忆哪些代码应该使用try...catch结构包围起来，大部分
+情况下遵从IDE的建议即可。但是，有的时候也需要手工组织一下异常处理的代码层次。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+抛出异常
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:抛出异常"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:捕获异常"
+
+\end_inset
+
+中，我们捕获（catch）的异常是从哪里来的呢？或者说，我们为什么能够捕获到异常
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+通常，我们说捕获异常即捕获异常对象的意思，下文不再区分这两者的差异。
+\end_layout
+
+\end_inset
+
+？异常对象是谁创建的呢？
+\end_layout
+
+\begin_layout Standard
+异常对象当然不是从石头缝里蹦出来的。事实上，我们之所以能够捕获某个异常对象，是因为在try代码块中的某个方法抛出
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+抛出
+\end_layout
+
+\end_inset
+
+（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+throw
+\end_layout
+
+\end_inset
+
+throw）了异常对象，即某个方法在运行中探测到发生了异常状况，因此创建了异常对象并抛出。
+\end_layout
+
+\begin_layout Example
+抛出异常示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:抛出异常示例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Example.java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/exception/src/cn/edu/sdut/softlab/exception/Example.java"
+lstparams "float,caption={Example.java},label={Example.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行Example结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+就是这么二！
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+在add方法中，我们故意制造了一个异常：当给定的参数是2时就抛出异常（throw new Exception()）。
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+所谓抛出异常，就是创建异常对象，通过throw关键字抛出即可
+\end_layout
+
+\end_inset
+
+，所以抛出异常的的表达方式通常是：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if(something bad happened) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    throw new SomethingBadException();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于在add方法中我们可能抛出异常，因此add方法必须声明抛出了哪些类型的异常，通过throws关键字列出在方法的参数列表后面：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public void add(int val) throws Exception {...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+add方法在f方法中被调用，但是f方法并没有捕获add方法抛出的异常，因此f方法也必须在方法中声明抛出异常：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public void f() throws Exception {...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在main方法中我们捕获了f方法中抛出的异常（其实是add方法抛出的异常），因此main方法就不需要抛出异常了。
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:抛出异常和捕获异常的关系"
+
+\end_inset
+
+形象的表达了抛出异常和捕获异常的联系，图中灰色代码由于异常的关系没有执行到。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/exception/throw-catch-exmaple.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+抛出异常和捕获异常的关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:抛出异常和捕获异常的关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+翻一下JDK的源代码，也许有助于深刻理解Java的异常处理机制。比如
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里寻找一个合适易懂的Java源代码，在：http://hg.openjdk.java.net/jdk10/jdk10/jdk/file/777356696811
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:抛出异常示例"
+
+\end_inset
+
+中，如果main方法中也不捕获异常，需要做怎样的代码变动？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:抛出异常示例"
+
+\end_inset
+
+中，修改f方法捕获add方法抛出的异常。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:抛出异常示例"
+
+\end_inset
+
+中，修改add方法，使得抛出异常部分代码为：
+\end_layout
+
+\begin_layout Exercise
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if( val == 2 ) throw new Exception();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+则代码的其他部分应该如何修改更合理？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+可以看出，Java的异常处理其实也离不开if条件判断，比如在add方法中：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if （val == 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    throw new Exception("就是这么二！");
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+只不过，在Java中通过try...catch和throw机制将杂乱无章的if条件判断良好的组织起来，层次更加清晰罢了。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+要注意区分throw和throws的不同用法。throw用于在代码中创建异常对象并抛出异常，throws只是在方法中声明本方法可能抛出哪些异常。在方法中声明抛出
+了某种类型的异常，表明这个方法没有处理异常，将处理异常的责任“抛”给了方法的调用者。如果方法的调用者也不处理这个异常，则调用者同样需要throws这个异常，如此
+形成了一个异常处理的“责任链”，如下图所示。
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imgs/exception/exception-chain.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+可以想见，main方法是我们程序员处理异常的最后“关口”，即如果我们在main方法中也不处理（捕获）异常的话，main方法同样需要声明throws这些异常。ma
+in方法抛出的异常就只有java虚拟机可以处理了，这通常不是一个好的习惯，因为Java虚拟机只能按照默认的异常处理方式打印出调用栈，在终端用户看来，调用栈没有任
+何价值，徒增抱怨而已。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+finally
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:finally"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+try-catch结构完美的诠释了异常处理的一般过程，不过我们考虑一种特殊情况：如果我们希望在执行完try代码块之后总是执行一段代码（不妨称之为“清理代码块”）
+，即
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+无论try代码块是否存在异常，清理代码块总是要执行的
+\end_layout
+
+\end_inset
+
+。finally即为此而设置，一般结构为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 正常流程
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (...) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 异常流程1
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (...) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 异常流程2
+\end_layout
+
+\begin_layout Plain Layout
+
+} finally {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 清理代码块
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在网络通讯和数据库编程中，这种情形很常见：无论是否发生异常，网络链接和数据库链接总是要断开的（close），因此很适合在finally代码块中处理断开网络链接和
+数据库链接。我们在也将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "chap:Java的IO"
+
+\end_inset
+
+看到很多finally使用的实例。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:try-with-resources"
+
+\end_inset
+
+我们可以看到，使用try with resources技术可以避免使用finally，这样即简化了代码，也提高了代码的可读性，值得提倡。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写一个包含finally的程序，说明即使发生了异常，finally代码块也是会被执行到的。
+\end_layout
+
+\begin_layout Section
+用户自定义异常
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:用户自定义异常"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+异常类代表了一种异常的类型，自然我们也可以根据实际的业务逻辑自定义异常类，通常是从Exception类继承下来即可。比如在电子商务的业务流程中，“下订单”的过程
+可能会遇到以下的异常情况
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在真实的电子商务系统中，往往会采取更为灵活的方式处理下订单时的此类异常，这里仅为简化后的情形。
+\end_layout
+
+\end_inset
+
+：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+写出完整的例子，演示抛出异常和catch多种异常的情形，也演示getMessage的好处
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+库存不足：所订购的商品没有及时付款，提交订单时库存不足了，导致提交失败。我们定义这种异常为OutOfInventoryException。
+\end_layout
+
+\begin_layout Itemize
+价格变更：提交订单时商品的价格已经改变了，此时应该阻止提交订单。我们定义这种异常为PriceNotAvailableException。
+\end_layout
+
+\begin_layout Standard
+首先我们定义这两个异常类，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "OutOfIventoryException.java"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PriceNotAvailableException.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/exception/src/cn/edu/sdut/softlab/exception/eshop/OutOfInventoryException.java"
+lstparams "float,caption={OutOfIventoryException.java},label={OutOfIventoryException.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/exception/src/cn/edu/sdut/softlab/exception/eshop/PriceNotAvailableException.java"
+lstparams "float,caption={PriceNotAvailableException.java},label={PriceNotAvailableException.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在主类CustomerOrder.java中，我们设置了两个变量inventoryOK和priceOK分别代表库存和价格的状态，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CustomerOrder.java"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+。读者可以尝试修改这两个变量的值观察输出有什么变化？当然，在实际情况中，应该是根据业务逻辑给这两个变量赋值的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/exception/src/cn/edu/sdut/softlab/exception/eshop/CustomerOrder.java"
+lstparams "caption={CustomerOrder.java},label={CustomerOrder.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在Idea IDE中，可以通过快捷键Alt+Insert方便的自动产生OutOfInventoryException的构造方法：选择
+\begin_inset Quotes erd
+\end_inset
+
+override method...
+\begin_inset Quotes erd
+\end_inset
+
+，在随后弹出的窗口中选择
+\begin_inset Quotes erd
+\end_inset
+
+Exception(s:String)”即可。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+try with resources
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:try-with-resources"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+比较困难的一个地方是，在这里讲解try-with-resources很难举出一个合适的例子来。是否把这个部分移动到java io一章？
+\end_layout
+
+\end_inset
+
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:finally"
+
+\end_inset
+
+中我们看到，对于必须执行的“清理代码块”，我们可以使用finally来保证这一点。Java8更进了一步：如果一个对象实现了
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+java.lang.AutoCloseable
+\end_layout
+
+\end_inset
+
+接口
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+由于AutoCloseable接口只有一个抽象方法close，因此AutoCloseable接口是一个函数接口，参见本系列教程的“提高篇”之“lambda表达式
+”。
+\end_layout
+
+\end_inset
+
+或者Closeable接口（这样的对象就是try-with-resources中的resource），则可以通过try-with-resources结构来保证代
+码结束时自动关闭这个对象。实现了
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+java.lang.AutoCloseable
+\end_layout
+
+\end_inset
+
+接口（或者Closeable接口）的对象被称为resource。try-with-resources结构的一般形式如下
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+本部分示例代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
+\end_layout
+
+\end_inset
+
+，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Java的IO"
+
+\end_inset
+
+看到比较多的try-with-resources用法。
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try (resourse1； resource2) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 正常流程
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (...) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 异常流程
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+比如下面的例子读取文件的第一行：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+static String readFirstLineFromFile(String path) throws IOException {
+\end_layout
+
+\begin_layout Plain Layout
+
+    try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return br.readLine();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+BufferedReader是一个实现了AutoCloseable接口的resource（资源），因此我们把创建BufferedReader对象的工作放到了tr
+y-with-resources结构中，这样无论br.readLine是否正常执行，当try-with-resources代码块执行完毕后，BufferedRea
+der对象br都会被自动关闭。如果我们不使用try-with-resources结构的话，则需要这样编写同样功能的代码：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+static String readFirstLineFromFileWithFinallyBlock(String path) throws
+ IOException {
+\end_layout
+
+\begin_layout Plain Layout
+
+    BufferedReader br = new BufferedReader(new FileReader(path));
+\end_layout
+
+\begin_layout Plain Layout
+
+    try {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return br.readLine();
+\end_layout
+
+\begin_layout Plain Layout
+
+    } finally {
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (br != null) br.close();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可见，使用try-with-resources结构不仅简化了代码，也提高了代码的可读性。
+\end_layout
+
+\begin_layout Standard
+下面的例子在try-with-resourses中声明了多个resources：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public static void writeToFileZipFileContents(String zipFileName,
+\end_layout
+
+\begin_layout Plain Layout
+
+                                           String outputFileName)
+\end_layout
+
+\begin_layout Plain Layout
+
+                                           throws java.io.IOException {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    java.nio.charset.Charset charset =
+\end_layout
+
+\begin_layout Plain Layout
+
+         java.nio.charset.StandardCharsets.US_ASCII;
+\end_layout
+
+\begin_layout Plain Layout
+
+    java.nio.file.Path outputFilePath =
+\end_layout
+
+\begin_layout Plain Layout
+
+         java.nio.file.Paths.get(outputFileName);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // Open zip file and create output file with 
+\end_layout
+
+\begin_layout Plain Layout
+
+    // try-with-resources statement
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    try (
+\end_layout
+
+\begin_layout Plain Layout
+
+        java.util.zip.ZipFile zf =
+\end_layout
+
+\begin_layout Plain Layout
+
+             new java.util.zip.ZipFile(zipFileName);
+\end_layout
+
+\begin_layout Plain Layout
+
+        java.io.BufferedWriter writer = 
+\end_layout
+
+\begin_layout Plain Layout
+
+            java.nio.file.Files.newBufferedWriter(outputFilePath, charset)
+\end_layout
+
+\begin_layout Plain Layout
+
+    ) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        // Enumerate each entry
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (java.util.Enumeration entries =
+\end_layout
+
+\begin_layout Plain Layout
+
+                                zf.entries(); entries.hasMoreElements();)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+            // Get the entry name and write it to the output file
+\end_layout
+
+\begin_layout Plain Layout
+
+            String newLine = System.getProperty("line.separator");
+\end_layout
+
+\begin_layout Plain Layout
+
+            String zipEntryName =
+\end_layout
+
+\begin_layout Plain Layout
+
+                 ((java.util.zip.ZipEntry)entries.nextElement()).getName() +
+\end_layout
+
+\begin_layout Plain Layout
+
+                 newLine;
+\end_layout
+
+\begin_layout Plain Layout
+
+            writer.write(zipEntryName, 0, zipEntryName.length());
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用try-with-resources结构编写数据库访问程序：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public static void viewTable(Connection con) throws SQLException {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    String query = "select COF_NAME, SUP_ID, PRICE, SALES, TOTAL from COFFEES";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    try (Statement stmt = con.createStatement()) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        ResultSet rs = stmt.executeQuery(query);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        while (rs.next()) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            String coffeeName = rs.getString("COF_NAME");
+\end_layout
+
+\begin_layout Plain Layout
+
+            int supplierID = rs.getInt("SUP_ID");
+\end_layout
+
+\begin_layout Plain Layout
+
+            float price = rs.getFloat("PRICE");
+\end_layout
+
+\begin_layout Plain Layout
+
+            int sales = rs.getInt("SALES");
+\end_layout
+
+\begin_layout Plain Layout
+
+            int total = rs.getInt("TOTAL");
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            System.out.println(coffeeName + ", " + supplierID + ", " + 
+\end_layout
+
+\begin_layout Plain Layout
+
+                               price + ", " + sales + ", " + total);
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    } catch (SQLException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        JDBCTutorialUtilities.printSQLException(e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+异常处理的一般原则？举例说明，有很多种处理异常的方式，哪种更合理？谁来处理异常？throw or catch？
+\end_layout
+
+\begin_layout Plain Layout
+如何知道该捕获哪个异常？
+\end_layout
+
+\begin_layout Plain Layout
+图示责任链
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

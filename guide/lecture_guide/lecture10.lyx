@@ -1,0 +1,10404 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{book-preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+coderemarks
+logicalmkup
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\size larger
+\bar under
+山东理工大学教案
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="70col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第十次课
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学课型：理论课□√ 实验课□√ 习题课□ 实践课□ 技能课□ 其它□
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要教学内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:C的IO回顾"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:C的IO回顾"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Java的IO体系"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Java的IO体系"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java I/O和C的I/O的比较；
+\end_layout
+
+\begin_layout Enumerate
+Java I/O的分类和类层次结构；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+难点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java I/O的面向字节和面向字符的接口；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+课程目标及要求
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+课程目标：课程目标1
+\end_layout
+
+\begin_layout Plain Layout
+要求：
+\end_layout
+
+\begin_layout Enumerate
+熟练掌握Java I/O的基本概念和实现思路；
+\end_layout
+
+\begin_layout Enumerate
+熟练掌握Java I/O的两种分类及其不同的使用场合；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学方法和手段
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+板书和多媒体相结合，边讲边练，当堂消化。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+讨论、思考题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java I/O体系复杂吗？是否存在过度设计的嫌疑？你是否有更好的想法？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参考资料
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Java的IO
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Java的IO"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+输入输出（IO）看起来简单，但是却头绪繁多、内容繁杂。这是因为我们要处理的输入输出设备种类众多，导致Java通过面向对象的方式对输入输出设备及其操作的封装也比较
+复杂，因此建议读者在学习本章内容的时候要经常跳出具体的技术细节，回到下图从总体上把握Java IO的体系。
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/Java-IO.png
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+内容是否太多？不容易理出一个头绪来
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+C的IO回顾
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:C的IO回顾"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在C语言中，输入输出的概念分为两个层面：
+\end_layout
+
+\begin_layout Itemize
+输入输出的“源”都被看做设备，使用设备描述符
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+设备描述符
+\end_layout
+
+\end_inset
+
+来区分不同的输入输出源。
+\end_layout
+
+\begin_layout Itemize
+从设备输入或者输出的数据通过“流”（stream
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+stream
+\end_layout
+
+\end_inset
+
+）模型来处理，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:C的输入模型"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:C的输出模型"
+
+\end_inset
+
+。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+把下图的输入流和输出流画成管道的形状
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/c-input.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+C的输入模型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:C的输入模型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/c-output.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+C的输出模型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:C的输出模型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所谓的“流”（stream），是一个仅容一个bit数据通过的管道，即数据的有序序列，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:输入流模型"
+
+\end_inset
+
+所示。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这个图似乎表达的不是很清楚？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/input-stream.eps
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+输入流模型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:输入流模型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+流模型”的最大好处是，每个I/O函数都尽力做最好的自己即可，通过“流模型”可以将不同的I/O函数串联起来协同完成更复杂的IO操作。Java的IO体系也借鉴了C中
+的IO设计，只不过C是面向过程的语言，IO的处理是通过函数来完成的，而Java是面向对象的方式来处理IO，IO的操作是通过不同的IO操作类来完成的。
+\end_layout
+
+\begin_layout Section
+Java的IO体系
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java的IO体系"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java继承了C对输入输出的基本认识：无论输入输出来自何处（设备），去往何处（设备），一律当做“流”的方式来处理。流就像一个仅容一个bit数据通过的管道一样，是
+一个有序的数据序列。如果我们按照8位（1个字节）来分割解读流中的数据序列，就是“面向字节的流”，有时也简称“字节流
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+字节流
+\end_layout
+
+\end_inset
+
+”；如果我们以16位（2个字节，即1个字符）来分割和解读流中的数据，就是“面向字符的流”，有时也简称“字符流
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+字符流
+\end_layout
+
+\end_inset
+
+”。其实，字节流和字符流的区分并没有改变流的数据本质，只是我们以不同的视角解读数据罢了，就像一部红楼，经学家看见《易》，道学家看见淫，才子看见缠绵，革命家看见排
+满，流言家看见宫闱秘事
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+出自《鲁迅全集-集外集拾遗补编•<绛洞花主>小引》
+\end_layout
+
+\end_inset
+
+。红楼还是那部红楼，不同的人，不同的场合，不同的视角，不同的解读而已。
+\end_layout
+
+\begin_layout Standard
+Java IO相关的类在包java.io中。
+\end_layout
+
+\begin_layout Subsection
+面向字节的流
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:面向字节的流"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所谓面向字节的流，是指流中的数据按照字节来解释，即每8位（1个字节）为一个解读的单元。Java提供了如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java的InputStream类层次结构"
+
+\end_inset
+
+所示的面向字节的流的处理类层次结构。其中的节点流是指直接与输入输出设备打交道处理I/O操作的类，处理流是指对原始数据进行二次加工的类。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/inputstream.eps
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java的InputStream/OutputStream类层次结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java的InputStream类层次结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java的InputStream类层次结构"
+
+\end_inset
+
+中的InputStream/OutputStream的子类有各自的应用场景，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:InputStream/OutputStream子类的适用场景"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="left" valignment="middle" width="25line%">
+<column alignment="left" valignment="middle" width="70line%">
+<row endlastfoot="true">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FileInputStream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读取二进制文件，比如图片、音视频等。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PipedInputStream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+提供了管道化操作的具体实现：PipedInputStream通常和一个PipedOutputStream关联在一起，即PipedOutputStream的输出送
+给PipedInputStream。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ByteArrayInput\SpecialChar softhyphen
+Stream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将一个字节数组当做一个InputStream来处理。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SequenceInput\SpecialChar softhyphen
+Stream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将多个InputStream收尾相接组成一个新的InputStream。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FilterInputStream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+顾名思义，FilterInputStream接受一个InputStream作为参数，然后对这个InputStream中的数据做相应的处理后再输出。即，Filte
+rInputStream通常用来对数据进行筛选、变换、编码等处理，FilterInputStream的不同子类已经实现了若干的过滤处理，常见的FilterInp
+utStream的子类如下：
+\end_layout
+
+\begin_layout Description
+BufferedInputStream： 对于任何InputStream提供了缓存处理功能，提高了输入处理的效率。
+\end_layout
+
+\begin_layout Description
+DataInputStream： 如果我们确定InputStream中存储的是基本类型数据，则可以借助于DataInputStream提供的读取基本类型数据方法
+简化操作，这些方法直接返回所需要的基本类型变量，比如readInt。注意到DataInputStream也实现了DataInput接口，在DataInput接口
+中规范了读取基本类型数据的方法。
+\end_layout
+
+\begin_layout Description
+PushBackInputStream： 通常，我们从InputStream读取一个字节后，这个字节就从InputStream移除了，再次从InputStrea
+m读取数据会从下一个字节开始。PushBackInputStream的设计目的是把刚刚读取的字节再次送回InputStream，以便有机会再次读取这个字节的数据
+。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row newpage="true">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ObjectInputStream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+用于对基本数据类型和对象的序列化处理，通常和ObjectOutputStream联合使用，即ObjectInputStreamream所读取的数据通常是由Obj
+ectOutputStream写入的。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+InputStream输入流
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:InputStream/OutputStream子类的适用场景"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="28line%">
+<column alignment="left" valignment="middle" width="63line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FileOutputStream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+写入二进制文件，比如图片、音视频等。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PipedOutputStream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+通常和一个PipedInputStream关联在一起实现管道化操作
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ByteArrayOutput\SpecialChar softhyphen
+Stream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+写入到一个字节数组中
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FilterOutputStream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+接受一个OutputStream作为参数，在数据写入OutputStream之前进行一定的处理。常见的FilterOutputStream子类如下：
+\end_layout
+
+\begin_layout Itemize
+DataOutputStream: 将基本数据类型写入OutputStream，便于使用DataInputStream读入处理。
+\end_layout
+
+\begin_layout Itemize
+BufferedOutputStream:对于任何OutputStream提供了缓存处理功能，提高了输出处理的效率。
+\end_layout
+
+\begin_layout Itemize
+PrintStream: 自动刷新缓冲区的OutputStream。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ObjectOutputStream
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+用于对基本数据类型和对象的序列化处理。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+OutputStream输出流
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:OutputStream子类的适用场景"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+InputStream是个抽象类，是所有字节输入流的父类，其中定义了一些基本的字节输入流的操作方法，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:InputStream的常用方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="35line%">
+<column alignment="left" valignment="middle" width="50line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public abstract int read() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从输入流读取下一个字节，字节值为0~255。如果输入流不再有数据则返回-1。该方法是一个阻塞方法，直到有数据可读或者数据流结束，或发生异常才返回。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public int read(byte[] b) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从输入流读取一组数据存入缓冲区b中，返回所读取字节的个数。如果返回-1表示数据流结束。该方法相当于read(b, 0, b.length)。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public int read(byte[] b, int off, int len) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从输入流读取最多len字节数据存入缓冲区b中，存储位置从b的第off个位置开始。该方法返回读取的字节数，如果返回-1表示数据流结束。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public int available() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回当前输入流可供读取的字节数。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void mark(int readLimit)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在输入流中标记当前位置，以后可以调用reset方法返回该位置，以便重复读取从该标记位置开始的数据。readLimit设置调用mark方法后可以读取的最大字节数，
+且保持mark标记有效。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void reset() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重置流的读取位置，回到上次调用mark方法标记的位置。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public boolean markSupported()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检测输入流是否支持mark和reset方法
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public long skip(long n) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从输入流忽略n字节的数据，返回被忽略的实际字节数。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void close() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+关闭输入流，释放所占用的系统资源。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+InputStream的常用方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:InputStream的常用方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="35line%">
+<column alignment="left" valignment="middle" width="50line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public abstract void write(int b) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+向输出流写入一个字节。写出字节为整数b的低字节，整数b的3个高字节被忽略。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void write(byte[] b) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+把缓冲区b中的全部数据写入输出流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void write(byte[] b, int off, int len) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+把缓冲区b从b[off]开始的len个字节的数据写入输出流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pbulic void flush() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+刷新输出流，强制输出缓冲区的数据立即写出
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void close() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+关闭输出流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+OutputStream的常用方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:OutputStream的常用方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java内部的数据都是unicode编码
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见：http://unicode.org/charts。Unicode（统一码、万国码、单一码）是计算机科学领域里的一项业界标准,包括字符集、编码方案等。Uni
+code 是为了解决传统的字符编码方案的局限而产生的，它为每种语言中的每个字符设定了统一并且唯一的二进制编码，以满足跨语言、跨平台进行文本转换、处理的要求。un
+icode只是一个符号集，它只规定了符号的二进制代码，却没有规定这个二进制代码应该如何存储。我们经常说的UTF-8编码是unicode编码的具体实现（除此之外还
+有UTF-16,UTF-32，但是用的不多），UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节
+长度：对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码，因此对于英语字母，UTF-8编码和ASCII码是相同的。 对于n字节的符号（n
+>1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。
+ 
+\end_layout
+
+\end_inset
+
+的，除ASCII码外都是多字节编码方式，因此面向字节的流处理往往用于处理二进制数据，或者用于适合把数据看做二进制的场合。比如：
+\end_layout
+
+\begin_layout Itemize
+在工业控制领域，我们把接收到的数据按照自己制定的数据格式写入文件（不一定是Java语言编写的程序写文件，也许是C/C++写文件），在这种情况下就适合使用面向字节
+的流打开文件读取数据。在C语言中我们也特别强调，为了保证正确读写文件，采用什么方式（主要指面向字节还是面向字符）写入文件，就要采用同样的方式打开文件。
+\end_layout
+
+\begin_layout Itemize
+ASCII文件可以安全的使用面向字节的流读写，因为ASCII字符的长度没有超出8位。
+\end_layout
+
+\begin_layout Itemize
+图片、声音、视频等数据一般是以二进制方式存储的，因此适合使用字节流来处理。
+\end_layout
+
+\begin_layout Standard
+我们之前一直在使用的System.in
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+System.in
+\end_layout
+
+\end_inset
+
+，实际上一个InputStream
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+InputStream
+\end_layout
+
+\end_inset
+
+类型的对象，Sytsem.out
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Sytsem.out
+\end_layout
+
+\end_inset
+
+实际上是一个PrintStream
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PrintStream
+\end_layout
+
+\end_inset
+
+类型的对象
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见openjdk的jdk/src/java.base/share/classes/java/lang/System.java
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    /**  
+\end_layout
+
+\begin_layout Plain Layout
+
+     * The "standard" input stream.
+ This stream is already
+\end_layout
+
+\begin_layout Plain Layout
+
+     * open and ready to supply input data.
+ Typically this stream
+\end_layout
+
+\begin_layout Plain Layout
+
+     * corresponds to keyboard input or another input source specified by
+\end_layout
+
+\begin_layout Plain Layout
+
+     * the host environment or user.
+\end_layout
+
+\begin_layout Plain Layout
+
+     */
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final InputStream in = null;
+\end_layout
+
+\begin_layout Plain Layout
+
+    /**
+\end_layout
+
+\begin_layout Plain Layout
+
+     * The "standard" output stream.
+ This stream is already
+\end_layout
+
+\begin_layout Plain Layout
+
+     * open and ready to accept output data.
+ Typically this stream
+\end_layout
+
+\begin_layout Plain Layout
+
+     * corresponds to display output or another output destination
+\end_layout
+
+\begin_layout Plain Layout
+
+     * specified by the host environment or user.
+\end_layout
+
+\begin_layout Plain Layout
+
+     * <p>
+\end_layout
+
+\begin_layout Plain Layout
+
+     * For simple stand-alone Java applications, a typical way to write
+\end_layout
+
+\begin_layout Plain Layout
+
+     * a line of output data is:
+\end_layout
+
+\begin_layout Plain Layout
+
+     * <blockquote><pre>
+\end_layout
+
+\begin_layout Plain Layout
+
+     *     System.out.println(data)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * </pre></blockquote>
+\end_layout
+
+\begin_layout Plain Layout
+
+     * <p>
+\end_layout
+
+\begin_layout Plain Layout
+
+     * See the <code>println</code> methods in class <code>PrintStream</code>.
+\end_layout
+
+\begin_layout Plain Layout
+
+     *
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println()
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(boolean)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(char)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(char[])
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(double)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(float)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(int)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(long)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(java.lang.Object)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * @see     java.io.PrintStream#println(java.lang.String)
+\end_layout
+
+\begin_layout Plain Layout
+
+     */
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static final PrintStream out = null;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+输入输出流在使用后为什么要及时关闭呢？这是因为，Java把所有的输入输出流都抽象为文件的操作，如果我们不及时关闭打开的输入输出流，相当于不及时关闭打开的文件，久
+而久之可能造成操作系统打开的文件过多，从而拖慢系统运行速度，甚至超出系统允许打开的文件数。因此，输入输出流使用完毕及时关闭是个好习惯。
+\end_layout
+
+\begin_layout Plain Layout
+我们在
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:try-with-resources"
+
+\end_inset
+
+会看到，使用try-with-resources可以方便的管理输入输出流的关闭，减轻了程序员的负担。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+复制二进制文件
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:复制二进制文件。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CopyBinary.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/CopyBinary.java"
+lstparams "caption={CopyBinary.java},label={CopyBinary.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+要复制的文件从哪里来？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在Idea中运行CopyBinary.main()结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+97321151161141051101031049484810504846525310
+\end_layout
+
+\begin_layout Plain Layout
+97321151161141051101031049484810504846525310
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+本例我们实现了两种文件复制的方式：
+\end_layout
+
+\begin_layout Enumerate
+不使用缓冲区的字节流。通过FileInputStream读取文件，通过FileOutputStream写入文件，没有使用缓冲区，每次读取一个字节。显然当文件比较
+大时，读写文件的效率是比较低的。
+\end_layout
+
+\begin_layout Enumerate
+使用缓冲区的字节流。利用BufferedInputStream和BufferedOutputStream构造带缓冲区的字节流，这是编程实践中最常见的情形。
+\end_layout
+
+\begin_layout Standard
+注意到我们使用了try-with-resources的Java新语法。如果使用传统的try-catch接口则要注意输入字节流和输出字节流在使用完毕后都需要关闭，
+通常借助于finally代码块实现。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+FileInputStream/FileOutputStream、BufferedInputStream/BufferedOutputStream、DataIn
+putSteam/DataOutputStream的使用
+\end_layout
+
+\begin_layout Paragraph*
+设计要求
+\end_layout
+
+\begin_layout Standard
+假设一个表示气温的文件weather.txt有下列数据
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+我们在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:文件操作"
+
+\end_inset
+
+还会使用文件相关API重新设计本例。
+\end_layout
+
+\end_inset
+
+，试将下列数据使用DataOutputStream重新写入文件weather.dat，然后使用DataInputStream读出weather.dat并求温度的平均
+值。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+17.1 24.2
+\end_layout
+
+\begin_layout Plain Layout
+18.9 22.3
+\end_layout
+
+\begin_layout Plain Layout
+17.3 -2.3 15.6
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Temperature.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/Temperature.java"
+lstparams "caption={Temperature.java},label={Temperature.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在Idea中运行Temperature结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+17.1
+\end_layout
+
+\begin_layout Plain Layout
+24.2
+\end_layout
+
+\begin_layout Plain Layout
+18.9
+\end_layout
+
+\begin_layout Plain Layout
+22.3
+\end_layout
+
+\begin_layout Plain Layout
+17.3
+\end_layout
+
+\begin_layout Plain Layout
+-2.3
+\end_layout
+
+\begin_layout Plain Layout
+15.6
+\end_layout
+
+\begin_layout Plain Layout
+average temperature = 16.157142809459142
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+注意到dos的构造方式：DataOutputStream dos = new DataOutputStream(new BufferedOutputStream
+(new FileOutputStream(
+\begin_inset Quotes eld
+\end_inset
+
+weather.dat
+\begin_inset Quotes erd
+\end_inset
+
+)))，可以通过
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DataStream/BufferedStream/InputS"
+
+\end_inset
+
+加深理解。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/datastream-buffer-file.eps
+	lyxscale 70
+	width 90line%
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+此图可以通过层技术画的更好
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DataStream/BufferedStream/InputStream的联合使用
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DataStream/BufferedStream/InputS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+注意weather.txt, weather.dat文件的位置：目前是在项目的根目录下的，这是因为几乎所有的IDE环境，包括Eclipse、NetBeans、Ide
+a都把项目的根目录作为字节流的根目录来处理，因此我们在上面的例子中，都是采用了相对路径的方式来读写文件。但是，这种读写文件的方式（主要是对文件路径的定义方式）如
+果离开了IDE环境就失效了，因此在实践中一般不采用此种文件定位方式，一般根据classpath定位文件，参见
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:读写属性文件"
+
+\end_inset
+
+。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+无论是读取还是写入文件，字节流的操作分为以下两种方式：
+\end_layout
+
+\begin_layout Enumerate
+按字节处理：每次读取或者写入一个字节；
+\end_layout
+
+\begin_layout Enumerate
+按字节数组处理：每次读取或者写入一个字节数组，数组的大小需要事先定义；
+\end_layout
+
+\begin_layout Plain Layout
+在字符流中，我们还会看到按行处理的情形，但是在处理字节流时一般不按行处理，其原因是二进制数据一般不进行换行处理。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+使用C语言通过面向字节的方式打开一个文件写入“Hello World!”，然后使用Java语言读取此文件，看看有什么变化？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+使用C语言通过面向字节的方式打开一个文件写入“你好，世界!”，然后使用Java的面向字节的流读取此文件，看看有什么变化？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+请将
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+exercisename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:复制二进制文件。"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+改造为从命令行输入源文件和目标文件，然后将源文件复制为目标文件。
+\end_layout
+
+\begin_layout Subsection
+面向字符的流
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:面向字符的流"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+理解了字节流，字符流就不难理解了。字节流是将“流”中的数据按照字节来划分，所谓字符流，只是将“流”中的数据按照2个字节（即一个字符）来划分而已。Java
+ IO提供了如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:字符流的类层次结构"
+
+\end_inset
+
+所示的处理字符流的类层次结构。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/reader-writer.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+字符流的类层次结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:字符流的类层次结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+有必要列出每一个Reader/Writer子类的使用场合吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+和字节流非常类似，Reader和Write是两个抽象类，其中封装了操作字符流的基本方法，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Reader的基本方法"
+
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Writer的基本方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="55line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public int read() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从流读取一个字符并返回，如果没有字符可读则返回-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public int read(char[] cbuf) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从流读取字符到数组cbuf中，返回读取的字符个数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public abstract int read(char[] cbuf, int off, int len) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从流读取字符到数组cbuf中，并从cbuf[off]开始存储，最多读取len个字符。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public long skip(long n) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+跳过流中的n个字符
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public boolean ready() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+检测输入字符流是否可读
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void mark(int readAheadLimit) throws IOException 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+标记流的当前位置，readAheadLimit表示在此位置有效期间最多可以读取的字符数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void reset() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+复位标记过的流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public abstract void close() throws IOException 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+关闭流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reader的基本方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Reader的基本方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="55line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void write(int c) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+写一个字符到流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void write(char[] cbuf) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+写字符数组cbuf到流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public abstract void write(char[] cbuf, int off, int len) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+写字符数组cbuf到流，从cbuf[off]开始最多写入len个字符
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void write(String str) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+写字符串str到流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public void write(String str, int off, int len) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+写字符串str到流，从off个字符开始，最多写入len个字符
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public abstract void flush() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+刷新流缓冲区
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public abstract void close() throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+关闭流
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Writer的基本方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Writer的基本方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+从键盘输入数据
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:从键盘输入数据"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement r
+overhang 0in
+width "40line%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/x-memory-layout.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+实数3.125的内存表达
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:实数3.125的内存表达"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+对于输入输出而言，使用最多的就是从键盘输入数据
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p104，输入数据"
+key "java-chenweijun"
+literal "true"
+
+\end_inset
+
+，以及在显示器上输出数据。在Java语言中，数据的输出很方便，使用System.out.println就已经很好用了，无论什么类型的数据，都能够自动转换为字符串输出
+（在Java8以后，甚至包括了List、Map类型的数据），这里不再赘述。但是Java从键盘输入数据确实不是太方便，比如考虑下面的情形：从键盘输入一个实数3.12
+5保存到变量x中，该如何完成这个任务呢？如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:实数3.125的内存表达"
+
+\end_inset
+
+所示。我们的目标是获得一个单精度浮点类型变量x，其值为3.125，在内存中占用4个字节的内存空间，从高到低的4个字节分别为40、48、00和00（均为16进制数）
+。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+浮点数的内存存储方式是哪里讲解的？在这里需要将知识点链接起来
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从键盘输入数据，我们已经知道必须通过System.in来完成，下面我们再次回顾一下System类的基本内容：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public final class System {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    public final static InputStream in = null;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    private static void initializeSystemClass() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+        FileInputStream fdIn = new FileInputStream(FileDescriptor.in);
+\end_layout
+
+\begin_layout Plain Layout
+
+        setIn0(new BufferedInputStream(fdIn));
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，in是System类的静态成员变量，在系统初始化的时候，in初始化为一个带缓冲的文件字节流，即
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+in是一个从标准输入设备（FileDescriptor.in）接受二进制数据并实现了缓存处理的字节流
+\end_layout
+
+\end_inset
+
+。另外也需要注意到，in是InputStream类型的，但其实在初始化的时候我们看到了，in的真实类型是BufferedInputStream类型的，这是前面讲
+过的多态
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:多态"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+的概念：子类对象，父类引用。
+\end_layout
+
+\begin_layout Standard
+如果我们直接使用Sytem.in从键盘读入3.125，比如保存到一个byte数组中：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+byte[] b = new byte[20];
+\end_layout
+
+\begin_layout Plain Layout
+
+System.in.read(b);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则内存中的数据如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:InputStream的read方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/inputstream-read.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+InputStream的read方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:InputStream的read方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，当从键盘输入3.125时，保存在数组b中的是它们的ASCII值（注意
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:InputStream的read方法"
+
+\end_inset
+
+中使用16进制表示内存中的数据），并且包括了回车符和换行符
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+如果在Linux下面进行测试的话，从键盘输入是不包含回车符'
+\backslash
+r'的，只有换行符'
+\backslash
+n'，即在Linux下面通过换行符'
+\backslash
+n'表示输入结束。
+\end_layout
+
+\end_inset
+
+，显然数组b不符合要求，我们很难直接将数组b直接转换为一个float类型的数据。
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+并非不能，而是比较麻烦，比如可以这样做：
+\end_layout
+
+\begin_layout Plain Layout
+byte[] b = new byte[20];
+\end_layout
+
+\begin_layout Plain Layout
+float f = Float.valueOf(new String(b));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+既然直接使用字节流不容易达成我们的目标，使用字符流InputStreamReader可以吗？InputStreamReader的构造方法是：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public InputStreamReader(InputStream in);
+\end_layout
+
+\begin_layout Plain Layout
+
+public InputStreamReader(InputStream in, String enc) throws UnsupportedEncodingE
+xception;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+InputStreamReader的构造方法的参数是InputStream类型的，也就是说，InputStreamReader的功能是把字节流转换为字符流，于是
+我们可以尝试这样解决：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+char[] c = new char[20];
+\end_layout
+
+\begin_layout Plain Layout
+
+InputStreamReader sr = new InputStreamReader(System.in);
+\end_layout
+
+\begin_layout Plain Layout
+
+sr.read(c);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这段代码的功能是从键盘输入一组数据并保存到字符数组c中，c在内存中的内容如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:InputStreamReader类的read方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/inputstreamreader-read.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+InputStreamReader类的read方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:InputStreamReader类的read方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出，数组c存放的数据与
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:InputStream的read方法"
+
+\end_inset
+
+中的数组b是完全一样的，唯一的区别是数据类型发生了变化。b是一个字节类型的数组，每个数组元素只占一个字节；c是一个字符类型的数组，每个数组元素占两个字节。因此，
+使用InputStreamReader和使用InputStream输入浮点数会遇到相似的问题：都需要将输入的数据（字节数组或者字符数组）转换为字符串对象然后使用
+Float.valueOf(String s)转换为浮点数。有没有办法从键盘直接获取字符串呢？InputStream和InputStreamReader都没有提供
+这样的功能，即便BufferedInputStream也没有提供直接从键盘获取字符串的功能，这是容易理解的：InputStream、BufferedInputS
+tream的目的是原始的二进制字节，InputStreamReader的目的是为了获取原始的二进制字符，这些都和字符串没有关系。BufferedReader提供
+了从键盘获取字符串的功能，其中的readLine方法可以从键盘获取一行字符，并自动删除了末尾的回车换行符，于是我们有了最终的解决方案
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+本节的完整测试代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/io/src/cn/edu/s
+dut/softlab/SystemInTest.java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+\end_layout
+
+\begin_layout Plain Layout
+
+String str = reader.readLine();
+\end_layout
+
+\begin_layout Plain Layout
+
+float x = Float.parseFloat(str);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这段代码中，以System.in对象为输入参数，创建了一个InputStreamReader对象，然后以该对象为参数，创建了一个BufferedReader对象
+，从而形成了这几个类之间的连接关系
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+这里BufferedReader、InputStreamReader、System.in(InputStream)使用了设计模式中的装饰器模式，详情参见本系列教程
+的“提高篇”。
+\end_layout
+
+\end_inset
+
+，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:从键盘输入数据相关类的关系"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/input-from-keyboard-stream.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+从键盘输入数据相关类的关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:从键盘输入数据相关类的关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的基本思路是：InputStream类负责从键盘读入字节流，然后InputStreamReader类将字节流转换为字符流，接着BufferedReader进
+行缓冲并读取一行字符，即把末尾的回车换行符去掉并将数据转化为
+\begin_inset Flex Emph
+status open
+
+\begin_layout Plain Layout
+字符串
+\end_layout
+
+\end_inset
+
+，最后调用Float类的parseFloat方法把这个字符串转换为相应的实数。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+本节内容中，我们从观察java数据的内存表达深刻理解java的输入输出，常见的IDE都可以帮助我们方便的观察Java数据在内存中的存储格式，比如在Idea中调试
+SystemInTest时可以看到Idea即时的给出了各个变量的当前值:
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/inputstream-read-idea-debug.png
+	width 85line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+也考虑增加NetBeans/Eclipse的截图
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+如果我们仅仅需要用户从键盘输入一个简单的响应，比如yes或y的话，可以利用System.console方法，代码示例如下：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+static boolean okayToOverwrite(String file) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    String answer = System.console().readLine("overwrite %s (yes/no)? ", file);
+\end_layout
+
+\begin_layout Plain Layout
+
+    return (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes"));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Scanner类
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Scanner类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:从键盘输入数据"
+
+\end_inset
+
+一节的描述可以看出，Java在处理键盘输入数据时实在不够友好，于是从Java 1.5开始增加了一个工具类Scanner简化从键盘输入数据的处理。Scanner类也
+是从InputStream接受数据，但是可以根据模式匹配的方法直接将二进制数据转换为相应的基本数据类型。具体的说，Scanner会自动根据分隔符（默认为空白字符
+，包括空格符、回车符、换行符、制表符）从输入数据中分离出一个个字符串（称为token），并转换为要求的整数、实数或者字符串等，从而方便的实现了在同一行读入多个不
+同类型的数据。
+\end_layout
+
+\begin_layout Standard
+Scanner类的常用方法如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Scanner类的常用方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="55line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public byte nextByte()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读入下一个字节（byte）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public short nextShort()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读入下一个短整数（short）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public int nextInt()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读入下一个整数（int）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public long nextLong()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读入下一个长整数（long）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public float nextFloat()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读入下一个单精度浮点数（float）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public double nextDouble()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读入下一个双精度浮点数（double）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public boolean hasNext()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+是否存在可读的数据？
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public String next()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读入下一个token（即空白字符隔开的独立的字符串）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public String nextLine()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读入下一行
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public Scanner useDelimiter(Pattern pattern)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用自定义的token分隔符
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+应该增加一个token的用法示例
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Scanner类的常用方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Scanner类的常用方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+从键盘输入两个整数，计算其乘积并输出
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:从键盘输入两个整数，计算其乘积并输出。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Multiply.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/MultiplyTest.java"
+lstparams "caption={Multiply.java},label={Multiply.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+使用BufferedReader改写
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:从键盘输入两个整数，计算其乘积并输出。"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+使用Scanner读取文件“双城记.txt”，统计该小说有多少个单词
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+双城记文本下载地址：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://archive.org/stream/ataleoftwocities00098gut/98.txt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+？
+\end_layout
+
+\begin_layout Section
+*文件操作
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:文件操作"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+什么是Path？
+\end_layout
+
+\begin_layout Standard
+在新的文件操作API
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+JDK 1.7引入了新的文件操作API，即NIO.2，本节内容着重于NIO.2，不再涉及旧的文件API。
+\end_layout
+
+\end_inset
+
+中，Path的概念至关重要，类Path是文件操作的入口。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里简要说明Path的功能
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+无论是Windows操作系统还是Linux操作系统，文件系统都是树状结构的。典型的文件系统如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:目录树示意图"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/linux-directory-tree.eps
+	width 45line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Linux系统目录树
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linux系统目录树"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/windows-directory-tree.eps
+	width 45line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Windows系统目录树
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Windows系统目录树"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+目录树示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:目录树示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+myfile.txt的路径（Path）在Linux系统表示为：
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+/home/lisi/myfile.txt
+\end_layout
+
+\end_inset
+
+；而在Windows系统下myfile.txt的路径（Path）表示为：
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+c:
+\backslash
+users
+\backslash
+list
+\backslash
+myfile.txt
+\end_layout
+
+\end_inset
+
+。这里要特别注意到目录分隔符的区别：Windows操作系统使用反斜杠（
+\backslash
+）
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+众所周知，Unix的历史要比Windows久远，Windows的设计从Unix中汲取了很多营养，但是Windows的路径分隔符和Unix系统的路径分隔符截然相反
+，给后来的程序设计带来了一些困扰：你必须正确识别和处理不同操作系统的路径分隔符。你一定会想，要是当初微软在设计Windows的时候使用和Unix相同的路径分隔符
+，该多好！历史没有如果，现实如此残酷！欲知当初微软选择反斜杠作为文件分隔符的原因，请参考：https://blogs.msdn.microsoft.com/larry
+osterman/2005/06/24/why-is-the-dos-path-character/。简单的说，Windows操作系统脱胎于Dos操作系统，在D
+os操作系统中斜杠（/）已经作为命令行参数的分隔符了，因此Windows只好选用其他的分隔符（反斜杠）作为文件路径分隔符。
+\end_layout
+
+\end_inset
+
+作为目录分隔符，而其他所有操作系统（包括Linux、Unix、MacOS）都使用斜杠（/）作为目录分隔符。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+注意到，路径（Path）不仅仅是目录的意思。实际上，路径（Path）包含了以下几种情况：
+\end_layout
+
+\begin_layout Itemize
+纯粹文件名，比如：myfile.txt
+\end_layout
+
+\begin_layout Itemize
+纯粹目录，比如：/home/sili
+\end_layout
+
+\begin_layout Itemize
+绝对路径+文件名，比如：/home/lisi/myfile.txt
+\end_layout
+
+\begin_layout Itemize
+相对路径+文件名，比如：./lisi/myfile.txt
+\end_layout
+
+\begin_layout Plain Layout
+以上几种情况都是路径（Path）。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+相对路径和绝对路径
+\end_layout
+
+\begin_layout Standard
+从形式上看，相对路径和绝对路径很容易区分：以目录分隔符（Linux系统使用/，windows系统使用
+\backslash
+）为起点的路径是绝对路径，其他形式的路径是相对路径。下面是一些示例，都表示文件myfile.txt：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+# 假设当前位于/
+\end_layout
+
+\begin_layout Plain Layout
+/home/lisi/myfile.txt # 绝对路径
+\end_layout
+
+\begin_layout Plain Layout
+home/lisi/myfile.txt # 相对路径
+\end_layout
+
+\begin_layout Plain Layout
+./home/lisi/myfile.txt # 相对路径，.表示当前目录
+\end_layout
+
+\begin_layout Plain Layout
+# 假设当前位于/home
+\end_layout
+
+\begin_layout Plain Layout
+/home/lisi/myfile.txt # 绝对路径
+\end_layout
+
+\begin_layout Plain Layout
+lisi/myfile.txt　# 相对路径
+\end_layout
+
+\begin_layout Plain Layout
+./lisi/myfile.txt # 相对路径
+\end_layout
+
+\begin_layout Plain Layout
+# 假设当前位于/usr　
+\end_layout
+
+\begin_layout Plain Layout
+/home/lisi/myfile.txt # 绝对路径
+\end_layout
+
+\begin_layout Plain Layout
+../home/lisi/myfile.txt # 相对路径，..表示上一级目录
+\end_layout
+
+\begin_layout Plain Layout
+/home/lisi/../zhangsan/myfile.txt # 绝对路径
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Path类
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Path类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Path类是Java的新文件API的重点和核心，顾名思义，Path类代表了一个路径，一个Path对象包括了文件名和文件所在的目录，因此Path类中包含了处理文件
+和目录的相关方法。
+\end_layout
+
+\begin_layout Subsubsection
+创建Path对象
+\end_layout
+
+\begin_layout Standard
+利用Paths类（注意和Path类的区别）的get方法可以很方便的创建一个Path对象，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "CreatePathTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/CreatePathTest.java"
+lstparams "float,caption={CreatePathTest.java},label={CreatePathTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在Idea中利用调试功能可以方便的观察所创建的Path对象，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:在Ideal中通过调试观察Path对象"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/create-path-debug.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+在Ideal中通过调试观察Path对象
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:在Ideal中通过调试观察Path对象"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+获取Path信息
+\end_layout
+
+\begin_layout Standard
+Path对象的主要信息是目录分隔符隔开的一个字符串数组，可以通过getName方法返回这个数组的每个元素
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见本系列教程的“提高篇”，结合lambda表达式操作这个数组更方便，比如：
+\end_layout
+
+\begin_layout Plain Layout
+Path path = Paths.get(
+\begin_inset Quotes eld
+\end_inset
+
+/home/subaochen/test.txt
+\begin_inset Quotes erd
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+path.forEach(p -> System.out.println(p));
+\end_layout
+
+\end_inset
+
+，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathInfoTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathInfoTest.java"
+lstparams "float,caption={PathInfoTest.java},label={PathInfoTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathInfoTest.java"
+
+\end_inset
+
+中涉及的主要方法的用法参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Path信息相关方法"
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30col%">
+<column alignment="left" valignment="middle" width="55col%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+String toString()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+路径的字符串表达，自动根据不同操作系统使用了不同的目录分隔符
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Path getFileName()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+路径中的最“远”对象，即Path路径数组的最后一个元素，可能是真实的文件名，也可能是一个子目录名。注意，getFileName方法的返回值是Path，因此打印g
+etFileName实际上会调用返回的Path对象的toString方法。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Path getName(int index)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回Path数组的第index个元素。路径中的第一个元素index为0，最后一个元素的index为count-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+int getNameCount()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回Path中的元素个数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Path subpath(int beginIndex, int endIndex)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+非常类似于String类的subString的用法，返回Path中的一部分信息。beginIndex和endIndex分别指定起始index和终止Index。注
+意到，endIndex处的元素不包含在返回的Path中。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Path getParent()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+当前Path对象的上一级Path，大部分情况下，getParent相当于subpath(0,getNameCount() -1)，即将Path数组最后一个元素去
+掉即为上一级Path。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Path getRoot()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回根路径。如果是相对路径，则返回null。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Path信息相关方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Path信息相关方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Path转换
+\end_layout
+
+\begin_layout Standard
+Path转换主要通过
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Path转换方法"
+
+\end_inset
+
+中的3个方法实现的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30col%">
+<column alignment="left" valignment="middle" width="55col%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+URI toUri()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+使用
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Uri
+\end_layout
+
+\end_inset
+
+方式描述路径。对于本地文件（文件系统）使用file协议，因此URI的形式如file:///path-to-file
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Path toAbsolutePath()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回绝对路径，这对于了解文件在文件系统的位置很有帮助
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Path toRealPath(LinkOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回真实的文件路径。该方法会检测文件是否存在，也是唯一一个检测文件是否存在的Path方法。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+really？
+\end_layout
+
+\end_inset
+
+参数options决定了如何处理符号链接。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Path转换方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Path转换方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathConversionTest.java"
+
+\end_inset
+
+演示了Path转换的三种情况。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathConversionTest.java"
+lstparams "float,caption={PathConversionTest.java},label={PathConversionTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+拼接Path
+\end_layout
+
+\begin_layout Standard
+Path类的resolve方法可以拼接路径，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathResolveTest.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathResolveTest.java"
+lstparams "float,caption={PathResolveTest.java},label={PathResolveTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+需要注意的是，如果resolve的参数是一个绝对路径，则拼接的结果只是返回参数中的绝对路径，因此在resolve中应该避免传入一个绝对路径。
+\end_layout
+
+\begin_layout Plain Layout
+拼接Path的另外一个方法是relativize，请参考JDK的相关文档。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+比较Path
+\end_layout
+
+\begin_layout Standard
+比较Path主要是通过3个方法，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:比较两个Path的方法"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30col%">
+<column alignment="left" valignment="middle" width="55col%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean equals(Object otherPath)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重写了Object.equals方法，比较两个Path对象是否相同：两个Path对象代表的路径相同则两个Path对象相同
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean endsWith(Path other)
+\end_layout
+
+\begin_layout Plain Layout
+boolean endsWith(String other)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断Path对象是否以给定的Path对象或者路径字符串结尾
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+boolean startsWith(Path other)
+\end_layout
+
+\begin_layout Plain Layout
+boolean startsWith(String other)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断Path对象是否以给定的Path对象或者路径字符串开头
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+比较两个Path的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:比较两个Path的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+比较Path的示例参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathCompareTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathCompareTest.java"
+lstparams "float,caption={PathCompareTest.java},label={PathCompareTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+*Files类
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:*Files类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Files
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+你可能会迷惑，为什么不命名为File类呢？很遗憾的是，File类是旧的（JDK 1.7之前）的Java文件操作API中的文件操作类，新的文件操作类只好叫做File
+s了。通常，以单数命名的类用来表示一类事物，复数命名的类是工具辅助类类，比如Path表征路径，Paths是路径的工具辅助类。因此Files并不是一个很好的类的命
+名，这也是Java API无奈的选择。
+\end_layout
+
+\end_inset
+
+类是Java文件操作新API（java.nio.file包）中文件操作的核心类。相对于Path类，Files类聚焦于文件相关的操作：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+进一步概括说明Files类的功能
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+检查文件或者目录
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Path类"
+
+\end_inset
+
+中我们看到，Path类的大多数方法不会检查文件或者目录是否存在，换句话说，Path中的大多数方法只是对给定的路径进行语法上的检查和操作。Files类的exist
+s和notExists方法可以用来检查一个Path对象是否存在于实际的文件系统中，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PathExistTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathExistTest.java"
+lstparams "float,caption={PathExistTest.java},label={PathExistTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+exists返回false可能存在两种情况：
+\end_layout
+
+\begin_layout Enumerate
+文件或者目录不存在；
+\end_layout
+
+\begin_layout Enumerate
+文件或者目录不可见，即当前用户没有权限查看该文件或者目录。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们可以使用isReadable、isWritable、isExecutable进一步检查文件是否可读、可写、可执行，比如下面的代码片段：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Path file = ...;
+\end_layout
+
+\begin_layout Plain Layout
+
+boolean isRegularExecutableFile = Files.isRegularFile(file) &
+\end_layout
+
+\begin_layout Plain Layout
+
+         Files.isReadable(file) & Files.isExecutable(file);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+删除文件或者目录
+\end_layout
+
+\begin_layout Standard
+Files.delete方法删除文件或者目录。需要注意的是，如果要删除的是目录，则目录必须是空的，否则删除失败。示例代码参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathDeleteTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathDeleteTest.java"
+lstparams "float,caption={PathDeleteTest.java},label={PathDeleteTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+复制文件或者目录
+\end_layout
+
+\begin_layout Standard
+Files.copy方法可以复制文件或者目录。默认情况下，copy方法不会覆盖目的文件，但是可以通过传递CopyOption参数影响复制的过程：
+\end_layout
+
+\begin_layout Itemize
+REPLACE_EXISTING：覆盖目的文件。
+\end_layout
+
+\begin_layout Itemize
+COPY_ATTRIBUTES：也复制文件属性到目的文件。如果不设置此选项，只是复制文件本身，文件属性取决于目的目录的设置。
+\end_layout
+
+\begin_layout Itemize
+NOFOLLOW_LINKS：复制符号链接而非符号链接指向的文件。
+\end_layout
+
+\begin_layout Standard
+示例程序参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PathCopyTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathCopyTest.java"
+lstparams "caption={PathCopyTest.java},label={PathCopyTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+Files.copy也支持复制文件到流，或者从流复制到文件：
+\end_layout
+
+\begin_layout Itemize
+copy(InputStream, Path, CopyOption...options)
+\end_layout
+
+\begin_layout Itemize
+copy(Path, OutputStream)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+移动文件或者目录
+\end_layout
+
+\begin_layout Standard
+Files.move可以移动文件或者目录，文件或者目录改名也是要通过move方法，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathMoveTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathMoveTest.java"
+lstparams "caption={PathMoveTest.java},label={PathMoveTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+操作文件或者目录的属性
+\end_layout
+
+\begin_layout Standard
+我们经常见到元数据（metadata）这个说法。简单的说，元数据是描述数据的数据，或者说，一类事物的元数据描述了一类事物的属性。对照面向对象的概念我们可以看出，
+元数据非常像类的属性。Java提供了一组读取或者设置文件属性的方法，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:File操作文件属性的方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="left" valignment="middle" width="10line%">
+<column alignment="left" valignment="middle" width="35line%">
+<column alignment="left" valignment="middle" width="40line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+文件大小
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static long size(Path path) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+获取文件的大小(字节数）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+创建时间
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+没有提供直接的方法获取文件的创建时间，需要首先获取BasicFileAttributeView，然后解析creationTime，比如：
+\end_layout
+
+\begin_layout Plain Layout
+Path file = ...; 
+\end_layout
+
+\begin_layout Plain Layout
+BasicFileAttributes attr = Files.readAttributes(file, BasicFileAttributes.class);
+\end_layout
+
+\begin_layout Plain Layout
+System.out.println("creationTime: " + attr.creationTime());
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+最后修改时间
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static FileTime getLastModifiedTime(Path path, LinkOption...
+ options) throws IOException
+\end_layout
+
+\begin_layout Plain Layout
+public static Path setLastModifiedTime(Path path, FileTime time) throws
+ IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读取和设置文件的最后修改时间。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属主
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static UserPrincipal getOwner(Path path, LinkOption...
+ options) throws IOException
+\end_layout
+
+\begin_layout Plain Layout
+public static Path setOwner(Path path, UserPrincipal owner) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读取或者设置文件的属主
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+所属组
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+没有提供相应的方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+访问控制属性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static Set<PosixFilePermission> getPosixFilePermissions(Path path,
+ LinkOption...
+ options) throws IOException
+\end_layout
+
+\begin_layout Plain Layout
+public static Path setPosixFilePermissions(Path path, Set<PosixFilePermission>
+ perms) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读取或者设置文件的访问控制属性
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+是否目录
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static boolean isDirectory(Path path, LinkOption...
+ options)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断给定的Path是否目录
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+是否普通文件
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static boolean isRegularFile(Path path, LinkOption...
+ options)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断给定的Path是否普通文件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+是否符号连接
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static boolean isSymbolicLink(Path path)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断给定的Path是否符号链接
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+是否隐藏文件
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static boolean isHidden(Path path) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+判断给定的Path是否隐藏文件。注意到，Windows和Linux判断隐藏文件的方法是不同的，Linux的隐藏文件以
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+开头，而Windows的隐藏文件设置了“隐藏”属性。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+File操作文件属性的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:File操作文件属性的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+利用
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:File操作文件属性的方法"
+
+\end_inset
+
+中的方法，一次只能读取或者设置一个文件属性，如果要同时读取或者设置多个文件属性显然比较低效，因此Java提供了批量读取或者设置文件属性的方法，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:批量读取文件属性的方法"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="55line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static Map<String,Object> readAttributes(Path path, String attributes,
+ LinkOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+批量读取文件属性，参数attributes给出了所要读取的属性列表，*表示所有属性。属性名称和FileAttributes各子类的属性字段定义相同，参见
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/FileAttributeVie
+w.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static <A extends BasicFileAttributes> A readAttributes(Path path,
+ Class<A> type, LinkOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+批量读取文件属性，参数type是BasicFileAttributes的子类，返回结果和请求参数type相同。此方法更加“面向对象”一些，在IDE的帮助下不容易
+出错，因此建议采用此方法批量读取文件属性。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+批量读取文件属性的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:批量读取文件属性的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+不同操作系统的文件系统存在不小的差别，文件和目录的属性也各不相同，Java为了能够隐藏这些差异和细节，将文件和目录的属性做了进一步的封装，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:文件属性接口"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/fileattributes.eps
+	lyxscale 300
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+文件属性接口
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:文件属性接口"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+BasicFileAttributes及其子接口只是定义了读取文件属性的方法，如何更新（修改）文件属性呢？Java进一步封装了在各种情况下操作文件属性的Attr
+ibuteView类，即可以读取文件属性，也可以更新文件属性，同时屏蔽了不同操作系统的差异，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:读取和设置文件属性的View接口"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/FileAttributeView.eps
+	lyxscale 300
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+读取和设置文件属性的View接口
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:读取和设置文件属性的View接口"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+FileAttribes和FileAttributeView的区别，感觉没说清楚？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+读取文件属性，包括：文件大小、最后修改时间、是否普通文件等。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathMetadataTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathMetadataTest.java"
+lstparams "caption={PathMetadataTest.java},label={PathMetadataTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在Idea中运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+creationTime: 2016-12-12T02:49:04Z
+\end_layout
+
+\begin_layout Plain Layout
+lastAccessTime: 2016-12-12T02:51:47Z
+\end_layout
+
+\begin_layout Plain Layout
+lastModifiedTime: 2016-12-12T02:49:04Z
+\end_layout
+
+\begin_layout Plain Layout
+isDirectory: false
+\end_layout
+
+\begin_layout Plain Layout
+isOther: false
+\end_layout
+
+\begin_layout Plain Layout
+isRegularFile: true
+\end_layout
+
+\begin_layout Plain Layout
+isSymbolicLink: false
+\end_layout
+
+\begin_layout Plain Layout
+size: 0
+\end_layout
+
+\begin_layout Plain Layout
+now lastModifiedTime is:2016-12-13T23:54:11Z
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+使用
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:File操作文件属性的方法"
+
+\end_inset
+
+中的方法一次只能读取或者设置一个文件的属性，因此如果要一次读取或者设置多个文件属性的话，建议使用readAttributes方法较为高效。
+\end_layout
+
+\begin_layout Subsection
+创建、读写文件
+\end_layout
+
+\begin_layout Subsubsection
+读写小文件
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:读写小文件"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Files类为读写小文件
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+多小的文件算是小文件？因为readAllBytes是把文件全部内容读到一个byte数组中，因此文件的尺寸取决于你的内存多少。但是，并不是所有的内存都可以用来保存
+文件内容的，因此使用这里的方法时要考虑到能够处理的文件的最大尺寸限制。
+\end_layout
+
+\end_inset
+
+提供了方便的write和readAllBytes方法，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:读写小文件的方便方法"
+
+\end_inset
+
+。可以看出，
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:读写小文件的方便方法"
+
+\end_inset
+
+中的方法不需要和输入输出流直接打交道。实际上，Files类的方法是对输入输出流的进一步封装，比如readAllBytes方法
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见openjdk的jdk/src/java.base/share/classes/java/nio/file/Files.java
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    public static byte[] readAllBytes(Path path) throws IOException {  
+                                                 
+\end_layout
+
+\begin_layout Plain Layout
+
+        try (SeekableByteChannel sbc = Files.newByteChannel(path);
+\end_layout
+
+\begin_layout Plain Layout
+
+             InputStream in = Channels.newInputStream(sbc)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            long size = sbc.size();
+\end_layout
+
+\begin_layout Plain Layout
+
+            if (size > (long)MAX_BUFFER_SIZE)
+\end_layout
+
+\begin_layout Plain Layout
+
+                throw new OutOfMemoryError("Required array size too large");
+\end_layout
+
+\begin_layout Plain Layout
+
+                          
+\end_layout
+
+\begin_layout Plain Layout
+
+            return read(in, (int)size);
+\end_layout
+
+\begin_layout Plain Layout
+
+        }                 
+\end_layout
+
+\begin_layout Plain Layout
+
+    }  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="55line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static Path write(Path path, byte[] bytes, OpenOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将bytes数组写入到文件path中。OpenOption在StandardOpenOption这个Enum中定义：
+\end_layout
+
+\begin_layout Itemize
+READ：为读打开文件
+\end_layout
+
+\begin_layout Itemize
+WRITE：为写打开文件
+\end_layout
+
+\begin_layout Itemize
+APPEND：如果可写则追加写入内容到文件末尾
+\end_layout
+
+\begin_layout Itemize
+CREATE：如果文件不存在则创建
+\end_layout
+
+\begin_layout Itemize
+CREATE_NEW：创建新文件；如果文件已经存在则失败，优先级高于CREATE
+\end_layout
+
+\begin_layout Itemize
+TRUNCATE_EXISTING：如果文件可写并且已经存在则截断文件尺寸为0
+\end_layout
+
+\begin_layout Itemize
+DELETE_ON_CLOSE：文件操作结束（close）后自动删除文件，这对于临时文件很有用
+\end_layout
+
+\begin_layout Itemize
+DSYNC：自动同步文件的内容到存储介质
+\end_layout
+
+\begin_layout Itemize
+SYNC：自动同步文件的内容和原信息到存储介质
+\end_layout
+
+\begin_layout Itemize
+SPARSE：创建稀疏文件
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+稀疏文件是指创建文件的时候并不真正分配空间，只有真正写入文件的时候才逐步分配空间。
+\end_layout
+
+\end_inset
+
+，如果文件系统支持的话
+\end_layout
+
+\begin_layout Plain Layout
+默认是CREATE, TRUNCATE_EXISTING和WRITE，即如果文件不存在则创建，如果文件已存在则截断长度为0。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static Path write(Path path, Iterable<? extends CharSequence> lines,
+ Charset cs, OpenOption...
+ options) throws IOException 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将文本lines写入文件path中。lines以System.getProperty(
+\begin_inset Quotes eld
+\end_inset
+
+line.separator
+\begin_inset Quotes erd
+\end_inset
+
+)为行分隔符，并使用给定的（cs）编码
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Java 1.7之后引入了StandCharsets类定义了常见的编码方式，参见：https://docs.oracle.com/javase/8/docs/api/
+java/nio/charset/StandardCharsets.html
+\end_layout
+
+\end_inset
+
+为byte数组。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static byte[] readAllBytes(Path path) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path读取所有内容到byte数组。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static List<String> readAllLines(Path path) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读文件path的所有行到List<String>中，行分隔符为
+\backslash
+r
+\backslash
+n（windows下）或
+\backslash
+r（Mac下）或
+\backslash
+n（Linux下）。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static List<String> readAllLines(Path path, Charset cs) throws IOExceptio
+n
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+读文件path的所有行到List<String>中，并使用cs编码将byte解码为字符串。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endfirsthead="true" caption="true">
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+读写小文件的方便方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:读写小文件的方便方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Example
+读写小文件
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PathCreateTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathCreateTest.java"
+lstparams "caption={PathCreateTest.java},label={PathCreateTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在Idea中运行结果如下，只是简单的输出了文件的内容：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+test string
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Subsubsection
+带缓存的文本文件处理方法
+\end_layout
+
+\begin_layout Standard
+处理文本文件时，通常需要借助于缓存提高效率，我们在
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:面向字符的流"
+
+\end_inset
+
+中已经讨论过。Files类提供了如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Files中带缓存的文本读写方法"
+
+\end_inset
+
+的方法更进一步简化了文本文件的处理。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="55line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static BufferedWriter newBufferedWriter(Path path, OpenOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path创建一个BufferedReader用于读取文件内容，使用UTF-8解码。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static BufferedReader newBufferedReader(Path path, Charset cs) throws
+ IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path创建一个BufferedReader用于读取文件内容，文件内容以cs方式解码，默认使用UTF-8解码。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static BufferedWriter newBufferedWriter(Path path, OpenOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path创建一个BufferedWriter用于写入文件内容，使用UTF-8编码。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static BufferedWriter newBufferedWriter(Path path, Charset cs, OpenOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path创建一个BufferedWriter用于写入文件内容，文件内容以cs方式编码，默认使用UTF-8编码。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Files中带缓存的文本读写方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Files中带缓存的文本读写方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面的代码片段演示了newBufferedReader的用法：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Charset charset = Charset.forName("UTF-8");// or Charset charset = StandCharsets.U
+TF-8;
+\end_layout
+
+\begin_layout Plain Layout
+
+try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    String line = null;
+\end_layout
+
+\begin_layout Plain Layout
+
+    while ((line = reader.readLine()) != null) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println(line);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (IOException x) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.err.format("IOException: %s%n", x);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+等价于下面的代码片段（如果文件是UTF-8编码的话）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+try (BufferedReader reader = Files.newBufferedReader(file)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    String line = null;
+\end_layout
+
+\begin_layout Plain Layout
+
+    while ((line = reader.readLine()) != null) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println(line);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (IOException x) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    System.err.format("IOException: %s%n", x);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+使用不带缓存的输入输出流
+\end_layout
+
+\begin_layout Standard
+Files同样封装了不带缓存的输入输出流，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Files中不带缓存的输入输出流"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="30line%">
+<column alignment="left" valignment="middle" width="55line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static InputStream newInputStream(Path path, OpenOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path创建一个InputStream用于读取文件内容
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public static OutputStream newOutputStream(Path path, OpenOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path创建一个OutputStream用于写入文件内容
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Files中不带缓存的输入输出流
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Files中不带缓存的输入输出流"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Files对不带缓存的输入流的封装
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PathWithoutBufferTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PathWithoutBufferTest.java"
+lstparams "caption={PathWithoutBufferTest.java},label={PathWithoutBufferTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在Idea中运行的结果如下（简单的打印出了之前写入的内容）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Hello World! 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+newInputStream返回一个不带缓存的输入流，但是这个例子又根据这个不带缓存的输入流构造了一个BufferedReader以便以行的方式读入文本。你可能
+会问，为什么不直接使用带缓存的newBufferedReader方法呢？是的，在这个例子中，使用newBufferedReader直接返回一个BufferedR
+eader更方便，本例只是演示如何构造一个不带缓存的输入流。
+\end_layout
+
+\begin_layout Subsubsection
+channel方式读写文件
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:channel方式读写文件"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+流（stream）是按照字节为单位读写文件的，channel
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+如何翻译？通道？
+\end_layout
+
+\end_inset
+
+是按照缓冲区为单位读写文件的，也就是说，channel是自然带缓冲的，可以一次处理一个缓冲区。SeekableByteChannel内部维护着一个表示当前位置的
+指针，通过移动该指针可以实现随机文件读写，参见
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:随机读写文件"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+Files类的Channel读写文件方法见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Files类的Channel读写文件方法"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="45line%">
+<column alignment="left" valignment="middle" width="50line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+public static SeekableByteChannel newByteChannel(Path path, OpenOption...
+ options) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path创建一个
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+SeekableByteChannel
+\end_layout
+
+\end_inset
+
+用于读写文件内容，默认是只读打开Channel的。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+public static SeekableByteChannel newByteChannel(Path path, Set<? extends
+ OpenOption> options, FileAttribute<?>...
+ attrs) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从path创建一个
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+SeekableByteChannel
+\end_layout
+
+\end_inset
+
+用于读写文件内容，attrs设置文件的属性。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Files类的Channel读写文件方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Files类的Channel读写文件方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+使用Channel读写文件
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "FileRandomAccessTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/FileChannelTest.java"
+lstparams "caption={FileChannelTest.java},label={FileChannelTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+打印出myfile.txt的内容，不再列出。
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+和Stream不同，使用Channel读写文件的要点是一次处理一个buffer，因此如何使用Buffer就称为用好Channel的关键。可以借助于Java的Bu
+ffer类，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Buffer的类层次结构"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/buffer.eps
+	lyxscale 200
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Buffer的类层次结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Buffer的类层次结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面的讨论以ByteBuffer为例，其他类型的Buffer用法类似。
+\end_layout
+
+\begin_layout Standard
+ByteBuffer实际上是一块可以写入和读取数据的内存，Java提供了若干方便的方法操作这块内存，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ByteBuffer的用法"
+
+\end_inset
+
+，我们假设创建了一个大小为8个字节的ByteBuffer。要理解ByteBuffer的用法，需要首先理解ByteBuffer的三个基本属性：
+\end_layout
+
+\begin_layout Itemize
+capacity：ByteBuffer的大小，即占用多少个字节的内存空间。每个ByteBuffer在创建时需要指定capacity，一旦设定不允许改变，这里ca
+pacity=8。
+\end_layout
+
+\begin_layout Itemize
+limit：下一次读或者写允许操作的字节数。在写模式下，limit表示当前最多能够向Buffer写多少数据。在读模式下，limit表示当前最多能够读到多少数据。
+\end_layout
+
+\begin_layout Itemize
+position：下一个可以读或者写的字节的位置索引，position的最大值为capacity - 1。在写模式下，position的初始值为0，当写入数据（
+字节）后，position移动到下一个可写入的位置，比如在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ByteBuffer的用法"
+
+\end_inset
+
+中，在写入3个字节的数据后，当前position=3。如果此时切换这个ByteBuffer到读模式，则position需要指向下一个可读的字节位置，显然应该将p
+osition置为0，limit置为3（即当前position的值），即从Buffer的开头开始能够一次读3个字节的数据，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ByteBuffer的用法"
+
+\end_inset
+
+的“读模式”所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/buffer-usage.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ByteBuffer的用法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ByteBuffer的用法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Buffer通过flip方法从写模式切换到读模式，通常对Buffer的操作流程为：
+\end_layout
+
+\begin_layout Enumerate
+写入数据到Buffer，在这里是通过Channel的read方法写入数据到Buffer，也可以通过Buffer提供的各种put方法写入数据。
+\end_layout
+
+\begin_layout Enumerate
+调用flip方法切换到读模式。
+\end_layout
+
+\begin_layout Enumerate
+从Buffer中读取数据。
+\end_layout
+
+\begin_layout Enumerate
+调用clear或者compact方法清空缓冲区。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+使用Idea可以方便的观察和学习Buffer中capacity、limit、position的变化情况，如下图所示。
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/buffer-idea-debug.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+读写文件的方法很多，何时使用InputStream/OutputStream/InputReader/OutputReader，何时使用Files方法读写文件？
+一般的原则是什么？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+创建文件和临时文件
+\end_layout
+
+\begin_layout Standard
+Files也提供了创建文件和临时文件的方便API，见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Files创建文件和临时文件的方法"
+
+\end_inset
+
+。createFile和createTempFile被设计为“原子操作”，即首先检查文件是否存在（存在则抛出异常），然后创建一个空文件病设置为指定或者默认的属性
+，因此createFile的安全性要比其他方法高些。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+其他方法是哪些方法？stream？Channel？是否可以对比说明？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="45line%">
+<column alignment="left" valignment="middle" width="50line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+public static Path createFile(Path path, FileAttribute<?>...
+ attrs) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据path创建属性为attrs的文件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+public static Path createTempFile(Path dir, String prefix, String suffix,
+ FileAttribute<?>...
+ attrs) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据dir创建属性为attrs的临时文件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+public static Path createTempFile(String prefix, String suffix, FileAttribute<?>...
+ attrs) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据dir创建属性为attrs的临时文件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Files创建文件和临时文件的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Files创建文件和临时文件的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+使用createFile创建文件
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "FileCreateTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/FileCreateTest.java"
+lstparams "caption={FileCreateTest.java},label={FileCreateTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行应用程序后检查所创建文件的属性如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+~/test$ ls -l testcreate.txt 
+\end_layout
+
+\begin_layout Plain Layout
+-rw-rw-r-- 1 subaochen subaochen 0 12月 16 08:20 testcreate.txt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+createFile时如果没有给出文件属性则默认创建664属性的文件，即用户自己、所属组都可读写，其他所有人均只读。可以通过给出FileAttribute灵活设
+置属性，比如下面的代码片段设置为只对用户自己可读写：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Path file = ...;
+\end_layout
+
+\begin_layout Plain Layout
+
+Set<PosixFilePermission> perms =
+\end_layout
+
+\begin_layout Plain Layout
+
+    PosixFilePermissions.fromString("rw-------");
+\end_layout
+
+\begin_layout Plain Layout
+
+FileAttribute<Set<PosixFilePermission>> attr =
+\end_layout
+
+\begin_layout Plain Layout
+
+    PosixFilePermissions.asFileAttribute(perms);
+\end_layout
+
+\begin_layout Plain Layout
+
+Files.createFile(file, attr);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写程序，在/tmp创建一个临时文件temp.log，并观察此临时文件的属性
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+编写程序，创建一个对所有人只读的文件，并验证所创建文件的属性
+\end_layout
+
+\begin_layout Subsection
+随机读写文件
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:随机读写文件"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:读写小文件"
+
+\end_inset
+
+中其实我们已经看到，SeekableByteChannel已经具有随机读写文件的能力了：SeekableByteChannel的下列方法帮助我们确定读写的起始位
+置和数量：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="45line%">
+<column alignment="left" valignment="middle" width="50line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+long position() throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回文件的当前位置，即读和写的起始位置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+SeekableByteChannel position(long newPosition) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+设置Channel的当前位置，返回这个Channel（便于函数式编程）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+long size() throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+返回这个Channel的大小
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+SeekableByteChannel truncate(long size) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+截断这个Channel到给定的大小
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+int read(ByteBuffer dst) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+从Channel读数据到dst
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+int write(ByteBuffer src) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+将dst的数据写入Channel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SeekableByteChannel的随机读写方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:SeekableByteChannel的随机读写方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+为了更方便的操作文件，JDK提供了对SeekableByteChannel的进一步封装：FileChannel，除SeekableByteChannel中的方法
+外，FileChannel增加了一些高级特性，比如可以将文件的指定区域映射到内存中以便快速访问，锁定文件的指定区域（不允许其他线程进行操作），从任意位置直接读写
+文件等。我们有两种方式获取一个FileChannel：
+\end_layout
+
+\begin_layout Enumerate
+通过Path.newByteChannel获得一个SeekableByteChannel，然后强制类型转换为FileChannel。
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这种类型转换安全吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+通过FileInputStream.getChannel获取一个FileChannel。
+\end_layout
+
+\begin_layout Enumerate
+通过FileChannel.open方法直接获得一个FileChannel。推荐采用此种方式。
+\end_layout
+
+\begin_layout Example
+使用FileChannel读写文件，假设文件myfile.txt原来有如下的内容：
+\end_layout
+
+\begin_layout Example
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Java programming language is good!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "FileRandomAccessTest.java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/FileRandomAccessTest.java"
+lstparams "caption={FileRandomAccessTest.java},label={FileRandomAccessTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+运行结果
+\end_layout
+
+\begin_layout Standard
+在Idea中运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+I was here!
+\end_layout
+
+\begin_layout Plain Layout
+ming language is good!Java programI was here!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，在文件的开头写入了
+\begin_inset Quotes erd
+\end_inset
+
+I was here!
+\backslash
+n
+\begin_inset Quotes erd
+\end_inset
+
+，然后把文件开头原先的
+\begin_inset Quotes erd
+\end_inset
+
+Java program
+\begin_inset Quotes erd
+\end_inset
+
+移动到了文件的最后，并在最后追加了
+\begin_inset Quotes erd
+\end_inset
+
+I was here!
+\backslash
+n
+\begin_inset Quotes erd
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+本程序可以反复运行，结果完全一致。
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+FileChannel提供的文件随机读写概念，重要的是理解两个position的用法：
+\end_layout
+
+\begin_layout Itemize
+FileChannel的position，用于确定从什么地方开始读写文件；
+\end_layout
+
+\begin_layout Itemize
+ByteBuffer的position，用于确定从什么地方开始读写ByteBuffer；
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+FileChannel、InputStream/OutputStream、ByteBuffer之间的关系和用法可以形象的用下图表示：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/io/file-channel-stream-buffer.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+简单的说，ByteBuffer处于“中心”的位置，无论是从文件系统、网络读入的数据，还是准备写入文件系统、网络的数据，都是通过ByteBuffer的。因此，其他
+数据类型如何转换为ByteBuffer以及ByteBuffer如何转换为其他数据类型就显得非常重要，上图的大部分篇幅展示了这种相互转换的方法。
+\end_layout
+
+\begin_layout Plain Layout
+我们可以看出，ByteBuffer转换为其他数据类型已经非常方便了，但是从其他数据类型转换为ByteBuffer的通道却不是很流畅，比如从short[]转换为一
+个ByteBuffer，目前没有直接的方法，只能通过遍历这个short数组，然后将数组的每个元素放入ByteBuffer这种稍微曲折的方法：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ByteBuffer bb;
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+for(short s:short_array) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    bb.putShort(s);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+相信JDK的未来版本会提供更丰富和合理的ByteBuffer和其他数据类型的相互转换方法。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+目录操作
+\end_layout
+
+\begin_layout Standard
+目录是一种特殊的文件，我们前面介绍的很多API（所有接受Path作为参数的API）即可以操作文件，也可操作目录。但是毕竟目录的操作有其特殊性，比如下面的情形：
+\end_layout
+
+\begin_layout Itemize
+创建一个空目录
+\end_layout
+
+\begin_layout Itemize
+列出目录下的所有子目录
+\end_layout
+
+\begin_layout Itemize
+列出目录下的所有文件
+\end_layout
+
+\begin_layout Itemize
+根据给定的规则列出目录下的文件和目录
+\end_layout
+
+\begin_layout Standard
+JDK的Files类同样给出了目录操作的方便方法，分述如下。
+\end_layout
+
+\begin_layout Subsubsection
+创建目录
+\end_layout
+
+\begin_layout Standard
+Files类创建目录主要是两个方法，createDirectory用于创建一级目录，createDirectories用于创建多级目录，见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:创建目录的方法"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="45line%">
+<column alignment="left" valignment="middle" width="50line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+public static Path createDirectory(Path dir, FileAttribute<?>...
+ attrs) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据dir和attrs创建一个目录。如果没有attrs参数则创建默认属性的目录。如果目录已经存在则抛出FileAlreadyExistsException异常。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+public static Path createDirectories(Path dir, FileAttribute<?>...
+ attrs) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据dir创建多级目录
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+创建目录的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:创建目录的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+创建目录
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "CreateDirectoryTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/CreateDirectoryTest.java"
+lstparams "caption={CreateDirectoryTest.java},label={CreateDirectoryTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+第一次运行时终端没有任何显示，但是当我们去往test目录查看时，应该可以看到test目录下面多了一个新目录a。
+\end_layout
+
+\begin_layout Standard
+当第二次运行该程序时，终端显示：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+java.nio.file.FileAlreadyExistsException: /home/subaochen/test/a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，如果dir目录已经存在，则createDirectory方法抛出FileAlreadyExistsException异常。
+\end_layout
+
+\begin_layout Standard
+我们删除a目录，但是创建一个文件名字叫做a，即在test目录执行下列命令：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+~/test$ rmdir a; touch a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+再次执行本程序，终端显示：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+java.nio.file.FileAlreadyExistsException: /home/subaochen/test/a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即，如果要创建的目录和文件重名也是不允许的，同样抛出FileAlreadyExistsException。
+\end_layout
+
+\begin_layout Exercise
+使用Files.createDirectories创建目录test/a/b/c
+\end_layout
+
+\begin_layout Subsubsection
+列出目录
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:列出目录"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Files的newDirectoryStream方法可以很方便的列出目录下的内容，包括子目录、文件、隐藏文件等，但是需要注意的是，newDirectoryStr
+eam不是一个递归的过程，即不能深入到当前目录的子目录查找内容。
+\end_layout
+
+\begin_layout Example
+利用newDirectoryStream方法列出当前目录下的文件、子目录等。
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:列出当前目录下的文件、子目录等。"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "ListDirectoryTest.java"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/ListDirectoryTest.java"
+lstparams "caption={ListDirectoryTest.java},label={ListDirectoryTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析和说明
+\end_layout
+
+\begin_layout Standard
+要注意到newDirectoryStream返回的是一个stream，因此和InputStream等用法类似，一定要记得用完后close这个stream。try
+-with-resources结构能够自动关闭stream，如果使用try-catch结构，则要在finanlly块中执行stream.close()方法关闭st
+ream。
+\end_layout
+
+\begin_layout Exercise
+如何利用newDirectoryStream方法递归的列出当前目录下的内容，包括子目录下的文件及其子目录？
+\end_layout
+
+\begin_layout Subsubsection
+根据规则列出目录
+\end_layout
+
+\begin_layout Standard
+newDirectoryStream允许传入Glob
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendixname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:什么是Glob？"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+过滤规则作为参数。
+\end_layout
+
+\begin_layout Example
+列出当前目录下的所有java源代码和java class文件。
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "ListDirectoryWithGlobTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/ListDirectoryWithGlobTest.java"
+lstparams "caption={ListDirectoryWithGlobTest.java},label={ListDirectoryWithGlobTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计和分析
+\end_layout
+
+\begin_layout Standard
+和 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:列出当前目录下的文件、子目录等。"
+
+\end_inset
+
+相比，我们看到newDirectoryStream方法只是多了一个参数：表明如何过滤本目录下的内容。
+\end_layout
+
+\begin_layout Subsection
+遍历目录：FileVisitor接口
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:列出目录"
+
+\end_inset
+
+中我们看到了，可以利用Files.newDirectoryStream列出当前目录下的内容，但是newDirectoryStream不是递归处理的，因此Files
+类提供了遍历目录的另外方式：使用FileVisitor接口可以更方便的遍历目录。
+\end_layout
+
+\begin_layout Standard
+首先实现FileVisitor接口，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PrintFiles.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PrintFiles.java"
+lstparams "caption={PrintFiles.java},label={PrintFiles.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+然后可以在主类中使用FileVisitor接口遍历目录了，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "WalkFileTreeTest.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/WalkFileTreeTest.java"
+lstparams "caption={WalkFileTreeTest.java},label={WalkFileTreeTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的关键是，walkFileTree方法会递归的遍历给定的目录，但是对于递归过程中遇到的每一个项目如何处理呢？我们看到walkFileTree的第二个参数是一
+个实现了FileVisitor接口的对象，这个对象决定了如何处理这些遇到的目录项目，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:FileVisitor接口方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="45line%">
+<column alignment="left" valignment="middle" width="50line%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+FileVisitResult preVisitDirectory(T dir, BasicFileAttributes attrs) throws
+ IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在访问（操作）目录之前的动作，比如准备将目录复制到另外的目录中等。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+FileVisitResult postVisitDirectory(T dir, IOException exc) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在访问（操作）目录之后的动作，比如访问目录后可以将目录删除等。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+FileVisitResult visitFile(T file, BasicFileAttributes attrs) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+访问目录中的文件。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+FileVisitResult visitFileFailed(T file, IOException exc) throws IOException
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+如果访问文件失败则调用此方法。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FileVisitor接口方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:FileVisitor接口方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+*访问属性文件
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:读写属性文件"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+属性文件通常用来保存应用程序的配置信息，这样当应用程序的配置改变时，只需要修改属性文件（配置文件）即可，不需要修改应用程序的源代码，维护比较方便。属性文件的内容
+通常是以key、value对的形式出现，即key=value的形式，比如数据库相关的应用程序中通常将数据库服务器的IP地址、用户名、密码等信息保存到如下的属性文
+件中：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+hostname=192.168.1.200
+\end_layout
+
+\begin_layout Plain Layout
+username=postgres
+\end_layout
+
+\begin_layout Plain Layout
+password=password
+\end_layout
+
+\begin_layout Plain Layout
+database=mydb
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java的Properties类提供了方便的API读写这样的属性文件。
+\end_layout
+
+\begin_layout Example
+访问属性文件
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:访问属性文件"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "PropertyFileTest.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/io/src/cn/edu/sdut/softlab/io/PropertyFileTest.java"
+lstparams "caption={PropertyFileTest.java},label={PropertyFileTest.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+执行本应用程序结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+hostname=localhost
+\end_layout
+
+\begin_layout Plain Layout
+password=password
+\end_layout
+
+\begin_layout Plain Layout
+database=mydb
+\end_layout
+
+\begin_layout Plain Layout
+username=postgres
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计和分析
+\end_layout
+
+\begin_layout Standard
+本例中，我们使用了FileInputStrem和FileOutputStream构造了一个文件输入输出流，FileInpoutStream和FileOutput
+Stream的参数是文件名，注意到该文件名是相对于项目根目录的。
+\end_layout
+
+\begin_layout Standard
+实际上，
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+Java在定位文件时，有如下的几种策略
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+参考了：
+\end_layout
+
+\begin_layout Itemize
+http://www.cnblogs.com/yinger/archive/2011/09/08/2171831.html
+\end_layout
+
+\begin_layout Itemize
+官方教程：https://docs.oracle.com/javase/tutorial/essential/environment/properties.html
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Itemize
+绝对路径：在FileInputStream、FileOutputStream中如果参数的路径使用路径分隔符（windows下是
+\backslash
+，Linux下是/）开头则是绝对路径。
+\end_layout
+
+\begin_layout Itemize
+相对于项目的路径：在FileInputStream、FileOutputStream中如果参数的路径没有使用路径分隔符（windows下是
+\backslash
+，Linux下是/）开头则是项目于项目根目录的相对路径。
+\end_layout
+
+\begin_layout Itemize
+相对于当前class文件的路径：如果使用Class.getResourceAsStream方法，则获得相对于当前class文件的路径，比如：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+InputStream path = PropertyFileTest.class.getResourceAsStream(database-config.prope
+rties);
+\end_layout
+
+\end_inset
+
+path对象指向的文件database-config.properties和class文件在同一个目录下，即database-config.properties位于
+src/cn/edu/sdut/softlab目录下。
+\begin_inset Newline newline
+\end_inset
+
+但是，如果参数是绝对路径，则获得是相对于包的文件路径，比如：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+InputStream path = PropertyFileTest.class.getResourceAsStream(/database-config.prop
+erties);
+\end_layout
+
+\end_inset
+
+则文件database-config.properties位于src目录下。
+\end_layout
+
+\begin_layout Itemize
+相对于包的路径：如果使用Class.getClassLoader().getResourceAsStream方法，则获得是相对于包路径的文件，比如：
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+InputStream path = PropertyFileTest.class.getClassLoader().getResourceAsStream(data
+base-config.properties);
+\end_layout
+
+\end_inset
+
+即文件database-config.properties位于src目录下。
+\begin_inset Newline newline
+\end_inset
+
+同时需要注意到，Class.getClassLoader.getResourceAsStream的参数不允许使用绝对路径，否则返回的InputStream为null
+。
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

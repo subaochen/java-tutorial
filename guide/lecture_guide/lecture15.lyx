@@ -1,0 +1,2751 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{../../../writing-common/book-preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+coderemarks
+warning-inset
+note-inset
+tip-inset
+theorems-bytype
+theorems-chap-bytype
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\size larger
+\bar under
+山东理工大学教案
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="70col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第十五次课
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学课型：理论课□√ 实验课□√ 习题课□ 实践课□ 技能课□ 其它□
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要教学内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:网络通讯基础知识"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:网络通讯基础知识"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:使用URL"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:使用URL"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Socket编程"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Socket编程"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java网络编程的基本模型；
+\end_layout
+
+\begin_layout Enumerate
+使用URL的网络编程；
+\end_layout
+
+\begin_layout Enumerate
+Java Socket编程；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+难点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java网络编程和Java I/O的关系；
+\end_layout
+
+\begin_layout Enumerate
+Java Socket编程；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+课程目标及要求
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+课程目标：课程目标1
+\end_layout
+
+\begin_layout Plain Layout
+要求：
+\end_layout
+
+\begin_layout Enumerate
+掌握Java网络编程的基本模型；
+\end_layout
+
+\begin_layout Enumerate
+掌握Java Socket编程的基本思路和方法；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学方法和手段
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+板书和多媒体相结合，边讲边练，当堂消化。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+讨论、思考题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Java Socket编程如何有用，你知道有哪些框架是对Java Socket编程的进一步封装？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参考资料
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+网络编程
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/network-programming.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+网络通讯基础知识
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:网络通讯基础知识"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在讲述Java的网络编程之前，我们迅速的回顾一下网络通讯的基础知识，读者如果已经熟悉此部分内容可跳过。
+\end_layout
+
+\begin_layout Standard
+现代的互联网是基于TCP/IP的四层通讯模型的，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:TCP/IP通讯模型"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/tcp-ip-model.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+TCP/IP四层通讯模型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TCP/IP通讯模型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+虽然我们使用java.net包编写的Java网络应用程序位于应用层，但是了解TCP、IP的基本概念有助于我们选择合适的类包编写应用程序。
+\end_layout
+
+\begin_layout Subsection
+TCP
+\end_layout
+
+\begin_layout Standard
+TCP(Transmission Control Protocol)是一种可靠的传输控制协议。TCP协议通过建立可靠的网络链接保证数据在传输过程中不会丢失，顺序
+也不会乱掉，因此当我们需要可靠的网络数据传输时就要选择TCP协议，比如负责网页传输的HTTP协议，负责文件传输的FTP协议，负责邮件传输的Email协议，负责远
+程登录的Telnet/ssh协议等：你一定不希望收到的是破损的文件或者邮件的，对吧？
+\end_layout
+
+\begin_layout Standard
+但是，TCP协议建立可靠的网络链接也是要付出代价的，即相对于“不太可靠”的UDP而言，TCP的传输效率要低一些。
+\end_layout
+
+\begin_layout Subsection
+UDP
+\end_layout
+
+\begin_layout Standard
+UDP（User Datagram Protocol）是一种“不太可靠”的传输控制协议，即UDP并不保证数据发出后，接收端一定能够收到，也不保证数据传输的顺序。
+这种“不太可靠”的数据传输方式在并不要求百分百数据准确性的场合大有用武之地，比如网络视频，即使数据在传输中丢掉了一点点数据，并不影响视频的流畅和质量。
+\end_layout
+
+\begin_layout Standard
+由于UDP协议不需要维护可靠的传输通道，UDP协议的传输效率要比TCP高一些。
+\end_layout
+
+\begin_layout Subsection
+IP地址
+\end_layout
+
+\begin_layout Standard
+网络上的每一台设备都有一个唯一的地址编号，即IP地址，网络中的路由器就是根据数据包中的目的IP地址和源IP地址构建了数据传输的路由（通道）。常见的IP地址是32
+位的，，每8位使用句点隔开，比如210.44.176.123。
+\end_layout
+
+\begin_layout Subsection
+端口（port）
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:端口（port）"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们知道，现代操作系统都是多任务操作系统，可以同时运行多个应用程序，每一个应用程序可以看做这台计算机提供的一种服务。如果这些应用程序提供网络服务，比如HTTP，
+FTP服务，那么如何区分在一台计算机上面运行着的多个网络应用程序呢？单纯依赖IP地址是不够的，需要借助以端口（Port）的概念，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:端口示意图"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/port.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+端口示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:端口示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+当数据到达计算机后，计算机会根据应用程序的不同将数据分发到不同端口，这就要求通信双方事先约定好使用的端口号。端口号是一个16位的数字，其范围为0~55635，但
+是0~1024号端口通常被称作“熟知端口”，即这些端口很多已经用于大家约定俗成的网络通讯服务，比如80端口用于HTTP协议传输，21用于FTP等等，因此我们自己
+编写的Java网络应用程序尽量避免使用1024以下的端口号，以免和熟知端口冲突。
+\end_layout
+
+\begin_layout Section
+使用URL
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:使用URL"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+什么是URL？
+\end_layout
+
+\begin_layout Standard
+URL（Uniform Resource Locator）是网络资源的唯一地址，即通常所说的“网址”。我们可以根据URL查找网络资源（文字、图片、视频等），ja
+va.net.URL类表示了一个URL。一个URL包含包含了如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:URL示意图"
+
+\end_inset
+
+所示的几部分：
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/url.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+URL示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:URL示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+协议（protocal）：使用何种协议请求这个网络资源？http用于请求超文本文件，只是常见的网络协议之一，此外还有ftp、email、telnet等各种网络协
+议。协议和主机部分通过
+\begin_inset Quotes erd
+\end_inset
+
+://
+\begin_inset Quotes erd
+\end_inset
+
+隔开。
+\end_layout
+
+\begin_layout Itemize
+主机（host）：网络资源位于哪台网络设备，即主机中？主机往往由主机名和域名联合组成，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:URL示意图"
+
+\end_inset
+
+所示，www是一台提供WEB服务的主机的主机名，example.com是这台主机所在的域名，www.example.com是URL的主机部分。
+\end_layout
+
+\begin_layout Itemize
+端口：（port）：如
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:端口（port）"
+
+\end_inset
+
+所述，端口决定了主机将URL请求转发到哪个应用程序来处理。对于常见的“熟知端口”，比如http协议的80端口，通常在URL中可以略去。
+\end_layout
+
+\begin_layout Itemize
+文件名（file）：所请求的具体资源（文件、图片等）在主机的存储路径（含文件名）。这里的文件名是一个广义的概念，其一，文件名包括了路径和文件的具体名称；其二，U
+RL中的文件名也可能仅仅是一个目录，但是要知道，WEB服务器会自动根据配置情况附加一个index.html或者类似的具体文件名。
+\end_layout
+
+\begin_layout Itemize
+请求参数（query）：在交互式网络应用程序中，往往需要附带额外的参数来进一步确定所请求的网络资源，通过
+\begin_inset Quotes erd
+\end_inset
+
+?
+\begin_inset Quotes erd
+\end_inset
+
+隔开文件名和请求参数（Query String）。
+\end_layout
+
+\begin_layout Standard
+此外需要注意到，在Java的URL类中，还给出了authority的概念，即主机和端口合称为authority。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+为什么称作authority呢？其实一个完整的URL是这样子的
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+也就是说，在一个URL中还包含user:password部分，因此authority应该包含三部分：
+\end_layout
+
+\begin_layout Enumerate
+可选的用户名和密码
+\end_layout
+
+\begin_layout Enumerate
+必须的主机
+\end_layout
+
+\begin_layout Enumerate
+可选的端口号
+\end_layout
+
+\begin_layout Plain Layout
+也就是说，这三个部分决定了用户是否有权限访问所给定的主机（和具体的资源没有关系）：使用什么用户名和密码可以访问主机的哪个端口，因此这三个部分联合起来又叫做“au
+thority”，即权威认证。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+创建URL
+\end_layout
+
+\begin_layout Standard
+java.net.URL类的构造方法提供了常见的创建URL对象的构造方法，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:URL的构造方法"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="30line%">
+<column alignment="center" valignment="middle" width="50line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public URL(String spec) throws MalformedURLException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的URL字符串创建URL对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public URL(URL context, String spec) throws MalformedURLException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据给定的上下文和字符串创建URL对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public URL(String protocol, String host, int port, String file) throws Malformed
+URLException
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据跟定的协议、主机、端口号和文件名创建URL对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+public URL(String protocol, String host, String file) throws MalformedURLExcepti
+on
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+根据跟定的协议、主机和文件名创建URL对象
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+URL的构造方法
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:URL的构造方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+创建绝对URL
+\end_layout
+
+\begin_layout Standard
+创建URL对象的最简单方式，是使用我们常见的URL（网址）的形式作为参数，比如
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整示例参见：https://github.com/subaochen/java-tutorial-examples/tree/master/network/sr
+c/cn/edu/sdut/softlab
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+URL url = new URL("http://www.example.com/doc/tutorial/networking.html?id=101");
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意到参数："http://www.example.com/doc/tutorial/networking.html?id=101"是一个完整的URL字符串，叫做“绝
+对URL”，类似于我们描述文件名的时候，称带完整路径信息的文件名为“绝对路径”。
+\end_layout
+
+\begin_layout Subsubsection
+创建相对URL
+\end_layout
+
+\begin_layout Standard
+所谓的相对URL，是指在给定的URL的基础上再附加所缺少的URL元素创建一个URL对象，类似于“相对路径”的概念，比如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+URL url = new URL("http://www.example.com"); // 创建一个绝对URL
+\end_layout
+
+\begin_layout Plain Layout
+
+URL tutUrl = new URL(url, "doc/tutorial/networking.html?id=101"); // 创建一个相对URL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在创建相对URL的时候，如果第一个参数为null，则构造方法会将第二个参数看做“绝对URL”来处理；如果第二个参数为绝对URL，则会忽略第一个参数，比如：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+URL url = new URL(null, "http://www.example.com/doc"); // 创建一个绝对URL对象
+\end_layout
+
+\begin_layout Plain Layout
+
+URL url = new URL(url, "http://www.example.com"); // 创建一个绝对URL对象
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+使用绝对URL和相对URL两种方式，分别创建 https://github.com/subaochen/java-tutorial-examples/tree/m
+aster/network/src/cn/edu/sdut/softlab 的URL对象。
+\end_layout
+
+\begin_layout Subsubsection
+使用协议、主机等创建URL
+\end_layout
+
+\begin_layout Standard
+有时我们获得的是URL的各个组成部分：协议、主机、文件名等，可以根据这些组成部分方便的创建URL对象，比如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+URL url = new URL("http","www.example.com","doc/tutorial/networking.html?id=101");
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+解析URL
+\end_layout
+
+\begin_layout Standard
+URL类提供了一系列的getXXX方法帮助我们解析给定的URL对象的各个部分，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ParseURL.java"
+
+\end_inset
+
+所示，请读者参照
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:URL示意图"
+
+\end_inset
+
+并根据此示例程序的运行结果仔细体会URL的各个组成部分是如何划分的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../../advance/code/network/src/cn/edu/sdut/softlab/ParseURL.java"
+lstparams "caption={ParseURL.java},label={ParseURL.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+protocol = http
+\end_layout
+
+\begin_layout Plain Layout
+authority = example.com:80
+\end_layout
+
+\begin_layout Plain Layout
+host = example.com
+\end_layout
+
+\begin_layout Plain Layout
+port = 80
+\end_layout
+
+\begin_layout Plain Layout
+path = /docs/books/tutorial/index.html
+\end_layout
+
+\begin_layout Plain Layout
+query = name=networking
+\end_layout
+
+\begin_layout Plain Layout
+filename = /docs/books/tutorial/index.html?name=networking
+\end_layout
+
+\begin_layout Plain Layout
+ref = DOWNLOADING
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+读取URL
+\end_layout
+
+\begin_layout Standard
+创建URL对象后，我们可以通过URL类的
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+openStream()
+\end_layout
+
+\end_inset
+
+方法获得一个到指定URL的inputStream流，然后就可以和操作本地文件一样方便的读取URL所指向的内容了，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "URLReader.java"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../../advance/code/network/src/cn/edu/sdut/softlab/URLReader.java"
+lstparams "caption={URLReader.java},label={URLReader.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+运行结果如下
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+是的，不要怀疑，获取的内容就这么简单！读者可自行访问
+\begin_inset CommandInset href
+LatexCommand href
+name "https://raw.githubusercontent.com/subaochen/java-tutorial-examples/master/network/sample/hello.txt"
+target "https://raw.githubusercontent.com/subaochen/java-tutorial-examples/master/network/sample/hello.txt"
+literal "false"
+
+\end_inset
+
+验证一下。
+\end_layout
+
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+hello, java!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+读取URL的另外方式是使用URLConnection类提供的方法，同时URLConnection还提供了更丰富的交互功能，详情参见：
+\end_layout
+
+\begin_layout Plain Layout
+https://docs.oracle.com/javase/tutorial/networking/urls/connecting.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Socket编程 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Socket编程"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+网络通讯的基本形式是“端对端”通信，即所谓的“客户端-服务器模式”（Client Server：CS），如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:客户-服务器通信模型"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/client-server-model.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+客户-服务器通信模型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:客户-服务器通信模型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+在端对端通信中，客户端和服务器端首先建立通讯链接，然后客户端发送请求（request）到服务器端，服务器端返回响应（response）到客户端，实现了一次数据交
+换。这很像我们打电话的过程：首先拨号呼叫对方，如果对方摘机应答（或者手机上按下应答键），则双方通话的通道就建立起来了，然后就可以你一言我一语的通过电话交谈了。任
+何一方挂机，则整个通话过程（通信过程）就结束了。
+\end_layout
+
+\begin_layout Subsection
+什么是Socket？
+\end_layout
+
+\begin_layout Standard
+在端对端的通信中，通信的双方不仅需要知道对方的主机IP地址，还需要知道对方应用使用的端口号，这是建立端对端通信的必要基础，因此将
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+IP地址和端口号合称为Socket
+\end_layout
+
+\end_inset
+
+（插口），如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Socket示意图"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/socket.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Socket示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Socket示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+基于Socket概念的编程通常被称为“Socket编程”，java.net包中提供了Socket、ServerSocket等类封装了Socket的基本操作，可以方
+便的实现客户端和服务器端的Socket编程。
+\end_layout
+
+\begin_layout Subsection
+使用Socket
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:使用Socket"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面我们通过一个实现了Echo协议的例子来说明Java Socket编程的基本思路。如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "EchoServer.java"
+
+\end_inset
+
+所示的EchoServer.java是服务器端，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "EchoClient.java"
+
+\end_inset
+
+所示的EchoClient.java是客户端。客户端每次向服务器端发送字符串时，服务器端仅仅是把收到的字符串原样返回到客户端，即所谓的echo操作。
+\end_layout
+
+\begin_layout Standard
+本示例的运行测试方法：首先启动EchoServer，再启动EchoClient。注意到EchoServer需要一个命令行参数
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+设置命令行参数的方法参见：
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:如何设置命令行参数？"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+：端口号，这里假设为2000；EchoClient需要两个命令行参数，主机IP地址和服务器端端口号，在这里主机使用localhost，服务器端端口号为2000。
+本示例程序的服务器端EchoServer是静默运行的，即启动后没有给出任何提示。客户端EchoClient运行后可以在终端窗口输入内容，一个可能的测试结果如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EchoClient的运行结果"
+
+\end_inset
+
+所示。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/echoclient-result.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+EchoClient的运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EchoClient的运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java Socket的基本原理如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java-Socket通讯示意图"
+
+\end_inset
+
+所示，
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/java-socket-programming.eps
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java Socket通讯示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java-Socket通讯示意图"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+服务器端（这里是EchoServer）创建ServerSocket对象后，通过serverSocket对象的accept方法等待客户端发起连接请求。也就是说，S
+ocketServer是一个被动的服务器端，当SocketServer启动后会阻塞在accept方法，一直在等待客户端发起连接请求。一旦有客户端连接成功，则创建
+一个描述此端对端通信的Socket对象（这里是clientSocket），通过此socket对象即可获得一个从客户端读取数据的InputStream（这里是in
+），以及可以写入客户端的outputStream（这里是out）。注意到serserSocket、clientSocket、in、out都是需要用完即关闭的资源
+，因此在本例中我们使用try-with-resources
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+如果不熟悉try-with-resources结构，请参照
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:try-with-resources"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+结构帮助我们自动关闭打开的资源。
+\end_layout
+
+\begin_layout Standard
+客户端EchoClient的过程类似，首先创建一个Socket对象（这里是echoSocket）。注意到我们使用服务器端的IP地址和端口号创建的echoSock
+et，因此echoSocket会试图根据我们提供的参数发起到服务器端的连接请求，连接成功则建立了客户端和服务器端的通信通道，这就是echoSocket。通过ec
+hoSocket我们可以获得从服务器端读取数据的InputStream（这里是in），往服务器端写入数据的OutputStream（这里是out），然后不断将从
+键盘输入的字符串送往服务器端即可。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+一般的Linux发布版中都提供了Socket测试工具，包括服务器端和客户端。在ubuntu中可以简单的执行命令：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ sudo apt-get install socket
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+安装socket测试工具。安装完成后，启动EchoServer，可以在另外一个终端如下方式测试EchoServer的功能：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+$ socket -v localhost 2000
+\end_layout
+
+\begin_layout Plain Layout
+inet: connected to localhost port 2000 (cisco-sccp)
+\end_layout
+
+\begin_layout Plain Layout
+hello?
+\end_layout
+
+\begin_layout Plain Layout
+hello?
+\end_layout
+
+\begin_layout Plain Layout
+你是谁？
+\end_layout
+
+\begin_layout Plain Layout
+你是谁？
+\end_layout
+
+\begin_layout Plain Layout
+我们交个朋友吧！
+\end_layout
+
+\begin_layout Plain Layout
+我们交个朋友吧！
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+socket工具作为编写服务器端的测试工具很方便，当然，socket也可以作为服务器端运行来测试客户端应用程序，读者可以自行探索。
+\end_layout
+
+\begin_layout Plain Layout
+另外一个简单的客户端工具是telnet，比如：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ telnet localhost 2000
+\end_layout
+
+\begin_layout Plain Layout
+Trying 127.0.0.1...
+\end_layout
+
+\begin_layout Plain Layout
+Connected to localhost.
+\end_layout
+
+\begin_layout Plain Layout
+Escape character is '^]'.
+\end_layout
+
+\begin_layout Plain Layout
+hello
+\end_layout
+
+\begin_layout Plain Layout
+hello
+\end_layout
+
+\begin_layout Plain Layout
+if it is to be, it is up to me
+\end_layout
+
+\begin_layout Plain Layout
+if it is to be, it is up to me
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../../advance/code/network/src/cn/edu/sdut/softlab/EchoServer.java"
+lstparams "caption={EchoServer.java},label={EchoServer.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../../advance/code/network/src/cn/edu/sdut/softlab/EchoClient.java"
+lstparams "caption={EchoClient.java},label={EchoClient.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+使用Socket编写一个服务器端和客户端，客户端给出一个算术表达式，服务器端返回计算结果
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+算术表达式求值可以参考：
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Java-GUI综合应用举例"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+*编写健壮的服务器端Socket应用
+\end_layout
+
+\begin_layout Standard
+在编写服务器端的Socket应用程序时要考虑以下的问题：
+\end_layout
+
+\begin_layout Itemize
+如何响应多个客户端的连接请求？通常的做法是针对每个客户发起一个独立的线程。
+\end_layout
+
+\begin_layout Itemize
+如何灵活的处理不同的业务逻辑，即客户端和服务器端的通讯协议？这是服务器端Socket编程的重要内容，不好的架构往往不恰当的提高了软件的复杂度，降低了软件的可维护
+性。
+\end_layout
+
+\begin_layout Itemize
+网络I/O和消息的编码、解码处理。
+\end_layout
+
+\begin_layout Itemize
+错误处理。网络通讯环境是复杂和易出错的，保证服务器端SocketServer总是能够正确响应不是一件很容易的事情。
+\end_layout
+
+\begin_layout Standard
+有很多第三方组织开发了一些帮助开发者处理以上问题的框架，其中比较著名的是Apache
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.apache.org
+\end_layout
+
+\end_inset
+
+组织的mina
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://mina.apache.org
+\end_layout
+
+\end_inset
+
+。Apache mina 2 （2指mina的第二个大的版本号，是目前的最新版本）是一个开发高性能和高可伸缩性网络应用程序的网络应用框架。它提供了一个抽象的事件
+驱动的异步 API，可以使用 TCP/IP、UDP/IP、串口和虚拟机内部的管道等传输方式。Apache mina 2 可以作为开发网络应用程序的一个良好基础。
+下面就mina的开发做一简单介绍
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+mina的官方文档非常详尽，有需要详细了解mina的读者建议直接阅读mina的官方指南：http://mina.apache.org/mina-project/us
+erguide/user-guide-toc.html，中文译本请参考：https://waylau.gitbooks.io/apache-mina-2-user-g
+uide/
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsubsection
+建立mina开发环境
+\end_layout
+
+\begin_layout Paragraph*
+下载mina
+\end_layout
+
+\begin_layout Standard
+首先需要下载mina的合适版本，我们采用最新的版本即可，本书写作时mina的最新版本是2.0.16，可以从这里下载：
+\begin_inset CommandInset href
+LatexCommand href
+name "http://mina.apache.org/mina-project/downloads.html"
+target "http://mina.apache.org/mina-project/downloads.html"
+literal "false"
+
+\end_inset
+
+。下载后（这里是下载到~/downloads目录下）解压缩到合适的目录，作者的习惯是在家目录建立一个devel目录，并将所有开发相关的软件都放到devel目录下
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+cd ~/devel
+\end_layout
+
+\begin_layout Plain Layout
+tar xzvf ~/downloads/apache-mina-2.0.16-bin.tar.gz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们看到在apache-mina-2.0.16目录下的文件如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+$ tree -L 1
+\end_layout
+
+\begin_layout Plain Layout
+.
+\end_layout
+
+\begin_layout Plain Layout
+├── dist
+\end_layout
+
+\begin_layout Plain Layout
+├── docs
+\end_layout
+
+\begin_layout Plain Layout
+├── lib
+\end_layout
+
+\begin_layout Plain Layout
+├── LICENSE.jzlib.txt
+\end_layout
+
+\begin_layout Plain Layout
+├── LICENSE.ognl.txt
+\end_layout
+
+\begin_layout Plain Layout
+├── LICENSE.slf4j.txt
+\end_layout
+
+\begin_layout Plain Layout
+├── LICENSE.springframework.txt
+\end_layout
+
+\begin_layout Plain Layout
+├── LICENSE.txt
+\end_layout
+
+\begin_layout Plain Layout
+└── NOTICE.txt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中的三个目录分别为：
+\end_layout
+
+\begin_layout Itemize
+dist：mina的发布文件，提供了mina的功能实现，我们下一步需要的mina-core就在这个目录下。
+\end_layout
+
+\begin_layout Itemize
+docs：mina的API文档。
+\end_layout
+
+\begin_layout Itemize
+lib：mina运行所需要支撑库。
+\end_layout
+
+\begin_layout Paragraph*
+Idea中建立mina的开发环境
+\end_layout
+
+\begin_layout Standard
+在Idea中开发mina应用，需要将mina的核心库加入到项目的配置中，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Idea项目增加类库的方法"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/idea-module-setting-add-lib-0.png
+	width 20line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+右键点击项目打开设置菜单
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/idea-module-setting-add-lib-1.png
+	width 34line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+从Libraries添加类库
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/idea-module-setting-add-lib-2.png
+	width 42line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择mina-core加入到项目中
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Idea项目增加类库的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Idea项目增加类库的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+同样的方法，从apache-mina-2.0.16/lib目录下把slf4j-api-1.7.21.jar也加入到项目的库配置中。
+\end_layout
+
+\begin_layout Subsubsection
+简单mina应用程序示例
+\end_layout
+
+\begin_layout Standard
+我们先从一个简单的“时间服务器”入手，看一下mina socket server是如何构建的。这个事件服务器实现的功能很简单，客户端无论发送什么消息上来，服务器
+只是返回当前时间作为响应。
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "MinaTimeServer.java"
+
+\end_inset
+
+所示，时间服务器的主类MinaTimeServer的主要工作是：
+\end_layout
+
+\begin_layout Itemize
+创建一个NioSocketAcceptor对象acceptor，这是mina对使用TCP的SocketServer的进一步封装，我们此后可以利用这个accept
+or完成mina服务器的配置和启动。
+\end_layout
+
+\begin_layout Itemize
+创建几个过滤器对象并添加到acceptor。这里添加了两个过滤器：一是日志过滤器，实现对操作过程的日志处理；二是文本编码过滤器，使用UTF-8对Socket流中
+的字符进行编码转换。
+\end_layout
+
+\begin_layout Itemize
+设置这个时间服务器的事物逻辑处理器，即TimeServerHandler，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "TimeServerHandler.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+（可选）设置acceptor监听器的配置属性，这里设置了缓冲器大小和idle时间。
+\end_layout
+
+\begin_layout Itemize
+将acceptor监听器绑定到指定的端口。
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "TimeServerHandler.java"
+
+\end_inset
+
+所示，在主类中我们使用TimeServerHandler来进行具体的业务逻辑处理，这里的逻辑很简单：当收到任何消息（即messageReceived方法被调用时
+）时，我们创建新的Date对象并写入到发送队列（session.write()），mina会将发送队列的消息返回到客户端。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../../advance/code/network/src/cn/edu/sdut/softlab/mina/MinaTimeServer.java"
+lstparams "caption={MinaTimeServer.java},label={MinaTimeServer.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../../advance/code/network/src/cn/edu/sdut/softlab/mina/TimeServerHandler.java"
+lstparams "caption={TimeServerHandler.java},label={TimeServerHandler.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+运行MinaTimeServer后，我们可以通过telnet或者socket工具连接MinaTimeServer，一个可能的运行结果如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+$ telnet localhost 9123
+\end_layout
+
+\begin_layout Plain Layout
+Trying 127.0.0.1...
+\end_layout
+
+\begin_layout Plain Layout
+Connected to localhost.
+\end_layout
+
+\begin_layout Plain Layout
+Escape character is '^]'.
+\end_layout
+
+\begin_layout Plain Layout
+hello
+\end_layout
+
+\begin_layout Plain Layout
+Sun Feb 19 08:49:01 CST 2017
+\end_layout
+
+\begin_layout Plain Layout
+anybody there?
+\end_layout
+
+\begin_layout Plain Layout
+Sun Feb 19 08:49:33 CST 2017
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+mina应用程序的基本结构
+\end_layout
+
+\begin_layout Standard
+基于 Apache mina 的网络应用有三个层次，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:mina框架各部分关系"
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+本图借鉴了http://www.cnblogs.com/xuekyo/archive/2013/03/06/2945826.html，感谢作者的精彩阐述。
+\end_layout
+
+\end_inset
+
+所示，
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../advance/imgs/network/mina-overview.eps
+	width 95line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+mina框架各部分关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:mina框架各部分关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+分别是 I/O 服务、I/O 过滤器和 I/O 处理器： 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+I/O 服务（I/O Processor）
+\end_layout
+
+\end_inset
+
+：I/O 服务用来执行实际的 网络I/O 操作，即Socket通信。Apache mina 已经提供了一系列支持不同协议的 I/O 服务，如 TCP/IP、UD
+P/IP、串口和虚拟机内部的管道等，我们可以直接拿来使用。开发人员也可以实现IoService接口打造一个适合特定场景的 I/O 服务。 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+I/O 过滤器（IOFilter）
+\end_layout
+
+\end_inset
+
+：I/O 服务能够传输的是字节流（Socket通讯），而上层应用（即IoHandler部分）需要的是特定的对象与数据结构。I/O 过滤器用来完成这两者之间的转换
+。I/O 过滤器的另外一个重要作用是对输入输出的数据进行处理，满足横切的需求。多个 I/O 过滤器串联起来，形成 I/O 过滤器链。 mina已经实现了常见的I
+oFilter，我们可以根据需要选择使用，开发人员可以通过实现IoFilter接口或者扩展IoFilterAdaptor类打造特定的I/O过滤器。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+I/O 处理器（Handler）
+\end_layout
+
+\end_inset
+
+：I/O 处理器用来执行具体的业务逻辑，对接收到的消息执行特定的处理。 通常，开发人员需要实现IoHandler接口或者扩展IoHandlerAdaptor类。
+\end_layout
+
+\begin_layout Standard
+创建一个完整的基于 Apache mina 的网络应用，需要分别构建这三个层次。Apache mina 已经为 I/O 服务和 I/O 过滤器提供了不少的缺省实
+现，因此这两个层次在大多数情况下可以使用已有的实现。I/O 处理器由于是与具体的业务相关的，一般来说都是需要自己来实现的。
+\end_layout
+
+\begin_layout Subsubsection
+事件驱动的异步API
+\end_layout
+
+\begin_layout Standard
+Apache mina 提供的是事件驱动的 API，它把与网络相关的各种活动抽象成事件，网络应用只需要对其感兴趣的事件进行处理即可。事件驱动的
+ API 使得基于 Apache mina 开发网络应用变得比较简单。应用不需要考虑与底层传输相关的具体细节，而只需要处理抽象的 I/O 事件。比如在实现一个服
+务端应用的时候，如果有新的连接进来，I/O 服务会产生 sessionOpened这样一个事件。如果该应用需要在有连接打开的时候，执行某些特定的操作，只需要在
+ I/O 处理器中此事件处理方法 sessionOpened中添加相应的代码即可。
+\end_layout
+
+\begin_layout Exercise
+使用mina编写一个计算算术表达式的服务器。
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,9753 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\input{../../../writing-common/book-preamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+tip-inset
+note-inset
+warning-inset
+theorems-bytype
+theorems-chap-bytype
+logicalmkup
+coderemarks
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+PackageOptions url hyphens
+\end_local_layout
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "DejaVu Sans"
+\font_sans "default" "DejaVu Serif"
+\font_typewriter "default" "DejaVu Sans Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\boxbgcolor #dad3d7
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\size larger
+\bar under
+山东理工大学教案
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="70col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第十二次课
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学课型：理论课□√ 实验课□√ 习题课□ 实践课□ 技能课□ 其它□
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要教学内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Java的图形用户界面（GUI）设计概述"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Java的图形用户界面（GUI）设计概述"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Swing入门"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Swing入门"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:GUI的顶级容器类"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:GUI的顶级容器类"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Swing控件"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Swing控件"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+重点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Swing的含义和基本构成；
+\end_layout
+
+\begin_layout Enumerate
+Swing的顶级容器；
+\end_layout
+
+\begin_layout Enumerate
+Swing的基本控件；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+难点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Swing控件的类层次关系；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+课程目标及要求
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+课程目标：课程目标1
+\end_layout
+
+\begin_layout Plain Layout
+要求：
+\end_layout
+
+\begin_layout Enumerate
+熟练掌握Swing的基本概念和常见控件；
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+教学方法和手段
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+板书和多媒体相结合，边讲边练，当堂消化。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+讨论、思考题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+了解Java GUI的历史，考虑一下是什么促使Java的GUI类库从AWT发展到了Swing？还有哪些第三方的Java GUI类库？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参考资料
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+图形用户界面设计
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/gui.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Java的图形用户界面（GUI）设计概述
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java的图形用户界面（GUI）设计概述"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java的图形用户界面（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GUI
+\end_layout
+
+\end_inset
+
+GUI）是由
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JFC
+\end_layout
+
+\end_inset
+
+JFC（Java Foundation Classes）支撑的，JFC包括了以下几个方面：
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Swing
+\end_layout
+
+\end_inset
+
+Swing GUI组件：包含了图形用户界面设计中的人机交互组件，从最简单的按钮到复杂的图表等无所不包，这是我们学习的重点内容。
+\end_layout
+
+\begin_layout Itemize
+可插拔的Look-and-Feel支持：Java图形用户界面支持可配置的Look-and-Feel切换，可以很容易的实现不同操作系统下的界面统一。
+\end_layout
+
+\begin_layout Itemize
+辅助API：支持读屏幕等操作。
+\end_layout
+
+\begin_layout Itemize
+Java 2D API：完善的2D绘图API。
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+国际化
+\end_layout
+
+\end_inset
+
+国际化支持：秉承Java一贯的国际化支持，能够方便的在GUI中处理各种编码的文字。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+Swing是在早期的Java GUI应用程序设计接口AWT的基础上发展起来的，目前是Java GUI应用程序设计的官方标准。除了Swing之外，Eclipse（
+www.eclipse.org）组织也发布了一套Java图形用户界面的设计库SWT（Standard Widget Toolkit），主要配合Eclipse的RCP
+（Rich Client Program）应用程序开发，详情可参考：https://www.eclipse.org/swt/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Swing入门
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Swing入门"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+本节以JetBrain Idea为例说明如何创建和运行简单的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Swing
+\end_layout
+
+\end_inset
+
+Swing应用程序。
+\end_layout
+
+\begin_layout Example
+使用Idea创建一个简单的Swing应用程序，将人民币转换为美元。
+\end_layout
+
+\begin_layout Paragraph*
+步骤1
+\end_layout
+
+\begin_layout Standard
+创建一个新的Java项目，见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:新建一个Java项目"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/getting-started-1.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+新建一个Java项目
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:新建一个Java项目"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤2
+\end_layout
+
+\begin_layout Standard
+在接下来的项目配置窗口中，可以不选择从模板创建项目，因为我们要创建一个GUI应用程序，命令行应用的模板没有实质用处，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:跳过从模板创建项目"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/getting-started-2.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+跳过从模板创建项目
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:跳过从模板创建项目"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤3
+\end_layout
+
+\begin_layout Standard
+给项目起个名字，这里叫做“gui”，并选择项目所在的目录，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:给项目起个名字"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/getting-started-3.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+给项目起个名字
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:给项目起个名字"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤4
+\end_layout
+
+\begin_layout Standard
+在项目的“project视图”中，右键点击src，在弹出的菜单中选择New->GUI Form，新建一个Form表单
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Form表单
+\end_layout
+
+\end_inset
+
+，参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:准备新建一个Form表单"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+准备新建一个Form表单
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:准备新建一个Form表单"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+如果在菜单中没有出现GUI Form子菜单，系没有安装Form Designer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Form Designer
+\end_layout
+
+\end_inset
+
+插件所致，请在系统设置中激活Form Designer即可，方法是在File->Settings...菜单中搜索“UI Designer”插件并安装激活，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:安装并激活UI-Designer插件"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/active-ui-designer.png
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+安装并激活UI Designer插件
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:安装并激活UI-Designer插件"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+图片和文字可能不在一个页面，应该想办法处理一下
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤5
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:给Form起个名字"
+
+\end_inset
+
+所示，给将要创建的Form起个名字，这里叫做“RMB2DollarConverter”，选择布局管理器（此处先认可默认设置，随后可以更改）。注意要勾选（默认已经
+勾选了）
+\begin_inset Quotes erd
+\end_inset
+
+create bound class
+\begin_inset Quotes erd
+\end_inset
+
+选项，即同时创建和这个Form绑定在一起的Java类。这个Java类我们将来用于显示和操作这个Form。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+给Form起个名字
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:给Form起个名字"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤6
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:空白的Form设计窗口"
+
+\end_inset
+
+所示，在新建Form后会呈现一个空白的Form设计窗口，其主要组成部分为：
+\end_layout
+
+\begin_layout Itemize
+界面组件关系图：在这个窗口中展示了组件的“父子”关系，目前只有一个JPanel组件，随后我们会加入更多组件，可以通过这个窗口直观的查看组件之间的关系。也可以通过
+这个窗口快捷的选择某个组件进行操作。
+\end_layout
+
+\begin_layout Itemize
+组件属性窗：当在主设计界面或者界面组件关系窗口中选择了某个组件时，组件属性窗的内容将随之改变。可以通过这个窗口方便的了解界面组件拥有哪些属性，当然，更重要的是，
+可以设置界面组件的属性值。
+\end_layout
+
+\begin_layout Itemize
+主设计界面：可以拖放“组件面板”中的组件导主设计界面，主设计界面会根据使用的布局管理器的不同，自动摆放组件。
+\end_layout
+
+\begin_layout Itemize
+组件面板：列出了各种Swing界面组件，可以方便的拖放到主设计界面。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-3.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+空白的Form设计窗口
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:空白的Form设计窗口"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤7
+\end_layout
+
+\begin_layout Standard
+首先在“界面组件关系窗口”中选择目前唯一的组件Panel，然后在组件属性窗口中编辑“field name”属性，设置其值为“mainPanel
+\begin_inset Quotes erd
+\end_inset
+
+。这里的值是什么并不重要的，重要的是必须给主Panel设置一个名字，否则将来无法显示这个Panel。
+\end_layout
+
+\begin_layout Standard
+在这里，我们也将mainPanel的
+\begin_inset Quotes erd
+\end_inset
+
+Layout Manager
+\begin_inset Quotes erd
+\end_inset
+
+（布局管理器）修改为更为简单的
+\begin_inset Quotes erd
+\end_inset
+
+FlowLayout
+\begin_inset Quotes erd
+\end_inset
+
+，我们将在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:布局管理器"
+
+\end_inset
+
+一节详细的阐述各种布局管理器
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+布局管理器
+\end_layout
+
+\end_inset
+
+的用法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-4.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+给主Panel起个名字
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:给主Panel起个名字"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤8
+\end_layout
+
+\begin_layout Standard
+在“组件面板”窗口选择JLabel组件拖放到主设计界面，可以看到在“界面组件关系”窗口中，JLabel包含在mainPanel中。这里只是简单的设置这个JLab
+el的text属性为“人民币：”即可。JLabel的目的是显示一个标签
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+标签
+\end_layout
+
+\end_inset
+
+，我们将在
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:JLabel"
+
+\end_inset
+
+一节详细讨论Jlabel的用法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-5.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+添加一个简单的Label
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:添加一个简单的Label"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤9
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:添加JTextField组件"
+
+\end_inset
+
+所示，接着添加一个JTextField
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JTextField
+\end_layout
+
+\end_inset
+
+组件到主设计界面。这个JTextField我们用来输入人民币数额，因此要设置其
+\begin_inset Quotes erd
+\end_inset
+
+field name
+\begin_inset Quotes erd
+\end_inset
+
+属性。为了更好的显示这个输入框，也设置了这个JTextField的默认宽度（preferedSize->width）和默认显示的文字（text属性）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-6.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+添加JTextField组件
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:添加JTextField组件"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤10
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:添加转换按钮"
+
+\end_inset
+
+所示，再增加一个“转换”按钮
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+按钮
+\end_layout
+
+\end_inset
+
+，设置这个按钮的field name和text属性。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-7.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+添加转换按钮
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:添加转换按钮"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤11
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:添加显示转换结果的JLabel"
+
+\end_inset
+
+所示，在界面中再添加一个用于显示转换结果的JLabel。由于我们要通过程序设置这个JLabel的text属性，因此要设置这个JLabel的field
+ name属性。为了能够更好的显示转换后的结果，也有设置这个JLabel的宽度，这里设置为100（像素值）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-8.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+添加显示转换结果的JLabel
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:添加显示转换结果的JLabel"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤12
+\begin_inset CommandInset label
+LatexCommand label
+name "par:步骤12"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+界面的设计工作基本就绪，下面我们为按钮设计处理代码。如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:准备创建Listener"
+
+\end_inset
+
+所示，在主设计界面的“转换”按钮上点击右键，在弹出的菜单中选择“create Listener”，准备创建一段点击此按钮的响应代码。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-9.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+准备创建Listener
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:准备创建Listener"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤13
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:选择Listener的类型"
+
+\end_inset
+
+所示，在接下来的窗口中选择Listener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Listener
+\end_layout
+
+\end_inset
+
+的类型为“ActionListener”。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-10.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择Listener的类型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:选择Listener的类型"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+步骤14
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:选择需要覆盖的方法"
+
+\end_inset
+
+所示，在接下来的窗口中，选择ActionListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ActionListener
+\end_layout
+
+\end_inset
+
+需要覆盖的方法。这里只有一个选项，已经自动选中了。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-11.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择需要覆盖的方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:选择需要覆盖的方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+点击
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:选择需要覆盖的方法"
+
+\end_inset
+
+中的“OK”按钮后，在所绑定的方法中自动添加了一个构造方法
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+构造方法
+\end_layout
+
+\end_inset
+
+，内容如下（行5-7是自己编写的）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    public RMB2DollarConverter() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        convertButton.addActionListener(new ActionListener() {
+\end_layout
+
+\begin_layout Plain Layout
+
+            @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+            public void actionPerformed(ActionEvent actionEvent) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 获取文本输入框的文字内容并转换为double
+\end_layout
+
+\begin_layout Plain Layout
+
+                Double rmb = Double.valueOf(rmbTextField.getText());
+\end_layout
+
+\begin_layout Plain Layout
+
+                dollarLabel.setText(String.valueOf(rmb / 7.0)); // 假设当前人民币和美元汇率为7.0
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        });
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是GUI应用程序事件处理的基本方法，我们将在
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:JAVA图形用户界面的事件机制"
+
+\end_inset
+
+一节中具体讨论。
+\end_layout
+
+\begin_layout Paragraph*
+步骤15
+\end_layout
+
+\begin_layout Standard
+最后一步，我们需要在类RMB2DollarConverter中增加一个main方法并初始化和显示应用程序窗口，JetBrain Idea提供了自动化的代码生成工
+具，只需要在代码的合适位置（希望插入main方法的位置）按下Alt+Insert
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Alt+Insert
+\end_layout
+
+\end_inset
+
+组合键，在如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:准备插入main方法"
+
+\end_inset
+
+所示的窗口中选择
+\begin_inset Quotes erd
+\end_inset
+
+Form main()
+\begin_inset Quotes erd
+\end_inset
+
+即可自动创建main方法如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    public static void main(String[] args) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        JFrame frame = new JFrame("RMB2DollarConverter");
+\end_layout
+
+\begin_layout Plain Layout
+
+        frame.setContentPane(new RMB2DollarConverter().mainPanel);
+\end_layout
+
+\begin_layout Plain Layout
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+\end_layout
+
+\begin_layout Plain Layout
+
+        frame.pack();
+\end_layout
+
+\begin_layout Plain Layout
+
+        frame.setVisible(true);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/new-form-12.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+准备插入main方法
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:准备插入main方法"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+经过了以上的15个步骤，现在终于可以运行这个应用程序了
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+本例的完整代码请参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui
+\end_layout
+
+\end_inset
+
+。和运行其他Java应用程序的方法一样，运行RMB2DollarConverter类结果如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:RMB2DollarConverter的运行结果"
+
+\end_inset
+
+所示。可以在输入框输入人民币数额，然后点击“转换”按钮获得相应的美元数。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/RMB2DollarConverter-output.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+RMB2DollarConverter的运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RMB2DollarConverter的运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status open
+
+\begin_layout Plain Layout
+虽然在上面我们使用了15个步骤创建了一个简单的GUI应用程序，其实关键的步骤是4个，如下图所示：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../imgs/gui/basic-gui-flow.pgf"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Notice
+status collapsed
+
+\begin_layout Plain Layout
+你可能会问，在类RMB2DollarConverter中的几个私有属性（对象）：mainPanel、rmbTextField等是什么时候初始化的？很好的问题！
+\end_layout
+
+\begin_layout Plain Layout
+实际上，Idea通过一个xml文件（RMB2DollarConvert.form）保存了界面中所包含的组件及其属性和相互关系，在编译的时候，Idea会自动读取这个
+界面配置文件并生成创建界面中的组件的构造方法，也就是说，mainPanel等对象其实是Idea帮我们创建了的，我们可以直接拿来就用。
+\end_layout
+
+\begin_layout Plain Layout
+可以通过反编译class文件看到这一点，在构造方法中的setupUI方法创建了各个界面组件对象（部分删减，请自行运行jad RMB2DollarConverte
+r获得完整的反编译后的文件）：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class RMB2DollarConverter
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    public static void main(String args[])
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+        JFrame frame = new JFrame("RMB2DollarConverter");
+\end_layout
+
+\begin_layout Plain Layout
+
+        frame.setContentPane((new RMB2DollarConverter()).mainPanel);
+\end_layout
+
+\begin_layout Plain Layout
+
+        frame.setDefaultCloseOperation(3);
+\end_layout
+
+\begin_layout Plain Layout
+
+        frame.pack();
+\end_layout
+
+\begin_layout Plain Layout
+
+        frame.setVisible(true);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    public RMB2DollarConverter()
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+        setupUI();
+\end_layout
+
+\begin_layout Plain Layout
+
+        convertButton.addActionListener(new ActionListener() {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            public void actionPerformed(ActionEvent actionEvent)
+\end_layout
+
+\begin_layout Plain Layout
+
+            {
+\end_layout
+
+\begin_layout Plain Layout
+
+                Double rmb = Double.valueOf(rmbTextField.getText());
+\end_layout
+
+\begin_layout Plain Layout
+
+                dollarLabel.setText(String.valueOf(rmb.doubleValue() / 7D));
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        });
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    private void setupUI()
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+        JPanel jpanel;
+\end_layout
+
+\begin_layout Plain Layout
+
+        JLabel jlabel;
+\end_layout
+
+\begin_layout Plain Layout
+
+        jpanel = new JPanel();
+\end_layout
+
+\begin_layout Plain Layout
+
+        mainPanel = jpanel;
+\end_layout
+
+\begin_layout Plain Layout
+
+        jpanel.setLayout(new FlowLayout(1, 5, 5));
+\end_layout
+
+\begin_layout Plain Layout
+
+        jlabel = new JLabel();
+\end_layout
+
+\begin_layout Plain Layout
+
+        jlabel.setText("
+\backslash
+u4EBA
+\backslash
+u6C11
+\backslash
+u5E01
+\backslash
+uFF1A");
+\end_layout
+
+\begin_layout Plain Layout
+
+        jpanel.add(jlabel);
+\end_layout
+
+\begin_layout Plain Layout
+
+        JTextField jtextfield;
+\end_layout
+
+\begin_layout Plain Layout
+
+        jtextfield = new JTextField();
+\end_layout
+
+\begin_layout Plain Layout
+
+        rmbTextField = jtextfield;
+\end_layout
+
+\begin_layout Plain Layout
+
+        jtextfield.setMinimumSize(new Dimension(14, 29));
+\end_layout
+
+\begin_layout Plain Layout
+
+        jtextfield.setPreferredSize(new Dimension(60, 29));
+\end_layout
+
+\begin_layout Plain Layout
+
+        jtextfield.setText("#.##");
+\end_layout
+
+\begin_layout Plain Layout
+
+        jtextfield.setToolTipText("
+\backslash
+u8BF7
+\backslash
+u8F93
+\backslash
+u5165
+\backslash
+u4EBA
+\backslash
+u6C11
+\backslash
+u5E01
+\backslash
+u6570
+\backslash
+u989D");
+\end_layout
+
+\begin_layout Plain Layout
+
+        jpanel.add(jtextfield);
+\end_layout
+
+\begin_layout Plain Layout
+
+        JButton jbutton;
+\end_layout
+
+\begin_layout Plain Layout
+
+        jbutton = new JButton();
+\end_layout
+
+\begin_layout Plain Layout
+
+        convertButton = jbutton;
+\end_layout
+
+\begin_layout Plain Layout
+
+        jbutton.setText("
+\backslash
+u8F6C
+\backslash
+u6362");
+\end_layout
+
+\begin_layout Plain Layout
+
+        jpanel.add(jbutton);
+\end_layout
+
+\begin_layout Plain Layout
+
+        JLabel jlabel1;
+\end_layout
+
+\begin_layout Plain Layout
+
+        jlabel1 = new JLabel();
+\end_layout
+
+\begin_layout Plain Layout
+
+        dollarLabel = jlabel1;
+\end_layout
+
+\begin_layout Plain Layout
+
+        jlabel1.setPreferredSize(new Dimension(100, 21));
+\end_layout
+
+\begin_layout Plain Layout
+
+        jlabel1.setText("
+\backslash
+u7F8E
+\backslash
+u5143
+\backslash
+uFF1A");
+\end_layout
+
+\begin_layout Plain Layout
+
+        jpanel.add(jlabel1);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    private JPanel mainPanel;
+\end_layout
+
+\begin_layout Plain Layout
+
+    private JTextField rmbTextField;
+\end_layout
+
+\begin_layout Plain Layout
+
+    private JButton convertButton;
+\end_layout
+
+\begin_layout Plain Layout
+
+    private JLabel dollarLabel;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status collapsed
+
+\begin_layout Plain Layout
+在Idea的Form Designer中，我们看到可以直接拖放各种控件到应用程序界面中，并且可以直观的通过“属性查看器”查看和修改控件的属性，其中一个重要的属性
+是field name属性，即属性的名称。什么时候需要给控件的field name属性赋值，什么时候不需要理会field name属性呢？简单的说，如果我们在程
+序中需要获得这个控件的其他属性，比如输入的文字，或者需要在程序运行期间通过程序改变这个控件的状态，则需要给这个控件的field name赋值。比如常见的JLab
+el控件一般是不需要field name属性的，而JTextField则需要field name属性。
+\end_layout
+
+\begin_layout Plain Layout
+进一步的观察我们可以发现，只有给控件一个field name属性值，Idea才能在绑定的类中自动创建私有的属性对象（变量）表示这个控件，变量的名字就是field
+ name属性的值。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+GUI的顶级容器类
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:GUI的顶级容器类"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Java的图形用户界面也是“面向对象”的，比如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java图形用户界面应用程序的大致布局"
+
+\end_inset
+
+是常见的一个窗口应用程序，我们从Java的观点来看，可以分为如下的几部分：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/swing-app-outline.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java图形用户界面应用程序的大致布局
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java图形用户界面应用程序的大致布局"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+整个应用程序框架使用JFrame
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JFrame
+\end_layout
+
+\end_inset
+
+来表示，在JFrame内部布置了菜单栏（JMenuBar）、工具栏（JToolBar）、内容区（ContentPane），我们最经常操作的区域是ContentP
+ane，即几乎所有的界面设计工作集中在ContentPane上面。
+\end_layout
+
+\begin_layout Standard
+所以，JFrame是一个顶层的容器
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+容器
+\end_layout
+
+\end_inset
+
+，其他所有的界面组件都放置在顶层容器
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+顶层容器
+\end_layout
+
+\end_inset
+
+之中，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java-GUI应用程序的基本结构"
+
+\end_inset
+
+所示。除了JFrame之外，Java也提供了JDialog、JApplet
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JApplet
+\end_layout
+
+\end_inset
+
+顶层容器，分别用于对话框的设计和Applet
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+一种已经没落的技术。
+\end_layout
+
+\end_inset
+
+的设计。本章重点介绍基于JFrame的Java图形用户界面设计，JDialog
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JDialog
+\end_layout
+
+\end_inset
+
+的用法于此类似。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jframe-overview.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Java GUI应用程序的基本结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Java-GUI应用程序的基本结构"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+不介绍分层的面板会有影响吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面的代码展示了
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Java-GUI应用程序的基本结构"
+
+\end_inset
+
+中的组件间的关系：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+JFrame frame = new JFrame("标题栏内容");
+\end_layout
+
+\begin_layout Plain Layout
+
+frame.getContentPane().add(new JLabel("a label", BorderLayout.TOP));
+\end_layout
+
+\begin_layout Plain Layout
+
+frame.getContentPane().add(new JTextField("##.##", BorderLayout.BOTTOM));
+\end_layout
+
+\begin_layout Plain Layout
+
+JPanel panel = new JPanel();
+\end_layout
+
+\begin_layout Plain Layout
+
+panel.add(new JLabel("another label"));
+\end_layout
+
+\begin_layout Plain Layout
+
+panel.add(new JCheckBox(...));
+\end_layout
+
+\begin_layout Plain Layout
+
+frame.add(panel, BorderLayout.CENTER);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Swing控件
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Swing控件"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+JLabel
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:JLabel"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Label（文本标签）也许是最简单的Swing控件了，一般用来表示界面上的几个字符或者一段提示性文字、展示输出结果、图标等。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JLabel
+\end_layout
+
+\end_inset
+
+JLabel的主要属性如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:JLabel的主要属性"
+
+\end_inset
+
+所示（每个属性对应一对get/set方法），请参照Form Designer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Form Designer
+\end_layout
+
+\end_inset
+
+的属性对话框了解属性值的可能取值范围。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="60line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+icon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Label所使用的图片
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+text
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Label显示的文字
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizentalAlignment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Label的水平对齐方式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+verticalAlignment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Label的纵向对齐方式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Label文字的水平位置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+verticalTextPosition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Label文字的垂直位置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+textGap
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Label文字和图片之间的间隙（像素值）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JLabel的主要属性
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:JLabel的主要属性"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+JLabel示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整的代码请参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/sr
+c/cn/edu/sdut/softlab/，双击JLabelDemo.form即可打开Form Designer查看界面设计效果。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们在内容区增加了三个JLabel：最上面的Label同时包含了文字和图片，中间的Label只包含了文字，最下面的Label只包含了图片，其属性对话框的设置分别
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:顶部Label属性框设置"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:中间Label属性框设置"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:下面Label属性框设置"
+
+\end_inset
+
+所示，其中修改过的属性已经黑体加重标注了，没有使用黑体标注的属性无需设置。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+当拖放第一个JLabel到内容区的时候，Form Designer自动在这个JLabel的下面增加了一个垂直占位符，以保证这个JLabel能够在希望的顶部展示。
+由于我们还要增加下面的两个Label，因此这里可以删除这个垂直占位符。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imgs/gui/jlabel-demo-1.png
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+顶部Label属性框设置
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:顶部Label属性框设置"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imgs/gui/jlabel-demo-2.png
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+中间Label属性框设置
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:中间Label属性框设置"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imgs/gui/jlabel-demo-3.png
+	width 30line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+下面Label属性框设置
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:下面Label属性框设置"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JLabel的属性对话框
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行此示例，初始状态如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:运行的初始状态"
+
+\end_inset
+
+所示，可以尝试缩放窗口，比如水平放大窗口可以更明显的看出效果，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:水平方法后的窗口"
+
+\end_inset
+
+所示。请任意缩放窗口请注意观察这三个Label位置的变化，体会水平对齐
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+水平对齐
+\end_layout
+
+\end_inset
+
+、垂直对齐
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+垂直对齐
+\end_layout
+
+\end_inset
+
+等的效果。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jlabel-demo-4.png
+	height 30theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+运行的初始状态
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:运行的初始状态"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jlabel-demo-5.png
+	height 30theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+水平放大后的窗口
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:水平方法后的窗口"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JLabelDemo运行结果
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+注意以下几点：
+\end_layout
+
+\begin_layout Itemize
+这三个
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JLabel
+\end_layout
+
+\end_inset
+
+JLabel都无需设置field name属性值。
+\end_layout
+
+\begin_layout Itemize
+特别注意观察Horizental Align属性的不同效果，可以尝试不同的水平对齐方式观察效果（通过Idea的Form Designer提供的预览工具更方便，在
+Form Designer界面直接右键选择“preview”即可）。
+\end_layout
+
+\begin_layout Itemize
+在组合使用文本和图片时，还要注意horizentalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+
+和verticalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+verticalTextPosition
+\end_layout
+
+\end_inset
+
+这两个属性的效果。
+\end_layout
+
+\begin_layout Subsection
+文本控件
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:JTextField"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Swing的文本控件是指能够输入文本的控件，比如文本框（JTextField
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JTextField
+\end_layout
+
+\end_inset
+
+）、文本域（JTextArea
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JTextArea
+\end_layout
+
+\end_inset
+
+）、富文本编辑器（JEdtiorPane
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JEdtiorPane
+\end_layout
+
+\end_inset
+
+）等。Swing的文本控件类的关系如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:文本输入控件"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/text-input-controls.eps
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+文本输入控件
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:文本输入控件"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+单行纯文本控件：用于输入一行纯文本字符串。根据场合不同，可以选择使用JTextField，输入简单的单行字符串；或者JFormattedTextField
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JFormattedTextField
+\end_layout
+
+\end_inset
+
+，输入格式化的单行字符串，比如表示日期的“2017-3-12”等；或者JPasswordField
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JPasswordField
+\end_layout
+
+\end_inset
+
+，输入密码（默认不显示输入的密码）。
+\end_layout
+
+\begin_layout Itemize
+多行纯文本控件：用于输入多行纯文本字符串。如果需要输入的字符串比较长，可以采用JTextArea
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JTextArea
+\end_layout
+
+\end_inset
+
+，会显示一个多行的文本编辑区域供输入。
+\end_layout
+
+\begin_layout Itemize
+多行富文本控件：用于输入带格式的文本字符串，通常用于输入HTML等格式的字符串。
+\end_layout
+
+\begin_layout Standard
+文本控件的常见属性如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:文本控件的常见属性"
+
+\end_inset
+
+所示，请参照Form Designer中的属性对话框了解这些属性的取值范围。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="70line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+text
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+文本框的内容
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+editable
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+是否可编辑
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+columns
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+文本框的长度（多少个字符），仅仅作为计算默认显示宽度的依据
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizentalAlignment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+字符在文本框内的对齐方式，可以选择：JTextField.LEADING, JTextField.CENTER, JTextField.TRAILING
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+文本控件的常见属性
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:文本控件的常见属性"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+文本控件示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+我们设计一个同时展示三种TextField的Panel，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:文本控件示例"
+
+\end_inset
+
+所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+详情请参见：https://github.com/subaochen/java-tutorial-examples/blob/master/gui/src/cn/
+edu/sdut/softlab/TextControlDemo.form
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+.当在文本框中输入一些字符后（失去焦点后），在最下面的
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Label
+\end_layout
+
+\end_inset
+
+Label中显示输入的内容。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/textfield-demo-1.png
+	width 95line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+文本控件示例
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:文本控件示例"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+运行此应用程序的界面如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:文本控件示例运行结果"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/textfield-demo-2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+文本控件示例运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:文本控件示例运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+这个简单的示例我们要注意以下三点：
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+示例代码的布局要说明吗？
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+可以通过
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Panel
+\end_layout
+
+\end_inset
+
+Panel进一步组织控件，这是一种常见的手段。在例中，我们把三个
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TextField
+\end_layout
+
+\end_inset
+
+TextField控件放到一个Panel中，在把这Panel添加到mainPanel中。并且，放置三个TextField的Panel添加了标题（title）：“
+单行纯文本控件”，以更清晰的表达这个Panel的意义，这也是一种常见的手段。
+\end_layout
+
+\begin_layout Itemize
+请参照
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "par:步骤12"
+
+\end_inset
+
+为三个TextField添加FocusListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FocusListener
+\end_layout
+
+\end_inset
+
+，这里我们重点监听了失去焦点的事件。
+\end_layout
+
+\begin_layout Itemize
+本例也可以监听ActionListener（当在输入框按下回车键时触发该事件）获得当前输入框的内容，请读者自行完成相关代码并运行测试。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+焦点
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+焦点
+\end_layout
+
+\end_inset
+
+（Focus）通常是指文本输入框是否正在接受输入。获得焦点即文本输入框可以输入文字，失去焦点即文本输入框不再能够输入文字，即光标已经离开了此输入框。失去焦点往往
+意味着用户结束了输入，因此，我们可以通过监听失去焦点事件来获得文本输入框中的内容。
+\end_layout
+
+\begin_layout Plain Layout
+如果焦点的概念用于窗口（应用程序），则获得焦点意味着当前窗口是活动窗口，即可操作的窗口；失去焦点意味着其他窗口获得了焦点，当前窗口不可操作。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+JButton
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:JButton"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+按钮（Button
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Button
+\end_layout
+
+\end_inset
+
+）是一种常见的交互控件，在Swing中最常见的按钮通过JButton
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JButton
+\end_layout
+
+\end_inset
+
+来描述。按钮用法很直接，通常涉及到以下三个方面：
+\end_layout
+
+\begin_layout Itemize
+给按钮一个合适的名称，包括显示在按钮上面的文字。
+\end_layout
+
+\begin_layout Itemize
+有的时候希望在按钮上面也显示图标以更明确的表达按钮的意思，可以通过按钮的icon
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+icon
+\end_layout
+
+\end_inset
+
+属性来设置图标。
+\end_layout
+
+\begin_layout Itemize
+给按钮添加鼠标点击的响应代码（
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ActionListener
+\end_layout
+
+\end_inset
+
+ActionListener或者MouseListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+MouseListener
+\end_layout
+
+\end_inset
+
+）。
+\end_layout
+
+\begin_layout Standard
+JButton的常见属性如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:JButton的常见属性"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="60line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+enabled
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+是否允许点击
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+icon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在按钮上面要显示的图标
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+text
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在按钮上面要显示的文字
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+水平方向的文字位置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+verticalTextPosition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+垂直方向的文字位置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizentalAlignment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+水平方向的对齐方式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+virticalAlignment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+垂直方向的对齐方式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JButton的常见属性
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:JButton的常见属性"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+JButton示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:JButton示例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+我们设计一个包含三个按钮的Panel，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Button示例Panel"
+
+\end_inset
+
+所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整的代码请参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/button-demo-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Button示例Panel
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Button示例Panel"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+依然参照
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "par:步骤12"
+
+\end_inset
+
+为这三个Button 添加三个ActionListener，分别响应鼠标左键单击事件。
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在运行时点击各个按钮，观察发生了什么？比如点击“紧急呼叫”按钮，弹出了一个消息框，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Button示例运行结果"
+
+\end_inset
+
+所示。点击“被禁止的按钮”，会怎样？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/button-demo-2.png
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Button示例运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Button示例运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+请仔细查看三个按钮的属性对话框以了解这三个按钮是如何实现这样的效果的：
+\end_layout
+
+\begin_layout Itemize
+第一个按钮演示了按钮上是可以图文并茂的（设置icon
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+icon
+\end_layout
+
+\end_inset
+
+属性即可），并且通过设置horizentalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+
+属性为Leading（在开头），将图片放到了文字的后面。
+\end_layout
+
+\begin_layout Itemize
+第二个按钮演示了如何将按钮上的文字和图片上下布局：首先让按钮上的内容水平居中（horizentalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+
+属性为Center），然后设置verticalTextPosition
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+verticalTextPosition
+\end_layout
+
+\end_inset
+
+属性为Bottom即可。
+\end_layout
+
+\begin_layout Itemize
+第三个按钮设置enabled为false即可，即去掉默认选中的enabled选项。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+默认的，JButton的actionListener是响应鼠标左键单击事件的，比如在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+example
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:JButton示例"
+
+\end_inset
+
+中，我们给按钮增加了响应鼠标左键单击的actionListener，那么如何响应鼠标右键、中键的单击事件呢？参见下面的代码：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// 响应右键单击事件
+\end_layout
+
+\begin_layout Plain Layout
+
+emegencyCallButton.addMouseListener(new MouseAdapter() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void mouseClicked(MouseEvent mouseEvent) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        super.mouseClicked(mouseEvent);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if(SwingUtilities.isRightMouseButton(mouseEvent) && mouseEvent.getClickCou
+nt() == 1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            JOptionPane.showMessageDialog(null,"右键单击急呼叫按钮");
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+JCheckBox
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:JCheckBox"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JCheckBox
+\end_layout
+
+\end_inset
+
+JCheckBox通常叫做“复选框”，即可以同时打开或关闭多个选项
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+对比一下JRadioButton（单选框），JRadionButton只能在一组选项中选中一项。
+\end_layout
+
+\end_inset
+
+。当选项被选中时，该复选框的“选择”状态为true，否则为false。
+\end_layout
+
+\begin_layout Standard
+JCheckBox的常见属性如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:JCheckBox的常见属性"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+text
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CheckBox的提示文字
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+icon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CheckBox的提示图片
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+enabled
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+是否启用这个控件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+selected
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CheckBox默认的选中状态
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizentalAlignment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+文字的水平对齐方式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizentalTextPosition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+文字的水平位置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+verticalAlignment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+文字的垂直对齐方式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+virticalTextPosition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+文字的垂直位置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JCheckBox的常见属性
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:JCheckBox的常见属性"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+JCheckBox示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:JCheckBox示例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+我们设计一个包含4个CheckBox（业余爱好）的Panel
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+，当鼠标点击某个爱好时显示选中的CheckBox的状态；当鼠标移动到某个爱好上面时，同步显示表示这个业余爱好的图片，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:JCheckBox运行结果"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/checkbox-demo-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JCheckBox示例设计
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JCheckBox示例设计"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+在运行时，注意观察鼠标在各个CheckBox上面和离开CheckBox时界面的不同反应，选中或者反选选项时不同的消息提示，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:JCheckBox运行结果"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/checkbox-demo-2.png
+	width 20line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+运行初始状态
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/checkbox-demo-3.png
+	width 20line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+鼠标移动到“足球”选项
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/checkbox-demo-4.png
+	width 45line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选中“足球”选项
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JCheckBox运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JCheckBox运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+我们为每个JCheckBox添加了两个事件监听器，一个ActionListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ActionListener
+\end_layout
+
+\end_inset
+
+用于监听鼠标左键单击选项选择或者反选时产生的事件，一个MouseListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+MouseListener
+\end_layout
+
+\end_inset
+
+用于监听当鼠标进入或者离开选项所在区域时产生的事件。
+\end_layout
+
+\begin_layout Paragraph
+延伸阅读
+\end_layout
+
+\begin_layout Standard
+其实，JButton
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JButton
+\end_layout
+
+\end_inset
+
+, JCheckBox
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JCheckBox
+\end_layout
+
+\end_inset
+
+, JRadionButton
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JRadionButton
+\end_layout
+
+\end_inset
+
+等都从
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+AbstractButton
+\end_layout
+
+\end_inset
+
+AbstractButton继承下来的，即JButton一族的类层次关系如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Button类层次关系"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/button-overview.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Button类层次关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Button类层次关系"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，JButtron、JCheckBox、JRadionButton等的共性就不难理解了。
+\end_layout
+
+\begin_layout Subsection
+JRadioButton
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:JRadioButton"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JRadioButton
+\end_layout
+
+\end_inset
+
+JRadioButton通常叫做“单选框”，即通过JRadionButton可以展示一组选项，但是只能有一个选项处于“选中”状态。当选择另外一个选项时，原先被选
+中的选项自动失效。
+\end_layout
+
+\begin_layout Standard
+JRadionButton的常见属性和JCheckBox基本相同，只有一点需要注意：JRadioButton的buttonGroup属性是必须设置的，即每个JR
+adioButton都需要设置buttonGroup属性，表明这个JRadioButton是属于哪个“组”的，以便Java根据用户的选择情况设置当前组的Radi
+oButton哪个有效，哪个失效。
+\end_layout
+
+\begin_layout Example
+JRadionButton示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+类似于
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:JCheckBox示例"
+
+\end_inset
+
+，我们设计一个图形用户应用程序
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整的代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+，根据选项决定显示哪种运动的图片，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:JRadioButton示例设计"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jradiobutton-demo-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JRadioButton示例设计
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JRadioButton示例设计"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+点击不同的选项，将显示不同的运动图片，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:JRadionButton示例运行结果"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jradiobutton-demo-2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JRadionButton示例运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JRadionButton示例运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例中，我们手工创建了ActionListener
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ActionListener
+\end_layout
+
+\end_inset
+
+，通常JRadioButton的ActionListener需要手工创建更合适，因为JRadioButton一般需要设置为属于某个ButtonGroup，整个B
+uttonGroup设计一个ActionListener就可以了，没有必要每个JRadioButton都独立设计一个ActionListener，如下列代码所示
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+    public RadioButtonDemo() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        swimming.setActionCommand("swimming");
+\end_layout
+
+\begin_layout Plain Layout
+
+        swimming.addActionListener(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+        tennis.setActionCommand("tennis");
+\end_layout
+
+\begin_layout Plain Layout
+
+        tennis.addActionListener(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+        basketball.setActionCommand("basketball");
+\end_layout
+
+\begin_layout Plain Layout
+
+        basketball.addActionListener(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+        football.setActionCommand("football");
+\end_layout
+
+\begin_layout Plain Layout
+
+        football.addActionListener(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void actionPerformed(ActionEvent actionEvent) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        sportLabel.setIcon(new ImageIcon(RadioButtonDemo.class.getResource("/images
+/"
+\end_layout
+
+\begin_layout Plain Layout
+
+                + actionEvent.getActionCommand() + ".png")));
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在以上代码中，我们在构造方法中为每个JRadioButton指定了actionCommand
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+actionCommand
+\end_layout
+
+\end_inset
+
+以便在监听器代码中获取actionCommand拼装图片的路径。
+\end_layout
+
+\begin_layout Standard
+另外需要注意的是，我们需要将这组JRadionButton设置一个共同的ButtonGroup，即在Form Designer中如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:设置ButtonGroup"
+
+\end_inset
+
+所示，创建一个新的ButtonGroup
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ButtonGroup
+\end_layout
+
+\end_inset
+
+，并将所有JRadioButton的ButtonGroup属性都设置为这个新建的ButtonGroup。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jradiobutton-demo-3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+设置ButtonGroup
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:设置ButtonGroup"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+JComboBox
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:JComboBox"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+JcomboBox
+\end_layout
+
+\end_inset
+
+JcomboBox表示“下列选择框”，通常在空间比较紧张或者选项很多时采用下拉选择框比较合适。
+\end_layout
+
+\begin_layout Example
+下拉选择框示例
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:下拉选择框示例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+examplename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:JCheckBox示例"
+
+\end_inset
+
+类似，我们设计一个下拉选择框来提供运动项目选项
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整代码参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+，当选中某个运动项目时则显示相应的图片，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:JComboBox示例设计"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jcombobox-demo-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JComboBox示例设计
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JComboBox示例设计"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意到，下拉选择框sports需要设置在其中要显示的条目，可以通过属性对话框的model属性来设置，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:JComboBox的model属性设置"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jcombobox-demo-2.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JComboBox的model属性设置
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JComboBox的model属性设置"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+该示例的运行结果如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:JComboBox示例的运行结果"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/jcombobox-demo-3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+JComboBox示例的运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JComboBox示例的运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+其他常见控件
+\end_layout
+
+\begin_layout Subsubsection*
+Spinner
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Spinner"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Spinner是一种便捷填写数字的控件，详情请参见示例代码：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
+\end_layout
+
+\end_inset
+
+及其注释。
+\end_layout
+
+\begin_layout Subsubsection*
+Slider
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Slider"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Slider是一种通过滑动选择数字的控件，详情请参见示例代码：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
+\end_layout
+
+\end_inset
+
+及其注释。
+\end_layout
+
+\begin_layout Subsubsection*
+Tabbed Pane
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Tabbed-Pane"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tabbed Pane可以实现“标签页”，详情请参见示例代码：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/cn/edu/
+sdut/softlab
+\end_layout
+
+\end_inset
+
+及其注释。
+\end_layout
+
+\begin_layout Section
+布局管理器
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:布局管理器"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在图形用户界面应用程序的设计中，界面中的控件如何布局总是一个容易让人困扰的问题，有过WEB界面设计经历的读者可能对此有更深刻的体会。比如当窗口大小或者分辨率发生
+改变的时候，如何保证界面布局符合当初的设计（期望）呢？通常有两种常见的界面布局思路：绝对布局和相对布局。绝对布局是指使用绝对（像素）坐标确定控件在界面的位置，很
+显然，当窗口大小发生改变时，绝对布局的界面不会随窗口发生改变，于是导致了不能充分利用放大了的窗口或者无法适应缩小了的窗口，因此绝对布局在实际的编程中很少用到，也
+不建议使用绝对布局，本节主要阐述各种相对布局的基本思路和方法。
+\end_layout
+
+\begin_layout Subsection
+BorderLayout
+\end_layout
+
+\begin_layout Standard
+BorderLayout很像“麻将桌”，将界面分为5个部分：
+\end_layout
+
+\begin_layout Itemize
+PAGE_START：界面的顶部
+\end_layout
+
+\begin_layout Itemize
+PAGE_END：界面的底部
+\end_layout
+
+\begin_layout Itemize
+LINE_START：界面的左边
+\end_layout
+
+\begin_layout Itemize
+LINE_END：界面的右边
+\end_layout
+
+\begin_layout Itemize
+CENTER：界面的中间
+\end_layout
+
+\begin_layout Standard
+BorderLayout的特点是，当窗口缩放时，四周的控件只占用尽可能小的空间，中间的控件将随窗口占用尽可能多的空间。
+\end_layout
+
+\begin_layout Example
+BorderLayout示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BorderLayout示例"
+
+\end_inset
+
+所示，5个按钮分别位于界面的4边和中间
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
+cn/edu/sdut/softlab
+\end_layout
+
+\end_inset
+
+。注意到我们将主Panel的Layout Manager修改为了BorderLayout，而不是默认的GridBagLayout。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/borderlayout-demo-0.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BorderLayout示例
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BorderLayout示例"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BorderLayout示例运行结果"
+
+\end_inset
+
+所示的运行结果是放大窗口后的效果。建议读者在不同的窗口大小情况下观察BorderLayout的布局效果，以加深对BorderLayout的理解。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/borderlayout-demo-1.png
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BorderLayout示例运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BorderLayout示例运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+这个示例很简单，我们只是修改了Panel的Layout Manager为BorderLayout，然后将5个按钮依次放到界面的合适位置即可。
+\end_layout
+
+\begin_layout Exercise
+尝试将
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BorderLayout示例运行结果"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+中“Center”按钮所在的位置替换为另外一个“麻将桌”，即如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BorderLayout练习1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+示的效果。
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/BorderLayout-exe1.1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BorderLayout练习1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BorderLayout练习1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+FlowLayout
+\end_layout
+
+\begin_layout Standard
+流式布局（FlowLayout）是一种很自然的布局方式，即各个控件按照加入的顺序在窗口从左向右依次排开，各自只占用尽量小的空间。
+\end_layout
+
+\begin_layout Example
+FlowLayout示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:FlowLayout示例设计"
+
+\end_inset
+
+所示，设计一个包含若干按钮和RadioButton的应用程序
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
+cn/edu/sdut/softlab
+\end_layout
+
+\end_inset
+
+，控件使用FlowLayout布局。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/flowlayout-demo-1.png
+	width 90line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FlowLayout示例设计
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FlowLayout示例设计"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+默认的运行结果如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:FlowLayout示例运行结果"
+
+\end_inset
+
+所示。请尝试改变窗口的大小观察FlowLayout的布局效果。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/flowlayout-demo-2.png
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FlowLayout示例运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FlowLayout示例运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例重点有两个：
+\end_layout
+
+\begin_layout Itemize
+mainPanel采用了FlowLayout布局管理器。
+\end_layout
+
+\begin_layout Itemize
+mainPanel的preferedSize修改为300x200，以便更好的展现FlowLayout的布局效果。
+\end_layout
+
+\begin_layout Subsection
+CardLayout
+\end_layout
+
+\begin_layout Example
+CardLayout示例
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CardLayout示例设计"
+
+\end_inset
+
+所示
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
+cn/edu/sdut/softlab
+\end_layout
+
+\end_inset
+
+，主界面使用默认的GridLayout，界面的上半部分放置了一个下拉选择框，根据不同的选择展示不同的card。下半部分是一个Panel，此Panel（cardP
+anel）使用CardLayout，在其中添加了两个card，分别是buttonPanel和textFieldPanel。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/cardlayout-demo-1.png
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+CardLayout示例设计
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CardLayout示例设计"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+根据选择的不同，可以看到显示了不同card的内容，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CardLayout示例运行结果"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imgs/gui/cardlayout-demo-2.png
+	width 45line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+默认运行结果
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../imgs/gui/cardlayout-demo-3.png
+	width 45line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+选择Card with JTextField
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+CardLayout示例运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CardLayout示例运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+增加代码的分析，因为CardLayout的代码不是特别直观
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CardLayout的show方法可以有选择的显示指定的card，注意到show方法的第二个参数是指定的card的name（字符串），因此在Form
+ Designer中要设置每个card的name属性。为了和下拉选择框的设置一致，在本例中card的name属性设置为了下拉选择框的相应文字。
+\end_layout
+
+\begin_layout Standard
+注意到mainPanel的布局管理器我们使用了Idea默认的GridBLayout，可以尝试换为BorderLayout或者FlowLayout看看效果如何？
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在本例中我们使用了一个常见的Java GUI界面设计技巧：通过Panel在局部组织控件，然后对Panel使用合适的布局管理器进行管理。也就是说，通常一个Java
+ GUI的界面设计是分为两个层面的：第一个层面，对整个界面进行合理的大体的界面划分（使用Panel）；第二个层面，在每个Panel内部进行控件的合理布局。我们在
+Java GUI的综合应用举例中还会看到这种布局策略。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+GridLayout
+\end_layout
+
+\begin_layout Standard
+网格布局（GridLayout）是将整个界面划分为表格，表格的每个单元格可以放置一个控件（或者Panel），从而实现了规整的界面布局。影响GridLayout效
+果的除了表格单元格的个数之外，常见的属性如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:GridLayout的常见属性"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="52line%">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+默认值
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizental gap
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+单元格的水平间隔的像素值，-1代表使用父容器的此设置，或者内置的10px
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+virtical gap
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+单元格的垂直间隔的像素值，-1代表使用父容器的此设置，或者内置的5px
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+same size horizentally
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+如果是true的话，所有控件在水平方向大小一致
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+false
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+same size vitically
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+如果是true的话，所有控件在垂直方向大小一致
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+false
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+margin
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+容器和控件之间的四周间隔大小
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,0,0,0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GridLayout的常见属性
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GridLayout的常见属性"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+GridLayout示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+使用GridLayout设计一个3x2的表格，其中放置5个按钮
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+完整代码参见：https://github.com/subaochen/java-tutorial/tree/master/guide/code/gui/src/
+cn/edu/sdut/softlab
+\end_layout
+
+\end_inset
+
+，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GridLayout示例设计"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/gridlayout-demo-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GridLayout示例设计
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GridLayout示例设计"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GridLayout示例运行结果"
+
+\end_inset
+
+所示，GridLayout的用法简洁明了，请自行在Form Designer中修改相应的参数，比如virticalGap（水平间隔），horizentalGap
+（垂直间隔）等观察这些参数对布局的影响。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/gridlayout-demo-2.png
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GridLayout示例运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GridLayout示例运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+使用Idea设计GridLayout界面
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+我们使用了Idea提供的GridLayoutManager，详情请参考：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.formdev.com/jformdesigner/doc/layouts/intellijgridlayout/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+的小技巧：Idea的Form Designer通常能够智能的判断应该使用多少格子来放置控件，但是我们也必须给出明确的“指令”。比如我们希望设计如下的界面：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/gridlayout-tip-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+第一步，先添加三个JTextField，然后在第一个JTextField上面放置一个JLabel，如下图所示：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/gridlayout-tip-2.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+第二步，需要首先将三个JTextField调整到一个水平面上，即如下图所示：
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/gridlayout-tip-3.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+第三步，添加另外的两个JLabel。
+\end_layout
+
+\begin_layout Plain Layout
+如果没有在第二步首先将三个JTextField调整到一个水平面上，则继续添加JLabel时Form Designer可能会错误的领会我们的意思，从而错误的计算单
+元格的数量，读者可自行尝试和认真体会。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+GridBagLayout
+\end_layout
+
+\begin_layout Standard
+网格袋布局（GridBagLayout）显然是GridLayout的扩展：GridLayout只允许控件放置在一个单元格中，而GridBagLayout允许一个
+控件占用多个单元格，因而GridBaglayout更加灵活，控制选项（属性）也比较多，常见的属性如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:GridBagLayout的常见属性"
+
+\end_inset
+
+所示
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+本书以JetBrain Idea提供的Form Designer为蓝本说明GridBagLayout的常见属性，和标准的Java Swing的GridBagLa
+yout的属性略有出入。
+\end_layout
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="middle" width="50line%">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+说明
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+默认值
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+控件所占单元格的起始x坐标（左上角）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+控件所占单元格中的起始y坐标（左上角）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid width
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+控件横向占用的单元格数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid height
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+控件纵向占用的单元格数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horizental align
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+横向的对齐方式，Fill意味着充满可能的横向空间（受weight x设置的影响）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fill
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+virtical align
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+纵向的对齐方式，Fill意味着充满可能的纵向空间（受weight y设置的影响）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Center
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+weight x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+横向扩展的权重。如果值为0则横向不扩展，即控件只占用可能小的空间；通常此值在0-1之间设置。
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+weight y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+纵向扩展的权重。如果值为0则纵向不扩展，即控件只占用可能小的空间；通常此值在0-1之间设置。
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+insets
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+控件的外边距
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,0,0,0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ipad x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+横向的内边距素数，决定了控件距离单元格的边线有多远
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ipad y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+纵向的内边距素数，决定了控件距离单元格的边线有多远
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GridBagLayout的常见属性
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GridBagLayout的常见属性"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+在Idea的Form Designer中，grid x/grid y/grid width/grid height属性是通过拖放控件自动设置的，无需手工设置。实
+际上，Form Designer的属性对话框没有提供编辑这4个属性的功能。
+\end_layout
+
+\begin_layout Plain Layout
+如果熟悉CSS的盒子模型的话，insets相当于CSS盒子模型的margin，ipadx/ipady相当于CSS盒子模型的padding。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+GridBagLayout示例
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GridBagLayout示例设计"
+
+\end_inset
+
+所示，我们设计一个包含几个按钮的界面，使用GridBagLayout布局管理器。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/gridbaglayout-demo-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GridBagLayout示例设计
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GridBagLayout示例设计"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GridBagLayout示例运行结果"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/gridbaglayout-demo-2.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GridBagLayout示例运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GridBagLayout示例运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码分析
+\end_layout
+
+\begin_layout Standard
+本例中各控件的属性如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:GridBagLayout示例应用中的控件属性"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="30line%">
+<column alignment="center" valignment="middle" width="50line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+控件
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性设置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ButtonA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid x = 0,grid y = 0
+\end_layout
+
+\begin_layout Plain Layout
+grid width = 1, grid height = 1
+\end_layout
+
+\begin_layout Plain Layout
+h align = Fill, v align = Center
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 0, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ButtonB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid x = 1,grid y = 0
+\end_layout
+
+\begin_layout Plain Layout
+grid width = 1, grid height = 1
+\end_layout
+
+\begin_layout Plain Layout
+h align = Fill, v align = Center
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 0, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Another Button
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid x = 2,grid y = 0
+\end_layout
+
+\begin_layout Plain Layout
+grid width = 1, grid height = 1
+\end_layout
+
+\begin_layout Plain Layout
+h align = Fill, v align = Center
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 0, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A Long Name Button
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid x = 0,grid y = 1
+\end_layout
+
+\begin_layout Plain Layout
+grid width = 3, grid height = 1
+\end_layout
+
+\begin_layout Plain Layout
+h align = Fill, v align = Center
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 0, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ButtonC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid x = 0,grid y = 2
+\end_layout
+
+\begin_layout Plain Layout
+grid width = 1, grid height = 1
+\end_layout
+
+\begin_layout Plain Layout
+h align = Fill, v align = Center
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 0, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ButtonD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid x = 0,grid y = 3
+\end_layout
+
+\begin_layout Plain Layout
+grid width = 1, grid height = 1
+\end_layout
+
+\begin_layout Plain Layout
+h align = Fill, v align = Center
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 0, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Last Button
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grid x = 1,grid y = 2
+\end_layout
+
+\begin_layout Plain Layout
+grid width = 2, grid height = 2
+\end_layout
+
+\begin_layout Plain Layout
+h align = Center, v align = Fill
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 0, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GridBagLayout示例应用中的控件属性
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GridBagLayout示例应用中的控件属性"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+请读者尝试
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:控件属性的各种组合方式"
+
+\end_inset
+
+的控件属性组合方式，观察GridBagLayout在界面布局中的灵活性。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="30line%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="middle" width="50line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+测试场景
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+控件
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+属性设置
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+只设置ButtonA的属性，其他控件属性不变
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ButtonA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+h align = Center, v align = Center
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 1, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+只设置Last Button的属性，其他控件属性不变
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Last Button
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+h align = Center, v align = Fill
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 1, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+只设置Last Button的属性，其他控件属性不变
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Last Button
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+h align = Fill, v align = Fill
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 1, weight y = 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+只设置Last Button的属性，其他控件属性不变
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Last Button
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+h align = Fill, v align = Fill
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 1, weight y = 1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+只设置Last Button的属性，其他控件属性不变
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Last Button
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+h align = Fill, v align = Center
+\end_layout
+
+\begin_layout Plain Layout
+weight x = 1, weight y = 1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+控件属性的各种组合方式
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:控件属性的各种组合方式"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+JAVA图形用户界面的事件机制
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:JAVA图形用户界面的事件机制"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+事件机制的基本原理
+\end_layout
+
+\begin_layout Standard
+事件机制是指代码如何对界面的点击、输入等事件做出响应，我们在前面的例子中已经多次使用了Swing的事件机制。Swing事件机制的三个要点是：
+\end_layout
+
+\begin_layout Itemize
+事件源（Event Source）：即触发事件的控件，比如按钮、文本框等。
+\end_layout
+
+\begin_layout Itemize
+事件对象（Event Object）：描述事件的封装对象，其中包括了事件源、事件发生事件、事件相关参数（比如鼠标事件包括鼠标点击的坐标、鼠标点击次数等）等。
+\end_layout
+
+\begin_layout Itemize
+监听器（Listener）：当事件发生时Java会自动调用的方法被称为监听器。
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Swing事件机制"
+
+\end_inset
+
+说明了按钮事件的处理过程
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+这里对“注册”的原理没有展开说明，需要说明Event Loop的过程吗？需要说明注册和Java虚拟机的关系吗？
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+是否可以在这里增加一个设计模式的示例？比如设计一个Container模拟OS，设计一个Listener模拟按钮、checkbox等
+\end_layout
+
+\end_inset
+
+，其他类型的事件处理过程与此类似。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/swing-event-model.eps
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Swing事件机制（以按钮为例）
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Swing事件机制"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+控件的常见监听器
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+完整的Java GUI控件和事件监听器的对照表参见：
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://docs.oracle.com/javase/tutorial/uiswing/events/eventsandcomponents.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tablename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:控件的常见监听器"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="middle" width="70line%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+控件
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+常用监听器
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JButton
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ActionListener：响应鼠标左键单击和回车事件
+\end_layout
+
+\begin_layout Plain Layout
+MouseListener：响应除左键单击外的其他的各种鼠标事件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JTextField
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ActionListener：响应在输入框回车事件
+\end_layout
+
+\begin_layout Plain Layout
+FocusListener：响应获得和失去焦点事件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JRadioButton
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ActionListener：响应选项选择事件
+\end_layout
+
+\begin_layout Plain Layout
+MouseListener：响应各种鼠标事件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JCheckBox
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ActionListener：响应选项选择事件
+\end_layout
+
+\begin_layout Plain Layout
+MouseListener：响应各种鼠标事件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JComboBox
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ActionListener：响应选项选择事件
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+控件的常见监听器
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:控件的常见监听器"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+监听器类的几种情形
+\end_layout
+
+\begin_layout Standard
+注意到注册监听器的方法：src.addXxxListener(listenerObject)的参数是一个实现了监听器接口的对象，即通过这个方法告诉Java虚拟机，
+当src（事件源）对象产生了一个Xxx类型的事件时，需要调用listenerObject中的相关方法进行事件处理。在实现监听器时，通常有如下的几种策略，以按钮的
+单击事件actionEvent为例：
+\end_layout
+
+\begin_layout Itemize
+主类直接实现XxxListener接口或者扩展XxxHandler类，比如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class FrameDemo implements ActionListener {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private JButton button;
+\end_layout
+
+\begin_layout Plain Layout
+
+    public FrameDemo（） {
+\end_layout
+
+\begin_layout Plain Layout
+
+        button = new JButton("OK");
+\end_layout
+
+\begin_layout Plain Layout
+
+        button.addActionListener(this); // 注册事件监听器。由于FrameDemo本身实现ActionListener接
+口，因此这里直接使用this作为实现了事件监听器接口的对象。
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void actionPerformed(ActionEvent event) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 事件处理代码
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+使用匿名内部类实现监听器接口，比如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class FrameDemo {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private JButton button;
+\end_layout
+
+\begin_layout Plain Layout
+
+    public FrameDemo() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        button = new JButton("OK");
+\end_layout
+
+\begin_layout Plain Layout
+
+        button.addActionListener(new ActionListener() { // 匿名内部类实现ActionListener接
+口
+\end_layout
+
+\begin_layout Plain Layout
+
+            @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+            public void actionPerformed(ActionEvent event) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 事件处理代码
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        });
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+使用独立的类实现监听器接口，比如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class FrameDemo {
+\end_layout
+
+\begin_layout Plain Layout
+
+    private JButton button;
+\end_layout
+
+\begin_layout Plain Layout
+
+    public FrameDemo() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        button = new JButton("OK");
+\end_layout
+
+\begin_layout Plain Layout
+
+        button.addActionListener(new ButtonListener());
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 独立的事件监听器类，实现了ActionListener接口
+\end_layout
+
+\begin_layout Plain Layout
+
+class ButtonListener implements ActionListener {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void actionPerformed(ActionEvent event) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 事件处理代码
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在大多数情况下，我们建议使用匿名内部类实现监听器接口，代码更简洁，封装性更好。
+\end_layout
+
+\begin_layout Section
+Java GUI综合应用举例
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Java-GUI综合应用举例"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算器
+\end_layout
+
+\begin_layout Paragraph*
+代码设计
+\end_layout
+
+\begin_layout Standard
+这是一个典型的可以使用GridBagLayout进行界面设计的应用场合，如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:计算器的界面设计"
+
+\end_inset
+
+所示。为了更好的适应窗口大小，界面中的所有控件设置了如下属性：
+\end_layout
+
+\begin_layout Itemize
+horizental align：Fill
+\end_layout
+
+\begin_layout Itemize
+virtical align: Fill
+\end_layout
+
+\begin_layout Itemize
+weight x : 1.0
+\end_layout
+
+\begin_layout Itemize
+weight y : 1.0
+\end_layout
+
+\begin_layout Standard
+完整的代码参见
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Caculator.java"
+
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../code/gui/src/cn/edu/sdut/softlab/Caculator.java"
+lstparams "caption={Caculator.java},label={Caculator.java}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/caculator-1.png
+	width 70line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+计算器的界面设计
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:计算器的界面设计"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+运行结果
+\end_layout
+
+\begin_layout Standard
+如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:计算器的运行结果"
+
+\end_inset
+
+所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imgs/gui/caculator-2.png
+	width 60line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+计算器的运行结果
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:计算器的运行结果"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+代码说明
+\end_layout
+
+\begin_layout Standard
+本例为了简化起见，表达式的求值借用了JDK内置的JavaScript引擎，有兴趣的读者可以自行实现一个表达式求值的引擎或者方法。
+\end_layout
+
+\begin_layout Exercise
+请尝试使用GridLayout重新设计计算器（提示：首先使用GridLayout将界面分为上下两部分，上部分是一个Panel显示计算结果，使用任意的Layout
+即可；下部分是一个显示计算按钮的Panel，使用GridLayout布局）。
+\end_layout
+
+\end_body
+\end_document
