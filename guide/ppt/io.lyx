@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass beamer-chinese
+\textclass beamer
 \begin_preamble
 % see http://deic.uab.es/~iblanes/beamer_gallery/ for how 
 % to choose theme and color
@@ -169,11 +169,11 @@ C的I/O回顾
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 输入流
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 输出流
 \end_layout

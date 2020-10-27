@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass beamer-chinese
+\textclass beamer
 \begin_preamble
 % see http://deic.uab.es/~iblanes/beamer_gallery/ for how 
 % to choose theme and color
@@ -169,7 +169,6 @@ C的enum回顾
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 定义方式:
 \begin_inset Newline newline
@@ -203,6 +202,7 @@ enum{SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY，FRIDAY，SATURDAY}WEEK；
 
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 使用方法：
 \begin_inset Newline newline
@@ -285,7 +285,6 @@ plain
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 WeekDay
 \begin_inset Newline newline
@@ -320,7 +319,6 @@ public enum WeekDay { SUNDAY,MONDAY,TUESDAY,WENDESDAY,THURSDAY,FRIDAY,SATURDAY;
 
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -351,7 +349,6 @@ plain
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 \begin_inset Box Frameless
 position "t"
@@ -420,7 +417,6 @@ public class WeekDayTest {
 
 \end_layout
 
-\end_deeper
 \begin_layout Frame
 
 \end_layout
@@ -449,11 +445,11 @@ Enum的定义要点
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 Enum关键字
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 最简单的定义方法
 \end_layout
@@ -487,11 +483,11 @@ status open
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 Enum是类
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 反编译Enum对象看一下
 \end_layout
@@ -517,11 +513,11 @@ status open
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 定义四季
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 定义交通信号灯
 \end_layout
