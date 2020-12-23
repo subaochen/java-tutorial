@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -36,6 +36,8 @@ PackageOptions url hyphens
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -75,6 +77,7 @@ PackageOptions url hyphens
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \boxbgcolor #d8daeb
 \index Index
 \shortcut idx
@@ -84,7 +87,10 @@ PackageOptions url hyphens
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
@@ -1326,6 +1332,7 @@ status open
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jvm-se8-specification"
+literal "true"
 
 \end_inset
 
@@ -2144,6 +2151,30 @@ status open
 \end_layout
 
 \begin_layout Itemize
+定义属性的同时初始化，比如
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Circle
+\end_layout
+
+\end_inset
+
+类中
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Point
+\end_layout
+
+\end_inset
+
+对象的处理方式。
+\end_layout
+
+\begin_layout Itemize
 在创建对象后，直接访问对象的属性并设置希望的值。
 \end_layout
 
@@ -2157,11 +2188,117 @@ status open
 
 \begin_layout Standard
 \begin_inset Flex Tip
-status open
+status collapsed
 
 \begin_layout Plain Layout
 定义有参构造方法时，要注意参数的个数不要太多，一般不要超过10个。太多的参数往往给使用者带来记忆和匹配的负担。如果需要大量的对象初始化操作，建议编写专门的方法初
 始化对象（比如init()方法就是一个很好的方法名字），然后在创建对象后调用这个init方法即可。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Tip
+status open
+
+\begin_layout Plain Layout
+对象属性的初始化一般有两种方式：定义的时候直接初始化和使用构造方法。在
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstlistingname
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub322-Circle.java"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+中采用了直接初始化
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+point
+\end_layout
+
+\end_inset
+
+属性的方式，如果要使用构造方法初始化point属性，则
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Circle
+\end_layout
+
+\end_inset
+
+类的定义大致为：
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+public class Circle{
+\end_layout
+
+\begin_layout Plain Layout
+
+    Point origin;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    public Circle(){
+\end_layout
+
+\begin_layout Plain Layout
+
+        origin = new Point();
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    ...
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5190,6 +5327,7 @@ public class Client {
 \begin_inset CommandInset citation
 LatexCommand cite
 key "design-pattern-4gangs"
+literal "true"
 
 \end_inset
 
@@ -5197,6 +5335,7 @@ key "design-pattern-4gangs"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "design-pattern-4gangs"
+literal "true"
 
 \end_inset
 
@@ -7461,6 +7600,7 @@ JDK源代码可以从
 LatexCommand href
 name "https://github.com/dmlloyd/openjdk"
 target "https://github.com/dmlloyd/openjdk"
+literal "false"
 
 \end_inset
 
@@ -8816,6 +8956,7 @@ pier继承下来一样。SmartPrinter类其实是一个Facade类
 \begin_inset CommandInset citation
 LatexCommand cite
 key "design-pattern-4gangs"
+literal "true"
 
 \end_inset
 
